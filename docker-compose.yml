@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  roborregos-web:
+    image: roborregos-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
