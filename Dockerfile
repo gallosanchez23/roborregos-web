@@ -1,10 +1,13 @@
-FROM node:10
+FROM node:latest
 
 RUN mkdir /app
 WORKDIR /app
 
+RUN yarn
+
+COPY package.json /app
+
 ENV PATH /app/node_modules/.bin:$PATH
 
-COPY package.json /app/package.json
-
+CMD ["yarn"]
 CMD ["yarn", "start"]
