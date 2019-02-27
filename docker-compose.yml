@@ -1,9 +1,8 @@
 version: '3.3'
 
 services:
-  roborregos-web:
-    command: bash -c "yarn && yarn start"
-    image: roborregos-web
+  frontend-web:
+    command: yarn start
     build:
       context: .
       dockerfile: Dockerfile

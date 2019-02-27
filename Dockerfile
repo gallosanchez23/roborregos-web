@@ -1,13 +1,15 @@
 FROM node:latest
 
-RUN mkdir /app
+RUN apt-get update -qq && \
+		apt-get install -y vim nano
+
+COPY . /app
 WORKDIR /app
 
-RUN yarn
+ENV HOME=/app PATH=/app/node_modules/.bin:$PATH
 
-COPY package.json /app
+RUN yarn install
 
-ENV PATH /app/node_modules/.bin:$PATH
+EXPOSE 3000
 
-CMD ["yarn"]
 CMD ["yarn", "start"]
