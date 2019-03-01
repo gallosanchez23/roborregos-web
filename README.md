@@ -1,4 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# RoBorregos Web
+
+Front-end web app for the official RoBorregos' (international robotics team) web site.
+Developed by RoBorregos' members and colaborators, in order to publish general
+information about the team, sponsors, news, competitions and related content.
+You can consult the application on production at [roborregos.com](roborregos.com) or
+[roborregos.mx](roborregos.mx).
+
+## Table of contents
+
+- [RoBorregos Web](#roborregos-web)
+	- [Table of contents](#table-of-contents)
+	- [Project details](#project-details)
+		- [Development team](#development-team)
+		- [Environment URLs](#environment-urls)
+		- [Management tools](#management-tools)
+	- [Development](#development)
+		- [Setup](#setup)
+		- [Running the stack for development](#running-the-stack-for-development)
+		- [Stopping services](#stopping-services)
 
 ## Available Scripts
 
