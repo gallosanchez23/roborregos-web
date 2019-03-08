@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
 import NavBar from 'components/NavBar/NavBar.js';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-import routes from 'data/routes.json';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import routesData from 'data/routes.json';
+import membersData from 'data/members.json';
+import Members from 'components/Members/Members.js';
 import './App.css';
 
 function Home() {
@@ -23,21 +22,13 @@ function AboutUs() {
 	);
 }
 
-function Members() {
-	return (
-		<h2>
-			Members
-		</h2>
-	);
-}
-
 class App extends Component {
 	render() {
 		return (
 			<Router>
 				<div className='app-container'>
 
-					<NavBar />
+					<NavBar routes={ routesData.routes } />
 
 					<Route
 						exact path='/'
@@ -51,7 +42,7 @@ class App extends Component {
 
 					<Route
 						path='/members'
-						component={ Members }
+						component={ () => <Members membersData={ membersData } /> }
 					/>
 
 				</div>
