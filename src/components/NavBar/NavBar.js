@@ -51,6 +51,7 @@ class NavBar extends Component {
 						id='navbar-logo'
 						src={ logo }
 						className='d-inline-block align-top'
+						alt='logo'
 					/>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls='responsive-navbar' />
