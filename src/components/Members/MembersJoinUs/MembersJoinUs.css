@@ -1,4 +1,12 @@
 .members-join-us {
-	height: 100%;
-	background: pink;
+	height: 60%;
+	position: relative;
+	background:
+		linear-gradient(
+			45deg,
+			rgba(214, 81, 146, 0.9) 30%,
+			rgba(130, 0, 65, 0.9) 100%
+		),
+		url(./images/pattern.png) top left/auto repeat fixed;
+	color: rgba(255, 255, 255, 0.8);
 }
