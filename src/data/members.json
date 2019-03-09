@@ -2,123 +2,203 @@
 	"members": [
 		{
 			"id": 1,
-			"img": "paul_avatar.jpg",
-			"name": "Paul",
-			"lastname": "Vázquez",
-			"role": "Programmer",
-			"github": "https://github.com/paulvazbad"
+			"img": "emilio_chavez.jpg",
+			"name": "Emilio",
+			"lastname": "Chavez",
+			"role": "Software",
+			"github": "https://github.com/emilio"
 		},
 		{
 			"id": 2,
-			"img": "diego_avatar.jpg",
-			"name": "Diego",
-			"lastname": "Cardozo",
-			"role": "Programmer",
-			"github": "https://github.com/diegocardozo97"
+			"img": "alejandro_garza.jpg",
+			"name": "Alejandro",
+			"lastname": "Garza",
+			"role": "Software",
+			"github": "https://github.com/alejandro"
 		},
 		{
 			"id": 3,
-			"img": "gallo_avatar.jpg",
-			"name": "Eduardo",
-			"lastname": "Sánchez",
-			"role": "Programmer",
-			"github": "https://github.com/gallosanchez23"
+			"img": "alexis_virgen.jpg",
+			"name": "Alexis",
+			"lastname": "Virgen",
+			"role": "Mechanics",
+			"github": "https://github.com/alexis"
 		},
 		{
 			"id": 4,
-			"img": "alejandro_avatar.jpg",
-			"name": "Alejandro",
-			"lastname": "Garza",
-			"role": "Programmer",
-			"github": "https://github.com/alexhor22"
+			"img": "javier_escamilla.jpg",
+			"name": "Javier",
+			"lastname": "Escamilla",
+			"role": "Mechanics",
+			"github": "https://github.com/javier"
 		},
 		{
 			"id": 5,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "ivan_sol.jpg",
+			"name": "Ivan",
+			"lastname": "Sol",
+			"role": "Mechanics",
+			"github": "https://github.com/ivan"
 		},
 		{
 			"id": 6,
-			"img": "antonio_avatar.jpg",
-			"name": "Alexis",
-			"lastname": "Virgen",
-			"role": "Mechanic",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "greg_espinosa.jpg",
+			"name": "Greg",
+			"lastname": "Espinosa",
+			"role": "Electronics",
+			"github": "https://github.com/greg"
 		},
 		{
 			"id": 7,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "clara_gutierrez.jpg",
+			"name": "Clara",
+			"lastname": "Gutierrez",
+			"role": "Mechanics",
+			"github": "https://github.com/clara"
 		},
 		{
 			"id": 8,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "paul_vazquez.jpg",
+			"name": "Paul",
+			"lastname": "Vazquez",
+			"role": "Software",
+			"github": "https://github.com/paul"
 		},
 		{
 			"id": 9,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "jesus_anaya.jpg",
+			"name": "Jesús",
+			"lastname": "Anaya",
+			"role": "Software",
+			"github": "https://github.com/anaya"
 		},
 		{
 			"id": 10,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "gabriela_mi.jpg",
+			"name": "Gabriela",
+			"lastname": "MI",
+			"role": "Mechanics",
+			"github": "https://github.com/gabriela"
 		},
 		{
 			"id": 11,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "nestor_maldonado.jpg",
+			"name": "Nestor",
+			"lastname": "Maldonado",
+			"role": "Software",
+			"github": "https://github.com/nestor"
 		},
 		{
 			"id": 12,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "ricardo_osorio.jpg",
+			"name": "Ricardo",
+			"lastname": "Osorio",
+			"role": "Mechanics",
+			"github": "https://github.com/ricardo"
 		},
 		{
 			"id": 13,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "ernesto_cervantes.jpg",
+			"name": "Ernesto",
+			"lastname": "Cervantes",
+			"role": "Software",
+			"github": "https://github.com/ernesto"
 		},
 		{
 			"id": 14,
-			"img": "antonio_avatar.jpg",
-			"name": "Antonio",
-			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"img": "alberto_jahuey.jpg",
+			"name": "Alberto",
+			"lastname": "Jahuey",
+			"role": "Software",
+			"github": "https://github.com/alberto"
 		},
 		{
 			"id": 15,
-			"img": "antonio_avatar.jpg",
+			"img": "eduardo_sanchez.jpg",
+			"name": "Eduardo",
+			"lastname": "Sánchez",
+			"role": "Software",
+			"github": "https://github.com/eduardo"
+		},
+		{
+			"id": 16,
+			"img": "yulisa_medina.jpg",
+			"name": "Yulisa",
+			"lastname": "Medina",
+			"role": "Software",
+			"github": "https://github.com/yulisa"
+		},
+		{
+			"id": 17,
+			"img": "iqui_balam.jpg",
+			"name": "Iqui",
+			"lastname": "Balam",
+			"role": "Mechanics",
+			"github": "https://github.com/iqui"
+		},
+		{
+			"id": 18,
+			"img": "roberto_galindo.jpg",
+			"name": "Roberto",
+			"lastname": "Galindo",
+			"role": "Mechanics",
+			"github": "https://github.com/roberto"
+		},
+		{
+			"id": 19,
+			"img": "ana_garza.jpg",
+			"name": "Ana",
+			"lastname": "Garza",
+			"role": "Mechanics",
+			"github": "https://github.com/ana"
+		},
+		{
+			"id": 20,
+			"img": "arcelia_villasenor.jpg",
+			"name": "Arcelia",
+			"lastname": "Villaseñor",
+			"role": "Software",
+			"github": "https://github.com/arcelia"
+		},
+		{
+			"id": 21,
+			"img": "tomas_lugo.jpg",
+			"name": "Tomás",
+			"lastname": "Lugo",
+			"role": "Software",
+			"github": "https://github.com/tomas"
+		},
+		{
+			"id": 22,
+			"img": "aurora_tijerina.jpg",
+			"name": "Aurora",
+			"lastname": "Tijerina",
+			"role": "Software",
+			"github": "https://github.com/aurora"
+		},
+		{
+			"id": 23,
+			"img": "eric_castillo.jpg",
+			"name": "Eric",
+			"lastname": "Castillo",
+			"role": "Electronics",
+			"github": "https://github.com/eric"
+		},
+		{
+			"id": 24,
+			"img": "antonio_rodriguez.jpg",
 			"name": "Antonio",
 			"lastname": "Rodríguez",
-			"role": "Programmer",
-			"github": "https://github.com/AntonioRdzNav"
+			"role": "Software",
+			"github": "https://github.com/antonio"
+		},
+		{
+			"id": 25,
+			"img": "diego_garza.jpg",
+			"name": "Diego",
+			"lastname": "Garza",
+			"role": "Software",
+			"github": "https://github.com/diego"
 		}
 	]
 }
