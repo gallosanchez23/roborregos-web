@@ -49,6 +49,7 @@ Before setting up the project, you sould have installed the following developmen
 * [Docker](https://runnable.com/docker/getting-started/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
 * [Plis](https://github.com/IcaliaLabs/plis) (optional, but highly recommended)
+* [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 
 Once you have installed the required third-party software, you can follow this steps:
 
