@@ -3,8 +3,8 @@
 Front-end web app for the official RoBorregos' (international robotics team) web site.
 Developed by RoBorregos' members and colaborators, in order to publish general
 information about the team, sponsors, news, competitions and related content.
-You can consult the application on production at [roborregos.com](roborregos.com) or
-[roborregos.mx](roborregos.mx).
+You can consult the application on production at [roborregos.com](https://roborregos.com) or
+[roborregos.mx](https://roborregos.mx).
 
 ## Table of contents
 
@@ -30,7 +30,7 @@ You can consult the application on production at [roborregos.com](roborregos.com
 
 ### Environment URLs
 
-* **Production** - [roborregos.com](roborregos.con)
+* **Production** - [roborregos.com](https://roborregos.com)
 
 ### Management tools
 
