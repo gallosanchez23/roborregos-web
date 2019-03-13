@@ -19,69 +19,146 @@ You can consult the application on production at [roborregos.com](roborregos.com
 		- [Running the stack for development](#running-the-stack-for-development)
 		- [Stopping services](#stopping-services)
 
-## Available Scripts
+## Project Details
 
-In the project directory, you can run:
+### Development team
 
-### `npm start`
+| Name | Email | Github | Role |
+| ---- | ----- | ------ | ---- |
+| José Eduardo Sánchez | gallo.sanchez23@gmail.com | [@gallosanchez23](https://github.com/gallosanchez23) | Developer |
+| Alexis Virgen |  | [@SAlexisvf](https://github.com/SAlexisvf) | Developer |
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Environment URLs
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* **Production** - [roborregos.com](roborregos.con)
 
-### `npm test`
+### Management tools
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You should ask for acces to this tools if you don't have ir already:
 
-### `npm run build`
+* [Github repo](https://github.com/gallosanchez23/roborregos-web)
+* [Heroku](https://www.heroku.com/)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Development
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Before setting up the project, you sould have installed the following development tools:
 
-### `npm run eject`
+* [Git](https://git-scm.com/downloads)
+* [Docker](https://runnable.com/docker/getting-started/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+* [Plis](https://github.com/IcaliaLabs/plis) (optional, but highly recommended)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Once you have installed the required third-party software, you can follow this steps:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the project repository on your local machine.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+	SSH:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+	```bash
+	$ git clone git@github.com:gallosanchez23/roborregos-web.git
+	```
 
-## Learn More
+	or HTTPS:
+	```bash
+	$ git clone https://github.com/gallosanchez23/roborregos-web.git
+	```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. You will need to create the node_modules directory needed to run react apps.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+	```bash
+	$ yarn install
+	```
 
-### Code Splitting
+3. Create the Docker image.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+	`plis`:
 
-### Analyzing the Bundle Size
+	```bash
+	$ plis build
+	```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+	`docker-compose`:
 
-### Making a Progressive Web App
+	```bash
+	$ docker-compose build
+	```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Running the stack for development
 
-### Advanced Configuration
+In your terminal, run:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+`plis`:
 
-### Deployment
+```bash
+$ plis start frontend-web && plis attach frontend-web
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+`docker-compose`:
 
-### `npm run build` fails to minify
+```bash
+$ docker-compose up
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This command will start the frontend application and display the logs on your terminal. Use `Ctrl + C` to exit the logs and turn the application down. Otherwise, in order to run the service in the background, just run:
+
+`plis`:
+
+```bash
+$ plis start frontend-web
+```
+
+`docker-compose`:
+
+```bash
+$ docker-compose up -d
+```
+
+If the service is already running, you can run the command `plis attach frontend-web` to attach current service's logs.
+
+***NOTE: You can allways run `plis run frontend-web bash` or `docker-compose run frontend-web bash` commands to enter the container's console.***
+
+### Stopping services
+
+In order to stop `roborregos-frontend-web` entirely you can run:
+
+`plis`:
+
+```bash
+$ plis stop
+```
+
+`docker-compose`:
+
+```bash
+$ docker-compose stop
+```
+
+If you want to stop the services and remove the containers:
+
+`plis`:
+
+```bash
+$ plis down
+```
+
+`docker-compose`:
+
+```bash
+$ docker-compose down
+```
+
+If you only want to stop one service in particular, you can specify it with the following command:
+
+`plis`:
+
+```bash
+$ plis stop frontend-web
+```
+
+`docker-compose`:
+
+```bash
+$ docker-compose stop frontend-web
+```
