@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import NavBar from 'components/NavBar/NavBar.js';
+import Members from 'components/Members/Members.js';
+import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import routesData from 'data/routes.json';
 import membersData from 'data/members.json';
-import Members from 'components/Members/Members.js';
 import './App.css';
 
 function Home() {
@@ -22,7 +23,22 @@ function AboutUs() {
 	);
 }
 
+function ContactUs() {
+	return (
+		<h2>
+			Contact us
+		</h2>
+	);
+}
+
 class App extends Component {
+	componentDidMount() {
+    loadCSS(
+      'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+      document.querySelector('#insertion-point-jss'),
+    );
+  }
+
 	render() {
 		return (
 			<Router>
@@ -43,6 +59,11 @@ class App extends Component {
 					<Route
 						path='/members'
 						component={ () => <Members membersData={ membersData } /> }
+					/>
+
+					<Route
+						path='/contact_us'
+						component={ ContactUs }
 					/>
 
 				</div>
