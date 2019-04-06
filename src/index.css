@@ -126,7 +126,7 @@ code {
   background: #000;
 }
 
-.container-helper {
+.member-modal-container .container-helper {
   width: 100%;
   height: 100%;
   background:
@@ -231,6 +231,56 @@ code {
     url(images/team_2019.jpg);
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+}
+
+.header-img {
+  width: 100%;
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* HomeSponsors styles */
+/* ----------------------------------------------------------------------------------- */
+.home-sponsors-container {
+  padding: 5% 0;
+  color: rgb(255, 165, 0);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(150, 150, 150, 0.2) 40%,
+      rgba(150, 150, 150, 0.2) 100%
+    ),
+    url(images/sponsors_background.jpg);
+  background-size: cover;
+}
+
+.home-sponsors-container .container-helper {
+  width: 100%;
+  height: 100%;
+}
+
+.home-sponsors-container .sponsor-col {
+  /*padding: 0;*/
+}
+
+.single-sponsor {
+  transition: 0.5s;
+  display: inline-block;
+  position: relative;
+}
+
+.single-sponsor .sponsor-image {
+  width: 100%;
+  cursor: pointer;
+}
+
+.single-sponsor .sponsor-image-top {
+  z-index: 100;
+  display: none;
+}
+
+.single-sponsor:hover .sponsor-image-top {
+  display: inline;
 }
