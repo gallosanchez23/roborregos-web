@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import MembersHeader from './MembersHeader/MembersHeader.js';
 import MembersGrid from './MembersGrid/MembersGrid.js';
 import MembersJoinUs from './MembersJoinUs/MembersJoinUs.js';
-import './Members.css';
 
 class Members extends Component {
 	constructor(props) {

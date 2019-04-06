@@ -22,3 +22,215 @@ code {
 	height: 100%;
   padding-top: 48px;
 }
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* App styles */
+/* ----------------------------------------------------------------------------------- */
+.app-container {
+  height: 100%;
+}
+
+.container-legend {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* Members styles */
+/* ----------------------------------------------------------------------------------- */
+.members-container {
+  height: 100%;
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* MembersHeader styles */
+/* ----------------------------------------------------------------------------------- */
+.members-header {
+  height: 100%;
+  position: relative;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(20, 183, 191, 0.9) 30%,
+      rgba(0, 94, 105, 0.9) 100%
+    ),
+    url(./images/pattern.png) top left/auto repeat fixed;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* MembersJoinUs styles */
+/* ----------------------------------------------------------------------------------- */
+.members-join-us {
+  height: 60%;
+  position: relative;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(214, 81, 146, 0.9) 30%,
+      rgba(130, 0, 65, 0.9) 100%
+    ),
+    url(./images/pattern.png) top left/auto repeat fixed;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* MembersGrid styles */
+/* ----------------------------------------------------------------------------------- */
+.members-grid {
+  background: #000;
+  min-height: 100%;
+}
+
+.members-grid .members-grid-tile .member-image {
+  height: 100%;
+  transition: 0.4s;
+  width: 100%;
+}
+
+.members-grid .members-grid-tile:hover .member-image {
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  transform: scale(1.2);
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* MembersModal styles */
+/* ----------------------------------------------------------------------------------- */
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.member-modal-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.container-helper {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(19, 25, 30, 0.8) 40%,
+      rgba(10, 15, 20, 0.8) 100%
+    ),
+    url(images/github_pattern_white.svg) top left repeat fixed;
+}
+
+.main-modal-row {
+  height: 100%;
+}
+
+.image-col {
+  display: flex;
+  align-items: center;
+}
+
+.image-cropper {
+  width: 304px;
+  height: 304px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.modal-member-image {
+  height: 100%;
+  transform: translateX(-16%);
+}
+
+.information-col {
+  background: rgb(10, 15, 20);
+}
+
+@media (min-width: 1025px) {
+  .information-col {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .information-col {
+    width: 100%;
+  }
+}
+
+.information-col .information-container {
+  padding: 10px;
+}
+
+.information-col h2 {
+  color: rgb(20, 183, 191);
+}
+
+.information-col p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.information-col p strong {
+  font-size: 20px;
+}
+
+.information-col .member-modal-btn {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  text-transform: none;
+}
+
+.information-col .member-modal-btn .member-username {
+  padding-left: 8px;
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* Home styles */
+/* ----------------------------------------------------------------------------------- */
+.home-container {
+  height: 100%;
+  background: #000;
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* HomeHeader styles */
+/* ----------------------------------------------------------------------------------- */
+.home-header {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 40%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(images/team_2019.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}

@@ -5,7 +5,6 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import placeholder from 'images/placeholder-rectangle.png';
 import { Modal } from 'react-bootstrap';
-import './MembersGrid.css';
 
 class MembersGrid extends Component {
 	constructor(props) {
