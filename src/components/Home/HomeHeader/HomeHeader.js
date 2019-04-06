@@ -5,7 +5,6 @@ class HomeHeader extends Component {
 	render() {
 		return (
 			<header className='home-header'>
-				<img className='header-img' src={  } />
 			</header>
 		);
 	}
