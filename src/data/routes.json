@@ -2,15 +2,23 @@
 	"routes": [
 		{
 			"path": "/",
+			"legend": "Home",
 			"component": "Home"
 		},
 		{
 			"path": "/about_us",
+			"legend": "About us",
 			"component": "AboutUs"
 		},
 		{
 			"path": "/members",
+			"legend": "Members",
 			"component": "Members"
+		},
+		{
+			"path": "/contact_us",
+			"legend": "Contact us",
+			"component": "ContactUs"
 		}
 	]
 }

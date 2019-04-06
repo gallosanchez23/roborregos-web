@@ -1,61 +1,83 @@
 import React, { Component } from 'react';
-
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import NoSsr from '@material-ui/core/NoSsr';
-import Typography from '@material-ui/core/Typography';
-
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
-const styles = {
-	root: {
-		flexGrow: 1,
-	},
-};
+import logo from 'images/white_logo.png';
+import './NavBar.css'
 
 class NavBar extends Component {
-	state = {
-		tabValue: 0,
-	};
+	constructor(props) {
+		super(props);
 
-	handleTabChange = (event, tabValue) => {
-		this.setState({ tabValue });
-	};
+		this.handleNavbarClick = this.handleNavbarClick.bind(this);
+
+		this.routes = props.routes;
+
+		const complete_path = window.location.pathname;
+		const first_slash_index = complete_path.indexOf('/');
+		const second_slash_index = complete_path.indexOf('/', first_slash_index + 1);
+		const current_path = second_slash_index === -1
+			? complete_path.substring(0, complete_path.length)
+			: complete_path.substring(0, second_slash_index);
+		this.state = {
+			active_button: current_path
+		};
+	}
+
+	handleNavbarClick(index) {
+		this.setState(state => ({
+			active_button: index
+		}));
+	}
+
+	getClassName(path) {
+		return 'navbar-btn' + ((path === this.state.active_button) ? ' active' : '');
+	}
 
 	render() {
-		const { classes } = this.props;
-		const { tabValue } = this.state;
-
 		return (
-			<NoSsr>
-				<div className={classes.root}>
-					<AppBar position='static'>
-						<Tabs
-							centered
-							value={ tabValue }
-							onChange={ this.handleTabChange }
-						>
+			<Navbar
+				expand='lg'
+				bg='dark'
+				variant='dark'
+				fixed='top'
+				id='app-navbar'
+			>
+				<Navbar.Brand
+					as={ Link }
+					to='/'
+					onClick={ this.handleNavbarClick.bind(this, '/')}
+				>
+					<img
+						id='navbar-logo'
+						src={ logo }
+						className='d-inline-block align-top'
+						alt='logo'
+					/>
+				</Navbar.Brand>
+				<Navbar.Toggle aria-controls='responsive-navbar' />
+				<Navbar.Collapse id='responsive-navbar'>
+					<Nav className='mr-auto'>
 
-							<Tab component={ Link } label='Home' to='/' />
-							<Tab component={ Link } label='About us' to='/about_us' />
-							<Tab label='Texto' disabled />
-							<Tab component={ Link } label='Members' to='/members' />
+						{this.routes.map((route, index) =>
+							<Nav.Link
+								key={ index }
+								className={ this.getClassName(route.path) }
+								as={ Link }
+								to={ route.path }
+								onClick={ this.handleNavbarClick.bind(this, route.path) }
+							>
+								<div className='navbar-btn-legend'>
+									{ route.legend }
+								</div>
+							</Nav.Link>
+						)}
 
-						</Tabs>
-					</AppBar>
-				</div>
-			</NoSsr>
+					</Nav>
+				</Navbar.Collapse>
+			</Navbar>
 		);
 	}
 
 }
 
-NavBar.propTypes = {
-	classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(NavBar);
+export default NavBar;
