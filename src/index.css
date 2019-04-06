@@ -231,6 +231,27 @@ code {
     url(images/team_2019.jpg);
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+/* HomeCarousel styles */
+/* ----------------------------------------------------------------------------------- */
+.home-carousel {
+  width: 100%;
+  min-height: 100%;
+  background: #000;
+}
+
+.carousel-caption {
+  margin: 0 auto;
+  /* display: flex; */
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-image {
+  min-height: 100%;
 }
