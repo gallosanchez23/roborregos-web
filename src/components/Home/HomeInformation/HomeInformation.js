@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { Parallax } from 'react-scroll-parallax';
 
 class HomeHeader extends Component {
 	render() {
