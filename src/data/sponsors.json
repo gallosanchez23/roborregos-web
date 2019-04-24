@@ -19,6 +19,10 @@
 		{
 			"name": "Cerrey",
 			"img_path": "cerrey.png"
+		},
+		{
+			"name": "Kia",
+			"img_path": "kia.png"
 		}
 	]
 }
