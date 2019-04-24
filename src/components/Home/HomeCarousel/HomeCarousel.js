@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CarouselItem from './CarouselItem/CarouselItem.js';
 import placeholder from 'images/placeholder-rectangle.png';
 // import placeholder from 'images/carousel1.jpg';
 import { Carousel } from 'react-bootstrap';
