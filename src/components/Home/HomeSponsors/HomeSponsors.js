@@ -20,7 +20,7 @@ class HomeSponsors extends Component {
 							</h3>
 							<Row>
 								{this.sponsors.map((sponsor, index) =>(
-									<Col sm='4' md='3' key={ index } className='sponsor-col' >
+									<Col sm='4' md='2' key={ index } className='sponsor-col' >
 										<HomeSingleSponsor
 											sponsor={ sponsor }
 										/>
