@@ -5,15 +5,9 @@ class HomeSingleSponsor extends Component {
 	constructor(props) {
 		super(props);
 
-		this.imgNameFormat = this.imgNameFormat.bind(this);
 		this.tryRequire = this.tryRequire.bind(this);
 
 		this.sponsor = props.sponsor;
-	}
-
-	imgNameFormat(img_path) {
-		var dot_index = img_path.indexOf('.');
-		return img_path.substring(0, dot_index) + '_white' + img_path.substring(dot_index)
 	}
 
 	tryRequire(img_path) {
@@ -26,15 +20,14 @@ class HomeSingleSponsor extends Component {
 
 	render() {
 		return(
-			<div className='single-sponsor'>
+			<a href='/' className='single-sponsor'>
 				<img
 					className='sponsor-image'
-					src={ this.tryRequire(this.imgNameFormat(this.sponsor.img_path)) }
-					onMouseOver={e => (e.currentTarget.src = this.tryRequire(this.sponsor.img_path))}
-       		onMouseOut={e => (e.currentTarget.src = this.tryRequire(this.imgNameFormat(this.sponsor.img_path)))}
+					src={ this.tryRequire(this.sponsor.img_path) }
 					alt={ this.sponsor.name }
 				/>
-			</div>
+				<div className='img-filter'></div>
+			</a>
 		);
 	}
 }
