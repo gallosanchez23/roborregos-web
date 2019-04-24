@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import Icon from '@material-ui/core/Icon';
+import { Container, Row, Col } from 'react-bootstrap';
 import logo from 'images/white_logo.png';
 
 function sitemap_link(link, legend) {
@@ -22,7 +20,7 @@ class MembersFooter extends Component {
 				<Container>
 					<Row className='justify-content-md-center'>
 						<Col xs='10' md='2'>
-							<img src={logo} className='footer-logo' />
+							<img src={logo} className='footer-logo' alt='logo' />
 						</Col>
 						<Col xs='10' md='4'>
 							<h4 className='footer-title'>
