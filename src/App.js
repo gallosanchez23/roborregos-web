@@ -25,11 +25,11 @@ function ContactUs() {
 
 class App extends Component {
 	componentDidMount() {
-    loadCSS(
-      'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
-      document.querySelector('#insertion-point-jss'),
-    );
-  }
+		loadCSS(
+			'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+			document.querySelector('#insertion-point-jss'),
+		);
+	}
 
 	render() {
 		return (
@@ -57,7 +57,6 @@ class App extends Component {
 						path='/contact_us'
 						component={ ContactUs }
 					/>
-
 				</div>
 			</Router>
 		);
