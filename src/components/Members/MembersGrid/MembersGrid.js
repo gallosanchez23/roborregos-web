@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import MemberModal from './MemberModal/MemberModal.js';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import placeholder from 'images/placeholder-rectangle.png';
 import { Modal } from 'react-bootstrap';
+import placeholder from 'images/placeholder-rectangle.png';
 
 class MembersGrid extends Component {
 	constructor(props) {
