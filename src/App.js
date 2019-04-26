@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
-import NavBar from 'components/NavBar/NavBar.js';
+import Home from 'components/Home/Home.js';
 import Members from 'components/Members/Members.js';
+import NavBar from 'components/NavBar/NavBar.js';
 import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import routesData from 'data/routes.json';
 import membersData from 'data/members.json';
-import './App.css';
-
-function Home() {
-	return (
-		<h2>
-			Home
-		</h2>
-	);
-}
 
 function AboutUs() {
 	return (
@@ -33,11 +25,11 @@ function ContactUs() {
 
 class App extends Component {
 	componentDidMount() {
-    loadCSS(
-      'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
-      document.querySelector('#insertion-point-jss'),
-    );
-  }
+		loadCSS(
+			'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+			document.querySelector('#insertion-point-jss'),
+		);
+	}
 
 	render() {
 		return (
@@ -48,7 +40,7 @@ class App extends Component {
 
 					<Route
 						exact path='/'
-						component={ Home }
+						component={ () => <Home /> }
 					/>
 
 					<Route
@@ -65,7 +57,6 @@ class App extends Component {
 						path='/contact_us'
 						component={ ContactUs }
 					/>
-
 				</div>
 			</Router>
 		);
