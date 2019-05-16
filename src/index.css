@@ -62,7 +62,7 @@ code {
       rgba(20, 183, 191, 0.9) 30%,
       rgba(0, 94, 105, 0.9) 100%
     ),
-    url(./images/pattern.png) top left/auto repeat fixed;
+    url(./images/github_pattern.svg) top left/auto repeat fixed;
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
@@ -81,7 +81,7 @@ code {
       rgba(214, 81, 146, 0.9) 30%,
       rgba(130, 0, 65, 0.9) 100%
     ),
-    url(./images/pattern.png) top left/auto repeat fixed;
+    url(./images/github_pattern.svg) top left/auto repeat fixed;
   color: rgba(255, 255, 255, 0.8);
 }
 
