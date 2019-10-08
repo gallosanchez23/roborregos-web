@@ -39,9 +39,9 @@ class MembersFooter extends Component {
 							</h4>
 							<p>
 								{ sitemap_link('/home', 'Home') }
-								{ sitemap_link('/about_us', 'About us') }
+								{ sitemap_link('/about', 'About') }
 								{ sitemap_link('/members', 'Members') }
-								{ sitemap_link('/contact_us', 'Contact us') }
+								{ sitemap_link('/contact', 'Contact') }
 							</p>
 						</Col>
 						<Col xs='10' md='3'>
