@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './MembersJoinUs.css';
 
 class MembersJoinUs extends Component {
 	render() {
