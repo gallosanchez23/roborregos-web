@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import MembersHeader from './MembersHeader/MembersHeader.js';
+import MembersFooter from './MembersFooter/MembersFooter.js';
 import MembersGrid from './MembersGrid/MembersGrid.js';
+import MembersHeader from './MembersHeader/MembersHeader.js';
 import MembersJoinUs from './MembersJoinUs/MembersJoinUs.js';
-import './Members.css';
 
 class Members extends Component {
 	constructor(props) {
@@ -17,6 +17,7 @@ class Members extends Component {
 				<MembersHeader />
 				<MembersGrid members={ this.members } />
 				<MembersJoinUs />
+				<MembersFooter />
 			</div>
 		);
 	}

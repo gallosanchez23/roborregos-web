@@ -6,9 +6,9 @@
 			"component": "Home"
 		},
 		{
-			"path": "/about_us",
-			"legend": "About us",
-			"component": "AboutUs"
+			"path": "/about",
+			"legend": "About",
+			"component": "About"
 		},
 		{
 			"path": "/members",
@@ -16,9 +16,9 @@
 			"component": "Members"
 		},
 		{
-			"path": "/contact_us",
-			"legend": "Contact us",
-			"component": "ContactUs"
+			"path": "/contact",
+			"legend": "Contact",
+			"component": "Contact"
 		}
 	]
 }
