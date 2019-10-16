@@ -2,11 +2,12 @@ version: '3.3'
 
 services:
   frontend-web:
-    command: bash -c "yarn && yarn start"
+    image: roborregos/frontend-web:1.0
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/app
+      - .:/usr/src
     ports:
       - 3000:3000
+    command: bash -c "yarn && yarn start"
