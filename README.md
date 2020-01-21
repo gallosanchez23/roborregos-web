@@ -28,6 +28,7 @@ You can consult the application on production at [roborregos.com](https://roborr
 | José Eduardo Sánchez | [gallo.sanchez23@gmail.com](mailto:gallo.sanchez23@gmail.com) | [@gallosanchez23](https://github.com/gallosanchez23) | Developer |
 | Alexis Virgen | [salexisvirgen@gmail.com](mailto:salexisvirgen@gmail.com) | [@SAlexisvf](https://github.com/SAlexisvf) | Developer |
 | Sebastián Rivera González | [sebas.rivera96@gmail.com](mailto:sebas.rivera96@gmail.com) | [@sebasrivera96](https://github.com/sebasrivera96) | Developer |
+| Aurora Tijerina Berzosa | [auro.tj@gmail.com](mailto:auro.tj@gmail.com) | [@aurotb](https://github.com/aurotb) | Developer |
 
 ### Environment URLs
 
