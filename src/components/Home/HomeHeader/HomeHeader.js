@@ -16,7 +16,7 @@ class HomeHeader extends Component {
 							<br/>
 							<h1>
 								<ReactRotatingText
-									items={['We create', 'We code', 'We teach', 'We drink...']}
+									items={['We create', 'We build', 'We design', 'We code', 'We connect', 'We compete', 'We learn', 'We teach', 'We drink...']}
 									pause={ 2500 }
 									typingInterval={ 70 }
 								/>

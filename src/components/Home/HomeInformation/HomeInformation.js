@@ -9,11 +9,11 @@ class HomeHeader extends Component {
 					<Col xs='10' md='6' className='information-col'>
 						<span>
 							<h3>
-								Competencias Internacionales
+							Robotics Team in Competition
 							</h3>
 							<br/>
 							<p>
-								Aliqua nisi ea occaecat incididunt ex reprehenderit consequat dolore qui occaecat eu ad sunt fugiat ut velit ex pariatur dolore irure dolor veniam excepteur minim non labore id aliquip.
+							We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, want to demonstrate the potential of Mexico in the development and innovation of technology.
 							</p>
 						</span>
 					</Col>
@@ -22,11 +22,11 @@ class HomeHeader extends Component {
 					<Col xs='10' md={{span: 6, offset: 6}} className='information-col'>
 						<span>
 							<h3>
-								Proyectos Sociales
+							Social Projects
 							</h3>
 							<br/>
 							<p>
-								Qui labore nisi eiusmod eiusmod minim dolor occaecat occaecat ut excepteur esse deserunt aliquip dolor minim nulla in magna minim consectetur dolore ut dolore in consequat veniam amet velit.
+							We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had to try inspiring people to collaborate and develop technology.
 							</p>
 						</span>
 					</Col>
@@ -35,11 +35,11 @@ class HomeHeader extends Component {
 					<Col xs='10' md='6' className='information-col'>
 						<span>
 							<h3>
-								Colaboraciones Profesionales
+							Events and outreach
 							</h3>
 							<br/>
 							<p>
-								Magna incididunt commodo sit proident labore nulla ut dolor qui sint velit consectetur amet enim incididunt ea laborum nostrud ex est in sunt ad velit laborum eu sunt dolore ad sint dolor nulla magna adipisicing.
+							We participate in congresses and events such as INCMty, Conexión Tec, The International Congress of Mechatronics - Automatization and Technology, Semana i and many more.
 							</p>
 						</span>
 					</Col>
@@ -48,11 +48,11 @@ class HomeHeader extends Component {
 					<Col xs='10' md={{span: 6, offset: 6}} className='information-col'>
 						<span>
 							<h3>
-								Comunidad estudiantil
+							Student community
 							</h3>
 							<br/>
 							<p>
-								Qui labore nisi eiusmod eiusmod minim dolor occaecat occaecat ut excepteur esse deserunt aliquip dolor minim nulla in magna minim consectetur dolore ut dolore in consequat veniam amet velit.
+							To reach our community we give free workshops about useful technologies such as ROS, Git and Machine Learning, as well as our annually biggest event: Candidates, where the team gives weekly classes of basic programming, mechanics and electronics for anyone in the university interested, and create a robotics tournament to get new members.
 							</p>
 						</span>
 					</Col>
