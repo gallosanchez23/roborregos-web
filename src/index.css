@@ -260,7 +260,7 @@ code {
       rgba(0, 0, 0, 0.5) 40%,
       rgba(0, 0, 0, 0.5) 100%
     ),
-    url(images/team_2019.jpg);
+    url(images/home/team_2019.jpg);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
