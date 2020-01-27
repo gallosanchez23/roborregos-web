@@ -179,6 +179,9 @@ code {
 
 .main-modal-row .information-col .information-container {
   padding: 10px;
+  padding: 30px;
+  border: 30px;
+  border-color: red;
 }
 
 .main-modal-row .information-col h2 {
@@ -197,6 +200,12 @@ code {
 .main-modal-row .information-col .member-modal-btn {
   color: rgba(255, 255, 255, 0.9);
   font-size: 18px;
+  text-transform: none;
+}
+
+.main-text-members {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
   text-transform: none;
 }
 
