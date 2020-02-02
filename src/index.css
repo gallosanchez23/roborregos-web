@@ -35,8 +35,9 @@ code {
 .container-legend {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 15%;
+  right: 15%;
+  transform: translate(0%, -50%);
 }
 
 
@@ -68,6 +69,21 @@ code {
 }
 
 
+.main-text-members {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  text-transform: none;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.main-text-members-emphasis {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 25px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-transform: none;
+}
 
 /* ----------------------------------------------------------------------------------- */
 /* MembersJoinUs styles */
@@ -78,11 +94,28 @@ code {
   background:
     linear-gradient(
       45deg,
-      rgba(214, 81, 146, 0.9) 30%,
-      rgba(130, 0, 65, 0.9) 100%
+      rgba(0, 94, 105, 0.9) 30%,
+      rgba(20, 18, 19, 0.9) 100%
     ),
     url(./images/github_pattern.svg) top left/auto repeat fixed;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.members-join-us-button {
+  left: 25%;
+  width: 50%;
+  height: 100px;
+}
+
+.members-join-us-button-text {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: source-code-pro, Menlo, Monaco, Consolas;
+  border: 2px solid white;
+  padding: 7% 35%;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 170%;
 }
 
 
@@ -91,7 +124,7 @@ code {
 /* MembersGrid styles */
 /* ----------------------------------------------------------------------------------- */
 .members-grid {
-  background: #000;
+  background: rgba(20, 18, 19, 0.9);
   min-height: 100%;
 }
 
@@ -203,11 +236,6 @@ code {
   text-transform: none;
 }
 
-.main-text-members {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 20px;
-  text-transform: none;
-}
 
 .main-modal-row .information-col .member-modal-btn .member-username {
   padding-left: 8px;

@@ -9,7 +9,8 @@ class MembersHeader extends Component {
 						Members
 					</h2>
 					<div className='main-text-members'>
-						<p>
+						<br></br>
+						<p className='main-text-members-emphasis'>
 							Founded in 2015 with only 4 members, we are now a team of 45 full-time students of different semesters and careers, with 2 professors of TI at Tecnológico de Monterrey.
 						</p>
 						<p>
