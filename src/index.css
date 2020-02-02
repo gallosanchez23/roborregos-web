@@ -59,7 +59,7 @@ code {
   background:
     linear-gradient(
       45deg,
-      rgba(20, 183, 191, 0.9) 30%,
+      rgba(20, 18, 19, 0.9) 30%,
       rgba(0, 94, 105, 0.9) 100%
     ),
     url(./images/github_pattern.svg) top left/auto repeat fixed;

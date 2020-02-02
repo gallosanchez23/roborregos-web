@@ -50,7 +50,7 @@ class MembersGrid extends Component {
 					cellHeight={ 'auto' }
 					className='members-grid'
 					cols={ 5 }
-					spacing={ 0 }
+					spacing={ 5 }
 				>
 
 					{this.members.map(member =>(
