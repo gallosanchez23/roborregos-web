@@ -13,10 +13,10 @@ function sitemap_link(link, legend) {
 	);
 }
 
-class Footer extends Component {
+class HomeFooter extends Component {
 	render() {
 		return(
-			<div className='footer-container'>
+			<div className='home-footer-container'>
 				<Container>
 					<Row className='justify-content-md-center'>
 						<Col xs='10' md='2'>
@@ -28,9 +28,7 @@ class Footer extends Component {
 							</h4>
 							<p>
 								<small>
-									Instituto Tecnológico de Monterrey’s representative robotics team located in Monterrey, Nuevo León, México.
-									<p></p>
-									This page was updated on February 2020
+									RoBorregos 2020 © All rights reserved | ITESM | Monterrey, Nuevo León, México
 								</small>
 							</p>
 						</Col>
@@ -50,9 +48,19 @@ class Footer extends Component {
 								Social media
 							</h4>
 							<p>
-								{ sitemap_link('https://github.com/RoBorregos', 'Github') }
-								{ sitemap_link('https://www.facebook.com/RoBorregos/', 'Facebook') }
-								{ sitemap_link('https://www.instagram.com/roborregos/', 'Instagram') }
+								<div>
+									<GitHubIcon></GitHubIcon>
+									{ sitemap_link('https://github.com/RoBorregos', 'Github') }
+								</div>
+								<div>
+									<FacebookIcon></FacebookIcon>
+									{ sitemap_link('https://www.facebook.com/RoBorregos/', 'Facebook') }
+								</div>
+								<div>
+									<InstagramIcon></InstagramIcon>
+									{ sitemap_link('https://www.instagram.com/roborregos/', 'Instagram') }
+								</div>
+								
 							</p>
 						</Col>
 					</Row>
@@ -62,4 +70,4 @@ class Footer extends Component {
 	}
 }
 
-export default Footer;
+export default HomeFooter;
