@@ -28,17 +28,18 @@ class HomeFooter extends Component {
 							</h4>
 							<p>
 								<small>
-									Equipo representativo...
-									Nisi voluptate amet eiusmod incididunt mollit commodo incididunt qui proident laboris laborum do ullamco elit dolor.
+									Instituto Tecnológico de Monterrey’s representative robotics team located in Monterrey, Nuevo León, México.
+									<p></p>
+									This page was updated on February 2020
 								</small>
 							</p>
 						</Col>
 						<Col xs='10' md='3'>
 							<h4 className='footer-title'>
-								Sitio
+								Site
 							</h4>
 							<p>
-								{ sitemap_link('/home', 'Home') }
+								{ sitemap_link('/', 'Home') }
 								{ sitemap_link('/about', 'About') }
 								{ sitemap_link('/members', 'Members') }
 								{ sitemap_link('/contact', 'Contact') }
@@ -46,12 +47,12 @@ class HomeFooter extends Component {
 						</Col>
 						<Col xs='10' md='3'>
 							<h4 className='footer-title'>
-								Redes Sociales
+								Social media
 							</h4>
 							<p>
-								{ sitemap_link('https://github.com/', 'Github') }
-								{ sitemap_link('https://www.facebook.com/', 'Facebook') }
-								{ sitemap_link('https://www.instagram.com/', 'Instagram') }
+								{ sitemap_link('https://github.com/RoBorregos', 'Github') }
+								{ sitemap_link('https://www.facebook.com/RoBorregos/', 'Facebook') }
+								{ sitemap_link('https://www.instagram.com/roborregos/', 'Instagram') }
 							</p>
 						</Col>
 					</Row>
