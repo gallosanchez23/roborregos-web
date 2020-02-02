@@ -13,7 +13,7 @@ class HomeHeader extends Component {
 							</h3>
 							<br/>
 							<p>
-							We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, want to demonstrate the potential of Mexico in the development and innovation of technology.
+							We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, we want to demonstrate the potential of Mexico in the development and innovation of technology.
 							</p>
 						</span>
 					</Col>
@@ -44,7 +44,7 @@ class HomeHeader extends Component {
 						</span>
 					</Col>
 				</Row>
-				<Row className='information-section background-2'>
+				<Row className='information-section background-4'>
 					<Col xs='10' md={{span: 6, offset: 6}} className='information-col'>
 						<span>
 							<h3>
