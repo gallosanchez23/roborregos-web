@@ -1,7 +1,7 @@
 - 
 
-*Comportamiento deseado*
+**Comportamiento deseado**
 - 
 
-*Criterios de aceptación*
-- [] 
+**Criterios de aceptación**
+- [ ] 
