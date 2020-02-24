@@ -20,7 +20,7 @@ class HomeSingleSponsor extends Component {
 
 	render() {
 		return(
-			<a href='/' className='single-sponsor'>
+			<a href={this.sponsor.link} className='single-sponsor'>
 				<img
 					className='sponsor-image'
 					src={ this.tryRequire(this.sponsor.img_path) }
