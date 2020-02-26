@@ -38,6 +38,7 @@ code {
   left: 15%;
   right: 15%;
   transform: translate(0%, -50%);
+  font-size: 5vw;
 }
 
 
@@ -71,15 +72,25 @@ code {
 
 .main-text-members {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 20px;
+  font-size: 3vh;
   text-transform: none;
   padding-left: 10%;
   padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+
+.title-text-banner {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 7vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-transform: none;
 }
 
 .main-text-members-emphasis {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 2vw;
+  font-size: 4vh;
   padding-left: 10%;
   padding-right: 10%;
   text-transform: none;
