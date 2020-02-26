@@ -36,6 +36,7 @@ class NavBar extends Component {
 	render() {
 		return (
 			<Navbar
+				collapseOnSelect
 				expand='lg'
 				bg='dark'
 				variant='dark'
@@ -54,10 +55,9 @@ class NavBar extends Component {
 						alt='logo'
 					/>
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls='responsive-navbar' />
-				<Navbar.Collapse id='responsive-navbar'>
+				<Navbar.Toggle aria-controls='responsive-navbar-nav'/>
+				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav className='mr-auto'>
-
 						{this.routes.map((route, index) =>
 							<Nav.Link
 								key={ index }
@@ -71,7 +71,6 @@ class NavBar extends Component {
 								</div>
 							</Nav.Link>
 						)}
-
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
