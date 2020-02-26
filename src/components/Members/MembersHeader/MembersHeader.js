@@ -13,12 +13,6 @@ class MembersHeader extends Component {
 						<p className='main-text-members-emphasis'>
 							Founded in 2015 with only 4 members, we are now a team of 45 full-time students of different semesters and careers, with 2 professors of TI at Tecnológico de Monterrey.
 						</p>
-						<p>
-							Our mission: demonstrate the potential of Mexico in the development and innovation of technology and help develop our community.
-						</p>
-						<p>
-							Our vision: to become, in the next decade, the best robotics team in Latin America in national and international competitions for university students, and be able to promote technological development in Mexico.
-						</p>
 					</div>
 				</div>
 			</div>
