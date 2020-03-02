@@ -306,6 +306,7 @@ code {
 .home-sponsors-container {
   padding: 3% 0;
   color: rgb(255, 165, 0);
+  text-align: center;
   /*
   background:
     linear-gradient(
@@ -338,7 +339,7 @@ code {
 }
 
 .single-sponsor:hover .img-filter {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 
