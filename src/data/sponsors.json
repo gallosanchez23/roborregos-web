@@ -9,6 +9,11 @@
 			"name": "Steren",
 			"img_path": "steren.png",
 			"link": "https://www.steren.com.mx"
+		},
+		{
+			"name": "Oneila",
+			"img_path": "oneila.png",
+			"link": "http://www.oneila.mx"
 		}
 	]
 }

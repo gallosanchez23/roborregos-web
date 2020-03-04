@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import placeholder from 'images/placeholder-rectangle.png';
 
-
 class HomeSingleSponsor extends Component {
 	constructor(props) {
 		super(props);
@@ -21,7 +20,7 @@ class HomeSingleSponsor extends Component {
 
 	render() {
 		return(
-			<a href={this.sponsor.link} className='single-sponsor'>
+			<a href={ this.sponsor.link } className='single-sponsor'>
 				<img
 					className='sponsor-image'
 					src={ this.tryRequire(this.sponsor.img_path) }
