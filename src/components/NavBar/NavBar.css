@@ -16,11 +16,19 @@
 	
 }
 
+@media only screen and (max-width : 1119px) {
+    #app-navbar .navbar-nav {
+		height: 100%;
+		width: 100%;
+		align-items: center;
+		background-color: rgb(25, 30, 35);
+	}
+}
+
 #app-navbar .navbar-nav {
 	height: 100%;
 	width: 100%;
 	align-items: center;
-	background-color: rgb(25, 30, 35);
 }
 
 #app-navbar .navbar-nav .navbar-btn {
