@@ -55,8 +55,8 @@ class NavBar extends Component {
 						alt='logo'
 					/>
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls='responsive-navbar-nav'/>
-				<Navbar.Collapse id='responsive-navbar-nav'>
+				<Navbar.Toggle aria-controls='responsive-navbar-nav'expanded = 'false'/>
+				<Navbar.Collapse id='responsive-navbar-nav' >
 					<Nav className='mr-auto'>
 						{this.routes.map((route, index) =>
 							<Nav.Link

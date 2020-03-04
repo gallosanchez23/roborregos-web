@@ -1,17 +1,19 @@
 #app-navbar {
 	height: 48px;
 	padding: 0px;
+	
 }
 
 #app-navbar #navbar-logo {
 	width: 35px;
 	height: 35px;
-	margin-left: 5px;
+	margin-left: 20px;
 	margin-right: 5px;
 }
 
 #app-navbar #responsive-navbar {
 	height: 100%;
+	
 }
 
 #app-navbar .navbar-nav {
