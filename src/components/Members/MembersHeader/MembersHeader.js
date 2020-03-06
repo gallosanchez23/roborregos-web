@@ -11,7 +11,7 @@ class MembersHeader extends Component {
 					<div className='main-text-members'>
 						RoBorrego’s community is made by students with different skills in robotics, logistics and networking, all joined with a passion for exploring new technologies and sharing their knowledge with everybody.
 						<p className='main-text-members-emphasis'>
-							Go ahead and meet the team!
+							Scroll down and meet the team!
 						</p>
 					</div>
 				</div>
