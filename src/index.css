@@ -69,7 +69,6 @@ code {
   text-align: center;
 }
 
-
 .main-text-members {
   color: rgba(255, 255, 255, 0.9);
   font-size: 3vh;
@@ -95,6 +94,8 @@ code {
   padding-right: 10%;
   text-transform: none;
 }
+
+
 
 /* ----------------------------------------------------------------------------------- */
 /* MembersJoinUs styles */
@@ -131,7 +132,8 @@ code {
 .members-join-us-button-text {
   padding-top: 6vh;
   color: rgba(255, 255, 255, 0.9);
-  font-family: source-code-pro, Menlo, Monaco, Consolas;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
   font-size: 4vh;
 }
 
@@ -231,7 +233,6 @@ code {
   padding: 10px;
   padding: 30px;
   border: 30px;
-  border-color: red;
 }
 
 .main-modal-row .information-col h2 {
@@ -252,7 +253,6 @@ code {
   font-size: 18px;
   text-transform: none;
 }
-
 
 .main-modal-row .information-col .member-modal-btn .member-username {
   padding-left: 8px;
