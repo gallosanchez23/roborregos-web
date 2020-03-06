@@ -13,13 +13,26 @@ class MembersGrid extends Component {
 		this.tryRequire = this.tryRequire.bind(this);
 		this.handleShowModal = this.handleShowModal.bind(this);
 		this.handleHideModal = this.handleHideModal.bind(this);
+		this.updateWindowSizeState = this.updateWindowSizeState.bind(this);
 
 		this.members = props.members;
 
 		this.state = {
 			show_modal: false,
-			member: this.members[0]
+			member: this.members[0],
+			window_size: (window.innerWidth > 990)?'l':(window.innerWidth > 700)?'m':'s',
 		}
+	}
+
+	componentDidMount() {
+		// Additionally I could have just used an arrow function for the binding `this` to the component...
+		window.addEventListener("resize", this.updateWindowSizeState);
+	}
+
+	updateWindowSizeState() {
+		this.setState({
+			window_size: (window.innerWidth > 990)?'l':(window.innerWidth > 600)?'m':'s',
+		});
 	}
 
 	tryRequire(img_path) {
@@ -49,7 +62,7 @@ class MembersGrid extends Component {
 				<GridList
 					cellHeight={ 'auto' }
 					className='members-grid'
-					cols={ 5 }
+					cols={ (window.innerWidth > 990)?5:(window.innerWidth > 600)?4:3 }
 					spacing={ 5 }
 				>
 
