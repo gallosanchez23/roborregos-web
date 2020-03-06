@@ -4,6 +4,7 @@ import HomeHeader from './HomeHeader/HomeHeader.js';
 import HomeInformation from './HomeInformation/HomeInformation.js';
 import HomeSponsors from './HomeSponsors/HomeSponsors.js';
 import sponsorsData from 'data/sponsors.json';
+import Footer from '../Footer/Footer.js';
 
 class Home extends Component {
 	render() {
@@ -12,7 +13,7 @@ class Home extends Component {
 				<HomeHeader />
 				<HomeInformation />
 				<HomeSponsors sponsors={ sponsorsData.sponsors } />
-				<HomeFooter />
+				<Footer />
 			</div>
 		);
 	}

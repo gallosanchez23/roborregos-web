@@ -13,10 +13,10 @@ function sitemap_link(link, legend) {
 	);
 }
 
-class MembersFooter extends Component {
+class Footer extends Component {
 	render() {
 		return(
-			<div className='members-footer-container'>
+			<div className='footer-container'>
 				<Container>
 					<Row className='justify-content-md-center'>
 						<Col xs='10' md='2'>
@@ -61,4 +61,4 @@ class MembersFooter extends Component {
 	}
 }
 
-export default MembersFooter;
+export default Footer;
