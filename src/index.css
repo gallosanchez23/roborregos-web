@@ -113,6 +113,13 @@ code {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.members-join-us-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 4vh;
+  text-align: center;
+  text-transform: none;
+}
+
 .members-join-us-button {
   left: 25%;
   width: 50%;
