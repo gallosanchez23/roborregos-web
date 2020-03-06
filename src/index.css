@@ -439,3 +439,61 @@ code {
 .home-footer-container .sitemap-link:hover {
   color: rgb(0, 225, 250);
 }
+
+/* ----------------------------------------------------------------------------------- */
+/* Contact styles */
+/* ----------------------------------------------------------------------------------- */
+.contact-container {
+  height: 100%;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* ContactFooter styles */
+/* ----------------------------------------------------------------------------------- */
+.contact-footer-container {
+  padding: 2% 0;
+  background: rgb(25, 30, 35);
+  color: rgb(250, 250, 250);
+}
+
+.footer-logo {
+  width: 60%;
+}
+
+.footer-title {
+  color: rgb(0, 225, 250);
+}
+
+.contact-footer-container p {
+  padding-left: 10px
+}
+
+.contact-footer-container .sitemap-link {
+  text-decoration: none;
+  color: rgb(250, 250, 250);
+}
+
+.contact-footer-container .sitemap-link:hover {
+  color: rgb(0, 225, 250);
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* ContactHeader styles */
+/* ----------------------------------------------------------------------------------- */
+.contact-header {
+  height: 100%;
+  position: relative;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(179, 204, 255, 0.9) 30%,
+      rgba(128, 170, 255, 0.9) 100%
+    ),
+    url(./images/github_pattern.svg) top left/auto repeat fixed;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.contact-button {
+  padding-top: 50px; 
+}
