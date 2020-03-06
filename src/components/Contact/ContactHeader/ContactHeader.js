@@ -10,7 +10,7 @@ class ContactHeader extends Component {
                         ¿Te gustaría apoyar el desarrollo de RoBorregos? ¡Únete a nuestro equipo de patrocinadores!
 					</h2>
                     <div className= 'contact-button'>
-                        <Button href="mailto:A01570056@itesm.mx" color= "primary" variant="outlined" size="large">
+                        <Button href="mailto:A01570056@itesm.mx" color= "inherit" variant="outlined" size="large">
                         ¡Contáctanos!
                         </Button>
                     </div>

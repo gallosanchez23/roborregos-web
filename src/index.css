@@ -486,8 +486,8 @@ code {
   background:
     linear-gradient(
       45deg,
-      rgba(179, 204, 255, 0.9) 30%,
-      rgba(128, 170, 255, 0.9) 100%
+      rgba(153, 153, 255, 0.9) 30%,
+      rgba(128, 128, 255, 0.9) 100%
     ),
     url(./images/github_pattern.svg) top left/auto repeat fixed;
   color: rgba(255, 255, 255, 0.8);
@@ -495,5 +495,6 @@ code {
 }
 
 .contact-button {
+  color: rgb(52, 58, 64);
   padding-top: 50px; 
 }
