@@ -82,7 +82,6 @@ class MembersGrid extends Component {
 					))}
 
 				</GridList>
-
 				<Modal
 					show={ this.state.show_modal }
 					onHide={ this.handleHideModal }

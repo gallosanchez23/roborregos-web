@@ -153,6 +153,7 @@ code {
   background: rgba(20, 18, 19, 0.9);
   min-height: 100%;
   width: 100%;
+  transform: translate(0.2%, 0%);
 }
 
 .members-grid .members-grid-tile .member-image {
