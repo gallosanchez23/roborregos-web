@@ -7,9 +7,11 @@ class MembersJoinUs extends Component {
 			<div className='members-join-us'>
 				<div className='container-legend'>
 					<Button href="/contact" className='members-join-us-button'>
-						<h2 className='members-join-us-button-text'>
-							Join Us
-						</h2>
+						<div className='members-join-us-button-contain'>
+							<h2 className='members-join-us-button-text'>
+								Join Us
+							</h2>
+						</div>
 					</Button>
 				</div>
 			</div>

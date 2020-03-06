@@ -115,18 +115,24 @@ code {
 .members-join-us-button {
   left: 25%;
   width: 50%;
-  height: 100px;
+  height: 17vh;
+}
+
+.members-join-us-button-contain {
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align:middle;
+  border: 3px solid white;
 }
 
 .members-join-us-button-text {
-  width: 100%;
+  padding-top: 6vh;
   color: rgba(255, 255, 255, 0.9);
   font-family: source-code-pro, Menlo, Monaco, Consolas;
-  border: 2px solid white;
-  padding: 7% 35%;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 170%;
+  font-size: 4vh;
 }
 
 
