@@ -152,6 +152,7 @@ code {
 .members-grid {
   background: rgba(20, 18, 19, 0.9);
   min-height: 100%;
+  width: 100%;
 }
 
 .members-grid .members-grid-tile .member-image {
