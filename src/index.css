@@ -200,8 +200,8 @@ code {
 }
 
 .image-cropper {
-  width: 304px;
-  height: 304px;
+  width: 22vw;
+  height: 22vw;
   overflow: hidden;
   border-radius: 50%;
 }
