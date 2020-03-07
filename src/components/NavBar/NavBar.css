@@ -27,7 +27,7 @@
 }
 
 #app-navbar .navbar-nav .navbar-btn.active {
-	color: rgb(255, 165, 0);
+	color: rgb(0, 225, 250);
 	border-bottom: 2px solid;
 }
 
@@ -39,9 +39,9 @@
 
 #app-navbar .navbar-nav .navbar-btn:hover .navbar-btn-legend {
 	transform: translateY(1px);
-	color: rgb(255, 165, 0);
+	color: rgb(0, 225, 250);
 }
 
 #app-navbar .navbar-nav .navbar-btn.active .navbar-btn-legend {
-	color: rgb(255, 165, 0);
+	color: rgb(0, 225, 250);
 }
