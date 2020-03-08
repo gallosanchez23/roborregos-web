@@ -430,7 +430,6 @@ code {
 .information-section {
   height: 40vw;
   text-align: center;
-  padding: 10%;
   background-color: #2B2C28;
 }
 
@@ -459,11 +458,11 @@ code {
   }
 
   .information-title{
-    font-size: 5vh;
+    font-size: 3vw;
   }
   
   .information-paragraph{
-    font-size: 2.5vh;
+    font-size: 1.2vw;
   }
 }
 
@@ -484,7 +483,7 @@ code {
 }
 
 .information-col {
-  padding: 10%;
+  padding: 7%;
   text-align: center;
   background: #191917;
   color: #f5f5f5;

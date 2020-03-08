@@ -10,7 +10,7 @@ class HomeHeader extends Component {
 		this.updateWindowViewState = this.updateWindowViewState.bind(this);
 
 		this.state = {
-			largeView: (window.innerWidth > 900)?true:false,
+			largeView: (window.innerWidth >= 900)?true:false,
 		}
 	}
 
@@ -20,7 +20,7 @@ class HomeHeader extends Component {
 
 	updateWindowViewState() {
 		this.setState({
-			largeView: (window.innerWidth > 900)?true:false,
+			largeView: (window.innerWidth >= 900)?true:false,
 		});
 	}
 
@@ -28,33 +28,33 @@ class HomeHeader extends Component {
 		return(
 		<div className='home-information-container'>
 				<Row>
-					<Col xs='12' md='6' className='information-section information-col'>
+					<Col className='information-section information-col'>
 						<span>
 							<h3 className='information-title'>
 								High-Performance Team
 							</h3>
 							<p className='information-paragraph'>
-								We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, we are really passionate about new technology and want to demonstrate the potential of Mexico in the development and innovation of technology.
+								We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, want to demonstrate the potential of Mexico in the development and innovation of technology.
 							</p>
 						</span>
 					</Col>
-					<Col xs='12' md='6' className='image-section background-1'></Col>
+					<Col className='image-section background-1'></Col>
 				</Row>
 				<Row>
-					<Col xs='12' md='6' className='image-section image-section2 background-2'></Col>
-					<Col xs='12' md='6' className='information-section information-col'>
+					<Col className='image-section image-section2 background-2'></Col>
+					<Col className='information-section information-col'>
 						<span>
 							<h3 className='information-title'>
 								Social Projects
 							</h3>
 							<p className='information-paragraph'>
-								We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had to try inspiring people to collaborate and develop technology.
+								We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had that inspire us.
 							</p>
 						</span>
 					</Col>
 				</Row>
 				<Row>
-					<Col xs='12' md='6' className='information-section information-col'>
+					<Col className='information-section information-col'>
 						<span>
 							<h3 className='information-title'>
 								Events and outreach
@@ -64,11 +64,11 @@ class HomeHeader extends Component {
 							</p>
 						</span>
 					</Col>
-					<Col xs='12' md='6' className='image-section background-3'></Col>
+					<Col className='image-section background-3'></Col>
 				</Row>
 				<Row>
-					<Col xs='12' md='6' className='image-section image-section2 background-4'></Col>
-					<Col xs='12' md='6' className='information-section information-col'>
+					<Col className='image-section image-section2 background-4'></Col>
+					<Col className='information-section information-col'>
 						<span>
 							<h3 className='information-title'>
 								Student community
@@ -87,33 +87,37 @@ class HomeHeader extends Component {
 		return(
 			<div className='home-information-container'>
 					<Row>
-						<Col xs='12' md='6' className='information-section information-col'>
+						<Col className='information-section information-col'>
 							<span>
 								<h3 className='information-title'>
 									High-Performance Team
 								</h3>
 								<p className='information-paragraph'>
-									We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, we are really passionate about new technology and want to demonstrate the potential of Mexico in the development and innovation of technology.
+									We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, want to demonstrate the potential of Mexico in the development and innovation of technology.
 								</p>
 							</span>
 						</Col>
-						<Col xs='12' md='6' className='image-section background-1'></Col>
 					</Row>
 					<Row>
-						<Col xs='12' md='6' className='information-section information-col'>
+						<Col className='image-section background-1'></Col>
+					</Row>
+					<Row>
+						<Col className='information-section information-col'>
 							<span>
 								<h3 className='information-title'>
 									Social Projects
 								</h3>
 								<p className='information-paragraph'>
-									We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had to try inspiring people to collaborate and develop technology.
+									We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had that inspire us.
 								</p>
 							</span>
 						</Col>
-						<Col xs='12' md='6' className='image-section image-section2 background-2'></Col>
 					</Row>
 					<Row>
-						<Col xs='12' md='6' className='information-section information-col'>
+						<Col className='image-section image-section2 background-2'></Col>
+					</Row>
+					<Row>
+						<Col className='information-section information-col'>
 							<span>
 								<h3 className='information-title'>
 									Events and outreach
@@ -123,10 +127,12 @@ class HomeHeader extends Component {
 								</p>
 							</span>
 						</Col>
-						<Col xs='12' md='6' className='image-section background-3'></Col>
 					</Row>
 					<Row>
-						<Col xs='12' md='6' className='information-section information-col'>
+						<Col className='image-section background-3'></Col>
+					</Row>
+					<Row>
+						<Col className='information-section information-col'>
 							<span>
 								<h3 className='information-title'>
 									Student community
@@ -136,7 +142,9 @@ class HomeHeader extends Component {
 								</p>
 							</span>
 						</Col>
-						<Col xs='12' md='6' className='image-section image-section2 background-4'></Col>
+					</Row>
+					<Row>
+						<Col className='image-section image-section2 background-4'></Col>
 					</Row>
 				</div>
 			);
