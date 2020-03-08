@@ -9,7 +9,7 @@ class HomeHeader extends Component {
 		return (
 			<header className='home-header'>
 				<Row className='justify-content-sm-center'>
-					<Col sm='5' className='header-img-col'>
+					<Col className='header-img-col'>
 						<span>
 							<img className='header-img' src={ HeaderImg } alt='logo' />
 							<br/>

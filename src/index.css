@@ -343,13 +343,15 @@ code {
 
 .header-img-col {
   height: 100%;
-  display: flex;
+  padding-top: 30vh;
+  display: block;
+  margin: auto;
   align-items: center;
   text-align: center;
 }
 
 .header-img {
-  width: 100%;
+  width: 50vw;
 }
 
 .react-rotating-text-cursor {
