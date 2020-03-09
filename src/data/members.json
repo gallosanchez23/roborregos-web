@@ -6,8 +6,11 @@
 			"name": "Emilio",
 			"lastname": "Chavez",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/ChavezE",
 			"github_user": "@ChavezE",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"emilio_chavez.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -16,8 +19,11 @@
 			"name": "Alejandro",
 			"lastname": "Garza",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/alexhor22",
 			"github_user": "@alexhor22",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"alejandro_garza.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -26,8 +32,11 @@
 			"name": "Alexis",
 			"lastname": "Virgen",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "https://github.com/SAlexisvf",
 			"github_user": "@SAlexisvf",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"alexis_virgen.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -36,8 +45,11 @@
 			"name": "Javier",
 			"lastname": "Escamilla",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"javier_escamilla.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -46,8 +58,11 @@
 			"name": "Ivan",
 			"lastname": "Sol",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"ivan_sol.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -56,8 +71,11 @@
 			"name": "Greg",
 			"lastname": "Espinosa",
 			"role": "Electronics",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"greg_espinosa.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -66,8 +84,11 @@
 			"name": "Clara",
 			"lastname": "Gutierrez",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"clara_gutierrez.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -76,8 +97,11 @@
 			"name": "Paul",
 			"lastname": "Vazquez",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/paulvazbad",
 			"github_user": "@paulvazbad",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"paul_vazquez.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -86,8 +110,11 @@
 			"name": "Jesús",
 			"lastname": "Anaya",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"jesus_anaya.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -96,8 +123,11 @@
 			"name": "Gabriela",
 			"lastname": "MI",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "https://github.com/GabrielaMl",
 			"github_user": "@GabrielaMl",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"gabriela_mi.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -106,8 +136,11 @@
 			"name": "Nestor",
 			"lastname": "Maldonado",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/nessmp",
 			"github_user": "@nessmp",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"nestor_maldonado.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -116,8 +149,11 @@
 			"name": "Ricardo",
 			"lastname": "Osorio",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"ricardo_osorio.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -126,8 +162,11 @@
 			"name": "Ernesto",
 			"lastname": "Cervantes",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/netocervantes98",
 			"github_user": "@netocervantes98",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"ernesto_cervantes.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -136,8 +175,11 @@
 			"name": "Alberto",
 			"lastname": "Jahuey",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/AJahueyM",
 			"github_user": "@AJahueyM",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"alberto_jahuey.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -146,8 +188,11 @@
 			"name": "Eduardo",
 			"lastname": "Sánchez",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/gallosanchez23",
 			"github_user": "@gallosanchez23",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"eduardo_sanchez.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -156,8 +201,11 @@
 			"name": "Yulisa",
 			"lastname": "Medina",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/YulisaM2",
 			"github_user": "@YulisaM2",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"yulisa_medina.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -166,8 +214,11 @@
 			"name": "Iqui",
 			"lastname": "Balam",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"iqui_balam.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -176,8 +227,11 @@
 			"name": "Roberto",
 			"lastname": "Galindo",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"roberto_galindo.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -186,8 +240,11 @@
 			"name": "Ana",
 			"lastname": "Garza",
 			"role": "Mechanical design",
+			"email": "username@test.com",
 			"github": "https://github.com/AnaGarza",
 			"github_user": "@AnaGarza",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"ana_garza.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -196,8 +253,11 @@
 			"name": "Arcelia",
 			"lastname": "Villaseñor",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"arcelia_villasenor.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -206,8 +266,11 @@
 			"name": "Tomás",
 			"lastname": "Lugo",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/tomvik",
 			"github_user": "@tomvik",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"tomas_lugo.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -216,8 +279,11 @@
 			"name": "Aurora",
 			"lastname": "Tijerina",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/AuroTB",
 			"github_user": "@AuroTB",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"aurora_tijerina.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -226,8 +292,11 @@
 			"name": "Eric",
 			"lastname": "Castillo",
 			"role": "Electronics",
+			"email": "username@test.com",
 			"github": "#",
 			"github_user": "@",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"eric_castillo.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -236,8 +305,11 @@
 			"name": "Antonio",
 			"lastname": "Rodríguez",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/AntonioRdzNav",
 			"github_user": "@AntonioRdzNav",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"antonio_rodriguez.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		},
 		{
@@ -246,8 +318,11 @@
 			"name": "Diego",
 			"lastname": "Garza",
 			"role": "Software development",
+			"email": "username@test.com",
 			"github": "https://github.com/chhcd",
 			"github_user": "@chhcd",
+			"linkedin": "https://www.linkedin.com/",
+			"resume":"diego_garza.pdf",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 		}
 	]

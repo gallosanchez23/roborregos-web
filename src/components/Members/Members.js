@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MembersFooter from './MembersFooter/MembersFooter.js';
+//import MembersFooter from './MembersFooter/MembersFooter.js';
 import MembersGrid from './MembersGrid/MembersGrid.js';
 import MembersHeader from './MembersHeader/MembersHeader.js';
 import MembersJoinUs from './MembersJoinUs/MembersJoinUs.js';

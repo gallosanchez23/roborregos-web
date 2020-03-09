@@ -11,21 +11,33 @@ class MemberModal extends Component {
 	constructor(props) {
 		super(props);
 
-		this.tryRequire = this.tryRequire.bind(this);
+		this.tryRequireImg = this.tryRequireImg.bind(this);
+		this.tryRequireResume = this.tryRequireResume.bind(this);
 		this.memberFullName = this.memberFullName.bind(this);
+		this.emailUser = this.emailUser.bind(this);
 
 		this.member = props.member;
 		this.handleHideModal = props.onHide;
 	}
 
-	tryRequire(img_path) {
+	tryRequireImg(img_path) {
 		try {
 			return require('images/members/' + img_path);
 		} catch (err) {
 			return placeholder;
 		}
 	}
-
+	
+	tryRequireResume(doc_path) {
+		try {
+			return require('data/resumes/' + doc_path);
+		} catch (err) {
+			return placeholder;
+		}
+	}
+	emailUser(email){
+		return email.substring(0,email.indexOf("@"));
+	}
 	memberFullName() {
 		return this.member.name + ' ' + this.member.lastname;
 	}
@@ -40,7 +52,7 @@ class MemberModal extends Component {
 							<div className='image-cropper'>
 								<img
 									className='modal-member-image'
-									src={ this.tryRequire(this.member.img) }
+									src={ this.tryRequireImg(this.member.img) }
 									alt={ this.memberFullName() }
 								/>
 							</div>
@@ -70,10 +82,28 @@ class MemberModal extends Component {
 									{ this.member.description }
 									<br/>
 									<br/>
-									<Button href={ this.member.github } className='member-modal-btn'>
+									<Button href={ this.member.github } target="_blank" className='member-modal-btn'>
 										<Icon className='fab fa-github fa-fw' />
 										<span className='member-username'>
 											{ this.member.github_user }
+										</span>
+									</Button>
+									<Button href={ this.member.linkedin } target="_blank" className='member-modal-btn'>
+										<Icon className='fab fa-linkedin fa-fw' />
+										<span className='member-username'>
+											{ this.memberFullName() }
+										</span>
+									</Button>
+									<Button href={ this.tryRequireResume(this.member.resume) } target="_blank" className='member-modal-btn'>
+										<Icon className='fab fa fa-file fa-fw' />
+										<span className='member-username'>
+											{ this.memberFullName() }
+										</span>
+									</Button>
+									<Button href={ 'mailto:'+this.member.email } className='member-modal-btn'>
+										<Icon className='fab fa fa-envelope fa-fw' />
+										<span className='member-username'>
+											{ this.emailUser(this.member.email) }
 										</span>
 									</Button>
 								</p>
