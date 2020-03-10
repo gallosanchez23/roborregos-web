@@ -88,6 +88,7 @@ code {
 }
 
 .main-text-members-emphasis {
+  padding-top: 2%;
   color: rgba(255, 255, 255, 0.9);
   font-size: 4vh;
   padding-left: 10%;
@@ -121,9 +122,9 @@ code {
 }
 
 .members-join-us-button {
-  left: 25%;
-  width: 50%;
-  height: 17vh;
+  left: 30%;
+  width: 28vw;
+  height: 12vh;
 }
 
 .members-join-us-button-contain {
@@ -133,15 +134,15 @@ code {
   border-radius: 8px;
   text-align: center;
   vertical-align:middle;
-  border: 3px solid white;
+  border: 2px solid white;
 }
 
 .members-join-us-button-text {
-  padding-top: 6vh;
+  padding-top: 3.7vh;
   color: rgba(255, 255, 255, 0.9);
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
 

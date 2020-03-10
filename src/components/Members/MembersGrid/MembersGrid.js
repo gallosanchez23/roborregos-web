@@ -14,25 +14,29 @@ class MembersGrid extends Component {
 		this.handleShowModal = this.handleShowModal.bind(this);
 		this.handleHideModal = this.handleHideModal.bind(this);
 		this.updateWindowSizeState = this.updateWindowSizeState.bind(this);
+		this.getNumColums = this.getNumColums.bind(this);
 
 		this.members = props.members;
 
 		this.state = {
 			show_modal: false,
 			member: this.members[0],
-			window_size: (window.innerWidth > 990)?'l':(window.innerWidth > 700)?'m':'s',
+			member_num_cols:this.getNumColums(),
 		}
 	}
 
 	componentDidMount() {
-		// Additionally I could have just used an arrow function for the binding `this` to the component...
-		window.addEventListener("resize", this.updateWindowSizeState);
+		window.addEventListener('resize', this.updateWindowSizeState);
 	}
 
 	updateWindowSizeState() {
 		this.setState({
-			window_size: (window.innerWidth > 990)?'l':(window.innerWidth > 600)?'m':'s',
+			member_num_cols: this.getNumColums(),
 		});
+	}
+
+	getNumColums(){
+		return ((window.innerWidth > 1100)?5:(window.innerWidth > 800)?4:3);
 	}
 
 	tryRequire(img_path) {
@@ -62,7 +66,7 @@ class MembersGrid extends Component {
 				<GridList
 					cellHeight={ 'auto' }
 					className='members-grid'
-					cols={ (window.innerWidth > 990)?5:(window.innerWidth > 600)?4:3 }
+					cols={ this.state.member_num_cols }
 					spacing={ 5 }
 				>
 
