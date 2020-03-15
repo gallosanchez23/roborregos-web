@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import logo from 'images/white_logo.png';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 function sitemap_link(link, legend) {
 	return (
@@ -60,7 +63,6 @@ class HomeFooter extends Component {
 									<InstagramIcon></InstagramIcon>
 									{ sitemap_link('https://www.instagram.com/roborregos/', 'Instagram') }
 								</div>
-								
 							</p>
 						</Col>
 					</Row>
