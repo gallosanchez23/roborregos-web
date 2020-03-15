@@ -236,6 +236,15 @@ code {
   color: rgb(255, 165, 0);
 }
 
+.social-media-link {
+  padding: 5%;
+  display:inline;
+}
+
+.social-media {
+  padding-bottom: 3%;
+}
+
 
 
 /* ----------------------------------------------------------------------------------- */

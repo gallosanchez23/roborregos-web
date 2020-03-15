@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import logo from 'images/white_logo.png';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 function sitemap_link(link, legend) {
 	return (
@@ -28,9 +31,7 @@ class Footer extends Component {
 							</h4>
 							<p>
 								<small>
-									Instituto Tecnológico de Monterrey’s representative robotics team located in Monterrey, Nuevo León, México.
-									<p></p>
-									This page was updated on February 2020
+									RoBorregos 2020 © All rights reserved | ITESM | Monterrey, Nuevo León, México
 								</small>
 							</p>
 						</Col>
@@ -50,9 +51,43 @@ class Footer extends Component {
 								Social media
 							</h4>
 							<p>
-								{ sitemap_link('https://github.com/RoBorregos', 'Github') }
-								{ sitemap_link('https://www.facebook.com/RoBorregos/', 'Facebook') }
-								{ sitemap_link('https://www.instagram.com/roborregos/', 'Instagram') }
+							<div className='social-media'>
+									<GitHubIcon></GitHubIcon>
+									<div className='social-media-link'>
+										{ sitemap_link('https://github.com/RoBorregos', 'GitHub') }
+									</div>
+								</div>
+								<div className='social-media'>
+									<FacebookIcon></FacebookIcon>
+									<div className='social-media-link'>
+										{ sitemap_link('https://www.facebook.com/RoBorregos/', 'Facebook') }
+									</div>
+								</div>
+								<div className='social-media'>
+									<InstagramIcon></InstagramIcon>
+									<div className='social-media-link'>
+										{ sitemap_link('https://www.instagram.com/roborregos/', 'Instagram') }
+									</div> 
+								</div>
+
+								{/* <div className='social-media'>
+									<GitHubIcon></GitHubIcon>
+									<div className='social-media-link'>
+										{ sitemap_link('https://github.com/RoBorregos', '/RoBorregos') }
+									</div>
+								</div>
+								<div className='social-media'>
+									<FacebookIcon></FacebookIcon>
+									<div className='social-media-link'>
+										{ sitemap_link('https://www.facebook.com/RoBorregos/', '@RoBorregos') }
+									</div>
+								</div>
+								<div className='social-media'>
+									<InstagramIcon></InstagramIcon>
+									<div className='social-media-link'>
+										{ sitemap_link('https://www.instagram.com/roborregos/', '@roborregos') }
+									</div> 
+								</div> */}
 							</p>
 						</Col>
 					</Row>

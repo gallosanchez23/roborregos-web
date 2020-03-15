@@ -51,15 +51,15 @@ class HomeFooter extends Component {
 								Social media
 							</h4>
 							<p>
-								<div>
+								<div className='social-media'>
 									<GitHubIcon></GitHubIcon>
 									{ sitemap_link('https://github.com/RoBorregos', 'Github') }
 								</div>
-								<div>
+								<div className='social-media'>
 									<FacebookIcon></FacebookIcon>
 									{ sitemap_link('https://www.facebook.com/RoBorregos/', 'Facebook') }
 								</div>
-								<div>
+								<div className='social-media'>
 									<InstagramIcon></InstagramIcon>
 									{ sitemap_link('https://www.instagram.com/roborregos/', 'Instagram') }
 								</div>
