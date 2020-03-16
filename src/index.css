@@ -85,7 +85,25 @@ code {
   color: rgba(255, 255, 255, 0.8);
 }
 
-
+/* ----------------------------------------------------------------------------------- */
+/* About TimeLine styles */
+/* ----------------------------------------------------------------------------------- */
+.about-timeline {
+  position: relative;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.9) 100%,
+      rgba(61, 61, 61, 0.9) 30%
+    ),
+    url(./images/github_pattern.svg) top left/auto repeat fixed;
+  color: black;
+}
+.about-image{
+  width: 400px;
+  height: 250px;
+  border-radius: 8px;
+}
 
 /* ----------------------------------------------------------------------------------- */
 /* MembersGrid styles */
