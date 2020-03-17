@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import logo from 'images/white_logo.png';
+import IconButton from '@material-ui/core/IconButton';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import logo from 'images/white_logo.png';
 
-function sitemap_link(link, legend) {
+function sitemapLink(link, legend) {
 	return (
 		<span>
 			<a href={ link } className='sitemap-link'>
@@ -13,6 +14,19 @@ function sitemap_link(link, legend) {
 			</a>
 			<br/>
 		</span>
+	);
+}
+
+function sitemapIconButton(link, icon) {
+	return (
+		<IconButton
+		component='a'
+		href={ link }
+		color='inherit'
+		className='sitemap-link'
+		>
+			{ icon }
+		</IconButton>
 	);
 }
 
@@ -40,10 +54,10 @@ class Footer extends Component {
 								Site
 							</h4>
 							<p>
-								{ sitemap_link('/', 'Home') }
-								{ sitemap_link('/about', 'About') }
-								{ sitemap_link('/members', 'Members') }
-								{ sitemap_link('/contact', 'Contact') }
+								{ sitemapLink('/', 'Home') }
+								{ sitemapLink('/about', 'About') }
+								{ sitemapLink('/members', 'Members') }
+								{ sitemapLink('/contact', 'Contact') }
 							</p>
 						</Col>
 						<Col xs='10' md='3'>
@@ -51,43 +65,9 @@ class Footer extends Component {
 								Social media
 							</h4>
 							<p>
-							<div className='social-media'>
-									<GitHubIcon></GitHubIcon>
-									<div className='social-media-link'>
-										{ sitemap_link('https://github.com/RoBorregos', 'GitHub') }
-									</div>
-								</div>
-								<div className='social-media'>
-									<FacebookIcon></FacebookIcon>
-									<div className='social-media-link'>
-										{ sitemap_link('https://www.facebook.com/RoBorregos/', 'Facebook') }
-									</div>
-								</div>
-								<div className='social-media'>
-									<InstagramIcon></InstagramIcon>
-									<div className='social-media-link'>
-										{ sitemap_link('https://www.instagram.com/roborregos/', 'Instagram') }
-									</div> 
-								</div>
-
-								{/* <div className='social-media'>
-									<GitHubIcon></GitHubIcon>
-									<div className='social-media-link'>
-										{ sitemap_link('https://github.com/RoBorregos', '/RoBorregos') }
-									</div>
-								</div>
-								<div className='social-media'>
-									<FacebookIcon></FacebookIcon>
-									<div className='social-media-link'>
-										{ sitemap_link('https://www.facebook.com/RoBorregos/', '@RoBorregos') }
-									</div>
-								</div>
-								<div className='social-media'>
-									<InstagramIcon></InstagramIcon>
-									<div className='social-media-link'>
-										{ sitemap_link('https://www.instagram.com/roborregos/', '@roborregos') }
-									</div> 
-								</div> */}
+								{ sitemapIconButton('https://github.com/RoBorregos', <GitHubIcon fontSize='small' />) }
+								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon fontSize='small' />) }
+								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon fontSize='small' />) }
 							</p>
 						</Col>
 					</Row>
