@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import HomeFooter from './HomeFooter/HomeFooter.js';
 import HomeHeader from './HomeHeader/HomeHeader.js';
 import HomeInformation from './HomeInformation/HomeInformation.js';
 import HomeSponsors from './HomeSponsors/HomeSponsors.js';
+import Footer from 'components/Footer/Footer.js';
 import sponsorsData from 'data/sponsors.json';
 
 class Home extends Component {
@@ -12,7 +12,7 @@ class Home extends Component {
 				<HomeHeader />
 				<HomeInformation />
 				<HomeSponsors sponsors={ sponsorsData.sponsors } />
-				<HomeFooter />
+				<Footer />
 			</div>
 		);
 	}

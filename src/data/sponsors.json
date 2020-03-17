@@ -2,27 +2,18 @@
 	"sponsors": [
 		{
 			"name": "Tecnológico de Monterrey",
-			"img_path": "itesm.png"
+			"img_path": "itesm.png",
+			"link": "https://tec.mx/es"
 		},
 		{
-			"name": "Microsoft",
-			"img_path": "microsoft.png"
-		},
-		{
-			"name": "Neitek",
-			"img_path": "neitek.png"
+			"name": "Steren",
+			"img_path": "steren.png",
+			"link": "https://www.steren.com.mx"
 		},
 		{
 			"name": "Oneila",
-			"img_path": "oneila.png"
-		},
-		{
-			"name": "Cerrey",
-			"img_path": "cerrey.png"
-		},
-		{
-			"name": "Kia",
-			"img_path": "kia.png"
+			"img_path": "oneila.png",
+			"link": "http://www.oneila.mx"
 		}
 	]
 }
