@@ -1,29 +1,46 @@
 #app-navbar {
 	height: 48px;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0 1px 0 0;
+}
+
+#app-navbar .navbar-brand {
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 #app-navbar #navbar-logo {
 	width: 35px;
 	height: 35px;
-	margin-left: 5px;
-	margin-right: 5px;
 }
 
 #app-navbar #responsive-navbar {
 	height: 100%;
 }
 
+#app-navbar .navbar-toggler {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+@media only screen and (max-width : 992px) {
+	#app-navbar .navbar-nav {
+		height: 100%;
+		width: 100%;
+		align-items: center;
+		background-color: rgb(25, 30, 35);
+	}
+}
+
 #app-navbar .navbar-nav {
 	height: 100%;
+	width: 100%;
 	align-items: center;
 }
 
 #app-navbar .navbar-nav .navbar-btn {
-	height: 100%;
 	padding-left: 20px;
 	padding-right: 20px;
+	padding-bottom: 13px;
 }
 
 #app-navbar .navbar-nav .navbar-btn.active {
