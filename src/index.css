@@ -88,7 +88,7 @@ code {
 /* ----------------------------------------------------------------------------------- */
 /* About TimeLine styles */
 /* ----------------------------------------------------------------------------------- */
-.about-timeline {
+.about-container {
   position: relative;
   background:
     linear-gradient(
@@ -97,12 +97,21 @@ code {
       rgba(61, 61, 61, 0.9) 30%
     ),
     url(./images/github_pattern.svg) top left/auto repeat fixed;
-  color: black;
+  color: white;
 }
 .about-image{
-  width: 400px;
+  width: 440px;
   height: 250px;
   border-radius: 8px;
+}
+.about-header{
+  width: 400px;
+  height: 80px;
+}
+.about-header-title{
+
+  font-size: 63px;
+  font-weight: normal;
 }
 
 /* ----------------------------------------------------------------------------------- */
