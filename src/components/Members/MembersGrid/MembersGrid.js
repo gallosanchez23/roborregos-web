@@ -31,9 +31,9 @@ class MembersGrid extends Component {
 	}
 
 	numberOfColumns(){
-		if (window.innerWidth > LARGE_WIDTH)
+		if (window.innerWidth >= LARGE_WIDTH)
 			return 5;
-		else if (window.innerWidth > MEDIUM_WIDTH)
+		else if (window.innerWidth >= MEDIUM_WIDTH)
 			return 4;
 		else
 			return 3;
