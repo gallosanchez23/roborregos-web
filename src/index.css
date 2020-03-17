@@ -510,4 +510,5 @@ code {
 
 .footer-container .sitemap-link:hover {
   color: rgb(0, 225, 250);
+  background: none;
 }
