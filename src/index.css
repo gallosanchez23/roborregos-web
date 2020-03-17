@@ -342,13 +342,13 @@ code {
   font-size: 2.5vw;
 }
 
-@media (min-width: 900px) {
-  .image-section {
+@media (min-width: 992px) {
+  .image-section-right {
     height: 25vw;
     background-position: right;
     background-size: 50%;
   }
-  .image-section2 {
+  .image-section-left {
     height: 25vw;
     background-position: left;
     background-size: 50%;
@@ -368,7 +368,7 @@ code {
 }
 
 .background-1 {
-  background-image: url(images/home/competencias.jpg);
+  background-image: url(images/home/competitions.jpg);
 }
 
 .background-2 {
