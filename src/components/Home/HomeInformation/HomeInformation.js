@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { LARGE_WIDTH } from 'constants.js';
+import { MEDIUM_WIDTH } from 'constants.js';
 
 class HomeHeader extends Component {
 	constructor(props) {
@@ -11,7 +11,7 @@ class HomeHeader extends Component {
 		this.updateWindowViewState = this.updateWindowViewState.bind(this);
 
 		this.state = {
-			large_view: (window.innerWidth >= LARGE_WIDTH) ? true : false,
+			large_view: (window.innerWidth >= MEDIUM_WIDTH) ? true : false,
 		}
 	}
 
@@ -21,7 +21,7 @@ class HomeHeader extends Component {
 
 	updateWindowViewState() {
 		this.setState({
-			large_view: (window.innerWidth >= LARGE_WIDTH) ? true : false,
+			large_view: (window.innerWidth >= MEDIUM_WIDTH) ? true : false,
 		});
 	}
 
