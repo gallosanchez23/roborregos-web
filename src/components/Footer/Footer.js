@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import IconButton from '@material-ui/core/IconButton';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import logo from 'images/white_logo.png';
 
@@ -65,7 +65,7 @@ class Footer extends Component {
 								Social media
 							</h4>
 							<p>
-								{ sitemapIconButton('https://github.com/RoBorregos', <GitHubIcon fontSize='small' />) }
+								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon fontSize='small' />) }
 								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon fontSize='small' />) }
 								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon fontSize='small' />) }
 							</p>
