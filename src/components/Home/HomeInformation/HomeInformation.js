@@ -1,32 +1,33 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { LARGE_WIDTH } from 'constants.js';
 
 class HomeHeader extends Component {
 	constructor(props) {
 		super(props);
 
-		this.getLargeView = this.getLargeView.bind(this);
-		this.getSmallView = this.getSmallView.bind(this);
+		this.largeView = this.largeView.bind(this);
+		this.smallView = this.smallView.bind(this);
 		this.updateWindowViewState = this.updateWindowViewState.bind(this);
 
 		this.state = {
-			largeView: (window.innerWidth >= 900)?true:false,
+			large_view: (window.innerWidth >= LARGE_WIDTH) ? true : false,
 		}
 	}
 
 	componentDidMount() {
-		window.addEventListener("resize", this.updateWindowViewState);
+		window.addEventListener('resize', this.updateWindowViewState);
 	}
 
 	updateWindowViewState() {
 		this.setState({
-			largeView: (window.innerWidth >= 900)?true:false,
+			large_view: (window.innerWidth >= LARGE_WIDTH) ? true : false,
 		});
 	}
 
-	getLargeView(){
+	largeView(){
 		return(
-		<div className='home-information-container'>
+		  <div className='home-information-container'>
 				<Row>
 					<Col className='information-section information-col'>
 						<span>
@@ -38,10 +39,10 @@ class HomeHeader extends Component {
 							</p>
 						</span>
 					</Col>
-					<Col className='image-section background-1'></Col>
+					<Col className='image-section image-section-right background-1'></Col>
 				</Row>
 				<Row>
-					<Col className='image-section image-section2 background-2'></Col>
+					<Col className='image-section image-section-left background-2'></Col>
 					<Col className='information-section information-col'>
 						<span>
 							<h3 className='information-title'>
@@ -64,10 +65,10 @@ class HomeHeader extends Component {
 							</p>
 						</span>
 					</Col>
-					<Col className='image-section background-3'></Col>
+					<Col className='image-section image-section-right background-3'></Col>
 				</Row>
 				<Row>
-					<Col className='image-section image-section2 background-4'></Col>
+					<Col className='image-section image-section-left background-4'></Col>
 					<Col className='information-section information-col'>
 						<span>
 							<h3 className='information-title'>
@@ -83,75 +84,75 @@ class HomeHeader extends Component {
 		);
 	}
 
-	getSmallView(){
+	smallView(){
 		return(
 			<div className='home-information-container'>
-					<Row>
-						<Col className='information-section information-col'>
-							<span>
-								<h3 className='information-title'>
-									High-Performance Team
-								</h3>
-								<p className='information-paragraph'>
-									We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, want to demonstrate the potential of Mexico in the development and innovation of technology.
-								</p>
-							</span>
-						</Col>
-					</Row>
-					<Row>
-						<Col className='image-section background-1'></Col>
-					</Row>
-					<Row>
-						<Col className='information-section information-col'>
-							<span>
-								<h3 className='information-title'>
-									Social Projects
-								</h3>
-								<p className='information-paragraph'>
-									We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had that inspire us.
-								</p>
-							</span>
-						</Col>
-					</Row>
-					<Row>
-						<Col className='image-section image-section2 background-2'></Col>
-					</Row>
-					<Row>
-						<Col className='information-section information-col'>
-							<span>
-								<h3 className='information-title'>
-									Events and outreach
-								</h3>
-								<p className='information-paragraph'>
-									We participate in congresses and events such as INCMty, Conexión Tec, The International Congress of Mechatronics - Automatization and Technology, Semana i and many more.
-								</p>
-							</span>
-						</Col>
-					</Row>
-					<Row>
-						<Col className='image-section background-3'></Col>
-					</Row>
-					<Row>
-						<Col className='information-section information-col'>
-							<span>
-								<h3 className='information-title'>
-									Student community
-								</h3>
-								<p className='information-paragraph'>
-									To reach our community, we give free workshops about useful technologies such as: ROS, Git and Machine Learning, as well as our annual biggest event: Candidates, where the team gives weekly classes of basic programming, mechanics and electronics for anyone in the university interested, and organize a robotics tournament to get new members.
-								</p>
-							</span>
-						</Col>
-					</Row>
-					<Row>
-						<Col className='image-section image-section2 background-4'></Col>
-					</Row>
-				</div>
-			);
+				<Row>
+					<Col className='information-section information-col'>
+						<span>
+							<h3 className='information-title'>
+								High-Performance Team
+							</h3>
+							<p className='information-paragraph'>
+								We  participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, want to demonstrate the potential of Mexico in the development and innovation of technology.
+							</p>
+						</span>
+					</Col>
+				</Row>
+				<Row>
+					<Col className='image-section image-section-right background-1'></Col>
+				</Row>
+				<Row>
+					<Col className='information-section information-col'>
+						<span>
+							<h3 className='information-title'>
+								Social Projects
+							</h3>
+							<p className='information-paragraph'>
+								We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had that inspire us.
+							</p>
+						</span>
+					</Col>
+				</Row>
+				<Row>
+					<Col className='image-section image-section-left background-2'></Col>
+				</Row>
+				<Row>
+					<Col className='information-section information-col'>
+						<span>
+							<h3 className='information-title'>
+								Events and outreach
+							</h3>
+							<p className='information-paragraph'>
+								We participate in congresses and events such as INCMty, Conexión Tec, The International Congress of Mechatronics - Automatization and Technology, Semana i and many more.
+							</p>
+						</span>
+					</Col>
+				</Row>
+				<Row>
+					<Col className='image-section image-section-right background-3'></Col>
+				</Row>
+				<Row>
+					<Col className='information-section information-col'>
+						<span>
+							<h3 className='information-title'>
+								Student community
+							</h3>
+							<p className='information-paragraph'>
+								To reach our community, we give free workshops about useful technologies such as: ROS, Git and Machine Learning, as well as our annual biggest event: Candidates, where the team gives weekly classes of basic programming, mechanics and electronics for anyone in the university interested, and organize a robotics tournament to get new members.
+							</p>
+						</span>
+					</Col>
+				</Row>
+				<Row>
+					<Col className='image-section image-section-left background-4'></Col>
+				</Row>
+			</div>
+		);
 	}
 
 	render() {
-		return ((this.state.largeView)?this.getLargeView():this.getSmallView());
+		return ((this.state.large_view) ? this.largeView() : this.smallView());
 	}
 }
 
