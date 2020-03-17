@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import AboutTimelineSingleEvent from './AboutTimelineSingleEvent/AboutTimelineSingleEvent.js';
 import 'react-vertical-timeline-component/style.min.css';

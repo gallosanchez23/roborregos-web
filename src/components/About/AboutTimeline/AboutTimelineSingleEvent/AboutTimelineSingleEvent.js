@@ -21,23 +21,23 @@ class AboutTimelineSingleEvent extends Component{
         }
     }
 
-    render (){
+    render() {
         return(
             <VerticalTimelineElement
-            date={ this.event.date }
-            position={ this.event.position }
-            iconStyle={ {background: this.event.iconstyle.background, color: this.event.iconstyle.color} }
-            contentStyle={ {background: this.event.contentstyle.background, color: this.event.contentstyle.color} }
-            contentArrowStyle={ {borderRight: this.event.arrowstyle.borderRight} }>
+                date={ this.event.date }
+                position={ this.event.position }
+                iconStyle={ {background: this.event.iconstyle.background, color: this.event.iconstyle.color} }
+                contentStyle={ {background: this.event.contentstyle.background, color: this.event.contentstyle.color} }
+                ontentArrowStyle={ {borderRight: this.event.arrowstyle.borderRight} }>
 
-                <h3 className="vertical-timeline-element-title">{ this.event.title }</h3>
-                <br/>
-                <img 
-                    className = "about-image" 
-                    src={ this.tryRequire(this.event.img_path) } alt={ this.event.title }
-                />
-                <h4 className="vertical-timeline-element-subtitle">{ this.event.img_description }</h4>
-                <p align= "justify">{ this.event.description }</p>
+                    <h3 className= "vertical-timeline-element-title">{ this.event.title }</h3>
+                    <br/>
+                    <img 
+                        className= "about-image" 
+                        src={ this.tryRequire(this.event.img_path) } alt={ this.event.title }
+                    />
+                    <h4 className= "vertical-timeline-element-subtitle">{ this.event.img_description }</h4>
+                    <p align= "justify">{ this.event.description }</p>
 
             </VerticalTimelineElement>
         );
