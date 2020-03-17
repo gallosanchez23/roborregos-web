@@ -9,16 +9,18 @@ class HomeHeader extends Component {
 		return (
 			<header className='home-header'>
 				<Row className='justify-content-sm-center'>
-					<Col sm='5' className='header-img-col'>
+					<Col className='header-img-col'>
 						<span>
 							<img className='header-img' src={ HeaderImg } alt='logo' />
 							<br/>
 							<br/>
 							<h1>
+								We
 								<ReactRotatingText
-									items={['We create', 'We code', 'We teach', 'We drink...']}
+									items={ [' create', ' build', ' design', ' code', ' connect', ' compete', ' learn', ' teach'] }
 									pause={ 2500 }
 									typingInterval={ 70 }
+									emptyPause={ 20 }
 								/>
 							</h1>
 						</span>
