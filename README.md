@@ -37,16 +37,17 @@ You can consult the application on production at [roborregos.com](https://roborr
 
 ### Management tools
 
-You should ask for acces to this tools if you don't have ir already:
+You should ask for access to these tools if you don't have it already:
 
 * [Github repo](https://github.com/gallosanchez23/roborregos-web)
 * [Heroku](https://www.heroku.com/)
+* [InVision](https://claragutierrez948964.invisionapp.com/prototype/RoBorregos-Web-ck7wek80a00nuq301lmd3k920?v=LLi6aocBvdMc49RvTuq1sg%3D%3D&linkshare=urlcopied)
 
 ## Development
 
 ### Setup
 
-Before setting up the project, you sould have installed the following development tools:
+Before setting up the project, you should have installed the following development tools:
 
 * [Git](https://git-scm.com/downloads)
 * [Docker](https://runnable.com/docker/getting-started/)
