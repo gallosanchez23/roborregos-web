@@ -16,7 +16,8 @@ class AboutTimeline extends Component {
                     {this.events.map((event,index) =>(
                         <AboutTimelineSingleEvent
                             event={ event }
-                            key={ index }
+                            id={ index }
+                            key = { index }
                         />
                     ))}
                 </VerticalTimeline>
