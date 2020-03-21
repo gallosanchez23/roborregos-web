@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Footer from 'components/Footer/Footer.js';
 
-class Contact extends Component {
+class About extends Component {
 	render() {
 		return (
-			<div className='contact-container'>
+			<div className='about-container'>
 				<h1>
-					Contact
+					About
 				</h1>
 				<Footer />
 			</div>
@@ -14,4 +14,4 @@ class Contact extends Component {
 	}
 }
 
-export default Contact;
+export default About;
