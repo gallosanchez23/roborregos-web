@@ -486,21 +486,43 @@ code {
 /* Footer styles */
 /* ----------------------------------------------------------------------------------- */
 .footer-container {
-  padding: 2% 0;
+  padding: 0% 0%;
   background: rgb(25, 30, 35);
   color: rgb(250, 250, 250);
 }
 
+.footer-row {
+  padding: 10px 0% 5px 0%;
+  width: 100%;
+  margin: 0px;
+}
+
 .footer-logo {
-  width: 85%;
+  padding-top: 5%;
+  width: 140px;
+}
+
+.footer-col {
+  padding-left: 10%;
+}
+
+.col-socialMedia{
+  padding: 0%;
+}
+
+@media (max-width: 767px) {
+  .col-logo {
+    display: none;
+  }
 }
 
 .footer-title {
   color: rgb(0, 225, 250);
+  padding-top: 2%;
 }
 
 .footer-container p {
-  padding-left: 10px
+  padding-left: 0vw
 }
 
 .footer-container .sitemap-link {

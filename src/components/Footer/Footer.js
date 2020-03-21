@@ -5,6 +5,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import logo from 'images/white_logo.png';
+import { MEDIUM_WIDTH } from 'constants.js';
 
 function sitemapLink(link, legend) {
 	return (
@@ -31,15 +32,38 @@ function sitemapIconButton(link, icon) {
 }
 
 class Footer extends Component {
+
+	constructor(props) {
+		super(props);
+
+		this.setIconSize = this.setIconSize.bind(this);
+
+		this.members = props.members;
+
+		this.state = {
+			icon_size: (window.innerWidth >= MEDIUM_WIDTH)?40:32,
+		}
+	}
+
+	componentDidMount() {
+		window.addEventListener('resize', this.setIconSize);
+	}
+
+	setIconSize(){
+		this.setState({
+			icon_size : (window.innerWidth >= MEDIUM_WIDTH)?40:32
+		});
+	}
+
 	render() {
 		return(
 			<div className='footer-container'>
 				<Container>
-					<Row className='justify-content-md-center'>
-						<Col xs='10' md='2'>
+					<Row className='footer-row'>
+						<Col className='col-logo'>
 							<img src={logo} className='footer-logo' alt='logo' />
 						</Col>
-						<Col xs='10' md='4'>
+						<Col className='footer-col'>
 							<h4 className='footer-title'>
 								RoBorregos
 							</h4>
@@ -49,7 +73,7 @@ class Footer extends Component {
 								</small>
 							</p>
 						</Col>
-						<Col xs='10' md='3'>
+						<Col className='footer-col'>
 							<h4 className='footer-title'>
 								Site
 							</h4>
@@ -60,14 +84,11 @@ class Footer extends Component {
 								{ sitemapLink('/contact', 'Contact') }
 							</p>
 						</Col>
-						<Col xs='10' md='3'>
-							<h4 className='footer-title'>
-								Social media
-							</h4>
+						<Col className='col-socialMedia'>
 							<p>
-								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon fontSize='small' />) }
-								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon fontSize='small' />) }
-								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon fontSize='small' />) }
+								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size }} />) }
+								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
+								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
 							</p>
 						</Col>
 					</Row>
