@@ -5,7 +5,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import logo from 'images/white_logo.png';
-import { MEDIUM_WIDTH } from 'constants.js';
+import { MEDIUM_WIDTH, PHONE_SIZE } from 'constants.js';
 
 function sitemapLink(link, legend) {
 	return (
@@ -41,7 +41,7 @@ class Footer extends Component {
 		this.members = props.members;
 
 		this.state = {
-			icon_size: (window.innerWidth >= MEDIUM_WIDTH)?40:32,
+			icon_size: (window.innerWidth > MEDIUM_WIDTH)?40:(window.innerWidth > PHONE_SIZE)?32:20,
 		}
 	}
 
@@ -51,7 +51,7 @@ class Footer extends Component {
 
 	setIconSize(){
 		this.setState({
-			icon_size : (window.innerWidth >= MEDIUM_WIDTH)?40:32
+			icon_size : (window.innerWidth >= MEDIUM_WIDTH)?40:(window.innerWidth >= PHONE_SIZE)?32:20,
 		});
 	}
 
