@@ -254,10 +254,23 @@ code {
   padding-left: 8px;
 }
 
+.main-modal-row .icon-small {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  text-transform: none;
+}
+
 @media (max-width: 992px) {
   .main-modal-row .information-col {
-    height: 50vh;
+    height: 43vh;
+    background:
+    linear-gradient(
+      90deg,
+      rgba(19, 25, 30, 0.7) 40%,
+      rgba(10, 15, 20, 0.7) 100%
+    );
   }
+
   .image-cropper {
     width: 35vh;
     height: 35vh;
@@ -268,13 +281,29 @@ code {
     text-align: center;
     padding: 7% 10vw;
     font-size: 2.3vw;
-    height: 50vh;
+    height: 54vh;
+    background: rgb(10, 15, 20);
+  }
+
+  .main-modal-row .icon-small {
+    font-size: 2.3vw;
+  }
+
+  .image-col {
+    padding-left: 20%;
+  }
+
+  .close-button {
+    height: 0vh;
+    width: 100%;
     background:
     linear-gradient(
       90deg,
-      rgba(19, 25, 30, 0.8) 40%,
-      rgba(10, 15, 20, 0.8) 100%
+      rgba(19, 25, 30, 0.7) 40%,
+      rgba(10, 15, 20, 0.7) 100%
     );
+    padding-left: 80vw;
+    padding-top: 3vh;
   }
 }
 
@@ -282,11 +311,23 @@ code {
   .description-small {
     font-size: 2.5vh;
   }
+
+  .main-modal-row .icon-small {
+    font-size: 2.5vh;
+  }
+
+  .image-col {
+    padding-left: 10%;
+  }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 450px) {
   .modal-member-image {
     transform: translateX(-30%);
+  }
+
+  .image-col {
+    padding-left: 0%;
   }
 }
 

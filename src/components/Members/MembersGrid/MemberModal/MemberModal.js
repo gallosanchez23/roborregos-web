@@ -110,6 +110,13 @@ class MemberModal extends Component {
 			<div className='member-modal-container'>
 				<div className='container-helper'>
 					<Row className='main-modal-row'>
+						<div className='close-button'>
+							<Col>
+								<IconButton className='icon-small' onClick={ this.handleHideModal }>
+									<CloseIcon />
+								</IconButton>
+							</Col>
+						</div>
 						<div className='information-col'>
 							<Col xs={6} className='image-col'>
 								<div className='image-cropper'>
@@ -122,42 +129,32 @@ class MemberModal extends Component {
 							</Col>
 							<Col xs={4}>
 								<Row noGutters={ true }>
-									<Col xs='11'>
-									</Col>
-									<Col xs='1'>
-										<IconButton className='member-modal-btn' onClick={ this.handleHideModal }>
-											<CloseIcon />
-										</IconButton>
-									</Col>
-								</Row>
-								<Row noGutters={ true }>
 									<Col>
 										<h2>
 											{ this.memberFullName() }
 										</h2>
 									</Col>
 								</Row>
-
 								<p>
 									<strong>
 										{ this.member.role }
 									</strong>
 								</p>
+							</Col>
+							<Col  xs={2}></Col>
+						</div>
+						<div className='description-small'>
+							<Col sm={12}>
 								<p>
-									<Button href={ this.member.github } className='member-modal-btn'>
+									{this.member.description}
+								</p>
+								<p>
+									<Button href={ this.member.github } className='icon-small'>
 										<Icon className='fab fa-github fa-fw' />
 										<span className='member-username'>
 											{ this.member.github_user }
 										</span>
 									</Button>
-								</p>
-							</Col>
-							<Col  xs={2}></Col>
-						</div>
-						<div className='description-small'>
-							<Col>
-								<p>
-									{this.member.description}
 								</p>
 							</Col>
 						</div>
