@@ -5,6 +5,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import { Modal } from 'react-bootstrap';
 import placeholder from 'images/placeholder-rectangle.png';
+import { LARGE_WIDTH, MEDIUM_WIDTH } from 'constants.js';
 
 class MembersGrid extends Component {
 	constructor(props) {
@@ -13,13 +14,29 @@ class MembersGrid extends Component {
 		this.tryRequire = this.tryRequire.bind(this);
 		this.handleShowModal = this.handleShowModal.bind(this);
 		this.handleHideModal = this.handleHideModal.bind(this);
+		this.numberOfColumns = this.numberOfColumns.bind(this);
+		this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
 
 		this.members = props.members;
 
 		this.state = {
 			show_modal: false,
-			member: this.members[0]
+			member: this.members[0],
+			number_of_columns: this.numberOfColumns(),
 		}
+	}
+
+	componentDidMount() {
+		window.addEventListener('resize', this.updateNumberOfColumns);
+	}
+
+	numberOfColumns(){
+		if (window.innerWidth >= LARGE_WIDTH)
+			return 5;
+		else if (window.innerWidth >= MEDIUM_WIDTH)
+			return 4;
+		else
+			return 3;
 	}
 
 	tryRequire(img_path) {
@@ -33,13 +50,19 @@ class MembersGrid extends Component {
 	handleShowModal(member, event) {
 		this.setState({
 			show_modal: true,
-			member: member
+			member: member,
 		});
 	}
 
 	handleHideModal() {
 		this.setState({
-			show_modal: false
+			show_modal: false,
+		});
+	}
+
+	updateNumberOfColumns() {
+		this.setState({
+			number_of_columns: this.numberOfColumns(),
 		});
 	}
 
@@ -49,8 +72,8 @@ class MembersGrid extends Component {
 				<GridList
 					cellHeight={ 'auto' }
 					className='members-grid'
-					cols={ 5 }
-					spacing={ 0 }
+					cols={ this.state.number_of_columns }
+					spacing={ 5 }
 				>
 
 					{this.members.map(member =>(
@@ -69,7 +92,6 @@ class MembersGrid extends Component {
 					))}
 
 				</GridList>
-
 				<Modal
 					show={ this.state.show_modal }
 					onHide={ this.handleHideModal }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AboutFooter from './AboutFooter/AboutFooter.js';
+import Footer from 'components/Footer/Footer.js';
 import AboutHeader from './AboutHeader/AboutHeader.js'
 import AboutTimeline from './AboutTimeline/AboutTimeline.js'
 import timelineData from 'data/timeline.json';
@@ -10,7 +10,7 @@ class About extends Component {
 			<div className='about-container'>
 					<AboutHeader/>
 					<AboutTimeline events={ timelineData.events }/>
-					<AboutFooter/>
+					<Footer/>
 			</div>
 		);
 	}

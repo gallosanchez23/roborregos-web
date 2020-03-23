@@ -10,12 +10,16 @@ class AboutTimelineSingleEvent extends Component{
         this.tryRequire = this.tryRequire.bind(this);
         this.setColor = this.setColor.bind(this);
         this.setPosition = this.setPosition.bind(this);
+        this.inHover = this.inHover.bind(this);
 
         this.event = props.event;
         this.id = props.id;
 
+        this.state = { hover: false }
+
         this.date = this.event.date.substr(3,4);
         this.color = this.setColor(this.date);
+        this.backgroundColor = this.color;
 	}
 
     tryRequire(img_path) {
@@ -33,28 +37,31 @@ class AboutTimelineSingleEvent extends Component{
     }
     
     setPosition(date) {
-        return (date%2 == 0) ? "left" :"right"; 
+        return ((parseInt(date)%2) === 0) ? "left" :"right"; 
+    }
+
+    inHover() {
+        this.setState({ hover: !this.state.hover });
     }
 
     render() {
+        this.contentColor = (this.state.hover) ? "rgba(0,0,0,0.0)" : this.color;
         return(
             <VerticalTimelineElement
+                className= "aboutVerticalTimelineEvent"
                 date={ this.event.date }
                 position={ this.setPosition(this.date) }
                 iconStyle={ {background: this.color, color: "#ffffff"} }
-                contentStyle={ {background: this.color, color: "#ffffff", width: "fit-content"} }
-                contentArrowStyle={ {borderRight: "7px solid " + this.color} }>
+                contentStyle={ {background: this.contentColor, color: "#ffffff", boxShadow: "0 3px 0 " + this.contentColor} }
+                contentArrowStyle={ {borderRight: "7px solid " + this.contentColor} }>
+                <div className="aboutSingleEventTimeline" onMouseEnter = { this.inHover } onMouseLeave = { this.inHover }>
                     <h3 className= "vertical-timeline-element-title">{ this.event.title }</h3>
                     <br/>
-                    <img 
-                        className= "about-image" 
-                        src={ this.tryRequire(this.event.img_path) } alt={ this.event.title }
-                    />
-                    <h4 className= "vertical-timeline-element-subtitle">{ this.event.img_description }</h4>
+                    
                     <div style= { {width: "460px"} }>
                         <p align= "justify">{ this.event.description }</p>
                     </div>
-
+                </div>
             </VerticalTimelineElement>
         );
     }
