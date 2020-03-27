@@ -9,6 +9,8 @@ import routesData from 'data/routes.json';
 import membersData from 'data/members.json';
 
 function About() {
+	document.title = 'RoBorregos | About'
+
 	return (
 		<h2>
 			About
@@ -25,6 +27,8 @@ class App extends Component {
 	}
 
 	render() {
+		document.title = 'RoBorregos'
+
 		return (
 			<Router>
 				<div className='app-container'>
