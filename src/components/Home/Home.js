@@ -10,7 +10,6 @@ class Home extends Component {
 		document.title = 'RoBorregos'
 
 		return (
-
 			<div className='home-container'>
 				<HomeHeader />
 				<HomeInformation />
@@ -21,4 +20,4 @@ class Home extends Component {
 	}
 }
 
-export default Home
+export default Home;
