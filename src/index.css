@@ -150,6 +150,21 @@ code {
 /* ----------------------------------------------------------------------------------- */
 /* MembersGrid styles */
 /* ----------------------------------------------------------------------------------- */
+.members-grid-container {
+  background:
+    linear-gradient(
+      45deg,
+      rgba(20, 18, 19, 0.9) 55%,
+      rgba(0, 94, 105, 0.9) 130%
+    ),
+    url(./images/github_pattern.svg) top left/auto repeat fixed;
+}
+
+.members-title {
+  color: white;
+  padding: 2%;
+}
+
 .members-grid {
   background: rgba(20, 18, 19, 0.9);
   min-height: 100%;
