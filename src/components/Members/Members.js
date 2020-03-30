@@ -15,8 +15,15 @@ class Members extends Component {
 		return (
 			<div className='members-container'>
 				<MembersHeader />
-				<MembersGrid members={ this.members.filter(member => member.status == "active") } title="Active members" />
-				<MembersGrid members={ this.members.filter(member => member.status == "inactive") } title="Legacy"/>
+				<MembersGrid members={ 
+					this.members.filter(member => member.status == "active") } 
+					title="Active members" 
+					description="Members that are currently on the team."
+				/>
+				<MembersGrid 
+					members={ this.members.filter(member => member.status == "inactive") } title="Legacy"
+					description="Members that aready graduated."
+				/>
 				<MembersJoinUs />
 				<Footer />
 			</div>

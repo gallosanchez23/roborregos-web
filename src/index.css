@@ -157,10 +157,7 @@ code {
       rgba(20, 18, 19, 0.9) 55%,
       rgba(0, 94, 105, 0.9) 130%
     ),
-    url(./images/github_pattern.svg) top left/auto repeat fixed;
-}
-
-.members-title {
+    url(./images/github_pattern.svg) top left/auto repeat fixed;  
   color: white;
   padding: 2%;
 }
