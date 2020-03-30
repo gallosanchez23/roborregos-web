@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import placeholder from 'images/placeholder-rectangle.png';
+import './HomeSingleSponsor.css'
 
 class HomeSingleSponsor extends Component {
 	constructor(props) {
