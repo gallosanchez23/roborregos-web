@@ -8,99 +8,99 @@ import placeholder from 'images/placeholder-rectangle.png';
 import { LARGE_WIDTH, MEDIUM_WIDTH } from 'constants.js';
 
 class MembersGrid extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.tryRequire = this.tryRequire.bind(this);
-		this.handleShowModal = this.handleShowModal.bind(this);
-		this.handleHideModal = this.handleHideModal.bind(this);
-		this.numberOfColumns = this.numberOfColumns.bind(this);
-		this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
+    this.tryRequire = this.tryRequire.bind(this);
+    this.handleShowModal = this.handleShowModal.bind(this);
+    this.handleHideModal = this.handleHideModal.bind(this);
+    this.numberOfColumns = this.numberOfColumns.bind(this);
+    this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
 
-		this.members = props.members;
+    this.members = props.members;
 
-		this.state = {
-			show_modal: false,
-			member: this.members[0],
-			number_of_columns: this.numberOfColumns(),
-		}
-	}
+    this.state = {
+      show_modal: false,
+      member: this.members[0],
+      number_of_columns: this.numberOfColumns(),
+    }
+  }
 
-	componentDidMount() {
-		window.addEventListener('resize', this.updateNumberOfColumns);
-	}
+  componentDidMount() {
+    window.addEventListener('resize', this.updateNumberOfColumns);
+  }
 
-	numberOfColumns(){
-		if (window.innerWidth >= LARGE_WIDTH)
-			return 5;
-		else if (window.innerWidth >= MEDIUM_WIDTH)
-			return 4;
-		else
-			return 3;
-	}
+  numberOfColumns(){
+    if (window.innerWidth >= LARGE_WIDTH)
+      return 5;
+    else if (window.innerWidth >= MEDIUM_WIDTH)
+      return 4;
+    else
+      return 3;
+  }
 
-	tryRequire(img_path) {
-		try {
-			return require('images/members/' + img_path);
-		} catch (err) {
-			return placeholder;
-		}
-	}
+  tryRequire(img_path) {
+    try {
+      return require('images/members/' + img_path);
+    } catch (err) {
+      return placeholder;
+    }
+  }
 
-	handleShowModal(member, event) {
-		this.setState({
-			show_modal: true,
-			member: member,
-		});
-	}
+  handleShowModal(member, event) {
+    this.setState({
+      show_modal: true,
+      member: member,
+    });
+  }
 
-	handleHideModal() {
-		this.setState({
-			show_modal: false,
-		});
-	}
+  handleHideModal() {
+    this.setState({
+      show_modal: false,
+    });
+  }
 
-	updateNumberOfColumns() {
-		this.setState({
-			number_of_columns: this.numberOfColumns(),
-		});
-	}
+  updateNumberOfColumns() {
+    this.setState({
+      number_of_columns: this.numberOfColumns(),
+    });
+  }
 
-	render() {
-		return (
-			<div className='members-grid-container'>
-				<GridList
-					cellHeight={ 'auto' }
-					className='members-grid'
-					cols={ this.state.number_of_columns }
-					spacing={ 5 }
-				>
+  render() {
+    return (
+      <div className='members-grid-container'>
+        <GridList
+          cellHeight={ 'auto' }
+          className='members-grid'
+          cols={ this.state.number_of_columns }
+          spacing={ 5 }
+        >
 
-					{this.members.map(member =>(
-						<GridListTile
-							key={ member.id }
-							cols={ 1 }
-							className='members-grid-tile'
-							onClick={ this.handleShowModal.bind(this, member) }
-						>
-							<img
-								className='member-image'
-								src={ this.tryRequire(member.img) }
-								alt={ member.name }
-							/>
-						</GridListTile>
-					))}
+          {this.members.map(member =>(
+            <GridListTile
+              key={ member.id }
+              cols={ 1 }
+              className='members-grid-tile'
+              onClick={ this.handleShowModal.bind(this, member) }
+            >
+              <img
+                className='member-image'
+                src={ this.tryRequire(member.img) }
+                alt={ member.name }
+              />
+            </GridListTile>
+          ))}
 
-				</GridList>
-				<Modal
-					show={ this.state.show_modal }
-					onHide={ this.handleHideModal }
+        </GridList>
+        <Modal
+          show={ this.state.show_modal }
+          onHide={ this.handleHideModal }
           dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
-				>
-				</Modal>
-			</div>
-		);
-	}
+        >
+        </Modal>
+      </div>
+    );
+  }
 }
 
 

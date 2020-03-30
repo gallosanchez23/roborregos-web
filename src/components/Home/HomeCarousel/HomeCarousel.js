@@ -11,11 +11,11 @@ class HomeCarousel extends Component {
   }
 
   tryRequire(img_path) {
-  	try {
-			return require('images/'+img_path);
-		} catch (err) {
-			return placeholder;
-		}
+    try {
+      return require('images/' + img_path);
+    } catch (err) {
+      return placeholder;
+    }
   }
 
   render() {
