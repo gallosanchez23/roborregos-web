@@ -1,24 +1,24 @@
 {
-	"routes": [
-		{
-			"path": "/",
-			"legend": "Home",
-			"component": "Home"
-		},
-		{
-			"path": "/about",
-			"legend": "About",
-			"component": "About"
-		},
-		{
-			"path": "/members",
-			"legend": "Members",
-			"component": "Members"
-		},
-		{
-			"path": "/contact",
-			"legend": "Contact",
-			"component": "Contact"
-		}
-	]
+  "routes": [
+    {
+      "path": "/",
+      "legend": "Home",
+      "component": "Home"
+    },
+    {
+      "path": "/about",
+      "legend": "About",
+      "component": "About"
+    },
+    {
+      "path": "/members",
+      "legend": "Members",
+      "component": "Members"
+    },
+    {
+      "path": "/contact",
+      "legend": "Contact",
+      "component": "Contact"
+    }
+  ]
 }

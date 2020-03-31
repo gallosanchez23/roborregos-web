@@ -10,45 +10,45 @@ import routesData from 'data/routes.json';
 import membersData from 'data/members.json';
 
 class App extends Component {
-	componentDidMount() {
-		loadCSS(
-			'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
-			document.querySelector('#insertion-point-jss'),
-		);
-	}
+  componentDidMount() {
+    loadCSS(
+      'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+      document.querySelector('#insertion-point-jss'),
+    );
+  }
 
-	render() {
-		document.title = 'RoBorregos'
+  render() {
+    document.title = 'RoBorregos'
 
-		return (
-			<Router>
-				<div className='app-container'>
+    return (
+      <Router>
+        <div className='app-container'>
 
-					<NavBar routes={ routesData.routes } />
+          <NavBar routes={ routesData.routes } />
 
-					<Route
-						exact path='/'
-						component={ () => <Home /> }
-					/>
+          <Route
+            exact path='/'
+            component={ () => <Home /> }
+          />
 
-					<Route
-						path='/about'
-						component={ () => <About /> }
-					/>
+          <Route
+            path='/about'
+            component={ () => <About /> }
+          />
 
-					<Route
-						path='/members'
-						component={ () => <Members membersData={ membersData } /> }
-					/>
+          <Route
+            path='/members'
+            component={ () => <Members membersData={ membersData } /> }
+          />
 
-					<Route
-						path='/contact'
-						component={ () => <Contact /> }
-					/>
-				</div>
-			</Router>
-		);
-	}
+          <Route
+            path='/contact'
+            component={ () => <Contact /> }
+          />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
