@@ -9,14 +9,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import routesData from 'data/routes.json';
 import membersData from 'data/members.json';
 
-/*function About() {
-	return (
-		<h2>
-			About
-		</h2>
-	);
-}
-*/
 class App extends Component {
 	componentDidMount() {
 		loadCSS(
@@ -39,7 +31,7 @@ class App extends Component {
 
 					<Route
 						path='/about'
-						component={ () => <About/> }
+						component={ () => <About /> }
 					/>
 
 					<Route
