@@ -269,33 +269,33 @@ code {
 /* ----------------------------------------------------------------------------------- */
 /* About TimeLine styles */
 /* ----------------------------------------------------------------------------------- */
-.about-container {
-  position: relative;
+/*
+  TODO: Replace linear-gradient with pattern img.
+*/
+.about-timeline-container {
   background:
     linear-gradient(
       45deg,
       rgba(0, 0, 0, 0.9) 100%,
       rgba(61, 61, 61, 0.9) 30%
-    ),
-    url(./images/github_pattern.svg) top left/auto repeat fixed;
+    );
   color: white;
 }
-.about-image{
-  width: 400px;
-  height: 251px;
-  border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
+
+#timeline-title {
+  padding: 20px 0;
 }
 
-.about-header{
-  width: 400px;
-  height: 80px;
+.timeline-element-img {
+  width: 100%;
+  border-radius: 3px;
 }
-.about-header-title{
-  font-size: 63px;
-  font-weight: normal;
+
+.timeline-element-container {
+  padding: 20px;
 }
+
+
 
 /* ----------------------------------------------------------------------------------- */
 /* Home styles */
