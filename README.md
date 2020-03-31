@@ -42,7 +42,7 @@ You should ask for access to these tools if you don't have it already:
 * [Github repo](https://github.com/gallosanchez23/roborregos-web)
 * [Heroku](https://www.heroku.com/)
 * [InVision](https://claragutierrez948964.invisionapp.com/prototype/RoBorregos-Web-ck7wek80a00nuq301lmd3k920?v=LLi6aocBvdMc49RvTuq1sg%3D%3D&linkshare=urlcopied)
-* [GoogleDrive](https://drive.google.com/drive/folders/1dZeA8SSFkDSlj61sY3vJiCqCYluquqlw?usp=sharing)
+* [Google Drive](https://drive.google.com/drive/folders/1dZeA8SSFkDSlj61sY3vJiCqCYluquqlw?usp=sharing)
 
 ## Development
 
