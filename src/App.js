@@ -18,6 +18,8 @@ class App extends Component {
 	}
 
 	render() {
+		document.title = 'RoBorregos'
+
 		return (
 			<Router>
 				<div className='app-container'>
