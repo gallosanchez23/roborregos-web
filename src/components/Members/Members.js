@@ -5,24 +5,24 @@ import MembersJoinUs from './MembersJoinUs/MembersJoinUs.js';
 import Footer from 'components/Footer/Footer.js';
 
 class Members extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.members = props.membersData.members;
-	}
+    this.members = props.membersData.members;
+  }
 
-	render() {
-		document.title = 'RoBorregos | Members';
+  render() {
+    document.title = 'RoBorregos | Members';
 
-		return (
-			<div className='members-container'>
-				<MembersHeader />
-				<MembersGrid members={ this.members } />
-				<MembersJoinUs />
-				<Footer />
-			</div>
-		);
-	}
+    return (
+      <div className='members-container'>
+        <MembersHeader />
+        <MembersGrid members={ this.members } />
+        <MembersJoinUs />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default Members;

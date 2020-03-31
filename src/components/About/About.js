@@ -4,16 +4,16 @@ import Footer from 'components/Footer/Footer.js';
 import timelineData from 'data/timeline.json';
 
 class About extends Component {
-	render() {
-		document.title = 'RoBorregos | About';
+  render() {
+    document.title = 'RoBorregos | About';
 
-		return (
-			<div className='about-container'>
-				<AboutTimeline events={ timelineData.events }/>
-				<Footer/>
-			</div>
-		);
-	}
+    return (
+      <div className='about-container'>
+        <AboutTimeline events={ timelineData.events }/>
+        <Footer/>
+      </div>
+    );
+  }
 }
 
 export default About;

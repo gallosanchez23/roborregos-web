@@ -6,18 +6,18 @@ import Footer from 'components/Footer/Footer.js';
 import sponsorsData from 'data/sponsors.json';
 
 class Home extends Component {
-	render() {
-		document.title = 'RoBorregos';
+  render() {
+    document.title = 'RoBorregos';
 
-		return (
-			<div className='home-container'>
-				<HomeHeader />
-				<HomeInformation />
-				<HomeSponsors sponsors={ sponsorsData.sponsors } />
-				<Footer />
-			</div>
-		);
-	}
+    return (
+      <div className='home-container'>
+        <HomeHeader />
+        <HomeInformation />
+        <HomeSponsors sponsors={ sponsorsData.sponsors } />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default Home;

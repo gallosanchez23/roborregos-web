@@ -1,19 +1,19 @@
 {
-	"sponsors": [
-		{
-			"name": "Tecnológico de Monterrey",
-			"img_path": "itesm.png",
-			"link": "https://tec.mx/es"
-		},
-		{
-			"name": "Steren",
-			"img_path": "steren.png",
-			"link": "https://www.steren.com.mx"
-		},
-		{
-			"name": "Oneila",
-			"img_path": "oneila.png",
-			"link": "http://www.oneila.mx"
-		}
-	]
+  "sponsors": [
+    {
+      "name": "Tecnológico de Monterrey",
+      "img_path": "itesm.png",
+      "link": "https://tec.mx/es"
+    },
+    {
+      "name": "Steren",
+      "img_path": "steren.png",
+      "link": "https://www.steren.com.mx"
+    },
+    {
+      "name": "Oneila",
+      "img_path": "oneila.png",
+      "link": "http://www.oneila.mx"
+    }
+  ]
 }
