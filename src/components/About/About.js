@@ -5,6 +5,8 @@ import timelineData from 'data/timeline.json';
 
 class About extends Component {
 	render() {
+		document.title = 'RoBorregos | About';
+
 		return (
 			<div className='about-container'>
 				<AboutTimeline events={ timelineData.events }/>

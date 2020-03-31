@@ -7,7 +7,7 @@ import sponsorsData from 'data/sponsors.json';
 
 class Home extends Component {
 	render() {
-		document.title = 'RoBorregos'
+		document.title = 'RoBorregos';
 
 		return (
 			<div className='home-container'>

@@ -12,7 +12,7 @@ class Members extends Component {
 	}
 
 	render() {
-		document.title = 'RoBorregos | Members'
+		document.title = 'RoBorregos | Members';
 
 		return (
 			<div className='members-container'>
