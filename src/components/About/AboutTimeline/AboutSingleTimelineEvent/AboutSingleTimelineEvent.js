@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
 import placeholder from 'images/placeholder-rectangle.png';
+import 'react-vertical-timeline-component/style.min.css';
+import './AboutSingleTimelineEvent.css';
 
 class AboutSingleTimelineEvent extends Component{
   constructor(props) {

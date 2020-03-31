@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import AboutSingleTimelineEvent from './AboutSingleTimelineEvent/AboutSingleTimelineEvent.js';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
+import './AboutTimeline.css';
 
 class AboutTimeline extends Component {
   constructor(props) {

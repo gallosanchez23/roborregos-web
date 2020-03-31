@@ -1,0 +1,19 @@
+.members-grid {
+  background: rgba(20, 18, 19, 0.9);
+  min-height: 100%;
+  width: 100%;
+  transform: translate(0.2%, 0%);
+}
+
+.members-grid .members-grid-tile .member-image {
+  height: 100%;
+  transition: 0.4s;
+  width: 100%;
+}
+
+.members-grid .members-grid-tile:hover .member-image {
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  transform: scale(1.2);
+}

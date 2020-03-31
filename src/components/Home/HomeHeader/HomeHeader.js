@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import HeaderImg from 'images/header.png';
+import './HomeHeader.css';
 
 var ReactRotatingText = require('react-rotating-text');
 

@@ -1,0 +1,36 @@
+.members-join-us {
+  height: 60%;
+  position: relative;
+  background: linear-gradient( 45deg, rgba(0, 94, 105, 0.9) 30%, rgba(20, 18, 19, 0.9) 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.members-join-us-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 4vh;
+  text-align: center;
+  text-transform: none;
+}
+
+.members-join-us-button {
+  left: 30%;
+  width: 28vw;
+  height: 12vh;
+}
+
+.members-join-us-button-contain {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid white;
+}
+
+.members-join-us-button-text {
+  padding-top: 3.7vh;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 3vh;
+}

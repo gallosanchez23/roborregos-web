@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import HomeSingleSponsor from './HomeSingleSponsor/HomeSingleSponsor.js';
+import './HomeSponsors.css';
 
 class HomeSponsors extends Component {
   constructor(props) {

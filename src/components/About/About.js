@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AboutTimeline from './AboutTimeline/AboutTimeline.js'
 import Footer from 'components/Footer/Footer.js';
 import timelineData from 'data/timeline.json';
+import './About.css';
 
 class About extends Component {
   render() {

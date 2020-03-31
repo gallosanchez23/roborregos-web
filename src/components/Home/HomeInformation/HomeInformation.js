@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { MEDIUM_WIDTH } from 'constants.js';
+import './HomeInformation.css';
 
 class HomeHeader extends Component {
   constructor(props) {

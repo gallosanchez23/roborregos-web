@@ -5,6 +5,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import logo from 'images/white_logo.png';
+import './Footer.css';
 
 function sitemapLink(link, legend) {
   return (

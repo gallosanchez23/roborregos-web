@@ -1,0 +1,27 @@
+.footer-container {
+  padding: 2% 0;
+  background: rgb(25, 30, 35);
+  color: rgb(250, 250, 250);
+}
+
+.footer-logo {
+  width: 85%;
+}
+
+.footer-title {
+  color: rgb(0, 225, 250);
+}
+
+.footer-container p {
+  padding-left: 10px
+}
+
+.footer-container .sitemap-link {
+  text-decoration: none;
+  color: rgb(250, 250, 250);
+}
+
+.footer-container .sitemap-link:hover {
+  color: rgb(0, 225, 250);
+  background: none;
+}
