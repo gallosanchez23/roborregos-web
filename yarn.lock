@@ -8105,7 +8105,7 @@ prop-types-extra@^1.1.0:
     react-is "^16.3.2"
     warning "^3.0.0"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.6.0, prop-types@^15.6.1:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8586,6 +8586,22 @@ react-typist@^2.0.5:
   integrity sha512-iZCkeqeegO0TlkTMiH2JD1tvMtY9RrXkRylnAI6m8aCVAUUwNzoWTVF7CKLij6THeOMcUDCznLDDvNp55s+YZA==
   dependencies:
     prop-types "^15.5.10"
+
+react-vertical-timeline-component@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/react-vertical-timeline-component/-/react-vertical-timeline-component-2.5.0.tgz#0b8e54b21c0ce9ffc2fa2ce3831ad7f4001d68a3"
+  integrity sha512-922SH2Rxiuis1KwpHGSiMbegzIbkICEQpfHAQ2LuDW+oqQRhEaC27Mh73f+Fez7iEFqGYvMUEPzwjqfmRpQw6Q==
+  dependencies:
+    classnames "^2.2.6"
+    prop-types "^15.7.2"
+    react-visibility-sensor "^5.1.1"
+
+react-visibility-sensor@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-5.1.1.tgz#5238380960d3a0b2be0b7faddff38541e337f5a9"
+  integrity sha512-cTUHqIK+zDYpeK19rzW6zF9YfT4486TIgizZW53wEZ+/GPBbK7cNS0EHyJVyHYacwFEvvHLEKfgJndbemWhB/w==
+  dependencies:
+    prop-types "^15.7.2"
 
 react@^16.8.2:
   version "16.8.3"

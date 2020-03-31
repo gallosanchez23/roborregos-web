@@ -3,25 +3,27 @@ import MembersGrid from './MembersGrid/MembersGrid.js';
 import MembersHeader from './MembersHeader/MembersHeader.js';
 import MembersJoinUs from './MembersJoinUs/MembersJoinUs.js';
 import Footer from 'components/Footer/Footer.js';
-import './Members.css'
+import './Members.css';
 
 class Members extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.members = props.membersData.members;
-	}
+    this.members = props.membersData.members;
+  }
 
-	render() {
-		return (
-			<div className='members-container'>
-				<MembersHeader />
-				<MembersGrid members={ this.members } />
-				<MembersJoinUs />
-				<Footer />
-			</div>
-		);
-	}
+  render() {
+    document.title = 'RoBorregos | Members';
+
+    return (
+      <div className='members-container'>
+        <MembersHeader />
+        <MembersGrid members={ this.members } />
+        <MembersJoinUs />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default Members;
