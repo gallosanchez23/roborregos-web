@@ -3,20 +3,11 @@ import Home from 'components/Home/Home.js';
 import Members from 'components/Members/Members.js';
 import Contact from 'components/Contact/Contact.js';
 import NavBar from 'components/NavBar/NavBar.js';
+import About from 'components/About/About.js';
 import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import routesData from 'data/routes.json';
 import membersData from 'data/members.json';
-
-function About() {
-	document.title = 'RoBorregos | About'
-
-	return (
-		<h2>
-			About
-		</h2>
-	);
-}
 
 class App extends Component {
 	componentDidMount() {
@@ -42,7 +33,7 @@ class App extends Component {
 
 					<Route
 						path='/about'
-						component={ About }
+						component={ () => <About /> }
 					/>
 
 					<Route
