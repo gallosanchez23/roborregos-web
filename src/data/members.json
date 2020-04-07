@@ -5,7 +5,7 @@
 			"img": "emilio_chavez.jpg",
 			"name": "Emilio",
 			"lastname": "Chavez",
-			"status": "inactive",
+			"status": "comitee",
 			"role": "Software development",
 			"github": "https://github.com/ChavezE",
 			"github_user": "@ChavezE",
@@ -54,6 +54,17 @@
 			"github": "#",
 			"github_user": "@",
 			"description": "Miembro activo del equipo internacional RoBorregos. Evidentemente entre más larga sea la descripción de la persona más texto se mostrará, y por ende, más completa se va a ver la página. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+		},
+		{
+			"id": 25,
+			"img": "diego_garza.jpg",
+			"name": "Diego",
+			"lastname": "Garza",
+			"status": "comitee",
+			"role": "Software development",
+			"github": "https://github.com/chhcd",
+			"github_user": "@chhcd",
+			"description": "Hi, I'm Paul, a student of {#} semester of the {% 20x} degree. Currently, I am a programmer and leader in RoboCup @Home. I am passionate about @Home because it is a very scalable project with a lot of potential for social impact, in addition to allowing me to work with a multidisciplinary team. I am interested in working in embedded systems, web development and data science. I like cats and post music. hfhfhf ldaxhldw kajxksj hello i love you wont you"
 		}
 	]
 }

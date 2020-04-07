@@ -13,20 +13,24 @@ class Members extends Component {
 
 	render() {
 		return (
-			<div className='members-container'>
-				<MembersHeader />
-				<MembersGrid members={ 
-					this.members.filter(member => member.status == "active") } 
-					title="Active members" 
-					description="Members that are currently on the team."
-				/>
-				<MembersGrid 
-					members={ this.members.filter(member => member.status == "inactive") } title="Legacy"
-					description="Members that aready graduated."
-				/>
-				<MembersJoinUs />
-				<Footer />
-			</div>
+				<div className='members-container'>
+					<MembersHeader />
+					<MembersGrid 
+						members={ this.members.filter(member => member.status == "comitee") } title="Leadership"
+						description="The head of the team."
+					/>
+					<MembersGrid members={ 
+						this.members.filter(member => member.status == "active") } 
+						title="Active members" 
+						description="Members that are currently on the team."
+					/>
+					<MembersGrid 
+						members={ this.members.filter(member => member.status == "inactive") } title="Legacy"
+						description="Members that aready graduated."
+					/>
+					<MembersJoinUs />
+					<Footer />
+				</div>
 		);
 	}
 }

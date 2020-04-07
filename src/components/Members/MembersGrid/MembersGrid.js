@@ -77,7 +77,6 @@ class MembersGrid extends Component {
 					cols={ this.state.number_of_columns }
 					spacing={ 5 }
 				>
-
 					{this.members.map(member =>(
 						<GridListTile
 							key={ member.id }
@@ -97,7 +96,7 @@ class MembersGrid extends Component {
 				<Modal
 					show={ this.state.show_modal }
 					onHide={ this.handleHideModal }
-          dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
+          			dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
 				>
 				</Modal>
 			</div>
