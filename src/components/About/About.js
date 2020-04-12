@@ -3,6 +3,7 @@ import AboutTimeline from './AboutTimeline/AboutTimeline.js'
 import Footer from 'components/Footer/Footer.js';
 import timelineData from 'data/timeline.json';
 import './About.css';
+import AboutHeader from './AboutHeader/AboutHeader.js';
 
 class About extends Component {
   render() {
@@ -10,8 +11,9 @@ class About extends Component {
 
     return (
       <div className='about-container'>
-        <AboutTimeline events={ timelineData.events }/>
-        <Footer/>
+        <AboutHeader />
+        <AboutTimeline events={ timelineData.events } />
+        <Footer />
       </div>
     );
   }

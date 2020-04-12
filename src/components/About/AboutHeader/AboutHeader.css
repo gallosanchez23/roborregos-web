@@ -1,0 +1,106 @@
+.item-container {
+  position: relative;
+}
+
+.about-header-img-container {
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.about-header-img {
+  width: 100%;
+}
+
+.right-gradient {
+  position: absolute;
+  height: 100%;
+  top: 0%;
+  right: 35%;
+  left: 55%;
+  background: linear-gradient(to top left, rgb(0, 0, 0, 0.75) 50%, transparent 50%);
+}
+
+.right-text {
+  position: absolute;
+  height: 100%;
+  right: 0%;
+  left: 65%;
+  top: 0%;
+  background: rgb(0, 0, 0, 0.75);
+  text-align: right;
+}
+
+.left-gradient {
+  position: absolute;
+  height: 100%;
+  top: 0%;
+  left: 35%;
+  right: 55%;
+  background: linear-gradient(to top right, rgb(0, 0, 0, 0.75) 50%, transparent 50%);
+}
+
+.left-text {
+  position: absolute;
+  height: 100%;
+  left: 0%;
+  right: 65%;
+  top: 0%;
+  background: rgb(0, 0, 0, 0.75);
+  text-align: left;
+}
+
+.text-box {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 5%;
+}
+
+.text-header {
+  color: white;
+  font-size: 8vh;
+}
+
+.text-paragraph {
+  color: white;
+  font-size: 4vh;
+}
+
+@media (max-aspect-ratio: 9/4) {
+  .text-header {
+    font-size: 4.2vw;
+  }
+  
+  .text-paragraph {
+    font-size: 1.8vw;
+  }
+}
+
+.carousel,
+.item,
+.active {
+  width: 100%;
+  max-height: 100%;
+  overflow: visible;
+}
+
+.carousel-indicators li {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  opacity: 75;
+  border: 2px solid transparent;
+}
+
+.carousel-indicators .active {
+  background-color: rgba(31, 31, 31, 0.9);
+  border: 2px solid white;
+}
+
+.carousel-inner {
+  height: 100%;
+}
