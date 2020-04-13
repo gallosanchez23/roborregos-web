@@ -31,21 +31,42 @@
   background-image: url("../../../images/home/HomeInformation/students.jpg");
 }
 
-.home-information-container-competitions > .home-information-circle{
+.home-information-container-competitions > .home-information-container-layer > .home-information-circle{
   background: linear-gradient(35.71deg, #9B00FA 45%,#EE4D7A  75%);
 }
 
-.home-information-container-social > .home-information-circle{
+.home-information-container-social > .home-information-container-layer > .home-information-circle{
   background: linear-gradient(217.41deg, #9B00FA 20%,#4F72B8  50%);
 }
 
-.home-information-container-events > .home-information-circle{
+.home-information-container-events > .home-information-container-layer > .home-information-circle{
   background: linear-gradient(35.71deg, #9B00FA 45%,#00B29A  75%);
 }
 
-.home-information-container-students > .home-information-circle{
+.home-information-container-students > .home-information-container-layer > .home-information-circle{
   background: linear-gradient(320.71deg, #EE4D7A 45%,#FF8200  75%);
 }
+.home-information-container > .home-information-container-layer{
+  width: 100%;
+  height: 100%;
+}
+
+.home-information-container-competitions > .home-information-container-layer{
+  background-color: rgba(238, 77, 122, 0.3); 
+}
+
+.home-information-container-social > .home-information-container-layer{
+  background-color: rgba(79, 114, 184, 0.3);
+}
+
+.home-information-container-events > .home-information-container-layer{
+  background-color: rgba(0, 178, 154, 0.3);
+}
+
+.home-information-container-students > .home-information-container-layer{
+  background-color: rgba(255, 130, 0, 0.3);
+}
+
 
 .home-information-circle{
   position: absolute;
@@ -54,23 +75,23 @@
   border-radius: 100%;
   opacity: .7;
 } 
-.home-information-container-left > .home-information-circle{
+.home-information-container-left > .home-information-container-layer > .home-information-circle{
   left: -80%;
   bottom: -100%;
 }
 
-.home-information-container-right > .home-information-circle{
+.home-information-container-right > .home-information-container-layer > .home-information-circle{
   right: -80%;
   bottom: -100%;
 }
 
-.isVisible.home-information-container-left > .home-information-circle{
+.isVisible.home-information-container-left > .home-information-container-layer > .home-information-circle{
   transition: all;
   transition-duration: 2s;
   left: -40%;
 }
 
-.isVisible.home-information-container-right > .home-information-circle{
+.isVisible.home-information-container-right > .home-information-container-layer > .home-information-circle{
   transition: all;
   transition-duration: 2s;
   right: -40%;
@@ -83,21 +104,21 @@
   width: 33%;  
 }
 
-.home-information-container-left > .home-information-text{
+.home-information-container-left > .home-information-container-layer > .home-information-text{
   left: -35%;
 }
 
-.home-information-container-right > .home-information-text{
+.home-information-container-right > .home-information-container-layer >.home-information-text{
   right: -35%;
 }
 
-.isVisible.home-information-container-left > .home-information-text{
+.isVisible.home-information-container-left > .home-information-container-layer > .home-information-text{
   transition: all;
   transition-duration: 2s;
   left: 3.5%;
 }
 
-.isVisible.home-information-container-right > .home-information-text{
+.isVisible.home-information-container-right > .home-information-container-layer > .home-information-text{
   transition: all;
   transition-duration: 2s;
   right: 3.5%;
