@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import placeholder from 'images/placeholder-rectangle.png';
-// import placeholder from 'images/carousel1.jpg';
 import { Carousel } from 'react-bootstrap';
-import './HomeCarousel.css'
+import './HomeCarousel.css';
 
 class HomeCarousel extends Component {
   constructor(props){
@@ -12,11 +11,11 @@ class HomeCarousel extends Component {
   }
 
   tryRequire(img_path) {
-  	try {
-			return require('images/'+img_path);
-		} catch (err) {
-			return placeholder;
-		}
+    try {
+      return require('images/' + img_path);
+    } catch (err) {
+      return placeholder;
+    }
   }
 
   render() {
