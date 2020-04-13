@@ -13,22 +13,22 @@
 
 .home-information-container-competitions{
   background-position: bottom left;
-  background-image: url("../../../images/home/HomeInformation/competitions.png");
+  background-image: url("../../../images/home/HomeInformation/competitions.jpg");
 }
 
 .home-information-container-social{
   background-position: center left;
-  background-image: url("../../../images/home/HomeInformation/social.png");
+  background-image: url("../../../images/home/HomeInformation/social.jpg");
 }
 
 .home-information-container-events{
   background-position: center left;
-  background-image: url("../../../images/home/HomeInformation/events.png");
+  background-image: url("../../../images/home/HomeInformation/events.jpg");
 }
 
 .home-information-container-students{
   background-position: center left;
-  background-image: url("../../../images/home/HomeInformation/students.png");
+  background-image: url("../../../images/home/HomeInformation/students.jpg");
 }
 
 .home-information-container-competitions > .home-information-circle{
