@@ -55,13 +55,25 @@
   opacity: .7;
 } 
 .home-information-container-left > .home-information-circle{
-  left: -40%;
+  left: -80%;
   bottom: -100%;
 }
 
 .home-information-container-right > .home-information-circle{
-  right: -40%;
+  right: -80%;
   bottom: -100%;
+}
+
+.isVisible.home-information-container-left > .home-information-circle{
+  transition: all;
+  transition-duration: 5s;
+  left: -40%;
+}
+
+.isVisible.home-information-container-right > .home-information-circle{
+  transition: all;
+  transition-duration: 5s;
+  right: -40%;
 }
 
 .home-information-text{
@@ -72,10 +84,22 @@
 }
 
 .home-information-container-left > .home-information-text{
-  left: 3.5%;
+  left: -35%;
 }
 
 .home-information-container-right > .home-information-text{
+  right: -35%;
+}
+
+.isVisible.home-information-container-left > .home-information-text{
+  transition: all;
+  transition-duration: 5s;
+  left: 3.5%;
+}
+
+.isVisible.home-information-container-right > .home-information-text{
+  transition: all;
+  transition-duration: 5s;
   right: 3.5%;
 }
 

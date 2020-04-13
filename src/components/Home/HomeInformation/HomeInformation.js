@@ -1,15 +1,52 @@
 import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 import './HomeInformation.css';
 
 class HomeInformation extends Component {
   constructor(props) {
     super(props);
+    this.listenScrollEvent = this.listenScrollEvent.bind(this);
+    this.isElementVisible = this.isElementVisible.bind(this);
+    this.state = {
+      competitions_visible : false,
+      social_visible : false,
+      events_visible : false,
+      students_visible : false,
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent);
+  }
+
+  isElementVisible(element) {
+    var viewTop       = window.pageYOffset,
+        viewBottom    = viewTop + window.innerHeight,
+        top           = element.offsetTop,
+        bottom        = top + element.clientHeight,
+        compareTop    = bottom,
+        compareBottom = top;
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+  }
+
+  listenScrollEvent() {
+    const allNode = ReactDOM.findDOMNode(this);
+    if(allNode instanceof HTMLElement) {
+      const homeInformation = allNode.querySelectorAll('.home-information-container');
+      homeInformation.forEach( element => {
+        if(this.isElementVisible(element)){
+          this.setState({[element.id+'_visible']:true});
+        }else{
+          this.setState({[element.id+'_visible']:false});  
+        }
+      });
+    }
   }
 
   render() {
     return (
       <div className='home-information-container-all'>
-        <div className='home-information-container home-information-container-left home-information-container-competitions'>
+        <div id='competitions' className={`home-information-container home-information-container-left home-information-container-competitions ${this.state.competitions_visible ? "isVisible" : "" } `}>
           <div className='home-information-circle' />
           <div className='home-information-text'>
             <div className='home-information-title'>
@@ -20,7 +57,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div className='home-information-container home-information-container-right home-information-container-social'>
+        <div id='social' className={`home-information-container home-information-container-right home-information-container-social ${this.state.social_visible ? "isVisible" : "" } `}>
           <div className='home-information-circle' />
           <div className='home-information-text'>
             <div className='home-information-title'>
@@ -31,7 +68,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div className='home-information-container home-information-container-left home-information-container-events'>
+        <div id='events' className={`home-information-container home-information-container-left home-information-container-events ${this.state.events_visible ? "isVisible" : "" } `}>
           <div className='home-information-circle' />
           <div className='home-information-text'>
             <div className='home-information-title'>
@@ -42,7 +79,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div className='home-information-container home-information-container-right home-information-container-students'>
+        <div id='students' className={`home-information-container home-information-container-right home-information-container-students ${this.state.students_visible ? "isVisible" : "" } `}>
           <div className='home-information-circle' />
           <div className='home-information-text'>
             <div className='home-information-title'>
