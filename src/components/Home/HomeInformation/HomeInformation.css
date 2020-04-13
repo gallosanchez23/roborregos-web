@@ -66,13 +66,13 @@
 
 .isVisible.home-information-container-left > .home-information-circle{
   transition: all;
-  transition-duration: 5s;
+  transition-duration: 2s;
   left: -40%;
 }
 
 .isVisible.home-information-container-right > .home-information-circle{
   transition: all;
-  transition-duration: 5s;
+  transition-duration: 2s;
   right: -40%;
 }
 
@@ -93,13 +93,13 @@
 
 .isVisible.home-information-container-left > .home-information-text{
   transition: all;
-  transition-duration: 5s;
+  transition-duration: 2s;
   left: 3.5%;
 }
 
 .isVisible.home-information-container-right > .home-information-text{
   transition: all;
-  transition-duration: 5s;
+  transition-duration: 2s;
   right: 3.5%;
 }
 

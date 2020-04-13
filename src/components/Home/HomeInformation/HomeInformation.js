@@ -5,8 +5,16 @@ import './HomeInformation.css';
 class HomeInformation extends Component {
   constructor(props) {
     super(props);
+    
+    this.competitions = React.createRef();
+    this.social = React.createRef();
+    this.events = React.createRef();
+    this.students = React.createRef();
+    
+    this.handleScrollEvent = this.handleScrollEvent.bind(this);
     this.listenScrollEvent = this.listenScrollEvent.bind(this);
     this.isElementVisible = this.isElementVisible.bind(this);
+    
     this.state = {
       competitions_visible : false,
       social_visible : false,
@@ -16,7 +24,7 @@ class HomeInformation extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.listenScrollEvent);
+    window.addEventListener('scroll', this.listenScrollEvent, true);
   }
 
   isElementVisible(element) {
@@ -29,24 +37,28 @@ class HomeInformation extends Component {
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
   }
 
-  listenScrollEvent() {
-    const allNode = ReactDOM.findDOMNode(this);
-    if(allNode instanceof HTMLElement) {
-      const homeInformation = allNode.querySelectorAll('.home-information-container');
-      homeInformation.forEach( element => {
-        if(this.isElementVisible(element)){
-          this.setState({[element.id+'_visible']:true});
-        }else{
-          this.setState({[element.id+'_visible']:false});  
-        }
-      });
+  handleScrollEvent(element) {
+    if(!element) {
+      return;
     }
+    if(this.isElementVisible(element)) {
+      this.setState({[element.id+'_visible']:true});
+    } else {
+      this.setState({[element.id+'_visible']:false});  
+    }
+  }
+
+  listenScrollEvent() {
+    this.handleScrollEvent(this.competitions.current);
+    this.handleScrollEvent(this.social.current);
+    this.handleScrollEvent(this.events.current);
+    this.handleScrollEvent(this.students.current);
   }
 
   render() {
     return (
       <div className='home-information-container-all'>
-        <div id='competitions' className={`home-information-container home-information-container-left home-information-container-competitions ${this.state.competitions_visible ? "isVisible" : "" } `}>
+        <div id='competitions' ref={ this.competitions } className={`home-information-container home-information-container-left home-information-container-competitions ${this.state.competitions_visible ? "isVisible" : "" } `}>
           <div className='home-information-circle' />
           <div className='home-information-text'>
             <div className='home-information-title'>
@@ -57,7 +69,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id='social' className={`home-information-container home-information-container-right home-information-container-social ${this.state.social_visible ? "isVisible" : "" } `}>
+        <div id='social' ref={ this.social } className={`home-information-container home-information-container-right home-information-container-social ${this.state.social_visible ? "isVisible" : "" } `}>
           <div className='home-information-circle' />
           <div className='home-information-text'>
             <div className='home-information-title'>
@@ -68,7 +80,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id='events' className={`home-information-container home-information-container-left home-information-container-events ${this.state.events_visible ? "isVisible" : "" } `}>
+        <div id='events' ref={ this.events } className={`home-information-container home-information-container-left home-information-container-events ${this.state.events_visible ? "isVisible" : "" } `}>
           <div className='home-information-circle' />
           <div className='home-information-text'>
             <div className='home-information-title'>
@@ -79,7 +91,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id='students' className={`home-information-container home-information-container-right home-information-container-students ${this.state.students_visible ? "isVisible" : "" } `}>
+        <div id='students' ref={ this.students } className={`home-information-container home-information-container-right home-information-container-students ${this.state.students_visible ? "isVisible" : "" } `}>
           <div className='home-information-circle' />
           <div className='home-information-text'>
             <div className='home-information-title'>
