@@ -63,27 +63,26 @@
 
 .text-header {
   color: white;
-  font-size: 8vh;
+  font-size: 6vh;
 }
 
 .text-paragraph {
   color: white;
-  font-size: 4vh;
+  font-size: 2.8vh;
 }
 
-@media (max-aspect-ratio: 9/4) {
+@media (max-aspect-ratio: 1/1) {
   .text-header {
-    font-size: 4.2vw;
+    font-size: 6vw;
   }
   
   .text-paragraph {
-    font-size: 1.8vw;
+    font-size: 2.8vw
   }
 }
 
 .carousel,
-.item,
-.active {
+.item {
   width: 100%;
   height: 90vh;
   overflow: hidden;
