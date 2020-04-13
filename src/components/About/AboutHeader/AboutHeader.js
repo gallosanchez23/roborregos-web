@@ -9,34 +9,34 @@ class AboutHeader extends Component {
     return (
       <Carousel controls={false} fade={true}>
         <Carousel.Item>
-          <div className="about-header-img-container">
+          <div className='about-header-img-container'>
             <img
-              className="about-header-img"
+              className='about-header-img'
               src={ HeaderImg1 }
-              alt="First slide"
+              alt='First slide'
             />
           </div>
-          <div className="right-gradient"></div>
-          <div className="right-text">
-            <div className="text-box">
-              <h2 className="text-header">How it all began</h2>
-              <p className="text-paragraph">In 2015, four students organized themselves to compete in the national robotics tournament of Mexico, called TMR. They achieved the pass for the international by gaining 1st place in the category Rescue Maze. Astonished by the different tech levels of other countries, they started RoBorregos, with the intention of sharing this knowledge and experiences through generations.</p>
+          <div className='right-gradient'></div>
+          <div className='right-text'>
+            <div className='text-box'>
+              <h2 className='text-header'>How it all began</h2>
+              <p className='text-paragraph'>In 2015, four students organized themselves to compete in the national robotics tournament of Mexico, called TMR. They achieved the pass for the international by gaining 1st place in the category Rescue Maze. Astonished by the different tech levels of other countries, they started RoBorregos, with the intention of sharing this knowledge and experiences through generations.</p>
             </div>
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="about-header-img-container">
+          <div className='about-header-img-container'>
             <img
-              className="about-header-img"
+              className='about-header-img'
               src={ HeaderImg2 }
-              alt="Second slide"
+              alt='Second slide'
             />
           </div>
-          <div className="left-gradient"></div>
-          <div className="left-text">
-            <div className="text-box">
-              <h2 className="text-header">What we develop for</h2>
-              <p className="text-paragraph"><b>Our vision</b> is to become, in the next decade, the best robotics team in Latin America, in national and international competitions for university students and be able to promote technological development in Mexico.</p>
+          <div className='left-gradient'></div>
+          <div className='left-text'>
+            <div className='text-box'>
+              <h2 className='text-header'>What we develop for</h2>
+              <p className='text-paragraph'><b>Our vision</b> is to become, in the next decade, the best robotics team in Latin America, in national and international competitions for university students and be able to promote technological development in Mexico.</p>
             </div>
           </div>
         </Carousel.Item>

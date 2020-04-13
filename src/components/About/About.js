@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import AboutHeader from './AboutHeader/AboutHeader.js';
 import AboutTimeline from './AboutTimeline/AboutTimeline.js'
 import Footer from 'components/Footer/Footer.js';
 import timelineData from 'data/timeline.json';
 import './About.css';
-import AboutHeader from './AboutHeader/AboutHeader.js';
 
 class About extends Component {
   render() {
