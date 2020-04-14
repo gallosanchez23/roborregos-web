@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import HeaderImg1 from 'images/about/about1.png';
-import HeaderImg2 from 'images/about/about2.png';
+import HeaderImg2 from 'images/about/about2.jpg';
 import './AboutHeader.css';
 
 class AboutHeader extends Component {
