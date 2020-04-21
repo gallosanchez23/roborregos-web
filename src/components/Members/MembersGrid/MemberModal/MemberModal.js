@@ -4,6 +4,8 @@ import { Row, Col } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close';
 import Icon from '@material-ui/core/Icon';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import IconButton from '@material-ui/core/IconButton';
 import placeholder from 'images/placeholder-rectangle.png';
 import { MEDIUM_WIDTH } from 'constants.js';
@@ -89,11 +91,26 @@ class MemberModal extends Component {
 									<br/>
 									{ this.member.description }
 								</p>
+								<br></br>
 								<p>
 									<Button href={ this.member.github } className='member-modal-btn'>
 										<Icon className='fab fa-github fa-fw' />
 										<span className='member-username'>
 											{ this.member.github_user }
+										</span>
+									</Button>
+									<br></br>
+									<Button href={ this.member.github } className='member-modal-btn'>
+										<LinkedInIcon />
+										<span className='member-username'>
+											{ this.member.github_user }
+										</span>
+									</Button>
+									<br></br>
+									<Button href={ this.member.github } className='member-modal-btn'>
+										<WorkOutlineIcon />
+										<span className='member-username'>
+											Resume
 										</span>
 									</Button>
 								</p>
@@ -118,7 +135,7 @@ class MemberModal extends Component {
 							</Col>
 						</div>
 						<div className='information-col'>
-							<Col xs={6} className='image-col'>
+							<Col xs={12} className='image-col'>
 								<div className='image-cropper'>
 									<img
 										className='modal-member-image'
@@ -127,9 +144,11 @@ class MemberModal extends Component {
 									/>
 								</div>
 							</Col>
-							<Col xs={4}>
+						</div>
+						<div className='description-small'>
+							<Col xs={12}>
 								<Row noGutters={ true }>
-									<Col>
+									<Col className='name-small'>
 										<h2>
 											{ this.memberFullName() }
 										</h2>
@@ -141,9 +160,6 @@ class MemberModal extends Component {
 									</strong>
 								</p>
 							</Col>
-							<Col  xs={2}></Col>
-						</div>
-						<div className='description-small'>
 							<Col sm={12}>
 								<p>
 									{this.member.description}
@@ -153,6 +169,20 @@ class MemberModal extends Component {
 										<Icon className='fab fa-github fa-fw' />
 										<span className='member-username'>
 											{ this.member.github_user }
+										</span>
+									</Button>
+									<br></br>
+									<Button href={ this.member.github } className='icon-small'>
+										<LinkedInIcon />
+										<span className='member-username'>
+											{ this.member.github_user }
+										</span>
+									</Button>
+									<br></br>
+									<Button href={ this.member.github } className='icon-small'>
+										<WorkOutlineIcon />
+										<span className='member-username'>
+											Resume
 										</span>
 									</Button>
 								</p>

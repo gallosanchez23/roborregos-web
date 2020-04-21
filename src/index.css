@@ -223,7 +223,6 @@ code {
 .main-modal-row .information-col {
   background: rgb(10, 15, 20);
   width: 100%;
-  height: 100vh;
 }
 
 
@@ -261,8 +260,11 @@ code {
 }
 
 @media (max-width: 992px) {
+  .image-col {
+    padding-left: 27%;
+  }
+
   .main-modal-row .information-col {
-    height: 43vh;
     background:
     linear-gradient(
       90deg,
@@ -279,22 +281,20 @@ code {
   .description-small {
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
-    padding: 7% 10vw;
-    font-size: 2.3vw;
-    height: 54vh;
+    padding: 7%;
+    font-size: 2.6vw;
     background: rgb(10, 15, 20);
+  }
+
+  .name-small {
+    color: rgb(20, 183, 191);
   }
 
   .main-modal-row .icon-small {
     font-size: 2.3vw;
   }
 
-  .image-col {
-    padding-left: 20%;
-  }
-
   .close-button {
-    height: 0vh;
     width: 100%;
     background:
     linear-gradient(
@@ -307,27 +307,17 @@ code {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 414px) {
+  .image-col {
+    padding-left: 12vw;
+  }
+
   .description-small {
-    font-size: 2.5vh;
+    font-size: 2vh;
   }
 
   .main-modal-row .icon-small {
     font-size: 2.5vh;
-  }
-
-  .image-col {
-    padding-left: 10%;
-  }
-}
-
-@media (max-width: 450px) {
-  .modal-member-image {
-    transform: translateX(-30%);
-  }
-
-  .image-col {
-    padding-left: 0%;
   }
 }
 
