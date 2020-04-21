@@ -249,8 +249,8 @@ code {
   text-transform: none;
 }
 
-.main-modal-row .information-col .member-modal-btn .member-username {
-  padding-left: 8px;
+.member-username {
+  margin-left: 8px;
 }
 
 .main-modal-row .icon-small {

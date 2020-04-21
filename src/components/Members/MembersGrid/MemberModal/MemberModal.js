@@ -9,6 +9,8 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import IconButton from '@material-ui/core/IconButton';
 import placeholder from 'images/placeholder-rectangle.png';
 import { MEDIUM_WIDTH } from 'constants.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
 class MemberModal extends Component {
 	constructor(props) {
@@ -100,15 +102,15 @@ class MemberModal extends Component {
 										</span>
 									</Button>
 									<br></br>
-									<Button href={ this.member.github } className='member-modal-btn'>
+									<Button href={ this.member.linkedin } className='member-modal-btn'>
 										<LinkedInIcon />
 										<span className='member-username'>
-											{ this.member.github_user }
+											LinkedIn
 										</span>
 									</Button>
 									<br></br>
-									<Button href={ this.member.github } className='member-modal-btn'>
-										<WorkOutlineIcon />
+									<Button href={ this.member.resume_link } className='member-modal-btn'>
+										<FontAwesomeIcon icon={faFilePdf} />
 										<span className='member-username'>
 											Resume
 										</span>
@@ -172,15 +174,15 @@ class MemberModal extends Component {
 										</span>
 									</Button>
 									<br></br>
-									<Button href={ this.member.github } className='icon-small'>
+									<Button href={ this.member.linkedin } className='icon-small'>
 										<LinkedInIcon />
 										<span className='member-username'>
-											{ this.member.github_user }
+											LinkedIn
 										</span>
 									</Button>
 									<br></br>
-									<Button href={ this.member.github } className='icon-small'>
-										<WorkOutlineIcon />
+									<Button href={ this.member.resume_link } className='icon-small'>
+										<FontAwesomeIcon icon={faFilePdf} />
 										<span className='member-username'>
 											Resume
 										</span>
