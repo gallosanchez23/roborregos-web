@@ -21,6 +21,7 @@ class MemberModal extends Component {
 		this.largeView = this.largeView.bind(this);
 		this.smallView = this.smallView.bind(this);
 		this.updateSizeView = this.updateSizeView.bind(this);
+		this.generateDataButtons = this.generateDataButtons.bind(this);
 
 		this.member = props.member;
 		this.handleHideModal = props.onHide;
@@ -50,6 +51,57 @@ class MemberModal extends Component {
 		this.setState({
 			show_large: (window.innerWidth >= MEDIUM_WIDTH)?true:false,
 		});
+	}
+
+	generateDataButtons(){
+		var class_name = "";
+		if(this.state.show_large){
+			class_name="member-modal-btn";
+		}else{
+			class_name="icon-small";
+		}
+		return (
+			<p>
+				{
+					(this.member.github != "") ?
+						(
+						<div>
+							<Button href={ this.member.github } className={class_name}>
+								<Icon className='fab fa-github fa-fw' />
+								<span className='member-username'>
+									{ this.member.github_user }
+								</span>
+							</Button>
+							<br></br>
+						</div>): null 
+				}
+				{
+					(this.member.linkedin != "") ?
+						(<div>
+							<Button href={ this.member.linkedin } className={class_name}>
+								<LinkedInIcon />
+								<span className='member-username'>
+									LinkedIn
+								</span>
+							</Button>
+							<br></br>
+						</div>):null
+				}
+				{
+					(this.member.resume_link != "") ?
+						(
+						<div>
+							<Button href={ this.member.resume_link } className={class_name}>
+								<FontAwesomeIcon icon={faFilePdf} />
+								<span className='member-username'>
+									Resume
+								</span>
+							</Button>	
+						</div>
+						):null
+				}
+			</p>
+		);
 	}
 
 	largeView() {
@@ -94,28 +146,7 @@ class MemberModal extends Component {
 									{ this.member.description }
 								</p>
 								<br></br>
-								<p>
-									<Button href={ this.member.github } className='member-modal-btn'>
-										<Icon className='fab fa-github fa-fw' />
-										<span className='member-username'>
-											{ this.member.github_user }
-										</span>
-									</Button>
-									<br></br>
-									<Button href={ this.member.linkedin } className='member-modal-btn'>
-										<LinkedInIcon />
-										<span className='member-username'>
-											LinkedIn
-										</span>
-									</Button>
-									<br></br>
-									<Button href={ this.member.resume_link } className='member-modal-btn'>
-										<FontAwesomeIcon icon={faFilePdf} />
-										<span className='member-username'>
-											Resume
-										</span>
-									</Button>
-								</p>
+								{ this.generateDataButtons() }
 							</div>
 						</Col>
 					</Row>
@@ -166,28 +197,7 @@ class MemberModal extends Component {
 								<p>
 									{this.member.description}
 								</p>
-								<p>
-									<Button href={ this.member.github } className='icon-small'>
-										<Icon className='fab fa-github fa-fw' />
-										<span className='member-username'>
-											{ this.member.github_user }
-										</span>
-									</Button>
-									<br></br>
-									<Button href={ this.member.linkedin } className='icon-small'>
-										<LinkedInIcon />
-										<span className='member-username'>
-											LinkedIn
-										</span>
-									</Button>
-									<br></br>
-									<Button href={ this.member.resume_link } className='icon-small'>
-										<FontAwesomeIcon icon={faFilePdf} />
-										<span className='member-username'>
-											Resume
-										</span>
-									</Button>
-								</p>
+								{ this.generateDataButtons() }
 							</Col>
 						</div>
 					</Row>
