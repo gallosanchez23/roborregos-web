@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close';
 import Icon from '@material-ui/core/Icon';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import IconButton from '@material-ui/core/IconButton';
 import placeholder from 'images/placeholder-rectangle.png';
 import { MEDIUM_WIDTH } from 'constants.js';
@@ -73,7 +72,7 @@ class MemberModal extends Component {
 		return (
 			<p>
 				{
-					(this.member.github != "") ?
+					(this.member.github !== "") ?
 						(
 						<div>
 							<Button href={ this.member.github } className={class_name}>
@@ -86,7 +85,7 @@ class MemberModal extends Component {
 						</div>): null 
 				}
 				{
-					(this.member.linkedin != "") ?
+					(this.member.linkedin !== "") ?
 						(<div>
 							<Button href={ this.member.linkedin } className={class_name}>
 								<LinkedInIcon />
@@ -98,7 +97,7 @@ class MemberModal extends Component {
 						</div>):null
 				}
 				{
-					(this.member.resume_link != "") ?
+					(this.member.resume_link !== "") ?
 						(
 						<div>
 							<Button href={ this.member.resume_link } className={class_name}>
