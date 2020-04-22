@@ -22,6 +22,7 @@ class MemberModal extends Component {
 		this.smallView = this.smallView.bind(this);
 		this.updateSizeView = this.updateSizeView.bind(this);
 		this.generateDataButtons = this.generateDataButtons.bind(this);
+		this.keyFunction = this.keyFunction.bind(this);
 
 		this.member = props.member;
 		this.handleHideModal = props.onHide;
@@ -29,6 +30,19 @@ class MemberModal extends Component {
 		this.state = {
 			show_large: (window.innerWidth >= MEDIUM_WIDTH)?true:false,
 		}
+	}
+
+	keyFunction(event){
+		if(event.keyCode === 27) {
+			this.setState({
+				handleHideModal: true
+			});
+		}
+	}
+
+	componentDidMount() {
+		document.addEventListener("keydown", this.escFunction, false);
+		window.addEventListener('resize', this.updateSizeView);
 	}
 
 	tryRequire(img_path) {
@@ -41,10 +55,6 @@ class MemberModal extends Component {
 
 	memberFullName() {
 		return this.member.name + ' ' + this.member.lastname;
-	}
-
-	componentDidMount() {
-		window.addEventListener('resize', this.updateSizeView);
 	}
 
 	updateSizeView(){
