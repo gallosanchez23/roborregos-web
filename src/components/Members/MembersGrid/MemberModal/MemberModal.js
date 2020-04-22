@@ -61,7 +61,7 @@ class MemberModal extends Component {
 							<div className='image-cropper'>
 								<img
 									className='modal-member-image'
-									src={ this.tryRequire(this.member.img) }
+									src={ this.tryRequire(this.member.id + ".jpg") }
 									alt={ this.memberFullName() }
 								/>
 							</div>
@@ -141,7 +141,7 @@ class MemberModal extends Component {
 								<div className='image-cropper'>
 									<img
 										className='modal-member-image'
-										src={ this.tryRequire(this.member.img) }
+										src={ this.tryRequire(this.member.id + ".jpg") }
 										alt={ this.memberFullName() }
 									/>
 								</div>
