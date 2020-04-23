@@ -1,0 +1,27 @@
+.home-mini-information {
+    background: linear-gradient( 45deg, rgba(20, 18, 19, 0.9) 30%, rgba(0, 94, 105, 0.9) 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
+    color: rgb(250, 250, 250);
+    text-align: center;
+    padding-top: 24px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {   
+    height:125px;
+    width:125px;
+    border-radius:50%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-mini-information p {
+    padding-top: 8px;
+    font-size: 24px;
+}
