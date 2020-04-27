@@ -26,7 +26,7 @@ function sitemapIconButton(link, icon) {
 		component='a'
 		href={ link }
 		color='inherit'
-		className='sitemap-link'
+		className='icon-link'
 		>
 			{ icon }
 		</IconButton>
@@ -38,33 +38,37 @@ class Footer extends Component {
 	constructor(props) {
 		super(props);
 
-		this.setIconSize = this.setIconSize.bind(this);
+		this.setSizeAtributes = this.setSizeAtributes.bind(this);
+		this.largeView = this.largeView.bind(this);
+		this.smallView = this.smallView.bind(this);
 
 		this.members = props.members;
 
 		this.state = {
 			icon_size: (window.innerWidth > MEDIUM_WIDTH)?30:(window.innerWidth > PHONE_SIZE)?20:10,
+			view_size_large: (window.innerWidth > MEDIUM_WIDTH)?true:false,
 		}
 	}
 
 	componentDidMount() {
-		window.addEventListener('resize', this.setIconSize);
+		window.addEventListener('resize', this.setSizeAtributes);
 	}
 
-	setIconSize(){
+	setSizeAtributes(){
 		this.setState({
 			icon_size : (window.innerWidth >= MEDIUM_WIDTH)?30:(window.innerWidth >= PHONE_SIZE)?20:10,
+			view_size_large: (window.innerWidth > MEDIUM_WIDTH)?true:false,
 		});
 	}
 
-	render() {
+	largeView() {
 		return(
 			<div className='footer-container'>
 				<Row className='footer-row'>
 					<Col lg='4' className='col-logo'>
 						<img src={logo} className='footer-logo' alt='logo' />
 					</Col>
-					<Col lg='5' className='footer-col'>
+					<Col lg='4' className='footer-col'>
 						<div className='sitemap-link'>
 							{ sitemapLink('/', 'Home') }
 						</div>
@@ -78,7 +82,7 @@ class Footer extends Component {
 							{ sitemapLink('/contact', 'Contact') }
 						</div>
 					</Col>
-					<Col lg='3'>
+					<Col lg='4'>
 						<Row>
 							<p className='goback-button'>
 								<IconButton
@@ -98,13 +102,27 @@ class Footer extends Component {
 								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size }} />) }
 								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
 								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
-								@2020 RoBorregos
+								<div className='mark-text'>@2020 RoBorregos</div>
 							</p>
 						</Row>
 					</Col>
 				</Row>
 			</div>
 		);
+	}
+
+	smallView() {
+		return(
+			<div className='footer-container'>
+				<Row className='footer-row'>
+					
+				</Row>
+			</div>
+		);
+	}
+
+	render() {
+		return (this.state.view_size_large) ? this.largeView():this.smallView();
 	}
 }
 
