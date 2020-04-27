@@ -1,27 +1,69 @@
+/* ----------------------------------------------------------------------------------- */
+/* Footer styles */
+/* ----------------------------------------------------------------------------------- */
 .footer-container {
-  padding: 2% 0;
-  background: rgb(25, 30, 35);
   color: rgb(250, 250, 250);
 }
 
+.footer-row {
+  background-color:  rgb(10, 15, 20);
+  width: 100%;
+  height: 31vh;
+}
+
 .footer-logo {
-  width: 85%;
+  width: 340px;
+  height: 31vh;
+  object-fit: cover;
+  object-position: top;
 }
 
-.footer-title {
-  color: rgb(0, 225, 250);
+.col-logo {
+  padding-left: 2%;
+  align-items: left;
+  height: 31vh;
 }
 
-.footer-container p {
-  padding-left: 10px
+.footer-col {
+  padding-top: 2%;
+  height: 30vh;
 }
 
-.footer-container .sitemap-link {
+.sitemap-link {
+  display: inline-block;
+  position: left;
+  padding-right: 6%;
+}
+
+.row-socialMedia{
+  padding-left: 7vw;
+  height: 10vh;
+}
+
+.goback-button {
+  padding-top: 2%;
+  padding-left: 20vw;
+  height: 20vh;
+  background-color: green;
+}
+
+.goback-text {
+  font-size: 1.2vw;
+}
+
+@media (max-width: 767px) {
+  .col-logo {
+    display: none;
+  }
+}
+
+.sitemap-link {
   text-decoration: none;
   color: rgb(250, 250, 250);
 }
 
-.footer-container .sitemap-link:hover {
+.sitemap-link:hover {
+  text-decoration: none;
   color: rgb(0, 225, 250);
   background: none;
 }
