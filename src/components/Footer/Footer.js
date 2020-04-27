@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import logo from 'images/white_logo.png';
 import { MEDIUM_WIDTH, PHONE_SIZE } from 'constants.js';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 function sitemapLink(link, legend) {
 	return (
@@ -41,7 +42,7 @@ class Footer extends Component {
 		this.members = props.members;
 
 		this.state = {
-			icon_size: (window.innerWidth > MEDIUM_WIDTH)?40:(window.innerWidth > PHONE_SIZE)?32:20,
+			icon_size: (window.innerWidth > MEDIUM_WIDTH)?30:(window.innerWidth > PHONE_SIZE)?20:10,
 		}
 	}
 
@@ -51,48 +52,53 @@ class Footer extends Component {
 
 	setIconSize(){
 		this.setState({
-			icon_size : (window.innerWidth >= MEDIUM_WIDTH)?40:(window.innerWidth >= PHONE_SIZE)?32:20,
+			icon_size : (window.innerWidth >= MEDIUM_WIDTH)?30:(window.innerWidth >= PHONE_SIZE)?20:10,
 		});
 	}
 
 	render() {
 		return(
 			<div className='footer-container'>
-				<Container>
-					<Row className='footer-row'>
-						<Col className='col-logo'>
-							<img src={logo} className='footer-logo' alt='logo' />
-						</Col>
-						<Col className='footer-col'>
-							<h4 className='footer-title'>
-								RoBorregos
-							</h4>
-							<p>
-								<small>
-									RoBorregos 2020 © All rights reserved | ITESM | Monterrey, Nuevo León, México
-								</small>
-							</p>
-						</Col>
-						<Col className='footer-col'>
-							<h4 className='footer-title'>
-								Site
-							</h4>
-							<p>
-								{ sitemapLink('/', 'Home') }
-								{ sitemapLink('/about', 'About') }
-								{ sitemapLink('/members', 'Members') }
-								{ sitemapLink('/contact', 'Contact') }
-							</p>
-						</Col>
-						<Col className='col-socialMedia'>
+				<Row className='footer-row'>
+					<Col lg='4' className='col-logo'>
+						<img src={logo} className='footer-logo' alt='logo' />
+					</Col>
+					<Col lg='4' className='footer-col'>
+						<div className='sitemap-link'>
+							{ sitemapLink('/', 'Home') }
+						</div>
+						<div className='sitemap-link'>
+							{ sitemapLink('/about', 'About') }
+						</div>
+						<div className='sitemap-link'>
+							{ sitemapLink('/members', 'Members') }
+						</div>
+						<div className='sitemap-link'>
+							{ sitemapLink('/contact', 'Contact') }
+						</div>
+					</Col>
+					<Col lg='4'>
+						<Row className='goback-button'>
+							<IconButton
+							component='a'
+							href={ '/' }
+							color='inherit'
+							className='sitemap-link'
+							>
+								<ExpandLessIcon/>
+								<div className='goback-text'>Back to top</div>
+							</IconButton>
+						</Row>
+						<Row className='row-socialMedia'>
 							<p>
 								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size }} />) }
 								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
 								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
+								@2020 RoBorregos
 							</p>
-						</Col>
-					</Row>
-				</Container>
+						</Row>
+					</Col>
+				</Row>
 			</div>
 		);
 	}
