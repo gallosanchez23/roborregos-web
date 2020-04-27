@@ -64,7 +64,7 @@ class Footer extends Component {
 					<Col lg='4' className='col-logo'>
 						<img src={logo} className='footer-logo' alt='logo' />
 					</Col>
-					<Col lg='4' className='footer-col'>
+					<Col lg='5' className='footer-col'>
 						<div className='sitemap-link'>
 							{ sitemapLink('/', 'Home') }
 						</div>
@@ -78,20 +78,23 @@ class Footer extends Component {
 							{ sitemapLink('/contact', 'Contact') }
 						</div>
 					</Col>
-					<Col lg='4'>
-						<Row className='goback-button'>
-							<IconButton
-							component='a'
-							href={ '/' }
-							color='inherit'
-							className='sitemap-link'
-							>
-								<ExpandLessIcon/>
-								<div className='goback-text'>Back to top</div>
-							</IconButton>
+					<Col lg='3'>
+						<Row>
+							<p className='goback-button'>
+								<IconButton
+								component='a'
+								href={ '/' }
+								color='inherit'
+								className='sitemap-link'
+								>
+									<ExpandLessIcon/>
+									<div className='goback-text'>Back to top</div>
+								</IconButton>
+							</p>
+							
 						</Row>
-						<Row className='row-socialMedia'>
-							<p>
+						<Row>
+							<p className='row-socialMedia'>
 								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size }} />) }
 								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
 								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }

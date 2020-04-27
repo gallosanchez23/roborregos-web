@@ -31,20 +31,18 @@
 
 .sitemap-link {
   display: inline-block;
-  position: left;
   padding-right: 6%;
 }
 
 .row-socialMedia{
-  padding-left: 7vw;
-  height: 10vh;
+  height: 6vh;
+  padding-top: 0.3vh;
 }
 
 .goback-button {
-  padding-top: 2%;
-  padding-left: 20vw;
+  padding-left: 13vw;
+  padding-top: 2.5vh;
   height: 20vh;
-  background-color: green;
 }
 
 .goback-text {
