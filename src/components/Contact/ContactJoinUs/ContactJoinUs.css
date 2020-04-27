@@ -1,0 +1,52 @@
+.contact-joinus {
+    height: auto;
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.contact-joinus-title-container {
+    color: white;
+    font-size: 30px;
+}
+
+.contact-joinus-title-icon-container {
+    color: rgb(191, 0, 255);
+    font-size: 100px;
+}
+
+.contact-joinus-btn-container {
+    width: 100%;
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    left: 48.5%;
+    min-height: 75px;
+    transform: translate(-50%, -50%) !important;
+}
+
+.contact-joinus-btn {
+    margin: auto;
+    cursor: pointer;
+    border-radius: 8px !important;
+    font-size: 30px;
+    width: 22%;
+    height: 80px;
+    background-color: rgba(28, 35, 41, 1);
+    color: white !important;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, #A065AA 0%, #4F72B8 100%);
+}
+
+@media (max-width: 500px) {
+    .contact-joinus-btn {
+        width: 40%;
+        font-size: 25px;
+    }
+}
+
+.contact-joinus-btn:hover {
+    border-image-source:none;
+    border: 1px solid white;
+    background: linear-gradient(90deg, #A065AA 0%, #4F72B8 100%);
+}
