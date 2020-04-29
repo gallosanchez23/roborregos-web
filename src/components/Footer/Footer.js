@@ -107,9 +107,10 @@ class Footer extends Component {
 						</Row>
 						<Row>
 							<p className='row-socialMedia'>
-								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size }} />) }
-								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
+								
 								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
+								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
+								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 5 }} />) }
 								<div className='mark-text'>@2020 RoBorregos</div>
 							</p>
 						</Row>
@@ -133,6 +134,7 @@ class Footer extends Component {
 								component='a'
 								href={ '/' }
 								color='inherit'
+								className='sitemap-link'
 								>
 									<ExpandLessIcon/>
 									<div className='goback-text'>Back to top</div>

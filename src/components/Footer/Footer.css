@@ -151,6 +151,12 @@
     font-size: 4vw;
   }
 
+  .goback-text:hover {
+    text-decoration: none;
+    color: rgb(0, 225, 250);
+    background: none;
+  }
+
   .mark-text {
     float: right;
     font-size: 2vh;
