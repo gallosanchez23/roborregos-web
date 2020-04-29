@@ -32,6 +32,7 @@ You can consult the application on production at [roborregos.com](https://roborr
 | José Alfonso Cisneros | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com) | [@Josecisneros001](https://github.com/Josecisneros001) | Developer |
 | Omar Ulises Montiel | [omarume@gmail.com](mailto:omarume@gmail.com) | [@OUMontiel](https://github.com/OUMontiel) | Developer |
 | Clara Gutiérrez Jaime | [claragtzjaime@gmail.com](mailto:claragtzjaime@gmail.com) | [@ClaraGtz](https://github.com/ClaraGtz) | Designer & Developer |
+| Ana Lucía Garza | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com) | [@AnaGarza](https://github.com/AnaGarza) | Designer |
 
 ### Environment URLs
 
