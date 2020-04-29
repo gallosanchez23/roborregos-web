@@ -50,6 +50,7 @@ class Footer extends Component {
 		this.setSizeAtributes = this.setSizeAtributes.bind(this);
 		this.largeView = this.largeView.bind(this);
 		this.smallView = this.smallView.bind(this);
+		this.goUp = this.goUp.bind(this);
 
 		this.members = props.members;
 
@@ -61,6 +62,10 @@ class Footer extends Component {
 
 	componentDidMount() {
 		window.addEventListener('resize', this.setSizeAtributes);
+	}
+
+	goUp(){
+		window.scrollTo(0, 0);
 	}
 
 	setSizeAtributes(){
@@ -96,7 +101,7 @@ class Footer extends Component {
 							<p className='goback-button'>
 								<IconButton
 								component='a'
-								href={ '/' + this.props.current }
+								onClick={this.goUp}
 								color='inherit'
 								className='sitemap-link'
 								>
@@ -132,7 +137,7 @@ class Footer extends Component {
 							<div className='goback-button'>
 								<IconButton
 								component='a'
-								href={ '/' }
+								onClick={this.goUp}
 								color='inherit'
 								className='sitemap-link'
 								>

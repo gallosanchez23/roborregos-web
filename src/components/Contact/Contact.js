@@ -11,7 +11,7 @@ class Contact extends Component {
         <h1>
           Contact
         </h1>
-        <Footer current={'contact'} />
+        <Footer />
       </div>
     );
   }
