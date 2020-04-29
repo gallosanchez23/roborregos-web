@@ -1,5 +1,6 @@
 .footer-container {
   color: rgb(250, 250, 250);
+  background-color: rgb(10, 15, 20);
 }
 
 .footer-row {
@@ -9,7 +10,7 @@
 }
 
 .footer-logo {
-  width: 340px;
+  width: 60vh;
   height: 31vh;
   object-fit: cover;
   object-position: top;
@@ -29,6 +30,7 @@
 .sitemap-link {
   display: inline-block;
   padding-left: 1.4vw;
+  padding-top: 12px;
   text-decoration: none;
   color: rgb(250, 250, 250);
   font-size: 15px;
@@ -84,4 +86,97 @@
   .goback-button {
     padding-left: 18vw;
   }  
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    height: 30vh;
+    background-color: blue;
+  }
+
+  .footer-row {
+    height: 30vh;
+  }
+
+  .sitemap-container {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    width: 100%;
+    height: 16vh;
+    padding: 0;
+    margin: 0;
+    background-color: lightskyblue;
+  }
+
+  .col-logo {
+    background-color: seagreen;
+    height: 100%;
+  }
+
+  .footer-logo {
+    width: 100%;
+    height: 30vh;
+    object-fit: none;
+    object-position: 70% 20%;
+  }
+
+  .sitemap-link {
+    position: absolute;
+    right: 2.6vw;
+    padding: 0;
+    font-size: 2.5vh;
+  }
+
+  .goback-container {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    width: 100%;
+    height: 6vh;
+    padding: 0;
+    margin: 0;
+    background-color: red;
+  }
+
+  .goback-button {
+    position: absolute;
+    right: 1vw;
+    padding: 0;
+    height: min-content;
+    background-color: midnightblue;
+  }
+
+  .goback-text {
+    font-size: 3vh;
+    background-color: rosybrown;
+    width: 100%;
+  }
+
+  .mark-text {
+    float: right;
+    font-size: 2vh;
+    padding-top: 1vh;
+    color: #555652;
+  }
+
+  .icon-link {
+    background-color: darkcyan;
+  }
+
+  .row-socialMedia{
+    padding: 0;
+    width: 100%;
+    height: 1vh;
+  }
+}
+
+@media (max-width: 414px) {
+  .sitemap-container {
+    height: 16vh;
+  }
+
+  .mark-text {
+    padding-top: 0;
+  }
 }
