@@ -96,7 +96,7 @@ class Footer extends Component {
 							<p className='goback-button'>
 								<IconButton
 								component='a'
-								href={ '/' }
+								href={ '/' + this.props.current }
 								color='inherit'
 								className='sitemap-link'
 								>

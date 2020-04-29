@@ -20,7 +20,7 @@ class Members extends Component {
         <MembersHeader />
         <MembersGrid members={ this.members } />
         <MembersJoinUs />
-        <Footer />
+        <Footer current={'members'} />
       </div>
     );
   }

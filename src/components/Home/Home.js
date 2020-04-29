@@ -15,7 +15,7 @@ class Home extends Component {
         <HomeHeader />
         <HomeInformation />
         <HomeSponsors sponsors={ sponsorsData.sponsors } />
-        <Footer />
+        <Footer current={''} />
       </div>
     );
   }

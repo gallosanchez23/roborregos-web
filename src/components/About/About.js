@@ -11,7 +11,7 @@ class About extends Component {
     return (
       <div className='about-container'>
         <AboutTimeline events={ timelineData.events }/>
-        <Footer/>
+        <Footer current={'about'}/>
       </div>
     );
   }

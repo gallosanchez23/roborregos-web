@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from 'components/Footer/Footer.js';
 import './Contact.css';
 
 class Contact extends Component {
@@ -10,6 +11,7 @@ class Contact extends Component {
         <h1>
           Contact
         </h1>
+        <Footer current={'contact'} />
       </div>
     );
   }
