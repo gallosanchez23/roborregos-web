@@ -6,6 +6,11 @@ import GridListTile from '@material-ui/core/GridListTile';
 import { Modal } from 'react-bootstrap';
 import placeholder from 'images/placeholder-rectangle.png';
 import { LARGE_WIDTH, MEDIUM_WIDTH } from 'constants.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMicrochip } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
 import './MembersGrid.css';
 
 class MembersGrid extends Component {
@@ -17,6 +22,7 @@ class MembersGrid extends Component {
     this.handleHideModal = this.handleHideModal.bind(this);
     this.numberOfColumns = this.numberOfColumns.bind(this);
     this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
+    this.memberIcon = this.memberIcon.bind(this);
 
     this.members = props.members;
 
@@ -67,6 +73,16 @@ class MembersGrid extends Component {
     });
   }
 
+  memberIcon(member) {
+    if (member.role == 'Software development')
+      return faCode;
+    if (member.role == 'Electronics')
+      return faMicrochip;
+    if (member.role == 'Mechanical design')
+      return faCog;
+    return faBullhorn;
+  }
+
   render() {
     return (
       <div className='members-grid-container'>
@@ -84,11 +100,19 @@ class MembersGrid extends Component {
               className='members-grid-tile'
               onClick={ this.handleShowModal.bind(this, member) }
             >
-              <img
-                className='member-image'
-                src={ this.tryRequire(member.img) }
-                alt={ member.name }
-              />
+              <div className='member-image-container'>
+                <img
+                  className='member-image'
+                  src={ this.tryRequire(member.img) }
+                  alt={ member.name }
+                />
+                <div className='member-image-content'>
+                  <p>{ member.name + ' ' + member.lastname }</p>
+                  <div className='member-image-icon'>
+                    <FontAwesomeIcon icon={ this.memberIcon(member) } size='1x' />
+                  </div>
+                </div>
+              </div>
             </GridListTile>
           )) }
 
