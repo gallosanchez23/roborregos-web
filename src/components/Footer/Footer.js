@@ -5,6 +5,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import logo from 'images/white_logo.png';
+import smallLogo from 'images/small_logo.png'
 import { MEDIUM_WIDTH, PHONE_SIZE } from 'constants.js';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import './Footer.css';
@@ -123,10 +124,10 @@ class Footer extends Component {
 		return(
 			<Container fluid className='footer-container'>
 				<Row className='footer-row'>
-					<Col className='col-logo'>
-						<img src={logo} className='footer-logo' alt='logo' />
+					<Col xs={8} className='col-logo'>
+						<img src={smallLogo} className='footer-logo' alt='logo' />
 					</Col>
-					<Col>
+					<Col xs={4}>
 						<Row className='goback-container'>
 							<div className='goback-button'>
 								<IconButton
@@ -142,13 +143,9 @@ class Footer extends Component {
 						<Row className='sitemap-container'>
 							<div>
 								{ sitemapLink('/', 'Home', false) }
-								<br/>
 								{ sitemapLink('/about', 'About', false) }
-								<br/>
 								{ sitemapLink('/members', 'Members', false) }
-								<br/>
 								{ sitemapLink('/contact', 'Contact', false) }
-								<br/>
 								<div className='mark-text'>@2020 RoBorregos</div>
 							</div>
 						</Row>
