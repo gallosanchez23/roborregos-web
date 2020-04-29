@@ -7,7 +7,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import logo from 'images/white_logo.png';
 import smallLogo from 'images/small_logo.png'
-import { MEDIUM_WIDTH, PHONE_SIZE } from 'constants.js';
+import { MEDIUM_WIDTH, MOBILE_WIDTH } from 'constants.js';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import './Footer.css';
 
@@ -55,7 +55,7 @@ class Footer extends Component {
 		this.members = props.members;
 
 		this.state = {
-			icon_size: (window.innerWidth > PHONE_SIZE)?40:35,
+			icon_size: (window.innerWidth > MOBILE_WIDTH)?40:35,
 			view_size_large: (window.innerWidth > MEDIUM_WIDTH)?true:false,
 		}
 	}
@@ -70,7 +70,7 @@ class Footer extends Component {
 
 	setSizeAtributes(){
 		this.setState({
-			icon_size : (window.innerWidth >= PHONE_SIZE)?40:35,
+			icon_size : (window.innerWidth >= MOBILE_WIDTH)?40:35,
 			view_size_large: (window.innerWidth > MEDIUM_WIDTH)?true:false,
 		});
 	}
