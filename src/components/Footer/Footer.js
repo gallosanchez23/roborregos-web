@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
+import { makeStyles } from "@material-ui/core/styles";
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -32,14 +33,12 @@ function sitemapLink(link, legend, big) {
 
 function sitemapIconButton(link, icon) {
 	return (
-		<IconButton
-		component='a'
+		<a
 		href={ link }
-		color='inherit'
 		className='icon-link'
 		>
 			{ icon }
-		</IconButton>
+		</a>
 	);
 }
 
@@ -55,7 +54,7 @@ class Footer extends Component {
 		this.members = props.members;
 
 		this.state = {
-			icon_size: (window.innerWidth > MEDIUM_WIDTH)?30:(window.innerWidth > PHONE_SIZE)?20:20,
+			icon_size: (window.innerWidth > PHONE_SIZE)?40:35,
 			view_size_large: (window.innerWidth > MEDIUM_WIDTH)?true:false,
 		}
 	}
@@ -66,7 +65,7 @@ class Footer extends Component {
 
 	setSizeAtributes(){
 		this.setState({
-			icon_size : (window.innerWidth >= MEDIUM_WIDTH)?30:(window.innerWidth >= PHONE_SIZE)?20:20,
+			icon_size : (window.innerWidth >= PHONE_SIZE)?40:35,
 			view_size_large: (window.innerWidth > MEDIUM_WIDTH)?true:false,
 		});
 	}
@@ -123,12 +122,12 @@ class Footer extends Component {
 	smallView() {
 		return(
 			<Container fluid className='footer-container'>
-				<Row className='footer-row'>
+				<Row noGutters className='footer-row'>
 					<Col xs={8} className='col-logo'>
 						<img src={smallLogo} className='footer-logo' alt='logo' />
 					</Col>
 					<Col xs={4}>
-						<Row className='goback-container'>
+						<Row noGutters className='goback-container'>
 							<div className='goback-button'>
 								<IconButton
 								component='a'
@@ -140,7 +139,7 @@ class Footer extends Component {
 								</IconButton>
 							</div>
 						</Row>
-						<Row className='sitemap-container'>
+						<Row noGutters className='sitemap-container'>
 							<div>
 								{ sitemapLink('/', 'Home', false) }
 								{ sitemapLink('/about', 'About', false) }
@@ -149,12 +148,10 @@ class Footer extends Component {
 								<div className='mark-text'>@2020 RoBorregos</div>
 							</div>
 						</Row>
-						<Row>
-							<p className='row-socialMedia'>
-								{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size }} />) }
-								{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
-								{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
-							</p>
+						<Row className='row-socialMedia'>
+							{ sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }		
+							{ sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
+							{ sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 2, paddingBottom: "0.5vh"}} />) }			
 						</Row>
 					</Col>
 				</Row>
