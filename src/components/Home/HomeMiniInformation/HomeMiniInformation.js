@@ -9,38 +9,44 @@ import './HomeMiniInformation.css';
 class HomeMiniInformation extends Component {
   render() {
     return (
-        <div class='home-mini-information'>
-            <Container>
-                <Row class='justify-content-md-center'>
-                    <Col xs='12' md='3'>
-                        <div class='icon-container'>
-                            <div class='circle'>
-                                <FontAwesomeIcon icon={faUsers} size='5x' />
-                            </div>
-                        </div>
-                        <p>40 members</p>
-                    </Col>
-                    <Col xs='12' md='1'></Col>
-                    <Col xs='12' md='4'>
-                        <div class='icon-container'>
-                            <div class='circle'>
-                                <FontAwesomeIcon icon={faHistory} size='5x' />
-                            </div>
-                        </div>
-                        <p>Since 2015</p>
-                    </Col>
-                    <Col xs='12' md='1'></Col>
-                    <Col xs='12' md='3'>
-                        <div class='icon-container'>
-                            <div class='circle'>
-                                <FontAwesomeIcon icon={faGlobeAmericas} size='5x' />
-                            </div>
-                        </div>
-                        <p>Internationally known</p>
-                    </Col>
-                </Row>
-            </Container>
+      <div id='home-mini-information-container'>
+        <div id='background-filter'>
+          <Container>
+            <Row className='justify-content-center'>
+              <Col className='col-icon' xs={{ span: 3 }}>
+                <div className='circle'>
+                  <div className='icon-container'>
+                    <FontAwesomeIcon icon={ faUsers } size='2x' />
+                  </div>
+                </div>
+                <h5 className='icon-legend'>
+                  40 members
+                </h5>
+              </Col>
+              <Col className='col-icon' xs={{ span: 3, offset: 1 }}>
+                <div className='circle'>
+                  <div className='icon-container'>
+                    <FontAwesomeIcon icon={ faHistory } size='2x' />
+                  </div>
+                </div>
+                <h5 className='icon-legend'>
+                  Since 2015
+                </h5>
+              </Col>
+              <Col className='col-icon' xs={{ span: 3, offset: 1 }}>
+                <div className='circle'>
+                  <div className='icon-container'>
+                    <FontAwesomeIcon icon={ faGlobeAmericas } size='2x' />
+                  </div>
+                </div>
+                <h5 className='icon-legend'>
+                  Internationally known
+                </h5>
+              </Col>
+            </Row>
+          </Container>
         </div>
+      </div>
     );
   }
 }
