@@ -1,4 +1,3 @@
-// This view uses Matrial-UI elements
 import React, { Component } from 'react';
 import MemberModal from './MemberModal/MemberModal.js';
 import GridList from '@material-ui/core/GridList';
