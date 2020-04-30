@@ -28,25 +28,25 @@
 .contact-joinus-btn {
     margin: auto;
     cursor: pointer;
+    border: 1px solid #4F72B8;
     border-radius: 8px !important;
     font-size: 30px;
     width: 22%;
     height: 80px;
-    background-color: rgba(28, 35, 41, 1);
+    background-color: #13191E;
     color: white !important;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, #A065AA 0%, #4F72B8 100%);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 610px) {
     .contact-joinus-btn {
         width: 40%;
         font-size: 25px;
+        height: 65px;
+        margin-top: 10px;
     }
 }
 
 .contact-joinus-btn:hover {
-    border-image-source:none;
-    border: 1px solid white;
-    background: linear-gradient(90deg, #A065AA 0%, #4F72B8 100%);
+    border: 1px solid #13191E;
+    background-color: #4F72B8;
 }

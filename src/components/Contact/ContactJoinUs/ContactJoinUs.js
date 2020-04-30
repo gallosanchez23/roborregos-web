@@ -11,14 +11,7 @@ class ContactJoinUs extends Component {
 		this.joinUsCallback = this.joinUsCallback.bind(this);
 	}
 	joinUsCallback(){
-		var today = new Date();
-		var actualMonth = String(today.getMonth() + 1).padStart(2, '0');
-		
-		if(actualMonth >= 9 && actualMonth <= 10){
-			window.open(this.positionsData.url_form,'_blank');
-		}else{
-			window.open(this.positionsData.url_facebook,'_blank');
-		}
+		window.open(this.positionsData.url_facebook,'_blank');
 	}
 	render() {
 		return(

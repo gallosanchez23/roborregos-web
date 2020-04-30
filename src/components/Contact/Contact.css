@@ -1,7 +1,5 @@
 .contact-container {
     height: auto;
     position: relative;
-    background: linear-gradient( 20deg, rgba(28, 35, 41, 1) 50%, rgba(160, 101, 170, 1) 100%), url(../../images/github_pattern.svg) top left/auto repeat fixed;
-    background-color: #1C2329;
-    color: rgba(255, 255, 255, 0.8);
+    background: url(../../images/github_pattern.svg) top left/auto repeat fixed, linear-gradient( 20deg, rgba(28, 35, 41, 1) 50%, rgba(160, 101, 170, 1) 100%);
 }
