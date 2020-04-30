@@ -85,7 +85,7 @@ class MembersGrid extends Component {
             >
               <img
                 className='member-image'
-                src={ this.tryRequire(member.id + ".jpg") }
+                src={ this.tryRequire(member.id + '.jpg') }
                 alt={ member.name }
               />
             </GridListTile>
