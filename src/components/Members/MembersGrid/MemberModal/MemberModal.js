@@ -10,6 +10,7 @@ import { MEDIUM_WIDTH } from 'constants.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import './MemberModal.css';
+import color from '@material-ui/core/colors/amber';
 
 class MemberModal extends Component {
 	constructor(props) {
@@ -64,51 +65,54 @@ class MemberModal extends Component {
 
 	generateDataButtons(){
 		var class_name = "";
+		var icon_size = 0;
 		if(this.state.show_large){
 			class_name="member-modal-btn";
+			icon_size = [30, 35, 38];
 		}else{
 			class_name="icon-small";
+			icon_size = [20, 22, 23];
 		}
 		return (
-			<p>
-				{
-					(this.member.github !== "") ?
-						(
-						<div>
-							<Button href={ this.member.github } className={class_name}>
-								<Icon className='fab fa-github fa-fw' />
-								<span className='member-username'>
-									{ this.member.github_user }
-								</span>
-							</Button>
-							<br></br>
-						</div>): null 
-				}
-				{
-					(this.member.linkedin !== "") ?
-						(<div>
-							<Button href={ this.member.linkedin } className={class_name}>
-								<LinkedInIcon />
-								<span className='member-username'>
-									LinkedIn
-								</span>
-							</Button>
-							<br></br>
-						</div>):null
-				}
-				{
-					(this.member.resume_link !== "") ?
-						(
-						<div>
-							<Button href={ this.member.resume_link } className={class_name}>
-								<FontAwesomeIcon icon={faFilePdf} />
-								<span className='member-username'>
-									Resume
-								</span>
-							</Button>	
-						</div>
-						):null
-				}
+			<p className='data-buttons'>
+			{
+				(this.member.github !== "") ?
+					(
+					<div>
+						<Button href={ this.member.github } className={class_name}>
+							<Icon className='fab fa-github fa-fw' style={{ fontSize: icon_size[0] }} />
+							<span className='member-username'>
+								{ this.member.github_user }
+							</span>
+						</Button>
+						<br></br>
+					</div>): null 
+			}
+			{
+				(this.member.linkedin !== "") ?
+					(<div>
+						<Button href={ this.member.linkedin } className={class_name}>
+							<LinkedInIcon style={{ fontSize: icon_size[1] }} />
+							<span className='member-username'>
+								LinkedIn
+							</span>
+						</Button>
+						<br></br>
+					</div>):null
+			}
+			{
+				(this.member.resume_link !== "") ?
+					(
+					<div>
+						<Button href={ this.member.resume_link } className={class_name}>
+							<FontAwesomeIcon icon={faFilePdf} style={{ fontSize: icon_size[2], paddingLeft: "0.7vw" }} />
+							<span className='member-username'>
+								Resume
+							</span>
+						</Button>	
+					</div>
+					):null
+			}
 			</p>
 		);
 	}
@@ -118,7 +122,7 @@ class MemberModal extends Component {
 			<div className='member-modal-container'>
 				<div className='container-helper'>
 					<Row className='justify-content-sm-center main-modal-row'>
-						<Col xs='8' lg='3' className='image-col'>
+						<Col lg='3' className='image-col'>
 							<div className='image-cropper'>
 								<img
 									className='modal-member-image'
@@ -127,34 +131,30 @@ class MemberModal extends Component {
 								/>
 							</div>
 						</Col>
-						<Col xs='9' lg='5' className='information-col'>
+						<Col lg='5' className='information-col'>
 							<div className='information-container'>
-								<Row noGutters={ true }>
+								<Row noGutters>
 									<Col xs='11'>
 									</Col>
 									<Col xs='1'>
-										<IconButton className='member-modal-btn' onClick={ this.handleHideModal }>
+										<IconButton className='closing-btn' onClick={ this.handleHideModal }>
 											<CloseIcon />
 										</IconButton>
 									</Col>
 								</Row>
-								<Row noGutters={ true }>
-									<Col>
+								<Row noGutters>
+									<div className="member-titles">
 										<h2>
 											{ this.memberFullName() }
 										</h2>
-									</Col>
+										<strong> { this.member.role } </strong>
+									</div>
 								</Row>
-
-								<p>
-									<strong>
-										{ this.member.role }
-									</strong>
-									<br/>
-									<br/>
-									{ this.member.description }
-								</p>
-								<br></br>
+								<Row noGutters>
+									<p className="member-data">
+										{ this.member.description }
+									</p>
+								</Row>
 								{ this.generateDataButtons() }
 							</div>
 						</Col>
@@ -176,38 +176,30 @@ class MemberModal extends Component {
 								</IconButton>
 							</Col>
 						</div>
-						<div className='information-col'>
-							<Col xs={12} className='image-col'>
-								<div className='image-cropper'>
-									<img
-										className='modal-member-image'
-										src={ this.tryRequire(this.member.id + ".jpg") }
-										alt={ this.memberFullName() }
-									/>
-								</div>
-							</Col>
-						</div>
+						<Row noGutters className='image-col-small'>
+							<div className='image-cropper'>
+								<img
+									className='modal-member-image'
+									src={ this.tryRequire(this.member.id + ".jpg") }
+									alt={ this.memberFullName() }
+								/>
+							</div>
+						</Row>
 						<div className='description-small'>
-							<Col xs={12}>
-								<Row noGutters={ true }>
-									<Col className='name-small'>
-										<h2>
-											{ this.memberFullName() }
-										</h2>
-									</Col>
-								</Row>
-								<p>
-									<strong>
-										{ this.member.role }
-									</strong>
+							<Row noGutters>
+								<div className="member-titles">
+									<h2 className='name-small'>
+										{ this.memberFullName() }
+									</h2>
+									<strong> { this.member.role } </strong>
+								</div>
+							</Row>
+							<Row noGutters>
+								<p className="member-data">
+									{ this.member.description }
 								</p>
-							</Col>
-							<Col sm={12}>
-								<p>
-									{this.member.description}
-								</p>
-								{ this.generateDataButtons() }
-							</Col>
+							</Row>
+							{ this.generateDataButtons() }
 						</div>
 					</Row>
 				</div>

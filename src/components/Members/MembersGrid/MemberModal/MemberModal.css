@@ -1,6 +1,3 @@
-/* ----------------------------------------------------------------------------------- */
-/* MembersModal styles */
-/* ----------------------------------------------------------------------------------- */
 .row {
   margin: 0;
   padding: 0;
@@ -8,17 +5,18 @@
 
 .member-modal-container {
   width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  background: #000;
+  background-color: #000;
 }
 
 .member-modal-container .container-helper {
   background:
     linear-gradient(
       90deg,
-      rgba(19, 25, 30, 0.8) 40%,
-      rgba(10, 15, 20, 0.8) 100%
+      rgba(19, 25, 30, 0.9) 40%,
+      rgba(10, 15, 20, 0.9) 100%
     ),
     url(../../../../images/github_pattern_white.svg) top left repeat fixed;
 }
@@ -51,6 +49,8 @@
 
 .main-modal-row .information-col .information-container {
   padding: 0%;
+  width: 100%;
+  height: auto;
 }
 
 .main-modal-row .information-col h2 {
@@ -66,20 +66,44 @@
   font-size: 20px;
 }
 
+.main-modal-row .information-col .closing-btn {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+}
+
 .main-modal-row .information-col .member-modal-btn {
   color: rgba(255, 255, 255, 0.9);
   font-size: 18px;
   text-transform: none;
+  text-align: left;
 }
 
 .member-username {
   margin-left: 8px;
 }
 
+.member-titles {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.member-data {
+  width: 100%;
+  max-height: 40vh;
+  padding-bottom: 5vh;
+  font-size: 1.1vw;
+}
+
 .main-modal-row .icon-small {
   color: rgba(255, 255, 255, 0.9);
   font-size: 18px;
   text-transform: none;
+}
+
+.data-buttons {
+  text-align: left;
+  padding-left: 30%;
 }
 
 @media (min-width: 993px) {
@@ -94,9 +118,24 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 992px) {
-  .image-col {
-    padding-left: 27%;
+  .image-col-small {
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 35vh;
   }
 
   .main-modal-row .information-col {
@@ -107,47 +146,61 @@
       rgba(19, 25, 30, 0.7) 40%,
       rgba(10, 15, 20, 0.7) 100%
     );
-    max-height: 40vh;
+    max-height: 30vh;
   }
 
   .image-cropper {
     width: 35vh;
     height: 35vh;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .description-small {
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
-    padding: 7%;
-    font-size: 2.6vw;
+    padding: 5% 7%;
+    padding-top: 0;
     background: rgb(10, 15, 20);
-    min-height: 50vh;
+    min-height: 62vh;
     width: 100vw;
   }
 
+  .member-titles {
+    padding: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+
   .name-small {
+    font-size: 6vw;
     color: rgb(20, 183, 191);
   }
 
-  .main-modal-row .icon-small {
-    font-size: 2.3vw;
+  .member-data {
+    font-size: 3vw;
+    padding: 0;
   }
 
   .close-button {
     width: 100vw;
-    height: 10vh;
-    background:
-    linear-gradient(
-      90deg,
-      rgba(19, 25, 30, 0.7) 40%,
-      rgba(10, 15, 20, 0.7) 100%
-    );
-    padding-left: 80vw;
+    height: 2vh;
+    padding-left: 78vw;
     padding-top: 3vh;
+  }
+
+  .data-buttons {
+    text-align: left;
+    padding-left: 32%;
   }
 }
 
 @media (max-width: 414px) {
+  .member-data {
+    font-size: 3.5vw;
+    padding: 0;
+  }
+
   .image-col {
     padding-left: 12vw;
   }
@@ -157,6 +210,6 @@
   }
 
   .main-modal-row .icon-small {
-    font-size: 2.5vh;
+    font-size: 12px;
   }
 }
