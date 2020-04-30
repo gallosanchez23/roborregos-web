@@ -76,7 +76,6 @@ class MembersGrid extends Component {
           cols={ this.state.number_of_columns }
           spacing={ 5 }
         >
-
           { this.members.map(member =>(
             <GridListTile
               key={ member.id }
@@ -86,12 +85,11 @@ class MembersGrid extends Component {
             >
               <img
                 className='member-image'
-                src={ this.tryRequire(member.img) }
+                src={ this.tryRequire(member.id + ".jpg") }
                 alt={ member.name }
               />
             </GridListTile>
           )) }
-
         </GridList>
         <Modal
           show={ this.state.show_modal }
