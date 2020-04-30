@@ -71,7 +71,11 @@
 .home-information-container-students > .home-information-container-layer{
   background-color: rgba(255, 130, 0, 0.3);
 }
-
+@media (min-width : 530px) and (max-width:600px){
+  .home-information-container-left > .home-information-container-layer > .home-information-text{
+    top:20%;
+  }
+}
 @media (min-width : 530px){
   .home-information-circle{
     position: absolute;
