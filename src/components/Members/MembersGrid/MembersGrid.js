@@ -17,12 +17,13 @@ class MembersGrid extends Component {
     this.handleHideModal = this.handleHideModal.bind(this);
     this.numberOfColumns = this.numberOfColumns.bind(this);
     this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
+    this.generateGridList = this.generateGridList.bind(this);
 
     this.members = props.members;
 
     this.state = {
       show_modal: false,
-      member: this.members[0],
+      member: this.props.active_members[0],
       number_of_columns: this.numberOfColumns(),
     }
   }
@@ -70,40 +71,48 @@ class MembersGrid extends Component {
     });
   }
 
+  generateGridList(members, title) {
+      return (
+        <div>
+            <div style={{display: (title == "")?"none":"block"}} className='grid-title'>
+                <h1 className='grid-title-text'>{title}</h1>
+            </div>
+            <GridList
+                cellHeight={ 'auto' }
+                className='members-grid'
+                cols={ this.state.number_of_columns }
+                spacing={ 5 }
+            >
+                { members.map(member =>(
+                <GridListTile
+                    key={ member.id }
+                    cols={ 1 }
+                    className='members-grid-tile'
+                    onClick={ this.handleShowModal.bind(this, member) }
+                >
+                    <img
+                    className='member-image'
+                    src={ this.tryRequire(member.id + ".jpg") }
+                    alt={ member.name }
+                    />
+                </GridListTile>
+                )) }
+            </GridList>
+            <Modal
+                show={ this.state.show_modal }
+                onHide={ this.handleHideModal }
+                dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
+            >
+            </Modal>
+        </div>
+      );
+  }
+
   render() {
     return (
       <div className='members-grid-container'>
-
-        <div style={{display: (this.props.title == "")?"none":"block"}} className='grid-title'>
-            <h1 className='grid-title-text'>{this.props.title}</h1>
-        </div>
-        <GridList
-          cellHeight={ 'auto' }
-          className='members-grid'
-          cols={ this.state.number_of_columns }
-          spacing={ 5 }
-        >
-          { this.members.map(member =>(
-            <GridListTile
-              key={ member.id }
-              cols={ 1 }
-              className='members-grid-tile'
-              onClick={ this.handleShowModal.bind(this, member) }
-            >
-              <img
-                className='member-image'
-                src={ this.tryRequire(member.id + ".jpg") }
-                alt={ member.name }
-              />
-            </GridListTile>
-          )) }
-        </GridList>
-        <Modal
-          show={ this.state.show_modal }
-          onHide={ this.handleHideModal }
-          dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
-        >
-        </Modal>
+        { this.generateGridList(this.props.active_members,"") }
+        { this.generateGridList(this.props.inactive_members,"RoBorregos Legacy") }
       </div>
     );
   }

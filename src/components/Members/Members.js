@@ -20,8 +20,7 @@ class Members extends Component {
     return (
       <div className='members-container'>
         <MembersHeader />
-        <MembersGrid members={ active} title="" />
-        <MembersGrid members={ inactive } title="RoBorregos Legacy" />
+        <MembersGrid active_members={ active } inactive_members={ inactive } />
         <MembersJoinUs />
         <Footer />
       </div>
