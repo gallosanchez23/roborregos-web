@@ -1,6 +1,58 @@
 .contact-sponsorus {
-    min-height: 1300px;
+    height: auto;
+    margin-bottom: 100px;
     position: relative;
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
+}
+
+.contact-sponsorus-title-container {
+    color: white;
+    font-size: 30px;
+}
+
+.contact-sponsorus-title-icon-container {
+    color: rgb(0, 225, 250);
+    font-size: 100px;
+}
+
+.contact-sponsorus-btn-container {
+    width: 100%;
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    min-height: 75px;
+}
+
+.contact-sponsorus-btn {
+    margin: auto;
+    cursor: pointer;
+    border: 1px solid #4F72B8;
+    border-radius: 8px !important;
+    font-size: 30px;
+    width: 22%;
+    height: 80px;
+    background-color: #13191E;
+    color: white !important;
+}
+
+@media (max-width: 750px) {
+    .contact-sponsorus-btn {
+        width: 30%;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 610px) {
+    .contact-sponsorus-btn {
+        width: 40%;
+        font-size: 25px;
+        height: 65px;
+        margin-top: 10px;
+    }
+}
+
+.contact-sponsorus-btn:hover {
+    border: 1px solid #13191E;
+    background-color: #4F72B8;
 }
