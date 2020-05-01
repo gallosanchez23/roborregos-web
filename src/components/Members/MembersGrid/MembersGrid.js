@@ -70,6 +70,10 @@ class MembersGrid extends Component {
   render() {
     return (
       <div className='members-grid-container'>
+
+        <div style={{display: (this.props.title == "")?"none":"block"}} className='grid-title'>
+            <h1 className='grid-title-text'>{this.props.title}</h1>
+        </div>
         <GridList
           cellHeight={ 'auto' }
           className='members-grid'
