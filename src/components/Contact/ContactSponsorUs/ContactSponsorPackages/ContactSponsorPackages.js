@@ -8,12 +8,7 @@ import './ContactSponsorPackages.css';
 class ContactSponsorPackages extends Component {
 	constructor(props) {
 		super(props);
-
 		this.packages = props.packagesData.packages;
-
-		this.state = {
-			package: this.packages[0]
-		}
 	}
 
 	render() {

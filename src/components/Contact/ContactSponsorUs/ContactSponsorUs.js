@@ -7,11 +7,11 @@ import './ContactSponsorUs.css';
 class ContactSponsorUs extends Component {
 	constructor(props){
 		super(props);
-		this.packagesData=props.packagesData;
+		this.sponsorsData=props.sponsorsData;
 		this.sponsorUsCallback = this.sponsorUsCallback.bind(this);
 	}
 	sponsorUsCallback(){
-	
+		window.open(this.sponsorsData.url_contact,'_blank');
 	}
 	render() {
 		return(
@@ -26,7 +26,7 @@ class ContactSponsorUs extends Component {
 						Join our sponsors team!
 					</span>
 				</div>
-				<ContactSponsorPackages packagesData={this.packagesData}/>
+				<ContactSponsorPackages packagesData={this.sponsorsData}/>
 				<div className='contact-sponsorus-btn-container'>
 					<button onClick={this.sponsorUsCallback} className="contact-sponsorus-btn" variant='outline-primary'>
 						Sponsor Us!
