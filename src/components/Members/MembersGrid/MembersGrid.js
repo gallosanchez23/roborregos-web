@@ -5,7 +5,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import { Modal } from 'react-bootstrap';
 import placeholder from 'images/placeholder-rectangle.png';
-import { LARGE_WIDTH, MEDIUM_WIDTH } from 'constants.js';
+import { LARGE_WIDTH, MEDIUM_WIDTH, MOBILE_WIDTH } from 'constants.js';
 import './MembersGrid.css';
 
 class MembersGrid extends Component {
@@ -36,8 +36,11 @@ class MembersGrid extends Component {
       return 5;
     else if (window.innerWidth >= MEDIUM_WIDTH)
       return 4;
-    else
+    else if (window.innerWidth >= MOBILE_WIDTH)
       return 3;
+    else {
+        return 2;
+    }
   }
 
   tryRequire(img_path) {
