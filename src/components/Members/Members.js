@@ -15,7 +15,7 @@ class Members extends Component {
   render() {
     document.title = 'RoBorregos | Members';
     const inactive = this.members.filter(member => member.status == "inactive").sort((a, b) => b.id - a.id);
-    const active = this.members.filter(member => member.status == "active" || member.status == "comitee");
+    const active = this.members.filter(member => member.status == "active" || member.status == "comitee").sort((a, b) => a.id - b.id);
 
     return (
       <div className='members-container'>
