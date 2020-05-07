@@ -2,19 +2,19 @@
   "events": [
     {
       "date": "March 2020",
-      "img_path": "1.jpg",
+      "img_path": "35.jpg",
       "title": "Covid-19 Response",
-      "description": "Unfortunately, both the TMR and Robocup Jr. were cancelled for this year. Yet we continue working, creating online courses and webinars."
+      "description": "Unfortunately, both the TMR and Robocup Jr. were cancelled for this year, yet we continued working, creating online courses and webinars webinars as well as participating in different tech events."
     },
     {
       "date": "February 2020",
       "img_path": "29.jpg",
       "title": "Regional 2020",
-      "description": "Prado,  Emérico, Marlon Romo and Grecia won 2nd place in Rescue Maze and Keven, Gabriela y Karyme won 3rd place in Soccer Open."
+      "description": "Diego, Emérico, Marlon and Grecia won 2nd place in Rescue Maze and Keven, Gabriela y Karyme won 3rd place in Soccer Open."
     },
     {
       "date": "December 2019",
-      "img_path": "1.jpg",
+      "img_path": "34.jpg",
       "title": "First committee of Sponsorships and Networking",
       "description": "A new position in the team opened for students to collaborate in the logistics of sponsorships and networking, as well as social media and image; The opportunity opened for any student of Tec de Monterrey to help us have a more multidisciplinary integration."
     },
@@ -22,11 +22,11 @@
       "date": "December 2019",
       "img_path": "23.jpg",
       "title": "1st Gen Grad",
-      "description": "Emilio, Gerardo and Sebastian, the founders of RoBorregos, graduated. "
+      "description": "Founders Diego, Emilio, Gerardo and Sebastian graduated."
     },
     {
       "date": "October 2019",
-      "img_path": "1.jpg",
+      "img_path": "33.jpg",
       "title": "LARC OPEN 2019",
       "description": "During the semester, a robot was developed for the LARC IEEE competition, Open category. The robot consisted of an autonomous car with a mechanism to grab metal blocks by means of electromagnets, along with a navigation and vision system to be able to leave the blocks in their corresponding places. In the end, we could not attend due to economic issues."
     },
@@ -34,7 +34,7 @@
       "date": "July 2019",
       "img_path": "31.jpg",
       "title": "Australia",
-      "description": "Arath, Aldo, Jamir y Juan Carlos obtained the “Best Hardware Solution” award in the RoboCup Jr. Rescue Maze, Sydney Australia."
+      "description": "Arath, Aldo, Jamir and Mauricio obtained the “Best Hardware Solution” award in the RoboCup Jr. Rescue Maze, Sydney Australia."
     },
     {
       "date": "March 2019",
@@ -88,7 +88,7 @@
       "date": "July 2017",
       "img_path": "12.jpg",
       "title": "Japan",
-      "description": "Placing Mexico for the first time in the podium, Tomas, Alexis, Esquer and Ernesto won 3er place in RoboCup Jr. Rescue Maze, Nagoya, Japan."
+      "description": "Placing Mexico for the first time in the podium, Tomas, Alexis, Esquer and Ernesto won 3rd place in RoboCup Jr. Rescue Maze, Nagoya, Japan."
     },
     {
       "date": "March 2017",
@@ -130,7 +130,7 @@
       "date": "August 2015",
       "img_path": "3.jpg",
       "title": "Team Foundation",
-      "description": "Team founders decided to create a program to teach the basics of robotics to freshmen and then have an internal competition to find the best fit for the team. This event has become our annual “Candidates”."
+      "description": "Team founders decided to create a program to teach the basics of robotics to Tec freshmen and then have an internal competition to find the best fit for the team. This event has become our annual “Candidates”."
     },
     {
       "date": "July 2015",
