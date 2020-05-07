@@ -40,7 +40,8 @@ class HomeInformation extends Component {
     if (!element) {
       return;
     }
-    if (this.isElementVisible(element)) {
+
+    if (this.isElementVisible(element) || this.state[element.id + '_visible']) {
       this.setState({ [element.id + '_visible']: true });
     } else {
       this.setState({ [element.id + '_visible']: false });
