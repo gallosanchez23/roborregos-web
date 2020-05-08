@@ -12,7 +12,7 @@ class Contact extends Component {
     return (
       <div className='contact-container'>
         <ContactSponsorUs />
-        <ContactJoinUs positionsData={ positionsData }/>
+        <ContactJoinUs positionsData={ positionsData } />
         <Footer />
       </div>
     );
