@@ -17,12 +17,12 @@ class MembersGrid extends Component {
   constructor(props) {
     super(props);
 
-    this.tryRequire = this.tryRequire.bind(this);
-    this.handleShowModal = this.handleShowModal.bind(this);
-    this.handleHideModal = this.handleHideModal.bind(this);
-    this.numberOfColumns = this.numberOfColumns.bind(this);
+    this.tryRequire            = this.tryRequire.bind(this);
+    this.memberIcon            = this.memberIcon.bind(this);
+    this.handleShowModal       = this.handleShowModal.bind(this);
+    this.handleHideModal       = this.handleHideModal.bind(this);
+    this.numberOfColumns       = this.numberOfColumns.bind(this);
     this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
-    this.memberIcon = this.memberIcon.bind(this);
 
     this.members = props.members;
 
