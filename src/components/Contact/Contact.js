@@ -6,9 +6,6 @@ import Footer from '../Footer/Footer';
 import './Contact.css';
 
 class Contact extends Component {
-  constructor(props){
-		super(props);
-	}
   render() {
     document.title = 'RoBorregos | Contact';
 
