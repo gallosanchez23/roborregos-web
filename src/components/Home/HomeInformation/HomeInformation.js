@@ -6,13 +6,13 @@ class HomeInformation extends Component {
     super(props);
 
     this.competitions = React.createRef();
-    this.social = React.createRef();
-    this.events = React.createRef();
-    this.students = React.createRef();
+    this.social       = React.createRef();
+    this.events       = React.createRef();
+    this.students     = React.createRef();
 
     this.handleScrollEvent = this.handleScrollEvent.bind(this);
     this.listenScrollEvent = this.listenScrollEvent.bind(this);
-    this.isElementVisible = this.isElementVisible.bind(this);
+    this.isElementVisible  = this.isElementVisible.bind(this);
 
     this.state = {
       competitions_visible: false,
@@ -28,10 +28,10 @@ class HomeInformation extends Component {
 
   isElementVisible(element) {
     var viewTop = window.pageYOffset,
-      viewBottom = viewTop + window.innerHeight,
-      top = element.offsetTop,
-      bottom = top + element.clientHeight,
-      compareTop = bottom,
+      viewBottom    = viewTop + window.innerHeight,
+      top           = element.offsetTop,
+      bottom        = top + element.clientHeight,
+      compareTop    = bottom,
       compareBottom = top;
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
   }
@@ -58,7 +58,7 @@ class HomeInformation extends Component {
   render() {
     return (
       <div className='home-information-container-all'>
-        <div id='competitions' ref={this.competitions} className={`home-information-container home-information-container-left home-information-container-competitions ${this.state.competitions_visible ? "isVisible" : ""} `}>
+        <div id='competitions' ref={ this.competitions } className={ `home-information-container home-information-container-left home-information-container-competitions ${ this.state.competitions_visible ? 'isVisible' : '' } ` }>
           <div className='home-information-container-layer'>
             <div className='home-information-circle' />
             <div className='home-information-text'>
@@ -71,7 +71,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id='social' ref={this.social} className={`home-information-container home-information-container-right home-information-container-down home-information-container-social ${this.state.social_visible ? "isVisible" : ""} `}>
+        <div id='social' ref={ this.social } className={ `home-information-container home-information-container-right home-information-container-down home-information-container-social ${ this.state.social_visible ? 'isVisible' : '' } ` }>
           <div className='home-information-container-layer'>
             <div className='home-information-circle' />
             <div className='home-information-text'>
@@ -84,7 +84,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id='events' ref={this.events} className={`home-information-container home-information-container-left home-information-container-down home-information-container-events ${this.state.events_visible ? "isVisible" : ""} `}>
+        <div id='events' ref={ this.events } className={ `home-information-container home-information-container-left home-information-container-down home-information-container-events ${ this.state.events_visible ? 'isVisible' : '' } ` }>
           <div className='home-information-container-layer'>
             <div className='home-information-circle' />
             <div className='home-information-text'>
@@ -97,17 +97,17 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id='students' ref={this.students} className={`home-information-container home-information-container-right home-information-container-students ${this.state.students_visible ? "isVisible" : ""} `}>
+        <div id='students' ref={ this.students } className={ `home-information-container home-information-container-right home-information-container-students ${ this.state.students_visible ? 'isVisible' : '' } ` }>
           <div className='home-information-container-layer'>
             <div className='home-information-circle' />
             <div className='home-information-text'>
-            <div className='home-information-title'>
-              Student Community
+              <div className='home-information-title'>
+                Student Community
+              </div>
+              <div className='home-information-simple'>
+                To reach our community, we give free workshops about useful technologies such as: ROS, Git and Machine Learning, as well as our annual biggest event: Candidates, where the team gives weekly classes of basic programming, mechanics and electronics for anyone in the university interested, and organize a robotics tournament to get new members.
+              </div>
             </div>
-            <div className='home-information-simple'>
-              To reach our community, we give free workshops about useful technologies such as: ROS, Git and Machine Learning, as well as our annual biggest event: Candidates, where the team gives weekly classes of basic programming, mechanics and electronics for anyone in the university interested, and organize a robotics tournament to get new members.
-            </div>
-          </div>
           </div>
         </div>
       </div>
