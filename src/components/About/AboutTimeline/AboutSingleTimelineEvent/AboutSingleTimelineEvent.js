@@ -9,18 +9,18 @@ class AboutSingleTimelineEvent extends Component{
   constructor(props) {
     super(props);
 
-    this.resolveColor = this.resolveColor.bind(this);
-    this.resolvePosition = this.resolvePosition.bind(this);
+    this.resolveColor       = this.resolveColor.bind(this);
+    this.resolvePosition    = this.resolvePosition.bind(this);
     this.resolvePropsValues = this.resolvePropsValues.bind(this);
 
-    this.tryRequire = this.tryRequire.bind(this);
+    this.tryRequire  = this.tryRequire.bind(this);
     this.handleHover = this.handleHover.bind(this);
 
-    this.id = props.id;
+    this.id    = props.id;
     this.event = props.event;
 
-    this.date = this.event.date;
-    this.year = this.date.substr(this.date.length - 4);
+    this.date            = this.event.date;
+    this.year            = this.date.substr(this.date.length - 4);
     this.backgroundColor = this.resolveColor(this.year);
 
     this.state = {
@@ -52,14 +52,14 @@ class AboutSingleTimelineEvent extends Component{
 
   resolvePropsValues() {
     if (this.state.hover) {
-      this.contentColor = 'rgba(0, 0, 0, 0.0)';
-      this.displayContent = 'none';
-      this.displayImg = 'block';
+      this.contentColor   = this.backgroundColor;
+      this.displayContent = 'block';
+      this.displayImg     = 'none';
     }
     else {
-      this.contentColor = this.backgroundColor;
-      this.displayContent = 'block';
-      this.displayImg = 'none';
+      this.contentColor   = this.backgroundColor;
+      this.displayContent = 'none';
+      this.displayImg     = 'block';
     }
   }
 
@@ -79,25 +79,26 @@ class AboutSingleTimelineEvent extends Component{
                       }}
         contentArrowStyle={{ borderRight: '7px solid ' + this.contentColor }}
       >
-        <div onMouseEnter={ this.handleHover } onMouseLeave={ this.handleHover }>
-          <img className='timeline-element-img'
+        <div className='timeline-element-img-container'>
+          <img
+            className='timeline-element-img'
             src={ this.tryRequire(this.event.img_path) }
             alt={ this.event.img_description }
-            style={{ display: this.displayImg }}
           />
-          <Container
-            className='timeline-element-container'
-            style={{ display: this.displayContent }}
-          >
-            <Row>
-              <h3>
-                { this.event.title }
-              </h3>
-              <p>
-                { this.event.description }
-              </p>
-            </Row>
-          </Container>
+          <div className='timeline-element-img-title'>
+            <h3>
+              { this.event.title }
+            </h3>
+          </div>
+        </div>
+        <div className='timeline-element-content'
+          style={{ background: this.contentColor }}>
+          <h3>
+            { this.event.title }
+          </h3>
+          <p>
+            { this.event.description }
+          </p>
         </div>
       </VerticalTimelineElement>
     );
