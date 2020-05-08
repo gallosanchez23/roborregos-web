@@ -29,7 +29,10 @@ You can consult the application on production at [roborregos.com](https://roborr
 | Sebastián Rivera González | [sebas.rivera96@gmail.com](mailto:sebas.rivera96@gmail.com) | [@sebasrivera96](https://github.com/sebasrivera96) | Developer |
 | Aurora Tijerina Berzosa | [auro.tj@gmail.com](mailto:auro.tj@gmail.com) | [@aurotb](https://github.com/aurotb) | Developer |
 | Ricardo Chapa Romero | [ricardochaparomero@gmail.com](mailto:ricardochaparomero@gmail.com) | [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) | Developer |
+| José Alfonso Cisneros | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com) | [@Josecisneros001](https://github.com/Josecisneros001) | Developer |
+| Omar Ulises Montiel | [omarume@gmail.com](mailto:omarume@gmail.com) | [@OUMontiel](https://github.com/OUMontiel) | Developer |
 | Clara Gutiérrez Jaime | [claragtzjaime@gmail.com](mailto:claragtzjaime@gmail.com) | [@ClaraGtz](https://github.com/ClaraGtz) | Designer & Developer |
+| Ana Lucía Garza | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com) | [@AnaGarza](https://github.com/AnaGarza) | Designer |
 
 ### Environment URLs
 

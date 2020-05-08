@@ -73,14 +73,16 @@ class MembersGrid extends Component {
     });
   }
 
-  memberIcon(member) {
-    if (member.role == 'Software development')
+  memberIcon(role) {
+    if (role === 'Software Development') {
       return faCode;
-    if (member.role == 'Electronics')
+    } else if (role === 'Electronics') {
       return faMicrochip;
-    if (member.role == 'Mechanical design')
+    } else if (role === 'Mechanical Design') {
       return faCog;
-    return faBullhorn;
+    } else {
+      return faBullhorn;
+    }
   }
 
   render() {
@@ -92,7 +94,6 @@ class MembersGrid extends Component {
           cols={ this.state.number_of_columns }
           spacing={ 5 }
         >
-
           { this.members.map(member =>(
             <GridListTile
               key={ member.id }
@@ -103,19 +104,20 @@ class MembersGrid extends Component {
               <div className='member-image-container'>
                 <img
                   className='member-image'
-                  src={ this.tryRequire(member.img) }
+                  src={ this.tryRequire(member.id + '.jpg') }
                   alt={ member.name }
                 />
                 <div className='member-image-content'>
-                  <p>{ member.name + ' ' + member.lastname }</p>
+                  <p>
+                    { member.name + ' ' + member.lastname }
+                  </p>
                   <div className='member-image-icon'>
-                    <FontAwesomeIcon icon={ this.memberIcon(member) } size='1x' />
+                    <FontAwesomeIcon icon={ this.memberIcon(member.role) } size='1x' />
                   </div>
                 </div>
               </div>
             </GridListTile>
           )) }
-
         </GridList>
         <Modal
           show={ this.state.show_modal }
