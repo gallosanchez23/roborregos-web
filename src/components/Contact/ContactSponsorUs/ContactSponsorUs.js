@@ -21,7 +21,7 @@ class ContactSponsorUs extends Component {
 						<FontAwesomeIcon icon={faDollarSign}/>
 					</div>
 					<span>
-						Would you like to support RoBorregos? 
+						Would you like to support RoBorregos?
 						<br/>
 						Join our sponsors team!
 					</span>
@@ -38,4 +38,3 @@ class ContactSponsorUs extends Component {
 }
 
 export default ContactSponsorUs;
-

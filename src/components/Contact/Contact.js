@@ -3,7 +3,7 @@ import ContactJoinUs from './ContactJoinUs/ContactJoinUs.js';
 import ContactSponsorUs from './ContactSponsorUs/ContactSponsorUs.js';
 import positionsData from 'data/positions.json';
 import sponsorsData from 'data/sponsors.json';
-import Footer from '../Footer/Footer';
+import Footer from 'components/Footer/Footer';
 import './Contact.css';
 
 class Contact extends Component {
@@ -15,8 +15,8 @@ class Contact extends Component {
 
     return (
       <div className='contact-container'>
-        <ContactSponsorUs sponsorsData={sponsorsData} />
-        <ContactJoinUs positionsData={positionsData}/>
+        <ContactSponsorUs sponsorsData={ sponsorsData } />
+        <ContactJoinUs positionsData={ positionsData } />
         <Footer />
       </div>
     );
