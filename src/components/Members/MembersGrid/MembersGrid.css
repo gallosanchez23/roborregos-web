@@ -1,8 +1,26 @@
 .members-grid {
-  background: rgba(20, 18, 19, 0.9);
+  background: rgba(20, 18, 19);
   min-height: 100%;
   width: 100%;
   transform: translate(0.2%, 0%);
+}
+
+.members-grid-container {
+  background: rgba(20, 18, 19);
+  width: 100%;
+  padding: 1.5px;
+}
+
+.grid-title {
+  position: relative;
+  padding: 4% 0 2%;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(20, 18, 19);
+  text-align: center;
+}
+
+.grid-title-text {
+  font-size: 3vw;
 }
 
 .members-grid .members-grid-tile .member-image-container .member-image {
@@ -70,4 +88,10 @@
 .fa-cog,
 .fa-bullhorn {
   color: 	rgba(223, 223, 223, 0.5);
+}
+
+@media (max-width: 768px) {
+  .grid-title-text {
+    font-size: 3vh;
+  }
 }
