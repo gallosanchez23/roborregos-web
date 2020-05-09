@@ -85,7 +85,7 @@
 
   .goback-button {
     padding-left: 18vw;
-  }  
+  }
 }
 
 @media (max-width: 992px) {
@@ -93,7 +93,7 @@
     height: min-content;
     padding: 0;
   }
-  
+
   .footer-row {
     height: 100%;
   }
@@ -110,7 +110,7 @@
     height: 100%;
     object-position: 100% 20%;
   }
-  
+
   .sitemap-container {
     display: flex;
     flex-flow: column wrap;
