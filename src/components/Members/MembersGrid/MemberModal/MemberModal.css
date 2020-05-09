@@ -44,6 +44,11 @@
 
 .main-modal-row .information-col {
   background: rgb(10, 15, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5vw;
 }
 
 
@@ -86,6 +91,7 @@
   width: 100%;
   text-align: center;
   padding-bottom: 5vh;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .member-data {
