@@ -1,58 +1,39 @@
-.contact-sponsorus {
-    height: auto;
-    margin-bottom: 100px;
-    position: relative;
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center;
+.contact-sponsor-us {
+  margin-bottom: 100px;
+  padding-top: 40px;
+  color: white;
+  text-align: center;
 }
 
-.contact-sponsorus-title-container {
-    color: white;
-    font-size: 30px;
-}
-
-.contact-sponsorus-title-icon-container {
-    color: rgb(0, 225, 250);
-    font-size: 100px;
-}
-
-.contact-sponsorus-btn-container {
-    width: 100%;
-    position: relative;
-    font-size: 40px;
-    font-weight: bold;
-    min-height: 75px;
-}
-
-.contact-sponsorus-btn {
-    margin: auto;
-    cursor: pointer;
-    border: 1px solid #4F72B8;
-    border-radius: 8px !important;
-    font-size: 30px;
-    width: 22%;
-    height: 80px;
-    background-color: #13191E;
-    color: white !important;
+.contact-sponsor-us-btn {
+  border: 1px solid #4F72B8;
+  border-radius: 8px;
+  font-size: 30px;
+  width: 22%;
+  height: 80px;
+  color: white;
+  transition: 0.3s;
+  background-color: #13191E;
 }
 
 @media (max-width: 750px) {
-    .contact-sponsorus-btn {
-        width: 30%;
-        font-size: 25px;
-    }
+  .contact-sponsor-us-btn {
+    width: 30%;
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 610px) {
-    .contact-sponsorus-btn {
-        width: 40%;
-        font-size: 25px;
-        height: 65px;
-        margin-top: 10px;
-    }
+  .contact-sponsor-us-btn {
+    width: 40%;
+    font-size: 25px;
+    height: 65px;
+    margin-top: 10px;
+  }
 }
 
-.contact-sponsorus-btn:hover {
-    border: 1px solid #13191E;
-    background-color: #4F72B8;
+.contact-sponsor-us-btn:hover {
+  color: white;
+  border: 1px solid #13191E;
+  background-color: #4F72B8;
 }
