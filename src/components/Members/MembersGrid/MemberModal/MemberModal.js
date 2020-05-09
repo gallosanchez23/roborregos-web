@@ -74,7 +74,7 @@ class MemberModal extends Component {
             icon_size = [20, 22, 23];
         }
         return (
-            <p className='data-buttons'>
+            <div className='data-buttons'>
             {
                 (this.member.github !== "") ?
                     (
@@ -113,7 +113,7 @@ class MemberModal extends Component {
                     </div>
                     ):null
             }
-            </p>
+            </div>
         );
     }
 
@@ -195,11 +195,13 @@ class MemberModal extends Component {
                                 </div>
                             </Row>
                             <Row noGutters>
-                                <p className="member-data">
+                                <div className="member-data">
                                     { this.member.description }
-                                </p>
+                                </div>
                             </Row>
-                            { this.generateDataButtons() }
+                            <Row noGutters>
+                                { this.generateDataButtons() }
+                            </Row>
                         </div>
                     </Row>
                 </div>

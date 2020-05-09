@@ -101,12 +101,6 @@
   font-size: 1.1vw;
 }
 
-.main-modal-row .icon-small {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 18px;
-  text-transform: none;
-}
-
 .data-buttons {
   text-align: left;
   padding-left: 30%;
@@ -172,8 +166,9 @@
   }
 
   .member-data {
-    font-size: 3vw;
+    font-size: 125%;
     padding: 0;
+    max-height: 200vh;
   }
 
   .close-button {
@@ -184,8 +179,15 @@
   }
 
   .data-buttons {
-    text-align: left;
-    padding-left: 32%;
+    padding-top: 3vh;
+  }
+
+  .main-modal-row .icon-small {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    text-transform: none;
+    padding: 0;
+    padding-bottom: 1vh;
   }
 }
 
