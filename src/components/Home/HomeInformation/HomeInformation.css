@@ -1,71 +1,354 @@
-.image-section {
-  background-attachment: fixed;
+.home-information-container-all{
+  width: 100%;
+  height: 200%;
+}
+
+.home-information-container{
+  position: relative;
+  width: 100%;
+  height: 25%;
+  background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.home-information-container-competitions{
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url("../../../images/home/HomeInformation/competitions.jpg");
+}
+
+.home-information-container-social{
+  background-position: center left;
+  background-size: cover;
+  background-image: url("../../../images/home/HomeInformation/social.jpg");
+}
+
+.home-information-container-events{
+  background-position: center left;
+  background-size: cover;
+  background-image: url("../../../images/home/HomeInformation/events.jpg");
+}
+
+.home-information-container-students{
   background-position: center;
-  background-size: 100%;
-  height: 60vw;
-  text-align: center;
-  padding: 10%;
-  background-color: #191917;
+  background-size: cover;
+  background-image: url("../../../images/home/HomeInformation/students.jpg");
 }
 
-.information-section {
-  height: 40vw;
-  text-align: center;
-  background-color: #2B2C28;
+.home-information-container-competitions > .home-information-container-layer > .home-information-circle{
+  background: linear-gradient(35.71deg, #9B00FA 45%,#EE4D7A  75%);
 }
 
-.information-title {
-  font-size: 5vw;
+.home-information-container-social > .home-information-container-layer > .home-information-circle{
+  background: linear-gradient(217.41deg, #9B00FA 20%,#4F72B8  50%);
 }
 
-.information-paragraph {
-  font-size: 2.5vw;
+.home-information-container-events > .home-information-container-layer > .home-information-circle{
+  background: linear-gradient(35.71deg, #9B00FA 45%,#00B29A  75%);
 }
 
-@media (min-width: 992px) {
-  .image-section-right {
-    height: 25vw;
-    background-position: right;
-    background-size: 50%;
+.home-information-container-students > .home-information-container-layer > .home-information-circle{
+  background: linear-gradient(320.71deg, #EE4D7A 45%,#FF8200  75%);
+}
+.home-information-container > .home-information-container-layer{
+  width: 100%;
+  height: 100%;
+}
+
+.home-information-container-competitions > .home-information-container-layer{
+  background-color: rgba(238, 77, 122, 0.3);
+}
+
+.home-information-container-social > .home-information-container-layer{
+  background-color: rgba(79, 114, 184, 0.3);
+}
+
+.home-information-container-events > .home-information-container-layer{
+  background-color: rgba(0, 178, 154, 0.3);
+}
+
+.home-information-container-students > .home-information-container-layer{
+  background-color: rgba(255, 130, 0, 0.3);
+}
+
+@media (min-width : 530px) and (max-width:600px){
+  .home-information-container-left > .home-information-container-layer > .home-information-text{
+    top:20%;
   }
-  .image-section-left {
-    height: 25vw;
-    background-position: left;
-    background-size: 50%;
+}
+
+@media (min-width : 530px){
+  .home-information-circle{
+    position: absolute;
+    height: 230%;
+    width:  90%;
+    border-radius: 100%;
+    opacity: .7;
   }
-  .information-section {
-    height: 25vw;
+
+  .home-information-container-left > .home-information-container-layer > .home-information-circle{
+    left: -80%;
+    bottom: -100%;
   }
-  .information-title {
-    font-size: 3vw;
+
+  .home-information-container-right > .home-information-container-layer > .home-information-circle{
+    right: -80%;
+    bottom: -100%;
   }
-  .information-paragraph {
-    font-size: 1.2vw;
+
+  .isVisible.home-information-container-left > .home-information-container-layer > .home-information-circle{
+    transition: all;
+    transition-duration: 2s;
+    left: -40%;
+  }
+
+  .isVisible.home-information-container-right > .home-information-container-layer > .home-information-circle{
+    transition: all;
+    transition-duration: 2s;
+    right: -40%;
+  }
+
+  .home-information-text{
+    position: absolute;
+    top: 18%;
+    height: 70%;
+    width: 33%;
+  }
+
+  .home-information-container-left > .home-information-container-layer > .home-information-text{
+    left: -35%;
+  }
+
+  .home-information-container-right > .home-information-container-layer >.home-information-text{
+    right: -35%;
   }
 }
 
-.background-1 {
-  background-image: url(../../../images/home/competitions.jpg);
+@media (max-width : 530px) and (min-width: 400px){
+  .home-information-circle{
+    position: absolute;
+    height: 120%;
+    width:  100%;
+    border-radius: 100%;
+    opacity: .7;
+  }
+
+  .home-information-container-left > .home-information-container-layer > .home-information-circle{
+    left: -80%;
+    bottom: 20%;
+  }
+
+  .home-information-container-right > .home-information-container-layer > .home-information-circle{
+    right: -80%;
+    bottom: 20%;
+  }
+
+  .isVisible.home-information-container-left > .home-information-container-layer > .home-information-circle{
+    transition: all;
+    transition-duration: 2s;
+    left: -30%;
+  }
+
+  .isVisible.home-information-container-right > .home-information-container-layer > .home-information-circle{
+    transition: all;
+    transition-duration: 2s;
+    right: -30%;
+  }
+
+  .home-information-text{
+    position: absolute;
+    top: 5%;
+    height: 70%;
+    width: 50%;
+  }
+
+  .home-information-container-left > .home-information-container-layer > .home-information-text{
+    left: -32%;
+  }
+
+  .home-information-container-right > .home-information-container-layer >.home-information-text{
+    right: -32%;
+  }
+
+  .home-information-container-down > .home-information-container-layer > .home-information-circle{
+    bottom: -40%;
+  }
+
+  .home-information-container-down > .home-information-container-layer > .home-information-text{
+    top: 40%;
+  }
 }
 
-.background-2 {
-  background-image: url(../../../images/home/social.jpg);
+@media (max-width : 400px){
+  .home-information-container-events{
+    background-position: center left;
+    background-size: cover;
+    background-image: url("../../../images/home/HomeInformation/events_small.jpg");
+  }
+
+  .home-information-circle{
+    position: absolute;
+    height: 120%;
+    width:  140%;
+    border-radius: 100%;
+    opacity: .7;
+  }
+
+  .home-information-container-left > .home-information-container-layer > .home-information-circle{
+    left: -80%;
+    bottom: 15%;
+  }
+
+  .home-information-container-right > .home-information-container-layer > .home-information-circle{
+    right: -80%;
+    bottom: 15%;
+  }
+
+  .home-information-container-down > .home-information-container-layer > .home-information-circle{
+    bottom: -40%;
+  }
+
+  .isVisible.home-information-container-left > .home-information-container-layer > .home-information-circle{
+    transition: all;
+    transition-duration: 2s;
+    left: -65%;
+  }
+
+  .isVisible.home-information-container-right > .home-information-container-layer > .home-information-circle{
+    transition: all;
+    transition-duration: 2s;
+    right: -65%;
+  }
+
+  .home-information-text{
+    position: absolute;
+    top: 5%;
+    height: 70%;
+    width: 55%;
+  }
+
+  .home-information-container-down > .home-information-container-layer > .home-information-text{
+    top: 45%;
+  }
+
+  .home-information-container-left > .home-information-container-layer > .home-information-text{
+    left: -35%;
+  }
+
+  .home-information-container-right > .home-information-container-layer >.home-information-text{
+    right: -35%;
+  }
 }
 
-.background-3 {
-  background-image: url(../../../images/home/events.jpg);
+.isVisible.home-information-container-left > .home-information-container-layer > .home-information-text{
+  transition: all;
+  transition-duration: 2s;
+  left: 3.5%;
 }
 
-.background-4 {
-  background-image: url(../../../images/home/students.jpg);
+.isVisible.home-information-container-right > .home-information-container-layer > .home-information-text{
+  transition: all;
+  transition-duration: 2s;
+  right: 3.5%;
 }
 
-.information-col {
-  padding: 7%;
-  text-align: center;
-  background: #191917;
-  color: #f5f5f5;
-  display: flex;
-  align-items: center;
+.home-information-title{
+  height: 15%;
+  color: #FFF;
+  font-weight: 700;
+}
+
+.home-information-simple{
+  margin-top: 5%;
+  height: 80%;
+  width: 100%;
+  color: #F5F5F5;
+}
+
+@media (max-width : 530px){
+  .home-information-simple{
+    margin-top: 0%;
+  }
+}
+
+
+@media (min-width : 1000px){
+  .home-information-title{
+    font-size: 25px;
+  }
+  .home-information-simple{
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+@media (min-width : 1300px){
+  .home-information-title{
+    font-size: 25px;
+  }
+  .home-information-simple{
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+@media (max-width : 1000px) and (min-width : 800px){
+  .home-information-title{
+    font-size: 22px;
+  }
+  .home-information-simple{
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width : 800px) and (min-width : 650px){
+  .home-information-title{
+    font-size: 18px;
+  }
+  .home-information-simple{
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width : 650px) and (min-width : 575px){
+  .home-information-title{
+    font-size: 17px;
+  }
+  .home-information-simple{
+    font-size: 15px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width : 575px) and (min-width : 400px){
+  .home-information-title{
+    font-size: 16px;
+  }
+  .home-information-simple{
+    font-size: 15px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width : 520px) and (min-width : 350px){
+  .home-information-title{
+    font-size: 17px;
+  }
+  .home-information-simple{
+    font-size: 15px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width : 400px){
+  .home-information-title{
+    font-size: 17px;
+  }
+  .home-information-simple{
+    font-size: 13px;
+    line-height: 14px;
+  }
 }
