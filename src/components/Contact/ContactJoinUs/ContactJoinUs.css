@@ -1,52 +1,45 @@
 .contact-joinus {
-    height: auto;
-    position: relative;
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center;
+  height: auto;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
 
 .contact-joinus-title-container {
-    color: white;
-    font-size: 30px;
-}
-
-.contact-joinus-title-icon-container {
-    color: rgb(191, 0, 255);
-    font-size: 100px;
+  color: white;
+  font-size: 30px;
 }
 
 .contact-joinus-btn-container {
-    width: 100%;
-    position: relative;
-    font-size: 40px;
-    font-weight: bold;
-    left: 48.5%;
-    min-height: 75px;
-    transform: translate(-50%, -50%) !important;
+  width: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  min-height: 75px;
+  padding-bottom: 30px;
 }
 
 .contact-joinus-btn {
-    margin: auto;
-    cursor: pointer;
-    border: 1px solid #4F72B8;
-    border-radius: 8px !important;
-    font-size: 30px;
-    width: 22%;
-    height: 80px;
-    background-color: #13191E;
-    color: white !important;
+  margin: auto;
+  cursor: pointer;
+  border: 1px solid #4F72B8;
+  border-radius: 8px !important;
+  font-size: 30px;
+  width: 22%;
+  height: 80px;
+  background-color: #13191E;
+  color: white !important;
+  transition: 0.3s;
 }
 
 @media (max-width: 610px) {
-    .contact-joinus-btn {
-        width: 40%;
-        font-size: 25px;
-        height: 65px;
-        margin-top: 10px;
-    }
+  .contact-joinus-btn {
+    width: 40%;
+    font-size: 25px;
+    height: 65px;
+  }
 }
 
 .contact-joinus-btn:hover {
-    border: 1px solid #13191E;
-    background-color: #4F72B8;
+  border: 1px solid #13191E;
+  background-color: #4F72B8;
 }
