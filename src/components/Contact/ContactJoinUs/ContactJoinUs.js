@@ -19,11 +19,11 @@ class ContactJoinUs extends Component {
     return(
       <div id='contact-joinus' className='contact-joinus'>
         <div className='contact-joinus-title-container'>
-          <span>
+          <h2>
             Hello there! Are you a candidate?
             <br />
             Join Us!
-          </span>
+          </h2>
         </div>
         <ContactOpenPositions positionsData={ this.positionsData } />
         <div className='contact-joinus-btn-container'>
