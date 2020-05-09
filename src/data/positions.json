@@ -1,0 +1,21 @@
+{
+  "url_form": "https://docs.google.com/forms/u/0/",
+  "url_facebook": "https://www.facebook.com/RoBorregos/",
+  "positions": [{
+    "id": "1",
+    "title": "Programmer",
+    "shortDescription": "kieres ser programador? hola. bienvenido. pásele. si. tú."
+  }, {
+    "id": "2",
+    "title": "Electronics",
+    "shortDescription": "kieres ser electrónico? hola. bienvenido. pásele. si. tú."
+  }, {
+    "id": "3",
+    "title": "Mechanics",
+    "shortDescription": "kieres ser mecánicoooo? hola. bienvenido. pásele. si. tú."
+  }, {
+    "id": "4",
+    "title": "Marketing",
+    "shortDescription": "kieres ser parte de marketing? hola. bienvenido. pásele. si. tú."
+  }]
+}

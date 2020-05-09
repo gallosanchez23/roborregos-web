@@ -57,7 +57,7 @@
 }
 
 .home-information-container-competitions > .home-information-container-layer{
-  background-color: rgba(238, 77, 122, 0.3); 
+  background-color: rgba(238, 77, 122, 0.3);
 }
 
 .home-information-container-social > .home-information-container-layer{
@@ -86,23 +86,23 @@
     border-radius: 100%;
     opacity: .7;
   }
-  
+
   .home-information-container-left > .home-information-container-layer > .home-information-circle{
     left: -80%;
     bottom: -100%;
   }
-  
+
   .home-information-container-right > .home-information-container-layer > .home-information-circle{
     right: -80%;
     bottom: -100%;
   }
-  
+
   .isVisible.home-information-container-left > .home-information-container-layer > .home-information-circle{
     transition: all;
     transition-duration: 2s;
     left: -40%;
   }
-  
+
   .isVisible.home-information-container-right > .home-information-container-layer > .home-information-circle{
     transition: all;
     transition-duration: 2s;
@@ -113,13 +113,13 @@
     position: absolute;
     top: 18%;
     height: 70%;
-    width: 33%;  
+    width: 33%;
   }
-  
+
   .home-information-container-left > .home-information-container-layer > .home-information-text{
     left: -35%;
   }
-  
+
   .home-information-container-right > .home-information-container-layer >.home-information-text{
     right: -35%;
   }
@@ -133,40 +133,40 @@
     border-radius: 100%;
     opacity: .7;
   }
-  
+
   .home-information-container-left > .home-information-container-layer > .home-information-circle{
     left: -80%;
     bottom: 20%;
   }
-  
+
   .home-information-container-right > .home-information-container-layer > .home-information-circle{
     right: -80%;
     bottom: 20%;
   }
-  
+
   .isVisible.home-information-container-left > .home-information-container-layer > .home-information-circle{
     transition: all;
     transition-duration: 2s;
     left: -30%;
   }
-  
+
   .isVisible.home-information-container-right > .home-information-container-layer > .home-information-circle{
     transition: all;
     transition-duration: 2s;
     right: -30%;
   }
-  
+
   .home-information-text{
     position: absolute;
     top: 5%;
     height: 70%;
-    width: 50%;  
+    width: 50%;
   }
-  
+
   .home-information-container-left > .home-information-container-layer > .home-information-text{
     left: -32%;
   }
-  
+
   .home-information-container-right > .home-information-container-layer >.home-information-text{
     right: -32%;
   }
@@ -194,17 +194,17 @@
     border-radius: 100%;
     opacity: .7;
   }
-  
+
   .home-information-container-left > .home-information-container-layer > .home-information-circle{
     left: -80%;
     bottom: 15%;
   }
-  
+
   .home-information-container-right > .home-information-container-layer > .home-information-circle{
     right: -80%;
     bottom: 15%;
   }
-  
+
   .home-information-container-down > .home-information-container-layer > .home-information-circle{
     bottom: -40%;
   }
@@ -214,7 +214,7 @@
     transition-duration: 2s;
     left: -65%;
   }
-  
+
   .isVisible.home-information-container-right > .home-information-container-layer > .home-information-circle{
     transition: all;
     transition-duration: 2s;
@@ -225,7 +225,7 @@
     position: absolute;
     top: 5%;
     height: 70%;
-    width: 55%;  
+    width: 55%;
   }
 
   .home-information-container-down > .home-information-container-layer > .home-information-text{
@@ -235,7 +235,7 @@
   .home-information-container-left > .home-information-container-layer > .home-information-text{
     left: -35%;
   }
-  
+
   .home-information-container-right > .home-information-container-layer >.home-information-text{
     right: -35%;
   }
