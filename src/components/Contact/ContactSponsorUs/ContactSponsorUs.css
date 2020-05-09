@@ -1,6 +1,39 @@
-.contact-sponsorus {
-  min-height: 1300px;
-  position: relative;
-  color: rgba(255, 255, 255, 0.8);
+.contact-sponsor-us {
+  margin-bottom: 100px;
+  padding-top: 40px;
+  color: white;
   text-align: center;
+}
+
+.contact-sponsor-us-btn {
+  border: 1px solid #4F72B8;
+  border-radius: 8px;
+  font-size: 30px;
+  width: 22%;
+  height: 80px;
+  color: white;
+  transition: 0.3s;
+  background-color: #13191E;
+}
+
+@media (max-width: 750px) {
+  .contact-sponsor-us-btn {
+    width: 30%;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 610px) {
+  .contact-sponsor-us-btn {
+    width: 40%;
+    font-size: 25px;
+    height: 65px;
+    margin-top: 10px;
+  }
+}
+
+.contact-sponsor-us-btn:hover {
+  color: white;
+  border: 1px solid #13191E;
+  background-color: #4F72B8;
 }
