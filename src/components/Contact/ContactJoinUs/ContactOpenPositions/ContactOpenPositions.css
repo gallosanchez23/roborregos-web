@@ -1,189 +1,150 @@
-.contact-open-positions-grid {
-    width: 100%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-@media (min-width: 556px) {
-    .contact-open-positions-grid {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .contact-open-positions-grid {
-        max-width: 620px;
-    }
-}
-
-@media (min-width: 992px) {
-    .contact-open-positions-grid {
-        max-width: 920px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .contact-open-positions-grid {
-        max-width: 1140px;
-    }
-}
-
 .contact-open-positions-card {
-    cursor: pointer;
-    flex-direction: row !important;
-    color: black;
-    padding: 40px 30px;
-    background-color: #13191E;
-    border-radius: 6px;
-    border: none;
-    padding: 40px 30px;
-    margin: 0 3% 30px 0;
-    width: 47%;
-    -webkit-transition: all .35s ease-in, all .35s ease-out;
-    transition: all .35s ease-in, all .35s ease-out;
-    transition-delay: .2s;
+  cursor: pointer;
+  flex-direction: row !important;
+  color: black;
+  padding: 40px 30px;
+  background-color: #13191E;
+  border-radius: 6px;
+  border: none;
+  padding: 40px 30px;
+  margin: 0 3% 30px 0;
+  width: 47%;
+  -webkit-transition: all .3s ease-in, all .3s ease-out;
+  transition: all .3s ease-in, all .3s ease-out;
 }
 
 .contact-open-positions-card:hover {
-    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important;
 }
 
 @media (max-width: 990px) {
-    .contact-open-positions-card {
-        width: 100%;
-        margin-right: 0;
-    }
+  .contact-open-positions-card {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .contact-card-title {
-    color: white;
-    font-size: xx-large;
-    text-align: left;
+  color: white;
+  font-size: xx-large;
+  text-align: left;
 }
 
 .contact-card-text {
-    color: white;
-    text-align: left;
-    padding-left: 5px;
+  color: white;
+  text-align: left;
+  padding-left: 5px;
 }
 
 .contact-card-column-image-container {
-    position: relative;
+  position: relative;
 }
 
 .contact-card-image-container {
-    background-color: #4F72B8;
-    border-radius: 50%;
-    width: 72px;
-    height: 72px;
+  background-color: #4F72B8;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
 }
 
 .contact-card-image-container>svg {
-    color: #13191E;
-    position: absolute;
-    top: 37%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    font-size: 42px;
+  color: #13191E;
+  position: absolute;
+  top: 37%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 42px;
 }
 
 @media (min-width: 767px) {
-    .contact-card-image-container>svg {
-        top: 50%;
-    }
-    .contact-card-image-container {
-        position: absolute;
-        left: -7px;
-        border-radius: 50%;
-        width: 72px;
-        height: 72px;
-    }
+  .contact-card-image-container>svg {
+    top: 50%;
+  }
+  .contact-card-image-container {
+    position: absolute;
+    left: -7px;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+  }
 }
 
 @media (max-width: 500px) {
-    .contact-card-image-container {
-        position: absolute;
-        left: -7px;
-        border-radius: 50%;
-        width: 62px;
-        height: 62px;
-        margin-right: 100px;
-        ;
-    }
-    .contact-card-image-container>svg {
-        top: 48%;
-        font-size: 40px;
-    }
-    .contact-card-title {
-        font-size: x-large;
-        text-align: left;
-        padding-left: 5px;
-    }
-    .contact-card-text {
-        font-size: small;
-        text-align: left;
-        padding-left: 5px;
-    }
+  .contact-card-image-container {
+    position: absolute;
+    left: -7px;
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    margin-right: 100px;
+  }
+  .contact-card-image-container>svg {
+    top: 48%;
+    font-size: 40px;
+  }
+  .contact-card-title {
+    font-size: x-large;
+    text-align: left;
+    padding-left: 5px;
+  }
+  .contact-card-text {
+    font-size: small;
+    text-align: left;
+    padding-left: 5px;
+  }
 }
 
 @media (max-width: 400px) {
-    .contact-card-image-container {
-        position: absolute;
-        left: -10px;
-        border-radius: 50%;
-        width: 57px;
-        height: 57px;
-        margin-right: 100px;
-        ;
-    }
-    .contact-card-title {
-        font-size: x-large;
-        text-align: left;
-        padding-left: 5px;
-    }
-    .contact-card-text {
-        font-size: small;
-        text-align: left;
-        padding-left: 5px;
-    }
+  .contact-card-image-container {
+    position: absolute;
+    left: -10px;
+    border-radius: 50%;
+    width: 57px;
+    height: 57px;
+    margin-right: 100px;
+  }
+  .contact-card-title {
+    font-size: x-large;
+    text-align: left;
+    padding-left: 5px;
+  }
+  .contact-card-text {
+    font-size: small;
+    text-align: left;
+    padding-left: 5px;
+  }
 }
 
 .contact-open-positions-card {
-    float: left;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    cursor: default;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
 }
 
 .contact-open-positions-card .contact-card-column-text-container-overlay {
-    height: 100%;
-    padding-right: 50px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 30%;
-    opacity: 0;
-    background-color: transparent;
-    color: white;
-    -webkit-transition: all .35s ease-in, all .35s ease-out;
-    transition: all .35s ease-in, all .35s ease-out;
-    transition-delay: .2s;
+  height: 100%;
+  padding-right: 50px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 30%;
+  opacity: 0;
+  background-color: transparent;
+  color: white;
+  -webkit-transition: all .3s ease-in, all .3s ease-out;
+  transition: all .3s ease-in, all .3s ease-out;
 }
 
 .contact-card-column-text-container-overlay-original {
-    opacity: 1;
-    -webkit-transition: all .35s ease-in, all .35s ease-out;
-    transition: all .35s ease-in, all .35s ease-out;
-    transition-delay: .2s;
+  opacity: 1;
+  -webkit-transition: all .3s ease-in, all .3s ease-out;
+  transition: all .3s ease-in, all .3s ease-out;
 }
