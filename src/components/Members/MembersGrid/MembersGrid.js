@@ -6,16 +6,22 @@ import GridListTile from '@material-ui/core/GridListTile';
 import { Modal } from 'react-bootstrap';
 import placeholder from 'images/placeholder-rectangle.png';
 import { LARGE_WIDTH, MEDIUM_WIDTH, MOBILE_WIDTH } from 'constants.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMicrochip } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
 import './MembersGrid.css';
 
 class MembersGrid extends Component {
   constructor(props) {
     super(props);
 
-    this.tryRequire = this.tryRequire.bind(this);
-    this.handleShowModal = this.handleShowModal.bind(this);
-    this.handleHideModal = this.handleHideModal.bind(this);
-    this.numberOfColumns = this.numberOfColumns.bind(this);
+    this.tryRequire            = this.tryRequire.bind(this);
+    this.memberIcon            = this.memberIcon.bind(this);
+    this.handleShowModal       = this.handleShowModal.bind(this);
+    this.handleHideModal       = this.handleHideModal.bind(this);
+    this.numberOfColumns       = this.numberOfColumns.bind(this);
     this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
     this.generateGridList = this.generateGridList.bind(this);
 
@@ -72,47 +78,68 @@ class MembersGrid extends Component {
   }
 
   generateGridList(members, title) {
-      return (
-        <div>
-            <div style={{display: (title == "")?"none":"block"}} className='grid-title'>
-                <h1 className='grid-title-text'>{title}</h1>
-            </div>
-            <GridList
-                cellHeight={ 'auto' }
-                className='members-grid'
-                cols={ this.state.number_of_columns }
-                spacing={ 5 }
-            >
-                { members.map(member =>(
-                <GridListTile
-                    key={ member.id }
-                    cols={ 1 }
-                    className='members-grid-tile'
-                    onClick={ this.handleShowModal.bind(this, member) }
-                >
-                    <img
-                    className='member-image'
-                    src={ this.tryRequire(member.id + ".jpg") }
-                    alt={ member.name }
-                    />
-                </GridListTile>
-                )) }
-            </GridList>
-            <Modal
-                show={ this.state.show_modal }
-                onHide={ this.handleHideModal }
-                dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
-            >
-            </Modal>
+    return (
+      <div>
+        <div style={{display: (title == "")?"none":"block"}} className='grid-title'>
+          <h1 className='grid-title-text'>{title}</h1>
         </div>
-      );
+        <GridList
+          cellHeight={ 'auto' }
+          className='members-grid'
+          cols={ this.state.number_of_columns }
+          spacing={ 3 }
+        >
+          { members.map(member => (
+            <GridListTile
+              key={ member.id }
+              cols={ 1 }
+              className='members-grid-tile'
+              onClick={ this.handleShowModal.bind(this, member) }
+            >
+              <div className='member-image-container'>
+                <img
+                  className='member-image'
+                  src={ this.tryRequire(member.id + '.jpg') }
+                  alt={ member.name }
+                />
+                <div className='member-image-content'>
+                  <p>
+                    { member.name + ' ' + member.lastname }
+                  </p>
+                  <div className='member-image-icon'>
+                    <FontAwesomeIcon icon={ this.memberIcon(member.role) } size='1x' />
+                  </div>
+                </div>
+              </div>
+            </GridListTile>
+          )) }
+        </GridList>
+        <Modal
+          show={ this.state.show_modal }
+          onHide={ this.handleHideModal }
+          dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
+        />
+      </div>
+    );
+  }
+
+  memberIcon(role) {
+    if (role === 'Software Development') {
+      return faCode;
+    } else if (role === 'Electronics') {
+      return faMicrochip;
+    } else if (role === 'Mechanical Design') {
+      return faCog;
+    } else {
+      return faBullhorn;
+    }
   }
 
   render() {
     return (
       <div className='members-grid-container'>
-        { this.generateGridList(this.props.active_members,"") }
-        { this.generateGridList(this.props.inactive_members,"RoBorregos Legacy") }
+        { this.generateGridList(this.props.active_members, '') }
+        { this.generateGridList(this.props.inactive_members, 'RoBorregos Legacy') }
       </div>
     );
   }
