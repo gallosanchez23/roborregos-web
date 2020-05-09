@@ -1,125 +1,55 @@
-.contact-sponsor-packages-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    margin-right: auto;
-    margin-left: auto;
+.packages-card {
+  height: 100%;
+  background-color: #13191E;
+  border-radius: 6px;
+  border: none;
+  -webkit-transition: all .3s ease-in, all .3s ease-out;
+  transition: all .3s ease-in, all .3s ease-out;
+  padding-bottom: 40px;
 }
 
-@media (min-width: 556px) {
-    .contact-sponsor-packages-grid {
-        max-width: 540px;
-    }
+.packages-card:hover {
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important;
 }
 
-@media (min-width: 768px) {
-    .contact-sponsor-packages-grid {
-        max-width: 620px;
-    }
+hr {
+  border-color: white !important;
 }
 
-@media (min-width: 992px) {
-    .contact-sponsor-packages-grid {
-        max-width: 920px;
-    }
+.benefit-container {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 1200px) {
-    .contact-sponsor-packages-grid {
-        max-width: 1140px;
-    }
+.benefit-icon {
+  color: #4F72B8;
+  font-size: 25px;
 }
 
-.contact-sponsor-packages-card {
-    margin-top: 15px;
-    width: 23%;
-    color: black;
-    background-color: #13191E;
-    border-radius: 6px;
-    border: none;
-    
-    -webkit-transition: all .35s ease-in, all .35s ease-out;
-    transition: all .35s ease-in, all .35s ease-out;
-    transition-delay: .2s;
+.benefit-text {
+  font-size: 13px;
 }
 
-@media (max-width: 1000px) {
-    .contact-sponsor-packages-card {
-        width: 40%;
-    }
-}
-@media (max-width: 500px) {
-    .contact-sponsor-packages-card {
-        width: 60%;
-    }
+.package-card-footer {
+  display: flex;
+  position: absolute;
+  bottom: 7px;
+  left: 0px;
 }
 
-.contact-sponsor-packages-card:hover {
-    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important;
+.package-card-footer img {
+  width: 100%;
 }
 
-.contact-sponsor-packages-card-content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 35px;
-}
-.contact-sponsor-packages-title-container {
-    color: white;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid white;
-    margin-bottom: 10px;
-}
-.contact-sponsor-packages-title-container > span{
-    margin-bottom: 10px;
+.package-card-footer .no-padding {
+  padding: 10px;
 }
 
-.contact-sponsor-packages-benefit-container {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.contact-sponsor-packages-benefit-icon {
-    color: #4F72B8;
-    font-size: 25px;
-    width: 25%;
-}
-
-.contact-sponsor-packages-benefit-text {
-    font-size: 13px;
-    width: 75%;
-}
-
-.contact-sponsor-packages-card-footer {
-    display: flex;
-    position: absolute;
-    bottom: 7px;
-    left: 0px;
-}
-
-.contact-sponsor-packages-card-footer > img{
-    width: 15%;
-}
-
-.contact-sponsor-packages-card-footer-whiteBar{
-    width: 32.5%;
-    margin-right: 5%;
-    margin-left: 5%;
-}
-
-
-.contact-sponsor-packages-card-footer-whiteBar > div{
-    min-height: 2px;
-    margin-top: 20%;
-    background-color: white;
+@media (min-width: 1500px) {
+  .package-card-footer img {
+    width: 70%
+  }
 }
