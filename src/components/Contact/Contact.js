@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import ContactJoinUs from './ContactJoinUs/ContactJoinUs.js';
+import ContactHeader from './ContactHeader/ContactHeader.js';
+import ContactDonations from './ContactDonations/ContactDonations.js';
+import ContactCompetitions from './ContactCompetitions/ContactCompetitions.js';
 import ContactSponsorUs from './ContactSponsorUs/ContactSponsorUs.js';
-import positionsData from 'data/positions.json';
 import sponsorsData from 'data/sponsors.json';
+import competitionsData from 'data/competitions.json';
 import Footer from 'components/Footer/Footer';
 import './Contact.css';
 
@@ -12,8 +14,10 @@ class Contact extends Component {
 
     return (
       <div className='contact-container'>
+        <ContactHeader  />
         <ContactSponsorUs sponsorsData={ sponsorsData } />
-        <ContactJoinUs positionsData={ positionsData } />
+        <ContactDonations />
+        <ContactCompetitions competitionsData={ competitionsData } />
         <Footer />
       </div>
     );
