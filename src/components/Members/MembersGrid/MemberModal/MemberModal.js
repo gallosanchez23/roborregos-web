@@ -146,7 +146,7 @@ class MemberModal extends Component {
                     <div className='member-subtitles' style={{ display: (this.member.status === 'inactive') ? 'block' : 'none' }}>
                       <h6>
                         <div> { this.member.subtitle } </div>
-                        <div> {"Since " + this.member.class + ", " + this.member.semesters + " semesters" } </div>
+                        <div> {'Since ' + this.member.class + ', '  + this.member.semesters + ' semesters' } </div>
                       </h6>
                     </div>
                   </div>
@@ -199,7 +199,7 @@ class MemberModal extends Component {
                   <div className='member-subtitles' style={{ display: (this.member.status === 'inactive') ? 'block' : 'none' }}>
                     <h6>
                       <div> { this.member.subtitle } </div>
-                      <div> {"Since " + this.member.class + ", " + this.member.semesters + " semesters" } </div>
+                      <div> {'Since ' + this.member.class + ', '  + this.member.semesters + ' semesters' } </div>
                     </h6>
                   </div>
                 </div>
