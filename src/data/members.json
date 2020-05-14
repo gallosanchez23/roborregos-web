@@ -154,7 +154,7 @@
           "description": "I'm Alexis, student of 8th semester majoring in Digital Systems and Robotics. I am currently developing the vision system of the RoboCup @Home category and I am very passionate about Astronomy and Data Science.",
           "github": "https://github.com/SAlexisvf",
           "github_user": "SAlexisvf",
-          "linkedin": "https://linkedin.com/in/salexisvirgen",
+          "linkedin": "https://www.linkedin.com/in/salexisvirgen",
           "resume_link": "",
           "tags": "",
           "Email": "",
@@ -248,9 +248,9 @@
           "role": "Electronics",
           "degree": "ISD",
           "description": "Hi, I am Greg Espinosa Carrillo a former Roborrego. My passion is learning new stuff oriented to programing and electronics. I am currently working on artificial intelligence projects for entretainment to put in action my knowledge.",
-          "github": "https://github.com/Greg0909",
+          "github": "",
           "github_user": "Greg0909",
-          "linkedin": "https://www.linkedin.com/in/greg-espinosa-carrillo/",
+          "linkedin": "Greg Espinosa Carrillo",
           "resume_link": "",
           "tags": "",
           "Email": "grega1196764@gmail.com",
@@ -263,13 +263,13 @@
           "status": "active",
           "role": "Software Development",
           "degree": "ISD",
-          "description": "Hi! I’m Osvaldo, a senior student in Computer Engineering. I’m grateful to being part of RoBorregos since 2016 where I’ve had the opportunity to work as a software developer, focusing in navigation systems and computer vision algorithms. I'm passionate about developing new technologies to help other people. Also, I’ve done two internships with Microsoft so far where I’ve had the opportunity to make a great impact to people around the globe. ",
+          "description": "Hi! I\u2019m Osvaldo, a senior student in Computer Engineering. I\u2019m grateful to being part of RoBorregos since 2016 where I\u2019ve had the opportunity to work as a software developer, focusing in navigation systems and computer vision algorithms. I'm passionate about developing new technologies to help other people. Also, I\u2019ve done two internships with Microsoft so far where I\u2019ve had the opportunity to make a great impact to people around the globe. ",
           "github": "https://github.com/Osvaldoav/",
           "github_user": "Osvaldoav",
           "linkedin": "https://www.linkedin.com/in/jorge-osvaldo-alvarez-valdez-724030141/",
           "resume_link": "",
           "tags": "",
-          "Email": "grega1196764@gmail.com",
+          "Email": "",
           "Semester": "8"
       },
       {
@@ -408,7 +408,7 @@
           "role": "Software Development",
           "degree": "BCT",
           "description": "Hey! My name is Yulisa and I am CS student in love with robotics, physics and music. The last couple of years in RoBorregos I have participated in RoboCup Jr. Maze, as the dev in charge of the main algorithm, and in the internal LARC 2019 team. In the latter one I also worked on the main algorithm, pathfinding and in the computer vision aspect of the challenge. I am always eager to learn and to share my experiences with others, so if you have any inquiries don't hesitate to email me \ud83d\ude01",
-          "github": "https://github.com/YulisaM2",
+          "github": "",
           "github_user": "YulisaM2",
           "linkedin": "https://www.linkedin.com/in/yulisa-medina",
           "resume_link": "",
@@ -552,7 +552,7 @@
           "role": "Software Development",
           "degree": "ISD",
           "description": "Hi, I'm Ricardo, a student of 4th of the ISDr degree. Currently, I'm a programmer on the Navigation area in RoboCup's @Home. I'm also working on the development of this webpage! I'm always looking to work on any scalable project that can have social impact. I'm interested in web development and robotics. I really like to see soccer games and play video games in my free time.",
-          "github": "https://github.com/RicardoChapaRomero",
+          "github": "",
           "github_user": "RicardoChapaRomero",
           "linkedin": "",
           "resume_link": "",
@@ -561,7 +561,23 @@
           "Semester": "4"
       },
       {
-          "id": "50",
+          "id": "51",
+          "name": "Noelia",
+          "lastname": "Davila",
+          "status": "active",
+          "role": "Logistics & Networking",
+          "degree": "LIN",
+          "description": "Hi I am Noelia I am in my 5th semester of International Business. I am currently in the logistics and sponsership team. I like getting things done. I am intrested in CRM systems and technology thay allows business to improve there management. I like to write and love to try out new recipes.",
+          "github": "",
+          "github_user": "",
+          "linkedin": "https://www.linkedin.com/in/noelia-g-davila/",
+          "resume_link": "",
+          "tags": "",
+          "Email": "noelia.g.davila@hotmail.com",
+          "Semester": "5"
+      },
+      {
+          "id": "53",
           "name": "Alejandro",
           "lastname": "Ruiz",
           "status": "active",
@@ -577,9 +593,9 @@
           "Semester": "2"
       },
       {
-          "id": "51",
+          "id": "54",
           "name": "Alexis Alberto",
-          "lastname": "Villanueva",
+          "lastname": "Villanueva Zugasti",
           "status": "active",
           "role": "Software Development",
           "degree": "ISD",
@@ -593,7 +609,7 @@
           "Semester": "4"
       },
       {
-          "id": "53",
+          "id": "56",
           "name": "Diego",
           "lastname": "Prado",
           "status": "active",
@@ -609,7 +625,7 @@
           "Semester": "2"
       },
       {
-          "id": "54",
+          "id": "57",
           "name": "Em\u00e9rico",
           "lastname": "Pedraza",
           "status": "active",
@@ -625,7 +641,7 @@
           "Semester": "4"
       },
       {
-          "id": "55",
+          "id": "58",
           "name": "Gabriela Jazmin",
           "lastname": "\u00c1lvarez",
           "status": "active",
@@ -641,7 +657,7 @@
           "Semester": ""
       },
       {
-          "id": "56",
+          "id": "59",
           "name": "Grecia",
           "lastname": "Flores",
           "status": "active",
@@ -657,14 +673,14 @@
           "Semester": ""
       },
       {
-          "id": "58",
+          "id": "60",
           "name": "Karyme",
           "lastname": "Ezrr\u00e9",
           "status": "active",
           "role": "Mechanical Design",
           "degree": "IID",
           "description": "Hello, I'm Karyme Ezrr\u00e9, I am a second semester student of engineering in innovation and development, currently I am a mechanic in RoboCup Junior Soccer Lightweight, I really like it because it is a great mechanical challenge.",
-          "github": "https://github.com/Karyme-Ezrre",
+          "github": "",
           "github_user": "Karyme-Ezrre",
           "linkedin": "Karyme Ezrr\u00e9",
           "resume_link": "",
@@ -673,7 +689,7 @@
           "Semester": "2"
       },
       {
-          "id": "59",
+          "id": "61",
           "name": "Keven",
           "lastname": "Arroyo",
           "status": "active",
@@ -689,7 +705,7 @@
           "Semester": "2"
       },
       {
-          "id": "60",
+          "id": "62",
           "name": "Marlon",
           "lastname": "Romo",
           "status": "active",
@@ -698,27 +714,11 @@
           "description": "Hi my name is Marlon Romo I am currently studying my 2nd semester of Robotics and Digital Systems Engineering. I am a member of the International Robotics Representative Team of Tecnologico de Monterrey. Along with my team we created a fully autonomous robot capable of searching through a maze for victims as part of the RoboCup @Rescue Maze competition. My role as a Control System programmer was to ensure the precise movement and correct performance of the sensors behind the robot. This competition help me acquired several skills among them learning about PID algorithms and their applications. I am passionate about learning new technologies and solving problems. I am interested in gaining professional experience and one of my hobbies is playing baseball.",
           "github": "https://github.com/MarlonB500",
           "github_user": "MarlonB500",
-          "linkedin": "https://linkedin.com/in/marlonromo",
+          "linkedin": "https://www.linkedin.com/in/marlonromo",
           "resume_link": "",
           "tags": "",
           "Email": "marlon_romo@hotmail.com",
           "Semester": "2"
-      },
-      {
-          "id": "61",
-          "name": "Noelia",
-          "lastname": "Davila",
-          "status": "active",
-          "role": "Logistics & Networking",
-          "degree": "LIN",
-          "description": "Hi I am Noelia I am in my 5th semester of International Business. I am currently in the logistics and sponsership team. I like getting things done. I am intrested in CRM systems and technology thay allows business to improve there management. I like to write and love to try out new recipes.",
-          "github": "",
-          "github_user": "",
-          "linkedin": "https://www.linkedin.com/in/noelia-g-davila/",
-          "resume_link": "",
-          "tags": "",
-          "Email": "noelia.g.davila@hotmail.com",
-          "Semester": "5"
       },
       {
           "id": "63",
