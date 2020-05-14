@@ -1,14 +1,16 @@
 .candidates-info-container {
     height: auto;
     background: url(../../../images/github_pattern.svg) top left/auto repeat fixed, linear-gradient( 20deg, rgba(28, 35, 41, 1) 50%, rgba(232, 75, 119, 0.9) 100%);
-    text-align: center;
 }
 
 .info-container {
     margin-bottom: 100px;
     padding-top: 40px;
+    padding-bottom: 40px;
     color: white;
-    text-align: center;
+    left: 50%;
+    right: 5%;
+    background-color: rgba(232, 75, 119, 1);
 }
 
 .main-text-candidates {

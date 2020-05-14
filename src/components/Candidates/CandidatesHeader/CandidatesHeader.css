@@ -4,14 +4,24 @@ html {
 
 .candidates-header-container {
   height: 100%;
+  width: 100%;
 }
 
 .candidates-header {
   height: 100%;
+  width: 100%;
   position: relative;
   background: linear-gradient( 45deg, rgba(20, 18, 19, 0.9) 30%, rgba(232, 75, 119, 0.9) 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
   color: rgba(255, 255, 255, 0.8);
-  text-align: center;
+}
+
+.candidates-text-container {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  transform: translate(0%, -50%);
+  font-size: 5vw;
 }
 
 .main-text-candidates {
@@ -27,7 +37,6 @@ html {
 .title-text-banner {
   color: rgba(255, 255, 255, 0.9);
   font-size: 7vh;
-  padding-left: 10%;
   padding-right: 10%;
   text-transform: none;
 }
@@ -36,8 +45,6 @@ html {
   padding-top: 2%;
   color: rgba(255, 255, 255, 0.9);
   font-size: 4vh;
-  padding-left: 10%;
-  padding-right: 10%;
   text-transform: none;
 }
 
@@ -48,6 +55,7 @@ html {
   right: 15%;
   transform: translate(0%, -50%);
   font-size: 5vw;
+  text-align: center;
 }
 
 .fa-chevron-down {
@@ -58,3 +66,4 @@ html {
   cursor: pointer;
   color: rgba(0, 0, 0, 1)
 }
+

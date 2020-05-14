@@ -16,7 +16,7 @@ class CandidatesHeader extends Component {
     return(
       <div className='candidates-header-container'>
         <div className='candidates-header'>
-          <div className='container-legend'>
+          <div className='candidates-text-container'>
             <h2 className='title-text-banner'>
               Candidates
             </h2>
@@ -35,7 +35,7 @@ class CandidatesHeader extends Component {
               <br />
               <a onClick={()=>scrollToRef(this.carouselRef)} className='icon'>
                 <div className='scroll-icon-container'>
-                  <FontAwesomeIcon icon={ faChevronDown } size='2x' />
+                  <FontAwesomeIcon icon={ faChevronDown } size='1x' />
                 </div>
               </a>
             </p>
