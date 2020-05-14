@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
-import HeaderImg1 from 'images/about/about1.png';
-import HeaderImg2 from 'images/about/about2.jpg';
+import CarouselImg1 from 'images/candidates/candidates1.png';
+import CarouselImg2 from 'images/candidates/candidates2.png';
+import CarouselImg3 from 'images/candidates/candidates3.png';
 import './CandidatesCarousel.css';
 
 class CandidatesCarousel extends Component {
@@ -12,7 +13,7 @@ class CandidatesCarousel extends Component {
           <div className='about-header-img-container'>
             <img
               className='about-header-img'
-              src={ HeaderImg1 }
+              src={ CarouselImg1 }
               alt='First slide'
             />
           </div>
@@ -21,7 +22,7 @@ class CandidatesCarousel extends Component {
           <div className='about-header-img-container'>
             <img
               className='about-header-img'
-              src={ HeaderImg2 }
+              src={ CarouselImg2 }
               alt='Second slide'
             />
           </div>
@@ -30,17 +31,8 @@ class CandidatesCarousel extends Component {
           <div className='about-header-img-container'>
             <img
               className='about-header-img'
-              src={ HeaderImg1 }
+              src={ CarouselImg3 }
               alt='Third slide'
-            />
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className='about-header-img-container'>
-            <img
-              className='about-header-img'
-              src={ HeaderImg2 }
-              alt='Fourth slide'
             />
           </div>
         </Carousel.Item>
