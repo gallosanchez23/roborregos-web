@@ -1,0 +1,24 @@
+.contact-competitions-container{
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background: url(../../../images/github_pattern.svg) top left/auto repeat fixed #1C2329;
+}
+.contact-competitions-title{
+    padding: 20px 0 40px 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 23px;
+    color: white;
+}
+.competitions-img > img {
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+}
+.competitions-text{
+    padding: 15px 0 20px 0;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+}

@@ -1,0 +1,28 @@
+{
+  "competitions": [
+    {
+      "name": "Home",
+      "img": "competitions/home.jpeg"
+    },
+    {
+      "name": "Maze",
+      "img": "competitions/maze.png"
+    },
+    {
+      "name": "Soccer Light",
+      "img": "competitions/soccer_light.png"
+    },
+    {
+      "name": "Soccer Open",
+      "img": "competitions/soccer_open.png"
+    },
+    {
+      "name": "LARC Open",
+      "img": "competitions/larc.png"
+    },
+    {
+      "name": "VSSS",
+      "img": "competitions/vsss.jpg"
+    }
+  ]
+}
