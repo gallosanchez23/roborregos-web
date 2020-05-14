@@ -257,6 +257,22 @@
           "Semester": "8"
       },
       {
+          "id": "23",
+          "name": "Osvaldo",
+          "lastname": "Alvarez",
+          "status": "active",
+          "role": "Software Development",
+          "degree": "ISD",
+          "description": "Hi! I’m Osvaldo, a senior student in Computer Engineering. I’m grateful to being part of RoBorregos since 2016 where I’ve had the opportunity to work as a software developer, focusing in navigation systems and computer vision algorithms. I'm passionate about developing new technologies to help other people. Also, I’ve done two internships with Microsoft so far where I’ve had the opportunity to make a great impact to people around the globe. ",
+          "github": "https://github.com/Osvaldoav/",
+          "github_user": "Osvaldoav",
+          "linkedin": "https://www.linkedin.com/in/jorge-osvaldo-alvarez-valdez-724030141/",
+          "resume_link": "",
+          "tags": "",
+          "Email": "grega1196764@gmail.com",
+          "Semester": "8"
+      },
+      {
           "id": "24",
           "name": "Paul",
           "lastname": "Vazquez",
