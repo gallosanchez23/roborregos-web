@@ -1,0 +1,60 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.candidates-header-container {
+  height: 100%;
+}
+
+.candidates-header {
+  height: 100%;
+  position: relative;
+  background: linear-gradient( 45deg, rgba(20, 18, 19, 0.9) 30%, rgba(232, 75, 119, 0.9) 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.main-text-candidates {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 3vh;
+  text-transform: none;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+
+.title-text-banner {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 7vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-transform: none;
+}
+
+.main-text-candidates-emphasis {
+  padding-top: 2%;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 4vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-transform: none;
+}
+
+.scroll-container {
+  position: absolute;
+  top: 90%;
+  left: 15%;
+  right: 15%;
+  transform: translate(0%, -50%);
+  font-size: 5vw;
+}
+
+.fa-chevron-down {
+  color: rgba(232, 75, 119, 1)
+}
+
+.scroll-icon-container :hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 1)
+}

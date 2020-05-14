@@ -43,10 +43,7 @@ class AboutHeader extends Component {
                 What we develop for
               </h2>
               <p className='text-paragraph'>
-                <b>
-                  Our vision
-                </b>
-                is to become, in the next decade, the best robotics team in Latin America, in national and international competitions for university students and be able to promote technological development in Mexico.
+                <b>Our vision</b> is to become, in the next decade, the best robotics team in Latin America, in national and international competitions for university students and be able to promote technological development in Mexico.
               </p>
             </div>
           </div>

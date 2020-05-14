@@ -1,0 +1,30 @@
+.candidates-info-container {
+    height: auto;
+    background: url(../../../images/github_pattern.svg) top left/auto repeat fixed, linear-gradient( 20deg, rgba(28, 35, 41, 1) 50%, rgba(232, 75, 119, 0.9) 100%);
+    text-align: center;
+}
+
+.info-container {
+    margin-bottom: 100px;
+    padding-top: 40px;
+    color: white;
+    text-align: center;
+}
+
+.main-text-candidates {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 3vh;
+    text-transform: none;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 0%;
+}
+
+.title-text-banner {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 7vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-transform: none;
+}
