@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
-import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -96,7 +95,7 @@ class Footer extends Component {
           </Col>
           <Col lg='4'>
             <Row>
-              <p className='goback-button'>
+              <div className='goback-button'>
                 <IconButton
                   component='a'
                   onClick={ this.goUp }
@@ -108,17 +107,17 @@ class Footer extends Component {
                     Back to top
                   </div>
                 </IconButton>
-              </p>
+              </div>
             </Row>
             <Row>
-              <p className='row-socialMedia'>
+              <div className='row-socialMedia'>
                 { sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
                 { sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
                 { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 5 }} />) }
                 <div className='mark-text'>
                   @2020 RoBorregos
                 </div>
-              </p>
+              </div>
             </Row>
           </Col>
         </Row>
