@@ -90,14 +90,18 @@ class AboutSingleTimelineEvent extends Component{
             </h3>
           </div>
         </div>
-        <div className='timeline-element-content'
-          style={{ background: this.contentColor }}>
-          <h3>
-            { this.event.title }
-          </h3>
-          <p>
-            { this.event.description }
-          </p>
+        <div
+          className='timeline-element-content'
+          style={{ background: this.contentColor }}
+        >
+          <div>
+            <h3>
+              { this.event.title }
+            </h3>
+            <p>
+              { this.event.description }
+            </p>
+          </div>
         </div>
       </VerticalTimelineElement>
     );
