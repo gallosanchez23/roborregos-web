@@ -1,4 +1,3 @@
-// This view uses Matrial-UI elements
 import React, { Component } from 'react';
 import MemberModal from './MemberModal/MemberModal.js';
 import GridList from '@material-ui/core/GridList';
@@ -23,7 +22,7 @@ class MembersGrid extends Component {
     this.handleHideModal       = this.handleHideModal.bind(this);
     this.numberOfColumns       = this.numberOfColumns.bind(this);
     this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
-    this.generateGridList = this.generateGridList.bind(this);
+    this.generateGridList      = this.generateGridList.bind(this);
 
     this.members = props.members;
 
@@ -80,8 +79,10 @@ class MembersGrid extends Component {
   generateGridList(members, title) {
     return (
       <div>
-        <div style={{display: (title == "")?"none":"block"}} className='grid-title'>
-          <h1 className='grid-title-text'>{title}</h1>
+        <div style={{ display: (title === '') ? 'none' : 'block' }} className='grid-title'>
+          <h1 className='grid-title-text'>
+            { title }
+          </h1>
         </div>
         <GridList
           cellHeight={ 'auto' }
@@ -114,11 +115,6 @@ class MembersGrid extends Component {
             </GridListTile>
           )) }
         </GridList>
-        <Modal
-          show={ this.state.show_modal }
-          onHide={ this.handleHideModal }
-          dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
-        />
       </div>
     );
   }
@@ -140,6 +136,11 @@ class MembersGrid extends Component {
       <div className='members-grid-container'>
         { this.generateGridList(this.props.active_members, '') }
         { this.generateGridList(this.props.inactive_members, 'RoBorregos Legacy') }
+        <Modal
+          show={ this.state.show_modal }
+          onHide={ this.handleHideModal }
+          dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
+        />
       </div>
     );
   }
