@@ -143,7 +143,14 @@ class MemberModal extends Component {
                       { this.memberFullName() }
                     </h2>
                     <strong> { this.member.role } </strong>
+                    <div className='member-subtitles' style={{ display: (this.member.status === 'inactive') ? 'block' : 'none' }}>
+                      <h6>
+                        <div> { this.member.subtitle } </div>
+                        <div> {"Since " + this.member.class + ", " + this.member.semesters + " semesters" } </div>
+                      </h6>
+                    </div>
                   </div>
+                  
                 </Row>
                 <Row noGutters>
                   <p className='member-data'>
@@ -189,6 +196,12 @@ class MemberModal extends Component {
                     { this.memberFullName() }
                   </h2>
                   <strong> { this.member.role } </strong>
+                  <div className='member-subtitles' style={{ display: (this.member.status === 'inactive') ? 'block' : 'none' }}>
+                    <h6>
+                      <div> { this.member.subtitle } </div>
+                      <div> {"Since " + this.member.class + ", " + this.member.semesters + " semesters" } </div>
+                    </h6>
+                  </div>
                 </div>
               </Row>
               <Row noGutters>
