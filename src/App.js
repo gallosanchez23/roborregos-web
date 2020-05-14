@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Home from 'components/Home/Home.js';
 import Members from 'components/Members/Members.js';
+import Candidates from 'components/Candidates/Candidates.js';
 import Contact from 'components/Contact/Contact.js';
 import NavBar from 'components/NavBar/NavBar.js';
 import About from 'components/About/About.js';
@@ -39,6 +40,11 @@ class App extends Component {
           <Route
             path='/members'
             component={ () => <Members membersData={ membersData } /> }
+          />
+
+          <Route
+            path='/candidates'
+            component={ () => <Candidates /> }
           />
 
           <Route

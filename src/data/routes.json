@@ -16,6 +16,11 @@
       "component": "Members"
     },
     {
+      "path": "/candidates",
+      "legend": "Candidates",
+      "component": "Candidates"
+    },
+    {
       "path": "/contact",
       "legend": "Contact",
       "component": "Contact"
