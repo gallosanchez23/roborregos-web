@@ -1,8 +1,9 @@
 .contact-sponsor-us {
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   padding-top: 40px;
   color: white;
   text-align: center;
+  background: url(../../../images/github_pattern.svg) top left/auto repeat fixed #1C2329;
 }
 
 .contact-sponsor-us-btn {
