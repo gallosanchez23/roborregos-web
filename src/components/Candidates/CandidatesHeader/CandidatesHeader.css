@@ -20,7 +20,7 @@
 }
 
 .candidates-header .candidates-header-footer {
-  font-size: 3vh;
+  font-size: 2.5vh;
   text-transform: none;
   display: flex;
   flex-direction: column;
@@ -32,6 +32,10 @@
   right: 0;
   margin-left:auto;
   margin-right:auto;
+}
+
+.candidates-header .candidates-header-footer p {
+  margin: 0;
 }
 
 .candidates-header .candidates-header-footer .icon-btn {

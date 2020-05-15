@@ -6,28 +6,28 @@ import './ContactHeader.css';
 
 class ContactHeader extends Component {
   scrollToInfo(){
-    window.scrollBy(0, 925 - window.scrollY);
+    window.scrollBy(0, window.innerHeight - 48 - window.scrollY);
   }
 
   render() {
     return (
-      <div className='contact-header-container'>
+      <div className='contact-header'>
         <div className='container-legend'>
           <h2 className='title-text-banner'>
             Contact
           </h2>
           <div className='main-text-contact'>
-            Would you like to support RoBorregos? Join our sponsors team!
+            <p>
+              Would you like to support RoBorregos? Join our sponsors team!
+            </p>
           </div>
         </div>
-        <Col xs='12' className='contact-header-footer'>
-          <Row className='justify-content-center'>
+        <div className='contact-header-footer'>
+          <p>
             Learn More
-          </Row>
-          <Row className='justify-content-center'>
-            <FontAwesomeIcon onClick={ this.scrollToInfo } icon={ faAngleDown } className='mr-2' />
-          </Row>
-        </Col>
+          </p>
+          <FontAwesomeIcon onClick={ this.scrollToInfo } icon={ faAngleDown } className='icon-btn' />
+        </div>
       </div>
     );
   }
