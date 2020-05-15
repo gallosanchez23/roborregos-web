@@ -5,7 +5,6 @@ import ContactDonations from './ContactDonations/ContactDonations.js';
 import ContactCompetitions from './ContactCompetitions/ContactCompetitions.js';
 import competitionsData from 'data/competitions.json';
 import sponsorsData from 'data/sponsors.json';
-import competitionsData from 'data/competitions.json';
 import Footer from 'components/Footer/Footer';
 import './Contact.css';
 

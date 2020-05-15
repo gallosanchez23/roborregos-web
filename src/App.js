@@ -8,6 +8,7 @@ import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import routesData from 'data/routes.json';
 import membersData from 'data/members.json';
+import Confetti from 'react-confetti';
 
 class App extends Component {
   componentDidMount() {
@@ -17,12 +18,15 @@ class App extends Component {
     );
   }
 
+  
   render() {
     document.title = 'RoBorregos'
 
     return (
       <Router>
         <div className='app-container'>
+
+          <Confetti numberOfPieces={2000} recycle={false} />
 
           <NavBar routes={ routesData.routes } />
 
