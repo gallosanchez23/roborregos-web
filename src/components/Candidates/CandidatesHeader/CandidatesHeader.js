@@ -14,9 +14,9 @@ class CandidatesHeader extends Component {
     return(
       <div className='candidates-header'>
         <div className='container-legend'>
-          <h1>
+          <h2 className='title-text-banner'>
             Candidates
-          </h1>
+          </h2>
           <div className='main-text-candidates'>
             <p>
               <strong>

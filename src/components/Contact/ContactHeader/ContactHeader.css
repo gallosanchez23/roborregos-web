@@ -1,7 +1,7 @@
 .contact-header-container {
   min-height: 925px;
   position: relative;
-  background: linear-gradient( 45deg, #141213e6 30%, #6a2c94 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
+  background: linear-gradient( 45deg, #141213e6 10%, #6a2c94 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
   color: rgba(255, 255, 255, 0.8);
 }
 
