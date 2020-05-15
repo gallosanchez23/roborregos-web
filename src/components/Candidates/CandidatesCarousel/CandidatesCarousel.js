@@ -10,27 +10,27 @@ class CandidatesCarousel extends Component {
     return (
       <Carousel>
         <Carousel.Item>
-          <div className='about-header-img-container'>
+          <div className='candidates-header-img-container'>
             <img
-              className='about-header-img'
+              className='candidates-header-img'
               src={ CarouselImg1 }
               alt='First slide'
             />
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className='about-header-img-container'>
+          <div className='candidates-header-img-container'>
             <img
-              className='about-header-img'
+              className='candidates-header-img'
               src={ CarouselImg2 }
               alt='Second slide'
             />
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className='about-header-img-container'>
+          <div className='candidates-header-img-container'>
             <img
-              className='about-header-img'
+              className='candidates-header-img'
               src={ CarouselImg3 }
               alt='Third slide'
             />
