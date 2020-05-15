@@ -1,24 +1,28 @@
-.candidates-joinus {
-  height: auto;
-  position: relative;
-  color: rgba(255, 255, 255, 0.8);
+.candidates-join-us {
+  background:
+    linear-gradient(
+      20deg,
+      rgba(20, 18, 19, 1) 10%,
+      rgba(232, 75, 119, 0.9) 100%
+    ),
+    url(../../../images/github_pattern.svg) top left/auto repeat fixed;
   text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 
-.candidates-joinus-title-container {
-  color: white;
-  font-size: 30px;
+.candidates-join-us-title-container {
+  color: #fff;
 }
 
-.candidates-joinus-btn-container {
+.candidates-join-us-btn-container {
   width: 100%;
   font-size: 40px;
   font-weight: bold;
   min-height: 75px;
-  padding-bottom: 30px;
 }
 
-.candidates-joinus-btn {
+.candidates-join-us-btn {
   margin: auto;
   cursor: pointer;
   border: 1px solid #4F72B8;
@@ -32,14 +36,14 @@
 }
 
 @media (max-width: 610px) {
-  .candidates-joinus-btn {
+  .candidates-join-us-btn {
     width: 40%;
     font-size: 25px;
     height: 65px;
   }
 }
 
-.candidates-joinus-btn:hover {
+.candidates-join-us-btn:hover {
   border: 1px solid #13191E;
   background-color: #4F72B8;
 }

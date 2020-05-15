@@ -1,7 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
 .contact-header-container {
   background: url(../../../images/github_pattern.svg) top left/auto repeat fixed, linear-gradient(226.17deg, #9B00FA 0%, #1C2329 50%);
   min-height: 400px;

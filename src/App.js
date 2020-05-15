@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Home from 'components/Home/Home.js';
 import Members from 'components/Members/Members.js';
-import Candidates from 'components/Candidates/Candidates.js';
 import Contact from 'components/Contact/Contact.js';
+import Candidates from 'components/Candidates/Candidates.js';
 import NavBar from 'components/NavBar/NavBar.js';
 import About from 'components/About/About.js';
 import { loadCSS } from 'fg-loadcss/src/loadCSS';
@@ -43,13 +43,13 @@ class App extends Component {
           />
 
           <Route
-            path='/candidates'
-            component={ () => <Candidates /> }
+            path='/contact'
+            component={ () => <Contact /> }
           />
 
           <Route
-            path='/contact'
-            component={ () => <Contact /> }
+            path='/candidates'
+            component={ () => <Candidates /> }
           />
         </div>
       </Router>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'react-bootstrap';
 import CandidatesOpenPositions from './CandidatesOpenPositions/CandidatesOpenPositions.js';
 import './CandidatesJoinUs.css';
 
@@ -17,20 +18,22 @@ class CandidatesJoinUs extends Component {
 
   render() {
     return(
-      <div id='candidates-joinus' className='candidates-joinus'>
-        <div className='candidates-joinus-title-container'>
-          <h2>
-            Hello there! Are you a candidate?
-            <br />
-            Join Us!
-          </h2>
-        </div>
+      <div className='candidates-join-us'>
+        <Row>
+          <Col className='candidates-join-us-title-container'>
+            <h2>
+              Get to know our main positions!
+            </h2>
+          </Col>
+        </Row>
         <CandidatesOpenPositions positionsData={ this.positionsData } />
-        <div className='candidates-joinus-btn-container'>
-          <button onClick={ this.joinUsCallback } className='candidates-joinus-btn' variant='outline-primary'>
-            Join Us!
-          </button>
-        </div>
+        <Row>
+          <Col className='candidates-join-us-btn-container'>
+            <button onClick={ this.joinUsCallback } className='candidates-join-us-btn' variant='outline-primary'>
+              Join Us!
+            </button>
+          </Col>
+        </Row>
       </div>
     );
   }

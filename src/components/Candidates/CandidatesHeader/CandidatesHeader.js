@@ -1,48 +1,39 @@
-import React, { Component, useRef } from 'react';
-import { render } from 'react-dom';
-import './CandidatesHeader.css';
+import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop-47)
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { Row, Col } from 'react-bootstrap';
+import './CandidatesHeader.css';
 
 class CandidatesHeader extends Component {
-  constructor(props) {
-    super(props);
-    this.carouselRef = React.createRef();
+  scrollToInfo(){
+    window.scrollBy(0, window.innerHeight - 48 - window.scrollY);
   }
 
   render() {
     return(
-      <div className='candidates-header-container'>
-        <div className='candidates-header'>
-          <div className='candidates-text-container'>
-            <h2 className='title-text-banner'>
-              Candidates
-            </h2>
-            <div className='main-text-candidates'>
-              <p className='main-text-candidates-emphasis'>
+      <div className='candidates-header'>
+        <div className='container-legend'>
+          <h1>
+            Candidates
+          </h1>
+          <div className='main-text-candidates'>
+            <p>
+              <strong>
                 We want you to be part of our team!
-              </p>
-              Every year, we recruit new members that...
-            </div>
-          </div>
-          <div class='scroll-container'>
-            <p className='main-text-candidates-emphasis'>
-              Are you a candidate?
+              </strong>
               <br />
-              Join us!
-              <br />
-              <a onClick={()=>scrollToRef(this.carouselRef)} className='icon'>
-                <div className='scroll-icon-container'>
-                  <FontAwesomeIcon icon={ faChevronDown } size='1x' />
-                </div>
-              </a>
+              Every year, we recruit new members that are studying at Tec of Monterrey, Campus Monterrey, who are passionate in developing robots.
             </p>
           </div>
         </div>
-        <div className='carousel-ref' ref={ this.carouselRef }>
-          Hello world!
+        <div className='candidates-header-footer'>
+          <p>
+            Are you a candidate?
+            <br />
+            Join us!
+          </p>
+          <FontAwesomeIcon onClick={ this.scrollToInfo } icon={ faAngleDown } className='icon-btn' />
         </div>
       </div>
     );
