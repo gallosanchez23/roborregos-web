@@ -1,7 +1,5 @@
 .candidates-join-us {
-  background:
-    #1C2329,
-    url(../../../images/github_pattern.svg) top left/auto repeat fixed;
+  background: url(../../../images/github_pattern.svg) top left/auto repeat fixed, #1C2329;
   text-align: center;
   padding-top: 10vh;
   padding-bottom: 10vh;
