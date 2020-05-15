@@ -70,30 +70,20 @@
   font-size: 2.8vh;
 }
 
-@media (max-width: 993px) {
-  .right-gradient {
-    display: none;
-  }
-  
-  .right-text {
-    position: absolute;
-    height: 100vh;
-    right: 0%;
-    left: 55%;
-    top: 0%;
-    background: rgb(0, 0, 0, 0.75);
-    text-align: right;
+@media (max-width: 1200px) {
+  .text-paragraph {
+    font-size: 2vh;
   }
 }
 
 
-@media (max-aspect-ratio: 1/1) {
+@media (max-width: 992px) {
   .text-header {
     font-size: 6vw;
   }
   
   .text-paragraph {
-    font-size: 1.8vh
+    font-size: 2.8vw;
   }
 }
 
