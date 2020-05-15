@@ -1,11 +1,4 @@
 .contact-header-container {
-<<<<<<< HEAD
-  background: url(../../../images/github_pattern.svg) top left/auto repeat fixed, linear-gradient(226.17deg, #9B00FA 0%, #1C2329 50%);
-  min-height: 400px;
-  display: flex;
-  justify-content: center;
-  color: white;
-=======
   height: 100%;
   position: relative;
   color: rgba(255, 255, 255, 0.8);
@@ -23,7 +16,6 @@
   color: rgba(255, 255, 255, 0.9);
   font-size: 7vh;
   text-transform: none;
->>>>>>> b30942529d788b688db6ec8b8c013dfc57a67e8d
 }
 
 .contact-header-text {
@@ -53,9 +45,6 @@
   color: rgb(0, 225, 250);
   font-size: 30px;
 }
-<<<<<<< HEAD
-=======
-
 
 .contact-header {
   height: 100%;
@@ -102,4 +91,3 @@
   color: rgb(106, 44, 148);
   font-size: 30px;
 }
->>>>>>> b30942529d788b688db6ec8b8c013dfc57a67e8d
