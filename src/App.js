@@ -26,7 +26,7 @@ class App extends Component {
       <Router>
         <div className='app-container'>
 
-          <Confetti numberOfPieces={2000} recycle={false} />
+          <Confetti numberOfPieces={ 2000 } recycle={ false } />
 
           <NavBar routes={ routesData.routes } />
 
