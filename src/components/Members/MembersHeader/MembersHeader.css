@@ -3,12 +3,6 @@
   position: relative;
   background: linear-gradient( 45deg, rgba(20, 18, 19, 0.9) 30%, rgba(0, 94, 105, 0.9) 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
   color: rgba(255, 255, 255, 0.8);
-  text-align: left;
-  padding-left: 0;
-}
-
-.container-legend {
-  padding: 0;
 }
 
 .main-text-members {
