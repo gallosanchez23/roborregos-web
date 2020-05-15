@@ -1,0 +1,39 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-header-container {
+  background: url(../../../images/github_pattern.svg) top left/auto repeat fixed, linear-gradient(226.17deg, #9B00FA 0%, #1C2329 50%);
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.contact-header-text {
+  margin-top: 5%;
+}
+
+.contact-header-title {
+  padding: 10px;
+  font-size: 40px;
+}
+
+.contact-header-subtitle {
+  padding: 10px;
+  font-size: 22px;
+}
+
+.contact-header-footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-header-footer svg {
+  cursor: pointer;
+  color: rgb(0, 225, 250);
+  font-size: 30px;
+}
