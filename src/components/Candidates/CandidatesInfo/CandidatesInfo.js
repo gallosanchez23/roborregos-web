@@ -12,7 +12,7 @@ class CandidatesInfo extends Component {
               What is candidates?
             </h2>
             <p>
-              Candidates is a program we host during the August-December semester. Where we offer free basic courses for everyone to learn about mechanics, electronics, and software with arduino. Wanting to inspire young college students to get hands-on developing technology. Near the end of the semester, we held a competition to encourage teamwork and new team members are recruited.
+              Candidates is a program we host during the August-December semester. As part of this program, we offer free basic courses for everyone to learn about mechanics, electronics, and software with Arduino. We want to inspire young college students to get hands-on developing technology. Near the end of the semester, we hold a competition to encourage teamwork and new team members are recruited.
             </p>
           </Col>
         </Row>

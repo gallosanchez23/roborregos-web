@@ -1,7 +1,7 @@
 .candidates-header {
   height: 100%;
   position: relative;
-  background: linear-gradient( 45deg, rgba(20, 18, 19, 0.9) 30%, rgba(232, 75, 119, 0.9) 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
+  background: linear-gradient( 45deg, rgba(20, 18, 19, 0.9) 10%, rgba(232, 75, 119, 0.9) 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
   color: #fff;
 }
 
@@ -11,6 +11,12 @@
   text-transform: none;
   padding-top: 2%;
   padding-bottom: 0%;
+}
+
+.title-text-banner {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 7vh;
+  text-transform: none;
 }
 
 .candidates-header .candidates-header-footer {

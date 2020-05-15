@@ -7,9 +7,7 @@ import placeholder from 'images/placeholder-rectangle.png';
 import { LARGE_WIDTH, MEDIUM_WIDTH, MOBILE_WIDTH } from 'constants.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMicrochip } from '@fortawesome/free-solid-svg-icons';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { faBullhorn } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faCode, faBullhorn, faRocket } from '@fortawesome/free-solid-svg-icons';
 import './MembersGrid.css';
 
 class MembersGrid extends Component {
@@ -126,8 +124,10 @@ class MembersGrid extends Component {
       return faMicrochip;
     } else if (role === 'Mechanical Design') {
       return faCog;
-    } else {
+    } else if (role === 'Logistics & Sponsorship') {
       return faBullhorn;
+    } else {
+      return faRocket;
     }
   }
 

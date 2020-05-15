@@ -1,9 +1,22 @@
 .contact-header-container {
-  background: url(../../../images/github_pattern.svg) top left/auto repeat fixed, linear-gradient(226.17deg, #9B00FA 0%, #1C2329 50%);
-  min-height: 400px;
-  display: flex;
-  justify-content: center;
-  color: white;
+  min-height: 925px;
+  position: relative;
+  background: linear-gradient( 45deg, #141213e6 10%, #6a2c94 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-text-contact {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 3vh;
+  text-transform: none;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+
+.title-text-banner {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 7vh;
+  text-transform: none;
 }
 
 .contact-header-text {
