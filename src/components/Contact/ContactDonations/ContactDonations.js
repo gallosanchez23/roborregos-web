@@ -11,7 +11,10 @@ class ContactDonations extends Component {
             By providing us an anonymous donation, you can give us the necessary resources for us to develop technology and compete!
           </Row>
           <Row className='donations-title'>
-            <b>Contact us&nbsp;</b> for more information! 
+            <b>
+              Contact us&nbsp;
+            </b>
+            for more information!
           </Row>
         </Col>
       </div>

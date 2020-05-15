@@ -6,8 +6,9 @@ import './ContactHeader.css';
 
 class ContactHeader extends Component {
   scrollToInfo(){
-    window.scrollBy(0, 400-window.scrollY);
+    window.scrollBy(0, 400 - window.scrollY);
   }
+
   render() {
     return (
       <div className='contact-header-container'>
@@ -28,7 +29,7 @@ class ContactHeader extends Component {
               Learn More
             </Row>
             <Row className='justify-content-center'>
-              <FontAwesomeIcon onClick={this.scrollToInfo} icon={faAngleDown} className='mr-2' />
+              <FontAwesomeIcon onClick={ this.scrollToInfo } icon={ faAngleDown } className='mr-2' />
             </Row>
           </Col>
         </Col>
