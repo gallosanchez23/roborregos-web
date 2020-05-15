@@ -31,7 +31,7 @@ class ContactCompetitions extends Component {
               <Col lg='2' md='4' sm='4' xs='6'>
                 <Row className='justify-content-center'>
                   <div className='competitions-img'>
-                    <img src={ this.tryRequire(competition.img) }/>
+                    <img src={ this.tryRequire(competition.img) } alt={ competition.name } />
                   </div>
                 </Row>
                 <Row className='competitions-text'>
