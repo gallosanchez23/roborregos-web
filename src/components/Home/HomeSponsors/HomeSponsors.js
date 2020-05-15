@@ -17,7 +17,7 @@ class HomeSponsors extends Component {
           <Row className='justify-content-sm-center'>
             <Col sm='10'>
               <h3>
-                Patrocinadores
+                Sponsors
               </h3>
               <Row className='justify-content-sm-center'>
                 {this.sponsors.map((sponsor, index) =>(

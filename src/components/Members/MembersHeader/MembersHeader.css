@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .members-header {
   height: 100%;
   position: relative;
@@ -24,4 +28,18 @@
   color: rgba(255, 255, 255, 0.9);
   font-size: 4vh;
   text-transform: none;
+}
+
+.members-header-footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.members-header-footer svg {
+  cursor: pointer;
+  color: rgb(0, 225, 250);
+  font-size: 30px;
 }
