@@ -1,10 +1,6 @@
 .candidates-join-us {
   background:
-    linear-gradient(
-      20deg,
-      rgba(20, 18, 19, 1) 10%,
-      rgba(232, 75, 119, 0.9) 100%
-    ),
+    #1C2329,
     url(../../../images/github_pattern.svg) top left/auto repeat fixed;
   text-align: center;
   padding-top: 10vh;
