@@ -29,7 +29,7 @@ class AboutSingleTimelineEvent extends Component{
 
   tryRequire(img_path) {
     try {
-      return require('images/' + img_path);
+      return require('images/about/timeline/' + img_path);
     }
     catch(err) {
       return placeholder;
