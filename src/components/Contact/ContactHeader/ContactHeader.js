@@ -1,38 +1,32 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import { Row, Col } from 'react-bootstrap';
 import './ContactHeader.css';
 
 class ContactHeader extends Component {
   scrollToInfo(){
-    window.scrollBy(0, 400 - window.scrollY);
+    window.scrollBy(0, window.innerHeight - 48 - window.scrollY);
   }
 
   render() {
     return (
-      <div className='contact-header-container'>
-        <Col xs='10'>
-          <Col className='contact-header-text'>
-            <Row className='contact-header-title'>
-              Contact
-            </Row>
-            <Row className='contact-header-subtitle'>
-              Would you like to support RoBorregos?
-            </Row>
-            <Row className='contact-header-subtitle'>
-              Join our sponsors team!
-            </Row>
-          </Col>
-          <Col xs='12' className='contact-header-footer'>
-            <Row className='justify-content-center'>
-              Learn More
-            </Row>
-            <Row className='justify-content-center'>
-              <FontAwesomeIcon onClick={ this.scrollToInfo } icon={ faAngleDown } className='mr-2' />
-            </Row>
-          </Col>
-        </Col>
+      <div className='contact-header'>
+        <div className='container-legend'>
+          <h2 className='title-text-banner'>
+            Contact
+          </h2>
+          <div className='main-text-contact'>
+            <p>
+              Would you like to support RoBorregos? Join our sponsors team!
+            </p>
+          </div>
+        </div>
+        <div className='contact-header-footer'>
+          <p>
+            Learn More
+          </p>
+          <FontAwesomeIcon onClick={ this.scrollToInfo } icon={ faAngleDown } className='icon-btn' />
+        </div>
       </div>
     );
   }

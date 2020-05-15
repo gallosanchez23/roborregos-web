@@ -27,6 +27,7 @@ class NavBar extends Component {
     this.setState(state => ({
       active_button: index
     }));
+    window.scrollTo(0,0);
   }
 
   getClassName(path) {

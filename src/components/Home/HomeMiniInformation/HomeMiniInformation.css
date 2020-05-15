@@ -23,7 +23,7 @@
   justify-content: center;
 }
 
-.icon-container {
+#home-mini-information-container .icon-container {
   background: #fff;
   width: 70px;
   height: 70px;
