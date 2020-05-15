@@ -1,0 +1,40 @@
+.contact-sponsor-us {
+  padding-bottom: 100px;
+  padding-top: 40px;
+  color: white;
+  text-align: center;
+  background: url(../../../images/github_pattern.svg) top left/auto repeat fixed #1C2329;
+}
+
+.contact-sponsor-us-btn {
+  border: 1px solid #4F72B8;
+  border-radius: 8px;
+  font-size: 30px;
+  width: 22%;
+  height: 80px;
+  color: white;
+  transition: 0.3s;
+  background-color: #13191E;
+}
+
+@media (max-width: 750px) {
+  .contact-sponsor-us-btn {
+    width: 30%;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 610px) {
+  .contact-sponsor-us-btn {
+    width: 40%;
+    font-size: 25px;
+    height: 65px;
+    margin-top: 10px;
+  }
+}
+
+.contact-sponsor-us-btn:hover {
+  color: white;
+  border: 1px solid #13191E;
+  background-color: #4F72B8;
+}

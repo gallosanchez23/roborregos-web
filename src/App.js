@@ -1,75 +1,60 @@
 import React, { Component } from 'react';
-import NavBar from 'components/NavBar/NavBar.js';
+import Home from 'components/Home/Home.js';
 import Members from 'components/Members/Members.js';
+import Contact from 'components/Contact/Contact.js';
+import Candidates from 'components/Candidates/Candidates.js';
+import NavBar from 'components/NavBar/NavBar.js';
+import About from 'components/About/About.js';
 import { loadCSS } from 'fg-loadcss/src/loadCSS';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import routesData from 'data/routes.json';
 import membersData from 'data/members.json';
-import './App.css';
-
-function Home() {
-	return (
-		<h2>
-			Home
-		</h2>
-	);
-}
-
-function AboutUs() {
-	return (
-		<h2>
-			About us
-		</h2>
-	);
-}
-
-function ContactUs() {
-	return (
-		<h2>
-			Contact us
-		</h2>
-	);
-}
 
 class App extends Component {
-	componentDidMount() {
+  componentDidMount() {
     loadCSS(
       'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
       document.querySelector('#insertion-point-jss'),
     );
   }
 
-	render() {
-		return (
-			<Router>
-				<div className='app-container'>
+  render() {
+    document.title = 'RoBorregos'
 
-					<NavBar routes={ routesData.routes } />
+    return (
+      <Router>
+        <div className='app-container'>
 
-					<Route
-						exact path='/'
-						component={ Home }
-					/>
+          <NavBar routes={ routesData.routes } />
 
-					<Route
-						path='/about_us'
-						component={ AboutUs }
-					/>
+          <Route
+            exact path='/'
+            component={ () => <Home /> }
+          />
 
-					<Route
-						path='/members'
-						component={ () => <Members membersData={ membersData } /> }
-					/>
+          <Route
+            path='/about'
+            component={ () => <About /> }
+          />
 
-					<Route
-						path='/contact_us'
-						component={ ContactUs }
-					/>
+          <Route
+            path='/members'
+            component={ () => <Members membersData={ membersData } /> }
+          />
 
-				</div>
-			</Router>
-		);
-	}
+          <Route
+            path='/contact'
+            component={ () => <Contact /> }
+          />
+
+          <Route
+            path='/candidates'
+            component={ () => <Candidates /> }
+          />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

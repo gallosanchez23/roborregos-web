@@ -25,8 +25,14 @@ You can consult the application on production at [roborregos.com](https://roborr
 
 | Name | Email | Github | Role |
 | ---- | ----- | ------ | ---- |
-| José Eduardo Sánchez | gallo.sanchez23@gmail.com | [@gallosanchez23](https://github.com/gallosanchez23) | Developer |
-| Alexis Virgen |  | [@SAlexisvf](https://github.com/SAlexisvf) | Developer |
+| José Eduardo Sánchez | [gallo.sanchez23@gmail.com](mailto:gallo.sanchez23@gmail.com) | [@gallosanchez23](https://github.com/gallosanchez23) | PM & Developer |
+| Sebastián Rivera González | [sebas.rivera96@gmail.com](mailto:sebas.rivera96@gmail.com) | [@sebasrivera96](https://github.com/sebasrivera96) | Developer |
+| Aurora Tijerina Berzosa | [auro.tj@gmail.com](mailto:auro.tj@gmail.com) | [@aurotb](https://github.com/aurotb) | Developer |
+| Ricardo Chapa Romero | [ricardochaparomero@gmail.com](mailto:ricardochaparomero@gmail.com) | [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) | Developer |
+| José Alfonso Cisneros | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com) | [@Josecisneros001](https://github.com/Josecisneros001) | Developer |
+| Omar Ulises Montiel | [omarume@gmail.com](mailto:omarume@gmail.com) | [@OUMontiel](https://github.com/OUMontiel) | Developer |
+| Clara Gutiérrez Jaime | [claragtzjaime@gmail.com](mailto:claragtzjaime@gmail.com) | [@ClaraGtz](https://github.com/ClaraGtz) | Designer & Developer |
+| Ana Lucía Garza | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com) | [@AnaGarza](https://github.com/AnaGarza) | Designer |
 
 ### Environment URLs
 
@@ -34,16 +40,18 @@ You can consult the application on production at [roborregos.com](https://roborr
 
 ### Management tools
 
-You should ask for acces to this tools if you don't have ir already:
+You should ask for access to these tools if you don't have it already:
 
 * [Github repo](https://github.com/gallosanchez23/roborregos-web)
 * [Heroku](https://www.heroku.com/)
+* [InVision](https://claragutierrez948964.invisionapp.com/prototype/RoBorregos-Web-ck7wek80a00nuq301lmd3k920?v=LLi6aocBvdMc49RvTuq1sg%3D%3D&linkshare=urlcopied)
+* [Google Drive](https://drive.google.com/drive/folders/1dZeA8SSFkDSlj61sY3vJiCqCYluquqlw?usp=sharing)
 
 ## Development
 
 ### Setup
 
-Before setting up the project, you sould have installed the following development tools:
+Before setting up the project, you should have installed the following development tools:
 
 * [Git](https://git-scm.com/downloads)
 * [Docker](https://runnable.com/docker/getting-started/)

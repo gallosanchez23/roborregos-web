@@ -1,0 +1,12 @@
+.candidates-header-img-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.candidates-header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

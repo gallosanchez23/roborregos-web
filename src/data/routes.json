@@ -1,24 +1,29 @@
 {
-	"routes": [
-		{
-			"path": "/",
-			"legend": "Home",
-			"component": "Home"
-		},
-		{
-			"path": "/about_us",
-			"legend": "About us",
-			"component": "AboutUs"
-		},
-		{
-			"path": "/members",
-			"legend": "Members",
-			"component": "Members"
-		},
-		{
-			"path": "/contact_us",
-			"legend": "Contact us",
-			"component": "ContactUs"
-		}
-	]
+  "routes": [
+    {
+      "path": "/",
+      "legend": "Home",
+      "component": "Home"
+    },
+    {
+      "path": "/about",
+      "legend": "About",
+      "component": "About"
+    },
+    {
+      "path": "/members",
+      "legend": "Members",
+      "component": "Members"
+    },
+    {
+      "path": "/contact",
+      "legend": "Contact",
+      "component": "Contact"
+    },
+    {
+      "path": "/candidates",
+      "legend": "Candidates",
+      "component": "Candidates"
+    }
+  ]
 }
