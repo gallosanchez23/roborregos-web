@@ -61,6 +61,8 @@ Before setting up the project, you should have installed the following developme
 
 Once you have installed the required third-party software, you can follow this steps:
 
+***NOTE: You may need sudo privileges to run some of these commands.***
+
 1. Clone the project repository on your local machine.
 
 	SSH:
