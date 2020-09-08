@@ -11,6 +11,11 @@ class OpenPositionCard extends Component {
     this.position = props.position;
   }
 
+  clicked = () => {
+    var pos = this.position
+    this.props.onClick(pos);
+  }
+
   tryRequire(id) {
     id = parseInt(id);
     switch(id){
@@ -25,13 +30,16 @@ class OpenPositionCard extends Component {
     }
   }
 
+  
+
   render() {
     return(
       <Card
         className='candidates-open-positions-card'
         key={ this.position.id }
+        onClick = {this.clicked}
       >
-        <Card.Body>
+        <Card.Body >
           <Row>
             <Col xs='3' sm='3' md='3' lg='3' xl='3' className='candidates-card-column-image-container'>
               <div className='circle'>
