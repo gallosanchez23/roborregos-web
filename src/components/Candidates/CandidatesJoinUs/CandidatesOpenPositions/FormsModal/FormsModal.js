@@ -43,7 +43,7 @@ class FormsModal extends Component {
 
     return (
         <Modal id="candidates-join-modal" isOpen= { this.props.isOpen } toggle={ this.props.toggle }>
-          <ModalHeader toggle={this.props.toggleModal}> {greeting}</ModalHeader>
+          <ModalHeader toggle={ this.props.toggleModal }> { greeting }</ModalHeader>
           <ModalBody>
             <Form onSubmit={ this.handleSubmit }>
 
