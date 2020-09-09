@@ -39,7 +39,7 @@ class FormsModal extends Component {
   }
 
   render() {
-    const greeting = "Join us as " + this.props.selectedPosition.title + "!";
+    const greeting = `Join us as ${this.props.selectedPosition.title}!`;
 
     return (
         <Modal id="candidates-join-modal" isOpen= {this.props.isOpen} toggle={this.props.toggle}>
