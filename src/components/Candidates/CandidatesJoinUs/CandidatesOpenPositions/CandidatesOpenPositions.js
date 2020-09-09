@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Col,Row} from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import OpenPositionCard from './OpenPositionCard/OpenPositionCard';
 import './CandidatesOpenPositions.css';
 import FormsModal from './FormsModal/FormsModal';
