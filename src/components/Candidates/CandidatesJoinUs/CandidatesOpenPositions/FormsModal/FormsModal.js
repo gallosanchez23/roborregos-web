@@ -28,7 +28,6 @@ class FormsModal extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.toggle();
-    console.log(this.name.value + " " + this.matricualtionNumber.value + " " + this.semester.value + " " + this.props.selectedPosition.title + " " + this.comments.value);
     alert("Thanks for your interest " + this.name.value + "! \nCheck your Tec email");
 
     emailjs.send(service_id,template_id , this.createMail(), user_id)
