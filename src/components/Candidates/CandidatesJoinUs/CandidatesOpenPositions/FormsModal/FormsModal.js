@@ -54,7 +54,7 @@ class FormsModal extends Component {
               <FormGroup className="col-md-6">
                 <Label>Nombre</Label>
                 <Input type="text" id="name" placeholder="Juanito"
-                  innerRef={(input) => { this.name = input }} />
+                  innerRef={ (input) => { this.name = input } } />
               </FormGroup>
 
               <FormGroup className="col-md-6">
