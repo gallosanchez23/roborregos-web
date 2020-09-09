@@ -39,7 +39,6 @@ class FormsModal extends Component {
   }
 
   render() {
-
     const greeting = "Join us as " + this.props.selectedPosition.title + "!";
 
     return (
