@@ -42,7 +42,7 @@ class CandidatesOpenPostions extends Component {
           </Row>
         </Col>
 
-        <FormsModal selectedPosition = {this.state.selectedPosition} isOpen= {this.state.isModalOpen} toggle={this.toggleModal}/>
+        <FormsModal selectedPosition = { this.state.selectedPosition } isOpen= { this.state.isModalOpen } toggle={ this.toggleModal }/>
 
       </Row>
     );
