@@ -12,7 +12,7 @@ class OpenPositionCard extends Component {
   }
 
   clicked = () => {
-    var pos = this.position;
+    const pos = this.position;
     this.props.onClick(pos);
   }
 
