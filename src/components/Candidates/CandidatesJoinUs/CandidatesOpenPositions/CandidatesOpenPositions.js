@@ -38,7 +38,7 @@ class CandidatesOpenPostions extends Component {
       <Row className='justify-content-center mt-4'>
         <Col xs='10' sm='10' md='10' lg='10' xl='10'>
           <Row>
-            {this.positions.map(position => (<OpenPositionCard position={position} onClick={this.openModal} />))}
+            { this.positions.map(position => (<OpenPositionCard position={ position } onClick={ this.openModal } />)) }
           </Row>
         </Col>
 
