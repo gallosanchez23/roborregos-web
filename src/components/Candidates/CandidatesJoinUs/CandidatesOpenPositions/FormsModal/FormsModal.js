@@ -48,7 +48,7 @@ class FormsModal extends Component {
 
           <ModalHeader toggle={this.props.toggleModal}> {greeting}</ModalHeader>
           <ModalBody>
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={ this.handleSubmit }>
 
             <Row> 
               <FormGroup className="col-md-6">
