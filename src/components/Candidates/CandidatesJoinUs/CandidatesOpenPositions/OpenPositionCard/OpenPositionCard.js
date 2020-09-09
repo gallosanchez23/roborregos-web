@@ -44,7 +44,7 @@ class OpenPositionCard extends Component {
             <Col xs='3' sm='3' md='3' lg='3' xl='3' className='candidates-card-column-image-container'>
               <div className='circle'>
                 <div className='icon-container'>
-                  <FontAwesomeIcon icon={this.tryRequire(this.position.id)} size='2x' />
+                  <FontAwesomeIcon icon={ this.tryRequire(this.position.id) } size='2x' />
                 </div>
               </div>
             </Col>
