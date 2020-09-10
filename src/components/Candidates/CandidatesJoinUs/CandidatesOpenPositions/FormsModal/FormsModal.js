@@ -3,9 +3,9 @@ import { Form, FormGroup, Label,Col, Input,Row, Modal, ModalHeader, ModalBody, B
 import './FormsModal.css';
 import emailjs from 'emailjs-com';
 
-const service_id = 'juarezid_1234_4321_01';
-const template_id = 'template_6owvhzc';
-const user_id = 'user_exlhFGfiCpajm8iHQostc';
+const ServiceId = 'juarezid_1234_4321_01';
+const TemplateId = 'template_6owvhzc';
+const UserId = 'user_exlhFGfiCpajm8iHQostc';
 
 class FormsModal extends Component {
   constructor(props) {
@@ -16,25 +16,24 @@ class FormsModal extends Component {
   }
 
   createMail(){
-    const mes = "Hola soy " + this.name.value + " estudiante de " + this.carrera.value + " de " + this.semester.value + " semestre. \n" + this.comments.value;
+    const emailBody = "Hola soy " + this.name.value + " estudiante de " + this.career.value + " de " + this.semester.value + " semestre. \n" + this.comments.value;
     return({
-      message: mes, 
+      message: emailBody, 
       from_name: this.name.value, 
       reply_to: this.matricualtionNumber.value + '@itesm.mx',
-      puesto : this.props.selectedPosition.title,
+      position : this.props.selectedPosition.title,
     });
   }
 
   handleSubmit(event) {
     event.preventDefault();
     this.props.toggle();
-    alert("Thanks for your interest " + this.name.value + "! \nCheck your Tec email");
-
-    emailjs.send(service_id,template_id , this.createMail(), user_id)
+    const mailParams = this.createMail();
+    emailjs.send(ServiceId, TemplateId, mailParams, UserId)
     .then((result) => {
-        console.log(result.text);
+        alert(result.text + " \n Thanks for your interest! \nCheck your Tec email \n");
     }, (error) => {
-        console.log(error.text);
+        alert("Something went wrong! \n" + error.text);
     });  
   }
 
@@ -46,31 +45,27 @@ class FormsModal extends Component {
           <ModalHeader toggle={ this.props.toggleModal }> { greeting }</ModalHeader>
           <ModalBody>
             <Form onSubmit={ this.handleSubmit }>
-
             <Row> 
               <FormGroup className="col-md-6">
                 <Label>Nombre</Label>
                 <Input type="text" id="name" placeholder="Juanito"
                   innerRef={ (input) => { this.name = input } } />
               </FormGroup>
-
               <FormGroup className="col-md-6">
                 <Label>Matricula</Label>
                 <Input type="text" id="matricualtionNumber" placeholder="A01283070"
-                  innerRef={(input) => { this.matricualtionNumber = input }} />
+                  innerRef={ (input) => { this.matricualtionNumber = input } } />
               </FormGroup>
-
               <FormGroup className="col-md-6">
                 <Label>Carrera</Label>
-                <Input type="text" id="carrera" placeholder="IMT"
-                  innerRef={(input) => { this.carrera = input }}>
+                <Input type="text" id="career" placeholder="IMT"
+                  innerRef={ (input) => { this.career = input } }>
                 </Input>
               </FormGroup>
-
               <FormGroup className="col-md-6">
                 <Label>Semestre</Label>
                 <Input type="select" id="semester"
-                  innerRef={(input) => { this.semester = input }}>
+                  innerRef={ (input) => { this.semester = input } }>
                   <option value=""></option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -83,12 +78,10 @@ class FormsModal extends Component {
                   <option value="9">9+</option>
                 </Input>
               </FormGroup>
-
-              
               <FormGroup className="col-12">
                 <Label>Cuéntanos sobre ti</Label>
                 <Input type="textarea" id="comments" placeholder="¿Por qué quieres entrar al equipo?"
-                  innerRef={(input) => { this.comments = input }}>
+                  innerRef={ (input) => { this.comments = input } }>
                 </Input>
               </FormGroup>
               </Row>
@@ -96,10 +89,8 @@ class FormsModal extends Component {
                 <Button className="mr-4 col-3 join" type="submit" value="submit">Join!</Button>
               </Row>
             </Form>
-
           </ModalBody>
         </Modal>
-
     );
   }
 }
