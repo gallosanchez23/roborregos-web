@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
-import ContactSponsorPackages from './ContactSponsorPackages/ContactSponsorPackages.js';
 import './ContactSponsorUs.css';
+
+import React, { Component } from 'react';
+
+import ContactSponsorPackages from './ContactSponsorPackages/ContactSponsorPackages.js';
 
 class ContactSponsorUs extends Component {
   constructor(props) {
@@ -24,9 +26,12 @@ class ContactSponsorUs extends Component {
           Join our sponsors team!
         </h2>
         <ContactSponsorPackages packagesData={ this.sponsorsData } />
-        <button onClick={ this.sponsorUsCallback } className='btn contact-sponsor-us-btn mt-4' variant='outline-primary'>
-          Sponsor Us!
-        </button>
+          <button onClick={ this.sponsorUsCallback } className='btn contact-sponsor-us-btn mt-4' variant='outline-primary'>
+            Sponsor Us!
+          </button>
+          <button className='btn contact-translate-sponsor-us-btn mt-4 offset-lg-1' variant='outline-primary'>
+            Translate to english
+          </button>
       </div>
     );
   }

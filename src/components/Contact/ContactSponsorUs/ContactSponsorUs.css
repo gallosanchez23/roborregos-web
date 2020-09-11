@@ -17,6 +17,17 @@
   background-color: #13191E;
 }
 
+.contact-translate-sponsor-us-btn {
+  border: 1px solid #4F72B8;
+  border-radius: 8px;
+  font-size: 20px;
+  width: 14%;
+  height: 40px;
+  color: white;
+  transition: 0.3s;
+  background-color: #13191E;
+}
+
 @media (max-width: 750px) {
   .contact-sponsor-us-btn {
     width: 30%;
@@ -34,6 +45,12 @@
 }
 
 .contact-sponsor-us-btn:hover {
+  color: white;
+  border: 1px solid #13191E;
+  background-color: #4F72B8;
+}
+
+.contact-translate-sponsor-us-btn:hover {
   color: white;
   border: 1px solid #13191E;
   background-color: #4F72B8;
