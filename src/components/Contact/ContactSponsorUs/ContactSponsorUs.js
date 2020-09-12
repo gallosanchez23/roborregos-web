@@ -2,7 +2,9 @@ import './ContactSponsorUs.css';
 
 import React, { Component } from 'react';
 
+import Col from 'react-bootstrap/Col'
 import ContactSponsorPackages from './ContactSponsorPackages/ContactSponsorPackages.js';
+import Row from 'react-bootstrap/Row'
 
 class ContactSponsorUs extends Component {
   constructor(props) {
@@ -11,6 +13,7 @@ class ContactSponsorUs extends Component {
     this.sponsorsData = props.sponsorsData;
 
     this.sponsorUsCallback = this.sponsorUsCallback.bind(this);
+
   }
 
   sponsorUsCallback() {
@@ -26,12 +29,18 @@ class ContactSponsorUs extends Component {
           Join our sponsors team!
         </h2>
         <ContactSponsorPackages packagesData={ this.sponsorsData } />
-          <button onClick={ this.sponsorUsCallback } className='btn contact-sponsor-us-btn mt-4' variant='outline-primary'>
-            Sponsor Us!
-          </button>
-          <button className='btn contact-translate-sponsor-us-btn mt-4 offset-lg-1' variant='outline-primary'>
-            Translate to english
-          </button>
+        <Row>
+          <Col md={4} xs={12} className='offset-md-4 offset-0'>
+            <button onClick={ this.sponsorUsCallback } className='btn contact-sponsor-us-btn mt-4' variant='outline-primary'>
+              Sponsor Us!
+            </button>
+          </Col>
+          <Col md={3} xs={12} style={{ alignSelf: "center" }}>
+            <button className='btn contact-translate-sponsor-us-btn mt-4' variant='outline-primary'>
+              Translate to english
+            </button>
+          </Col>
+        </Row>
       </div>
     );
   }
