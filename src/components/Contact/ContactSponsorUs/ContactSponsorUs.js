@@ -11,13 +11,27 @@ class ContactSponsorUs extends Component {
     super(props);
 
     this.sponsorsData = props.sponsorsData;
-
+  
     this.sponsorUsCallback = this.sponsorUsCallback.bind(this);
+    this.translateTo = this.translateTo.bind(this);
 
+    this.state = {
+      language: 'en',
+      translateLabel: 'Translate to spanish',
+      sponsorButtonLabel: 'Sponsor us!'
+    };
   }
 
   sponsorUsCallback() {
     window.open(this.sponsorsData.url_contact, '_blank');
+  }
+
+  translateTo() {
+    if(this.state.language === 'en'){
+      this.setState({ language: 'es', translateLabel: 'Traducir a inglés', sponsorButtonLabel: 'Patrocinanos!'});
+    } else {
+      this.setState({ language: 'en', translateLabel: 'Translate to spanish', sponsorButtonLabel: 'Sponsor Us!'});
+    }
   }
 
   render() {
@@ -28,16 +42,16 @@ class ContactSponsorUs extends Component {
           <br />
           Join our sponsors team!
         </h2>
-        <ContactSponsorPackages packagesData={ this.sponsorsData } />
+        <ContactSponsorPackages packagesData={ this.sponsorsData } language={ this.state.language } />
         <Row>
           <Col md={4} xs={12} className='offset-md-4 offset-0'>
             <button onClick={ this.sponsorUsCallback } className='btn contact-sponsor-us-btn mt-4' variant='outline-primary'>
-              Sponsor Us!
+              { this.state.sponsorButtonLabel }
             </button>
           </Col>
           <Col md={3} xs={12} style={{ alignSelf: "center" }}>
-            <button className='btn contact-translate-sponsor-us-btn mt-4' variant='outline-primary'>
-              Translate to english
+            <button onClick={ this.translateTo } className='btn contact-translate-sponsor-us-btn mt-4' variant='outline-primary'>
+              { this.state.translateLabel }
             </button>
           </Col>
         </Row>
