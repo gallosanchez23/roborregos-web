@@ -13,7 +13,7 @@ class ContactSponsorUs extends Component {
     this.sponsorsData = props.sponsorsData;
   
     this.sponsorUsCallback = this.sponsorUsCallback.bind(this);
-    this.translateTo = this.translateTo.bind(this);
+    this.translate = this.translate.bind(this);
 
     this.state = {
       language: 'en',
@@ -26,7 +26,7 @@ class ContactSponsorUs extends Component {
     window.open(this.sponsorsData.url_contact, '_blank');
   }
 
-  translateTo() {
+  translate() {
     if(this.state.language === 'en'){
       this.setState({ language: 'es', translateLabel: 'Traducir a inglés', sponsorButtonLabel: 'Patrocinanos!'});
     } else {
@@ -50,7 +50,7 @@ class ContactSponsorUs extends Component {
             </button>
           </Col>
           <Col md={3} xs={12} style={{ alignSelf: "center" }}>
-            <button onClick={ this.translateTo } className='btn contact-translate-sponsor-us-btn mt-4' variant='outline-primary'>
+            <button onClick={ this.translate } className='btn contact-translate-sponsor-us-btn mt-4' variant='outline-primary'>
               { this.state.translateLabel }
             </button>
           </Col>
