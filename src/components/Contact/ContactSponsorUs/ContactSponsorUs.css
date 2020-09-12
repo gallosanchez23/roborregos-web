@@ -30,15 +30,15 @@
   background-color: #13191E;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .contact-sponsor-us-btn {
     width: 30%;
     font-size: 25px;
   }
 
   .contact-translate-sponsor-us-btn {
-    width: 20%;
-    font-size: 15px;
+    width: min-content;
+    font-size: 16px;
   }
 }
 
