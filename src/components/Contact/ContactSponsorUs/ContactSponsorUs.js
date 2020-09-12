@@ -16,8 +16,11 @@ class ContactSponsorUs extends Component {
     this.translate = this.translate.bind(this);
 
     this.state = {
+      /** @type { string } */
       language: 'en',
+      /** @type { string } */
       translateLabel: 'Translate to spanish',
+      /** @type { string } */
       sponsorButtonLabel: 'Sponsor us!'
     };
   }
@@ -27,7 +30,7 @@ class ContactSponsorUs extends Component {
   }
 
   translate() {
-    if(this.state.language === 'en'){
+    if(this.state.language === 'en') {
       this.setState({ language: 'es', translateLabel: 'Traducir a inglés', sponsorButtonLabel: 'Patrocinanos!'});
     } else {
       this.setState({ language: 'en', translateLabel: 'Translate to spanish', sponsorButtonLabel: 'Sponsor Us!'});
@@ -44,12 +47,12 @@ class ContactSponsorUs extends Component {
         </h2>
         <ContactSponsorPackages packagesData={ this.sponsorsData } language={ this.state.language } />
         <Row>
-          <Col md={4} xs={12} className='offset-md-4 offset-0'>
+          <Col md={ 4 } xs={ 12 } className='offset-md-4 offset-0'>
             <button onClick={ this.sponsorUsCallback } className='btn contact-sponsor-us-btn mt-4' variant='outline-primary'>
               { this.state.sponsorButtonLabel }
             </button>
           </Col>
-          <Col md={3} xs={12} style={{ alignSelf: "center" }}>
+          <Col md={ 3 } xs={ 12 } style={{ alignSelf: "center" }}>
             <button onClick={ this.translate } className='btn contact-translate-sponsor-us-btn mt-4' variant='outline-primary'>
               { this.state.translateLabel }
             </button>
