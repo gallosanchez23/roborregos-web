@@ -9,52 +9,71 @@ You can consult the application on production at [roborregos.com](https://roborr
 ## Table of contents
 
 - [RoBorregos Web](#roborregos-web)
-	- [Table of contents](#table-of-contents)
-	- [Project details](#project-details)
-		- [Development team](#development-team)
-		- [Environment URLs](#environment-urls)
-		- [Management tools](#management-tools)
-	- [Development](#development)
-		- [Setup](#setup)
-		- [Running the stack for development](#running-the-stack-for-development)
-		- [Stopping services](#stopping-services)
+  - [Table of contents](#table-of-contents)
+  - [Project details](#project-details)
+    - [Development team](#development-team)
+    - [Environment URLs](#environment-urls)
+    - [Management tools](#management-tools)
+  - [Development](#development)
+    - [VSCode setup](#vscode-setup)
+    - [Setup](#setup)
+    - [Running the stack for development](#running-the-stack-for-development)
+    - [Stopping services](#stopping-services)
 
 ## Project Details
 
 ### Development team
 
-| Name | Email | Github | Role |
-| ---- | ----- | ------ | ---- |
-| Aurora Tijerina Berzosa | [auro.tj@gmail.com](mailto:auro.tj@gmail.com) | [@aurotb](https://github.com/aurotb) | Developer |
-| Ricardo Chapa Romero | [ricardochaparomero@gmail.com](mailto:ricardochaparomero@gmail.com) | [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) | PM |
-| José Alfonso Cisneros | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com) | [@Josecisneros001](https://github.com/Josecisneros001) | Developer |
-| Omar Ulises Montiel | [omarume@gmail.com](mailto:omarume@gmail.com) | [@OUMontiel](https://github.com/OUMontiel) | Developer |
-| Ana Lucía Garza | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com) | [@AnaGarza](https://github.com/AnaGarza) | Designer |
+| Name                    | Email                                                               | Github                                                       | Role      |
+| ----------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------ | --------- |
+| Aurora Tijerina Berzosa | [auro.tj@gmail.com](mailto:auro.tj@gmail.com)                       | [@aurotb](https://github.com/aurotb)                         | Developer |
+| Ricardo Chapa Romero    | [ricardochaparomero@gmail.com](mailto:ricardochaparomero@gmail.com) | [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) | PM        |
+| José Alfonso Cisneros   | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com)         | [@Josecisneros001](https://github.com/Josecisneros001)       | Developer |
+| Omar Ulises Montiel     | [omarume@gmail.com](mailto:omarume@gmail.com)                       | [@OUMontiel](https://github.com/OUMontiel)                   | Developer |
+| Ana Lucía Garza         | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com)     | [@AnaGarza](https://github.com/AnaGarza)                     | Designer  |
 
 ### Environment URLs
 
-* **Production** - [roborregos.com](https://roborregos.com)
+- **Production** - [roborregos.com](https://roborregos.com)
 
 ### Management tools
 
 You should ask for access to these tools if you don't have it already:
 
-* [Github repo](https://github.com/gallosanchez23/roborregos-web)
-* [Heroku](https://www.heroku.com/)
-* [InVision](https://claragutierrez948964.invisionapp.com/prototype/RoBorregos-Web-ck7wek80a00nuq301lmd3k920?v=LLi6aocBvdMc49RvTuq1sg%3D%3D&linkshare=urlcopied)
-* [Google Drive](https://drive.google.com/drive/folders/1dZeA8SSFkDSlj61sY3vJiCqCYluquqlw?usp=sharing)
+- [Github repo](https://github.com/gallosanchez23/roborregos-web)
+- [Heroku](https://www.heroku.com/)
+- [InVision](https://claragutierrez948964.invisionapp.com/prototype/RoBorregos-Web-ck7wek80a00nuq301lmd3k920?v=LLi6aocBvdMc49RvTuq1sg%3D%3D&linkshare=urlcopied)
+- [Google Drive](https://drive.google.com/drive/folders/1dZeA8SSFkDSlj61sY3vJiCqCYluquqlw?usp=sharing)
 
 ## Development
 
-### Setup
+### VSCode setup
+
+For the development of the project the following tools will be used:
+
+- [ESLint](https://eslint.org/): Following Airbnb's style.
+- [Flow](https://flow.org/): A static type checker for Javascript.
+- [Babel](https://babeljs.io/): A javascript compiler, which is required for Flow.
+- [Jest](https://jestjs.io/): The main Javascript test framework.
+
+It is strongly recommended to use VSCode in order tu automatize some of the checks used by the tools above mentioned. For that, install the following extensions:
+
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): to check automatically syntax errors and fix them.
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): to tell prettier to use eslint syntax.
+- [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode): to show flow's errors on intellisense
+- [Babel ES6/ES7](https://marketplace.visualstudio.com/items?itemName=dzannotti.vscode-babel-coloring): this one is optional, and it helps to visualize better the code in the most recent standard.
+
+Once installed, everything should be running smoothly, because the setting.json is already configured.
+
+### Project setup
 
 Before setting up the project, you should have installed the following development tools:
 
-* [Git](https://git-scm.com/downloads)
-* [Docker](https://runnable.com/docker/getting-started/)
-* [Docker Compose](https://docs.docker.com/compose/install/)
-* [Plis](https://github.com/IcaliaLabs/plis) (optional, but highly recommended)
-* [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
+- [Git](https://git-scm.com/downloads)
+- [Docker](https://runnable.com/docker/getting-started/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Plis](https://github.com/IcaliaLabs/plis) (optional, but highly recommended)
+- [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 
 Once you have installed the required third-party software, you can follow this steps:
 
@@ -62,36 +81,37 @@ Once you have installed the required third-party software, you can follow this s
 
 1. Clone the project repository on your local machine.
 
-	SSH:
+   SSH:
 
-	```bash
-	$ git clone git@github.com:gallosanchez23/roborregos-web.git
-	```
+   ```bash
+   $ git clone git@github.com:gallosanchez23/roborregos-web.git
+   ```
 
-	or HTTPS:
-	```bash
-	$ git clone https://github.com/gallosanchez23/roborregos-web.git
-	```
+   or HTTPS:
+
+   ```bash
+   $ git clone https://github.com/gallosanchez23/roborregos-web.git
+   ```
 
 2. You will need to create the node_modules directory needed to run react apps.
 
-	```bash
-	$ yarn install
-	```
+   ```bash
+   $ yarn install
+   ```
 
 3. Create the Docker image.
 
-	`plis`:
+   `plis`:
 
-	```bash
-	$ plis build
-	```
+   ```bash
+   $ plis build
+   ```
 
-	`docker-compose`:
+   `docker-compose`:
 
-	```bash
-	$ docker-compose build
-	```
+   ```bash
+   $ docker-compose build
+   ```
 
 ### Running the stack for development
 
@@ -125,7 +145,7 @@ $ docker-compose up -d
 
 If the service is already running, you can run the command `plis attach frontend-web` to attach current service's logs.
 
-***NOTE: You can allways run `plis run frontend-web bash` or `docker-compose run frontend-web bash` commands to enter the container's console.***
+**_NOTE: You can allways run `plis run frontend-web bash` or `docker-compose run frontend-web bash` commands to enter the container's console._**
 
 ### Stopping services
 
