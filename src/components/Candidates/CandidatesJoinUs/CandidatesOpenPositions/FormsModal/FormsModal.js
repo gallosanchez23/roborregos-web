@@ -47,23 +47,23 @@ class FormsModal extends Component {
             <Form onSubmit={ this.handleSubmit }>
             <Row> 
               <FormGroup className="col-md-6">
-                <Label>Nombre</Label>
+                <Label>Name</Label>
                 <Input type="text" id="name" placeholder="Juanito"
                   innerRef={ (input) => { this.name = input } } />
               </FormGroup>
               <FormGroup className="col-md-6">
-                <Label>Matricula</Label>
+                <Label>Matricualtion Number</Label>
                 <Input type="text" id="matricualtionNumber" placeholder="A01283070"
                   innerRef={ (input) => { this.matricualtionNumber = input } } />
               </FormGroup>
               <FormGroup className="col-md-6">
-                <Label>Carrera</Label>
+                <Label>Career</Label>
                 <Input type="text" id="career" placeholder="IMT"
                   innerRef={ (input) => { this.career = input } }>
                 </Input>
               </FormGroup>
               <FormGroup className="col-md-6">
-                <Label>Semestre</Label>
+                <Label>Semester</Label>
                 <Input type="select" id="semester"
                   innerRef={ (input) => { this.semester = input } }>
                   <option value=""></option>
@@ -79,8 +79,8 @@ class FormsModal extends Component {
                 </Input>
               </FormGroup>
               <FormGroup className="col-12">
-                <Label>Cuéntanos sobre ti</Label>
-                <Input type="textarea" id="comments" placeholder="¿Por qué quieres entrar al equipo?"
+                <Label>Tell us about you</Label>
+                <Input type="textarea" id="comments" placeholder="Why you want to join the team?"
                   innerRef={ (input) => { this.comments = input } }>
                 </Input>
               </FormGroup>
