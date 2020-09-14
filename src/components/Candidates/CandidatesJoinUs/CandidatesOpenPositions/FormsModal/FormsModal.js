@@ -52,7 +52,7 @@ class FormsModal extends Component {
                   innerRef={ (input) => { this.name = input } } />
               </FormGroup>
               <FormGroup className="col-md-6">
-                <Label>Matricualtion Number</Label>
+                <Label>Matriculation Number</Label>
                 <Input type="text" id="matricualtionNumber" placeholder="A01283070"
                   innerRef={ (input) => { this.matricualtionNumber = input } } />
               </FormGroup>
