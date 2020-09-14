@@ -19,7 +19,7 @@ class ContactSponsorUs extends Component {
       /** @type { string } */
       language: 'en',
       /** @type { string } */
-      translateLabel: 'Translate to spanish',
+      translateLabel: 'Traducir a español',
       /** @type { string } */
       sponsorButtonLabel: 'Sponsor us!'
     };
@@ -31,9 +31,9 @@ class ContactSponsorUs extends Component {
 
   translate() {
     if(this.state.language === 'en') {
-      this.setState({ language: 'es', translateLabel: 'Traducir a inglés', sponsorButtonLabel: 'Patrocinanos!'});
+      this.setState({ language: 'es', translateLabel: 'Translate to english', sponsorButtonLabel: 'Patrocinanos!' });
     } else {
-      this.setState({ language: 'en', translateLabel: 'Translate to spanish', sponsorButtonLabel: 'Sponsor Us!'});
+      this.setState({ language: 'en', translateLabel: 'Traducir a español', sponsorButtonLabel: 'Sponsor Us!' });
     }
   }
 
