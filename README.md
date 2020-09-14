@@ -1,4 +1,7 @@
-# RoBorregos Web
+<img src="public/images/black_icon.ico" width="80" ><img> 
+
+# RoBorregos Web                 
+
 
 Front-end web app for the official RoBorregos' (international robotics team) web site.
 Developed by RoBorregos' members and colaborators, in order to publish general
