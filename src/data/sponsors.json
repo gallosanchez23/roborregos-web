@@ -32,16 +32,17 @@
           "Logo en nuestras playeras (espalda chico)",
           "Logo en nuestra página oficial (chico)",
           "Logo en lona del equipo (chico)"
-        ],
+        ]
+        ,
         "en":[
-          
+
         ]
       }
       
     },
     {
       "name" : "Led",
-      "benefits_es" : {
+      "benefits" : {
         "es":[
           "12 menciones genéricas en redes sociales (u/c mes)",
           "2 publicaciones personalizadas en Facebook (u/c semestre)",

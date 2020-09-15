@@ -1,10 +1,12 @@
+import './ContactSponsorPackages.css';
+
+import { Col, Row } from 'react-bootstrap';
 import React, { Component } from 'react';
+
 import Card from 'react-bootstrap/Card';
-import { Row, Col } from 'react-bootstrap';
-import logo from 'images/white_logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import './ContactSponsorPackages.css';
+import logo from 'images/white_logo.png';
 
 class ContactSponsorPackages extends Component {
   constructor(props) {
@@ -29,7 +31,7 @@ class ContactSponsorPackages extends Component {
                       { pkg.name }
                     </h4>
                     <hr />
-                    { pkg.benefits.map(benefit => (
+                    { pkg.benefits.es.map(benefit => (
                       <div className='benefit-container'>
                         <div className='benefit-icon'>
                           <FontAwesomeIcon icon={ faCheckCircle } className='mr-2' />
