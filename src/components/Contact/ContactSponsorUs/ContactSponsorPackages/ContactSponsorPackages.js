@@ -23,8 +23,8 @@ class ContactSponsorPackages extends Component {
   * Component needs to update every time we change the props in the parent component (button to change idiom)
   * by this we set a new state every time this happens.
   */
-  componentDidUpdate( prevProps ){
-    if(prevProps.language !== this.props.language){
+  componentDidUpdate( prevProps ) {
+    if(prevProps.language !== this.props.language) {
       this.setState({ language: this.props.language });
     }
   }
