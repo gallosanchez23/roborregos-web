@@ -21,7 +21,9 @@ class ContactSponsorUs extends Component {
       /** @type { string } */
       translateLabel: 'Traducir a español',
       /** @type { string } */
-      sponsorButtonLabel: 'Sponsor us!'
+      sponsorButtonLabel: 'Sponsor us!',
+      /** @type { string } */
+      title: ['Would you like to support RoBorregos?', 'Join our sponsors team!']
     };
   }
 
@@ -31,9 +33,19 @@ class ContactSponsorUs extends Component {
 
   translate() {
     if(this.state.language === 'en') {
-      this.setState({ language: 'es', translateLabel: 'Translate to english', sponsorButtonLabel: 'Patrocinanos!' });
+      this.setState({ 
+        language: 'es', 
+        translateLabel: 
+        'Translate to english', 
+        sponsorButtonLabel: 'Patrocinanos!', 
+        title: ['Te gustaría apoyar a RoBorregos?', 'Sé uno de nuestros patrocinadores!']
+      });
     } else {
-      this.setState({ language: 'en', translateLabel: 'Traducir a español', sponsorButtonLabel: 'Sponsor Us!' });
+      this.setState({ language: 'en', 
+      translateLabel: 'Traducir a español', 
+      sponsorButtonLabel: 'Sponsor Us!',
+      title: ['Would you like to support RoBorregos?', 'Join our sponsors team!']
+     });
     }
   }
 
@@ -41,9 +53,9 @@ class ContactSponsorUs extends Component {
     return(
       <div id='contact-sponsor-us' className='contact-sponsor-us'>
         <h2>
-          Would you like to support RoBorregos?
-          <br />
-          Join our sponsors team!
+        { this.state.title[0] }
+        <br/>
+        { this.state.title[1] }
         </h2>
         <ContactSponsorPackages packagesData={ this.sponsorsData } language={ this.state.language } />
         <Row>
