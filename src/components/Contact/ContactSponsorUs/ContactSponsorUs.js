@@ -57,9 +57,9 @@ class ContactSponsorUs extends Component {
     return(
       <div id='contact-sponsor-us' className='contact-sponsor-us'>
         <h2>
-        { this.state.title[0] }
-        <br/>
-        { this.state.title[1] }
+          { this.state.title[0] }
+          <br/>
+          { this.state.title[1] }
         </h2>
         <ContactSponsorPackages packagesData={ this.sponsorsData } language={ this.state.language } />
         <Row>
