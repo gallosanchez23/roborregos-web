@@ -25,73 +25,127 @@
   "packages": [
     {
       "name" : "Jumper",
-      "benefits" : {
-        "es":[
-          "6 menciones genéricas en redes sociales (u/c bimestre)",
-          "Invitación a eventos y newsletters",
-          "Logo en nuestras playeras (espalda chico)",
-          "Logo en nuestra página oficial (chico)",
-          "Logo en lona del equipo (chico)"
-        ]
-        ,
-        "en":[
-
-        ]
-      }
-      
+      "benefits" : [
+        {
+          "es": "6 menciones genéricas en redes sociales (u/c bimestre)",
+          "en": ""
+        },
+        {
+          "es": "Invitación a eventos y newsletters",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestras playeras (espalda chico)",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestra página oficial (chico)",
+          "en": ""
+        },
+        {
+          "es": "Logo en lona del equipo (chico)",
+          "en": ""
+        }
+      ]
     },
     {
       "name" : "Led",
-      "benefits" : {
-        "es":[
-          "12 menciones genéricas en redes sociales (u/c mes)",
-          "2 publicaciones personalizadas en Facebook (u/c semestre)",
-          "Invitación a eventos y newsletters",
-          "Logo en nuestras playeras (espalda mediano)",
-          "Logo en nuestra página oficial (mediano)",
-          "Logo en lona del equipo (mediano)",
-          "Logo en nuestros robots (chico)"
-        ],
-        "en":[
-
-        ]
-      }
-      
+      "benefits" : [
+        {
+          "es": "12 menciones genéricas en redes sociales (u/c mes)",
+          "en": ""
+        },
+        {
+          "es": "2 publicaciones personalizadas en Facebook (u/c semestre)",
+          "en": ""
+        },
+        {
+          "es": "Invitación a eventos y newsletters",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestras playeras (espalda mediano)",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestra página oficial (mediano)",
+          "en": ""
+        },
+        {
+          "es": "Logo en lona del equipo (mediano)",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestros robots (chico)",
+          "en": ""
+        }
+      ]
     },
     {
       "name" : "Motor",
-      "benefits" : {
-        "es":[
-          "24 menciones genéricas en redes sociales (2 c/mes)",
-          "4 publicaciones personalizadas en Facebook (2 c/semestre)",
-          "Invitación a eventos y newsletters",
-          "Logo en nuestras playeras (frente mediano)",
-          "Logo en nuestra página oficial (mediano)",
-          "Logo en lona del equipo (mediano)",
-          "Logo en nuestros robots (mediano)"
-        ],
-        "en":[
-
-        ]
-      }
-      
+      "benefits" : [
+        {
+          "es": "24 menciones genéricas en redes sociales (2 c/mes)",
+          "en": ""
+        },
+        {
+          "es": "4 publicaciones personalizadas en Facebook (2 c/semestre)",
+          "en": ""
+        },
+        {
+          "es": "Invitación a eventos y newsletters",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestras playeras (frente mediano)",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestra página oficial (mediano)",
+          "en": ""
+        },
+        {
+          "es": "Logo en lona del equipo (mediano)",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestros robots (mediano)",
+          "en": ""
+        }
+      ]
     },
     {
       "name" : "Robot",
-      "benefits" : {
-        "es":[
-          "24 menciones genéricas en redes sociales (2 c/mes)",
-          "6 publicaciones personalizadas en Facebook (3 c/semestre)",
-          "Invitación a eventos y newsletters",
-          "Logo en nuestras playeras (frente grande)",
-          "Logo en nuestra página oficial (grande)",
-          "Logo en lona del equipo (grande)",
-          "Logo en nuestros robots (grande)"
-        ],
-        "en":[
-
-        ]
-      }
+      "benefits" : [
+        {
+          "es": "24 menciones genéricas en redes sociales (2 c/mes)",
+          "en": ""
+        },
+        {
+          "es": "6 publicaciones personalizadas en Facebook (3 c/semestre)",
+          "en": ""
+        },
+        {
+          "es": "Invitación a eventos y newsletters",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestras playeras (frente grande)",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestra página oficial (grande)",
+          "en": ""
+        },
+        {
+          "es": "Logo en lona del equipo (grande)",
+          "en": ""
+        },
+        {
+          "es": "Logo en nuestros robots (grande)",
+          "en": ""
+        }
+      ]
     }
   ]
 }
