@@ -19,6 +19,7 @@ You can consult the application on production at [roborregos.com](https://roborr
     - [Setup](#setup)
     - [Running the stack for development](#running-the-stack-for-development)
     - [Stopping services](#stopping-services)
+    - [Check your code](#check-your-code)
 
 ## Project Details
 
@@ -51,7 +52,7 @@ You should ask for access to these tools if you don't have it already:
 
 For the development of the project the following tools will be used:
 
-- [ESLint](https://eslint.org/): Following Airbnb's style.
+- [ESLint](https://eslint.org/): Following Airbnb's style and using the es2020 standard.
 - [Flow](https://flow.org/): A static type checker for Javascript.
 - [Babel](https://babeljs.io/): A javascript compiler, which is required for Flow.
 - [Jest](https://jestjs.io/): The main Javascript test framework.
@@ -60,8 +61,11 @@ It is strongly recommended to use VSCode in order tu automatize some of the chec
 
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): to check automatically syntax errors and fix them.
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): to tell prettier to use eslint syntax.
+
+**_NOTE: The following are not as strongly recommended, but are helpful too._**
+
 - [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode): to show flow's errors on intellisense
-- [Babel ES6/ES7](https://marketplace.visualstudio.com/items?itemName=dzannotti.vscode-babel-coloring): this one is optional, and it helps to visualize better the code in the most recent standard.
+- [Babel ES6/ES7](https://marketplace.visualstudio.com/items?itemName=dzannotti.vscode-babel-coloring): it helps to visualize better the code in the most recent standard.
 
 Once installed, everything should be running smoothly, because the setting.json is already configured.
 
@@ -77,7 +81,7 @@ Before setting up the project, you should have installed the following developme
 
 Once you have installed the required third-party software, you can follow this steps:
 
-***NOTE: You may need sudo privileges to run some of these commands.***
+**_NOTE: You may need sudo privileges to run some of these commands._**
 
 1. Clone the project repository on your local machine.
 
@@ -190,3 +194,31 @@ $ plis stop frontend-web
 ```bash
 $ docker-compose stop frontend-web
 ```
+
+### Check your code
+
+Before uploading any code to the repository, be sure to run the following checks:
+
+1. **Pass the eslint checker.** This is done automatically if you've installed the vscode extension. However, to do a manual check, simply run:
+
+```bash
+$ yarn eslint src
+```
+
+Or insted of `src`, you can select the specific file. I.e. `src/App.js`
+
+2. **Pass the flow checker.** This could be done automatically if you've installed the vscode extension. However, it is good to do a manual check. For that, first check that your files have the following comment on the first line:
+
+```
+// @flow
+```
+
+And then simply run:
+
+```bash
+$ yarn flow check src
+```
+
+Or insted of `src`, you can select the specific file. I.e. `src/App.js`
+
+**_NOTE: If you strongly disagree with one of the errors, please talk to the PM [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) about it, and this could become a rule exception_**
