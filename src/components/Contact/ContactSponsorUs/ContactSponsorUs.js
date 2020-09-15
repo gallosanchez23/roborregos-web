@@ -22,7 +22,7 @@ class ContactSponsorUs extends Component {
       translateLabel: 'Traducir a español',
       /** @type { string } */
       sponsorButtonLabel: 'Sponsor us!',
-      /** @type { string } */
+      /** @type { !Array<string> } */
       title: ['Would you like to support RoBorregos?', 'Join our sponsors team!']
     };
   }
@@ -31,6 +31,9 @@ class ContactSponsorUs extends Component {
     window.open(this.sponsorsData.url_contact, '_blank');
   }
 
+  /**
+   * Do the change of the state parameters when the language changes (language, translate button label, and title).
+   */
   translate() {
     if(this.state.language === 'en') {
       this.setState({ 
@@ -41,10 +44,11 @@ class ContactSponsorUs extends Component {
         title: ['Te gustaría apoyar a RoBorregos?', 'Sé uno de nuestros patrocinadores!']
       });
     } else {
-      this.setState({ language: 'en', 
-      translateLabel: 'Traducir a español', 
-      sponsorButtonLabel: 'Sponsor Us!',
-      title: ['Would you like to support RoBorregos?', 'Join our sponsors team!']
+      this.setState({ 
+        language: 'en', 
+        translateLabel: 'Traducir a español', 
+        sponsorButtonLabel: 'Sponsor Us!',
+        title: ['Would you like to support RoBorregos?', 'Join our sponsors team!']
      });
     }
   }
