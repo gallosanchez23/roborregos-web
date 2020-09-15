@@ -57,14 +57,13 @@ For the development of the project the following tools will be used:
 - [Babel](https://babeljs.io/): A javascript compiler, which is required for Flow.
 - [Jest](https://jestjs.io/): The main Javascript test framework.
 
-It is strongly recommended to use VSCode in order tu automatize some of the checks used by the tools above mentioned. For that, install the following extensions:
+It is strongly recommended to use VSCode in order tu automatize some of the checks used by the tools above mentioned. For that, install the following extension:
 
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): to check automatically syntax errors and fix them.
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): to tell prettier to use eslint syntax.
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): to check automatically syntax errors and fix them.
 
 **_NOTE: The following are not as strongly recommended, but are helpful too._**
 
-- [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode): to show flow's errors on intellisense
+- [Flow Language Support](https://marketplace.visualstudio.com/items?itemName=flowtype.flow-for-vscode): to show flow's errors on intellisense.
 - [Babel ES6/ES7](https://marketplace.visualstudio.com/items?itemName=dzannotti.vscode-babel-coloring): it helps to visualize better the code in the most recent standard.
 
 Once installed, everything should be running smoothly, because the setting.json is already configured.
@@ -206,6 +205,51 @@ $ yarn eslint src
 ```
 
 Or insted of `src`, you can select the specific file. I.e. `src/App.js`
+
+If this is failing with an error related to `Environment key "es2020" is unknown`, follow the next steps:
+
+```bash
+$ yarn eslint --init
+```
+
+Now you will be asked a series of questions, select with the arrow keys the following answer to each of the questions and press enter to confirm:
+
+```bash
+How would you like to use ESLint?
+$ To check syntax, find problems, and enforce code style
+```
+
+```bash
+What type of modules does your project use?
+$ JavaScript modules (import/export)
+```
+
+```bash
+Which framework does your project use?
+$ React
+```
+
+```bash
+Where does your code run? (Press <space> to select, <a> to toggle all, <i> to invert selection)
+$ Browser
+```
+
+```bash
+How would you like to define a style for your project? 
+$ Use a popular style guide
+```
+
+```bash
+Which style guide do you want to follow?
+$ Airbnb (https://github.com/airbnb/javascript)
+```
+
+```bash
+What format do you want your config file to be in?
+$ JSON
+```
+
+Then it will ask you to install some dependencies with npm. Select `Yes`. Finally, the `.eslintrc.json` file will have a different configuration; simply make sure to revert the changes on the file.
 
 2. **Pass the flow checker.** This could be done automatically if you've installed the vscode extension. However, it is good to do a manual check. For that, first check that your files have the following comment on the first line:
 

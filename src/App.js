@@ -23,7 +23,7 @@ class App extends Component<Props> {
   }
 
   render () {
-    document.title = 'RoBorregoas'
+    document.title = 'RoBorregos'
 
     return (
       <Router>

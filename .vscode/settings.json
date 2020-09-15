@@ -1,22 +1,21 @@
 {
-  // Format a file on save. A formatter must be available,
-  // the file must not be auto-saved, and editor must not be shutting down.
-  // "editor.formatOnSave": true,
-
   // Support using flow through your node_modules folder,
   // WARNING: Checking this box is a security risk.
   // When you open a project we will immediately run code contained within it.
+  // SECOND WARNING: It slows down a lot VSCode.
   // "flow.useNPMPackagedFlow": false,
 
   // Enable/disable JavaScript validation. (For Flow)
   "javascript.validate.enable": false,
 
-  // Enable/disable default JavaScript formatter (For Prettier)
+  // Enable/disable default JavaScript formatter (For Eslint)
   "javascript.format.enable": false,
 
-  // Configure prettier to use eslint and fix the errors when formatting.
+  // Eslint configuration. It anebles eslint to become the linter, and to
+  // run it on save to fix the issues as a formatter.
+  "eslint.lintTask.enable": true,
+  "eslint.run": "onSave",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
-  "cmake.configureOnOpen": false
+  }
 }
