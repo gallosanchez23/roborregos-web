@@ -13,6 +13,20 @@ class ContactSponsorPackages extends Component {
     super(props);
 
     this.packages = props.packagesData.packages;
+    this.state = { 
+      /** @type {string} language */
+      language: props.language
+    };
+  }
+
+  /* 
+  * Component needs to update every time we change the props in the parent component (button to change idiom)
+  * by this we set a new state every time this happens.
+  */
+  componentDidUpdate( prevProps ){
+    if(prevProps.language !== this.props.language){
+      this.setState({ language: this.props.language });
+    }
   }
 
   render() {
@@ -31,13 +45,13 @@ class ContactSponsorPackages extends Component {
                       { pkg.name }
                     </h4>
                     <hr />
-                    { pkg.benefits.es.map(benefit => (
+                    { pkg.benefits.map(benefit => (
                       <div className='benefit-container'>
                         <div className='benefit-icon'>
                           <FontAwesomeIcon icon={ faCheckCircle } className='mr-2' />
                         </div>
-                        <div className='benefit-text'>
-                          { benefit }
+                        <div className='benefit-text'> 
+                          {  this.state.language === 'es'? benefit.es : benefit.en }
                         </div>
                       </div>
                     )) }
