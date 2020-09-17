@@ -21,17 +21,21 @@ class MembersGrid extends Component {
     this.numberOfColumns       = this.numberOfColumns.bind(this);
     this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
     this.generateGridList      = this.generateGridList.bind(this);
+    this.keyFunction         = this.keyFunction.bind(this);
 
-    this.members = props.members;
-
+    this.active_members_keys = this.props.active_members.map(member => (member.id));
+    this.inactive_members_keys = this.props.inactive_members.map(member => (member.id));
+    
     this.state = {
       show_modal: false,
       member: this.props.active_members[0],
+      active: true,
       number_of_columns: this.numberOfColumns(),
     }
   }
 
   componentDidMount() {
+    document.addEventListener('keydown', this.keyFunction, false);
     window.addEventListener('resize', this.updateNumberOfColumns);
   }
 
@@ -55,10 +59,33 @@ class MembersGrid extends Component {
     }
   }
 
+  keyFunction(event){
+    var difference = (event.keyCode === 37)?-1:(event.keyCode === 39)?1:0;
+    if(this.state.active && ((this.active_members_keys.indexOf(this.state.member.id) >= this.props.active_members.length - 1 && difference === 1) || (this.active_members_keys.indexOf(this.state.member.id) === 0 && difference === -1))){
+      return;
+    }else if((this.inactive_members_keys.indexOf(this.state.member.id) >= this.props.inactive_members.length - 1 && difference === 1) || (this.inactive_members_keys.indexOf(this.state.member.id) === 0 && difference === -1)){
+      return;
+    }
+    
+    this.handleHideModal();
+    if(this.state.active){
+      this.setState({
+        member: this.props.active_members[this.active_members_keys.indexOf(this.state.member.id) + difference],
+      });
+    }else{
+      this.setState({
+        member: this.props.inactive_members[this.inactive_members_keys.indexOf(this.state.member.id) + difference],
+      });
+    }
+    this.handleShowModal(this.state.member);
+    //window.alert(this.state.member.name);
+  }
+
   handleShowModal(member, event) {
     this.setState({
       show_modal: true,
       member: member,
+      active: this.active_members_keys.includes(member.id),
     });
   }
 

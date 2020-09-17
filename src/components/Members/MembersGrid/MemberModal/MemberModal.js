@@ -19,21 +19,12 @@ class MemberModal extends Component {
     this.updateSizeView      = this.updateSizeView.bind(this);
     this.getContactButton    = this.getContactButton.bind(this);
     this.generateDataButtons = this.generateDataButtons.bind(this);
-    this.keyFunction         = this.keyFunction.bind(this);
 
     this.member          = props.member;
     this.handleHideModal = props.onHide;
 
     this.state = {
       show_large: (window.innerWidth >= MEDIUM_WIDTH) ? true : false,
-    }
-  }
-
-  keyFunction(event){
-    if(event.keyCode === 27) {
-      this.setState({
-        handleHideModal: true
-      });
     }
   }
 

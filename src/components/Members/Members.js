@@ -8,7 +8,6 @@ import './Members.css';
 class Members extends Component {
   constructor(props) {
     super(props);
-
     this.members = props.membersData.members;
   }
 
