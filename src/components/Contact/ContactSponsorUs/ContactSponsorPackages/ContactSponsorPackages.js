@@ -24,7 +24,7 @@ class ContactSponsorPackages extends Component {
   * by this we set a new state every time this happens.
   */
   componentDidUpdate( prevProps ) {
-    if(prevProps.language !== this.props.language) {
+    if (prevProps.language !== this.props.language) {
       this.setState({ language: this.props.language });
     }
   }

@@ -35,7 +35,7 @@ class ContactSponsorUs extends Component {
    * Do the change of the state parameters when the language changes (language, translate button label, and title).
    */
   translate() {
-    if(this.state.language === 'en') {
+    if (this.state.language === 'en') {
       this.setState({ 
         language: 'es', 
         translateLabel: 
