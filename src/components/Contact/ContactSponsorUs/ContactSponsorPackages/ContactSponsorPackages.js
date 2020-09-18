@@ -1,16 +1,32 @@
+import './ContactSponsorPackages.css';
+
+import { Col, Row } from 'react-bootstrap';
 import React, { Component } from 'react';
+
 import Card from 'react-bootstrap/Card';
-import { Row, Col } from 'react-bootstrap';
-import logo from 'images/white_logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import './ContactSponsorPackages.css';
+import logo from 'images/white_logo.png';
 
 class ContactSponsorPackages extends Component {
   constructor(props) {
     super(props);
 
     this.packages = props.packagesData.packages;
+    this.state = { 
+      /** @type {string} language */
+      language: props.language
+    };
+  }
+
+  /* 
+  * Component needs to update every time we change the props in the parent component (button to change idiom)
+  * by this we set a new state every time this happens.
+  */
+  componentDidUpdate( prevProps ) {
+    if (prevProps.language !== this.props.language) {
+      this.setState({ language: this.props.language });
+    }
   }
 
   render() {
@@ -34,8 +50,8 @@ class ContactSponsorPackages extends Component {
                         <div className='benefit-icon'>
                           <FontAwesomeIcon icon={ faCheckCircle } className='mr-2' />
                         </div>
-                        <div className='benefit-text'>
-                          { benefit }
+                        <div className='benefit-text'> 
+                          {  this.state.language === 'es'? benefit.es : benefit.en }
                         </div>
                       </div>
                     )) }
