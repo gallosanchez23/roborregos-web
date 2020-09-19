@@ -92,7 +92,7 @@ class HomeInformation extends Component {
                 Events & Outreach
               </div>
               <div className='home-information-simple'>
-                We participate in congresses and events such as INCMty, Conexión Tec, The International Congress of Mechatronics - Automatization and Technology, Semana i &nbsp;and&nbsp;many&nbsp;more.&nbsp;
+                We participate in congresses and events such as INCMty, Conexión Tec, The International Congress of Mechatronics - Automatization and Technology, Semana i and&nbsp;many&nbsp;more.
               </div>
             </div>
           </div>
