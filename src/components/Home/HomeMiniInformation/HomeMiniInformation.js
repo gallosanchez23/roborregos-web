@@ -40,7 +40,7 @@ class HomeMiniInformation extends Component {
                   </div>
                 </div>
                 <h5 className='icon-legend'>
-                  Internationally known
+                  Globally known
                 </h5>
               </Col>
             </Row>
