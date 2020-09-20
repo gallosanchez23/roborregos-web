@@ -66,7 +66,7 @@ class HomeInformation extends Component {
                 High-Performance Team
               </div>
               <div className='home-information-simple'>
-                We participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, want to demonstrate the potential of Mexico in the development and innovation&nbsp;of&nbsp;technology.
+                We participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, we want to demonstrate the potential of Mexico in the development and innovation&nbsp;of&nbsp;technology.
               </div>
             </div>
           </div>

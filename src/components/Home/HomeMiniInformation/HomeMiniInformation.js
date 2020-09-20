@@ -20,7 +20,7 @@ class HomeMiniInformation extends Component {
                   </div>
                 </div>
                 <h5 className='icon-legend'>
-                  40 members
+                  46 members
                 </h5>
               </Col>
               <Col className='col-icon' xs={{ span: 3, offset: 1 }}>
