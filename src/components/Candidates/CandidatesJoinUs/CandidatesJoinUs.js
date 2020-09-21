@@ -30,7 +30,7 @@ class CandidatesJoinUs extends Component {
         <Row>
           <Col className='candidates-join-us-btn-container'>
             <button onClick={ this.joinUsCallback } className='candidates-join-us-btn' variant='outline-primary'>
-              Join Us!
+              Talk with us!
             </button>
           </Col>
         </Row>

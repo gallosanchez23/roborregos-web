@@ -47,7 +47,10 @@ class NavBar extends Component {
         <Navbar.Brand
           as={ Link }
           to='/'
-          onClick={ this.handleNavbarClick.bind(this, '/') }
+          onClick={() =>{
+            this.handleNavbarClick.bind(this, '/')
+            this.closeNavbar()
+          }}
         >
           <img
             id='navbar-logo'
@@ -66,7 +69,10 @@ class NavBar extends Component {
                 className={ this.getClassName(route.path) }
                 as={ Link }
                 to={ route.path }
-                onClick={ this.handleNavbarClick.bind(this, route.path) }
+                onClick={() =>{
+                  this.handleNavbarClick.bind(this, route.path) 
+                  this.closeNavbar()
+                }}
               >
                 <div className='navbar-btn-legend'>
                   { route.legend }
