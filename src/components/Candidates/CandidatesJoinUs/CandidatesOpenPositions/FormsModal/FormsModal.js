@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, Label,Col, Input,Row, Modal, ModalHeader, ModalBody, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input,Row, Modal, ModalHeader, ModalBody, Button } from 'reactstrap';
 import './FormsModal.css';
 import emailjs from 'emailjs-com';
 

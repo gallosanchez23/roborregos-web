@@ -21,7 +21,7 @@ class HomeSponsors extends Component {
               </h3>
               <Row className='justify-content-sm-center'>
                 {this.sponsors.map((sponsor, index) =>(
-                  <Col sm='4' md='2' key={ index } className='sponsor-col' >
+                  <Col xs="6" sm='4' md='2' key={ index } className='sponsor-col' >
                     <HomeSingleSponsor
                       sponsor={ sponsor }
                     />
