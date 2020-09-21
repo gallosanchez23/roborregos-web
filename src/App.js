@@ -15,14 +15,14 @@ import membersData from './data/members.json'
 type Props = {};
 
 class App extends Component<Props> {
-  componentDidMount () {
+  componentDidMount() {
     loadCSS(
       'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
-      document.querySelector('#insertion-point-jss')
+      document.querySelector('#insertion-point-jss'),
     )
   }
 
-  render () {
+  render() {
     document.title = 'RoBorregos'
 
     return (

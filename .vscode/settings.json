@@ -11,7 +11,7 @@
   // Enable/disable default JavaScript formatter (For Eslint)
   "javascript.format.enable": false,
 
-  // Eslint configuration. It anebles eslint to become the linter, and to
+  // Eslint configuration. It enables eslint to become the linter, and to
   // run it on save to fix the issues as a formatter.
   "eslint.lintTask.enable": true,
   "eslint.run": "onSave",

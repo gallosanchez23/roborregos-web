@@ -204,65 +204,20 @@ Before uploading any code to the repository, be sure to run the following checks
 $ yarn eslint src
 ```
 
-Or insted of `src`, you can select the specific file. I.e. `src/App.js`
-
-If this is failing with an error related to `Environment key "es2020" is unknown`, follow the next steps:
-
-```bash
-$ yarn eslint --init
-```
-
-Now you will be asked a series of questions, select with the arrow keys the following answer to each of the questions and press enter to confirm:
-
-```bash
-How would you like to use ESLint?
-$ To check syntax, find problems, and enforce code style
-```
-
-```bash
-What type of modules does your project use?
-$ JavaScript modules (import/export)
-```
-
-```bash
-Which framework does your project use?
-$ React
-```
-
-```bash
-Where does your code run? (Press <space> to select, <a> to toggle all, <i> to invert selection)
-$ Browser
-```
-
-```bash
-How would you like to define a style for your project? 
-$ Use a popular style guide
-```
-
-```bash
-Which style guide do you want to follow?
-$ Airbnb (https://github.com/airbnb/javascript)
-```
-
-```bash
-What format do you want your config file to be in?
-$ JSON
-```
-
-Then it will ask you to install some dependencies with npm. Select `Yes`. Finally, the `.eslintrc.json` file will have a different configuration; simply make sure to revert the changes on the file.
-
 2. **Pass the flow checker.** This could be done automatically if you've installed the vscode extension. However, it is good to do a manual check. For that, first check that your files have the following comment on the first line:
 
 ```
 // @flow
 ```
 
-And then simply run:
+This comment tells flow to check the file. Finally simply run:
 
 ```bash
 $ yarn flow check src
 ```
 
 Or insted of `src`, you can select the specific file. I.e. `src/App.js`
+
+Alternatively, one can also run the `eslint-check` and `flow-check` scripts.
 
 **_NOTE: If you strongly disagree with one of the errors, please talk to the PM [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) about it, and this could become a rule exception_**
