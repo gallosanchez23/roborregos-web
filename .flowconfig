@@ -1,0 +1,16 @@
+[ignore]
+
+[untyped]
+# Flow will not run in the imported libraries.
+.*/node_modules/*
+
+[include]
+
+[libs]
+flow-typed
+
+[lints]
+
+[options]
+
+[strict]

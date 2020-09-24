@@ -1,4 +1,4 @@
-version: '3.3'
+version: "3.3"
 
 services:
   frontend-web:
@@ -11,3 +11,4 @@ services:
     ports:
       - 3000:3000
     command: bash -c "yarn && yarn start"
+    stdin_open: true
