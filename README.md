@@ -223,4 +223,13 @@ Or insted of `src`, you can select the specific file. I.e. `src/App.js`
 
 Alternatively, one can also run the `eslint-check` and `flow-check` scripts.
 
+
+3. **Pass the tests** This could be the most important step of all, because it ensures that nothing has been broken with your changes. To perform the check, run:
+
+```bash
+$ yarn test
+```
+
+Also, please remember to add the appropriate tests whenever you add a new functionality.
+
 **_NOTE: If you strongly disagree with one of the errors, please talk to the PM [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) about it, and this could become a rule exception_**
