@@ -179,9 +179,11 @@ module.exports = {
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.(js|jsx)?$': 'babel-jest',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/fileTransformer.js',
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less)$': 'identity-obj-proxy',
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   // An array of regexp pattern strings that are matched against all source file paths,
