@@ -22,8 +22,7 @@ class NavBar extends Component {
       ? complete_path.substring(0, complete_path.length)
       : complete_path.substring(0, second_slash_index);
     this.state = {
-      active_button: current_path,
-      collapsed: true
+      active_button: current_path
     };
   }
 
