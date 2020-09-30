@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import CandidatesHeader from './CandidatesHeader/CandidatesHeader.js'
-import CandidatesCarousel from './CandidatesCarousel/CandidatesCarousel.js'
-import CandidatesInfo from './CandidatesInfo/CandidatesInfo.js'
-import CandidatesJoinUs from './CandidatesJoinUs/CandidatesJoinUs.js'
-import Footer from 'components/Footer/Footer';
-import positionsData from 'data/positions.json';
-import './Candidates.css';
+import React, { Component } from 'react'
+import positionsData from '../../data/positions.json'
+import Footer from '../Footer/Footer'
+import CandidatesHeader from './CandidatesHeader/CandidatesHeader'
+import CandidatesCarousel from './CandidatesCarousel/CandidatesCarousel'
+import CandidatesInfo from './CandidatesInfo/CandidatesInfo'
+import CandidatesJoinUs from './CandidatesJoinUs/CandidatesJoinUs'
+import './Candidates.css'
 
 class Candidates extends Component {
   render() {
-    document.title = 'RoBorregos | Candidates';
+    document.title = 'RoBorregos | Candidates'
 
     return (
-      <div className='candidates-container'>
+      <div className="candidates-container">
         <CandidatesHeader />
         <CandidatesCarousel />
         <CandidatesInfo />
-        <CandidatesJoinUs positionsData={ positionsData } />
+        <CandidatesJoinUs positionsData={positionsData} />
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default Candidates;
+export default Candidates
