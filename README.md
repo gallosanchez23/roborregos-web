@@ -25,13 +25,10 @@ You can consult the application on production at [roborregos.com](https://roborr
 
 | Name | Email | Github | Role |
 | ---- | ----- | ------ | ---- |
-| José Eduardo Sánchez | [gallo.sanchez23@gmail.com](mailto:gallo.sanchez23@gmail.com) | [@gallosanchez23](https://github.com/gallosanchez23) | PM & Developer |
-| Sebastián Rivera González | [sebas.rivera96@gmail.com](mailto:sebas.rivera96@gmail.com) | [@sebasrivera96](https://github.com/sebasrivera96) | Developer |
 | Aurora Tijerina Berzosa | [auro.tj@gmail.com](mailto:auro.tj@gmail.com) | [@aurotb](https://github.com/aurotb) | Developer |
-| Ricardo Chapa Romero | [ricardochaparomero@gmail.com](mailto:ricardochaparomero@gmail.com) | [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) | Developer |
+| Ricardo Chapa Romero | [ricardochaparomero@gmail.com](mailto:ricardochaparomero@gmail.com) | [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) | PM |
 | José Alfonso Cisneros | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com) | [@Josecisneros001](https://github.com/Josecisneros001) | Developer |
 | Omar Ulises Montiel | [omarume@gmail.com](mailto:omarume@gmail.com) | [@OUMontiel](https://github.com/OUMontiel) | Developer |
-| Clara Gutiérrez Jaime | [claragtzjaime@gmail.com](mailto:claragtzjaime@gmail.com) | [@ClaraGtz](https://github.com/ClaraGtz) | Designer & Developer |
 | Ana Lucía Garza | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com) | [@AnaGarza](https://github.com/AnaGarza) | Designer |
 
 ### Environment URLs
@@ -60,6 +57,8 @@ Before setting up the project, you should have installed the following developme
 * [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 
 Once you have installed the required third-party software, you can follow this steps:
+
+***NOTE: You may need sudo privileges to run some of these commands.***
 
 1. Clone the project repository on your local machine.
 
