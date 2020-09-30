@@ -9,7 +9,10 @@ class NavBar extends Component {
     super(props);
 
     this.handleNavbarClick = this.handleNavbarClick.bind(this);
-
+    this.handleBrandClick = this.handleBrandClick.bind(this);
+    this.closeNavbar = this.closeNavbar.bind(this);
+    //this.handleActiveButton = this.handleActiveButton.bind(this);
+  
     this.routes = props.routes;
 
     const complete_path = window.location.pathname;
@@ -19,7 +22,8 @@ class NavBar extends Component {
       ? complete_path.substring(0, complete_path.length)
       : complete_path.substring(0, second_slash_index);
     this.state = {
-      active_button: current_path
+      active_button: current_path,
+      collapsed: true
     };
   }
 
@@ -28,6 +32,30 @@ class NavBar extends Component {
       active_button: index
     }));
     window.scrollTo(0,0);
+  }
+
+  closeNavbar() {
+    const navbarCollapseDiv = document.getElementById('basic-navbar-nav');
+    const navbarIsNotCollapsed = navbarCollapseDiv.classList.contains('show');
+
+    if (navbarIsNotCollapsed) {
+      navbarCollapseDiv.classList.remove('show');
+    }
+  }
+
+  /*
+    TODO: Handle Active Tabs on brand Click
+  handleActiveButton() {
+    const activeTabs = 
+      document.getElementById('navbar-container').getElementsByClassName('active');
+    if (activeTabs[1]) {
+      activeTabs[1].classList.remove('active');
+    }
+  }*/
+
+  handleBrandClick() {
+    // Collapsing the Navbar on small view
+    this.closeNavbar();
   }
 
   getClassName(path) {
@@ -48,8 +76,8 @@ class NavBar extends Component {
           as={ Link }
           to='/'
           onClick={() =>{
-            this.handleNavbarClick.bind(this, '/')
-            this.closeNavbar()
+            this.handleBrandClick()
+            this.handleNavbarClick('/')
           }}
         >
           <img
@@ -60,18 +88,18 @@ class NavBar extends Component {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' expanded ='false'/>
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='mr-auto'>
+        <Navbar.Collapse id='basic-navbar-nav'>
+          <Nav id='navbar-container' className='mr-auto'>
 
             {this.routes.map((route, index) =>
               <Nav.Link
+                eventKey={ index }
                 key={ index }
                 className={ this.getClassName(route.path) }
                 as={ Link }
                 to={ route.path }
                 onClick={() =>{
-                  this.handleNavbarClick.bind(this, route.path) 
-                  this.closeNavbar()
+                  this.handleNavbarClick(route.path)
                 }}
               >
                 <div className='navbar-btn-legend'>
