@@ -22,12 +22,7 @@ type State = {
 class NavBar extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
-
-    this.handleNavbarClick = this.handleNavbarClick.bind(this)
-    this.handleBrandClick = this.handleBrandClick.bind(this)
     // this.handleActiveButton = this.handleActiveButton.bind(this);
-
-    this.routes = props.routes
 
     const complete_path = window.location.pathname
     const first_slash_index = complete_path.indexOf('/')
@@ -57,24 +52,28 @@ class NavBar extends Component<Props, State> {
 
   closeNavbar = () => {
     const navbarCollapseDiv = document.getElementById('basic-navbar-nav')
-    const navbarIsNotCollapsed = navbarCollapseDiv.classList.contains('show')
+    if (navbarCollapseDiv != null) {
+      const navbarIsNotCollapsed = navbarCollapseDiv.classList.contains('show')
 
-    if (navbarIsNotCollapsed) {
-      navbarCollapseDiv.classList.remove('show')
+      if (navbarIsNotCollapsed) {
+        navbarCollapseDiv.classList.remove('show')
+      }
     }
   }
 
-  handleBrandClick() {
+  handleBrandClick = () => {
     // Collapsing the Navbar on small view
     this.closeNavbar()
   }
 
-  handleNavbarClick(index: string) {
+  handleNavbarClick = (index: string) => {
     this.setState({ active_button: index })
     window.scrollTo(0, 0)
   }
 
   render() {
+    const { routes } = this.props
+
     return (
       <Navbar
         collapseOnSelect
@@ -103,7 +102,7 @@ class NavBar extends Component<Props, State> {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav id="navbar-container" className="mr-auto">
 
-            {this.routes.map((route: RouteType, index: number) => (
+            {routes.map((route: RouteType, index: number) => (
               <Nav.Link
                 eventKey={index}
                 key={index}

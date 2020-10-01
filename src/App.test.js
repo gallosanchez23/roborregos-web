@@ -9,13 +9,21 @@ let container = null
 beforeEach(() => {
   // setup a DOM element as a render target
   container = document.createElement('div')
-  document.body.appendChild(container)
+  if (document.body != null) {
+    document.body.appendChild(container)
+  } else {
+    expect(document.body).not.toEqual(null)
+  }
 })
 
 afterEach(() => {
   // cleanup on exiting
   unmountComponentAtNode(container)
-  container.remove()
+  if (container != null) {
+    container.remove()
+  } else {
+    expect(container).not.toEqual(null)
+  }
   container = null
 })
 
