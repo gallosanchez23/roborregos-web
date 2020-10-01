@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "574b54a11fa48ac486e2",
+    "revision": "f45dabec410f494dd6b2",
     "url": "/static/css/main.a362299c.chunk.css"
   },
   {
-    "revision": "574b54a11fa48ac486e2",
-    "url": "/static/js/main.e6454218.chunk.js"
+    "revision": "f45dabec410f494dd6b2",
+    "url": "/static/js/main.d8e7c9e7.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -492,16 +492,16 @@ self.__precacheManifest = [
     "url": "/static/media/github_pattern_white.51748dcc.svg"
   },
   {
-    "revision": "4cb37072925deb95b3bc9ca2820f80b5",
-    "url": "/static/media/events_small.4cb37072.jpg"
+    "revision": "df5119df2a0633a841d4dccd215dc2f2",
+    "url": "/static/media/competitions.df5119df.jpg"
   },
   {
     "revision": "09eaf4978f5007bbeef19ffd4b7b3073",
     "url": "/static/media/events.09eaf497.jpg"
   },
   {
-    "revision": "df5119df2a0633a841d4dccd215dc2f2",
-    "url": "/static/media/competitions.df5119df.jpg"
+    "revision": "4cb37072925deb95b3bc9ca2820f80b5",
+    "url": "/static/media/events_small.4cb37072.jpg"
   },
   {
     "revision": "064d3de2d356b55cef3d4bddc3be3b15",
@@ -596,7 +596,7 @@ self.__precacheManifest = [
     "url": "/static/media/team_2019.10e3b647.jpg"
   },
   {
-    "revision": "365a1c8c155249007fadb2687af4b61a",
+    "revision": "b6bdcdfe9bc6c81f78fa6c5a7b7dc3bd",
     "url": "/index.html"
   }
 ];
