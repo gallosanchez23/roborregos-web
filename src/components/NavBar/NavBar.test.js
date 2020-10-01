@@ -106,22 +106,27 @@ it('<NavBar> Collapses correctly', async () => {
 
   const collapse_button = document.querySelector('[test-id=navbar-toggle-button]')
   const navbar = document.querySelector('[test-id=basic-navbar-collapse]')
-  expect(collapse_button.className).toContain('collapsed')
-  expect(navbar.className.split(' ')).toHaveLength(2)
+  if (collapse_button != null && navbar != null) {
+    expect(collapse_button.className).toContain('collapsed')
+    expect(navbar.className.split(' ')).toHaveLength(2)
 
-  fireEvent(collapse_button, new MouseEvent('click', {
-    bubbles: true,
-    cancelable: true,
-  }))
+    fireEvent(collapse_button, new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+    }))
 
-  expect(collapse_button.className).not.toContain('collapsed')
-  await waitFor(() => expect(navbar.className).toContain('show'))
+    expect(collapse_button.className).not.toContain('collapsed')
+    await waitFor(() => expect(navbar.className).toContain('show'))
 
-  fireEvent(collapse_button, new MouseEvent('click', {
-    bubbles: true,
-    cancelable: true,
-  }))
+    fireEvent(collapse_button, new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+    }))
 
-  expect(collapse_button.className).toContain('collapsed')
-  await waitFor(() => expect(navbar.className.split(' ')).toHaveLength(2))
+    expect(collapse_button.className).toContain('collapsed')
+    await waitFor(() => expect(navbar.className.split(' ')).toHaveLength(2))
+  } else {
+    expect(collapse_button).not.toEqual(null)
+    expect(navbar).not.toEqual(null)
+  }
 })
