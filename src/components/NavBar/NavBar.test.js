@@ -3,7 +3,7 @@ import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import { MemoryRouter, Router } from 'react-router-dom'
-import { fireEvent } from '@testing-library/react'
+import { fireEvent, waitFor } from '@testing-library/react'
 import { createMemoryHistory } from 'history'
 import routesData from '../../data/routes.json'
 
@@ -93,4 +93,35 @@ it('<NavBar> Links correctly when clicked', () => {
       expect(current_button).not.toEqual(null)
     }
   })
+})
+
+it('<NavBar> Collapses correctly', async () => {
+  act(() => {
+    render(
+      <MemoryRouter>
+        <NavBar routes={routesData.routes} />
+      </MemoryRouter>, container,
+    )
+  })
+
+  const collapse_button = document.querySelector('[test-id=navbar-toggle-button]')
+  const navbar = document.querySelector('[test-id=basic-navbar-collapse]')
+  expect(collapse_button.className).toContain('collapsed')
+  expect(navbar.className.split(' ')).toHaveLength(2)
+
+  fireEvent(collapse_button, new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+  }))
+
+  expect(collapse_button.className).not.toContain('collapsed')
+  await waitFor(() => expect(navbar.className).toContain('show'))
+
+  fireEvent(collapse_button, new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+  }))
+
+  expect(collapse_button.className).toContain('collapsed')
+  await waitFor(() => expect(navbar.className.split(' ')).toHaveLength(2))
 })

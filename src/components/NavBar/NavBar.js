@@ -98,8 +98,12 @@ class NavBar extends Component<Props, State> {
             alt="logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" expanded="false" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          expanded="false"
+          test-id="navbar-toggle-button"
+        />
+        <Navbar.Collapse id="basic-navbar-nav" test-id="basic-navbar-collapse">
           <Nav id="navbar-container" className="mr-auto">
 
             {routes.map((route: RouteType, index: number) => (
