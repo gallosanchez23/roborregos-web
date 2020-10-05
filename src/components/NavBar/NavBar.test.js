@@ -66,6 +66,9 @@ it('<NavBar> Renders correctly', () => {
 })
 
 it('<NavBar> Links correctly when clicked', () => {
+  // Instead of storing the browsing history in the browser, during tests
+  // its convenient to store it locally in a variable to test
+  // wether the routing works properly.
   const history = createMemoryHistory()
   act(() => {
     render(
