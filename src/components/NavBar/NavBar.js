@@ -1,19 +1,28 @@
+// @flow
 import React, { Component } from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import logo from '../../images/white_logo.png'
 import './NavBar.css'
 
-class NavBar extends Component {
-  constructor(props) {
-    super(props)
+type RouteType = {
+  path: string,
+  legend: string,
+  component: string
+};
 
-    this.handleNavbarClick = this.handleNavbarClick.bind(this);
-    this.handleBrandClick = this.handleBrandClick.bind(this);
-    this.closeNavbar = this.closeNavbar.bind(this);
-    //this.handleActiveButton = this.handleActiveButton.bind(this);
-  
-    this.routes = props.routes;
+type Props = {
+  routes: Array<RouteType>
+};
+
+type State = {
+  active_button: string
+};
+
+class NavBar extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    // this.handleActiveButton = this.handleActiveButton.bind(this);
 
     const complete_path = window.location.pathname
     const first_slash_index = complete_path.indexOf('/')
@@ -22,46 +31,49 @@ class NavBar extends Component {
       ? complete_path.substring(0, complete_path.length)
       : complete_path.substring(0, second_slash_index)
     this.state = {
-      active_button: current_path
-    }
-  }
-
-  handleNavbarClick(index) {
-    this.setState((state) => ({
-      active_button: index,
-    }))
-    window.scrollTo(0, 0)
-  }
-
-  closeNavbar() {
-    const navbarCollapseDiv = document.getElementById('basic-navbar-nav');
-    const navbarIsNotCollapsed = navbarCollapseDiv.classList.contains('show');
-
-    if (navbarIsNotCollapsed) {
-      navbarCollapseDiv.classList.remove('show');
+      active_button: current_path,
     }
   }
 
   /*
     TODO: Handle Active Tabs on brand Click
   handleActiveButton() {
-    const activeTabs = 
+    const activeTabs =
       document.getElementById('navbar-container').getElementsByClassName('active');
     if (activeTabs[1]) {
       activeTabs[1].classList.remove('active');
     }
-  }*/
+  } */
 
-  handleBrandClick() {
-    // Collapsing the Navbar on small view
-    this.closeNavbar();
+  getClassName(path: string) {
+    const { active_button } = this.state
+    return `navbar-btn${(path === active_button) ? ' active' : ''}`
   }
 
-  getClassName(path) {
-    return `navbar-btn${(path === this.state.active_button) ? ' active' : ''}`
+  closeNavbar = () => {
+    const navbarCollapseDiv = document.getElementById('basic-navbar-nav')
+    if (navbarCollapseDiv != null) {
+      const navbarIsNotCollapsed = navbarCollapseDiv.classList.contains('show')
+
+      if (navbarIsNotCollapsed) {
+        navbarCollapseDiv.classList.remove('show')
+      }
+    }
+  }
+
+  handleBrandClick = () => {
+    // Collapsing the Navbar on small view
+    this.closeNavbar()
+  }
+
+  handleNavbarClick = (index: string) => {
+    this.setState({ active_button: index })
+    window.scrollTo(0, 0)
   }
 
   render() {
+    const { routes } = this.props
+
     return (
       <Navbar
         collapseOnSelect
@@ -72,9 +84,9 @@ class NavBar extends Component {
         id="app-navbar"
       >
         <Navbar.Brand
-          as={ Link }
-          to='/'
-          onClick={() =>{
+          as={Link}
+          to="/"
+          onClick={() => {
             this.handleBrandClick()
             this.handleNavbarClick('/')
           }}
@@ -86,18 +98,22 @@ class NavBar extends Component {
             alt="logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' expanded ='false'/>
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav id='navbar-container' className='mr-auto'>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          expanded="false"
+          test-id="navbar-toggle-button"
+        />
+        <Navbar.Collapse id="basic-navbar-nav" test-id="basic-navbar-collapse">
+          <Nav id="navbar-container" className="mr-auto">
 
-            {this.routes.map((route, index) => (
+            {routes.map((route: RouteType, index: number) => (
               <Nav.Link
-                eventKey={ index }
-                key={ index }
-                className={ this.getClassName(route.path) }
-                as={ Link }
-                to={ route.path }
-                onClick={() =>{
+                eventKey={index}
+                key={index}
+                className={this.getClassName(route.path)}
+                as={Link}
+                to={route.path}
+                onClick={() => {
                   this.handleNavbarClick(route.path)
                 }}
               >

@@ -10,7 +10,7 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
+    "@testing-library/react": "^11.0.4",
     "@testing-library/user-event": "^7.2.1",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^4.3.1",
@@ -68,7 +68,9 @@
     "eslint-plugin-standard": "^4.0.1",
     "flow": "^0.2.3",
     "flow-bin": "^0.133.0",
+    "history": "^5.0.0",
     "identity-obj-proxy": "^3.0.0",
+    "jest-environment-jsdom-fifteen": "^1.0.2",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^26.1.3"
   },

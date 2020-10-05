@@ -130,7 +130,7 @@ module.exports = {
 
   // The paths to modules that run some code to configure or set up the testing
   // environment before each test
-  // setupFiles: [],
+  setupFiles: ['<rootDir>/jest-scripts/test-setup.js'],
 
   // A list of paths to modules that run some code to configure or set up the testing
   // framework before each test
@@ -140,7 +140,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-jsdom",
+  testEnvironment: 'jest-environment-jsdom-fifteen',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -179,7 +179,7 @@ module.exports = {
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.(js|jsx)?$': 'babel-jest',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/fileTransformer.js',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/jest-scripts/fileTransformer.js',
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',

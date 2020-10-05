@@ -20,8 +20,10 @@
   "plugins": ["react", "flowtype"],
 
   "rules": {
+    "camelcase": "off",
     "linebreak-style": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-array-index-key": "off",
     "semi": ["error", "never"],
     "flowtype/boolean-style": [2, "boolean"],
     "flowtype/define-flow-type": 1,
