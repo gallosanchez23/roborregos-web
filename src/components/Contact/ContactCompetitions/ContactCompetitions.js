@@ -1,24 +1,31 @@
+// @flow
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import placeholder from '../../../images/placeholder-rectangle.png'
 import './ContactCompetitions.css'
 
-class ContactCompetitions extends Component {
-  constructor(props) {
-    super(props)
+type CompetitionType = {
+  name: string,
+  img: string
+};
 
-    this.competitions = props.competitionsData.competitions
-  }
+type Props = {
+  competitions: Array<CompetitionType>
+};
 
-  tryRequire(img_path) {
+class ContactCompetitions extends Component<Props> {
+  tryRequire = (img_path: string) => {
     try {
-      return require(`images/${img_path}`)
+      // $FlowFixMe
+      return require(`images/${img_path}`) // eslint-disable-line import/no-dynamic-require, global-require
     } catch (err) {
       return placeholder
     }
   }
 
   render() {
+    const { competitions } = this.props
+
     return (
       <Row className="contact-competitions-container">
         <Col xs="10">
@@ -26,7 +33,7 @@ class ContactCompetitions extends Component {
             Our sponsors team is part of our development in the following competitions:
           </Row>
           <Row>
-            { this.competitions.map((competition) => (
+            { competitions.map((competition: CompetitionType) => (
               <Col lg="2" md="4" sm="4" xs="6">
                 <Row className="justify-content-center">
                   <div className="competitions-img">
