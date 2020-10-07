@@ -28,7 +28,7 @@ class ContactHeader extends Component<Props> {
           <p>
             Learn More
           </p>
-          <FontAwesomeIcon onClick={this.scrollToInfo} icon={faAngleDown} className="icon-btn" />
+          <FontAwesomeIcon onClick={this.scrollToInfo} icon={faAngleDown} className="icon-btn" test-id="scroll-info-button" />
         </div>
       </div>
     )
