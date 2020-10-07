@@ -1,77 +1,71 @@
+// @flow
 import './ContactSponsorPackages.css'
 
 import { Col, Row } from 'react-bootstrap'
-import React, { Component } from 'react'
+import React from 'react'
 
 import Card from 'react-bootstrap/Card'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import logo from '../../../../images/white_logo.png'
 
-class ContactSponsorPackages extends Component {
-  constructor(props) {
-    super(props)
+type BenefitsType = {
+  es: string,
+  en: string
+};
 
-    this.packages = props.packagesData.packages
-    this.state = {
-      /** @type {string} language */
-      language: props.language,
-    }
-  }
+type PackageType = {
+  name: string,
+  benefits: Array<BenefitsType>
+};
 
-  /*
-  * Component needs to update every time we change the props in the parent component (button to change idiom)
-  * by this we set a new state every time this happens.
-  */
-  componentDidUpdate(prevProps) {
-    if (prevProps.language !== this.props.language) {
-      this.setState({ language: this.props.language })
-    }
-  }
+type Props = {
+  packages: Array<PackageType>,
+  language: string
+};
 
-  render() {
-    return (
-      <Row className="justify-content-center">
-        <Col xs="10" sm="10" md="10" lg="10" xl="10">
-          <Row className="justify-content-center mt-4">
-            { this.packages.map((pkg) => (
-              <Col xs="10" sm="6" md="6" lg="3" xl="3" className="mt-4">
-                <Card
-                  className="packages-card"
-                  key={pkg.id}
-                >
-                  <Card.Body>
-                    <h4>
-                      { pkg.name }
-                    </h4>
-                    <hr />
-                    { pkg.benefits.map((benefit) => (
-                      <div className="benefit-container">
-                        <div className="benefit-icon">
-                          <FontAwesomeIcon icon={faCheckCircle} className="mr-2" />
-                        </div>
-                        <div className="benefit-text">
-                          { this.state.language === 'es' ? benefit.es : benefit.en }
-                        </div>
+const ContactSponsorPackages = (props: Props) => {
+  const { packages, language } = props
+  return (
+    <Row className="justify-content-center">
+      <Col xs="10" sm="10" md="10" lg="10" xl="10">
+        <Row className="justify-content-center mt-4">
+          { packages.map((pkg: PackageType, id: number) => (
+            <Col xs="10" sm="6" md="6" lg="3" xl="3" className="mt-4">
+              <Card
+                className="packages-card"
+                key={id}
+              >
+                <Card.Body>
+                  <h4>
+                    { pkg.name }
+                  </h4>
+                  <hr />
+                  { pkg.benefits.map((benefit: BenefitsType) => (
+                    <div className="benefit-container">
+                      <div className="benefit-icon">
+                        <FontAwesomeIcon icon={faCheckCircle} className="mr-2" />
                       </div>
-                    )) }
-                    <Row className="justify-content-center mt-4 package-card-footer">
-                      <Col xs="4" sm="4" md="4" lg="4" xl="4" className="no-padding"><hr /></Col>
-                      <Col xs="3" sm="3" md="3" lg="3" className="no-padding">
-                        <img src={logo} alt="Logo" />
-                      </Col>
-                      <Col xs="4" sm="4" md="4" lg="4" xl="4" className="no-padding"><hr /></Col>
-                    </Row>
-                  </Card.Body>
-
-                </Card>
-              </Col>
-            )) }
-          </Row>
-        </Col>
-      </Row>
-    )
-  }
+                      <div className="benefit-text">
+                        { language === 'es' ? benefit.es : benefit.en }
+                      </div>
+                    </div>
+                  )) }
+                  <Row className="justify-content-center mt-4 package-card-footer">
+                    <Col xs="4" sm="4" md="4" lg="4" xl="4" className="no-padding"><hr /></Col>
+                    <Col xs="3" sm="3" md="3" lg="3" className="no-padding">
+                      <img src={logo} alt="Logo" />
+                    </Col>
+                    <Col xs="4" sm="4" md="4" lg="4" xl="4" className="no-padding"><hr /></Col>
+                  </Row>
+                </Card.Body>
+              </Card>
+            </Col>
+          )) }
+        </Row>
+      </Col>
+    </Row>
+  )
 }
 
 export default ContactSponsorPackages

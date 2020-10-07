@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <ContactHeader />
-      <ContactSponsorUs sponsorsData={sponsorsData} />
+      <ContactSponsorUs url_contact={sponsorsData.url_contact} packages={sponsorsData.packages} />
       <ContactDonations />
       <ContactCompetitions competitions={competitionsData.competitions} />
       <Footer />
