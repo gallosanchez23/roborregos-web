@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import ContactSponsorPackages from './ContactSponsorPackages/ContactSponsorPackages.js'
+import ContactSponsorPackages from './ContactSponsorPackages/ContactSponsorPackages'
 
 type BenefitsType = {
   es: string,
