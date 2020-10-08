@@ -2,23 +2,9 @@
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
+import { fireEvent } from '@testing-library/react'
 
 import ContactSponsorUs from './ContactSponsorUs'
-
-type BenefitsType = {
-  es: string,
-  en: string
-};
-
-type PackageType = {
-  name: string,
-  benefits: Array<BenefitsType>
-};
-
-type Props = {
-  url_contact: string,
-  packages: Array<PackageType>
-};
 
 type State = {
   language: string,
@@ -86,10 +72,17 @@ const packages_text: string = `
   ]
 }`
 
-const languages: Array<string> = ['en', 'es']
-
 const { packages } = JSON.parse(packages_text)
 const url_contact = 'www.google.com'
+let wrapper
+
+const checkState = (language: string) => {
+  expect(wrapper.state.language).toEqual(language === 'es' ? spanish_state.language : english_state.language)
+  expect(wrapper.state.translate_label).toEqual(language === 'es' ? spanish_state.translate_label : english_state.translate_label)
+  expect(wrapper.state.sponsor_button_label).toEqual(language === 'es' ? spanish_state.sponsor_button_label : english_state.sponsor_button_label)
+  expect(wrapper.state.title[0]).toEqual(language === 'es' ? spanish_state.title[0] : english_state.title[0])
+  expect(wrapper.state.title[1]).toEqual(language === 'es' ? spanish_state.title[1] : english_state.title[1])
+}
 
 let container = null
 beforeEach(() => {
@@ -113,8 +106,48 @@ afterEach(() => {
   container = null
 })
 
-it('<ContactSponsorUs> Renders correctly', () => {
+it('<ContactSponsorUs> Renders correctly and opens contact tab', () => {
+  window.open = jest.fn()
   act(() => {
     render(<ContactSponsorUs packages={packages} url_contact={url_contact} />, container)
   })
+
+  const sponsor_button = document.querySelector('[test-id="sponsor-button"]')
+  if (sponsor_button != null) {
+    fireEvent(sponsor_button, new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+    }))
+
+    expect(window.open).toBeCalledWith(url_contact, '_blank')
+  } else {
+    expect(sponsor_button).not.toEqual(null)
+  }
+})
+
+it('<ContactSponsorUs> Renders correctly and translates the data', () => {
+  act(() => {
+    wrapper = render(<ContactSponsorUs packages={packages} url_contact={url_contact} />, container)
+  })
+
+  const translate_button = document.querySelector('[test-id="translate-button"]')
+  if (translate_button != null) {
+    checkState('en')
+
+    fireEvent(translate_button, new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+    }))
+
+    checkState('es')
+
+    fireEvent(translate_button, new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+    }))
+
+    checkState('en')
+  } else {
+    expect(translate_button).not.toEqual(null)
+  }
 })

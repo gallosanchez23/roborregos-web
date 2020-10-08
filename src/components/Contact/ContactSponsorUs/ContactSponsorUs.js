@@ -83,12 +83,12 @@ class ContactSponsorUs extends Component<Props, State> {
         <ContactSponsorPackages packages={packages} language={language} />
         <Row>
           <Col md={4} xs={12} className="offset-md-4 offset-0">
-            <button type="button" onClick={this.sponsorUsCallback} className="btn contact-sponsor-us-btn mt-4" variant="outline-primary">
+            <button type="button" test-id="sponsor-button" onClick={this.sponsorUsCallback} className="btn contact-sponsor-us-btn mt-4" variant="outline-primary">
               { sponsor_button_label }
             </button>
           </Col>
           <Col md={3} xs={12} style={{ alignSelf: 'center' }}>
-            <button type="button" onClick={this.translate} className="btn contact-translate-sponsor-us-btn mt-4" variant="outline-primary">
+            <button type="button" test-id="translate-button" onClick={this.translate} className="btn contact-translate-sponsor-us-btn mt-4" variant="outline-primary">
               { translate_label }
             </button>
           </Col>
