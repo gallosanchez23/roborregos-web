@@ -31,18 +31,26 @@ const ContactSponsorPackages = (props: Props) => {
       <Col xs="10" sm="10" md="10" lg="10" xl="10">
         <Row className="justify-content-center mt-4">
           { packages.map((pkg: PackageType, id: number) => (
-            <Col xs="10" sm="6" md="6" lg="3" xl="3" className="mt-4">
+            <Col
+              xs="10"
+              sm="6"
+              md="6"
+              lg="3"
+              xl="3"
+              className="mt-4"
+              key={id}
+              test-id={id}
+            >
               <Card
                 className="packages-card"
-                key={id}
               >
                 <Card.Body>
                   <h4>
                     { pkg.name }
                   </h4>
                   <hr />
-                  { pkg.benefits.map((benefit: BenefitsType) => (
-                    <div className="benefit-container">
+                  { pkg.benefits.map((benefit: BenefitsType, second_id: number) => (
+                    <div className="benefit-container" key={`${id}-${second_id}`} test-id={`${id}-${second_id}`}>
                       <div className="benefit-icon">
                         <FontAwesomeIcon icon={faCheckCircle} className="mr-2" />
                       </div>
