@@ -9,6 +9,9 @@ import routesData from '../../data/routes.json'
 
 import NavBar from './NavBar'
 
+// TODO: The function window.scrollTo can and should be mocked.
+// Check ContactHeader.test.js: "<ContactHeader> Scrolls to Info" for a similar example
+
 type RouteType = {
   path: string,
   legend: string,
