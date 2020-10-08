@@ -6,7 +6,8 @@ import './ContactCompetitions.css'
 
 type CompetitionType = {
   name: string,
-  img: string
+  img: string,
+  url: string
 };
 
 type Props = {
@@ -36,9 +37,9 @@ class ContactCompetitions extends Component<Props> {
             { competitions.map((competition: CompetitionType, id: number) => (
               <Col lg="2" md="4" sm="4" xs="6" key={id} test-id={id}>
                 <Row className="justify-content-center">
-                  <div className="competitions-img">
+                  <a className="competitions-img" href={competition.url} target="_blank" rel="noreferrer">
                     <img src={this.tryRequire(competition.img)} alt={competition.name} />
-                  </div>
+                  </a>
                 </Row>
                 <Row className="competitions-text">
                   { competition.name }

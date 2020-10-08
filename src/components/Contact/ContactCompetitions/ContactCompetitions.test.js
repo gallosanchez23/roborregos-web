@@ -8,7 +8,8 @@ import ContactCompetitions from './ContactCompetitions'
 
 type CompetitionType = {
   name: string,
-  img: string
+  img: string,
+  url: string
 };
 
 let container = null
@@ -42,6 +43,9 @@ it('<ContactCompetitions> Renders correctly with data', () => {
     if (current_object != null) {
       expect(current_object.children).toHaveLength(2)
       expect(current_object.children[1].textContent).toBe(competition.name)
+
+      expect(current_object.children[0].children).toHaveLength(1)
+      expect(current_object.children[0].children[0].getAttribute('href')).toBe(competition.url)
     } else {
       expect(current_object).not.toEqual(null)
     }
