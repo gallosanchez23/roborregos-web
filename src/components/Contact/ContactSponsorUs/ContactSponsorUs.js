@@ -38,8 +38,7 @@ const english_state: State = {
 
 const spanish_state: State = {
   language: 'es',
-  translate_label:
-  'Translate to english',
+  translate_label: 'Translate to english',
   sponsor_button_label: '¡Patrocinanos!',
   title: ['¿Te gustaría apoyar a RoBorregos?', '¡Sé uno de nuestros patrocinadores!'],
 }
