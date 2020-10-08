@@ -33,30 +33,18 @@ class ContactCompetitions extends Component<Props> {
             Our sponsors team is part of our development in the following competitions:
           </Row>
           <Row>
-            { competitions != null
-              ? competitions.map((competition: CompetitionType, id: number) => (
-                <Col lg="2" md="4" sm="4" xs="6" key={id} test-id={id}>
-                  <Row className="justify-content-center">
-                    <div className="competitions-img">
-                      <img src={this.tryRequire(competition.img)} alt={competition.name} />
-                    </div>
-                  </Row>
-                  <Row className="competitions-text">
-                    { competition.name }
-                  </Row>
-                </Col>
-              )) : (
-                <Col test-id="0">
-                  <Row className="justify-content-center">
-                    <div className="competitions-img">
-                      <img src={this.tryRequire('')} alt="" />
-                    </div>
-                  </Row>
-                  <Row className="competitions-text">
-                    An error occured while fetching the competitions :(
-                  </Row>
-                </Col>
-              )}
+            { competitions.map((competition: CompetitionType, id: number) => (
+              <Col lg="2" md="4" sm="4" xs="6" key={id} test-id={id}>
+                <Row className="justify-content-center">
+                  <div className="competitions-img">
+                    <img src={this.tryRequire(competition.img)} alt={competition.name} />
+                  </div>
+                </Row>
+                <Row className="competitions-text">
+                  { competition.name }
+                </Row>
+              </Col>
+            ))}
           </Row>
         </Col>
       </Row>

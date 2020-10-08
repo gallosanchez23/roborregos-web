@@ -47,16 +47,3 @@ it('<ContactCompetitions> Renders correctly with data', () => {
     }
   })
 })
-
-it('<ContactCompetitions> Renders correctly without data', () => {
-  act(() => {
-    render(<ContactCompetitions />, container)
-  })
-  const rendered_object = document.querySelector('[test-id="0"]')
-  if (rendered_object != null) {
-    expect(rendered_object.children).toHaveLength(2)
-    expect(rendered_object.children[1].textContent).toBe('An error occured while fetching the competitions :(')
-  } else {
-    expect(rendered_object).not.toEqual(null)
-  }
-})
