@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MemberModal from './MemberModal/MemberModal.js';
+import Carousel from 'react-material-ui-carousel'
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import { Modal } from 'react-bootstrap';
@@ -21,13 +22,14 @@ class MembersGrid extends Component {
     this.numberOfColumns       = this.numberOfColumns.bind(this);
     this.updateNumberOfColumns = this.updateNumberOfColumns.bind(this);
     this.generateGridList      = this.generateGridList.bind(this);
-    this.keyFunction         = this.keyFunction.bind(this);
+    this.keyFunction           = this.keyFunction.bind(this);
+    this.Item                  = this.Item.bind(this);
 
     this.active_members_keys = this.props.active_members.map(member => (member.id));
     this.inactive_members_keys = this.props.inactive_members.map(member => (member.id));
     
     this.state = {
-      show_modal: false,
+      show_modal: true,
       member: this.props.active_members[0],
       active: true,
       number_of_columns: this.numberOfColumns(),
@@ -158,16 +160,39 @@ class MembersGrid extends Component {
     }
   }
 
+  Item(member)
+  {
+      return (
+          <MemberModal member={ member } /> 
+          // <Paper>
+          //     <h2>{props.item.name}</h2>
+          //     <p>{props.item.description}</p>
+  
+          //     <Button className="CheckButton">
+          //         Check it out!
+          //     </Button>
+          // </Paper>
+      )
+  }
+
   render() {
     return (
       <div className='members-grid-container'>
         { this.generateGridList(this.props.active_members, '') }
         { this.generateGridList(this.props.inactive_members, 'RoBorregos Legacy') }
-        <Modal
+        <h1 style={{color: "white"}}>HOLA</h1>
+        <div style={{padding: "20px"}}></div>
+        <Carousel navButtonsAlwaysVisible={true}> 
+          {/* show={ this.state.show_modal } onHide={ this.handleHideModal }> */}
+            {
+              this.props.active_members.map( (member, i) => this.Item(member) )
+            }
+        </Carousel>
+        {/* <Modal
           show={ this.state.show_modal }
           onHide={ this.handleHideModal }
           dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
-        />
+        /> */}
       </div>
     );
   }
