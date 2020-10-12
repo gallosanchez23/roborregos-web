@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import header from '../../../images/header.png'
