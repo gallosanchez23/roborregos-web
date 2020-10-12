@@ -1,39 +1,43 @@
-import React, { Component } from 'react'
+// @flow
+import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import HomeSingleSponsor from './HomeSingleSponsor/HomeSingleSponsor'
 import './HomeSponsors.css'
 
-class HomeSponsors extends Component {
-  constructor(props) {
-    super(props)
+type Sponsor = {
+  name: string,
+  img_path: string,
+  link: string
+};
 
-    this.sponsors = props.sponsors
-  }
+type Props = {
+ sponsors: Array<Sponsor>
+};
 
-  render() {
-    return (
-      <div className="home-sponsors-container">
-        <div className="container-helper">
-          <Row className="justify-content-sm-center">
-            <Col sm="10">
-              <h3>
-                Sponsors
-              </h3>
-              <Row className="justify-content-sm-center">
-                {this.sponsors.map((sponsor, index) => (
-                  <Col xs="6" sm="4" md="2" key={index} className="sponsor-col">
-                    <HomeSingleSponsor
-                      sponsor={sponsor}
-                    />
-                  </Col>
-                ))}
-              </Row>
-            </Col>
-          </Row>
-        </div>
+const HomeSponsors = (props: Props) => {
+  const { sponsors } = props
+  return (
+    <div className="home-sponsors-container">
+      <div className="container-helper">
+        <Row className="justify-content-sm-center">
+          <Col sm="10">
+            <h3>
+              Sponsors
+            </h3>
+            <Row className="justify-content-sm-center">
+              { sponsors.map((sponsor: Sponsor, index: number) => (
+                <Col xs="6" sm="4" md="2" key={index} className="sponsor-col">
+                  <HomeSingleSponsor
+                    sponsor={sponsor}
+                  />
+                </Col>
+              )) }
+            </Row>
+          </Col>
+        </Row>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default HomeSponsors
