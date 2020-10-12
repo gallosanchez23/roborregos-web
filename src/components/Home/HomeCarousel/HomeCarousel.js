@@ -1,28 +1,33 @@
-import React, { Component } from 'react';
-import placeholder from 'images/placeholder-rectangle.png';
-import { Carousel } from 'react-bootstrap';
-import './HomeCarousel.css';
+// @flow
+import React, { Component } from 'react'
+import { Carousel } from 'react-bootstrap'
+import placeholder from '../../../images/placeholder-rectangle.png'
+import './HomeCarousel.css'
+
+type Props = {
+
+};
 
 class HomeCarousel extends Component {
-  constructor(props){
-    super(props);
-
-    this.tryRequire = this.tryRequire.bind(this);
-  }
-
-  tryRequire(img_path) {
+  static tryRequire(img_path: string) {
     try {
-      return require('images/' + img_path);
+      return require(`images/${img_path}`) // eslint-disable-line import/no-dynamic-require, global-require
     } catch (err) {
-      return placeholder;
+      return placeholder
     }
   }
 
+  constructor(props: Props) {
+    super(props)
+
+    this.tryRequire = this.tryRequire.bind(this)
+  }
+
   render() {
-    return(
-      <div className='home-carousel'>
-        <Carousel className='home-carousel'>
-          <Carousel.Item className='home-carousel'>
+    return (
+      <div className="home-carousel">
+        <Carousel className="home-carousel">
+          <Carousel.Item className="home-carousel">
             <img
               className="carousel-image"
               src={this.tryRequire('5tageneracion.jpg')}
@@ -33,7 +38,7 @@ class HomeCarousel extends Component {
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item className='home-carousel'>
+          <Carousel.Item className="home-carousel">
             <img
               className="carousel-image"
               src={this.tryRequire('4tageneracion.jpg')}
@@ -44,7 +49,7 @@ class HomeCarousel extends Component {
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item className='home-carousel'>
+          <Carousel.Item className="home-carousel">
             <img
               className="carousel-image"
               src={this.tryRequire('3ergeneracion.jpg')}
@@ -57,8 +62,8 @@ class HomeCarousel extends Component {
           </Carousel.Item>
         </Carousel>
       </div>
-    );
+    )
   }
 }
 
-export default HomeCarousel;
+export default HomeCarousel
