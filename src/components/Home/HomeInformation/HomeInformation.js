@@ -42,10 +42,10 @@ class HomeInformation extends Component {
   }
 
   handleScrollEvent(element: ref) {
-    const { [`${element.id}_visible`]: isVisible } = this.state
     if (!element) {
       return
     }
+    const { [`${element.id}_visible`]: isVisible } = this.state
     if (this.isElementVisible(element) || isVisible) {
       this.setState({ [`${element.id}_visible`]: true })
     } else {
