@@ -177,7 +177,6 @@ class MembersGrid extends Component {
         <Modal
           className='modal-container'
           show={ this.state.show_modal }
-          useKeyboardArrows={true}
           dialogAs={ () => 
           <Carousel
             className='member-carrousel'
