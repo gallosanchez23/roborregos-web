@@ -31,7 +31,7 @@ class HomeInformation extends Component {
     window.addEventListener('scroll', this.listenScrollEvent, true)
   }
 
-  isElementVisible(element) {
+  isElementVisible = (element: ref) => {
     const viewTop = window.pageYOffset
     const viewBottom = viewTop + window.innerHeight
     const top = element.offsetTop
@@ -41,7 +41,7 @@ class HomeInformation extends Component {
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop))
   }
 
-  handleScrollEvent(element) {
+  handleScrollEvent(element: ref) {
     if (!element) {
       return
     }
