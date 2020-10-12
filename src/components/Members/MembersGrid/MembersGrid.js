@@ -24,12 +24,13 @@ class MembersGrid extends Component {
     this.generateGridList      = this.generateGridList.bind(this);
     this.keyFunction           = this.keyFunction.bind(this);
     this.Item                  = this.Item.bind(this);
+    this.updateMember          = this.updateMember.bind(this);
 
     this.active_members_keys = this.props.active_members.map(member => (member.id));
     this.inactive_members_keys = this.props.inactive_members.map(member => (member.id));
     
     this.state = {
-      show_modal: true,
+      show_modal: false,
       member: this.props.active_members[0],
       active: true,
       number_of_columns: this.numberOfColumns(),
@@ -62,28 +63,15 @@ class MembersGrid extends Component {
   }
 
   keyFunction(event){
+    if(event.keyCode === 27){
+      this.handleHideModal();
+    }
     var difference = (event.keyCode === 37)?-1:(event.keyCode === 39)?1:0;
-    if(this.state.active && ((this.active_members_keys.indexOf(this.state.member.id) >= this.props.active_members.length - 1 && difference === 1) || (this.active_members_keys.indexOf(this.state.member.id) === 0 && difference === -1))){
-      return;
-    }else if((this.inactive_members_keys.indexOf(this.state.member.id) >= this.props.inactive_members.length - 1 && difference === 1) || (this.inactive_members_keys.indexOf(this.state.member.id) === 0 && difference === -1)){
-      return;
-    }
-    
-    this.handleHideModal();
-    if(this.state.active){
-      this.setState({
-        member: this.props.active_members[this.active_members_keys.indexOf(this.state.member.id) + difference],
-      });
-    }else{
-      this.setState({
-        member: this.props.inactive_members[this.inactive_members_keys.indexOf(this.state.member.id) + difference],
-      });
-    }
-    this.handleShowModal(this.state.member);
-    //window.alert(this.state.member.name);
+    this.updateMember(difference);
   }
 
-  handleShowModal(member, event) {
+
+  handleShowModal(member) {
     this.setState({
       show_modal: true,
       member: member,
@@ -163,16 +151,22 @@ class MembersGrid extends Component {
   Item(member)
   {
       return (
-          <MemberModal member={ member } /> 
-          // <Paper>
-          //     <h2>{props.item.name}</h2>
-          //     <p>{props.item.description}</p>
-  
-          //     <Button className="CheckButton">
-          //         Check it out!
-          //     </Button>
-          // </Paper>
+          <MemberModal member={ member } onHide={ this.handleHideModal }/>
       )
+  }
+
+  updateMember(difference) {
+    if(this.state.active){
+      var new_id = (this.active_members_keys.indexOf(this.state.member.id) + difference < 0) ? this.props.active_members.length - 1 : (this.active_members_keys.indexOf(this.state.member.id) + difference) % this.props.active_members.length;
+      this.setState({
+        member: this.props.active_members[new_id]
+      });
+    }else{
+      var new_id = (this.inactive_members_keys.indexOf(this.state.member.id) + difference < 0) ? this.props.inactive_members.length - 1 : (this.inactive_members_keys.indexOf(this.state.member.id) + difference) % this.props.inactive_members.length;
+      this.setState({
+        member: this.props.inactive_members[new_id]
+      });
+    }
   }
 
   render() {
@@ -180,19 +174,28 @@ class MembersGrid extends Component {
       <div className='members-grid-container'>
         { this.generateGridList(this.props.active_members, '') }
         { this.generateGridList(this.props.inactive_members, 'RoBorregos Legacy') }
-        <h1 style={{color: "white"}}>HOLA</h1>
-        <div style={{padding: "20px"}}></div>
-        <Carousel navButtonsAlwaysVisible={true}> 
-          {/* show={ this.state.show_modal } onHide={ this.handleHideModal }> */}
-            {
-              this.props.active_members.map( (member, i) => this.Item(member) )
-            }
-        </Carousel>
-        {/* <Modal
+        <Modal
+          className='modal-container'
           show={ this.state.show_modal }
-          onHide={ this.handleHideModal }
-          dialogAs={ () => <MemberModal member={ this.state.member } onHide={ () => this.handleHideModal() } /> }
-        /> */}
+          useKeyboardArrows={true}
+          dialogAs={ () => 
+          <Carousel
+            className='member-carrousel'
+            navButtonsAlwaysVisible={true}
+            autoPlay={false}
+            timeout={250}
+            fullHeightHover={true}
+            indicators={false}
+            startAt={(this.state.active) ? this.active_members_keys.indexOf(this.state.member.id) : this.inactive_members_keys.indexOf(this.state.member.id)}
+          >
+            {
+              (this.state.active) ?
+              this.props.active_members.map( (member, i) => this.Item(member) ) :
+              this.props.inactive_members.map( (member, i) => this.Item(member) )
+            }
+          </Carousel>
+          }
+        />
       </div>
     );
   }
