@@ -41,7 +41,7 @@ class HomeInformation extends Component {
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop))
   }
 
-  handleScrollEvent(/* state: State, */ element: ref) {
+  handleScrollEvent(element: ref) {
     const { [`${element.id}_visible`]: isVisible } = this.state
     if (!element) {
       return
