@@ -41,12 +41,12 @@ class HomeInformation extends Component {
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop))
   }
 
-  handleScrollEvent(element: ref) {
+  handleScrollEvent(/* state: State, */ element: ref) {
+    const { [`${element.id}_visible`]: isVisible } = this.state
     if (!element) {
       return
     }
-
-    if (this.isElementVisible(element) || this.state[`${element.id}_visible`]) {
+    if (this.isElementVisible(element) || isVisible) {
       this.setState({ [`${element.id}_visible`]: true })
     } else {
       this.setState({ [`${element.id}_visible`]: false })
@@ -61,9 +61,12 @@ class HomeInformation extends Component {
   }
 
   render() {
+    const {
+      competitions_visible, social_visible, events_visible, students_visible,
+    } = this.state
     return (
       <div className="home-information-container-all">
-        <div id="competitions" ref={this.competitions} className={`home-information-container home-information-container-left home-information-container-competitions ${this.state.competitions_visible ? 'isVisible' : ''} `}>
+        <div id="competitions" ref={this.competitions} className={`home-information-container home-information-container-left home-information-container-competitions ${competitions_visible ? 'isVisible' : ''} `}>
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
             <div className="home-information-text">
@@ -79,7 +82,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id="social" ref={this.social} className={`home-information-container home-information-container-right home-information-container-down home-information-container-social ${this.state.social_visible ? 'isVisible' : ''} `}>
+        <div id="social" ref={this.social} className={`home-information-container home-information-container-right home-information-container-down home-information-container-social ${social_visible ? 'isVisible' : ''} `}>
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
             <div className="home-information-text">
@@ -94,7 +97,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id="events" ref={this.events} className={`home-information-container home-information-container-left home-information-container-down home-information-container-events ${this.state.events_visible ? 'isVisible' : ''} `}>
+        <div id="events" ref={this.events} className={`home-information-container home-information-container-left home-information-container-down home-information-container-events ${events_visible ? 'isVisible' : ''} `}>
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
             <div className="home-information-text">
@@ -109,7 +112,7 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id="students" ref={this.students} className={`home-information-container home-information-container-right home-information-container-students ${this.state.students_visible ? 'isVisible' : ''} `}>
+        <div id="students" ref={this.students} className={`home-information-container home-information-container-right home-information-container-students ${students_visible ? 'isVisible' : ''} `}>
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
             <div className="home-information-text">
