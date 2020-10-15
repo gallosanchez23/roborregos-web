@@ -10,8 +10,9 @@ import HomeSponsors from './HomeSponsors/HomeSponsors'
 
 import sponsorsData from '../../data/sponsors.json'
 
-export const Home = () => {
+const Home = () => {
   document.title = 'RoBorregos'
+
   return (
     <div className="home-container">
       <HomeHeader />
