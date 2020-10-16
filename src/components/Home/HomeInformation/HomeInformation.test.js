@@ -31,7 +31,7 @@ const information_containers: string = `
     ]
 }`
 
-function extractContent(s) {
+function extractContent(s: string) {
   const span = document.createElement('span')
   span.innerHTML = s
   return span.textContent || span.innerText
