@@ -66,7 +66,13 @@ class HomeInformation extends Component {
     } = this.state
     return (
       <div className="home-information-container-all">
-        <div id="competitions" ref={this.competitions} className={`home-information-container home-information-container-left home-information-container-competitions ${competitions_visible ? 'isVisible' : ''} `}>
+        <div
+          id="competitions"
+          ref={this.competitions}
+          className={`home-information-container 
+          home-information-container-left home-information-container-competitions 
+          ${competitions_visible ? 'isVisible' : ''} `}
+        >
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
             <div className="home-information-text">
@@ -82,7 +88,12 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id="social" ref={this.social} className={`home-information-container home-information-container-right home-information-container-down home-information-container-social ${social_visible ? 'isVisible' : ''} `}>
+        <div
+          id="social"
+          ref={this.social}
+          className={`home-information-container home-information-container-right 
+          home-information-container-down home-information-container-social ${social_visible ? 'isVisible' : ''} `}
+        >
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
             <div className="home-information-text">
@@ -97,7 +108,12 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id="events" ref={this.events} className={`home-information-container home-information-container-left home-information-container-down home-information-container-events ${events_visible ? 'isVisible' : ''} `}>
+        <div
+          id="events"
+          ref={this.events}
+          className={`home-information-container home-information-container-left 
+        home-information-container-down home-information-container-events ${events_visible ? 'isVisible' : ''} `}
+        >
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
             <div className="home-information-text">
@@ -112,7 +128,12 @@ class HomeInformation extends Component {
             </div>
           </div>
         </div>
-        <div id="students" ref={this.students} className={`home-information-container home-information-container-right home-information-container-students ${students_visible ? 'isVisible' : ''} `}>
+        <div
+          id="students"
+          ref={this.students}
+          className={`home-information-container home-information-container-right 
+        home-information-container-students ${students_visible ? 'isVisible' : ''} `}
+        >
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
             <div className="home-information-text">
