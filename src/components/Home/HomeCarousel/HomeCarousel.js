@@ -4,10 +4,6 @@ import { Carousel } from 'react-bootstrap'
 import placeholder from '../../../images/placeholder-rectangle.png'
 import './HomeCarousel.css'
 
-type Props = {
-
-};
-
 class HomeCarousel extends Component {
   static tryRequire(img_path: string) {
     try {
@@ -17,9 +13,7 @@ class HomeCarousel extends Component {
     }
   }
 
-  constructor(props: Props) {
-    super(props)
-
+  super() {
     this.tryRequire = this.tryRequire.bind(this)
   }
 
