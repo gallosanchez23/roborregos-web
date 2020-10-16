@@ -23,17 +23,6 @@ const sponsor_text_case1: string = `
 
 const { sponsor } = JSON.parse(sponsor_text_case1)
 
-let container = null
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement('div')
-  if (document.body != null) {
-    document.body.appendChild(container)
-  } else {
-    expect(document.body).not.toEqual(null)
-  }
-})
-
 const singleSponsorRendering = (index: number) => {
   const sponsor_rendered = document.querySelector('[test-id="a1"]')
   if (sponsor_rendered != null) {
@@ -46,6 +35,17 @@ const singleSponsorRendering = (index: number) => {
     expect(sponsor_rendered).not.toEqual(null)
   }
 }
+
+let container = null
+beforeEach(() => {
+  // setup a DOM element as a render target
+  container = document.createElement('div')
+  if (document.body != null) {
+    document.body.appendChild(container)
+  } else {
+    expect(document.body).not.toEqual(null)
+  }
+})
 
 afterEach(() => {
   // cleanup on exiting
