@@ -5,12 +5,6 @@ import { act } from 'react-dom/test-utils'
 
 import HomeSingleSponsor from './HomeSingleSponsor'
 
-type SponsorType = {
-    name: string,
-    img_path: string,
-    link: string
-};
-
 const sponsor_text_case1: string = `
 {
     "sponsor": [
