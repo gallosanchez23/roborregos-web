@@ -10,7 +10,7 @@ const HomeHeader = () => (
   <header className="home-header">
     <Row className="justify-content-sm-center">
       <Col className="header-img-col">
-        <span>
+        <span test-id="1">
           <img className="header-img" src={header} alt="logo" />
           <br />
           <br />
