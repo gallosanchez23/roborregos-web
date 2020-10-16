@@ -60,7 +60,7 @@ class HomeInformation extends Component {
       competitions_visible, social_visible, events_visible, students_visible,
     } = this.state
     return (
-      <div className="home-information-container-all">
+      <div className="home-information-container-all" test-id="1">
         <div
           id="competitions"
           ref={this.competitions}
@@ -107,7 +107,7 @@ class HomeInformation extends Component {
           id="events"
           ref={this.events}
           className={`home-information-container home-information-container-left 
-        home-information-container-down home-information-container-events ${events_visible ? 'isVisible' : ''} `}
+          home-information-container-down home-information-container-events ${events_visible ? 'isVisible' : ''} `}
         >
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
@@ -127,7 +127,7 @@ class HomeInformation extends Component {
           id="students"
           ref={this.students}
           className={`home-information-container home-information-container-right 
-        home-information-container-students ${students_visible ? 'isVisible' : ''} `}
+          home-information-container-students ${students_visible ? 'isVisible' : ''} `}
         >
           <div className="home-information-container-layer">
             <div className="home-information-circle" />
