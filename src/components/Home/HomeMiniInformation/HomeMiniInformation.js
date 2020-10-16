@@ -7,9 +7,9 @@ import { faUsers, faHistory, faGlobeAmericas } from '@fortawesome/free-solid-svg
 import './HomeMiniInformation.css'
 
 const HomeMiniInformation = () => (
-  <div id="home-mini-information-container">
+  <div id="home-mini-information-container" test-id="1">
     <div id="background-filter">
-      <Container>
+      <Container test-id="2">
         <Row className="justify-content-center">
           <Col className="col-icon" xs={{ span: 3 }}>
             <div className="circle">
