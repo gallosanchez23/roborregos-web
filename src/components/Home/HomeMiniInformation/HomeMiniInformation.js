@@ -9,8 +9,8 @@ import './HomeMiniInformation.css'
 const HomeMiniInformation = () => (
   <div id="home-mini-information-container" test-id="1">
     <div id="background-filter">
-      <Container test-id="2">
-        <Row className="justify-content-center">
+      <Container>
+        <Row className="justify-content-center" test-id="2">
           <Col className="col-icon" xs={{ span: 3 }}>
             <div className="circle">
               <div className="icon-container">
