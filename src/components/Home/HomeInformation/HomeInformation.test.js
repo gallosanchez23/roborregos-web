@@ -41,19 +41,23 @@ const { information } = JSON.parse(information_containers)
 
 const checkHomeInformation = () => {
   const information_container = document.querySelector('[test-id="1"]')
-  expect(information_container.children).toHaveLength(4)
-  for (let childrenIndex = 0; childrenIndex < 4; childrenIndex += 1) {
-    expect(information_container.children[childrenIndex].getAttribute('id')).toEqual(information[childrenIndex].id)
-    expect(information_container.children[childrenIndex].children).toHaveLength(1)
-    const home_information_container = information_container.children[childrenIndex].children[0]
-    expect(home_information_container.children).toHaveLength(2)
-    expect(home_information_container.children[1].children).toHaveLength(2)
-    expect(home_information_container.children[1].children[0].textContent).toEqual(
-      information[childrenIndex].title,
-    )
-    expect((home_information_container.children[1].children[1].textContent)).toEqual(
-      extractContent(information[childrenIndex].text_content),
-    )
+  if (information_container != null) {
+    expect(information_container.children).toHaveLength(4)
+    for (let childrenIndex = 0; childrenIndex < 4; childrenIndex += 1) {
+      expect(information_container.children[childrenIndex].getAttribute('id')).toEqual(information[childrenIndex].id)
+      expect(information_container.children[childrenIndex].children).toHaveLength(1)
+      const home_information_container = information_container.children[childrenIndex].children[0]
+      expect(home_information_container.children).toHaveLength(2)
+      expect(home_information_container.children[1].children).toHaveLength(2)
+      expect(home_information_container.children[1].children[0].textContent).toEqual(
+        information[childrenIndex].title,
+      )
+      expect((home_information_container.children[1].children[1].textContent)).toEqual(
+        extractContent(information[childrenIndex].text_content),
+      )
+    }
+  } else {
+    expect(information_container).not.toEqual(null)
   }
 }
 
@@ -83,5 +87,6 @@ it('<HomeInformation> Renders correctly checking the data', () => {
   act(() => {
     render(<HomeInformation />, container)
   })
+
   checkHomeInformation()
 })
