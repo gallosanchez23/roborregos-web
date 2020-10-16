@@ -2,14 +2,9 @@
 import React, { Component } from 'react'
 import './HomeInformation.css'
 
-type Props = {
-
-};
-
 class HomeInformation extends Component {
-  constructor(props: Props) {
-    super(props)
-
+  constructor() {
+    super()
     this.competitions = React.createRef()
     this.social = React.createRef()
     this.events = React.createRef()
