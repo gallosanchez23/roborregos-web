@@ -53,6 +53,8 @@ const checkSponsorsRendering = () => {
   sponsors.forEach((current_sponsor: SponsorType, index: number) => {
     const rendered_sponsor = document.querySelector(`[test-id="${index}"]`)
     if (rendered_sponsor != null) {
+      console.log(index)
+      expect((rendered_sponsor).classList.contains('sponsor-col')).toBe(true)
       expect(rendered_sponsor.children).toHaveLength(1)
       expect(rendered_sponsor.children[0].classList.contains('single-sponsor'))
       expect(rendered_sponsor.children[0].getAttribute('href')).toEqual(current_sponsor.link)

@@ -3,14 +3,14 @@ import React from 'react'
 import placeholder from '../../../../images/placeholder-rectangle.png'
 import './HomeSingleSponsor.css'
 
-type Sponsor = {
+type SponsorType = {
   name: string,
   img_path: string,
   link: string
 };
 
 type Props = {
-  sponsor: Sponsor
+  sponsor: SponsorType
 };
 
 const HomeSingleSponsor = (props: Props) => {
@@ -23,7 +23,7 @@ const HomeSingleSponsor = (props: Props) => {
   }
   const { sponsor } = props
   return (
-    <a href={sponsor.link} className="single-sponsor">
+    <a test-id="a1" href={sponsor.link} className="single-sponsor">
       <img
         className="sponsor-image"
         src={tryRequire(sponsor.img_path)}

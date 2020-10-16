@@ -25,8 +25,8 @@ const HomeSponsors = (props: Props) => {
               Sponsors
             </h3>
             <Row className="justify-content-sm-center">
-              { sponsors.map((sponsor: SponsorType, id: number) => (
-                <Col xs="6" sm="4" md="2" key={id} test-id={id} className="sponsor-col">
+              { sponsors.map((sponsor: SponsorType, index: number) => (
+                <Col xs="6" sm="4" md="2" key={index} test-id={index} className="sponsor-col">
                   <HomeSingleSponsor
                     sponsor={sponsor}
                   />
