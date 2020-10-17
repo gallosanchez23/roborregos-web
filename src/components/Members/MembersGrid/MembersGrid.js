@@ -25,6 +25,7 @@ class MembersGrid extends Component {
     this.keyFunction           = this.keyFunction.bind(this);
     this.Item                  = this.Item.bind(this);
     this.updateMember          = this.updateMember.bind(this);
+    this.changeMemberUIArrows  = this.changeMemberUIArrows.bind(this);
 
     this.active_members_keys = this.props.active_members.map(member => (member.id));
     this.inactive_members_keys = this.props.inactive_members.map(member => (member.id));
@@ -33,6 +34,7 @@ class MembersGrid extends Component {
       show_modal: false,
       member: this.props.active_members[0],
       active: true,
+      mouseX: 0,
       number_of_columns: this.numberOfColumns(),
     }
   }
@@ -67,6 +69,11 @@ class MembersGrid extends Component {
       this.handleHideModal();
     }
     var difference = (event.keyCode === 37)?-1:(event.keyCode === 39)?1:0;
+    this.updateMember(difference);
+  }
+
+  changeMemberUIArrows(next, current){
+    var difference = (next > current)? 1 : -1;
     this.updateMember(difference);
   }
 
@@ -151,18 +158,19 @@ class MembersGrid extends Component {
   Item(member)
   {
       return (
-          <MemberModal member={ member } onHide={ this.handleHideModal }/>
+          <MemberModal onClick={this.updateXMouse} member={ member } onHide={ this.handleHideModal }/>
       )
   }
 
   updateMember(difference) {
+    var new_id;
     if(this.state.active){
-      var new_id = (this.active_members_keys.indexOf(this.state.member.id) + difference < 0) ? this.props.active_members.length - 1 : (this.active_members_keys.indexOf(this.state.member.id) + difference) % this.props.active_members.length;
+      new_id = (this.active_members_keys.indexOf(this.state.member.id) + difference < 0) ? this.props.active_members.length - 1 : (this.active_members_keys.indexOf(this.state.member.id) + difference) % this.props.active_members.length;
       this.setState({
         member: this.props.active_members[new_id]
       });
     }else{
-      var new_id = (this.inactive_members_keys.indexOf(this.state.member.id) + difference < 0) ? this.props.inactive_members.length - 1 : (this.inactive_members_keys.indexOf(this.state.member.id) + difference) % this.props.inactive_members.length;
+      new_id = (this.inactive_members_keys.indexOf(this.state.member.id) + difference < 0) ? this.props.inactive_members.length - 1 : (this.inactive_members_keys.indexOf(this.state.member.id) + difference) % this.props.inactive_members.length;
       this.setState({
         member: this.props.inactive_members[new_id]
       });
@@ -185,6 +193,7 @@ class MembersGrid extends Component {
             timeout={250}
             fullHeightHover={true}
             indicators={false}
+            onChange={ (next, active) => {this.changeMemberUIArrows(next, active)}}
             startAt={(this.state.active) ? this.active_members_keys.indexOf(this.state.member.id) : this.inactive_members_keys.indexOf(this.state.member.id)}
           >
             {
