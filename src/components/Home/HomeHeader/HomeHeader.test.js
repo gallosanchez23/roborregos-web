@@ -19,7 +19,7 @@ beforeEach(() => {
 
 const items = [' create', ' build', ' design', ' code', ' connect', ' compete', ' learn', ' teach']
 
-const testWordByTime = (header_span: HTMLSpanElement) => {
+const testWordByTime = (header_span: HTMLElement) => {
   items.forEach((word: string) => {
     jest.advanceTimersByTime(70 * word.length)
     expect(header_span.children[3].textContent).toEqual(`We${word}|`)

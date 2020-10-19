@@ -1,32 +1,44 @@
 // @flow
-import React, { Component } from 'react'
+import React from 'react'
 import './HomeInformation.css'
 
-class HomeInformation extends Component {
+type Visibles = {
+  competitions_visible: boolean,
+  social_visible: boolean,
+  events_visible: boolean,
+  students_visible: boolean
+};
+
+const defaultVisibility: Visibles = {
+  competitions_visible: false,
+  social_visible: false,
+  events_visible: false,
+  students_visible: false,
+}
+
+class HomeInformation extends React.Component<*, *> {
+  competitions: { current: null | HTMLDivElement };
+
+  social: { current: null | HTMLDivElement };
+
+  events: { current: null | HTMLDivElement };
+
+  students: { current: null | HTMLDivElement };
+
   constructor() {
     super()
-    this.competitions = React.createRef()
-    this.social = React.createRef()
-    this.events = React.createRef()
-    this.students = React.createRef()
-
-    this.handleScrollEvent = this.handleScrollEvent.bind(this)
-    this.listenScrollEvent = this.listenScrollEvent.bind(this)
-    this.isElementVisible = this.isElementVisible.bind(this)
-
-    this.state = {
-      competitions_visible: false,
-      social_visible: false,
-      events_visible: false,
-      students_visible: false,
-    }
+    this.competitions = React.createRef<HTMLDivElement>()
+    this.social = React.createRef<HTMLDivElement>()
+    this.events = React.createRef<HTMLDivElement>()
+    this.students = React.createRef<HTMLDivElement>()
+    this.state = defaultVisibility
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     window.addEventListener('scroll', this.listenScrollEvent, true)
   }
 
-  isElementVisible = (element: ref) => {
+  isElementVisible = (element: HTMLDivElement) => {
     const viewTop = window.pageYOffset
     const viewBottom = viewTop + window.innerHeight
     const top = element.offsetTop
@@ -36,7 +48,7 @@ class HomeInformation extends Component {
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop))
   }
 
-  handleScrollEvent(element: ref) {
+  handleScrollEvent = (element: null | HTMLDivElement) => {
     if (!element) {
       return
     }
@@ -48,7 +60,7 @@ class HomeInformation extends Component {
     }
   }
 
-  listenScrollEvent() {
+  listenScrollEvent = () => {
     this.handleScrollEvent(this.competitions.current)
     this.handleScrollEvent(this.social.current)
     this.handleScrollEvent(this.events.current)

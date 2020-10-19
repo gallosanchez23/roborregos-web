@@ -14,11 +14,15 @@ const checkHomeMiniRendered = () => {
     expect(mini_information.children).toHaveLength(1)
     expect(mini_information.children[0].children).toHaveLength(1)
     const row_container = document.querySelector('[test-id="2"]')
-    expect(row_container.children).toHaveLength(3)
-    for (let index = 0; index < 3; index += 1) {
-      expect(row_container.children[index].children).toHaveLength(2)
-      expect(row_container.children[index].children[1]).not.toEqual(null)
-      expect(row_container.children[index].children[1].textContent).toEqual(headers[index])
+    if (row_container != null) {
+      expect(row_container.children).toHaveLength(3)
+      for (let index = 0; index < 3; index += 1) {
+        expect(row_container.children[index].children).toHaveLength(2)
+        expect(row_container.children[index].children[1]).not.toEqual(null)
+        expect(row_container.children[index].children[1].textContent).toEqual(headers[index])
+      }
+    } else {
+      expect(row_container).not.toEqual(null)
     }
   } else {
     expect(mini_information).not.toEqual(null)
