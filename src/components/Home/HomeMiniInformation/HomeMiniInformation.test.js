@@ -17,6 +17,7 @@ const checkHomeMiniRendered = () => {
     expect(row_container.children).toHaveLength(3)
     for (let index = 0; index < 3; index += 1) {
       expect(row_container.children[index].children).toHaveLength(2)
+      expect(row_container.children[index].children[1]).not.toEqual(null)
       expect(row_container.children[index].children[1].textContent).toEqual(headers[index])
     }
   } else {
