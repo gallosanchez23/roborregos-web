@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import placeholder from 'images/placeholder-rectangle.png';
+import placeholder from '../../../../images/placeholder-rectangle.png';
 import {MEDIUM_WIDTH} from 'constants.js';
 import './MemberModal.css';
 
