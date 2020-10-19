@@ -18,7 +18,7 @@ class MembersGrid extends Component {
   * @param {active_members} props Lists of active and inactive members.
   */
   constructor(props) {
-    super(props);
+    super(props)
 
     this.tryRequire = this.tryRequire.bind(this);
     this.memberIcon = this.memberIcon.bind(this);
@@ -79,7 +79,7 @@ class MembersGrid extends Component {
     try {
       return require('images/members/' + imgPath);
     } catch (err) {
-      return placeholder;
+      return placeholder
     }
   }
 
@@ -123,7 +123,7 @@ class MembersGrid extends Component {
   handleHideModal() {
     this.setState({
       show_modal: false,
-    });
+    })
   }
 
   /**
@@ -132,7 +132,7 @@ class MembersGrid extends Component {
   updateNumberOfColumns() {
     this.setState({
       number_of_columns: this.numberOfColumns(),
-    });
+    })
   }
 
   /**
@@ -153,27 +153,27 @@ class MembersGrid extends Component {
           </h1>
         </div>
         <GridList
-          cellHeight={ 'auto' }
-          className='members-grid'
-          cols={ this.state.number_of_columns }
-          spacing={ 3 }
+          cellHeight="auto"
+          className="members-grid"
+          cols={this.state.number_of_columns}
+          spacing={3}
         >
           { members.map((member) => (
             <GridListTile
-              key={ member.id }
-              cols={ 1 }
-              className='members-grid-tile'
-              onClick={ this.handleShowModal.bind(this, member) }
+              key={member.id}
+              cols={1}
+              className="members-grid-tile"
+              onClick={this.handleShowModal.bind(this, member)}
             >
-              <div className='member-image-container'>
+              <div className="member-image-container">
                 <img
-                  className='member-image'
-                  src={ this.tryRequire(member.id + '.jpg') }
-                  alt={ member.name }
+                  className="member-image"
+                  src={this.tryRequire(`${member.id}.jpg`)}
+                  alt={member.name}
                 />
-                <div className='member-image-content'>
+                <div className="member-image-content">
                   <p>
-                    { member.name + ' ' + member.lastname }
+                    { `${member.name} ${member.lastname}` }
                   </p>
                   <div className='member-image-icon'>
                     <FontAwesomeIcon
@@ -186,7 +186,7 @@ class MembersGrid extends Component {
           )) }
         </GridList>
       </div>
-    );
+    )
   }
 
   /**
@@ -196,16 +196,15 @@ class MembersGrid extends Component {
   */
   memberIcon(role) {
     if (role === 'Software Development') {
-      return faCode;
-    } else if (role === 'Electronics') {
-      return faMicrochip;
-    } else if (role === 'Mechanical Design') {
-      return faCog;
-    } else if (role === 'Logistics & Sponsorship') {
-      return faBullhorn;
-    } else {
-      return faRocket;
+      return faCode
+    } if (role === 'Electronics') {
+      return faMicrochip
+    } if (role === 'Mechanical Design') {
+      return faCog
+    } if (role === 'Logistics & Sponsorship') {
+      return faBullhorn
     }
+    return faRocket
   }
 
   /**
@@ -255,7 +254,7 @@ class MembersGrid extends Component {
   */
   render() {
     return (
-      <div className='members-grid-container'>
+      <div className="members-grid-container">
         { this.generateGridList(this.props.active_members, '') }
         { this.generateGridList(this.props.inactive_members,
             'RoBorregos Legacy') }
@@ -288,8 +287,8 @@ class MembersGrid extends Component {
           }
         />
       </div>
-    );
+    )
   }
 }
 
-export default MembersGrid;
+export default MembersGrid

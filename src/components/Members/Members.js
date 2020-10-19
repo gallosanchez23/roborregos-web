@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 import MembersGrid from './MembersGrid/MembersGrid.js';
 import MembersHeader from './MembersHeader/MembersHeader.js';
@@ -27,16 +28,15 @@ class Members extends Component {
     const active = this.members.filter((member) =>
       member.status === 'active' ||
       member.status === 'comitee').sort((a, b) => a.id - b.id);
-
     return (
-      <div className='members-container'>
+      <div className="members-container">
         <MembersHeader />
-        <MembersGrid active_members={ active } inactive_members={ inactive } />
+        <MembersGrid active_members={active} inactive_members={inactive} />
         <MembersJoinUs />
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default Members;
+export default Members

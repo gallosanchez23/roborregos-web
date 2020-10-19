@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import AboutHeader from './AboutHeader/AboutHeader.js';
-import AboutTimeline from './AboutTimeline/AboutTimeline.js'
-import Footer from 'components/Footer/Footer.js';
-import timelineData from 'data/timeline.json';
-import './About.css';
+import React, { Component } from 'react'
+import timelineData from '../../data/timeline.json'
+import Footer from '../Footer/Footer'
+import AboutHeader from './AboutHeader/AboutHeader'
+import AboutTimeline from './AboutTimeline/AboutTimeline'
+import './About.css'
 
 class About extends Component {
   render() {
-    document.title = 'RoBorregos | About';
+    document.title = 'RoBorregos | About'
 
     return (
-      <div className='about-container'>
+      <div className="about-container">
         <AboutHeader />
-        <AboutTimeline events={ timelineData.events } />
+        <AboutTimeline events={timelineData.events} />
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default About;
+export default About

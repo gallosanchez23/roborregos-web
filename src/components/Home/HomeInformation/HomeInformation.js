@@ -66,7 +66,7 @@ class HomeInformation extends Component {
                 High-Performance Team
               </div>
               <div className='home-information-simple'>
-                We participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, want to demonstrate the potential of Mexico in the development and innovation of technology.
+                We participate in different national and international competitions for autonomous robots such as Mexico's TMR (Torneo Mexicano de Robótica), RoboCup, and IEEE LARC (Latin American Robotics Competition). As a team, we want to demonstrate the potential of Mexico in the development and innovation&nbsp;of&nbsp;technology.
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ class HomeInformation extends Component {
                 Social Projects
               </div>
               <div className='home-information-simple'>
-                We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had that inspire us.
+                We like to share everything we’ve learned with the community, giving free classes, workshops and participating in webinars where we can talk and teach about all the technologies we’ve used and all the experiences we’ve had that&nbsp;inspire&nbsp;us.
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ class HomeInformation extends Component {
                 Events & Outreach
               </div>
               <div className='home-information-simple'>
-                We participate in congresses and events such as INCMty, Conexión Tec, The International Congress of Mechatronics - Automatization and Technology, Semana i and many more.
+                We participate in congresses and events such as INCMty, Conexión Tec, The International Congress of Mechatronics - Automatization and Technology, Semana i and&nbsp;many&nbsp;more.
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ class HomeInformation extends Component {
                 Student Community
               </div>
               <div className='home-information-simple'>
-                To reach our community, we give free workshops about useful technologies such as: ROS, Git and Machine Learning, as well as our annual biggest event: Candidates, where the team gives weekly classes of basic programming, mechanics and electronics for anyone in the university interested, and organize a robotics tournament to get new members.
+                To reach our community, we give free workshops about useful technologies such as: ROS, Git and Machine Learning, as well as our annual biggest event: Candidates, where the team gives weekly classes of basic programming, mechanics and electronics for anyone in the university interested, and organize a robotics tournament to get new&nbsp;members.
               </div>
             </div>
           </div>

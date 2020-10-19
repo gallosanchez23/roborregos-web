@@ -1,36 +1,36 @@
-import React, { Component } from 'react';
-import placeholder from 'images/placeholder-rectangle.png';
-import './HomeSingleSponsor.css';
+import React, { Component } from 'react'
+import placeholder from '../../../../images/placeholder-rectangle.png'
+import './HomeSingleSponsor.css'
 
 class HomeSingleSponsor extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.tryRequire = this.tryRequire.bind(this);
+    this.tryRequire = this.tryRequire.bind(this)
 
-    this.sponsor = props.sponsor;
+    this.sponsor = props.sponsor
   }
 
   tryRequire(img_path) {
     try {
-      return require('images/sponsors/' + img_path);
+      return require(`images/sponsors/${img_path}`)
     } catch (err) {
-      return placeholder;
+      return placeholder
     }
   }
 
   render() {
-    return(
-      <a href={ this.sponsor.link } className='single-sponsor'>
+    return (
+      <a href={this.sponsor.link} className="single-sponsor">
         <img
-          className='sponsor-image'
-          src={ this.tryRequire(this.sponsor.img_path) }
-          alt={ this.sponsor.name }
+          className="sponsor-image"
+          src={this.tryRequire(this.sponsor.img_path)}
+          alt={this.sponsor.name}
         />
-        <div className='img-filter'></div>
+        <div className="img-filter" />
       </a>
-    );
+    )
   }
 }
 
-export default HomeSingleSponsor;
+export default HomeSingleSponsor

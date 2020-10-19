@@ -9,4 +9,4 @@
 #### Merge Checklist:
 
 - [ ] The branch is up-to-date (i.e. rebased) with the base branch
-- [ ] No code style issues
+- [ ] No code style issues (eslint and flow)

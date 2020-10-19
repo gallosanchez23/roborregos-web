@@ -14,7 +14,11 @@ class MembersJoinUs extends Component {
   render() {
     return (
       <div className='members-join-us'>
-
+        <button 
+          onClick={this.handleClick} 
+          className='members-join-us-button members-join-us-button-contain members-join-us-button-text'>
+              Join the Team
+        </button>
       </div>
     );
   }
