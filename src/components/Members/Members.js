@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import MembersGrid from './MembersGrid/MembersGrid.js';
 import MembersHeader from './MembersHeader/MembersHeader.js';
 import MembersJoinUs from './MembersJoinUs/MembersJoinUs.js';
-import Footer from 'components/Footer/Footer.js';
+import Footer from '../Footer/Footer.js';
 import './Members.css';
 
 /** Component class of Members page. */
