@@ -5,7 +5,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import {Modal} from 'react-bootstrap';
 import placeholder from '../../../images/placeholder-rectangle.png';
-import {LARGE_WIDTH, MEDIUM_WIDTH, MOBILE_WIDTH} from 'constants.js';
+import {LARGE_WIDTH, MEDIUM_WIDTH, MOBILE_WIDTH} from '../../../constants.js';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCog, faCode, faBullhorn, faMicrochip, faRocket}
   from '@fortawesome/free-solid-svg-icons';
