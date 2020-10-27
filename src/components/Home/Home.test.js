@@ -31,5 +31,5 @@ it('<Home> Renders correctly with Title Name', () => {
   act(() => {
     render(<Home />, container)
   })
-  expect(document.title).toBe('RoBorregos')
+  expect(document.title).toBe('RoBorregos | Home')
 })

@@ -5,7 +5,7 @@ import { act } from 'react-dom/test-utils'
 
 import HomeSingleSponsor from './HomeSingleSponsor'
 
-const sponsor_text_case1: string = `
+const sponsor_text_case: string = `
 {
     "sponsor": [
         {
@@ -21,7 +21,7 @@ const sponsor_text_case1: string = `
     ]
 }`
 
-const { sponsor } = JSON.parse(sponsor_text_case1)
+const { sponsor } = JSON.parse(sponsor_text_case)
 
 const singleSponsorRendering = (index: number) => {
   const sponsor_rendered = document.querySelector('[test-id="a1"]')

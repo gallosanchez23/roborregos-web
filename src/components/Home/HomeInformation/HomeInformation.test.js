@@ -31,9 +31,9 @@ const information_containers: string = `
     ]
 }`
 
-function extractContent(s: string) {
+function extractContent(textToProbe: string) {
   const span = document.createElement('span')
-  span.innerHTML = s
+  span.innerHTML = textToProbe
   return span.textContent || span.innerText
 }
 

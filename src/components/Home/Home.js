@@ -11,7 +11,7 @@ import HomeSponsors from './HomeSponsors/HomeSponsors'
 import sponsorsData from '../../data/sponsors.json'
 
 const Home = () => {
-  document.title = 'RoBorregos'
+  document.title = 'RoBorregos | Home'
 
   return (
     <div className="home-container">
