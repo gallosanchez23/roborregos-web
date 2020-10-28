@@ -134,7 +134,7 @@ class MemberModal extends Component {
 
   /**
   * Generates large view responsive components
-  * @return {Element} Mmember modal
+  * @return {Element} Member modal
   */
   largeView() {
     return (
