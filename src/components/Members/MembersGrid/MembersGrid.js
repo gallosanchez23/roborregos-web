@@ -91,7 +91,7 @@ class MembersGrid extends Component {
     if (event.keyCode === 27) {
       this.handleHideModal();
     }
-    const difference = (event.keyCode === 37)?-1:(event.keyCode === 39)?1:0;
+    const difference = (event.keyCode === 37) ? -1 : (event.keyCode === 39) ? 1 : 0;
     this.updateMember(difference);
   }
 
