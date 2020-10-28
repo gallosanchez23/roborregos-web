@@ -84,7 +84,7 @@ class MembersGrid extends Component {
   }
 
   /**
-  * Key operations to hide and change modals.
+  * Operations to hide and change modals on pressed arrow keys.
   * @param {event} event: React event
   */
   keyFunction(event) {
