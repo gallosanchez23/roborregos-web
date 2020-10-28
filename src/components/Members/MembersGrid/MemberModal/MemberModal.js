@@ -43,7 +43,8 @@ class MemberModal extends Component {
   /**
   * Parses path to member image
   * @param {string} imgPath: Path to member's photographs.
-  * @return {path}
+  * @return {string} if valid path to image, if invalid it returns
+  *  the path to a placeholder.
   */
   tryRequire(imgPath) {
     try {

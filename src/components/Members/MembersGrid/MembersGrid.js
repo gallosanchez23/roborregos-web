@@ -91,8 +91,8 @@ class MembersGrid extends Component {
     if (event.keyCode === 27) {
       this.handleHideModal();
     }
-    const difference = (event.keyCode === 37) ? -1 : (event.keyCode === 39) ? 1 : 0;
-    this.updateMember(difference);
+    const next_member_index_difference = (event.keyCode === 37) ? -1 : (event.keyCode === 39) ? 1 : 0;
+    this.updateMember(next_member_index_difference);
   }
 
   /**
@@ -101,8 +101,15 @@ class MembersGrid extends Component {
   * @param {int} current: Id of current view in display.
   */
   changeMemberUIArrows(next, current) {
-    const difference = (next > current) ? 1 : -1;
-    this.updateMember(difference);
+    if (this.state.active) {
+      this.setState({
+        member: this.props.active_members[next],
+      });
+    } else {
+      this.setState({
+        member: this.props.inactive_members[next],
+      });
+    }
   }
 
   /**
@@ -215,7 +222,6 @@ class MembersGrid extends Component {
   carouselItem(member) {
     return (
       <MemberModal
-        onClick={this.updateXMouse}
         member={ member }
         onHide={ this.handleHideModal }
       />
@@ -224,10 +230,11 @@ class MembersGrid extends Component {
 
   /**
   * Updates member state.
-  * @param {int} difference: States if the shown member has to
-  * be the next or previous member on the list.
+  * @param {int} difference: States if the next member to be shown is
+  *  next or previous based on the index difference of the member on the list.
   */
   updateMember(difference) {
+    if(difference === 0) return;
     let newId;
     if (this.state.active) {
       newId = (this.active_members_keys.indexOf(this.state.member.id) +
