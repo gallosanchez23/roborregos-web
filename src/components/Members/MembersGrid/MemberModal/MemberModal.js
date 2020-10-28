@@ -214,7 +214,7 @@ class MemberModal extends Component {
               <Col>
                 <IconButton
                   className='icon-small'
-                  onClick={ this.handleHideModal}
+                  onClick={ this.handleHideModal }
                 >
                   <CloseIcon />
                 </IconButton>
