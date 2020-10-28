@@ -245,6 +245,7 @@ class MemberModal extends Component {
                       <div>
                         {'Since ' + this.member.class + ', ' +
                         this.member.semesters + ' semesters' }
+                        {`Since ${this.member.class}, ${this.members.semesters} semesters`}
                       </div>
                     </h6>
                   </div>
