@@ -239,7 +239,7 @@ class MembersGrid extends Component {
       });
     } else {
       newId = (this.inactive_members_keys.indexOf(this.state.member.id) +
-      difference < 0) ?this.props.inactive_members.length - 1 :
+      difference < 0) ? this.props.inactive_members.length - 1 :
       (this.inactive_members_keys.indexOf(this.state.member.id) + difference) %
       this.props.inactive_members.length;
       this.setState({
