@@ -101,7 +101,7 @@ class MembersGrid extends Component {
   * @param {int} current: Id of current view in display.
   */
   changeMemberUIArrows(next, current) {
-    const difference = (next > current)? 1 : -1;
+    const difference = (next > current) ? 1 : -1;
     this.updateMember(difference);
   }
 
