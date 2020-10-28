@@ -268,7 +268,7 @@ class MemberModal extends Component {
 
   /**
   * Render funciton of member modal
-  * @return {components} Memmebr modal
+  * @return {components} Member modal
   */
   render() {
     if (this.state.show_large) {
