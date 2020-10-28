@@ -13,7 +13,7 @@ class MemberModal extends Component {
 
   /**
   * Class constructor
-  * @param {active_members} props Lists of active and inactive members.
+  * @param {active_members} props: Lists of active and inactive members.
   */
   constructor(props) {
     super(props)
@@ -42,7 +42,7 @@ class MemberModal extends Component {
 
   /**
   * Parses path to member image
-  * @param {string} imgPath Path to member's photographs.
+  * @param {string} imgPath: Path to member's photographs.
   * @return {path}
   */
   tryRequire(imgPath) {
@@ -71,8 +71,8 @@ class MemberModal extends Component {
 
   /**
   * Parses contact button links for each member.
-  * @param {string} platform Social media platform.
-  * @param {string} className String for classname.
+  * @param {string} platform: Social media platform.
+  * @param {string} className: String for classname.
   * @return {Element}
   */
   getContactButton(platform, className) {

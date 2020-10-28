@@ -10,7 +10,7 @@ import './Members.css';
 class Members extends Component {
   /**
  * Class constructor
- * @param {list} props List of member data.
+ * @param {list} props: List of member data.
  */
   constructor(props) {
     super(props);

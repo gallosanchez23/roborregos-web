@@ -15,7 +15,7 @@ import './MembersGrid.css';
 class MembersGrid extends Component {
   /**
   * Class constructor
-  * @param {active_members} props Lists of active and inactive members.
+  * @param {active_members} props: Lists of active and inactive members.
   */
   constructor(props) {
     super(props)
@@ -72,7 +72,7 @@ class MembersGrid extends Component {
 
   /**
   * Parses path to member image
-  * @param {string} imgPath Path to member's photographs.
+  * @param {string} imgPath: Path to member's photographs.
   * @return {path}
   */
   tryRequire(imgPath) {
@@ -85,7 +85,7 @@ class MembersGrid extends Component {
 
   /**
   * Key operations to hide and change modals.
-  * @param {event} event
+  * @param {event} event: React event
   */
   keyFunction(event) {
     if (event.keyCode === 27) {
@@ -97,8 +97,8 @@ class MembersGrid extends Component {
 
   /**
   * Function called from carrousel's change of view to update state.member
-  * @param {int} next Id of next view to be displayed.
-  * @param {int} current Id of current view in display.
+  * @param {int} next: Id of next view to be displayed.
+  * @param {int} current: Id of current view in display.
   */
   changeMemberUIArrows(next, current) {
     const difference = (next > current)? 1 : -1;
@@ -107,7 +107,7 @@ class MembersGrid extends Component {
 
   /**
   * Shows member's modal by updating state
-  * @param {prop} member Member to be shown.
+  * @param {prop} member: Member to be shown.
   */
   handleShowModal(member) {
     this.setState({
@@ -137,8 +137,8 @@ class MembersGrid extends Component {
 
   /**
   * Generates member grid component.
-  * @param {prop} members Member to be shown.
-  * @param {string} title Member to be shown.
+  * @param {prop} members: Member to be shown.
+  * @param {string} title: Member to be shown.
   * @return {component} Grid of member list data.
   */
   generateGridList(members, title) {
@@ -191,7 +191,7 @@ class MembersGrid extends Component {
 
   /**
   * Returns member icon according to role specified.
-  * @param {string} role Member role.
+  * @param {string} role: Member role.
   * @return {icon}
   */
   memberIcon(role) {
@@ -209,7 +209,7 @@ class MembersGrid extends Component {
 
   /**
   * Returns Component MemberModal with specified member atributes.
-  * @param {prop} member Member object.
+  * @param {prop} member: Member object.
   * @return {icon}
   */
   carouselItem(member) {
@@ -224,7 +224,7 @@ class MembersGrid extends Component {
 
   /**
   * Updates member state.
-  * @param {int} difference States if the shown member has to
+  * @param {int} difference: States if the shown member has to
   * be the next or previous member on the list.
   */
   updateMember(difference) {
