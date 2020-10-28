@@ -91,7 +91,7 @@ class MembersGrid extends Component {
     if (event.keyCode === 27) {
       this.handleHideModal();
     }
-    const difference = (event.keyCode === 37)?-1:(event.keyCode === 39)?1:0;
+    const difference = (event.keyCode === 37) ? -1 : (event.keyCode === 39) ? 1 : 0;
     this.updateMember(difference);
   }
 
@@ -239,7 +239,7 @@ class MembersGrid extends Component {
       });
     } else {
       newId = (this.inactive_members_keys.indexOf(this.state.member.id) +
-      difference < 0) ?this.props.inactive_members.length - 1 :
+      difference < 0) ? this.props.inactive_members.length - 1 :
       (this.inactive_members_keys.indexOf(this.state.member.id) + difference) %
       this.props.inactive_members.length;
       this.setState({
