@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import timelineData from '../../data/timeline.json'
 import Footer from '../Footer/Footer'
