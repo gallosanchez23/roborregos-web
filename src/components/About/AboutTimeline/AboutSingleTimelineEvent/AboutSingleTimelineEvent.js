@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react'
+import React from 'react'
 import { VerticalTimelineElement } from 'react-vertical-timeline-component'
 import placeholder from '../../../../images/placeholder-rectangle.png'
 import 'react-vertical-timeline-component/style.min.css'
@@ -24,15 +24,25 @@ type Props = {
   event: Event
 };
 
-class AboutSingleTimelineEvent extends Component<Props> {
+class AboutSingleTimelineEvent extends React.Component<Props, *> {
+  date: string;
+
+  year: string;
+
+  backgroundColor: string;
+
+  contentColor: string;
+
+  displayContent: string;
+
+  displayImg: string;
+
   constructor(props: Props) {
     super(props)
-    this.resolvePropsValues = this.resolvePropsValues.bind(this)
-    this.handleHover = this.handleHover.bind(this)
     const { event } = this.props
-    this.event = event
+    // this.event = event
 
-    this.date = this.event.date
+    this.date = event.date
     this.year = this.date.substr(this.date.length - 4)
     this.backgroundColor = this.resolveColor(this.year)
 
@@ -48,12 +58,12 @@ class AboutSingleTimelineEvent extends Component<Props> {
     }
   }
 
-  resolveColor = (year: number) => {
+  resolveColor = (year: string) => {
     const colors = ['rgb(0, 178, 154)', 'rgb(238, 77, 122)', 'rgb(255, 130, 0)', 'rgb(155, 0, 250)']
-    return colors[year % 4]
+    return colors[parseInt(year, 10) % 4]
   }
 
-  resolvePosition = (year: number) => (parseInt(year, 10) % 2 ? 'right' : 'left')
+  resolvePosition = (year: string) => (parseInt(year, 10) % 2 ? 'right' : 'left')
 
   handleHover() {
     const { hover } = this.state
@@ -75,10 +85,10 @@ class AboutSingleTimelineEvent extends Component<Props> {
 
   render() {
     this.resolvePropsValues()
-
+    const { event } = this.props
     return (
       <VerticalTimelineElement
-        date={this.event.date}
+        date={event.date}
         position={this.resolvePosition(this.year)}
         iconStyle={{ background: this.backgroundColor, color: '#fff' }}
         contentStyle={{
@@ -92,12 +102,12 @@ class AboutSingleTimelineEvent extends Component<Props> {
         <div className="timeline-element-img-container" test-id="1">
           <img
             className="timeline-element-img"
-            src={this.tryRequire(this.event.img_path)}
-            alt={this.event.img_description}
+            src={this.tryRequire(event.img_path)}
+            alt={event.description}
           />
           <div className="timeline-element-img-title">
             <h3>
-              { this.event.title }
+              { event.title }
             </h3>
           </div>
         </div>
@@ -108,10 +118,10 @@ class AboutSingleTimelineEvent extends Component<Props> {
         >
           <div>
             <h3>
-              { this.event.title }
+              { event.title }
             </h3>
             <p>
-              { this.event.description }
+              { event.description }
             </p>
           </div>
         </div>

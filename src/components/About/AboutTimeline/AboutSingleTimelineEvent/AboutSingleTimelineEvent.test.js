@@ -11,7 +11,6 @@ const sampleEvent = {
   img_path: 'sample-path',
   title: 'sample-title',
   description: 'sample-description',
-  img_description: 'sample-img-description',
 }
 
 let container = null
@@ -42,7 +41,7 @@ const testStructureFirstPart = () => {
     expect(component_container.children).toHaveLength(2)
     expect(component_container.children[0].getAttribute('src')).toEqual('placeholder-rectangle.png')
     expect(component_container.children[0].getAttribute('alt')).toEqual(
-      sampleEvent.img_description,
+      sampleEvent.description,
     )
     expect(component_container.children[1].children).toHaveLength(1)
     expect(component_container.children[1].children[0].textContent).toEqual(
