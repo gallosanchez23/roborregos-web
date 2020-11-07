@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { Component } from 'react'
 import { VerticalTimelineElement } from 'react-vertical-timeline-component'
 import placeholder from '../../../../images/placeholder-rectangle.png'
 import 'react-vertical-timeline-component/style.min.css'
@@ -24,7 +24,7 @@ type Props = {
   event: Event
 };
 
-class AboutSingleTimelineEvent extends React.Component<*, *> {
+class AboutSingleTimelineEvent extends Component<Props> {
   constructor(props: Props) {
     super(props)
     this.resolvePropsValues = this.resolvePropsValues.bind(this)
