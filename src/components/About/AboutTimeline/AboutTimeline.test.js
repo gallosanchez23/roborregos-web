@@ -159,12 +159,6 @@ const information_timeline: string = `
 
 const { events } = JSON.parse(information_timeline)
 
-function textToHTML(textToProbe: string) {
-  const span = document.createElement('span')
-  span.innerHTML = textToProbe
-  return span.textContent || span.innerText
-}
-
 const checkStructureTimeline = () => {
   const timeline_container = document.querySelector('[test-id="1"]')
   if (timeline_container != null) {
@@ -172,6 +166,51 @@ const checkStructureTimeline = () => {
     expect(timeline_container.children[0].children).toHaveLength(2)
     expect(timeline_container.children[0].children[1].children).toHaveLength(events.length)
     expect(timeline_container.children[0].children[0].children).toHaveLength(1)
+  } else {
+    expect(timeline_container).not.toEqual(null)
+  }
+}
+
+const checkImageProperties = (element: HTMLElement, index: number) => {
+  if (element != null) {
+    expect(element.children).toHaveLength(2)
+    expect(element.children[0].getAttribute('src')).toEqual(
+      'placeholder-rectangle.png',
+    )
+    expect(element.children[1].children).toHaveLength(1)
+    expect(element.children[1].children[0].textContent).toEqual(
+      events[index].title,
+    )
+  } else {
+    expect(element).not.toEqual(null)
+  }
+}
+
+const testAnEventElement = (element: HTMLElement, index: number) => {
+  if (element != null) {
+    expect(element.children).toHaveLength(2)
+    expect(element.children[1].children).toHaveLength(4)
+    checkImageProperties(element.children[1].children[1], index)
+    expect(element.children[1].children[2].children).toHaveLength(1)
+    expect(element.children[1].children[2].children[0].children).toHaveLength(2)
+    expect(element.children[1].children[2].children[0].children[0].textContent).toEqual(
+      events[index].title,
+    )
+    expect(element.children[1].children[2].children[0].children[1].textContent).toEqual(
+      events[index].description,
+    )
+  } else {
+    expect(element).not.toEqual(null)
+  }
+}
+
+const checkInformationTimeline = () => {
+  const timeline_container = document.querySelector('[test-id="1"]')
+  if (timeline_container != null) {
+    for (let eventIndex = 0; eventIndex < events.length; eventIndex += 1) {
+      const element = timeline_container.children[0].children[1].children[eventIndex]
+      testAnEventElement(element, eventIndex)
+    }
   } else {
     expect(timeline_container).not.toEqual(null)
   }
@@ -210,4 +249,11 @@ it('<AboutTimeline> Structure is correctly', () => {
     render(<AboutTimeline events={events} />, container)
   })
   checkStructureTimeline()
+})
+
+it('<AboutTimeline> Information matches the JSON information', () => {
+  act(() => {
+    render(<AboutTimeline events={events} />, container)
+  })
+  checkInformationTimeline()
 })
