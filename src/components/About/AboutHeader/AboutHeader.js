@@ -5,7 +5,7 @@ import HeaderImg2 from '../../../images/about/about2.jpg'
 import './AboutHeader.css'
 
 const AboutHeader = () => (
-  <Carousel controls={false} fade>
+  <Carousel controls={false} fade test-id="1">
     <Carousel.Item>
       <div className="about-header-img-container">
         <img
@@ -16,7 +16,7 @@ const AboutHeader = () => (
       </div>
       <div className="right-gradient" />
       <div className="right-text">
-        <div className="text-box">
+        <div className="text-box" test-id="2">
           <h2 className="text-header">
             How it all began
           </h2>
@@ -40,7 +40,7 @@ const AboutHeader = () => (
       </div>
       <div className="left-gradient" />
       <div className="left-text">
-        <div className="text-box">
+        <div className="text-box" test-id="3">
           <h2 className="text-header">
             What we develop for
           </h2>
