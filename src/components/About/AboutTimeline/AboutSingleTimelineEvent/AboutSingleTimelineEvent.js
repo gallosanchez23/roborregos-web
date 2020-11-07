@@ -89,7 +89,7 @@ class AboutSingleTimelineEvent extends Component<Props> {
         }}
         contentArrowStyle={{ borderRight: `7px solid ${this.contentColor}` }}
       >
-        <div className="timeline-element-img-container">
+        <div className="timeline-element-img-container" test-id="1">
           <img
             className="timeline-element-img"
             src={this.tryRequire(this.event.img_path)}
@@ -102,6 +102,7 @@ class AboutSingleTimelineEvent extends Component<Props> {
           </div>
         </div>
         <div
+          test-id="2"
           className="timeline-element-content"
           style={{ background: this.contentColor }}
         >

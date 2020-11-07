@@ -78,7 +78,7 @@ afterEach(() => {
   container = null
 })
 
-it('<HomeInformation> Renders correctly checking the data', () => {
+it('<AboutHeader> Renders correctly checking the data', () => {
   act(() => {
     render(<AboutHeader />, container)
   })
