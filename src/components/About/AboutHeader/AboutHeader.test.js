@@ -21,7 +21,7 @@ const information_containers: string = `
 
 const { information } = JSON.parse(information_containers)
 
-function extractContent(textToProbe: string) {
+function textToHTML(textToProbe: string) {
   const span = document.createElement('span')
   span.innerHTML = textToProbe
   return span.textContent || span.innerText
@@ -45,10 +45,10 @@ const checkHomeInformationContainers = () => {
     if (information_container != null) {
       expect(information_container.children).toHaveLength(2)
       expect(information_container.children[0].textContent).toEqual(
-        extractContent(information[counter - 2].title),
+        textToHTML(information[counter - 2].title),
       )
       expect(information_container.children[1].textContent).toEqual(
-        extractContent(information[counter - 2].text_content),
+        textToHTML(information[counter - 2].text_content),
       )
     } else {
       expect(information_container).not.toEqual(null)

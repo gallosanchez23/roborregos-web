@@ -19,7 +19,7 @@ type Props = {
 const AboutTimeline = (props: Props) => {
   const { events } = props
   return (
-    <div className="about-timeline-container">
+    <div className="about-timeline-container" test-id="1">
       <Container fluid>
         <Row className="justify-content-md-center" id="timeline-title">
           <h1>
