@@ -1,3 +1,4 @@
+/* eslint-disable flowtype/no-weak-types */
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 // @flow
@@ -29,7 +30,7 @@ type Member = {
 
 type Props = {
   member: Member,
-  onHide: func
+  onHide: any
 };
 
 type State = {
@@ -40,7 +41,7 @@ type State = {
 class MemberModal extends Component <Props, State> {
   member: Member;
 
-  handleHideModal: func;
+  handleHideModal: any;
 
   /**
   * Class constructor
