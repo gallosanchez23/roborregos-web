@@ -7,7 +7,19 @@ import Footer from '../Footer/Footer'
 import './Members.css'
 
 type Member = {
-  status: string
+  id: number,
+  name: string,
+  lastname: string,
+  github: string,
+  github_user: string,
+  linkedin: string,
+  resume_link: string,
+  description: string,
+  class: string,
+  semesters: string,
+  subtitle: string,
+  status: string,
+  role: string
 };
 
 type MembersData = {
@@ -20,6 +32,8 @@ type Props = {
 
 /** Component class of Members page. */
 class Members extends Component <Props> {
+  members: Array<Member>;
+
   /**
  * Class constructor
  * @param {list} props: List of member data.

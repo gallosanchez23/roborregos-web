@@ -12,7 +12,7 @@ import { MEDIUM_WIDTH } from '../../../../constants'
 import './MemberModal.css'
 
 type Member = {
-  id: string,
+  id: number,
   name: string,
   lastname: string,
   github: string,
@@ -29,11 +29,19 @@ type Member = {
 
 type Props = {
   member: Member,
-  onHide: BinaryType
+  onHide: func
+};
+
+type State = {
+  show_large: boolean
 };
 
 /** Component class of Members' grid. */
-class MemberModal extends Component <Props> {
+class MemberModal extends Component <Props, State> {
+  member: Member;
+
+  handleHideModal: func;
+
   /**
   * Class constructor
   * @param {active_members} props: Lists of active and inactive members.
@@ -43,11 +51,6 @@ class MemberModal extends Component <Props> {
 
     this.tryRequire = this.tryRequire.bind(this)
     this.memberFullName = this.memberFullName.bind(this)
-    this.largeView = this.largeView.bind(this)
-    this.smallView = this.smallView.bind(this)
-    this.updateSizeView = this.updateSizeView.bind(this)
-    this.getContactButton = this.getContactButton.bind(this)
-    this.generateDataButtons = this.generateDataButtons.bind(this)
 
     this.member = props.member
     this.handleHideModal = props.onHide
@@ -59,7 +62,6 @@ class MemberModal extends Component <Props> {
 
   /** Adds event listeners for modal hiding and responsivity. */
   componentDidMount() {
-    document.addEventListener('keydown', this.escFunction, false)
     window.addEventListener('resize', this.updateSizeView)
   }
 
@@ -70,7 +72,7 @@ class MemberModal extends Component <Props> {
   * @return {Element}
   */
   getContactButton(platform: string, className: string) {
-    let href; let icon; let user
+    let href; let icon = ''; let user
 
     switch (platform) {
       case 'github':
@@ -107,7 +109,7 @@ class MemberModal extends Component <Props> {
   * @return {string} if valid path to image, if invalid it returns
   *  the path to a placeholder.
   */
-  tryRequire = (imgPath) => {
+  tryRequire = (imgPath: string) => {
     try {
       return require(`images/members/${imgPath}`)
     } catch (err) {

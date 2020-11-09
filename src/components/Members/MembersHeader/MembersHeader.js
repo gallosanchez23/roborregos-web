@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import './MembersHeader.css'
 
+type Props = {};
+
 /** Component class of Members' header. */
-class MembersHeader extends Component {
+class MembersHeader extends Component<Props> {
   /**
  Function to scroll down the window view towards th end of the component.
  */

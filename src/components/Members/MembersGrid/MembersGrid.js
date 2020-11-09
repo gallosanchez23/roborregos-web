@@ -17,19 +17,39 @@ import MemberModal from './MemberModal/MemberModal'
 import './MembersGrid.css'
 
 type Member = {
-  id: int,
+  id: number,
   name: string,
   lastname: string,
+  github: string,
+  github_user: string,
+  linkedin: string,
+  resume_link: string,
+  description: string,
+  class: string,
+  semesters: string,
+  subtitle: string,
+  status: string,
   role: string
 };
 
 type Props = {
-  active_members: Array<Members>,
-  inactive_members: Array<Members>
+  active_members: Array<Member>,
+  inactive_members: Array<Member>
+};
+
+type State = {
+  show_modal: boolean,
+  member: Member,
+  active: boolean,
+  number_of_columns: number
 };
 
 /** Component class of Members' grid. */
-class MembersGrid extends Component<Props> {
+class MembersGrid extends Component<Props, State> {
+  active_members_keys: Array<number>;
+
+  inactive_members_keys: Array<number>;
+
   /**
   * Class constructor
   * @param {list} props: Lists of active and inactive members.
@@ -67,7 +87,7 @@ class MembersGrid extends Component<Props> {
   * @param {string} role: Member role.
   * @return {icon}
   */
-  memberIcon = (role) => {
+  memberIcon = (role: string) => {
     if (role === 'Software Development') {
       return faCode
     } if (role === 'Electronics') {
@@ -82,7 +102,7 @@ class MembersGrid extends Component<Props> {
 
   /**
   * Calculates how many members per row to display on the member's grid.
-  * @return {int} Number of members per row for grid.
+  * @return {number} Number of members per row for grid.
   */
   numberOfColumns = () => {
     if (window.innerWidth >= LARGE_WIDTH) {
@@ -102,7 +122,7 @@ class MembersGrid extends Component<Props> {
   * @param {string} imgPath: Path to member's photographs.
   * @return {path}
   */
-  tryRequire = (imgPath) => {
+  tryRequire = (imgPath: string) => {
     try {
       return require(`images/members/${imgPath}`)
     } catch (err) {
@@ -114,7 +134,7 @@ class MembersGrid extends Component<Props> {
   * Shows member's modal by updating state
   * @param {prop} member: Member to be shown.
   */
-  handleShowModal(current_member: Member) {
+  handleShowModal = (current_member: Member) => {
     this.setState({
       show_modal: true,
       member: current_member,
@@ -125,7 +145,7 @@ class MembersGrid extends Component<Props> {
   /**
   * Hides member's modal by updating state.show_modal
   */
-  handleHideModal() {
+  handleHideModal = () => {
     this.setState({
       show_modal: false,
     })
@@ -133,9 +153,9 @@ class MembersGrid extends Component<Props> {
 
   /**
   * Operations to hide and change modals on pressed arrow keys.
-  * @param {event} event: React event
+  * @param {KeyboardEvent} event: React event
   */
-  keyFunction(event: Event) {
+  keyFunction = (event: KeyboardEvent) => {
     if (event.keyCode === 27) {
       this.handleHideModal()
     }
@@ -150,10 +170,10 @@ class MembersGrid extends Component<Props> {
 
   /**
   * Function called from carrousel's change of view to update state.member
-  * @param {int} next: Id of next view to be displayed.
-  * @param {int} current: Id of current view in display.
+  * @param {number} next: Id of next view to be displayed.
+  * @param {number} current: Id of current view in display.
   */
-  changeMemberUIArrows(next: int) {
+  changeMemberUIArrows = (next: number) => {
     const { active_members, inactive_members } = this.props
     const { active } = this.state
     if (active) {
@@ -170,7 +190,7 @@ class MembersGrid extends Component<Props> {
   /**
   * Updates state.number_of_columns
   */
-  updateNumberOfColumns() {
+  updateNumberOfColumns = () => {
     this.setState({
       number_of_columns: this.numberOfColumns(),
     })
@@ -182,7 +202,7 @@ class MembersGrid extends Component<Props> {
   * @param {string} title: Member to be shown.
   * @return {component} Grid of member list data.
   */
-  generateGridList(members: Array<Member>, title: string) {
+  generateGridList = (members: Array<Member>, title: string) => {
     const { number_of_columns } = this.state
     return (
       <div>
@@ -237,21 +257,19 @@ class MembersGrid extends Component<Props> {
   * @param {prop} member: Member object.
   * @return {icon}
   */
-  carouselItem(member: Member) {
-    return (
-      <MemberModal
-        member={member}
-        onHide={this.handleHideModal}
-      />
-    )
-  }
+  carouselItem = (member: Member) => (
+    <MemberModal
+      member={member}
+      onHide={this.handleHideModal}
+    />
+  )
 
   /**
   * Updates member state.
-  * @param {int} difference: States if the next member to be shown is
+  * @param {number} difference: States if the next member to be shown is
   *  next or previous based on the index difference of the member on the list.
   */
-  updateMember(difference: int) {
+  updateMember = (difference: number) => {
     const { active, member } = this.state
     const { id } = member
     const { active_members, inactive_members } = this.props
