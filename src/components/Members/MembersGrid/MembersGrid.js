@@ -306,6 +306,9 @@ class MembersGrid extends Component<Props> {
               index={(active)
                 ? this.active_members_keys.indexOf(id)
                 : this.inactive_members_keys.indexOf(id)}
+              startAt={(active)
+                ? this.active_members_keys.indexOf(id)
+                : this.inactive_members_keys.indexOf(id)}
             >
               {
               (active)
