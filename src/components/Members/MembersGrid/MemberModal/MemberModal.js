@@ -1,74 +1,71 @@
-import React, {Component} from 'react';
-import {Row, Col} from 'react-bootstrap';
-import Button from '@material-ui/core/Button';
-import CloseIcon from '@material-ui/icons/Close';
-import Icon from '@material-ui/core/Icon';
-import IconButton from '@material-ui/core/IconButton';
-import placeholder from '../../../../images/placeholder-rectangle.png';
-import {MEDIUM_WIDTH} from '../../../../constants.js';
-import './MemberModal.css';
+/* eslint-disable flowtype/no-weak-types */
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
+// @flow
+import React, { Component } from 'react'
+import { Row, Col } from 'react-bootstrap'
+import Button from '@material-ui/core/Button'
+import CloseIcon from '@material-ui/icons/Close'
+import Icon from '@material-ui/core/Icon'
+import IconButton from '@material-ui/core/IconButton'
+import placeholder from '../../../../images/placeholder-rectangle.png'
+import { MEDIUM_WIDTH } from '../../../../constants'
+import './MemberModal.css'
+
+type Member = {
+  id: number,
+  name: string,
+  lastname: string,
+  github: string,
+  github_user: string,
+  linkedin: string,
+  resume_link: string,
+  description: string,
+  class: string,
+  semesters: string,
+  subtitle: string,
+  status: string,
+  role: string
+};
+
+type Props = {
+  member: Member,
+  onHide: any
+};
+
+type State = {
+  show_large: boolean
+};
 
 /** Component class of Members' grid. */
-class MemberModal extends Component {
+class MemberModal extends Component<Props, State> {
+  member: Member;
+
+  handleHideModal: any;
 
   /**
   * Class constructor
   * @param {active_members} props: Lists of active and inactive members.
   */
-  constructor(props) {
+  constructor(props: Props) {
     super(props)
 
-    this.tryRequire = this.tryRequire.bind(this);
-    this.memberFullName = this.memberFullName.bind(this);
-    this.largeView = this.largeView.bind(this);
-    this.smallView = this.smallView.bind(this);
-    this.updateSizeView = this.updateSizeView.bind(this);
-    this.getContactButton = this.getContactButton.bind(this);
-    this.generateDataButtons = this.generateDataButtons.bind(this);
+    this.tryRequire = this.tryRequire.bind(this)
+    this.memberFullName = this.memberFullName.bind(this)
+    this.updateSizeView = this.updateSizeView.bind(this)
 
-    this.member = props.member;
-    this.handleHideModal = props.onHide;
+    this.member = props.member
+    this.handleHideModal = props.onHide
 
     this.state = {
-      show_large: (window.innerWidth >= MEDIUM_WIDTH) ? true : false,
-    };
+      show_large: (window.innerWidth >= MEDIUM_WIDTH),
+    }
   }
 
   /** Adds event listeners for modal hiding and responsivity. */
   componentDidMount() {
-    document.addEventListener('keydown', this.escFunction, false)
     window.addEventListener('resize', this.updateSizeView)
   }
-
-  /**
-  * Parses path to member image
-  * @param {string} imgPath: Path to member's photographs.
-  * @return {string} if valid path to image, if invalid it returns
-  *  the path to a placeholder.
-  */
-  tryRequire(imgPath) {
-    try {
-      return require('images/members/' + imgPath);
-    } catch (err) {
-      return placeholder
-    }
-  }
-
-  /**
-  * Parses mamber's full name
-  * @return {string}
-  */
-  memberFullName() {
-    return `${this.member.name} ${this.member.lastname}`
-  }
-
-  /** Updates state.show_large for responsivity. */
-  updateSizeView() {
-    this.setState({
-      show_large: (window.innerWidth >= MEDIUM_WIDTH),
-    })
-  }
-
 
   /**
   * Parses contact button links for each member.
@@ -76,8 +73,8 @@ class MemberModal extends Component {
   * @param {string} className: String for classname.
   * @return {Element}
   */
-  getContactButton(platform, className) {
-    let href; let icon; let user;
+  getContactButton(platform: string, className: string) {
+    let href; let icon = ''; let user
 
     switch (platform) {
       case 'github':
@@ -99,13 +96,40 @@ class MemberModal extends Component {
         break
     }
     return (
-      <Button href={ href } className={ className }>
-        <Icon className={ `fab ${ icon } fa-fw` } />
-        <span className='member-username'>
+      <Button href={href} className={className}>
+        <Icon className={`fab ${icon} fa-fw`} />
+        <span className="member-username">
           { user }
         </span>
       </Button>
-    );
+    )
+  }
+
+  /**
+  * Parses path to member image
+  * @param {string} imgPath: Path to member's photographs.
+  * @return {string} if valid path to image, if invalid it returns
+  *  the path to a placeholder.
+  */
+  tryRequire = (imgPath: string) => {
+    try {
+      return require(`images/members/${imgPath}`)
+    } catch (err) {
+      return placeholder
+    }
+  }
+
+  /**
+  * Parses mamber's full name
+  * @return {string}
+  */
+  memberFullName = () => `${this.member.name} ${this.member.lastname}`
+
+  /** Updates state.show_large for responsivity. */
+  updateSizeView = () => {
+    this.setState({
+      show_large: (window.innerWidth >= MEDIUM_WIDTH),
+    })
   }
 
   /**
@@ -113,22 +137,24 @@ class MemberModal extends Component {
   * @return {Element} Button
   */
   generateDataButtons() {
-    let className = '';
-    if (this.state.show_large) {
-      className = 'member-modal-btn';
+    const { show_large } = this.state
+    const { github, linkedin, resume_link } = this.member
+    let className = ''
+    if (show_large) {
+      className = 'member-modal-btn'
     } else {
-      className = 'icon-small';
+      className = 'icon-small'
     }
     return (
-      <div className='data-buttons'>
-        { (this.member.github !== '') ?
-          this.getContactButton('github', className) : null }
-        <br/>
-        { (this.member.linkedin !== '') ?
-          this.getContactButton('linkedin', className) : null }
-        <br/>
-        { (this.member.resume_link !== '') ?
-          this.getContactButton('resume', className) : null }
+      <div className="data-buttons">
+        { (github !== '')
+          ? this.getContactButton('github', className) : null }
+        <br />
+        { (linkedin !== '')
+          ? this.getContactButton('linkedin', className) : null }
+        <br />
+        { (resume_link !== '')
+          ? this.getContactButton('resume', className) : null }
       </div>
     )
   }
@@ -138,6 +164,9 @@ class MemberModal extends Component {
   * @return {Element} Member modal
   */
   largeView() {
+    const {
+      subtitle, status, role, id, semesters, description,
+    } = this.member
     return (
       <div className="member-modal-container">
         <div className="container-helper">
@@ -146,7 +175,7 @@ class MemberModal extends Component {
               <div className="image-cropper">
                 <img
                   className="modal-member-image"
-                  src={this.tryRequire(`${this.member.id}.jpg`)}
+                  src={this.tryRequire(`${id}.jpg`)}
                   alt={this.memberFullName()}
                 />
               </div>
@@ -154,10 +183,10 @@ class MemberModal extends Component {
             <Col lg="5" className="information-col">
               <div className="information-container">
                 <Row noGutters>
-                  <Col xs={{span: 1, offset: 11}}>
+                  <Col xs={{ span: 1, offset: 11 }}>
                     <IconButton
-                      className='closing-btn'
-                      onClick={ this.handleHideModal }
+                      className="closing-btn"
+                      onClick={this.handleHideModal}
                     >
                       <CloseIcon />
                     </IconButton>
@@ -168,18 +197,26 @@ class MemberModal extends Component {
                     <h2>
                       { this.memberFullName() }
                     </h2>
-                    <strong> { this.member.role } </strong>
+                    <strong>
+                      {' '}
+                      { role }
+                      {' '}
+                    </strong>
                     <div
-                      className='member-subtitles'
-                      style={{display: (this.member.status === 'inactive') ?
-                      'block' : 'none'}}
+                      className="member-subtitles"
+                      style={{
+                        display: (status === 'inactive')
+                          ? 'block' : 'none',
+                      }}
                     >
                       <h6>
-                        <div> { this.member.subtitle } </div>
                         <div>
-                          {'Since ' + this.member.class +
-                          ', ' + this.member.semesters +
-                          ' semesters' }
+                          {' '}
+                          { subtitle }
+                          {' '}
+                        </div>
+                        <div>
+                          {`Since ${this.member.class}, ${semesters} semesters` }
                         </div>
                       </h6>
                     </div>
@@ -188,7 +225,7 @@ class MemberModal extends Component {
                 </Row>
                 <Row noGutters>
                   <p className="member-data">
-                    { this.member.description }
+                    { description }
                   </p>
                 </Row>
                 <Row noGutters className="justify-content-center">
@@ -207,6 +244,9 @@ class MemberModal extends Component {
   * @return {Element} Mmember modal
   */
   smallView() {
+    const {
+      subtitle, status, role, id, semesters, description,
+    } = this.member
     return (
       <div className="member-modal-container">
         <div className="container-helper">
@@ -214,8 +254,8 @@ class MemberModal extends Component {
             <div className="close-button">
               <Col>
                 <IconButton
-                  className='icon-small'
-                  onClick={ this.handleHideModal }
+                  className="icon-small"
+                  onClick={this.handleHideModal}
                 >
                   <CloseIcon />
                 </IconButton>
@@ -225,7 +265,7 @@ class MemberModal extends Component {
               <div className="image-cropper">
                 <img
                   className="modal-member-image"
-                  src={this.tryRequire(`${this.member.id}.jpg`)}
+                  src={this.tryRequire(`${id}.jpg`)}
                   alt={this.memberFullName()}
                 />
               </div>
@@ -236,17 +276,28 @@ class MemberModal extends Component {
                   <h2 className="name-small">
                     { this.memberFullName() }
                   </h2>
-                  <strong> { this.member.role } </strong>
+                  <strong>
+                    {' '}
+                    { role }
+                    {' '}
+                  </strong>
                   <div
-                    className='member-subtitles'
-                    style={{display: (this.member.status === 'inactive') ?
-                    'block' : 'none'}}>
+                    className="member-subtitles"
+                    style={{
+                      display: (status === 'inactive')
+                        ? 'block' : 'none',
+                    }}
+                  >
                     <h6>
-                      <div> { this.member.subtitle } </div>
                       <div>
-                        {'Since ' + this.member.class + ', ' +
-                        this.member.semesters + ' semesters' }
-                        {`Since ${this.member.class}, ${this.members.semesters} semesters`}
+                        {' '}
+                        { subtitle }
+                        {' '}
+                      </div>
+                      <div>
+                        {`Since ${this.member.class}, ${
+                          semesters} semesters` }
+                        {`Since ${this.member.class}, ${semesters} semesters`}
                       </div>
                     </h6>
                   </div>
@@ -254,7 +305,7 @@ class MemberModal extends Component {
               </Row>
               <Row noGutters>
                 <div className="member-data">
-                  { this.member.description }
+                  { description }
                 </div>
               </Row>
               <Row noGutters className="justify-content-center">
@@ -272,11 +323,12 @@ class MemberModal extends Component {
   * @return {components} Member modal
   */
   render() {
-    if (this.state.show_large) {
+    const { show_large } = this.state
+    if (show_large) {
       return this.largeView()
     }
     return this.smallView()
   }
 }
 
-export default MemberModal;
+export default MemberModal

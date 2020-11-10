@@ -1,15 +1,18 @@
-import React, {Component} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
-import './MembersHeader.css';
+// @flow
+import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import './MembersHeader.css'
+
+type Props = {};
 
 /** Component class of Members' header. */
-class MembersHeader extends Component {
+class MembersHeader extends Component<Props> {
   /**
  Function to scroll down the window view towards th end of the component.
  */
-  scrollToInfo() {
-    window.scrollBy(0, window.innerHeight - 48 - window.scrollY);
+  scrollToInfo = () => {
+    window.scrollBy(0, window.innerHeight - 48 - window.scrollY)
   }
 
   /**
@@ -18,12 +21,12 @@ class MembersHeader extends Component {
  */
   render() {
     return (
-      <div className='members-header'>
-        <div className='container-legend'>
-          <h2 className='title-text-banner'>
+      <div className="members-header">
+        <div className="container-legend">
+          <h2 className="title-text-banner">
             Members
           </h2>
-          <div className='main-text-members'>
+          <div className="main-text-members">
             <p>
               RoBorrego’s community is made by students with different
               skills in robotics, logistics and networking, all joined
@@ -32,16 +35,19 @@ class MembersHeader extends Component {
             </p>
           </div>
         </div>
-        <div className='members-header-footer'>
+        <div className="members-header-footer">
           <p>
             Scroll down and meet the us!
           </p>
-          <FontAwesomeIcon onClick={ this.scrollToInfo }
-            icon={ faAngleDown } className='icon-btn' />
+          <FontAwesomeIcon
+            onClick={this.scrollToInfo}
+            icon={faAngleDown}
+            className="icon-btn"
+          />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default MembersHeader;
+export default MembersHeader

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import './MembersJoinUs.css';
+import React, { Component } from 'react'
+import './MembersJoinUs.css'
 
 /**
  Component of Join us section.
@@ -13,15 +13,17 @@ class MembersJoinUs extends Component {
  */
   render() {
     return (
-      <div className='members-join-us'>
-        <button 
-          onClick={this.handleClick} 
-          className='members-join-us-button members-join-us-button-contain members-join-us-button-text'>
-              Join the Team
+      <div className="members-join-us">
+        <button
+          type="button"
+          onClick={this.handleClick}
+          className="members-join-us-button members-join-us-button-contain members-join-us-button-text"
+        >
+          Join the Team
         </button>
       </div>
-    );
+    )
   }
 }
 
-export default MembersJoinUs;
+export default MembersJoinUs
