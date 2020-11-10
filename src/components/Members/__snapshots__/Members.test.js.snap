@@ -13,11 +13,13 @@ exports[`Matches snapshot 1`] = `
     >
       <h2
         className="title-text-banner"
+        data-testid="members-header-title"
       >
         Members
       </h2>
       <div
         className="main-text-members"
+        data-testid="members-header-text"
       >
         <p>
           RoBorrego’s community is made by students with different skills in robotics, logistics and networking, all joined with a passion for exploring new technologies and sharing their knowledge with everybody.
@@ -164,7 +166,7 @@ exports[`Matches snapshot 1`] = `
     <button
       className="members-join-us-button members-join-us-button-contain members-join-us-button-text"
       data-testid="members-join-us-button"
-      onClick={[Function]}
+      type="button"
     >
       Join the Team
     </button>

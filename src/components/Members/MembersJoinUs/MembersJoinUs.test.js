@@ -35,10 +35,11 @@ it('Member´s Join Us section renders correctly', () => {
   })
   expect(getByTestId(container, 'members-join-us')).not.toEqual(null)
   expect(getByTestId(container, 'members-join-us-button')).not.toEqual(null)
-  expect(getByTestId(container, 'members-join-us-button')).toHaveTextContent('Join the Team')
 })
 
 it('Matches snapshot', () => {
   const tree = renderer.create(<MembersJoinUs />).toJSON()
   expect(tree).toMatchSnapshot()
 })
+
+// TODO: Create test for button redirection

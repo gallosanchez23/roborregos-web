@@ -36,8 +36,6 @@ it('Member´s Join Us section renders correctly', () => {
   expect(getByTestId(container, 'members-header')).not.toEqual(null)
   expect(getByTestId(container, 'members-header-title')).not.toEqual(null)
   expect(getByTestId(container, 'members-header-text')).not.toEqual(null)
-  expect(getByTestId(container, 'members-header-title')).toHaveTextContent('Members')
-  expect(getByTestId(container, 'members-header-text')).toHaveTextContent('RoBorrego’s community is made by students with different skills in robotics, logistics and networking, all joined with a passion for exploring new technologies and sharing their knowledge with everybody.')
 })
 
 it('Matches snapshot', () => {

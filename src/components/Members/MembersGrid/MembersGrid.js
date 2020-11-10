@@ -131,21 +131,9 @@ class MembersGrid extends Component<Props, State> {
   }
 
   /**
-  * Shows member's modal by updating state
-  * @param {prop} member: Member to be shown.
-  */
-  handleShowModal = (current_member: Member) => {
-    this.setState({
-      show_modal: true,
-      member: current_member,
-      active: this.active_members_keys.includes(current_member.id),
-    })
-  }
-
-  /**
   * Hides member's modal by updating state.show_modal
   */
-  handleHideModal = () => {
+  handleHideModal() {
     this.setState({
       show_modal: false,
     })
@@ -217,6 +205,7 @@ class MembersGrid extends Component<Props, State> {
         <GridList
           cellHeight="auto"
           className="members-grid"
+          data-testid={`members-grid-${members[0].status}`}
           cols={number_of_columns}
           spacing={3}
         >
@@ -225,6 +214,7 @@ class MembersGrid extends Component<Props, State> {
               key={member.id}
               cols={1}
               className="members-grid-tile"
+              data-testid={`members-grid-tile-${member.id}`}
               onClick={() => this.handleShowModal(member)}
             >
               <div className="member-image-container">
@@ -259,6 +249,7 @@ class MembersGrid extends Component<Props, State> {
   */
   carouselItem = (member: Member) => (
     <MemberModal
+      data-testid={`member-modal-${member.id}`}
       member={member}
       onHide={this.handleHideModal}
     />
@@ -295,6 +286,18 @@ class MembersGrid extends Component<Props, State> {
   }
 
   /**
+  * Shows member's modal by updating state
+  * @param {prop} member: Member to be shown.
+  */
+  handleShowModal(current_member: Member) {
+    this.setState({
+      show_modal: true,
+      member: current_member,
+      active: this.active_members_keys.includes(current_member.id),
+    })
+  }
+
+  /**
   * Render funciton of grid and member
   * @return {components} Active and inactive members grid, as well as carousel.
   */
@@ -303,21 +306,23 @@ class MembersGrid extends Component<Props, State> {
     const { id } = member
     const { active_members, inactive_members } = this.props
     return (
-      <div className="members-grid-container">
+      <div className="members-grid-container" data-testid="members-grid-container">
         { this.generateGridList(active_members, '') }
         { this.generateGridList(inactive_members,
           'RoBorregos Legacy') }
         <Modal
           className="modal-container"
+          data-testid="modal-container"
           show={show_modal}
           dialogAs={() => (
             <Carousel
+              data-testid={`member-carrousel-${active}`}
               className="member-carrousel"
               navButtonsAlwaysVisible
               autoPlay={false}
               timeout={200}
               fullHeightHover
-              indicators
+              indicators={false}
               onChange={(next) => {
                 this.changeMemberUIArrows(next)
               }}
@@ -329,9 +334,9 @@ class MembersGrid extends Component<Props, State> {
                 : this.inactive_members_keys.indexOf(id)}
             >
               {
-              (active)
-                ? active_members.map((active_member) => this.carouselItem(active_member))
-                : inactive_members.map((inactive_member) => this.carouselItem(inactive_member))
+                (active)
+                  ? active_members.map((active_member) => this.carouselItem(active_member))
+                  : inactive_members.map((inactive_member) => this.carouselItem(inactive_member))
               }
             </Carousel>
           )}
