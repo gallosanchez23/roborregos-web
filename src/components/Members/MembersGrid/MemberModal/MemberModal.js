@@ -38,7 +38,7 @@ type State = {
 };
 
 /** Component class of Members' grid. */
-class MemberModal extends Component <Props, State> {
+class MemberModal extends Component<Props, State> {
   member: Member;
 
   handleHideModal: any;
@@ -52,6 +52,7 @@ class MemberModal extends Component <Props, State> {
 
     this.tryRequire = this.tryRequire.bind(this)
     this.memberFullName = this.memberFullName.bind(this)
+    this.updateSizeView = this.updateSizeView.bind(this)
 
     this.member = props.member
     this.handleHideModal = props.onHide
@@ -125,7 +126,7 @@ class MemberModal extends Component <Props, State> {
   memberFullName = () => `${this.member.name} ${this.member.lastname}`
 
   /** Updates state.show_large for responsivity. */
-  updateSizeView() {
+  updateSizeView = () => {
     this.setState({
       show_large: (window.innerWidth >= MEDIUM_WIDTH),
     })
