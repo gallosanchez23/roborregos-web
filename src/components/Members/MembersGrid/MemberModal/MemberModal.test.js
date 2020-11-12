@@ -49,36 +49,6 @@ afterEach(() => {
   global.dispatchEvent(new Event('resize'))
 })
 
-it('<Member Modal> Renders correctly (large view)', () => {
-  act(() => {
-    render(<MemberModal
-      member={member}
-      onHide={() => {}}
-    />, container)
-  })
-  expect(getByTestId(container, 'member-modal-container')).not.toEqual(null)
-  expect(getByTestId(container, 'information-container')).not.toEqual(null)
-  expect(getByTestId(container, 'member-data')).not.toEqual(null)
-  expect(queryByTestId(container, 'member-modal-container-small')).toBeNull()
-})
-
-it('<Member Modal> Renders correctly (small view)', () => {
-  act(() => {
-    render(<MemberModal
-      member={member}
-      onHide={() => {}}
-    />, container)
-  })
-  // Change the viewport to 500px and launch resizing event.
-  global.innerWidth = 500
-  global.dispatchEvent(new Event('resize'))
-  expect(getByTestId(container, 'member-modal-container-small')).not.toEqual(null)
-  expect(getByTestId(container, 'icon-small')).not.toEqual(null)
-  expect(getByTestId(container, 'image-col-small')).not.toEqual(null)
-  expect(getByTestId(container, 'description-small')).not.toEqual(null)
-  expect(getByTestId(container, 'description-small')).not.toEqual(null)
-})
-
 it('<Member Modal> has correct data (largeview)', () => {
   act(() => {
     render(<MemberModal
