@@ -5,6 +5,7 @@ import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import renderer from 'react-test-renderer'
 import MemberModal from './MemberModal'
+import { MEDIUM_WIDTH } from '../../../../constants'
 
 // Mock data
 const member = {
@@ -76,7 +77,7 @@ it('<Member Modal> has correct data (small view)', () => {
       onHide={() => {}}
     />, container)
   })
-  global.innerWidth = 500
+  global.innerWidth = MEDIUM_WIDTH - 1
   global.dispatchEvent(new Event('resize'))
   expect(getByTestId(container, 'member-data')).not.toEqual(null)
   expect(getByTestId(container, 'member-data').textContent).toBe(member.description)
@@ -103,7 +104,7 @@ it('<Member Modal> calls handleHideModal when close button is clicked', async ()
   expect(mockCallBack.mock.calls.length).toEqual(1)
 
   // small view
-  global.innerWidth = 500
+  global.innerWidth = MEDIUM_WIDTH - 1
   global.dispatchEvent(new Event('resize'))
   getByTestId(container, 'icon-small').click()
   expect(mockCallBack.mock.calls.length).toEqual(2)
@@ -120,7 +121,7 @@ it('Matches snapshot large view', () => {
 })
 
 it('Matches snapshot small view', () => {
-  global.innerWidth = 500
+  global.innerWidth = MEDIUM_WIDTH - 1
   global.dispatchEvent(new Event('resize'))
   const tree = renderer.create(
     <MemberModal
