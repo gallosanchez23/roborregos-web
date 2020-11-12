@@ -195,6 +195,7 @@ class MemberModal extends Component<Props, State> {
                   <Col xs={{ span: 1, offset: 11 }}>
                     <IconButton
                       className="closing-btn"
+                      data-testid="closing-btn"
                       onClick={this.handleHideModal}
                     >
                       <CloseIcon />
@@ -257,20 +258,28 @@ class MemberModal extends Component<Props, State> {
       subtitle, status, role, id, semesters, description,
     } = this.member
     return (
-      <div className="member-modal-container">
+      <div
+        className="member-modal-container"
+        data-testid="member-modal-container-small"
+      >
         <div className="container-helper">
           <Row className="main-modal-row">
             <div className="close-button">
               <Col>
                 <IconButton
                   className="icon-small"
+                  data-testid="icon-small"
                   onClick={this.handleHideModal}
                 >
                   <CloseIcon />
                 </IconButton>
               </Col>
             </div>
-            <Row noGutters className="image-col-small">
+            <Row
+              noGutters
+              className="image-col-small"
+              data-testid="image-col-small"
+            >
               <div className="image-cropper">
                 <img
                   className="modal-member-image"
@@ -279,10 +288,13 @@ class MemberModal extends Component<Props, State> {
                 />
               </div>
             </Row>
-            <div className="description-small">
+            <div
+              className="description-small"
+              data-testid="description-small"
+            >
               <Row noGutters>
                 <div className="member-titles">
-                  <h2 className="name-small">
+                  <h2 className="name-small" data-testid="name-small">
                     { this.memberFullName() }
                   </h2>
                   <strong>
@@ -303,9 +315,7 @@ class MemberModal extends Component<Props, State> {
                         { subtitle }
                         {' '}
                       </div>
-                      <div>
-                        {`Since ${this.member.class}, ${
-                          semesters} semesters` }
+                      <div data-testid="member-subtitles">
                         {`Since ${this.member.class}, ${semesters} semesters`}
                       </div>
                     </h6>
@@ -313,7 +323,7 @@ class MemberModal extends Component<Props, State> {
                 </div>
               </Row>
               <Row noGutters>
-                <div className="member-data">
+                <div className="member-data" data-testid="member-data">
                   { description }
                 </div>
               </Row>

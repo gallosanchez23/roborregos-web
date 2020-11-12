@@ -1,10 +1,11 @@
 // @flow
-import { getByTestId } from '@testing-library/react'
+import { getByTestId, queryByTestId } from '@testing-library/react'
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import renderer from 'react-test-renderer'
 import MemberModal from './MemberModal'
+
 // Mock data
 const member = {
   id: 1,
@@ -44,6 +45,8 @@ afterEach(() => {
     expect(container).not.toEqual(null)
   }
   container = null
+  global.innerWidth = 1024
+  global.dispatchEvent(new Event('resize'))
 })
 
 it('<Member Modal> Renders correctly (large view)', () => {
@@ -56,21 +59,27 @@ it('<Member Modal> Renders correctly (large view)', () => {
   expect(getByTestId(container, 'member-modal-container')).not.toEqual(null)
   expect(getByTestId(container, 'information-container')).not.toEqual(null)
   expect(getByTestId(container, 'member-data')).not.toEqual(null)
+  expect(queryByTestId(container, 'member-modal-container-small')).toBeNull()
 })
 
-// it('<Member Modal> Closes', () => {
-//   act(() => {
-//     render(<MemberModal
-//       member={members[0]}
-//       onHide={this.handleHideModal}
-//     />, container)
-//   })
-//   expect(getByTestId(container, 'member-modal-container')).not.toEqual(null)
-//   expect(getByTestId(container, 'information-container')).not.toEqual(null)
-//   expect(getByTestId(container, 'member-data')).not.toEqual(null)
-// })
+it('<Member Modal> Renders correctly (small view)', () => {
+  act(() => {
+    render(<MemberModal
+      member={member}
+      onHide={() => {}}
+    />, container)
+  })
+  // Change the viewport to 500px and launch resizing event.
+  global.innerWidth = 500
+  global.dispatchEvent(new Event('resize'))
+  expect(getByTestId(container, 'member-modal-container-small')).not.toEqual(null)
+  expect(getByTestId(container, 'icon-small')).not.toEqual(null)
+  expect(getByTestId(container, 'image-col-small')).not.toEqual(null)
+  expect(getByTestId(container, 'description-small')).not.toEqual(null)
+  expect(getByTestId(container, 'description-small')).not.toEqual(null)
+})
 
-it('<Member Modal> has correct data', () => {
+it('<Member Modal> has correct data (largeview)', () => {
   act(() => {
     render(<MemberModal
       member={member}
@@ -87,8 +96,47 @@ it('<Member Modal> has correct data', () => {
   expect(getByTestId(container, member.github_user)).not.toEqual(null)
   expect(getByTestId(container, member.github_user).textContent).toBe(member.github_user)
   expect(getByTestId(container, 'LinkedIn')).not.toEqual(null)
-//   expect(getByTestId(container, 'LinkedIn').textContent).toBe(member.LinkedIn)
-//   expect(getByTestId(container, 'Resume')).toEqual(null)
+  expect(queryByTestId(container, 'Resume')).toBeNull()
+})
+
+it('<Member Modal> has correct data (small view)', () => {
+  act(() => {
+    render(<MemberModal
+      member={member}
+      onHide={() => {}}
+    />, container)
+  })
+  global.innerWidth = 500
+  global.dispatchEvent(new Event('resize'))
+  expect(getByTestId(container, 'member-data')).not.toEqual(null)
+  expect(getByTestId(container, 'member-data').textContent).toBe(member.description)
+  expect(getByTestId(container, 'name-small')).not.toEqual(null)
+  expect(getByTestId(container, 'name-small').textContent).toBe(`${member.name} ${member.lastname}`)
+  expect(getByTestId(container, 'member-subtitles')).not.toEqual(null)
+  expect(getByTestId(container, 'member-subtitles').textContent)
+    .toBe(`Since ${member.class}, ${member.semesters} semesters`)
+  expect(getByTestId(container, member.github_user)).not.toEqual(null)
+  expect(getByTestId(container, member.github_user).textContent).toBe(member.github_user)
+  expect(getByTestId(container, 'LinkedIn')).not.toEqual(null)
+  expect(queryByTestId(container, 'Resume')).toBeNull()
+})
+
+it('<Member Modal> calls handleHideModal when close button is clicked', async () => {
+  const mockCallBack = jest.fn()
+  act(() => {
+    render(<MemberModal
+      member={member}
+      onHide={mockCallBack}
+    />, container)
+  })
+  getByTestId(container, 'closing-btn').click()
+  expect(mockCallBack.mock.calls.length).toEqual(1)
+
+  // small view
+  global.innerWidth = 500
+  global.dispatchEvent(new Event('resize'))
+  getByTestId(container, 'icon-small').click()
+  expect(mockCallBack.mock.calls.length).toEqual(2)
 })
 
 it('Matches snapshot large view', () => {
@@ -99,4 +147,16 @@ it('Matches snapshot large view', () => {
     />,
   ).toJSON()
   expect(tree).toMatchSnapshot('MemberModalLargeView')
+})
+
+it('Matches snapshot small view', () => {
+  global.innerWidth = 500
+  global.dispatchEvent(new Event('resize'))
+  const tree = renderer.create(
+    <MemberModal
+      member={member}
+      onHide={() => {}}
+    />,
+  ).toJSON()
+  expect(tree).toMatchSnapshot('MemberModalSmallView')
 })
