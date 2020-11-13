@@ -43,3 +43,4 @@ it('Matches snapshot', () => {
 })
 
 // TODO: Create test for button redirection
+test.todo('<Members JoinUs> redirects to <Candidates>')

@@ -3,7 +3,6 @@
 exports[`Matches snapshot large view: MemberModalLargeView 1`] = `
 <div
   className="member-modal-container"
-  data-testid="member-modal-container"
 >
   <div
     className="container-helper"
@@ -29,7 +28,6 @@ exports[`Matches snapshot large view: MemberModalLargeView 1`] = `
       >
         <div
           className="information-container"
-          data-testid="information-container"
         >
           <div
             className="row no-gutters"
@@ -205,7 +203,6 @@ exports[`Matches snapshot large view: MemberModalLargeView 1`] = `
 exports[`Matches snapshot small view: MemberModalSmallView 1`] = `
 <div
   className="member-modal-container"
-  data-testid="member-modal-container-small"
 >
   <div
     className="container-helper"
@@ -260,7 +257,6 @@ exports[`Matches snapshot small view: MemberModalSmallView 1`] = `
       </div>
       <div
         className="image-col-small row no-gutters"
-        data-testid="image-col-small"
       >
         <div
           className="image-cropper"
@@ -274,7 +270,6 @@ exports[`Matches snapshot small view: MemberModalSmallView 1`] = `
       </div>
       <div
         className="description-small"
-        data-testid="description-small"
       >
         <div
           className="row no-gutters"

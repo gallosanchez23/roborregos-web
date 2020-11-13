@@ -174,7 +174,7 @@ class MemberModal extends Component<Props, State> {
       subtitle, status, role, id, semesters, description,
     } = this.member
     return (
-      <div className="member-modal-container" data-testid="member-modal-container">
+      <div className="member-modal-container">
         <div className="container-helper">
           <Row className="justify-content-center main-modal-row">
             <Col lg="3" className="image-col">
@@ -189,7 +189,6 @@ class MemberModal extends Component<Props, State> {
             <Col lg="5" className="information-col">
               <div
                 className="information-container"
-                data-testid="information-container"
               >
                 <Row noGutters>
                   <Col xs={{ span: 1, offset: 11 }}>
@@ -260,7 +259,6 @@ class MemberModal extends Component<Props, State> {
     return (
       <div
         className="member-modal-container"
-        data-testid="member-modal-container-small"
       >
         <div className="container-helper">
           <Row className="main-modal-row">
@@ -278,7 +276,6 @@ class MemberModal extends Component<Props, State> {
             <Row
               noGutters
               className="image-col-small"
-              data-testid="image-col-small"
             >
               <div className="image-cropper">
                 <img
@@ -290,7 +287,6 @@ class MemberModal extends Component<Props, State> {
             </Row>
             <div
               className="description-small"
-              data-testid="description-small"
             >
               <Row noGutters>
                 <div className="member-titles">

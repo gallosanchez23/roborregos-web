@@ -5,7 +5,7 @@ import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import renderer from 'react-test-renderer'
 import MemberModal from './MemberModal'
-import { MEDIUM_WIDTH } from '../../../../constants'
+import { LARGE_WIDTH, MEDIUM_WIDTH } from '../../../../constants'
 
 // Mock data
 const member = {
@@ -46,7 +46,7 @@ afterEach(() => {
     expect(container).not.toEqual(null)
   }
   container = null
-  global.innerWidth = 1024
+  global.innerWidth = LARGE_WIDTH
   global.dispatchEvent(new Event('resize'))
 })
 
