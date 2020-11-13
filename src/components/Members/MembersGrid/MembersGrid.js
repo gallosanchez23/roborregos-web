@@ -224,7 +224,7 @@ class MembersGrid extends Component<Props, State> {
             <GridListTile
               key={member.id}
               cols={1}
-              className="members-grid-tile"
+              className={`members-grid-tile-${member.id}`}
               onClick={() => this.handleShowModal(member)}
             >
               <div className="member-image-container">
