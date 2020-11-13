@@ -31,7 +31,7 @@ const information_containers: string = `
     ]
 }`
 
-function extractContent(textToProbe: string) {
+function textToHTML(textToProbe: string) {
   const span = document.createElement('span')
   span.innerHTML = textToProbe
   return span.textContent || span.innerText
@@ -53,7 +53,7 @@ const checkHomeInformation = () => {
         information[childrenIndex].title,
       )
       expect((home_information_container.children[1].children[1].textContent)).toEqual(
-        extractContent(information[childrenIndex].text_content),
+        textToHTML(information[childrenIndex].text_content),
       )
     }
   } else {
