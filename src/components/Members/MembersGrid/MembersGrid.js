@@ -83,24 +83,21 @@ class MembersGrid extends Component<Props, State> {
   }
 
   /**
-  * Hides member's modal by updating state.show_modal
+  * Returns member icon according to role specified.
+  * @param {string} role: Member role.
+  * @return {icon}
   */
-  handleHideModal() {
-    this.setState({
-      show_modal: false,
-    })
-  }
-
-  /**
-  * Shows member's modal by updating state
-  * @param {prop} member: Member to be shown.
-  */
-  handleShowModal(current_member: Member) {
-    this.setState({
-      show_modal: true,
-      member: current_member,
-      active: this.active_members_keys.includes(current_member.id),
-    })
+  memberIcon = (role: string) => {
+    if (role === 'Software Development') {
+      return faCode
+    } if (role === 'Electronics') {
+      return faMicrochip
+    } if (role === 'Mechanical Design') {
+      return faCog
+    } if (role === 'Logistics & Sponsorship') {
+      return faBullhorn
+    }
+    return faRocket
   }
 
   /**
@@ -134,6 +131,27 @@ class MembersGrid extends Component<Props, State> {
   }
 
   /**
+  * Shows member's modal by updating state
+  * @param {prop} member: Member to be shown.
+  */
+  handleShowModal = (current_member: Member) => {
+    this.setState({
+      show_modal: true,
+      member: current_member,
+      active: this.active_members_keys.includes(current_member.id),
+    })
+  }
+
+  /**
+  * Hides member's modal by updating state.show_modal
+  */
+  handleHideModal = () => {
+    this.setState({
+      show_modal: false,
+    })
+  }
+
+  /**
   * Operations to hide and change modals on pressed arrow keys.
   * @param {KeyboardEvent} event: React event
   */
@@ -148,24 +166,6 @@ class MembersGrid extends Component<Props, State> {
       next_member_index_difference = 1
     }
     this.updateMember(next_member_index_difference)
-  }
-
-  /**
-  * Returns member icon according to role specified.
-  * @param {string} role: Member role.
-  * @return {icon}
-  */
-  memberIcon = (role: string) => {
-    if (role === 'Software Development') {
-      return faCode
-    } if (role === 'Electronics') {
-      return faMicrochip
-    } if (role === 'Mechanical Design') {
-      return faCog
-    } if (role === 'Logistics & Sponsorship') {
-      return faBullhorn
-    }
-    return faRocket
   }
 
   /**
@@ -224,7 +224,7 @@ class MembersGrid extends Component<Props, State> {
             <GridListTile
               key={member.id}
               cols={1}
-              className={`members-grid-tile-${member.id}`}
+              className="members-grid-tile"
               onClick={() => this.handleShowModal(member)}
             >
               <div className="member-image-container">
@@ -259,7 +259,6 @@ class MembersGrid extends Component<Props, State> {
   */
   carouselItem = (member: Member) => (
     <MemberModal
-      className={`member-modal-${member.id}`}
       member={member}
       onHide={this.handleHideModal}
     />
@@ -314,7 +313,7 @@ class MembersGrid extends Component<Props, State> {
           show={show_modal}
           dialogAs={() => (
             <Carousel
-              className={`member-carrousel-${active}`}
+              className={`member-carrousel-${String(active)}`}
               navButtonsAlwaysVisible
               autoPlay={false}
               timeout={200}

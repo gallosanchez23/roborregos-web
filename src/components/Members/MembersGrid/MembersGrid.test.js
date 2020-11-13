@@ -26,6 +26,7 @@ const active = [
     resume_link: '',
     tags: '',
     Email: 'mock1@gmail.com',
+    subtitle: '',
   },
   {
     id: 3,
@@ -43,6 +44,7 @@ const active = [
     resume_link: '',
     tags: '',
     Email: 'mock3@gmail.com',
+    subtitle: '',
   },
   {
     id: 5,
@@ -60,6 +62,7 @@ const active = [
     resume_link: '',
     tags: '',
     Email: 'mock5@gmail.com',
+    subtitle: '',
   },
 ]
 
@@ -80,6 +83,7 @@ const inactive = [
     resume_link: '',
     tags: '',
     Email: 'mock2@gmail.com',
+    subtitle: '',
   },
   {
     id: 3,
@@ -97,6 +101,7 @@ const inactive = [
     resume_link: '',
     tags: '',
     Email: 'mock4@gmail.com',
+    subtitle: '',
   },
   {
     id: 6,
@@ -114,6 +119,7 @@ const inactive = [
     resume_link: '',
     tags: '',
     Email: 'mock6@gmail.com',
+    subtitle: '',
   },
 ]
 

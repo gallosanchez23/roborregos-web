@@ -11,13 +11,14 @@ import Members from './Members'
 const membersData = {
   members: [
     {
-      id: '1',
+      id: 1,
       name: 'First',
       lastname: 'Member1',
       status: 'active',
       role: 'Software Development',
       class: '2015',
       semesters: '8',
+      subtitle: '',
       degree: 'ISD',
       description: 'Mock member #1.',
       github: 'https://github.com',

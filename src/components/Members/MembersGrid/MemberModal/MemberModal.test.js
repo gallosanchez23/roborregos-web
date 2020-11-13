@@ -24,6 +24,7 @@ const member = {
   resume_link: '',
   tags: '',
   Email: 'mock1@gmail.com',
+  subtitle: '',
 }
 
 let container = null
