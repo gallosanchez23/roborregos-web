@@ -217,7 +217,6 @@ class MembersGrid extends Component<Props, State> {
         <GridList
           cellHeight="auto"
           className="members-grid"
-          data-testid={`members-grid-${members[0].status}`}
           cols={number_of_columns}
           spacing={3}
         >

@@ -22,7 +22,6 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
     </div>
     <ul
       className="MuiGridList-root members-grid"
-      data-testid="members-grid-active"
       style={
         Object {
           "margin": -1.5,
@@ -135,6 +134,59 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
           </div>
         </div>
       </li>
+      <li
+        className="MuiGridListTile-root members-grid-tile-5"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": "auto",
+            "padding": 1.5,
+            "width": "25%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <div
+            className="member-image-container"
+          >
+            <img
+              alt="Fifth"
+              className="member-image"
+              src="placeholder-rectangle.png"
+            />
+            <div
+              className="member-image-content"
+            >
+              <p>
+                Fifth Member5
+              </p>
+              <div
+                className="member-image-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-rocket fa-w-16 fa-1x "
+                  data-icon="rocket"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
   <div>
@@ -154,7 +206,6 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
     </div>
     <ul
       className="MuiGridList-root members-grid"
-      data-testid="members-grid-inactive"
       style={
         Object {
           "margin": -1.5,
@@ -258,6 +309,59 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
                 >
                   <path
                     d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="MuiGridListTile-root members-grid-tile-6"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": "auto",
+            "padding": 1.5,
+            "width": "25%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <div
+            className="member-image-container"
+          >
+            <img
+              alt="Sixth"
+              className="member-image"
+              src="placeholder-rectangle.png"
+            />
+            <div
+              className="member-image-content"
+            >
+              <p>
+                Sixth Member6
+              </p>
+              <div
+                className="member-image-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-rocket fa-w-16 fa-1x "
+                  data-icon="rocket"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"
                     fill="currentColor"
                     style={Object {}}
                   />
@@ -294,7 +398,6 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
     </div>
     <ul
       className="MuiGridList-root members-grid"
-      data-testid="members-grid-active"
       style={
         Object {
           "margin": -1.5,
@@ -407,6 +510,59 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
           </div>
         </div>
       </li>
+      <li
+        className="MuiGridListTile-root members-grid-tile-5"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": "auto",
+            "padding": 1.5,
+            "width": "25%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <div
+            className="member-image-container"
+          >
+            <img
+              alt="Fifth"
+              className="member-image"
+              src="placeholder-rectangle.png"
+            />
+            <div
+              className="member-image-content"
+            >
+              <p>
+                Fifth Member5
+              </p>
+              <div
+                className="member-image-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-rocket fa-w-16 fa-1x "
+                  data-icon="rocket"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
   <div>
@@ -426,7 +582,6 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
     </div>
     <ul
       className="MuiGridList-root members-grid"
-      data-testid="members-grid-inactive"
       style={
         Object {
           "margin": -1.5,
@@ -530,6 +685,59 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
                 >
                   <path
                     d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="MuiGridListTile-root members-grid-tile-6"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": "auto",
+            "padding": 1.5,
+            "width": "25%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <div
+            className="member-image-container"
+          >
+            <img
+              alt="Sixth"
+              className="member-image"
+              src="placeholder-rectangle.png"
+            />
+            <div
+              className="member-image-content"
+            >
+              <p>
+                Sixth Member6
+              </p>
+              <div
+                className="member-image-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-rocket fa-w-16 fa-1x "
+                  data-icon="rocket"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"
                     fill="currentColor"
                     style={Object {}}
                   />
@@ -566,7 +774,6 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
     </div>
     <ul
       className="MuiGridList-root members-grid"
-      data-testid="members-grid-active"
       style={
         Object {
           "margin": -1.5,
@@ -679,6 +886,59 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
           </div>
         </div>
       </li>
+      <li
+        className="MuiGridListTile-root members-grid-tile-5"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": "auto",
+            "padding": 1.5,
+            "width": "33.333333333333336%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <div
+            className="member-image-container"
+          >
+            <img
+              alt="Fifth"
+              className="member-image"
+              src="placeholder-rectangle.png"
+            />
+            <div
+              className="member-image-content"
+            >
+              <p>
+                Fifth Member5
+              </p>
+              <div
+                className="member-image-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-rocket fa-w-16 fa-1x "
+                  data-icon="rocket"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
   <div>
@@ -698,7 +958,6 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
     </div>
     <ul
       className="MuiGridList-root members-grid"
-      data-testid="members-grid-inactive"
       style={
         Object {
           "margin": -1.5,
@@ -802,6 +1061,59 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
                 >
                   <path
                     d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        className="MuiGridListTile-root members-grid-tile-6"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": "auto",
+            "padding": 1.5,
+            "width": "33.333333333333336%",
+          }
+        }
+      >
+        <div
+          className="MuiGridListTile-tile"
+        >
+          <div
+            className="member-image-container"
+          >
+            <img
+              alt="Sixth"
+              className="member-image"
+              src="placeholder-rectangle.png"
+            />
+            <div
+              className="member-image-content"
+            >
+              <p>
+                Sixth Member6
+              </p>
+              <div
+                className="member-image-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-rocket fa-w-16 fa-1x "
+                  data-icon="rocket"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"
                     fill="currentColor"
                     style={Object {}}
                   />

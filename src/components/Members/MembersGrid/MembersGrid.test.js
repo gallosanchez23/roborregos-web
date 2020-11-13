@@ -1,5 +1,4 @@
 // @flow
-import { getByTestId, queryByTestId, waitFor } from '@testing-library/react'
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
@@ -128,74 +127,27 @@ beforeEach(() => {
   )
 })
 
-// afterEach(() => {
-//   // cleanup on exiting
-//   // unmountComponentAtNode(container)
-//   // if (container != null) {
-//   //   container.remove()
-//   // } else {
-//   //   expect(container).not.toEqual(null)
-//   // }
-//   // container = null
-//   global.innerWidth = LARGE_WIDTH
-//   global.dispatchEvent(new Event('resize'))
-// })
+it('<Members Grid> active member gets clicked and carousel shows them', () => {
+  expect(wrapper.state('show_modal')).toEqual(false)
+  wrapper.find(`.members-grid-tile-${active[0].id}`).simulate('click')
+  expect(wrapper.state('show_modal')).toEqual(true)
+  expect(wrapper.find('modal-container')).not.toEqual(null)
+  expect(wrapper.find('member-carrousel-true')).not.toEqual(null)
+  expect(wrapper.find(`member-modal-${active[0].id}`)).not.toEqual(null)
+  expect(wrapper.state('member')).toEqual(active[0])
+})
 
-// it('<Members Grid> active member gets clicked and carousel shows them', () => {
-//   expect(wrapper.state('show_modal')).toEqual(false)
-//   wrapper.find(`.members-grid-tile-${active[0].id}`).simulate('click')
-//   expect(wrapper.state('show_modal')).toEqual(true)
-//   expect(wrapper.find('modal-container')).not.toEqual(null)
-//   expect(wrapper.find('member-carrousel-true')).not.toEqual(null)
-//   expect(wrapper.find(`member-modal-${active[0].id}`)).not.toEqual(null)
-//   expect(wrapper.state('member')).toEqual(active[0])
-// })
+it('<Members Grid> inactive member gets clicked and carousel shows them', () => {
+  expect(wrapper.state('show_modal')).toEqual(false)
+  wrapper.find(`.members-grid-tile-${inactive[0].id}`).simulate('click')
+  expect(wrapper.state('show_modal')).toEqual(true)
+  expect(wrapper.find('modal-container')).not.toEqual(null)
+  expect(wrapper.find('member-carrousel-true')).not.toEqual(null)
+  expect(wrapper.find(`member-modal-${inactive[1].id}`)).not.toEqual(null)
+  expect(wrapper.state('member')).toEqual(inactive[0])
+})
 
-// it('<Members Grid> inactive member gets clicked and carousel shows them', () => {
-//   expect(wrapper.state('show_modal')).toEqual(false)
-//   wrapper.find(`.members-grid-tile-${inactive[0].id}`).simulate('click')
-//   expect(wrapper.state('show_modal')).toEqual(true)
-//   expect(wrapper.find('modal-container')).not.toEqual(null)
-//   expect(wrapper.find('member-carrousel-true')).not.toEqual(null)
-//   expect(wrapper.find(`member-modal-${inactive[1].id}`)).not.toEqual(null)
-//   expect(wrapper.state('member')).toEqual(inactive[0])
-// })
-
-// describe('<Members Grid/> carrousel keys', () => {
-//   it('Show next active', () => {
-//     wrapper.find(`.members-grid-tile-${active[0].id}`).simulate('click')
-//     expect(wrapper.state('member')).toEqual(active[0])
-//     const event = new KeyboardEvent('keydown', { keyCode: 39 })
-//     document.dispatchEvent(event)
-//     expect(wrapper.state('member')).toEqual(active[1])
-//   })
-
-//   it('Show previous/last active', () => {
-//     wrapper.find(`.members-grid-tile-${active[0].id}`).simulate('click')
-//     expect(wrapper.state('member')).toEqual(active[0])
-//     const event = new KeyboardEvent('keydown', { keyCode: 37 })
-//     document.dispatchEvent(event)
-//     expect(wrapper.state('member')).toEqual(active[2])
-//   })
-
-//   it('Show next inactive', () => {
-//     wrapper.find(`.members-grid-tile-${inactive[0].id}`).simulate('click')
-//     expect(wrapper.state('member')).toEqual(inactive[0])
-//     const event = new KeyboardEvent('keydown', { keyCode: 39 })
-//     document.dispatchEvent(event)
-//     expect(wrapper.state('member')).toEqual(inactive[1])
-//   })
-
-//   it('Show previous/last inactive', () => {
-//     wrapper.find(`.members-grid-tile-${inactive[0].id}`).simulate('click')
-//     expect(wrapper.state('member')).toEqual(inactive[0])
-//     const event = new KeyboardEvent('keydown', { keyCode: 37 })
-//     document.dispatchEvent(event)
-//     expect(wrapper.state('member')).toEqual(inactive[2])
-//   })
-// })
-
-describe('<Members Grid/> carrousel UI arrows', () => {
+describe('<Members Grid/> carrousel keys', () => {
   it('Show next active', () => {
     wrapper.find(`.members-grid-tile-${active[0].id}`).simulate('click')
     expect(wrapper.state('member')).toEqual(active[0])
@@ -231,63 +183,63 @@ describe('<Members Grid/> carrousel UI arrows', () => {
 
 // Snapshots
 
-// describe('Matches snapshot with:', () => {
-//   let container = null
+describe('Matches snapshot with:', () => {
+  let container = null
 
-//   beforeEach(() => {
-//     // setup a DOM element as a render target
-//     container = document.createElement('div')
-//     if (document.body != null) {
-//       document.body.appendChild(container)
-//     } else {
-//       expect(document.body).not.toEqual(null)
-//     }
-//   })
+  beforeEach(() => {
+    // setup a DOM element as a render target
+    container = document.createElement('div')
+    if (document.body != null) {
+      document.body.appendChild(container)
+    } else {
+      expect(document.body).not.toEqual(null)
+    }
+  })
 
-//   afterEach(() => {
-//     // cleanup on exiting
-//     unmountComponentAtNode(container)
-//     if (container != null) {
-//       container.remove()
-//     } else {
-//       expect(container).not.toEqual(null)
-//     }
-//     container = null
-//     global.innerWidth = LARGE_WIDTH
-//     global.dispatchEvent(new Event('resize'))
-//   })
+  afterEach(() => {
+    // cleanup on exiting
+    unmountComponentAtNode(container)
+    if (container != null) {
+      container.remove()
+    } else {
+      expect(container).not.toEqual(null)
+    }
+    container = null
+    global.innerWidth = LARGE_WIDTH
+    global.dispatchEvent(new Event('resize'))
+  })
 
-//   it('Large width', () => {
-//     const tree = renderer.create(
-//       <MembersGrid active_members={active} inactive_members={inactive} />,
-//     ).toJSON()
-//     act(() => {
-//       render(<MembersGrid active_members={active} inactive_members={inactive} />, container)
-//     })
-//     expect(tree).toMatchSnapshot('MembersGridLargeView.test.js.snap')
-//   })
+  it('Large width', () => {
+    const tree = renderer.create(
+      <MembersGrid active_members={active} inactive_members={inactive} />,
+    ).toJSON()
+    act(() => {
+      render(<MembersGrid active_members={active} inactive_members={inactive} />, container)
+    })
+    expect(tree).toMatchSnapshot('MembersGridLargeView.test.js.snap')
+  })
 
-//   it('Medium width', () => {
-//     global.innerWidth = MEDIUM_WIDTH
-//     global.dispatchEvent(new Event('resize'))
-//     const tree = renderer.create(
-//       <MembersGrid active_members={active} inactive_members={inactive} />,
-//     ).toJSON()
-//     act(() => {
-//       render(<MembersGrid active_members={active} inactive_members={inactive} />, container)
-//     })
-//     expect(tree).toMatchSnapshot('MembersGridMediumView.test.js.snap')
-//   })
+  it('Medium width', () => {
+    global.innerWidth = MEDIUM_WIDTH
+    global.dispatchEvent(new Event('resize'))
+    const tree = renderer.create(
+      <MembersGrid active_members={active} inactive_members={inactive} />,
+    ).toJSON()
+    act(() => {
+      render(<MembersGrid active_members={active} inactive_members={inactive} />, container)
+    })
+    expect(tree).toMatchSnapshot('MembersGridMediumView.test.js.snap')
+  })
 
-//   it('Mobile width', () => {
-//     global.innerWidth = MOBILE_WIDTH
-//     global.dispatchEvent(new Event('resize'))
-//     const tree = renderer.create(
-//       <MembersGrid active_members={active} inactive_members={inactive} />,
-//     ).toJSON()
-//     act(() => {
-//       render(<MembersGrid active_members={active} inactive_members={inactive} />, container)
-//     })
-//     expect(tree).toMatchSnapshot('MembersGridMobileView.test.js.snap')
-//   })
-// })
+  it('Mobile width', () => {
+    global.innerWidth = MOBILE_WIDTH
+    global.dispatchEvent(new Event('resize'))
+    const tree = renderer.create(
+      <MembersGrid active_members={active} inactive_members={inactive} />,
+    ).toJSON()
+    act(() => {
+      render(<MembersGrid active_members={active} inactive_members={inactive} />, container)
+    })
+    expect(tree).toMatchSnapshot('MembersGridMobileView.test.js.snap')
+  })
+})

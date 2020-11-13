@@ -3,6 +3,7 @@
 exports[`Matches snapshot 1`] = `
 <div
   className="members-container"
+  data-testid="members-container"
 >
   <div
     className="members-header"
@@ -80,7 +81,7 @@ exports[`Matches snapshot 1`] = `
         }
       >
         <li
-          className="MuiGridListTile-root members-grid-tile"
+          className="MuiGridListTile-root members-grid-tile-1"
           onClick={[Function]}
           style={
             Object {
