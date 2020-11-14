@@ -28,7 +28,9 @@ class ProjectsHeader extends Component<Props> {
           </h2>
           <div className="main-text-projects">
             <p>
-              Every year we challenge ourselves to keep learning and improve.
+              Every year we challenge ourselves to keep learning and improving.
+              {' '}
+              <br />
               See what we&apos;ve been up to!
             </p>
           </div>

@@ -26,7 +26,7 @@ class Projects extends Component <Props> {
       return (
         <div className="projects-container">
           <ProjectsHeader />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       )
     }
