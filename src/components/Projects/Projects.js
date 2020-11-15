@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import './Projects.css'
 import ProjectsHeader from './ProjectsHeader/ProjectsHeader'
+import ProjectsCard from './ProjectsCard/ProjectsCard'
 import Footer from '../Footer/Footer'
 
 /** Component class of Projects page. */
@@ -26,6 +27,7 @@ class Projects extends Component <Props> {
       return (
         <div className="projects-container">
           <ProjectsHeader />
+          <ProjectsCard />
           <Footer />
         </div>
       )

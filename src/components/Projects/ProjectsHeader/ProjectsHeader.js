@@ -37,7 +37,7 @@ class ProjectsHeader extends Component<Props> {
         </div>
         <div className="projects-header-footer">
           <p>
-            Scroll down and meet the us!
+            Learn more
           </p>
           <FontAwesomeIcon
             onClick={this.scrollToInfo}
