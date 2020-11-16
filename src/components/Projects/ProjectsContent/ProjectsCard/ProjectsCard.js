@@ -28,28 +28,28 @@ class ProjectsCard extends Component<Props> {
     window.open(link)
   }
 
-  cardContent(size, project) {
+  cardContent(size) {
     return (
       <Col lg={size} className="card-info">
         <h2 className="title-text-card">
-          {project.title}
+          {this.project.title}
         </h2>
         <div className="main-text-projects">
           <p>
-            {project.description}
+            {this.project.description}
           </p>
         </div>
-        <button type="button" className="card-button" onClick={() => this.joinUsCallback(project.wiki)} variant="outline-primary">
-          {(project.wiki !== '') ? 'Learn more' : 'Coming soon'}
+        <button type="button" className="card-button" onClick={() => this.joinUsCallback(this.project.wiki)} variant="outline-primary">
+          {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
         </button>
       </Col>
     )
   }
 
-  imageContent(size, image_path) {
+  imageContent(size) {
     return (
       <Col lg={size}>
-        <img src={image_path} className="card-image" alt="logo" />
+        <img src={this.project.image} className="card-image" alt={this.project.title} />
       </Col>
     )
   }
@@ -62,15 +62,15 @@ class ProjectsCard extends Component<Props> {
     if (this.index % 2) {
       return (
         <Row className="projects-card">
-          {this.cardContent(7, this.project)}
-          {this.imageContent(5, this.project.image)}
+          {this.cardContent(7)}
+          {this.imageContent(5)}
         </Row>
       )
     }
     return (
       <Row className="projects-card">
-        {this.imageContent(5, this.project.image)}
-        {this.cardContent(7, this.project)}
+        {this.imageContent(5)}
+        {this.cardContent(7)}
       </Row>
     )
   }

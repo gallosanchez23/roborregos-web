@@ -57,6 +57,7 @@ class ProjectsContent extends Component <Props> {
                 navButtonsAlwaysVisible
                 timeout={200}
                 animation="slide"
+                autoPlay={false}
               >
                 {/* {projects.map((project) => this.generatecard(project))} */}
                 {projects.map((project, index) => <ProjectsCard project={project} index={index} />)}

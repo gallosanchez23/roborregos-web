@@ -1,0 +1,63 @@
+.projects-other {
+    height: 100%;
+    position: relative;
+    background: white;
+  }
+
+  .other-info {
+      padding: 10vw;
+      padding-top: 10vh;
+      padding-bottom: 5vh;
+  }
+  
+  .description-other {
+    font-size: 3vh;
+    text-transform: none;
+    padding-top: 2%;
+    padding-bottom: 0%;
+    color: black;
+  }
+  
+  .title-text-other {
+    font-size: 7vh;
+    text-transform: none;
+    color: black;
+  }
+
+  .project-title {
+    font-size: 3vh;
+    text-align: center;
+    color: black;
+    height: 5vh;
+  }
+
+  .project-grid-tile {
+    background-color: white;
+    border-width: 1vw;
+    border-style: solid;
+    border-color: black;
+  }
+
+  .projects-other-grid {
+    /* background-color: chartreuse; */
+    background: linear-gradient(0deg, black 50%, white 50%);
+    padding: 0;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-bottom: 5vh;
+  }
+
+  .other-project-image {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+  }
+
+  
+  

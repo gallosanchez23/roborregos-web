@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import ProjectsCard from './ProjectsCard/ProjectsCard'
 import ProjectsCarousel from './ProjectsCarousel/ProjectsCarousel'
+import ProjectsOther from './ProjectsOther/ProjectsOther'
 import './ProjectsContent.css'
 
 /** Component class of Projects page. */
@@ -14,7 +15,7 @@ class ProjectsContent extends Component <Props> {
     super(props)
     this.main_projects = props.main_projects
     this.carousels = props.carousels
-    this.other_projects = props.other
+    this.other_projects = props.other_projects
   }
 
   /**
@@ -29,8 +30,8 @@ class ProjectsContent extends Component <Props> {
               <ProjectsCard project={project} index={index} />
             ))
         }
-        {/* <ProjectsCard projects={this.main_projects} /> */}
         <ProjectsCarousel project_carousels={this.carousels} />
+        <ProjectsOther projects={this.other_projects} />
       </div>
     )
   }
