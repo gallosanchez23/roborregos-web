@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import './Projects.css'
 import ProjectsHeader from './ProjectsHeader/ProjectsHeader'
-import ProjectsCard from './ProjectsCard/ProjectsCard'
+import ProjectsContent from './ProjectsContent/ProjectsContent'
 import Footer from '../Footer/Footer'
 
 /** Component class of Projects page. */
@@ -23,11 +23,13 @@ class Projects extends Component <Props> {
    * @return {renderized_component} Heder, grid, join us section and footer.
    */
     render() {
+      const { other, carrousel, main } = this.projects
+      window.alert(this.projects)
       document.title = 'RoBorregos | Projects'
       return (
         <div className="projects-container">
           <ProjectsHeader />
-          <ProjectsCard />
+          <ProjectsContent main_projects={main} carousels={carrousel} other_projects={other} />
           <Footer />
         </div>
       )

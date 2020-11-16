@@ -47,7 +47,7 @@ class App extends Component<Props> {
 
           <Route
             path="/projects"
-            component={() => <Projects membersData={membersData} />}
+            component={() => <Projects projectsData={projectsData} />}
           />
         </div>
       </Router>
