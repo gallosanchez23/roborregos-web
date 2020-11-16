@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 import ProjectsCard from './ProjectsCard/ProjectsCard'
+import ProjectsCarousel from './ProjectsCarousel/ProjectsCarousel'
 import './ProjectsContent.css'
 
 /** Component class of Projects page. */
@@ -23,7 +24,13 @@ class ProjectsContent extends Component <Props> {
   render() {
     return (
       <div>
-        <ProjectsCard projects={this.main_projects} />
+        {
+            this.main_projects.map((project, index) => (
+              <ProjectsCard project={project} index={index} />
+            ))
+        }
+        {/* <ProjectsCard projects={this.main_projects} /> */}
+        <ProjectsCarousel project_carousels={this.carousels} />
       </div>
     )
   }

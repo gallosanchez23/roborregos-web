@@ -20,7 +20,8 @@ class ProjectsCard extends Component<Props> {
     this.imageContent = this.imageContent.bind(this)
     // this.joinUsCallback = this.joinUsCallback(this)
 
-    this.projects = props.projects
+    this.project = props.project
+    this.index = props.index
   }
 
   joinUsCallback = (link) => {
@@ -58,25 +59,19 @@ class ProjectsCard extends Component<Props> {
  * @return {renderized_component} Heder banner with legend.
  */
   render() {
+    if (this.index % 2) {
+      return (
+        <Row className="projects-card">
+          {this.cardContent(7, this.project)}
+          {this.imageContent(5, this.project.image)}
+        </Row>
+      )
+    }
     return (
-      <div className="projects-card">
-        { this.projects.map((project, index) => {
-          if (index % 2) {
-            return (
-              <Row>
-                {this.cardContent(7, project)}
-                {this.imageContent(5, project.image)}
-              </Row>
-            )
-          }
-          return (
-            <Row>
-              {this.imageContent(5, project.image)}
-              {this.cardContent(7, project)}
-            </Row>
-          )
-        })}
-      </div>
+      <Row className="projects-card">
+        {this.imageContent(5, this.project.image)}
+        {this.cardContent(7, this.project)}
+      </Row>
     )
   }
 }

@@ -24,7 +24,6 @@ class Projects extends Component <Props> {
    */
     render() {
       const { other, carrousel, main } = this.projects
-      window.alert(this.projects)
       document.title = 'RoBorregos | Projects'
       return (
         <div className="projects-container">
