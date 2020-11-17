@@ -1,12 +1,13 @@
 .projects-other {
     height: 100%;
     position: relative;
-    background: white;
+    padding-bottom: 10vh;
+    background: linear-gradient(0deg, black 50%, white 50%);
   }
 
   .other-info {
       padding: 10vw;
-      padding-top: 10vh;
+      padding-top: 15vh;
       padding-bottom: 5vh;
   }
   
@@ -29,26 +30,26 @@
     text-align: center;
     color: black;
     height: 5vh;
+    background-color: white;
+    width: 20vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .project-grid-tile {
+  /* .project-grid-tile {
     background-color: white;
-    border-width: 1vw;
-    border-style: solid;
-    border-color: black;
-  }
+  } */
 
   .projects-other-grid {
     /* background-color: chartreuse; */
-    background: linear-gradient(0deg, black 50%, white 50%);
-    padding: 0;
     width: 100%;
     display: block;
     cursor: pointer;
     overflow: hidden;
     padding-left: 8vw;
     padding-right: 8vw;
-    padding-bottom: 5vh;
+    background: linear-gradient(0deg, black 50%, white 50%);
   }
 
   .other-project-image {
@@ -56,7 +57,13 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 40vh;
+    width: 22vw;
+    /* border-width: 1vw; */
+    border-top: 1vw solid black;
+    border-left: 1vw solid black;
+    border-right: 1vw solid black;
+    /* border-style: solid;
+    border-color: black; */
   }
 
   

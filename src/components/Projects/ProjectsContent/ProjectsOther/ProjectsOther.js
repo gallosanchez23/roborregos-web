@@ -49,7 +49,7 @@ class ProjectsOther extends Component<Props> {
             <GridList
               cellHeight="auto"
               cols={3}
-              spacing={5}
+              spacing={3}
             >
               {this.projects.map((project, index) => (
                 <GridListTile
