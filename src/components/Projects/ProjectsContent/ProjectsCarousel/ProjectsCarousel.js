@@ -20,36 +20,13 @@ class ProjectsContent extends Component <Props> {
     window.open(link)
   }
 
-  generatecard(project) {
-    return (
-      <div className="projects-card">
-        <Col lg={7} className="card-info">
-          <h2 className="title-text-card">
-            {project.title}
-          </h2>
-          <div className="main-text-projects">
-            <p>
-              {project.description}
-            </p>
-          </div>
-          <button type="button" className="card-button" onClick={() => this.joinUsCallback(project.wiki)} variant="outline-primary">
-            {(project.wiki !== '') ? 'Learn more' : 'Coming soon'}
-          </button>
-        </Col>
-        <Col lg={5}>
-          <img src={project.image} className="card-image" alt="logo" />
-        </Col>
-      </div>
-    )
-  }
-
   /**
    * Renders Responsive view of Projects's body page.
    * @return {renderized_component} Heder, grid, join us section and footer.
    */
   render() {
     return (
-      <div>
+      <div className="project-carousel">
         {
             this.project_carousels.map((projects) => (
               <Carousel
@@ -59,7 +36,6 @@ class ProjectsContent extends Component <Props> {
                 animation="slide"
                 autoPlay={false}
               >
-                {/* {projects.map((project) => this.generatecard(project))} */}
                 {projects.map((project, index) => <ProjectsCard project={project} index={index} />)}
               </Carousel>
             ))
