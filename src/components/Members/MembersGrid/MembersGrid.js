@@ -224,7 +224,7 @@ class MembersGrid extends Component<Props, State> {
             <GridListTile
               key={member.id}
               cols={1}
-              className="members-grid-tile"
+              className={`members-grid-tile-${member.id}`}
               onClick={() => this.handleShowModal(member)}
             >
               <div className="member-image-container">
@@ -303,21 +303,22 @@ class MembersGrid extends Component<Props, State> {
     const { id } = member
     const { active_members, inactive_members } = this.props
     return (
-      <div className="members-grid-container">
+      <div className="members-grid-container" data-testid="members-grid-container">
         { this.generateGridList(active_members, '') }
         { this.generateGridList(inactive_members,
           'RoBorregos Legacy') }
         <Modal
           className="modal-container"
+          data-testid="modal-container"
           show={show_modal}
           dialogAs={() => (
             <Carousel
-              className="member-carrousel"
+              className={`member-carrousel-${String(active)}`}
               navButtonsAlwaysVisible
               autoPlay={false}
               timeout={200}
               fullHeightHover
-              indicators
+              indicators={false}
               onChange={(next) => {
                 this.changeMemberUIArrows(next)
               }}
@@ -329,9 +330,9 @@ class MembersGrid extends Component<Props, State> {
                 : this.inactive_members_keys.indexOf(id)}
             >
               {
-              (active)
-                ? active_members.map((active_member) => this.carouselItem(active_member))
-                : inactive_members.map((inactive_member) => this.carouselItem(inactive_member))
+                (active)
+                  ? active_members.map((active_member) => this.carouselItem(active_member))
+                  : inactive_members.map((inactive_member) => this.carouselItem(inactive_member))
               }
             </Carousel>
           )}

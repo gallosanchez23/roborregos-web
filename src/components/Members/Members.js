@@ -53,7 +53,7 @@ class Members extends Component <Props> {
     const active = this.members.filter((member) => member.status === 'active'
       || member.status === 'comitee').sort((a, b) => a.id - b.id)
     return (
-      <div className="members-container">
+      <div className="members-container" data-testid="members-container">
         <MembersHeader />
         <MembersGrid active_members={active} inactive_members={inactive} />
         <MembersJoinUs />
