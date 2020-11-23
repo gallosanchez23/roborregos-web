@@ -26,11 +26,11 @@ class ProjectsContent extends Component <Props> {
    */
   render() {
     return (
-      <div className="project-carousel">
+      <div className="project-carousels">
         {
             this.project_carousels.map((projects) => (
               <Carousel
-                className=""
+                className="project-carousel"
                 navButtonsAlwaysVisible
                 timeout={200}
                 animation="slide"

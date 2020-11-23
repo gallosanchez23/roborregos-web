@@ -74,17 +74,23 @@
             {
                 "title": "RoboSearch",
                 "wiki": "https://roborregos.github.io/RoBoSearch-WebUI/",
-                "image": "robosearch"
+                "image": "robosearch",
+                "background": "#FFFFFF",
+                "color" : "black"
             },
             {
                 "title": "Robotsim",
                 "wiki": "https://github.com/RoBorregos/robotSim",
-                "image": "robotsim"
+                "image": "robotsim",
+                "background": "#000000",
+                "color" : "white"
             },
             {
                 "title": "Our GitHub",
                 "wiki": "https://github.com/RoBorregos",
-                "image": "roborregos_github"
+                "image": "roborregos_github",
+                "background": "#5CE1E6",
+                "color" : "black"
             }
         ]
 }

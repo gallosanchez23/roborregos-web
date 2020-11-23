@@ -53,6 +53,19 @@ class ProjectsCard extends Component<Props> {
     window.open(link)
   }
 
+  /**
+  * Parses path to projects image
+  * @param {string} imgPath: Path to project's image/photo.
+  * @return {path}
+  */
+  tryRequire = (imgPath: string) => {
+    try {
+      return require(`images/projects/${imgPath}`)
+    } catch (err) {
+      return null
+    }
+  }
+
   smallView() {
     return (
       <div className="projects-card">
@@ -61,8 +74,8 @@ class ProjectsCard extends Component<Props> {
             {this.project.title}
           </h2>
         </div>
-        <div className="card-image">
-          <img src={this.project.image} alt={this.project.title} />
+        <div className="card-image-container">
+          <img className="card-image" src={this.tryRequire(`${this.project.image}.png`)} alt={this.project.title} />
         </div>
         <div className="main-text-projects-description">
           {this.project.description}
@@ -102,7 +115,7 @@ class ProjectsCard extends Component<Props> {
   imageContent(size) {
     return (
       <Col xs={size}>
-        <img src={this.project.image} className="card-image" alt={this.project.title} />
+        <img src={this.tryRequire(`${this.project.image}.png`)} className="card-image" alt={this.project.title} />
       </Col>
     )
   }

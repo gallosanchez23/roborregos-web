@@ -1,5 +1,5 @@
 .projects-card {
-    height: 100%;
+    height: 90vh;
     position: relative;
     background: black;
     color: rgba(255, 255, 255, 0.8);
@@ -23,9 +23,10 @@
 }
 
 .card-image {
-    width: 100%;
+    display: block;
     object-fit: cover;
-    object-position: top;
+    height: 100%;
+    max-width: 100%;
 }
 
 .projects-card .main-text-projects {
@@ -42,39 +43,9 @@
     text-transform: none;
 }
 
-.projects-card .projects-card-footer {
-    font-size: 2.5vh;
-    text-transform: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    bottom: 5vh;
-    left: 0;
-    right: 0;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.projects-card .projects-card-footer p {
-    margin: 0;
-}
-
-.projects-card .projects-card-footer .icon-btn {
-    cursor: pointer;
-    color: rgb(0, 225, 250);
-    font-size: 30px;
-}
-
-.projects-card .projects-card-footer .icon-btn:hover {
-    color: rgb(196, 63, 101);
-}
-
 @media (max-width: 768px) {
     .title-text-card {
         text-align: center;
-        background-color: chartreuse;
         height: 15vh;
         padding-top: 5vh;
     }
@@ -85,20 +56,21 @@
         padding-right: 6vw;
         padding-top: 4vh;
         text-align: center;
-        background-color: crimson;
         font-size: 100%;
     }
 
-    .card-image {
+    .card-image-container {
         height: 35vh;
-        object-fit: cover;
-        object-position: top;
-        background-color: darkmagenta;
+        width: 100vw;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
     }
 
     .button-div {
         height: 8vh;
-        background-color: darkred;
     }
 
     .card-button-small {

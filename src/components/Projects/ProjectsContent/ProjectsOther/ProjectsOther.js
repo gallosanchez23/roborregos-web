@@ -6,6 +6,7 @@ import './ProjectsOther.css'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import { Row, Col, Container } from 'react-bootstrap'
+import { hexToRgb } from '@material-ui/core'
 import robosearch from '../robosearch.png'
 import { SMALL_WIDTH } from '../../../../constants'
 
@@ -51,13 +52,30 @@ class ProjectsOther extends Component<Props> {
     return false
   }
 
+  /**
+  * Parses path to projects image
+  * @param {string} imgPath: Path to project's image/photo.
+  * @return {path}
+  */
+  tryRequire = (imgPath: string) => {
+    try {
+      return require(`images/projects/${imgPath}`)
+    } catch (err) {
+      return null
+    }
+  }
+
   generateSmallCard = (project, index) => {
     if (index % 2) {
       return (
-        <div className="other-projects-small">
+        <div
+          className="other-projects-small"
+          style={{ backgroundColor: project.background }}
+          onClick={() => this.joinUsCallback(project.wiki)}
+        >
           <Row>
             <Col xs={5}>
-              <div className="project-title">
+              <div className="project-title" style={{ color: project.color }}>
                 <p>
                   {project.title}
                 </p>
@@ -66,7 +84,7 @@ class ProjectsOther extends Component<Props> {
             <Col xs={7}>
               <img
                 className="other-project-image"
-                src={robosearch}
+                src={this.tryRequire(`${project.image}.png`)}
                 alt={project.title}
               />
             </Col>
@@ -75,17 +93,21 @@ class ProjectsOther extends Component<Props> {
       )
     }
     return (
-      <div className="other-projects-small">
+      <div
+        className="other-projects-small"
+        style={{ backgroundColor: project.background }}
+        onClick={() => this.joinUsCallback(project.wiki)}
+      >
         <Row>
           <Col xs={7}>
             <img
               className="other-project-image"
-              src={robosearch}
+              src={this.tryRequire(`${project.image}.png`)}
               alt={project.title}
             />
           </Col>
           <Col xs={5}>
-            <div className="project-title">
+            <div className="project-title" style={{ color: project.color }}>
               <p>
                 {project.title}
               </p>
@@ -128,8 +150,9 @@ class ProjectsOther extends Component<Props> {
                   <div>
                     <img
                       className="other-project-image"
-                      src={robosearch}
+                      src={this.tryRequire(`${project.image}.png`)}
                       alt={project.title}
+                      style={{ backgroundColor: project.background }}
                     />
                   </div>
                   <div className="project-title">

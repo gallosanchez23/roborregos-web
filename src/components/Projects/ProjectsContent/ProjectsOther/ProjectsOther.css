@@ -31,7 +31,7 @@
     color: black;
     height: 5vh;
     background-color: white;
-    width: 20vw;
+    width: 20.1vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -46,6 +46,7 @@
     padding-left: 8vw;
     padding-right: 8vw;
     background: linear-gradient(0deg, black 50%, white 50%);
+    padding-bottom: 1vh;
   }
 
   .other-project-image {
@@ -54,6 +55,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 22vw;
+    height: 37vh;
     border-top: 1vw solid black;
     border-left: 1vw solid black;
     border-right: 1vw solid black;
@@ -63,54 +65,43 @@
   @media (max-width: 768px) {
     .title-text-other {
       text-align: center;
-      background-color: chartreuse;
+      color: white;
+      font-size: 7vh;
     }
 
     .other-info {
       padding: 10vw;
       padding-top: 5vh;
       padding-bottom: 1vh;
-      background-color: cornflowerblue;
     }
 
     .description-other {
-      font-size: 3.5vw;
-      background-color: darkgreen;
+      font-size: 3vw;
       text-align: center;
+      color: white;
     }
 
     .other-project-image {
-      background-color: rgba(0, 0, 0, 0.5);
       height: 23vh;
       border: 0;
       width: 100%;
       padding: 0;
+      background-color: transparent;
     }
 
     .projects-other {
-      background-color: darkcyan;
       padding: 0;
+      background: black;
+      color: white;
     }
 
     .project-title {
       height: 23vh;
-      background-color: red;
       width: 100%;
-      font-size: 5vw;
+      font-size: 4vw;
       text-align: center;
       padding-top: 8vh;
-
-      /* color: black;
-      height: 20vh;
-      background-color: red;
-      width: fit-content;
-      display: block;
-      margin-left: auto;
-      margin-right: auto; */
-    }
-
-    .other-projects-small {
-      background-color: seagreen;
+      background-color: transparent;
     }
   }
 
