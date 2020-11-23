@@ -1,9 +1,8 @@
-.project-carouselss {
+.project-carousels {
     height: auto;
-    display: block;
 }
 
 .project-carousel {
     background-color: black;
-    height: 96vh;
+    height: 90vh;
 }

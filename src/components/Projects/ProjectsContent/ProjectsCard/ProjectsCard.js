@@ -23,7 +23,6 @@ class ProjectsCard extends Component<Props> {
     this.viewSizeLarge = this.viewSizeLarge.bind(this)
     this.updateView = this.updateView.bind(this)
     this.smallView = this.smallView.bind(this)
-    // this.joinUsCallback = this.joinUsCallback(this)
 
     this.project = props.project
     this.index = props.index
@@ -84,7 +83,7 @@ class ProjectsCard extends Component<Props> {
           <button
             type="button"
             className="card-button-small"
-            onClick={() => this.joinUsCallback(this.project.wiki)}
+            onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)}
             variant="outline-primary"
           >
             {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
@@ -105,7 +104,7 @@ class ProjectsCard extends Component<Props> {
             {this.project.description}
           </p>
         </div>
-        <button type="button" className="card-button" onClick={() => this.joinUsCallback(this.project.wiki)} variant="outline-primary">
+        <button type="button" className="card-button" onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)} variant="outline-primary">
           {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
         </button>
       </Col>
@@ -130,7 +129,10 @@ class ProjectsCard extends Component<Props> {
       )
     }
     return (
-      <Row className="projects-card">
+      <Row
+        className="projects-card"
+        style={{ paddingLeft: '5vw' }}
+      >
         {this.imageContent(5)}
         {this.cardContent(7)}
       </Row>

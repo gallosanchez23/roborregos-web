@@ -66,7 +66,7 @@
     .title-text-other {
       text-align: center;
       color: white;
-      font-size: 7vh;
+      font-size: 6vh;
     }
 
     .other-info {
@@ -76,7 +76,7 @@
     }
 
     .description-other {
-      font-size: 3vw;
+      font-size: 3.1vw;
       text-align: center;
       color: white;
     }
@@ -100,8 +100,10 @@
       width: 100%;
       font-size: 4vw;
       text-align: center;
-      padding-top: 8vh;
       background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 

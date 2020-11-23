@@ -24,7 +24,7 @@ class ProjectsContent extends Component <Props> {
    */
   render() {
     return (
-      <div>
+      <div className="projects-content">
         {
             this.main_projects.map((project, index) => (
               <ProjectsCard project={project} index={index} />
