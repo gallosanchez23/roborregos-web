@@ -5,11 +5,38 @@ import ProjectsCarousel from './ProjectsCarousel/ProjectsCarousel'
 import ProjectsOther from './ProjectsOther/ProjectsOther'
 import './ProjectsContent.css'
 
+type Project = {
+  title: string,
+  description: string,
+  image: string,
+  wiki: string
+};
+
+type OtherProjects = {
+  title: string,
+  image: string,
+  wiki: string,
+  background: string,
+  color: string
+};
+
+type Props = {
+  main_projects: Array<Project>,
+  carousels: Array<Array<Project>>,
+  other_projects: Array<OtherProjects>
+};
+
 /** Component class of Projects page. */
 class ProjectsContent extends Component <Props> {
+  main_projects: Array<Project>;
+
+  carousels: Array<Array<Project>>;
+
+  other_projects: Array<OtherProjects>;
+
   /**
    * Class constructor
-   * @param {list} props: List of projects data.
+   * @param {list} props: List of projects by types.
    */
   constructor(props: Props) {
     super(props)

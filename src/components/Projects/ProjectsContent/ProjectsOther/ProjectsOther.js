@@ -1,19 +1,33 @@
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 // @flow
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import './ProjectsOther.css'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import { Row, Col, Container } from 'react-bootstrap'
-import { hexToRgb } from '@material-ui/core'
-import robosearch from '../robosearch.png'
 import { SMALL_WIDTH } from '../../../../constants'
 
-type Props = {};
+type Project = {
+  title: string,
+  image: string,
+  wiki: string,
+  background: string,
+  color: string
+};
+
+type Props = {
+  projects: Array<Project>
+};
+
+type State = {
+  large_view: boolean
+};
 
 /** Component class of Projects' header. */
-class ProjectsOther extends Component<Props> {
+class ProjectsOther extends Component<Props, State> {
+  projects: Array<Project>;
+
   /**
    * Class constructor
    * @param {list} props: List of projects data.
@@ -35,7 +49,7 @@ class ProjectsOther extends Component<Props> {
     window.addEventListener('resize', this.updateView)
   }
 
-  joinUsCallback = (link) => {
+  joinUsCallback = (link: string) => {
     window.open(link)
   }
 
@@ -65,10 +79,10 @@ class ProjectsOther extends Component<Props> {
     }
   }
 
-  generateSmallCard = (project, index) => {
+  generateSmallCard = (project: Project, index: number) => {
     if (index % 2) {
       return (
-        <div
+        <Container
           className="other-projects-small"
           style={{ backgroundColor: project.background }}
           onClick={() => this.joinUsCallback(project.wiki)}
@@ -84,16 +98,16 @@ class ProjectsOther extends Component<Props> {
             <Col xs={7}>
               <img
                 className="other-project-image"
-                src={this.tryRequire(`${project.image}.png`)}
+                src={this.tryRequire(`${project.image}.jpg`)}
                 alt={project.title}
               />
             </Col>
           </Row>
-        </div>
+        </Container>
       )
     }
     return (
-      <div
+      <Container
         className="other-projects-small"
         style={{ backgroundColor: project.background }}
         onClick={() => this.joinUsCallback(project.wiki)}
@@ -102,7 +116,7 @@ class ProjectsOther extends Component<Props> {
           <Col xs={7}>
             <img
               className="other-project-image"
-              src={this.tryRequire(`${project.image}.png`)}
+              src={this.tryRequire(`${project.image}.jpg`)}
               alt={project.title}
             />
           </Col>
@@ -114,64 +128,13 @@ class ProjectsOther extends Component<Props> {
             </div>
           </Col>
         </Row>
-      </div>
+      </Container>
     )
   }
 
-  largeView() {
-    return (
-      <div className="projects-other">
-        <Row>
-          <div className="other-info">
-            <h2 className="title-text-other">
-              Other projects
-            </h2>
-            <div className="description-other">
-              <p>
-                Check out other interesting tech projects developed by the community!
-              </p>
-            </div>
-          </div>
-        </Row>
-        <Row>
-          <div className="projects-other-grid">
-            <GridList
-              cellHeight="auto"
-              cols={3}
-              spacing={3}
-            >
-              {this.projects.map((project, index) => (
-                <GridListTile
-                  key={index}
-                  cols={1}
-                  className="project-grid-tile"
-                  onClick={() => this.joinUsCallback(project.wiki)}
-                >
-                  <div>
-                    <img
-                      className="other-project-image"
-                      src={this.tryRequire(`${project.image}.png`)}
-                      alt={project.title}
-                      style={{ backgroundColor: project.background }}
-                    />
-                  </div>
-                  <div className="project-title">
-                    <p>
-                      {project.title}
-                    </p>
-                  </div>
-                </GridListTile>
-              ))}
-            </GridList>
-          </div>
-        </Row>
-      </div>
-    )
-  }
-
-  smallView() {
-    return (
-      <div className="projects-other">
+  largeView = () => (
+    <div className="projects-other">
+      <Row>
         <div className="other-info">
           <h2 className="title-text-other">
             Other projects
@@ -182,19 +145,67 @@ class ProjectsOther extends Component<Props> {
             </p>
           </div>
         </div>
-        <div>
-          {this.projects.map((project, index) => this.generateSmallCard(project, index))}
+      </Row>
+      <Row>
+        <div className="projects-other-grid">
+          <GridList
+            cellHeight="auto"
+            cols={3}
+            spacing={3}
+          >
+            {this.projects.map((project, index) => (
+              <GridListTile
+                key={index}
+                cols={1}
+                className="project-grid-tile"
+                onClick={() => this.joinUsCallback(project.wiki)}
+              >
+                <div>
+                  <img
+                    className="other-project-image"
+                    src={this.tryRequire(`${project.image}.jpg`)}
+                    alt={project.title}
+                    style={{ backgroundColor: project.background }}
+                  />
+                </div>
+                <div className="project-title">
+                  <p>
+                    {project.title}
+                  </p>
+                </div>
+              </GridListTile>
+            ))}
+          </GridList>
+        </div>
+      </Row>
+    </div>
+  )
+
+  smallView = () => (
+    <div className="projects-other">
+      <div className="other-info">
+        <h2 className="title-text-other">
+          Other projects
+        </h2>
+        <div className="description-other">
+          <p>
+            Check out other interesting tech projects developed by the community!
+          </p>
         </div>
       </div>
-    )
-  }
+      <div>
+        {this.projects.map((project, index) => this.generateSmallCard(project, index))}
+      </div>
+    </div>
+  )
 
   /**
- * Renders Responsive view of Projects's header.
- * @return {renderized_component} Heder banner with legend.
+ * Renders Responsive view of Projects's Other section.
+ * @return {renderized_component} Other section with proyect grid or rows.
  */
   render() {
-    if (this.state.large_view) return this.largeView()
+    const { large_view } = this.state
+    if (large_view) return this.largeView()
     return this.smallView()
   }
 }

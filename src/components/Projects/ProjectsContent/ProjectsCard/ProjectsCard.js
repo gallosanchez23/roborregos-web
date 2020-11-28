@@ -1,16 +1,33 @@
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 // @flow
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-import { Row, Col, Container } from 'react-bootstrap'
-import logo from '../../../../images/info_background_3.jpg'
+import { Row, Col } from 'react-bootstrap'
 import './ProjectsCard.css'
 import { SMALL_WIDTH } from '../../../../constants'
 
-type Props = {};
+type Project = {
+  title: string,
+  description: string,
+  image: string,
+  wiki: string
+};
+
+type Props = {
+  index: number,
+  project: Project
+};
+
+type State = {
+  large_view: boolean
+};
 
 /** Component class of Projects' card. */
-class ProjectsCard extends Component<Props> {
+class ProjectsCard extends Component<Props, State> {
+  project: Project;
+
+  index: number;
+
   /**
    * Class constructor
    * @param {list} props: List of projects data.
@@ -48,7 +65,7 @@ class ProjectsCard extends Component<Props> {
     return false
   }
 
-  joinUsCallback = (link) => {
+  joinUsCallback = (link: string) => {
     window.open(link)
   }
 
@@ -65,61 +82,29 @@ class ProjectsCard extends Component<Props> {
     }
   }
 
-  smallView() {
-    return (
-      <div className="projects-card">
-        <div className="title-text-card">
-          <h2>
-            {this.project.title}
-          </h2>
-        </div>
-        <div className="card-image-container">
-          <img className="card-image" src={this.tryRequire(`${this.project.image}.png`)} alt={this.project.title} />
-        </div>
-        <div className="main-text-projects-description">
+  cardContent = (size: number) => (
+    <Col xs={size} className="card-info">
+      <h2 className="title-text-card">
+        {this.project.title}
+      </h2>
+      <div className="main-text-projects">
+        <p>
           {this.project.description}
-        </div>
-        <div className="button-div">
-          <button
-            type="button"
-            className="card-button-small"
-            onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)}
-            variant="outline-primary"
-          >
-            {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
-          </button>
-        </div>
+        </p>
       </div>
-    )
-  }
+      <button type="button" className="card-button" onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)} variant="outline-primary">
+        {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
+      </button>
+    </Col>
+  )
 
-  cardContent(size) {
-    return (
-      <Col xs={size} className="card-info">
-        <h2 className="title-text-card">
-          {this.project.title}
-        </h2>
-        <div className="main-text-projects">
-          <p>
-            {this.project.description}
-          </p>
-        </div>
-        <button type="button" className="card-button" onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)} variant="outline-primary">
-          {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
-        </button>
-      </Col>
-    )
-  }
+  imageContent = (size: number) => (
+    <Col xs={size}>
+      <img src={this.tryRequire(`${this.project.image}.jpg`)} className="card-image" alt={this.project.title} />
+    </Col>
+  )
 
-  imageContent(size) {
-    return (
-      <Col xs={size}>
-        <img src={this.tryRequire(`${this.project.image}.png`)} className="card-image" alt={this.project.title} />
-      </Col>
-    )
-  }
-
-  largeView() {
+  largeView = () => {
     if (this.index % 2) {
       return (
         <Row className="projects-card">
@@ -139,12 +124,39 @@ class ProjectsCard extends Component<Props> {
     )
   }
 
+  smallView = () => (
+    <div className="projects-card">
+      <div className="title-text-card">
+        <h2>
+          {this.project.title}
+        </h2>
+      </div>
+      <div className="card-image-container">
+        <img className="card-image" src={this.tryRequire(`${this.project.image}.jpg`)} alt={this.project.title} />
+      </div>
+      <div className="main-text-projects-description">
+        {this.project.description}
+      </div>
+      <div className="button-div">
+        <button
+          type="button"
+          className="card-button-small"
+          onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)}
+          variant="outline-primary"
+        >
+          {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
+        </button>
+      </div>
+    </div>
+  )
+
   /**
  * Renders Responsive view of Projects's card.
  * @return {renderized_component} Heder banner with legend.
  */
   render() {
-    if (this.state.large_view) return this.largeView()
+    const { large_view } = this.state
+    if (large_view) return this.largeView()
     return this.smallView()
   }
 }

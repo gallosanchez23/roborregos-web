@@ -5,13 +5,38 @@ import ProjectsHeader from './ProjectsHeader/ProjectsHeader'
 import ProjectsContent from './ProjectsContent/ProjectsContent'
 import Footer from '../Footer/Footer'
 
+type Project = {
+  title: string,
+  description: string,
+  image: string,
+  wiki: string
+};
+
+type OtherProjects = {
+  title: string,
+  image: string,
+  wiki: string,
+  background: string,
+  color: string
+};
+
+type ProjectsData = {
+  main: Array<Project>,
+  carrousel: Array<Array<Project>>,
+  other: Array<OtherProjects>
+};
+
+type Props = {
+  projectsData: ProjectsData
+};
+
 /** Component class of Projects page. */
 class Projects extends Component <Props> {
-    projects: Array<projects>;
+    projects: ProjectsData;
 
     /**
    * Class constructor
-   * @param {list} props: List of projects data.
+   * @param {list} props: List of projects data by type.
    */
     constructor(props: Props) {
       super(props)
@@ -20,7 +45,7 @@ class Projects extends Component <Props> {
 
     /**
    * Renders Responsive view of Projects's body page.
-   * @return {renderized_component} Heder, grid, join us section and footer.
+   * @return {renderized_component} Heder, Content, and footer.
    */
     render() {
       const { other, carrousel, main } = this.projects
