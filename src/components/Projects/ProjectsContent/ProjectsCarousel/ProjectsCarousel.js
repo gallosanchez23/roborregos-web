@@ -12,12 +12,15 @@ type Project = {
 };
 
 type Props = {
-  project_carousels: Array<Array<Project>>
+  project_carousels: Array<Array<Project>>,
+  main_counter: number
 };
 
 /** Component class of Projects page. */
 class ProjectsContent extends Component <Props> {
   project_carousels: Array<Array<Project>>;
+
+  main_counter: number;
 
   /**
    * Class constructor
@@ -26,6 +29,7 @@ class ProjectsContent extends Component <Props> {
   constructor(props: Props) {
     super(props)
     this.project_carousels = props.project_carousels
+    this.main_counter = props.main_counter
   }
 
   joinUsCallback = (link: string) => {
@@ -40,15 +44,22 @@ class ProjectsContent extends Component <Props> {
     return (
       <div className="project-carousels">
         {
-            this.project_carousels.map((projects) => (
+            this.project_carousels.map((projects, carrousel_index) => (
               <Carousel
                 className="project-carousel"
                 navButtonsAlwaysVisible
                 timeout={200}
                 animation="slide"
                 autoPlay={false}
+                index={(((carrousel_index % 2) + (this.main_counter % 2))) % 2}
               >
-                {projects.map((project, index) => <ProjectsCard project={project} index={index} />)}
+                {projects.map((project, index) => (
+                  <ProjectsCard
+                    project={project}
+                    index={index}
+                    iscarousell
+                  />
+                ))}
               </Carousel>
             ))
         }

@@ -1,5 +1,7 @@
 .projects-content {
-    background-color: black;
+    /* background-color: black; */
+    /* 42, 46, 59 */
+    background: linear-gradient( 45deg, rgba(0, 0, 0, 1) 10%, rgb(42, 46, 59) 100%) top left/auto repeat fixed;
 }
 
 .main-project-card-container {
@@ -9,7 +11,7 @@
 .projects-content .icon-container {
     width: 100%;
     height: 13vh;
-    background-color: black;
+    background-color: transparent;
 }
 
 .projects-content .icon-btn {

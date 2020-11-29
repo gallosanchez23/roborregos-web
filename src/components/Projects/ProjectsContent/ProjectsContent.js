@@ -106,7 +106,7 @@ class ProjectsContent extends Component <Props, State> {
               </div>
             ))
         }
-        <ProjectsCarousel project_carousels={this.carousels} />
+        <ProjectsCarousel project_carousels={this.carousels} main_counter={this.main_projects.length} />
         <ProjectsOther projects={this.other_projects} />
       </div>
     )

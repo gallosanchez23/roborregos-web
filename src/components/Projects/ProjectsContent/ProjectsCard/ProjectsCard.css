@@ -1,8 +1,11 @@
 .projects-card {
     position: relative;
-    background: black;
     color: rgba(255, 255, 255, 0.8);
     height: 80vh;
+
+    transition: all;
+    transition-duration: 2s;
+    right: 3.5%;
   }
 
 .card-info {

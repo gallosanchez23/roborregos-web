@@ -4,6 +4,7 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import './ProjectsCard.css'
+import Grow from '@material-ui/core/Grow'
 import { SMALL_WIDTH } from '../../../../constants'
 
 type Project = {
@@ -15,11 +16,13 @@ type Project = {
 
 type Props = {
   index: number,
-  project: Project
+  project: Project,
+  iscarousell: boolean
 };
 
 type State = {
-  large_view: boolean
+  large_view: boolean,
+  visible: boolean
 };
 
 /** Component class of Projects' card. */
@@ -27,6 +30,8 @@ class ProjectsCard extends Component<Props, State> {
   project: Project;
 
   index: number;
+
+  iscarousell: Boolean;
 
   /**
    * Class constructor
@@ -40,16 +45,29 @@ class ProjectsCard extends Component<Props, State> {
     this.viewSizeLarge = this.viewSizeLarge.bind(this)
     this.updateView = this.updateView.bind(this)
     this.smallView = this.smallView.bind(this)
+    this.listenScrollEvent = this.listenScrollEvent.bind(this)
+    this.makeAppear = this.makeAppear.bind(this)
 
     this.project = props.project
     this.index = props.index
+    this.iscarousell = props.iscarousell
     this.state = {
       large_view: this.viewSizeLarge(),
+      visible: this.listenScrollEvent(),
     }
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.updateView)
+    window.addEventListener('scroll', this.makeAppear, true)
+  }
+
+  listenScrollEvent = () => (window.innerHeight * (this.index) < window.scrollY)
+
+  makeAppear = () => {
+    this.setState({
+      visible: this.listenScrollEvent(),
+    })
   }
 
   updateView = () => {
@@ -155,9 +173,18 @@ class ProjectsCard extends Component<Props, State> {
  * @return {renderized_component} Heder banner with legend.
  */
   render() {
-    const { large_view } = this.state
-    if (large_view) return this.largeView()
-    return this.smallView()
+    const { large_view, visible } = this.state
+    if (this.iscarousell) {
+      return (large_view) ? this.largeView() : this.smallView()
+    }
+    if (visible) {
+      return (
+        <Grow in {...{ timeout: 1500 }} style={{ transformOrigin: 'bottom' }}>
+          {(large_view) ? this.largeView() : this.smallView()}
+        </Grow>
+      )
+    }
+    return null
   }
 }
 
