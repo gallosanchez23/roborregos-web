@@ -57,7 +57,6 @@ class ProjectsContent extends Component <Props> {
                   <ProjectsCard
                     project={project}
                     index={index}
-                    iscarousell
                   />
                 ))}
               </Carousel>

@@ -4,6 +4,7 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import './ProjectsCard.css'
+import Fade from '@material-ui/core/Fade'
 import Grow from '@material-ui/core/Grow'
 import { SMALL_WIDTH } from '../../../../constants'
 
@@ -16,8 +17,7 @@ type Project = {
 
 type Props = {
   index: number,
-  project: Project,
-  iscarousell: boolean
+  project: Project
 };
 
 type State = {
@@ -31,8 +31,6 @@ class ProjectsCard extends Component<Props, State> {
 
   index: number;
 
-  iscarousell: Boolean;
-
   /**
    * Class constructor
    * @param {list} props: List of projects data.
@@ -43,14 +41,11 @@ class ProjectsCard extends Component<Props, State> {
     this.imageContent = this.imageContent.bind(this)
     this.largeView = this.largeView.bind(this)
     this.viewSizeLarge = this.viewSizeLarge.bind(this)
-    this.updateView = this.updateView.bind(this)
     this.smallView = this.smallView.bind(this)
     this.listenScrollEvent = this.listenScrollEvent.bind(this)
-    this.makeAppear = this.makeAppear.bind(this)
 
     this.project = props.project
     this.index = props.index
-    this.iscarousell = props.iscarousell
     this.state = {
       large_view: this.viewSizeLarge(),
       visible: this.listenScrollEvent(),
@@ -100,34 +95,30 @@ class ProjectsCard extends Component<Props, State> {
     }
   }
 
-  cardContent = (size: number) => (
-    <Col xs={size} className="card-info">
-      <h2 className="title-text-card">
-        {this.project.title}
-      </h2>
-      <div className="main-text-projects">
-        <p>
-          {this.project.description}
-        </p>
-      </div>
-      <button type="button" className="card-button" onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)} variant="outline-primary">
-        {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
-      </button>
-    </Col>
-  )
-
-  imageContent = (size: number) => (
-    <Col xs={size}>
-      <img src={this.tryRequire(`${this.project.image}.jpg`)} className="card-image" alt={this.project.title} />
-    </Col>
+  cardContent = () => (
+    <Grow in {...{ timeout: 1500 }} style={{ transformOrigin: 'bottom' }}>
+      <Col xs={7} className="card-info">
+        <h2 className="title-text-card">
+          {this.project.title}
+        </h2>
+        <div className="main-text-projects">
+          <p>
+            {this.project.description}
+          </p>
+        </div>
+        <button type="button" className="card-button" onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)} variant="outline-primary">
+          {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
+        </button>
+      </Col>
+    </Grow>
   )
 
   largeView = () => {
     if (this.index % 2) {
       return (
         <Row className="projects-card">
-          {this.cardContent(7)}
-          {this.imageContent(5)}
+          {this.cardContent()}
+          {this.imageContent()}
         </Row>
       )
     }
@@ -136,8 +127,8 @@ class ProjectsCard extends Component<Props, State> {
         className="projects-card"
         style={{ paddingLeft: '5vw' }}
       >
-        {this.imageContent(5)}
-        {this.cardContent(7)}
+        {this.imageContent()}
+        {this.cardContent()}
       </Row>
     )
   }
@@ -168,23 +159,31 @@ class ProjectsCard extends Component<Props, State> {
     </div>
   )
 
+  imageContent() {
+    return (
+      <Col xs={5}>
+        <img src={this.tryRequire(`${this.project.image}.jpg`)} className="card-image" alt={this.project.title} />
+      </Col>
+    )
+  }
+
   /**
  * Renders Responsive view of Projects's card.
  * @return {renderized_component} Heder banner with legend.
  */
   render() {
     const { large_view, visible } = this.state
-    if (this.iscarousell) {
-      return (large_view) ? this.largeView() : this.smallView()
+    if (large_view) {
+      if (visible) {
+        return (
+          <Fade in {...{ timeout: 2000 }}>
+            {this.largeView()}
+          </Fade>
+        )
+      }
+      return null
     }
-    if (visible) {
-      return (
-        <Grow in {...{ timeout: 1500 }} style={{ transformOrigin: 'bottom' }}>
-          {(large_view) ? this.largeView() : this.smallView()}
-        </Grow>
-      )
-    }
-    return null
+    return this.smallView()
   }
 }
 

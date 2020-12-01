@@ -47,8 +47,6 @@ class ProjectsContent extends Component <Props, State> {
    */
   constructor(props: Props) {
     super(props)
-    this.viewSizeLarge = this.viewSizeLarge.bind(this)
-    this.updateView = this.updateView.bind(this)
 
     this.main_projects = props.main_projects
     this.carousels = props.carousels

@@ -3,7 +3,7 @@
         [
             {
                 "title": "@Home",
-                "description": "We are designing, developing, and manufacturing a home assistance robot that can carry out activities for the safety and comfort of the user, such as transporting things from different places in the home to seeing who is at the door of the house and welcoming them! It’s based on the “Robocup @Home” competition.",
+                "description": "We are designing, developing, and manufacturing a home assistance robot that can carry out activities for the safety and comfort of the user, such as transporting things from different places to seeing who is at the door of the house and welcoming them! It’s based on the “Robocup @Home” competition.",
                 "wiki": "https://github.com/RoBorregos/Robocup-Home/wiki",
                 "image": "home"
             },
