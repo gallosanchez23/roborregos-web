@@ -1,8 +1,6 @@
 // @flow
 import React, { Component } from 'react'
 import './ProjectsContent.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import ProjectsCard from './ProjectsCard/ProjectsCard'
 import ProjectsCarousel from './ProjectsCarousel/ProjectsCarousel'
 import ProjectsOther from './ProjectsOther/ProjectsOther'
@@ -30,7 +28,7 @@ type Props = {
 };
 
 type State = {
-  show_scrollers: boolean
+  visible: Array<boolean>
 };
 
 /** Component class of Projects page. */
@@ -52,23 +50,29 @@ class ProjectsContent extends Component <Props, State> {
     this.carousels = props.carousels
     this.other_projects = props.other_projects
     this.state = {
-      show_scrollers: this.viewSizeLarge(),
+      visible: [],
     }
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     window.addEventListener('resize', this.updateView)
+    window.addEventListener('scroll', this.makeAppear, true)
   }
 
-  scrollToInfo = (index: number) => {
-    window.scrollBy(0, window.innerHeight * (index + 2) - (85 * (index + 1))
-     - window.scrollY + 35 * (index))
-  }
-
-  updateView = () => {
+  makeAppear = () => {
     this.setState({
-      show_scrollers: this.viewSizeLarge(),
+      visible: this.updateVisibility(),
     })
+  }
+
+  listenScrollEvent = (card_index) => (window.innerHeight * (card_index) < window.scrollY)
+
+  updateVisibility = () => {
+    const visibility = []
+    for (let x = 0; x < this.main_projects.length; x += 1) {
+      visibility[x] = this.listenScrollEvent(x)
+    }
+    return visibility
   }
 
   viewSizeLarge = () => {
@@ -78,31 +82,29 @@ class ProjectsContent extends Component <Props, State> {
     return false
   }
 
-  getScrollers = (index: number) => (
-    <div className="icon-container">
-      <FontAwesomeIcon
-        onClick={() => this.scrollToInfo(index)}
-        icon={faAngleDown}
-        className="icon-btn"
-      />
-    </div>
-  )
-
   /**
    * Renders Responsive view of Projects's body page.
    * @return {renderized_component} Heder, grid, join us section and footer.
    */
   render() {
-    const { show_scrollers } = this.state
+    const { visible } = this.state
     return (
       <div className="projects-content">
         {
-            this.main_projects.map((project, index) => (
-              <div className="main-project-card-container">
-                <ProjectsCard project={project} index={index} />
-                {show_scrollers ? this.getScrollers(index) : null}
-              </div>
-            ))
+            this.main_projects.map((project, index) => {
+              if (visible[index]) {
+                return (
+                  <div className="main-project-card-container">
+                    <ProjectsCard
+                      project={project}
+                      index={index}
+                      show_scrollers
+                    />
+                  </div>
+                )
+              }
+              return (<div />)
+            })
         }
         <ProjectsCarousel project_carousels={this.carousels} main_counter={this.main_projects.length} />
         <ProjectsOther projects={this.other_projects} />

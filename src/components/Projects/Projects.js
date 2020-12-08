@@ -31,7 +31,7 @@ type Props = {
 };
 
 /** Component class of Projects page. */
-class Projects extends Component <Props> {
+export class Projects extends Component <Props> {
     projects: ProjectsData;
 
     /**

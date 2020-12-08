@@ -41,7 +41,6 @@
     /* background-color: chartreuse; */
     width: 100%;
     display: block;
-    cursor: pointer;
     overflow: hidden;
     padding-left: 8vw;
     padding-right: 8vw;
@@ -60,9 +59,14 @@
     border-left: 1vw solid black;
     border-right: 1vw solid black;
     object-fit: cover;
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {
+    .other-projects-small {
+      cursor: pointer;
+    }
+
     .title-text-other {
       text-align: center;
       color: white;

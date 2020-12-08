@@ -6,6 +6,9 @@ import { Row, Col } from 'react-bootstrap'
 import './ProjectsCard.css'
 import Fade from '@material-ui/core/Fade'
 import Grow from '@material-ui/core/Grow'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { element } from 'prop-types'
 import { SMALL_WIDTH } from '../../../../constants'
 
 type Project = {
@@ -17,7 +20,9 @@ type Project = {
 
 type Props = {
   index: number,
-  project: Project
+  project: Project,
+  visible: boolean,
+  show_scrollers: boolean
 };
 
 type State = {
@@ -42,27 +47,18 @@ class ProjectsCard extends Component<Props, State> {
     this.largeView = this.largeView.bind(this)
     this.viewSizeLarge = this.viewSizeLarge.bind(this)
     this.smallView = this.smallView.bind(this)
-    this.listenScrollEvent = this.listenScrollEvent.bind(this)
+    // this.listenScrollEvent = this.listenScrollEvent.bind(this)
 
     this.project = props.project
     this.index = props.index
+    this.show_scrollers = props.show_scrollers
     this.state = {
       large_view: this.viewSizeLarge(),
-      visible: this.listenScrollEvent(),
     }
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     window.addEventListener('resize', this.updateView)
-    window.addEventListener('scroll', this.makeAppear, true)
-  }
-
-  listenScrollEvent = () => (window.innerHeight * (this.index) < window.scrollY)
-
-  makeAppear = () => {
-    this.setState({
-      visible: this.listenScrollEvent(),
-    })
   }
 
   updateView = () => {
@@ -91,13 +87,13 @@ class ProjectsCard extends Component<Props, State> {
     try {
       return require(`images/projects/${imgPath}`)
     } catch (err) {
-      return null
+      return imgPath
     }
   }
 
   cardContent = () => (
     <Grow in {...{ timeout: 1500 }} style={{ transformOrigin: 'bottom' }}>
-      <Col xs={7} className="card-info">
+      <Col xs={6} className="card-info">
         <h2 className="title-text-card">
           {this.project.title}
         </h2>
@@ -106,7 +102,7 @@ class ProjectsCard extends Component<Props, State> {
             {this.project.description}
           </p>
         </div>
-        <button type="button" className="card-button" onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)} variant="outline-primary">
+        <button type="button" className="card-button" onClick={() => { if (this.project.wiki !== '') this.joinUsCallback(this.project.wiki) }} variant="outline-primary">
           {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
         </button>
       </Col>
@@ -133,6 +129,26 @@ class ProjectsCard extends Component<Props, State> {
     )
   }
 
+  getScrollers = () => {
+    if (this.show_scrollers) {
+      return (
+        <div className="icon-container">
+          <FontAwesomeIcon
+            onClick={() => this.scrollToInfo(this.index)}
+            icon={faAngleDown}
+            className="icon-btn"
+          />
+        </div>
+      )
+    }
+    return (<div />)
+  }
+
+  scrollToInfo = () => {
+    window.scrollBy(0, window.innerHeight * (this.index + 2) - (85 * (this.index + 1))
+     - window.scrollY + 35 * (this.index))
+  }
+
   smallView = () => (
     <div className="projects-card">
       <div className="title-text-card">
@@ -150,7 +166,7 @@ class ProjectsCard extends Component<Props, State> {
         <button
           type="button"
           className="card-button-small"
-          onClick={() => ((this.project.wiki !== '') ? this.joinUsCallback(this.project.wiki) : null)}
+          onClick={() => { if (this.project.wiki !== '') this.joinUsCallback(this.project.wiki) }}
           variant="outline-primary"
         >
           {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
@@ -161,7 +177,7 @@ class ProjectsCard extends Component<Props, State> {
 
   imageContent() {
     return (
-      <Col xs={5}>
+      <Col xs={6}>
         <img src={this.tryRequire(`${this.project.image}.jpg`)} className="card-image" alt={this.project.title} />
       </Col>
     )
@@ -172,16 +188,16 @@ class ProjectsCard extends Component<Props, State> {
  * @return {renderized_component} Heder banner with legend.
  */
   render() {
-    const { large_view, visible } = this.state
+    const { large_view } = this.state
     if (large_view) {
-      if (visible) {
-        return (
+      return (
+        <div>
           <Fade in {...{ timeout: 2000 }}>
             {this.largeView()}
           </Fade>
-        )
-      }
-      return null
+          {this.getScrollers(this.index)}
+        </div>
+      )
     }
     return this.smallView()
   }

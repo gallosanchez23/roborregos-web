@@ -45,7 +45,7 @@ class ProjectsOther extends Component<Props, State> {
     }
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     window.addEventListener('resize', this.updateView)
   }
 
@@ -75,7 +75,7 @@ class ProjectsOther extends Component<Props, State> {
     try {
       return require(`images/projects/${imgPath}`)
     } catch (err) {
-      return null
+      return imgPath
     }
   }
 
