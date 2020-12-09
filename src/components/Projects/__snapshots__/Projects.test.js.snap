@@ -1,0 +1,1777 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Projects> matches snapshot with: Large width: ProjectsLargeView.test.js.snap 1`] = `
+"<Projects projectsData={{...}}>
+  <div className=\\"projects-container\\">
+    <ProjectsHeader>
+      <div className=\\"projects-header\\">
+        <div className=\\"container-legend\\">
+          <h2 className=\\"title-text-banner\\">
+            Projects
+          </h2>
+          <div className=\\"main-text-projects\\">
+            <p>
+              Every year we challenge ourselves to keep learning and improving.
+               
+              <br />
+              See what we&#39;ve been up to!
+            </p>
+          </div>
+        </div>
+        <div className=\\"projects-header-footer\\">
+          <p>
+            Learn more
+          </p>
+          <FontAwesomeIcon onClick={[Function (anonymous)]} icon={{...}} className=\\"icon-btn\\" border={false} mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} title=\\"\\" transform={{...}} swapOpacity={false}>
+            <svg aria-hidden=\\"true\\" focusable=\\"false\\" data-prefix=\\"fas\\" data-icon=\\"angle-down\\" className=\\"svg-inline--fa fa-angle-down fa-w-10 icon-btn\\" role=\\"img\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 320 512\\" style={{...}} onClick={[Function (anonymous)]}>
+              <path fill=\\"currentColor\\" d=\\"M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\\" style={{...}} />
+            </svg>
+          </FontAwesomeIcon>
+        </div>
+      </div>
+    </ProjectsHeader>
+    <ProjectsContent main_projects={{...}} carousels={{...}} other_projects={{...}}>
+      <div className=\\"projects-content\\">
+        <div />
+        <div />
+        <ProjectsContent project_carousels={{...}} main_counter={2}>
+          <div className=\\"project-carousels\\">
+            <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
+              <Carousel classes={{...}} className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
+                <div className=\\"Carousel-root-1 project-carousel\\" onMouseEnter={[Function: bound stop]} onMouseOut={[Function: bound reset]}>
+                  <CarouselItem display={true} active={true} isNext={true} child={{...}} animation=\\"slide\\" timeout={200} next={[Function: bound next]} prev={[Function: bound prev]}>
+                    <div className=\\"CarouselItem\\">
+                      <ForwardRef(Slide) direction=\\"left\\" in={true} timeout={200}>
+                        <Transition nodeRef={{...}} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} appear={true} in={true} timeout={200} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                          <div style={{...}}>
+                            <ProjectsCard project={{...}} index={0}>
+                              <div>
+                                <ForwardRef(Fade) in={true} timeout={2000}>
+                                  <Transition appear={true} in={true} nodeRef={[undefined]} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} timeout={2000} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                    <Row className=\\"projects-card\\" style={{...}} noGutters={false}>
+                                      <div style={{...}} className=\\"projects-card row\\">
+                                        <Col xs={6}>
+                                          <div className=\\"col-6\\">
+                                            <img src=\\"carousel1-project-1.jpg\\" className=\\"card-image\\" alt=\\"carousel1-project-1\\" />
+                                          </div>
+                                        </Col>
+                                        <ForwardRef(Grow) in={true} timeout={1500} style={{...}}>
+                                          <Transition appear={true} in={true} nodeRef={[undefined]} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} addEndListener={[Function: addEndListener]} timeout={1500} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                            <Col xs={6} className=\\"card-info\\" style={{...}}>
+                                              <div style={{...}} className=\\"card-info col-6\\">
+                                                <h2 className=\\"title-text-card\\">
+                                                  carousel1-project-1
+                                                </h2>
+                                                <div className=\\"main-text-projects\\">
+                                                  <p>
+                                                    description-carousel1-1
+                                                  </p>
+                                                </div>
+                                                <button type=\\"button\\" className=\\"card-button\\" onClick={[Function: onClick]} variant=\\"outline-primary\\">
+                                                  Learn more
+                                                </button>
+                                              </div>
+                                            </Col>
+                                          </Transition>
+                                        </ForwardRef(Grow)>
+                                      </div>
+                                    </Row>
+                                  </Transition>
+                                </ForwardRef(Fade)>
+                                <div />
+                              </div>
+                            </ProjectsCard>
+                          </div>
+                        </Transition>
+                      </ForwardRef(Slide)>
+                    </div>
+                  </CarouselItem>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-next-11\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-prev-12\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <Indicators classes={{...}} length={1} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
+                    <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
+                      <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                          <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                            <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
+                              <circle cx=\\"12\\" cy=\\"12\\" r=\\"8\\" />
+                            </svg>
+                          </ForwardRef(SvgIcon)>
+                        </WithStyles(ForwardRef(SvgIcon))>
+                      </ForwardRef>
+                    </div>
+                  </Indicators>
+                </div>
+              </Carousel>
+            </WithStyles(Carousel)>
+            <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={1}>
+              <Carousel classes={{...}} className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={1}>
+                <div className=\\"Carousel-root-1 project-carousel\\" onMouseEnter={[Function: bound stop]} onMouseOut={[Function: bound reset]}>
+                  <CarouselItem display={true} active={true} isNext={true} child={{...}} animation=\\"slide\\" timeout={200} next={[Function: bound next]} prev={[Function: bound prev]}>
+                    <div className=\\"CarouselItem\\">
+                      <ForwardRef(Slide) direction=\\"left\\" in={true} timeout={200}>
+                        <Transition nodeRef={{...}} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} appear={true} in={true} timeout={200} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                          <div style={{...}}>
+                            <ProjectsCard project={{...}} index={0}>
+                              <div>
+                                <ForwardRef(Fade) in={true} timeout={2000}>
+                                  <Transition appear={true} in={true} nodeRef={[undefined]} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} timeout={2000} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                    <Row className=\\"projects-card\\" style={{...}} noGutters={false}>
+                                      <div style={{...}} className=\\"projects-card row\\">
+                                        <Col xs={6}>
+                                          <div className=\\"col-6\\">
+                                            <img src=\\"carousel2-project-1.jpg\\" className=\\"card-image\\" alt=\\"carousel2-project-1\\" />
+                                          </div>
+                                        </Col>
+                                        <ForwardRef(Grow) in={true} timeout={1500} style={{...}}>
+                                          <Transition appear={true} in={true} nodeRef={[undefined]} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} addEndListener={[Function: addEndListener]} timeout={1500} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                            <Col xs={6} className=\\"card-info\\" style={{...}}>
+                                              <div style={{...}} className=\\"card-info col-6\\">
+                                                <h2 className=\\"title-text-card\\">
+                                                  carousel2-project-1
+                                                </h2>
+                                                <div className=\\"main-text-projects\\">
+                                                  <p>
+                                                    description-carousel2-1
+                                                  </p>
+                                                </div>
+                                                <button type=\\"button\\" className=\\"card-button\\" onClick={[Function: onClick]} variant=\\"outline-primary\\">
+                                                  Learn more
+                                                </button>
+                                              </div>
+                                            </Col>
+                                          </Transition>
+                                        </ForwardRef(Grow)>
+                                      </div>
+                                    </Row>
+                                  </Transition>
+                                </ForwardRef(Fade)>
+                                <div />
+                              </div>
+                            </ProjectsCard>
+                          </div>
+                        </Transition>
+                      </ForwardRef(Slide)>
+                    </div>
+                  </CarouselItem>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-next-11\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-prev-12\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <Indicators classes={{...}} length={1} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
+                    <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
+                      <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                          <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                            <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
+                              <circle cx=\\"12\\" cy=\\"12\\" r=\\"8\\" />
+                            </svg>
+                          </ForwardRef(SvgIcon)>
+                        </WithStyles(ForwardRef(SvgIcon))>
+                      </ForwardRef>
+                    </div>
+                  </Indicators>
+                </div>
+              </Carousel>
+            </WithStyles(Carousel)>
+          </div>
+        </ProjectsContent>
+        <ProjectsOther projects={{...}}>
+          <div className=\\"projects-other\\">
+            <Row noGutters={false}>
+              <div className=\\"row\\">
+                <div className=\\"other-info\\">
+                  <h2 className=\\"title-text-other\\">
+                    Other projects
+                  </h2>
+                  <div className=\\"description-other\\">
+                    <p>
+                      Check out other interesting tech projects developed by the community!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Row>
+            <Row noGutters={false}>
+              <div className=\\"row\\">
+                <div className=\\"projects-other-grid\\">
+                  <WithStyles(ForwardRef(GridList)) cellHeight=\\"auto\\" cols={3} spacing={3}>
+                    <ForwardRef(GridList) classes={{...}} cellHeight=\\"auto\\" cols={3} spacing={3}>
+                      <ul className=\\"MuiGridList-root\\" style={{...}}>
+                        <WithStyles(ForwardRef(GridListTile)) id=\\"other-project-other_project1\\" cols={1} className=\\"project-grid-tile\\" onClick={[Function: onClick]} style={{...}}>
+                          <ForwardRef(GridListTile) classes={{...}} id=\\"other-project-other_project1\\" cols={1} className=\\"project-grid-tile\\" onClick={[Function: onClick]} style={{...}}>
+                            <li className=\\"MuiGridListTile-root project-grid-tile\\" id=\\"other-project-other_project1\\" onClick={[Function: onClick]} style={{...}}>
+                              <div className=\\"MuiGridListTile-tile\\">
+                                <div>
+                                  <img className=\\"other-project-image\\" src=\\"other_project1.jpg\\" alt=\\"other_project1\\" style={{...}} />
+                                </div>
+                                <div className=\\"project-title\\">
+                                  <p>
+                                    other_project1
+                                  </p>
+                                </div>
+                              </div>
+                            </li>
+                          </ForwardRef(GridListTile)>
+                        </WithStyles(ForwardRef(GridListTile))>
+                      </ul>
+                    </ForwardRef(GridList)>
+                  </WithStyles(ForwardRef(GridList))>
+                </div>
+              </div>
+            </Row>
+          </div>
+        </ProjectsOther>
+      </div>
+    </ProjectsContent>
+    <Footer>
+      <div className=\\"footer-container\\">
+        <Row className=\\"footer-row\\" noGutters={false}>
+          <div className=\\"footer-row row\\">
+            <Col lg=\\"4\\" className=\\"col-logo\\">
+              <div className=\\"col-logo col-lg-4\\">
+                <img src=\\"white_logo.png\\" className=\\"footer-logo\\" alt=\\"logo\\" />
+              </div>
+            </Col>
+            <Col lg=\\"4\\" className=\\"sitemap-container\\">
+              <div className=\\"sitemap-container col-lg-4\\">
+                <div className=\\"sitemap-link\\">
+                  <span>
+                    <a href=\\"/\\" className=\\"sitemap-link\\">
+                      Home
+                    </a>
+                    <br />
+                  </span>
+                </div>
+                <div className=\\"sitemap-link\\">
+                  <span>
+                    <a href=\\"/about\\" className=\\"sitemap-link\\">
+                      About
+                    </a>
+                    <br />
+                  </span>
+                </div>
+                <div className=\\"sitemap-link\\">
+                  <span>
+                    <a href=\\"/members\\" className=\\"sitemap-link\\">
+                      Members
+                    </a>
+                    <br />
+                  </span>
+                </div>
+                <div className=\\"sitemap-link\\">
+                  <span>
+                    <a href=\\"/contact\\" className=\\"sitemap-link\\">
+                      Contact
+                    </a>
+                    <br />
+                  </span>
+                </div>
+              </div>
+            </Col>
+            <Col lg=\\"4\\">
+              <div className=\\"col-lg-4\\">
+                <Row noGutters={false}>
+                  <div className=\\"row\\">
+                    <div className=\\"goback-button\\">
+                      <WithStyles(ForwardRef(IconButton)) component=\\"a\\" onClick={[Function: bound goUp]} color=\\"inherit\\" className=\\"sitemap-link\\">
+                        <ForwardRef(IconButton) classes={{...}} component=\\"a\\" onClick={[Function: bound goUp]} color=\\"inherit\\" className=\\"sitemap-link\\">
+                          <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" centerRipple={true} focusRipple={true} disabled={false} component=\\"a\\" onClick={[Function: bound goUp]}>
+                            <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" centerRipple={true} focusRipple={true} disabled={false} component=\\"a\\" onClick={[Function: bound goUp]}>
+                              <a className=\\"MuiButtonBase-root MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" onBlur={[Function (anonymous)]} onClick={[Function: bound goUp]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} role=\\"button\\" aria-disabled={false}>
+                                <span className=\\"MuiIconButton-label\\">
+                                  <ForwardRef>
+                                    <WithStyles(ForwardRef(SvgIcon))>
+                                      <ForwardRef(SvgIcon) classes={{...}}>
+                                        <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                          <path d=\\"M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z\\" />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef>
+                                  <div className=\\"goback-text\\">
+                                    Back to top
+                                  </div>
+                                </span>
+                                <WithStyles(memo) center={true}>
+                                  <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                    <span className=\\"MuiTouchRipple-root\\">
+                                      <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                    </span>
+                                  </ForwardRef(TouchRipple)>
+                                </WithStyles(memo)>
+                              </a>
+                            </ForwardRef(ButtonBase)>
+                          </WithStyles(ForwardRef(ButtonBase))>
+                        </ForwardRef(IconButton)>
+                      </WithStyles(ForwardRef(IconButton))>
+                    </div>
+                  </div>
+                </Row>
+                <Row noGutters={false}>
+                  <div className=\\"row\\">
+                    <div className=\\"row-socialMedia\\">
+                      <a href=\\"https://www.instagram.com/roborregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <a href=\\"https://www.facebook.com/RoBorregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <a href=\\"https://github.com/RoBorregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <div className=\\"mark-text\\">
+                        @2020 RoBorregos
+                      </div>
+                    </div>
+                  </div>
+                </Row>
+              </div>
+            </Col>
+          </div>
+        </Row>
+      </div>
+    </Footer>
+  </div>
+</Projects>"
+`;
+
+exports[`<Projects> matches snapshot with: Small width: ProjectsSmallView.test.js.snap 1`] = `
+"<Projects projectsData={{...}}>
+  <div className=\\"projects-container\\">
+    <ProjectsHeader>
+      <div className=\\"projects-header\\">
+        <div className=\\"container-legend\\">
+          <h2 className=\\"title-text-banner\\">
+            Projects
+          </h2>
+          <div className=\\"main-text-projects\\">
+            <p>
+              Every year we challenge ourselves to keep learning and improving.
+               
+              <br />
+              See what we&#39;ve been up to!
+            </p>
+          </div>
+        </div>
+        <div className=\\"projects-header-footer\\">
+          <p>
+            Learn more
+          </p>
+          <FontAwesomeIcon onClick={[Function (anonymous)]} icon={{...}} className=\\"icon-btn\\" border={false} mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} title=\\"\\" transform={{...}} swapOpacity={false}>
+            <svg aria-hidden=\\"true\\" focusable=\\"false\\" data-prefix=\\"fas\\" data-icon=\\"angle-down\\" className=\\"svg-inline--fa fa-angle-down fa-w-10 icon-btn\\" role=\\"img\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 320 512\\" style={{...}} onClick={[Function (anonymous)]}>
+              <path fill=\\"currentColor\\" d=\\"M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\\" style={{...}} />
+            </svg>
+          </FontAwesomeIcon>
+        </div>
+      </div>
+    </ProjectsHeader>
+    <ProjectsContent main_projects={{...}} carousels={{...}} other_projects={{...}}>
+      <div className=\\"projects-content\\">
+        <div />
+        <div />
+        <ProjectsContent project_carousels={{...}} main_counter={2}>
+          <div className=\\"project-carousels\\">
+            <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
+              <Carousel classes={{...}} className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
+                <div className=\\"Carousel-root-1 project-carousel\\" onMouseEnter={[Function: bound stop]} onMouseOut={[Function: bound reset]}>
+                  <CarouselItem display={true} active={true} isNext={true} child={{...}} animation=\\"slide\\" timeout={200} next={[Function: bound next]} prev={[Function: bound prev]}>
+                    <div className=\\"CarouselItem\\">
+                      <ForwardRef(Slide) direction=\\"left\\" in={true} timeout={200}>
+                        <Transition nodeRef={{...}} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} appear={true} in={true} timeout={200} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                          <div style={{...}}>
+                            <ProjectsCard project={{...}} index={0}>
+                              <div className=\\"projects-card\\">
+                                <div className=\\"title-text-card\\">
+                                  <h2>
+                                    carousel1-project-1
+                                  </h2>
+                                </div>
+                                <div className=\\"card-image-container\\">
+                                  <img className=\\"card-image\\" src=\\"carousel1-project-1.jpg\\" alt=\\"carousel1-project-1\\" />
+                                </div>
+                                <div className=\\"main-text-projects-description\\">
+                                  description-carousel1-1
+                                </div>
+                                <div className=\\"button-div\\">
+                                  <button type=\\"button\\" className=\\"card-button-small\\" onClick={[Function: onClick]} variant=\\"outline-primary\\">
+                                    Learn more
+                                  </button>
+                                </div>
+                              </div>
+                            </ProjectsCard>
+                          </div>
+                        </Transition>
+                      </ForwardRef(Slide)>
+                    </div>
+                  </CarouselItem>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-next-11\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-prev-12\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <Indicators classes={{...}} length={1} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
+                    <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
+                      <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                          <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                            <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
+                              <circle cx=\\"12\\" cy=\\"12\\" r=\\"8\\" />
+                            </svg>
+                          </ForwardRef(SvgIcon)>
+                        </WithStyles(ForwardRef(SvgIcon))>
+                      </ForwardRef>
+                    </div>
+                  </Indicators>
+                </div>
+              </Carousel>
+            </WithStyles(Carousel)>
+            <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={1}>
+              <Carousel classes={{...}} className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={1}>
+                <div className=\\"Carousel-root-1 project-carousel\\" onMouseEnter={[Function: bound stop]} onMouseOut={[Function: bound reset]}>
+                  <CarouselItem display={true} active={true} isNext={true} child={{...}} animation=\\"slide\\" timeout={200} next={[Function: bound next]} prev={[Function: bound prev]}>
+                    <div className=\\"CarouselItem\\">
+                      <ForwardRef(Slide) direction=\\"left\\" in={true} timeout={200}>
+                        <Transition nodeRef={{...}} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} appear={true} in={true} timeout={200} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                          <div style={{...}}>
+                            <ProjectsCard project={{...}} index={0}>
+                              <div className=\\"projects-card\\">
+                                <div className=\\"title-text-card\\">
+                                  <h2>
+                                    carousel2-project-1
+                                  </h2>
+                                </div>
+                                <div className=\\"card-image-container\\">
+                                  <img className=\\"card-image\\" src=\\"carousel2-project-1.jpg\\" alt=\\"carousel2-project-1\\" />
+                                </div>
+                                <div className=\\"main-text-projects-description\\">
+                                  description-carousel2-1
+                                </div>
+                                <div className=\\"button-div\\">
+                                  <button type=\\"button\\" className=\\"card-button-small\\" onClick={[Function: onClick]} variant=\\"outline-primary\\">
+                                    Learn more
+                                  </button>
+                                </div>
+                              </div>
+                            </ProjectsCard>
+                          </div>
+                        </Transition>
+                      </ForwardRef(Slide)>
+                    </div>
+                  </CarouselItem>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-next-11\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-prev-12\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <Indicators classes={{...}} length={1} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
+                    <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
+                      <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                          <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                            <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
+                              <circle cx=\\"12\\" cy=\\"12\\" r=\\"8\\" />
+                            </svg>
+                          </ForwardRef(SvgIcon)>
+                        </WithStyles(ForwardRef(SvgIcon))>
+                      </ForwardRef>
+                    </div>
+                  </Indicators>
+                </div>
+              </Carousel>
+            </WithStyles(Carousel)>
+          </div>
+        </ProjectsContent>
+        <ProjectsOther projects={{...}}>
+          <div className=\\"projects-other\\">
+            <div className=\\"other-info\\">
+              <h2 className=\\"title-text-other\\">
+                Other projects
+              </h2>
+              <div className=\\"description-other\\">
+                <p>
+                  Check out other interesting tech projects developed by the community!
+                </p>
+              </div>
+            </div>
+            <div>
+              <Container id=\\"other-project-small-other_project1\\" className=\\"other-projects-small\\" style={{...}} onClick={[Function: onClick]} fluid={false}>
+                <div id=\\"other-project-small-other_project1\\" style={{...}} onClick={[Function: onClick]} className=\\"other-projects-small container\\">
+                  <Row noGutters={false}>
+                    <div className=\\"row\\">
+                      <Col xs={7}>
+                        <div className=\\"col-7\\">
+                          <img className=\\"other-project-image\\" src=\\"other_project1.jpg\\" alt=\\"other_project1\\" />
+                        </div>
+                      </Col>
+                      <Col xs={5}>
+                        <div className=\\"col-5\\">
+                          <div className=\\"project-title\\" style={{...}}>
+                            <p>
+                              other_project1
+                            </p>
+                          </div>
+                        </div>
+                      </Col>
+                    </div>
+                  </Row>
+                </div>
+              </Container>
+            </div>
+          </div>
+        </ProjectsOther>
+      </div>
+    </ProjectsContent>
+    <Footer>
+      <Container fluid={true} className=\\"footer-container\\">
+        <div className=\\"footer-container container-fluid\\">
+          <Row noGutters={true} className=\\"footer-row\\">
+            <div className=\\"footer-row row no-gutters\\">
+              <Col xs={8} className=\\"col-logo\\">
+                <div className=\\"col-logo col-8\\">
+                  <img src=\\"small_logo.png\\" className=\\"footer-logo\\" alt=\\"logo\\" />
+                </div>
+              </Col>
+              <Col xs={4}>
+                <div className=\\"col-4\\">
+                  <Row noGutters={true} className=\\"goback-container\\">
+                    <div className=\\"goback-container row no-gutters\\">
+                      <div className=\\"goback-button\\">
+                        <WithStyles(ForwardRef(IconButton)) component=\\"a\\" onClick={[Function: bound goUp]} color=\\"inherit\\" className=\\"sitemap-link\\">
+                          <ForwardRef(IconButton) classes={{...}} component=\\"a\\" onClick={[Function: bound goUp]} color=\\"inherit\\" className=\\"sitemap-link\\">
+                            <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" centerRipple={true} focusRipple={true} disabled={false} component=\\"a\\" onClick={[Function: bound goUp]}>
+                              <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" centerRipple={true} focusRipple={true} disabled={false} component=\\"a\\" onClick={[Function: bound goUp]}>
+                                <a className=\\"MuiButtonBase-root MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" onBlur={[Function (anonymous)]} onClick={[Function: bound goUp]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} role=\\"button\\" aria-disabled={false}>
+                                  <span className=\\"MuiIconButton-label\\">
+                                    <ForwardRef>
+                                      <WithStyles(ForwardRef(SvgIcon))>
+                                        <ForwardRef(SvgIcon) classes={{...}}>
+                                          <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                            <path d=\\"M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z\\" />
+                                          </svg>
+                                        </ForwardRef(SvgIcon)>
+                                      </WithStyles(ForwardRef(SvgIcon))>
+                                    </ForwardRef>
+                                    <div className=\\"goback-text\\">
+                                      Back to top
+                                    </div>
+                                  </span>
+                                  <WithStyles(memo) center={true}>
+                                    <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                      <span className=\\"MuiTouchRipple-root\\">
+                                        <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                      </span>
+                                    </ForwardRef(TouchRipple)>
+                                  </WithStyles(memo)>
+                                </a>
+                              </ForwardRef(ButtonBase)>
+                            </WithStyles(ForwardRef(ButtonBase))>
+                          </ForwardRef(IconButton)>
+                        </WithStyles(ForwardRef(IconButton))>
+                      </div>
+                    </div>
+                  </Row>
+                  <Row noGutters={true} className=\\"sitemap-container\\">
+                    <div className=\\"sitemap-container row no-gutters\\">
+                      <div>
+                        <a href=\\"/\\" className=\\"sitemap-link\\">
+                          Home
+                        </a>
+                        <a href=\\"/about\\" className=\\"sitemap-link\\">
+                          About
+                        </a>
+                        <a href=\\"/members\\" className=\\"sitemap-link\\">
+                          Members
+                        </a>
+                        <a href=\\"/contact\\" className=\\"sitemap-link\\">
+                          Contact
+                        </a>
+                        <div className=\\"mark-text\\">
+                          @2020 RoBorregos
+                        </div>
+                      </div>
+                    </div>
+                  </Row>
+                  <Row className=\\"row-socialMedia\\" noGutters={false}>
+                    <div className=\\"row-socialMedia row\\">
+                      <a href=\\"https://www.instagram.com/roborregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <a href=\\"https://www.facebook.com/RoBorregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <a href=\\"https://github.com/RoBorregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                    </div>
+                  </Row>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </div>
+      </Container>
+    </Footer>
+  </div>
+</Projects>"
+`;
+
+exports[`Matches snapshot with: Large width: ProjectsLargeView.test.js.snap 1`] = `
+"<Projects projectsData={{...}}>
+  <div className=\\"projects-container\\">
+    <ProjectsHeader>
+      <div className=\\"projects-header\\">
+        <div className=\\"container-legend\\">
+          <h2 className=\\"title-text-banner\\">
+            Projects
+          </h2>
+          <div className=\\"main-text-projects\\">
+            <p>
+              Every year we challenge ourselves to keep learning and improving.
+               
+              <br />
+              See what we&#39;ve been up to!
+            </p>
+          </div>
+        </div>
+        <div className=\\"projects-header-footer\\">
+          <p>
+            Learn more
+          </p>
+          <FontAwesomeIcon onClick={[Function (anonymous)]} icon={{...}} className=\\"icon-btn\\" border={false} mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} title=\\"\\" transform={{...}} swapOpacity={false}>
+            <svg aria-hidden=\\"true\\" focusable=\\"false\\" data-prefix=\\"fas\\" data-icon=\\"angle-down\\" className=\\"svg-inline--fa fa-angle-down fa-w-10 icon-btn\\" role=\\"img\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 320 512\\" style={{...}} onClick={[Function (anonymous)]}>
+              <path fill=\\"currentColor\\" d=\\"M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\\" style={{...}} />
+            </svg>
+          </FontAwesomeIcon>
+        </div>
+      </div>
+    </ProjectsHeader>
+    <ProjectsContent main_projects={{...}} carousels={{...}} other_projects={{...}}>
+      <div className=\\"projects-content\\">
+        <div />
+        <div />
+        <ProjectsContent project_carousels={{...}} main_counter={2}>
+          <div className=\\"project-carousels\\">
+            <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
+              <Carousel classes={{...}} className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
+                <div className=\\"Carousel-root-1 project-carousel\\" onMouseEnter={[Function: bound stop]} onMouseOut={[Function: bound reset]}>
+                  <CarouselItem display={true} active={true} isNext={true} child={{...}} animation=\\"slide\\" timeout={200} next={[Function: bound next]} prev={[Function: bound prev]}>
+                    <div className=\\"CarouselItem\\">
+                      <ForwardRef(Slide) direction=\\"left\\" in={true} timeout={200}>
+                        <Transition nodeRef={{...}} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} appear={true} in={true} timeout={200} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                          <div style={{...}}>
+                            <ProjectsCard project={{...}} index={0}>
+                              <div>
+                                <ForwardRef(Fade) in={true} timeout={2000}>
+                                  <Transition appear={true} in={true} nodeRef={[undefined]} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} timeout={2000} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                    <Row className=\\"projects-card\\" style={{...}} noGutters={false}>
+                                      <div style={{...}} className=\\"projects-card row\\">
+                                        <Col xs={6}>
+                                          <div className=\\"col-6\\">
+                                            <img src=\\"carousel1-project-1.jpg\\" className=\\"card-image\\" alt=\\"carousel1-project-1\\" />
+                                          </div>
+                                        </Col>
+                                        <ForwardRef(Grow) in={true} timeout={1500} style={{...}}>
+                                          <Transition appear={true} in={true} nodeRef={[undefined]} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} addEndListener={[Function: addEndListener]} timeout={1500} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                            <Col xs={6} className=\\"card-info\\" style={{...}}>
+                                              <div style={{...}} className=\\"card-info col-6\\">
+                                                <h2 className=\\"title-text-card\\">
+                                                  carousel1-project-1
+                                                </h2>
+                                                <div className=\\"main-text-projects\\">
+                                                  <p>
+                                                    description-carousel1-1
+                                                  </p>
+                                                </div>
+                                                <button type=\\"button\\" className=\\"card-button\\" onClick={[Function: onClick]} variant=\\"outline-primary\\">
+                                                  Learn more
+                                                </button>
+                                              </div>
+                                            </Col>
+                                          </Transition>
+                                        </ForwardRef(Grow)>
+                                      </div>
+                                    </Row>
+                                  </Transition>
+                                </ForwardRef(Fade)>
+                                <div />
+                              </div>
+                            </ProjectsCard>
+                          </div>
+                        </Transition>
+                      </ForwardRef(Slide)>
+                    </div>
+                  </CarouselItem>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-next-11\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-prev-12\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <Indicators classes={{...}} length={1} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
+                    <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
+                      <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                          <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                            <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
+                              <circle cx=\\"12\\" cy=\\"12\\" r=\\"8\\" />
+                            </svg>
+                          </ForwardRef(SvgIcon)>
+                        </WithStyles(ForwardRef(SvgIcon))>
+                      </ForwardRef>
+                    </div>
+                  </Indicators>
+                </div>
+              </Carousel>
+            </WithStyles(Carousel)>
+            <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={1}>
+              <Carousel classes={{...}} className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={1}>
+                <div className=\\"Carousel-root-1 project-carousel\\" onMouseEnter={[Function: bound stop]} onMouseOut={[Function: bound reset]}>
+                  <CarouselItem display={true} active={true} isNext={true} child={{...}} animation=\\"slide\\" timeout={200} next={[Function: bound next]} prev={[Function: bound prev]}>
+                    <div className=\\"CarouselItem\\">
+                      <ForwardRef(Slide) direction=\\"left\\" in={true} timeout={200}>
+                        <Transition nodeRef={{...}} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} appear={true} in={true} timeout={200} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                          <div style={{...}}>
+                            <ProjectsCard project={{...}} index={0}>
+                              <div>
+                                <ForwardRef(Fade) in={true} timeout={2000}>
+                                  <Transition appear={true} in={true} nodeRef={[undefined]} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} timeout={2000} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                    <Row className=\\"projects-card\\" style={{...}} noGutters={false}>
+                                      <div style={{...}} className=\\"projects-card row\\">
+                                        <Col xs={6}>
+                                          <div className=\\"col-6\\">
+                                            <img src=\\"carousel2-project-1.jpg\\" className=\\"card-image\\" alt=\\"carousel2-project-1\\" />
+                                          </div>
+                                        </Col>
+                                        <ForwardRef(Grow) in={true} timeout={1500} style={{...}}>
+                                          <Transition appear={true} in={true} nodeRef={[undefined]} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} addEndListener={[Function: addEndListener]} timeout={1500} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                                            <Col xs={6} className=\\"card-info\\" style={{...}}>
+                                              <div style={{...}} className=\\"card-info col-6\\">
+                                                <h2 className=\\"title-text-card\\">
+                                                  carousel2-project-1
+                                                </h2>
+                                                <div className=\\"main-text-projects\\">
+                                                  <p>
+                                                    description-carousel2-1
+                                                  </p>
+                                                </div>
+                                                <button type=\\"button\\" className=\\"card-button\\" onClick={[Function: onClick]} variant=\\"outline-primary\\">
+                                                  Learn more
+                                                </button>
+                                              </div>
+                                            </Col>
+                                          </Transition>
+                                        </ForwardRef(Grow)>
+                                      </div>
+                                    </Row>
+                                  </Transition>
+                                </ForwardRef(Fade)>
+                                <div />
+                              </div>
+                            </ProjectsCard>
+                          </div>
+                        </Transition>
+                      </ForwardRef(Slide)>
+                    </div>
+                  </CarouselItem>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-next-11\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-prev-12\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <Indicators classes={{...}} length={1} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
+                    <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
+                      <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                          <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                            <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
+                              <circle cx=\\"12\\" cy=\\"12\\" r=\\"8\\" />
+                            </svg>
+                          </ForwardRef(SvgIcon)>
+                        </WithStyles(ForwardRef(SvgIcon))>
+                      </ForwardRef>
+                    </div>
+                  </Indicators>
+                </div>
+              </Carousel>
+            </WithStyles(Carousel)>
+          </div>
+        </ProjectsContent>
+        <ProjectsOther projects={{...}}>
+          <div className=\\"projects-other\\">
+            <Row noGutters={false}>
+              <div className=\\"row\\">
+                <div className=\\"other-info\\">
+                  <h2 className=\\"title-text-other\\">
+                    Other projects
+                  </h2>
+                  <div className=\\"description-other\\">
+                    <p>
+                      Check out other interesting tech projects developed by the community!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Row>
+            <Row noGutters={false}>
+              <div className=\\"row\\">
+                <div className=\\"projects-other-grid\\">
+                  <WithStyles(ForwardRef(GridList)) cellHeight=\\"auto\\" cols={3} spacing={3}>
+                    <ForwardRef(GridList) classes={{...}} cellHeight=\\"auto\\" cols={3} spacing={3}>
+                      <ul className=\\"MuiGridList-root\\" style={{...}}>
+                        <WithStyles(ForwardRef(GridListTile)) id=\\"other-project-other_project1\\" cols={1} className=\\"project-grid-tile\\" onClick={[Function: onClick]} style={{...}}>
+                          <ForwardRef(GridListTile) classes={{...}} id=\\"other-project-other_project1\\" cols={1} className=\\"project-grid-tile\\" onClick={[Function: onClick]} style={{...}}>
+                            <li className=\\"MuiGridListTile-root project-grid-tile\\" id=\\"other-project-other_project1\\" onClick={[Function: onClick]} style={{...}}>
+                              <div className=\\"MuiGridListTile-tile\\">
+                                <div>
+                                  <img className=\\"other-project-image\\" src=\\"other_project1.jpg\\" alt=\\"other_project1\\" style={{...}} />
+                                </div>
+                                <div className=\\"project-title\\">
+                                  <p>
+                                    other_project1
+                                  </p>
+                                </div>
+                              </div>
+                            </li>
+                          </ForwardRef(GridListTile)>
+                        </WithStyles(ForwardRef(GridListTile))>
+                      </ul>
+                    </ForwardRef(GridList)>
+                  </WithStyles(ForwardRef(GridList))>
+                </div>
+              </div>
+            </Row>
+          </div>
+        </ProjectsOther>
+      </div>
+    </ProjectsContent>
+    <Footer>
+      <div className=\\"footer-container\\">
+        <Row className=\\"footer-row\\" noGutters={false}>
+          <div className=\\"footer-row row\\">
+            <Col lg=\\"4\\" className=\\"col-logo\\">
+              <div className=\\"col-logo col-lg-4\\">
+                <img src=\\"white_logo.png\\" className=\\"footer-logo\\" alt=\\"logo\\" />
+              </div>
+            </Col>
+            <Col lg=\\"4\\" className=\\"sitemap-container\\">
+              <div className=\\"sitemap-container col-lg-4\\">
+                <div className=\\"sitemap-link\\">
+                  <span>
+                    <a href=\\"/\\" className=\\"sitemap-link\\">
+                      Home
+                    </a>
+                    <br />
+                  </span>
+                </div>
+                <div className=\\"sitemap-link\\">
+                  <span>
+                    <a href=\\"/about\\" className=\\"sitemap-link\\">
+                      About
+                    </a>
+                    <br />
+                  </span>
+                </div>
+                <div className=\\"sitemap-link\\">
+                  <span>
+                    <a href=\\"/members\\" className=\\"sitemap-link\\">
+                      Members
+                    </a>
+                    <br />
+                  </span>
+                </div>
+                <div className=\\"sitemap-link\\">
+                  <span>
+                    <a href=\\"/contact\\" className=\\"sitemap-link\\">
+                      Contact
+                    </a>
+                    <br />
+                  </span>
+                </div>
+              </div>
+            </Col>
+            <Col lg=\\"4\\">
+              <div className=\\"col-lg-4\\">
+                <Row noGutters={false}>
+                  <div className=\\"row\\">
+                    <div className=\\"goback-button\\">
+                      <WithStyles(ForwardRef(IconButton)) component=\\"a\\" onClick={[Function: bound goUp]} color=\\"inherit\\" className=\\"sitemap-link\\">
+                        <ForwardRef(IconButton) classes={{...}} component=\\"a\\" onClick={[Function: bound goUp]} color=\\"inherit\\" className=\\"sitemap-link\\">
+                          <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" centerRipple={true} focusRipple={true} disabled={false} component=\\"a\\" onClick={[Function: bound goUp]}>
+                            <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" centerRipple={true} focusRipple={true} disabled={false} component=\\"a\\" onClick={[Function: bound goUp]}>
+                              <a className=\\"MuiButtonBase-root MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" onBlur={[Function (anonymous)]} onClick={[Function: bound goUp]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} role=\\"button\\" aria-disabled={false}>
+                                <span className=\\"MuiIconButton-label\\">
+                                  <ForwardRef>
+                                    <WithStyles(ForwardRef(SvgIcon))>
+                                      <ForwardRef(SvgIcon) classes={{...}}>
+                                        <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                          <path d=\\"M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z\\" />
+                                        </svg>
+                                      </ForwardRef(SvgIcon)>
+                                    </WithStyles(ForwardRef(SvgIcon))>
+                                  </ForwardRef>
+                                  <div className=\\"goback-text\\">
+                                    Back to top
+                                  </div>
+                                </span>
+                                <WithStyles(memo) center={true}>
+                                  <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                    <span className=\\"MuiTouchRipple-root\\">
+                                      <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                    </span>
+                                  </ForwardRef(TouchRipple)>
+                                </WithStyles(memo)>
+                              </a>
+                            </ForwardRef(ButtonBase)>
+                          </WithStyles(ForwardRef(ButtonBase))>
+                        </ForwardRef(IconButton)>
+                      </WithStyles(ForwardRef(IconButton))>
+                    </div>
+                  </div>
+                </Row>
+                <Row noGutters={false}>
+                  <div className=\\"row\\">
+                    <div className=\\"row-socialMedia\\">
+                      <a href=\\"https://www.instagram.com/roborregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <a href=\\"https://www.facebook.com/RoBorregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <a href=\\"https://github.com/RoBorregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <div className=\\"mark-text\\">
+                        @2020 RoBorregos
+                      </div>
+                    </div>
+                  </div>
+                </Row>
+              </div>
+            </Col>
+          </div>
+        </Row>
+      </div>
+    </Footer>
+  </div>
+</Projects>"
+`;
+
+exports[`Matches snapshot with: Small width: ProjectsSmallView.test.js.snap 1`] = `
+"<Projects projectsData={{...}}>
+  <div className=\\"projects-container\\">
+    <ProjectsHeader>
+      <div className=\\"projects-header\\">
+        <div className=\\"container-legend\\">
+          <h2 className=\\"title-text-banner\\">
+            Projects
+          </h2>
+          <div className=\\"main-text-projects\\">
+            <p>
+              Every year we challenge ourselves to keep learning and improving.
+               
+              <br />
+              See what we&#39;ve been up to!
+            </p>
+          </div>
+        </div>
+        <div className=\\"projects-header-footer\\">
+          <p>
+            Learn more
+          </p>
+          <FontAwesomeIcon onClick={[Function (anonymous)]} icon={{...}} className=\\"icon-btn\\" border={false} mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} title=\\"\\" transform={{...}} swapOpacity={false}>
+            <svg aria-hidden=\\"true\\" focusable=\\"false\\" data-prefix=\\"fas\\" data-icon=\\"angle-down\\" className=\\"svg-inline--fa fa-angle-down fa-w-10 icon-btn\\" role=\\"img\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 320 512\\" style={{...}} onClick={[Function (anonymous)]}>
+              <path fill=\\"currentColor\\" d=\\"M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\\" style={{...}} />
+            </svg>
+          </FontAwesomeIcon>
+        </div>
+      </div>
+    </ProjectsHeader>
+    <ProjectsContent main_projects={{...}} carousels={{...}} other_projects={{...}}>
+      <div className=\\"projects-content\\">
+        <div />
+        <div />
+        <ProjectsContent project_carousels={{...}} main_counter={2}>
+          <div className=\\"project-carousels\\">
+            <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
+              <Carousel classes={{...}} className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
+                <div className=\\"Carousel-root-1 project-carousel\\" onMouseEnter={[Function: bound stop]} onMouseOut={[Function: bound reset]}>
+                  <CarouselItem display={true} active={true} isNext={true} child={{...}} animation=\\"slide\\" timeout={200} next={[Function: bound next]} prev={[Function: bound prev]}>
+                    <div className=\\"CarouselItem\\">
+                      <ForwardRef(Slide) direction=\\"left\\" in={true} timeout={200}>
+                        <Transition nodeRef={{...}} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} appear={true} in={true} timeout={200} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                          <div style={{...}}>
+                            <ProjectsCard project={{...}} index={0}>
+                              <div className=\\"projects-card\\">
+                                <div className=\\"title-text-card\\">
+                                  <h2>
+                                    carousel1-project-1
+                                  </h2>
+                                </div>
+                                <div className=\\"card-image-container\\">
+                                  <img className=\\"card-image\\" src=\\"carousel1-project-1.jpg\\" alt=\\"carousel1-project-1\\" />
+                                </div>
+                                <div className=\\"main-text-projects-description\\">
+                                  description-carousel1-1
+                                </div>
+                                <div className=\\"button-div\\">
+                                  <button type=\\"button\\" className=\\"card-button-small\\" onClick={[Function: onClick]} variant=\\"outline-primary\\">
+                                    Learn more
+                                  </button>
+                                </div>
+                              </div>
+                            </ProjectsCard>
+                          </div>
+                        </Transition>
+                      </ForwardRef(Slide)>
+                    </div>
+                  </CarouselItem>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-next-11\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-prev-12\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <Indicators classes={{...}} length={1} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
+                    <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
+                      <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                          <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                            <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
+                              <circle cx=\\"12\\" cy=\\"12\\" r=\\"8\\" />
+                            </svg>
+                          </ForwardRef(SvgIcon)>
+                        </WithStyles(ForwardRef(SvgIcon))>
+                      </ForwardRef>
+                    </div>
+                  </Indicators>
+                </div>
+              </Carousel>
+            </WithStyles(Carousel)>
+            <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={1}>
+              <Carousel classes={{...}} className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={1}>
+                <div className=\\"Carousel-root-1 project-carousel\\" onMouseEnter={[Function: bound stop]} onMouseOut={[Function: bound reset]}>
+                  <CarouselItem display={true} active={true} isNext={true} child={{...}} animation=\\"slide\\" timeout={200} next={[Function: bound next]} prev={[Function: bound prev]}>
+                    <div className=\\"CarouselItem\\">
+                      <ForwardRef(Slide) direction=\\"left\\" in={true} timeout={200}>
+                        <Transition nodeRef={{...}} onEnter={[Function (anonymous)]} onEntered={[Function (anonymous)]} onEntering={[Function (anonymous)]} onExit={[Function (anonymous)]} onExited={[Function (anonymous)]} onExiting={[Function (anonymous)]} appear={true} in={true} timeout={200} mountOnEnter={false} unmountOnExit={false} enter={true} exit={true}>
+                          <div style={{...}}>
+                            <ProjectsCard project={{...}} index={0}>
+                              <div className=\\"projects-card\\">
+                                <div className=\\"title-text-card\\">
+                                  <h2>
+                                    carousel2-project-1
+                                  </h2>
+                                </div>
+                                <div className=\\"card-image-container\\">
+                                  <img className=\\"card-image\\" src=\\"carousel2-project-1.jpg\\" alt=\\"carousel2-project-1\\" />
+                                </div>
+                                <div className=\\"main-text-projects-description\\">
+                                  description-carousel2-1
+                                </div>
+                                <div className=\\"button-div\\">
+                                  <button type=\\"button\\" className=\\"card-button-small\\" onClick={[Function: onClick]} variant=\\"outline-primary\\">
+                                    Learn more
+                                  </button>
+                                </div>
+                              </div>
+                            </ProjectsCard>
+                          </div>
+                        </Transition>
+                      </ForwardRef(Slide)>
+                    </div>
+                  </CarouselItem>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-next-11\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onClick={[Function: bound next]} aria-label=\\"Next\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <div className=\\"Carousel-buttonWrapper-5 Carousel-fullHeightHoverWrapper-6 Carousel-prev-12\\">
+                    <WithStyles(ForwardRef(IconButton)) className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                      <ForwardRef(IconButton) classes={{...}} className=\\"Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                        <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                          <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
+                            <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
+                              <span className=\\"MuiIconButton-label\\">
+                                <ForwardRef>
+                                  <WithStyles(ForwardRef(SvgIcon))>
+                                    <ForwardRef(SvgIcon) classes={{...}}>
+                                      <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                        <path d=\\"M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z\\" />
+                                      </svg>
+                                    </ForwardRef(SvgIcon)>
+                                  </WithStyles(ForwardRef(SvgIcon))>
+                                </ForwardRef>
+                              </span>
+                              <WithStyles(memo) center={true}>
+                                <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                  <span className=\\"MuiTouchRipple-root\\">
+                                    <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                  </span>
+                                </ForwardRef(TouchRipple)>
+                              </WithStyles(memo)>
+                            </button>
+                          </ForwardRef(ButtonBase)>
+                        </WithStyles(ForwardRef(ButtonBase))>
+                      </ForwardRef(IconButton)>
+                    </WithStyles(ForwardRef(IconButton))>
+                  </div>
+                  <Indicators classes={{...}} length={1} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
+                    <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
+                      <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                        <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                          <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+                            <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
+                              <circle cx=\\"12\\" cy=\\"12\\" r=\\"8\\" />
+                            </svg>
+                          </ForwardRef(SvgIcon)>
+                        </WithStyles(ForwardRef(SvgIcon))>
+                      </ForwardRef>
+                    </div>
+                  </Indicators>
+                </div>
+              </Carousel>
+            </WithStyles(Carousel)>
+          </div>
+        </ProjectsContent>
+        <ProjectsOther projects={{...}}>
+          <div className=\\"projects-other\\">
+            <div className=\\"other-info\\">
+              <h2 className=\\"title-text-other\\">
+                Other projects
+              </h2>
+              <div className=\\"description-other\\">
+                <p>
+                  Check out other interesting tech projects developed by the community!
+                </p>
+              </div>
+            </div>
+            <div>
+              <Container id=\\"other-project-small-other_project1\\" className=\\"other-projects-small\\" style={{...}} onClick={[Function: onClick]} fluid={false}>
+                <div id=\\"other-project-small-other_project1\\" style={{...}} onClick={[Function: onClick]} className=\\"other-projects-small container\\">
+                  <Row noGutters={false}>
+                    <div className=\\"row\\">
+                      <Col xs={7}>
+                        <div className=\\"col-7\\">
+                          <img className=\\"other-project-image\\" src=\\"other_project1.jpg\\" alt=\\"other_project1\\" />
+                        </div>
+                      </Col>
+                      <Col xs={5}>
+                        <div className=\\"col-5\\">
+                          <div className=\\"project-title\\" style={{...}}>
+                            <p>
+                              other_project1
+                            </p>
+                          </div>
+                        </div>
+                      </Col>
+                    </div>
+                  </Row>
+                </div>
+              </Container>
+            </div>
+          </div>
+        </ProjectsOther>
+      </div>
+    </ProjectsContent>
+    <Footer>
+      <Container fluid={true} className=\\"footer-container\\">
+        <div className=\\"footer-container container-fluid\\">
+          <Row noGutters={true} className=\\"footer-row\\">
+            <div className=\\"footer-row row no-gutters\\">
+              <Col xs={8} className=\\"col-logo\\">
+                <div className=\\"col-logo col-8\\">
+                  <img src=\\"small_logo.png\\" className=\\"footer-logo\\" alt=\\"logo\\" />
+                </div>
+              </Col>
+              <Col xs={4}>
+                <div className=\\"col-4\\">
+                  <Row noGutters={true} className=\\"goback-container\\">
+                    <div className=\\"goback-container row no-gutters\\">
+                      <div className=\\"goback-button\\">
+                        <WithStyles(ForwardRef(IconButton)) component=\\"a\\" onClick={[Function: bound goUp]} color=\\"inherit\\" className=\\"sitemap-link\\">
+                          <ForwardRef(IconButton) classes={{...}} component=\\"a\\" onClick={[Function: bound goUp]} color=\\"inherit\\" className=\\"sitemap-link\\">
+                            <WithStyles(ForwardRef(ButtonBase)) className=\\"MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" centerRipple={true} focusRipple={true} disabled={false} component=\\"a\\" onClick={[Function: bound goUp]}>
+                              <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" centerRipple={true} focusRipple={true} disabled={false} component=\\"a\\" onClick={[Function: bound goUp]}>
+                                <a className=\\"MuiButtonBase-root MuiIconButton-root sitemap-link MuiIconButton-colorInherit\\" onBlur={[Function (anonymous)]} onClick={[Function: bound goUp]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} role=\\"button\\" aria-disabled={false}>
+                                  <span className=\\"MuiIconButton-label\\">
+                                    <ForwardRef>
+                                      <WithStyles(ForwardRef(SvgIcon))>
+                                        <ForwardRef(SvgIcon) classes={{...}}>
+                                          <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
+                                            <path d=\\"M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z\\" />
+                                          </svg>
+                                        </ForwardRef(SvgIcon)>
+                                      </WithStyles(ForwardRef(SvgIcon))>
+                                    </ForwardRef>
+                                    <div className=\\"goback-text\\">
+                                      Back to top
+                                    </div>
+                                  </span>
+                                  <WithStyles(memo) center={true}>
+                                    <ForwardRef(TouchRipple) classes={{...}} center={true}>
+                                      <span className=\\"MuiTouchRipple-root\\">
+                                        <TransitionGroup component={{...}} exit={true} childFactory={[Function: childFactory]} />
+                                      </span>
+                                    </ForwardRef(TouchRipple)>
+                                  </WithStyles(memo)>
+                                </a>
+                              </ForwardRef(ButtonBase)>
+                            </WithStyles(ForwardRef(ButtonBase))>
+                          </ForwardRef(IconButton)>
+                        </WithStyles(ForwardRef(IconButton))>
+                      </div>
+                    </div>
+                  </Row>
+                  <Row noGutters={true} className=\\"sitemap-container\\">
+                    <div className=\\"sitemap-container row no-gutters\\">
+                      <div>
+                        <a href=\\"/\\" className=\\"sitemap-link\\">
+                          Home
+                        </a>
+                        <a href=\\"/about\\" className=\\"sitemap-link\\">
+                          About
+                        </a>
+                        <a href=\\"/members\\" className=\\"sitemap-link\\">
+                          Members
+                        </a>
+                        <a href=\\"/contact\\" className=\\"sitemap-link\\">
+                          Contact
+                        </a>
+                        <div className=\\"mark-text\\">
+                          @2020 RoBorregos
+                        </div>
+                      </div>
+                    </div>
+                  </Row>
+                  <Row className=\\"row-socialMedia\\" noGutters={false}>
+                    <div className=\\"row-socialMedia row\\">
+                      <a href=\\"https://www.instagram.com/roborregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <a href=\\"https://www.facebook.com/RoBorregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                      <a href=\\"https://github.com/RoBorregos/\\" className=\\"icon-link\\">
+                        <ForwardRef style={{...}}>
+                          <WithStyles(ForwardRef(SvgIcon)) style={{...}}>
+                            <ForwardRef(SvgIcon) classes={{...}} style={{...}}>
+                              <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} style={{...}}>
+                                <path d=\\"M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3\\" />
+                              </svg>
+                            </ForwardRef(SvgIcon)>
+                          </WithStyles(ForwardRef(SvgIcon))>
+                        </ForwardRef>
+                      </a>
+                    </div>
+                  </Row>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </div>
+      </Container>
+    </Footer>
+  </div>
+</Projects>"
+`;
