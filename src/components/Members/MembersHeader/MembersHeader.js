@@ -21,12 +21,12 @@ class MembersHeader extends Component<Props> {
  */
   render() {
     return (
-      <div className="members-header">
+      <div className="members-header" data-testid="members-header">
         <div className="container-legend">
-          <h2 className="title-text-banner">
+          <h2 className="title-text-banner" data-testid="members-header-title">
             Members
           </h2>
-          <div className="main-text-members">
+          <div className="main-text-members" data-testid="members-header-text">
             <p>
               RoBorrego’s community is made by students with different
               skills in robotics, logistics and networking, all joined
