@@ -91,6 +91,9 @@ class Footer extends Component {
             <div className="sitemap-link">
               { sitemapLink('/contact', 'Contact', true) }
             </div>
+            <div className="sitemap-link">
+              { sitemapLink('/projects', 'Projects', true) }
+            </div>
           </Col>
           <Col lg="4">
             <Row>
@@ -153,6 +156,7 @@ class Footer extends Component {
                 { sitemapLink('/about', 'About', false) }
                 { sitemapLink('/members', 'Members', false) }
                 { sitemapLink('/contact', 'Contact', false) }
+                { sitemapLink('/projects', 'Projects', false) }
                 <div className="mark-text">
                   @2020 RoBorregos
                 </div>
