@@ -45,11 +45,11 @@ class ProjectsOther extends Component<Props, State> {
     }
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     window.addEventListener('resize', this.updateView)
   }
 
-  joinUsCallback = (link: string) => {
+  learnMoreCallback = (link: string) => {
     window.open(link)
   }
 
@@ -83,9 +83,10 @@ class ProjectsOther extends Component<Props, State> {
     if (index % 2) {
       return (
         <Container
+          id={`other-project-small-${project.image}`}
           className="other-projects-small"
           style={{ backgroundColor: project.background }}
-          onClick={() => this.joinUsCallback(project.wiki)}
+          onClick={() => this.learnMoreCallback(project.wiki)}
         >
           <Row>
             <Col xs={5}>
@@ -108,9 +109,10 @@ class ProjectsOther extends Component<Props, State> {
     }
     return (
       <Container
+        id={`other-project-small-${project.image}`}
         className="other-projects-small"
         style={{ backgroundColor: project.background }}
-        onClick={() => this.joinUsCallback(project.wiki)}
+        onClick={() => this.learnMoreCallback(project.wiki)}
       >
         <Row>
           <Col xs={7}>
@@ -155,10 +157,11 @@ class ProjectsOther extends Component<Props, State> {
           >
             {this.projects.map((project, index) => (
               <GridListTile
+                id={`other-project-${project.image}`}
                 key={index}
                 cols={1}
                 className="project-grid-tile"
-                onClick={() => this.joinUsCallback(project.wiki)}
+                onClick={() => this.learnMoreCallback(project.wiki)}
               >
                 <div>
                   <img

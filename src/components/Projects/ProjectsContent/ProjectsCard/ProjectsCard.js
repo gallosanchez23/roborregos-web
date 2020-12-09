@@ -8,7 +8,6 @@ import Fade from '@material-ui/core/Fade'
 import Grow from '@material-ui/core/Grow'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-import { element } from 'prop-types'
 import { SMALL_WIDTH } from '../../../../constants'
 
 type Project = {
@@ -21,13 +20,11 @@ type Project = {
 type Props = {
   index: number,
   project: Project,
-  visible: boolean,
   show_scrollers: boolean
 };
 
 type State = {
-  large_view: boolean,
-  visible: boolean
+  large_view: boolean
 };
 
 /** Component class of Projects' card. */
@@ -35,6 +32,8 @@ class ProjectsCard extends Component<Props, State> {
   project: Project;
 
   index: number;
+
+  show_scrollers: boolean;
 
   /**
    * Class constructor
@@ -47,7 +46,6 @@ class ProjectsCard extends Component<Props, State> {
     this.largeView = this.largeView.bind(this)
     this.viewSizeLarge = this.viewSizeLarge.bind(this)
     this.smallView = this.smallView.bind(this)
-    // this.listenScrollEvent = this.listenScrollEvent.bind(this)
 
     this.project = props.project
     this.index = props.index
@@ -57,7 +55,7 @@ class ProjectsCard extends Component<Props, State> {
     }
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     window.addEventListener('resize', this.updateView)
   }
 
@@ -134,7 +132,7 @@ class ProjectsCard extends Component<Props, State> {
       return (
         <div className="icon-container">
           <FontAwesomeIcon
-            onClick={() => this.scrollToInfo(this.index)}
+            onClick={() => this.scrollToInfo()}
             icon={faAngleDown}
             className="icon-btn"
           />
@@ -175,13 +173,11 @@ class ProjectsCard extends Component<Props, State> {
     </div>
   )
 
-  imageContent() {
-    return (
-      <Col xs={6}>
-        <img src={this.tryRequire(`${this.project.image}.jpg`)} className="card-image" alt={this.project.title} />
-      </Col>
-    )
-  }
+  imageContent = () => (
+    <Col xs={6}>
+      <img src={this.tryRequire(`${this.project.image}.jpg`)} className="card-image" alt={this.project.title} />
+    </Col>
+  )
 
   /**
  * Renders Responsive view of Projects's card.
@@ -195,7 +191,7 @@ class ProjectsCard extends Component<Props, State> {
           <Fade in {...{ timeout: 2000 }}>
             {this.largeView()}
           </Fade>
-          {this.getScrollers(this.index)}
+          {this.getScrollers()}
         </div>
       )
     }

@@ -55,7 +55,6 @@ class ProjectsContent extends Component <Props, State> {
   }
 
   componentDidMount = () => {
-    window.addEventListener('resize', this.updateView)
     window.addEventListener('scroll', this.makeAppear, true)
   }
 
@@ -65,7 +64,7 @@ class ProjectsContent extends Component <Props, State> {
     })
   }
 
-  listenScrollEvent = (card_index) => (window.innerHeight * (card_index) < window.scrollY)
+  listenScrollEvent = (card_index: number) => (window.innerHeight * (card_index) < window.scrollY)
 
   updateVisibility = () => {
     const visibility = []
@@ -106,7 +105,10 @@ class ProjectsContent extends Component <Props, State> {
               return (<div />)
             })
         }
-        <ProjectsCarousel project_carousels={this.carousels} main_counter={this.main_projects.length} />
+        <ProjectsCarousel
+          project_carousels={this.carousels}
+          main_counter={this.main_projects.length}
+        />
         <ProjectsOther projects={this.other_projects} />
       </div>
     )

@@ -57,6 +57,7 @@ class ProjectsContent extends Component <Props> {
                   <ProjectsCard
                     project={project}
                     index={index}
+                    show_scrollers={false}
                   />
                 ))}
               </Carousel>

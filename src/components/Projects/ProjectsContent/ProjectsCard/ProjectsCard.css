@@ -116,5 +116,6 @@
         background-color: #13191E;
         color: white !important;
         transition: 0.3s;
+        cursor: pointer;
     }
 }
