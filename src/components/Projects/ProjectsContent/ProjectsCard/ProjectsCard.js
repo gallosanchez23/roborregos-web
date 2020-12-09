@@ -1,5 +1,3 @@
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
 // @flow
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
@@ -83,6 +81,8 @@ class ProjectsCard extends Component<Props, State> {
   */
   tryRequire = (imgPath: string) => {
     try {
+      /* eslint-disable import/no-dynamic-require */
+      /* eslint-disable global-require */
       return require(`images/projects/${imgPath}`)
     } catch (err) {
       return imgPath
