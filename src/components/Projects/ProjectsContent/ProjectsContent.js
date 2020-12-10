@@ -102,7 +102,7 @@ class ProjectsContent extends Component <Props, State> {
                   </div>
                 )
               }
-              return (<div />)
+              return (<div style={{ minHeight: window.innerHeight }} />)
             })
         }
         <ProjectsCarousel
