@@ -3,8 +3,8 @@
 exports[`<ProjectsContent> matches snapshot: Large width: ProjectsContentLargeView.test.js.snap 1`] = `
 "<ProjectsContent main_projects={{...}} carousels={{...}} other_projects={{...}}>
   <div className=\\"projects-content\\">
-    <div />
-    <div />
+    <div style={{...}} />
+    <div style={{...}} />
     <ProjectsContent project_carousels={{...}} main_counter={2}>
       <div className=\\"project-carousels\\">
         <WithStyles(Carousel) className=\\"project-carousel\\" navButtonsAlwaysVisible={true} timeout={200} animation=\\"slide\\" autoPlay={false} index={0}>
