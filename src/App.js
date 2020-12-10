@@ -11,6 +11,8 @@ import NavBar from './components/NavBar/NavBar'
 import About from './components/About/About'
 import routesData from './data/routes.json'
 import membersData from './data/members.json'
+import Projects from './components/Projects/Projects'
+import projectsData from './data/projects.json'
 
 type Props = {};
 
@@ -42,6 +44,11 @@ class App extends Component<Props> {
           <Route path="/contact" component={() => <Contact />} />
 
           <Route path="/candidates" component={() => <Candidates />} />
+
+          <Route
+            path="/projects"
+            component={() => <Projects projectsData={projectsData} />}
+          />
         </div>
       </Router>
     )
