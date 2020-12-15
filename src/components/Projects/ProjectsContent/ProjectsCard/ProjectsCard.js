@@ -70,7 +70,7 @@ class ProjectsCard extends Component<Props, State> {
     return false
   }
 
-  joinUsCallback = (link: string) => {
+  projectCallback = (link: string) => {
     window.open(link)
   }
 
@@ -100,7 +100,7 @@ class ProjectsCard extends Component<Props, State> {
             {this.project.description}
           </p>
         </div>
-        <button type="button" className="card-button" onClick={() => { if (this.project.wiki !== '') this.joinUsCallback(this.project.wiki) }} variant="outline-primary">
+        <button type="button" className="card-button" onClick={() => { if (this.project.wiki !== '') this.projectCallback(this.project.wiki) }} variant="outline-primary">
           {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
         </button>
       </Col>
@@ -164,7 +164,7 @@ class ProjectsCard extends Component<Props, State> {
         <button
           type="button"
           className="card-button-small"
-          onClick={() => { if (this.project.wiki !== '') this.joinUsCallback(this.project.wiki) }}
+          onClick={() => { if (this.project.wiki !== '') this.projectCallback(this.project.wiki) }}
           variant="outline-primary"
         >
           {(this.project.wiki !== '') ? 'Learn more' : 'Coming soon'}
