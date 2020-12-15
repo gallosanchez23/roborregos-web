@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { configure, mount } from 'enzyme'
+import { configure, mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import ProjectsComponent from './Projects'
 import ProjectsHeader from './ProjectsHeader/ProjectsHeader'
@@ -77,7 +77,7 @@ describe('<Projects> matches snapshot with:', () => {
   it('Large width', () => {
     global.innerWidth = LARGE_WIDTH
     global.dispatchEvent(new Event('resize'))
-    const wrapper_content = mount(
+    const wrapper_content = shallow(
       <ProjectsComponent projectsData={projectsData} />,
     ).debug()
     expect(wrapper_content).toMatchSnapshot('ProjectsLargeView.test.js.snap')
@@ -86,7 +86,7 @@ describe('<Projects> matches snapshot with:', () => {
   it('Small width', () => {
     global.innerWidth = SMALL_WIDTH
     global.dispatchEvent(new Event('resize'))
-    const wrapper_content = mount(
+    const wrapper_content = shallow(
       <ProjectsComponent projectsData={projectsData} />,
     ).debug()
     expect(wrapper_content).toMatchSnapshot('ProjectsSmallView.test.js.snap')
