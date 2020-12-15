@@ -29,7 +29,8 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
       }
     >
       <li
-        className="MuiGridListTile-root members-grid-tile-1"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-1"
         onClick={[Function]}
         style={
           Object {
@@ -82,7 +83,8 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-3"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-3"
         onClick={[Function]}
         style={
           Object {
@@ -135,7 +137,8 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-5"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-5"
         onClick={[Function]}
         style={
           Object {
@@ -213,7 +216,8 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
       }
     >
       <li
-        className="MuiGridListTile-root members-grid-tile-2"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-2"
         onClick={[Function]}
         style={
           Object {
@@ -266,7 +270,8 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-3"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-3"
         onClick={[Function]}
         style={
           Object {
@@ -319,7 +324,8 @@ exports[`Matches snapshot with: Large width: MembersGridLargeView.test.js.snap 1
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-6"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-6"
         onClick={[Function]}
         style={
           Object {
@@ -405,7 +411,8 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
       }
     >
       <li
-        className="MuiGridListTile-root members-grid-tile-1"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-1"
         onClick={[Function]}
         style={
           Object {
@@ -458,7 +465,8 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-3"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-3"
         onClick={[Function]}
         style={
           Object {
@@ -511,7 +519,8 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-5"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-5"
         onClick={[Function]}
         style={
           Object {
@@ -589,7 +598,8 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
       }
     >
       <li
-        className="MuiGridListTile-root members-grid-tile-2"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-2"
         onClick={[Function]}
         style={
           Object {
@@ -642,7 +652,8 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-3"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-3"
         onClick={[Function]}
         style={
           Object {
@@ -695,7 +706,8 @@ exports[`Matches snapshot with: Medium width: MembersGridMediumView.test.js.snap
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-6"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-6"
         onClick={[Function]}
         style={
           Object {
@@ -781,7 +793,8 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
       }
     >
       <li
-        className="MuiGridListTile-root members-grid-tile-1"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-1"
         onClick={[Function]}
         style={
           Object {
@@ -834,7 +847,8 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-3"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-3"
         onClick={[Function]}
         style={
           Object {
@@ -887,7 +901,8 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-5"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-5"
         onClick={[Function]}
         style={
           Object {
@@ -965,7 +980,8 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
       }
     >
       <li
-        className="MuiGridListTile-root members-grid-tile-2"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-2"
         onClick={[Function]}
         style={
           Object {
@@ -1018,7 +1034,8 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-3"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-3"
         onClick={[Function]}
         style={
           Object {
@@ -1071,7 +1088,8 @@ exports[`Matches snapshot with: Mobile width: MembersGridMobileView.test.js.snap
         </div>
       </li>
       <li
-        className="MuiGridListTile-root members-grid-tile-6"
+        className="MuiGridListTile-root members-grid-tile"
+        id="members-grid-tile-6"
         onClick={[Function]}
         style={
           Object {

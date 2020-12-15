@@ -81,7 +81,8 @@ exports[`Matches snapshot 1`] = `
         }
       >
         <li
-          className="MuiGridListTile-root members-grid-tile-1"
+          className="MuiGridListTile-root members-grid-tile"
+          id="members-grid-tile-1"
           onClick={[Function]}
           style={
             Object {

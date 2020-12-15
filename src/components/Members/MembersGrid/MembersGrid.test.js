@@ -135,7 +135,7 @@ beforeEach(() => {
 
 it('<Members Grid> active member gets clicked and carousel shows them', () => {
   expect(wrapper.state('show_modal')).toEqual(false)
-  wrapper.find(`.members-grid-tile-${active[0].id}`).simulate('click')
+  wrapper.find(`#members-grid-tile-${active[0].id}`).simulate('click')
   expect(wrapper.state('show_modal')).toEqual(true)
   expect(wrapper.find('modal-container')).not.toEqual(null)
   expect(wrapper.find('member-carrousel-true')).not.toEqual(null)
@@ -145,7 +145,7 @@ it('<Members Grid> active member gets clicked and carousel shows them', () => {
 
 it('<Members Grid> inactive member gets clicked and carousel shows them', () => {
   expect(wrapper.state('show_modal')).toEqual(false)
-  wrapper.find(`.members-grid-tile-${inactive[0].id}`).simulate('click')
+  wrapper.find(`#members-grid-tile-${inactive[0].id}`).simulate('click')
   expect(wrapper.state('show_modal')).toEqual(true)
   expect(wrapper.find('modal-container')).not.toEqual(null)
   expect(wrapper.find('member-carrousel-true')).not.toEqual(null)
@@ -155,7 +155,7 @@ it('<Members Grid> inactive member gets clicked and carousel shows them', () => 
 
 describe('<Members Grid/> carrousel keys', () => {
   it('Show next active', () => {
-    wrapper.find(`.members-grid-tile-${active[0].id}`).simulate('click')
+    wrapper.find(`#members-grid-tile-${active[0].id}`).simulate('click')
     expect(wrapper.state('member')).toEqual(active[0])
     const event = new KeyboardEvent('keydown', { keyCode: 39 })
     document.dispatchEvent(event)
@@ -163,7 +163,7 @@ describe('<Members Grid/> carrousel keys', () => {
   })
 
   it('Show previous/last active', () => {
-    wrapper.find(`.members-grid-tile-${active[0].id}`).simulate('click')
+    wrapper.find(`#members-grid-tile-${active[0].id}`).simulate('click')
     expect(wrapper.state('member')).toEqual(active[0])
     const event = new KeyboardEvent('keydown', { keyCode: 37 })
     document.dispatchEvent(event)
@@ -171,7 +171,7 @@ describe('<Members Grid/> carrousel keys', () => {
   })
 
   it('Show next inactive', () => {
-    wrapper.find(`.members-grid-tile-${inactive[0].id}`).simulate('click')
+    wrapper.find(`#members-grid-tile-${inactive[0].id}`).simulate('click')
     expect(wrapper.state('member')).toEqual(inactive[0])
     const event = new KeyboardEvent('keydown', { keyCode: 39 })
     document.dispatchEvent(event)
@@ -179,7 +179,7 @@ describe('<Members Grid/> carrousel keys', () => {
   })
 
   it('Show previous/last inactive', () => {
-    wrapper.find(`.members-grid-tile-${inactive[0].id}`).simulate('click')
+    wrapper.find(`#members-grid-tile-${inactive[0].id}`).simulate('click')
     expect(wrapper.state('member')).toEqual(inactive[0])
     const event = new KeyboardEvent('keydown', { keyCode: 37 })
     document.dispatchEvent(event)
