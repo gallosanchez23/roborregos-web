@@ -92,6 +92,9 @@ class Footer extends Component {
               { sitemapLink('/contact', 'Contact', true) }
             </div>
             <div className="sitemap-link">
+              { sitemapLink('/candidates', 'Candidates', true) }
+            </div>
+            <div className="sitemap-link">
               { sitemapLink('/projects', 'Projects', true) }
             </div>
           </Col>
@@ -156,10 +159,13 @@ class Footer extends Component {
                 { sitemapLink('/about', 'About', false) }
                 { sitemapLink('/members', 'Members', false) }
                 { sitemapLink('/contact', 'Contact', false) }
+                { sitemapLink('/candidates', 'Candidates', false) }
                 { sitemapLink('/projects', 'Projects', false) }
-                <div className="mark-text">
-                  @2020 RoBorregos
-                </div>
+              </div>
+            </Row>
+            <Row>
+              <div className="mark-text">
+                @2020 RoBorregos
               </div>
             </Row>
             <Row className="row-socialMedia">

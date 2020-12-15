@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { shallow, configure, mount } from 'enzyme'
+import { shallow, configure } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import ProjectsCarousel from './ProjectsCarousel'
 import { LARGE_WIDTH, SMALL_WIDTH } from '../../../../constants'
