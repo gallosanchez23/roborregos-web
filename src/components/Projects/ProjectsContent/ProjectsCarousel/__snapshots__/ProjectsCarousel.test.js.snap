@@ -61,7 +61,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                   <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
                     <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
                       <span className=\\"MuiIconButton-label\\">
-                        <ForwardRef>
+                        <ForwardRef(NavigateNextIcon)>
                           <WithStyles(ForwardRef(SvgIcon))>
                             <ForwardRef(SvgIcon) classes={{...}}>
                               <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
@@ -69,7 +69,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(NavigateNextIcon)>
                       </span>
                       <WithStyles(memo) center={true}>
                         <ForwardRef(TouchRipple) classes={{...}} center={true}>
@@ -91,7 +91,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                   <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
                     <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
                       <span className=\\"MuiIconButton-label\\">
-                        <ForwardRef>
+                        <ForwardRef(NavigateBeforeIcon)>
                           <WithStyles(ForwardRef(SvgIcon))>
                             <ForwardRef(SvgIcon) classes={{...}}>
                               <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
@@ -99,7 +99,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(NavigateBeforeIcon)>
                       </span>
                       <WithStyles(memo) center={true}>
                         <ForwardRef(TouchRipple) classes={{...}} center={true}>
@@ -116,7 +116,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
           </div>
           <Indicators classes={{...}} length={2} active={1} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
             <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
-              <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+              <ForwardRef(FiberManualRecordIcon) size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                 <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                   <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                     <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
@@ -124,8 +124,8 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                     </svg>
                   </ForwardRef(SvgIcon)>
                 </WithStyles(ForwardRef(SvgIcon))>
-              </ForwardRef>
-              <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+              </ForwardRef(FiberManualRecordIcon)>
+              <ForwardRef(FiberManualRecordIcon) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                 <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                   <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                     <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
@@ -133,7 +133,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                     </svg>
                   </ForwardRef(SvgIcon)>
                 </WithStyles(ForwardRef(SvgIcon))>
-              </ForwardRef>
+              </ForwardRef(FiberManualRecordIcon)>
             </div>
           </Indicators>
         </div>
@@ -197,7 +197,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                   <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
                     <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
                       <span className=\\"MuiIconButton-label\\">
-                        <ForwardRef>
+                        <ForwardRef(NavigateNextIcon)>
                           <WithStyles(ForwardRef(SvgIcon))>
                             <ForwardRef(SvgIcon) classes={{...}}>
                               <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
@@ -205,7 +205,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(NavigateNextIcon)>
                       </span>
                       <WithStyles(memo) center={true}>
                         <ForwardRef(TouchRipple) classes={{...}} center={true}>
@@ -227,7 +227,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                   <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
                     <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
                       <span className=\\"MuiIconButton-label\\">
-                        <ForwardRef>
+                        <ForwardRef(NavigateBeforeIcon)>
                           <WithStyles(ForwardRef(SvgIcon))>
                             <ForwardRef(SvgIcon) classes={{...}}>
                               <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
@@ -235,7 +235,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(NavigateBeforeIcon)>
                       </span>
                       <WithStyles(memo) center={true}>
                         <ForwardRef(TouchRipple) classes={{...}} center={true}>
@@ -252,7 +252,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
           </div>
           <Indicators classes={{...}} length={2} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
             <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
-              <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+              <ForwardRef(FiberManualRecordIcon) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                 <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                   <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                     <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
@@ -260,8 +260,8 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                     </svg>
                   </ForwardRef(SvgIcon)>
                 </WithStyles(ForwardRef(SvgIcon))>
-              </ForwardRef>
-              <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+              </ForwardRef(FiberManualRecordIcon)>
+              <ForwardRef(FiberManualRecordIcon) size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                 <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                   <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                     <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
@@ -269,7 +269,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Large width: ProjectsCarousel
                     </svg>
                   </ForwardRef(SvgIcon)>
                 </WithStyles(ForwardRef(SvgIcon))>
-              </ForwardRef>
+              </ForwardRef(FiberManualRecordIcon)>
             </div>
           </Indicators>
         </div>
@@ -323,7 +323,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                   <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
                     <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
                       <span className=\\"MuiIconButton-label\\">
-                        <ForwardRef>
+                        <ForwardRef(NavigateNextIcon)>
                           <WithStyles(ForwardRef(SvgIcon))>
                             <ForwardRef(SvgIcon) classes={{...}}>
                               <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
@@ -331,7 +331,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(NavigateNextIcon)>
                       </span>
                       <WithStyles(memo) center={true}>
                         <ForwardRef(TouchRipple) classes={{...}} center={true}>
@@ -353,7 +353,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                   <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
                     <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
                       <span className=\\"MuiIconButton-label\\">
-                        <ForwardRef>
+                        <ForwardRef(NavigateBeforeIcon)>
                           <WithStyles(ForwardRef(SvgIcon))>
                             <ForwardRef(SvgIcon) classes={{...}}>
                               <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
@@ -361,7 +361,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(NavigateBeforeIcon)>
                       </span>
                       <WithStyles(memo) center={true}>
                         <ForwardRef(TouchRipple) classes={{...}} center={true}>
@@ -378,7 +378,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
           </div>
           <Indicators classes={{...}} length={2} active={1} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
             <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
-              <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+              <ForwardRef(FiberManualRecordIcon) size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                 <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                   <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                     <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
@@ -386,8 +386,8 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                     </svg>
                   </ForwardRef(SvgIcon)>
                 </WithStyles(ForwardRef(SvgIcon))>
-              </ForwardRef>
-              <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+              </ForwardRef(FiberManualRecordIcon)>
+              <ForwardRef(FiberManualRecordIcon) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                 <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                   <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                     <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
@@ -395,7 +395,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                     </svg>
                   </ForwardRef(SvgIcon)>
                 </WithStyles(ForwardRef(SvgIcon))>
-              </ForwardRef>
+              </ForwardRef(FiberManualRecordIcon)>
             </div>
           </Indicators>
         </div>
@@ -442,7 +442,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                   <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound next]} aria-label=\\"Next\\">
                     <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8 Carousel-next-11\\" onBlur={[Function (anonymous)]} onClick={[Function: bound next]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Next\\">
                       <span className=\\"MuiIconButton-label\\">
-                        <ForwardRef>
+                        <ForwardRef(NavigateNextIcon)>
                           <WithStyles(ForwardRef(SvgIcon))>
                             <ForwardRef(SvgIcon) classes={{...}}>
                               <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
@@ -450,7 +450,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(NavigateNextIcon)>
                       </span>
                       <WithStyles(memo) center={true}>
                         <ForwardRef(TouchRipple) classes={{...}} center={true}>
@@ -472,7 +472,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                   <ForwardRef(ButtonBase) classes={{...}} className=\\"MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" centerRipple={true} focusRipple={true} disabled={false} onClick={[Function: bound prev]} aria-label=\\"Previous\\">
                     <button className=\\"MuiButtonBase-root MuiIconButton-root Carousel-button-7 Carousel-buttonVisible-9 Carousel-fullHeightHoverButton-8  Carousel-prev-12\\" onBlur={[Function (anonymous)]} onClick={[Function: bound prev]} onFocus={[Function (anonymous)]} onKeyDown={[Function (anonymous)]} onKeyUp={[Function (anonymous)]} onMouseDown={[Function (anonymous)]} onMouseLeave={[Function (anonymous)]} onMouseUp={[Function (anonymous)]} onDragLeave={[Function (anonymous)]} onTouchEnd={[Function (anonymous)]} onTouchMove={[Function (anonymous)]} onTouchStart={[Function (anonymous)]} tabIndex={0} type=\\"button\\" disabled={false} aria-label=\\"Previous\\">
                       <span className=\\"MuiIconButton-label\\">
-                        <ForwardRef>
+                        <ForwardRef(NavigateBeforeIcon)>
                           <WithStyles(ForwardRef(SvgIcon))>
                             <ForwardRef(SvgIcon) classes={{...}}>
                               <svg className=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]}>
@@ -480,7 +480,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                               </svg>
                             </ForwardRef(SvgIcon)>
                           </WithStyles(ForwardRef(SvgIcon))>
-                        </ForwardRef>
+                        </ForwardRef(NavigateBeforeIcon)>
                       </span>
                       <WithStyles(memo) center={true}>
                         <ForwardRef(TouchRipple) classes={{...}} center={true}>
@@ -497,7 +497,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
           </div>
           <Indicators classes={{...}} length={2} active={0} press={[Function: bound setActive]} indicatorContainerProps={[undefined]} indicatorProps={[undefined]} activeIndicatorProps={[undefined]}>
             <div className=\\"Carousel-indicators-2 \\" style={[undefined]}>
-              <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+              <ForwardRef(FiberManualRecordIcon) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                 <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                   <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 Carousel-active-4 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                     <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 Carousel-active-4 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
@@ -505,8 +505,8 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                     </svg>
                   </ForwardRef(SvgIcon)>
                 </WithStyles(ForwardRef(SvgIcon))>
-              </ForwardRef>
-              <ForwardRef size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
+              </ForwardRef(FiberManualRecordIcon)>
+              <ForwardRef(FiberManualRecordIcon) size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                 <WithStyles(ForwardRef(SvgIcon)) size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                   <ForwardRef(SvgIcon) classes={{...}} size=\\"small\\" className=\\"Carousel-indicator-3 undefined\\" style={[undefined]} onClick={[Function: onClick]}>
                     <svg className=\\"MuiSvgIcon-root Carousel-indicator-3 undefined\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" color={[undefined]} aria-hidden={true} role={[undefined]} size=\\"small\\" style={[undefined]} onClick={[Function: onClick]}>
@@ -514,7 +514,7 @@ exports[`<ProjectsCarousel> matches snapshot with: Small width: ProjectsCarousel
                     </svg>
                   </ForwardRef(SvgIcon)>
                 </WithStyles(ForwardRef(SvgIcon))>
-              </ForwardRef>
+              </ForwardRef(FiberManualRecordIcon)>
             </div>
           </Indicators>
         </div>
