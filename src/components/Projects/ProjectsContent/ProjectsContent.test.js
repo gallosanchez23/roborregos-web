@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { configure, mount } from 'enzyme'
+import { configure, mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import ProjectsContent from './ProjectsContent'
 import { SMALL_WIDTH, LARGE_WIDTH } from '../../../constants'
@@ -84,6 +84,12 @@ it('<ProjectsContent> renders main_projects after scroll', () => {
 
 // Snapshots
 describe('<ProjectsContent> matches snapshot:', () => {
+  beforeEach(() => {
+    wrapper = shallow(
+      <ProjectsContent main_projects={main} carousels={carrousel} other_projects={other} />,
+    )
+  })
+
   it('Large width', () => {
     global.innerWidth = LARGE_WIDTH
     global.dispatchEvent(new Event('resize'))
