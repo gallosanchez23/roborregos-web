@@ -57,7 +57,7 @@ describe('<ProjectsCarousel> matches snapshot with:', () => {
   it('Large width', () => {
     global.innerWidth = LARGE_WIDTH
     global.dispatchEvent(new Event('resize'))
-    const wrapper_content = mount(
+    const wrapper_content = shallow(
       <ProjectsCarousel project_carousels={carousels} main_counter={main_projects_length} />,
     ).debug()
     expect(wrapper_content).toMatchSnapshot('ProjectsCarouselLargeView.test.js.snap')
@@ -66,7 +66,7 @@ describe('<ProjectsCarousel> matches snapshot with:', () => {
   it('Small width', () => {
     global.innerWidth = SMALL_WIDTH
     global.dispatchEvent(new Event('resize'))
-    const wrapper_content = mount(
+    const wrapper_content = shallow(
       <ProjectsCarousel project_carousels={carousels} main_counter={main_projects_length} />,
     ).debug()
     expect(wrapper_content).toMatchSnapshot('ProjectsCarouselSmallView.test.js.snap')
