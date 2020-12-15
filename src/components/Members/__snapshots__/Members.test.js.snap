@@ -250,6 +250,19 @@ exports[`Matches snapshot 1`] = `
           <span>
             <a
               className="sitemap-link"
+              href="/candidates"
+            >
+              Candidates
+            </a>
+            <br />
+          </span>
+        </div>
+        <div
+          className="sitemap-link"
+        >
+          <span>
+            <a
+              className="sitemap-link"
               href="/projects"
             >
               Projects
