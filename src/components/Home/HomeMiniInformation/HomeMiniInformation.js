@@ -3,7 +3,6 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUsers, faHistory, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
-
 import './HomeMiniInformation.css'
 
 const HomeMiniInformation = () => (

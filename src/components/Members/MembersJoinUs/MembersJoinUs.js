@@ -4,9 +4,13 @@ import './MembersJoinUs.css'
 /**
  Component of Join us section.
   [WIP] The component is rendered as a section with a clickable button
-  that leads to the "members" page for users to get more information.
+  that leads to the "Candidates" page for users to get more information.
  */
 class MembersJoinUs extends Component {
+  handleClick = () => {
+    window.location.href = '/candidates'
+  }
+
   /**
  * Renders Responsive view of Member Join Us
  * @return {renderized_component} [WIP].
