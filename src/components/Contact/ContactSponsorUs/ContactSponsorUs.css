@@ -1,40 +1,64 @@
 .contact-sponsor-us {
+  background: url(../../../images/github_pattern.svg) top left/auto repeat fixed #1C2329;
+  color: white;
   padding-bottom: 105px;
   padding-top: 105px;
-  color: white;
   text-align: center;
-  background: url(../../../images/github_pattern.svg) top left/auto repeat fixed #1C2329;
 }
 
 .contact-sponsor-us-btn {
+  background-color: #13191E;
   border: 1px solid #4F72B8;
   border-radius: 8px;
+  color: #FFF;
   font-size: 30px;
-  width: 22%;
   height: 80px;
-  color: white;
+  min-width: 220px;
   transition: 0.3s;
-  background-color: #13191E;
+  width: 70%;
 }
 
-@media (max-width: 750px) {
+.contact-translate-sponsor-us-btn {
+  background-color: #13191E;
+  border: 1px solid #4F72B8;
+  border-radius: 8px;
+  color: #FFF;
+  font-size: 20px;
+  height: 40px;
+  min-width: 195px;
+  transition: 0.3s;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
   .contact-sponsor-us-btn {
-    width: 30%;
     font-size: 25px;
+    width: 30%;
+  }
+
+  .contact-translate-sponsor-us-btn {
+    font-size: 16px;
+    width: min-content;
   }
 }
 
 @media (max-width: 610px) {
   .contact-sponsor-us-btn {
-    width: 40%;
     font-size: 25px;
     height: 65px;
     margin-top: 10px;
+    width: 40%;
   }
 }
 
 .contact-sponsor-us-btn:hover {
-  color: white;
-  border: 1px solid #13191E;
   background-color: #4F72B8;
+  border: 1px solid #13191E;
+  color: #FFF;
+}
+
+.contact-translate-sponsor-us-btn:hover {
+  background-color: #4F72B8;
+  border: 1px solid #13191E;
+  color: #FFF;
 }

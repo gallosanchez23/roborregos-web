@@ -24,6 +24,11 @@
       "path": "/candidates",
       "legend": "Candidates",
       "component": "Candidates"
+    },
+    {
+      "path": "/projects",
+      "legend": "Projects",
+      "component": "Projects"
     }
   ]
 }

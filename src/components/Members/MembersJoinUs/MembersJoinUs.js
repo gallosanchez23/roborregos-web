@@ -1,26 +1,34 @@
-import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import './MembersJoinUs.css';
+import React, { Component } from 'react'
+import './MembersJoinUs.css'
 
+/**
+ Component of Join us section.
+  [WIP] The component is rendered as a section with a clickable button
+  that leads to the "Candidates" page for users to get more information.
+ */
 class MembersJoinUs extends Component {
+  handleClick = () => {
+    window.location.href = '/candidates'
+  }
+
+  /**
+ * Renders Responsive view of Member Join Us
+ * @return {renderized_component} [WIP].
+ */
   render() {
     return (
-      <div className='members-join-us'>
-        <div className='container-legend'>
-          <p className='members-join-us-description'>
-            Interested in working with us?
-          </p>
-          <Button href="/contact#candidates" className='members-join-us-button'>
-            <div className='members-join-us-button-contain'>
-              <h2 className='members-join-us-button-text'>
-                Join the team!
-              </h2>
-            </div>
-          </Button>
-        </div>
+      <div className="members-join-us" data-testid="members-join-us">
+        <button
+          data-testid="members-join-us-button"
+          type="button"
+          onClick={this.handleClick}
+          className="members-join-us-button members-join-us-button-contain members-join-us-button-text"
+        >
+          Join the Team
+        </button>
       </div>
-    );
+    )
   }
 }
 
-export default MembersJoinUs;
+export default MembersJoinUs

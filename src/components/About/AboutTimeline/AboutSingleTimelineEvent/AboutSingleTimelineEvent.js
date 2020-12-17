@@ -1,110 +1,132 @@
-import React, { Component } from 'react';
-import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import placeholder from 'images/placeholder-rectangle.png';
-import 'react-vertical-timeline-component/style.min.css';
-import './AboutSingleTimelineEvent.css';
+// @flow
+import React from 'react'
+import { VerticalTimelineElement } from 'react-vertical-timeline-component'
+import placeholder from '../../../../images/placeholder-rectangle.png'
+import 'react-vertical-timeline-component/style.min.css'
+import './AboutSingleTimelineEvent.css'
 
-class AboutSingleTimelineEvent extends Component{
-  constructor(props) {
-    super(props);
+type StateProperties = {
+  hover: boolean
+};
 
-    this.resolveColor       = this.resolveColor.bind(this);
-    this.resolvePosition    = this.resolvePosition.bind(this);
-    this.resolvePropsValues = this.resolvePropsValues.bind(this);
+const defaultState: StateProperties = {
+  hover: false,
+}
 
-    this.tryRequire  = this.tryRequire.bind(this);
-    this.handleHover = this.handleHover.bind(this);
+type Event = {
+  date: string,
+  img_path: string,
+  title: string,
+  description: string
+};
 
-    this.id    = props.id;
-    this.event = props.event;
+type Props = {
+  event: Event
+};
 
-    this.date            = this.event.date;
-    this.year            = this.date.substr(this.date.length - 4);
-    this.backgroundColor = this.resolveColor(this.year);
+class AboutSingleTimelineEvent extends React.Component<Props, *> {
+  date: string;
 
-    this.state = {
-      hover: false,
-    }
+  year: string;
+
+  backgroundColor: string;
+
+  contentColor: string;
+
+  displayContent: string;
+
+  displayImg: string;
+
+  constructor(props: Props) {
+    super(props)
+    const { event } = this.props
+    // this.event = event
+
+    this.date = event.date
+    this.year = this.date.substr(this.date.length - 4)
+    this.backgroundColor = this.resolveColor(this.year)
+
+    this.state = defaultState
   }
 
-  tryRequire(img_path) {
+  tryRequire = (img_path: string) => {
     try {
-      return require('images/about/timeline/' + img_path);
-    }
-    catch(err) {
-      return placeholder;
+      // $FlowFixMe
+      return require(`images/about/timeline/${img_path}`) // eslint-disable-line import/no-dynamic-require, global-require
+    } catch (err) {
+      return placeholder
     }
   }
 
-  resolveColor(year) {
-    let colors = ['rgb(0, 178, 154)', 'rgb(238, 77, 122)', 'rgb(255, 130, 0)', 'rgb(155, 0, 250)'];
-    return colors[year % 4];
+  resolveColor = (year: string) => {
+    const colors = ['rgb(0, 178, 154)', 'rgb(238, 77, 122)', 'rgb(255, 130, 0)', 'rgb(155, 0, 250)']
+    return colors[parseInt(year, 10) % 4]
   }
 
-  resolvePosition(year) {
-    return parseInt(year) % 2 ? 'right' : 'left';
-  }
+  resolvePosition = (year: string) => (parseInt(year, 10) % 2 ? 'right' : 'left')
 
   handleHover() {
-    this.setState({ hover: !this.state.hover });
+    const { hover } = this.state
+    this.setState({ hover: !hover })
   }
 
   resolvePropsValues() {
-    if (this.state.hover) {
-      this.contentColor   = this.backgroundColor;
-      this.displayContent = 'block';
-      this.displayImg     = 'none';
-    }
-    else {
-      this.contentColor   = this.backgroundColor;
-      this.displayContent = 'none';
-      this.displayImg     = 'block';
+    const { hover } = this.state
+    if (hover) {
+      this.contentColor = this.backgroundColor
+      this.displayContent = 'block'
+      this.displayImg = 'none'
+    } else {
+      this.contentColor = this.backgroundColor
+      this.displayContent = 'none'
+      this.displayImg = 'block'
     }
   }
 
   render() {
-    this.resolvePropsValues();
-
-    return(
+    this.resolvePropsValues()
+    const { event } = this.props
+    return (
       <VerticalTimelineElement
-        date={ this.event.date }
-        position={ this.resolvePosition(this.year) }
+        date={event.date}
+        position={this.resolvePosition(this.year)}
         iconStyle={{ background: this.backgroundColor, color: '#fff' }}
         contentStyle={{
-                        background: this.contentColor,
-                        color: '#fff',
-                        boxShadow: '0 0',
-                        padding: '0'
-                      }}
-        contentArrowStyle={{ borderRight: '7px solid ' + this.contentColor }}
+          background: this.contentColor,
+          color: '#fff',
+          boxShadow: '0 0',
+          padding: '0',
+        }}
+        contentArrowStyle={{ borderRight: `7px solid ${this.contentColor}` }}
       >
-        <div className='timeline-element-img-container'>
+        <div className="timeline-element-img-container" test-id="1">
           <img
-            className='timeline-element-img'
-            src={ this.tryRequire(this.event.img_path) }
-            alt={ this.event.img_description }
+            className="timeline-element-img"
+            src={this.tryRequire(event.img_path)}
+            alt={event.description}
           />
-          <div className='timeline-element-img-title'>
+          <div className="timeline-element-img-title">
             <h3>
-              { this.event.title }
+              { event.title }
             </h3>
           </div>
         </div>
         <div
-          className='timeline-element-content'
+          test-id="2"
+          className="timeline-element-content"
           style={{ background: this.contentColor }}
         >
           <div>
             <h3>
-              { this.event.title }
+              { event.title }
             </h3>
             <p>
-              { this.event.description }
+              { event.description }
             </p>
           </div>
         </div>
       </VerticalTimelineElement>
-    );
+    )
   }
 }
 

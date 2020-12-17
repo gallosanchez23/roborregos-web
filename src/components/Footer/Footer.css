@@ -1,6 +1,7 @@
 .footer-container {
   color: rgb(250, 250, 250);
   background-color: rgb(10, 15, 20);
+  display: block;
 }
 
 .footer-row {
@@ -25,6 +26,10 @@
 .footer-col {
   padding-top: 20px;
   height: 30vh;
+}
+
+.sitemap-container {
+  background-color:  rgb(10, 15, 20);;
 }
 
 .sitemap-link {
@@ -71,11 +76,15 @@
   padding-left: 6vw;
   height: 6vh;
   padding-top: 0.3vh;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .mark-text {
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 1.3vw;
+  width: 100%;
+  text-align: right;
 }
 
 @media (max-width: 1170px) {
@@ -158,7 +167,7 @@
   }
 
   .mark-text {
-    float: right;
+    /* float: right; */
     font-size: 2vh;
     padding-right: 3vw;
     padding-top: 1vh;
