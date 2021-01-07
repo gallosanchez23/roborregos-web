@@ -40,17 +40,6 @@ You can consult the application on production at [roborregos.com](https://roborr
 
 - **Production** - [roborregos.com](https://roborregos.com)
 
-### Management tools
-
-You should ask for access to these tools if you don't have it already:
-
-- [Github repo](https://github.com/RoBorregos/roborregos-web)
-- [Heroku](https://www.heroku.com/)
-- [InVision](https://claragutierrez948964.invisionapp.com/prototype/RoBorregos-Web-ck7wek80a00nuq301lmd3k920?v=LLi6aocBvdMc49RvTuq1sg%3D%3D&linkshare=urlcopied)
-- [Google Drive](https://drive.google.com/drive/folders/1dZeA8SSFkDSlj61sY3vJiCqCYluquqlw?usp=sharing)
-
-## Development
-
 ### VSCode setup
 
 For the development of the project the following tools will be used:
@@ -90,13 +79,13 @@ Once you have installed the required third-party software, you can follow this s
    SSH:
 
    ```bash
-   $ git clone git@github.com:gallosanchez23/roborregos-web.git
+   $ git clone git@github.com:RoBorregos/roborregos-web.git
    ```
 
    or HTTPS:
 
    ```bash
-   $ git clone https://github.com/gallosanchez23/roborregos-web.git
+   $ git clone https://github.com/RoBorregos/roborregos-web.git
    ```
 
 2. You will need to create the node_modules directory needed to run react apps.
@@ -232,4 +221,4 @@ $ yarn test
 
 Also, please remember to add the appropriate tests whenever you add a new functionality.
 
-**_NOTE: If you strongly disagree with one of the errors, please talk to the PM [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) about it, and this could become a rule exception_**
+**_NOTE: If you strongly disagree with one of the errors, please talk to the PM [@AuroTB](https://github.com/AuroTB) about it, and this could become a rule exception_**
