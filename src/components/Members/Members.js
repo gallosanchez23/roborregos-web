@@ -1,8 +1,8 @@
 // @flow
 import React, { Component } from 'react'
 import MembersGrid from './MembersGrid/MembersGrid'
-import MembersHeader from './MembersHeader/MembersHeader'
 import MembersJoinUs from './MembersJoinUs/MembersJoinUs'
+import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 import Footer from '../Footer/Footer'
 import './Members.css'
 
@@ -34,6 +34,12 @@ type Props = {
 class Members extends Component <Props> {
   members: Array<Member>;
 
+  headerTitle = 'Members'
+
+  headerMainText = ['RoBorrego’s community is made by students with different skills in robotics, logistics and networking, all joined with a passion for exploring new technologies and sharing their knowledge with everybody.']
+
+  headerSubText = ['Scroll down and meet the us!']
+
   /**
  * Class constructor
  * @param {list} props: List of member data.
@@ -54,7 +60,13 @@ class Members extends Component <Props> {
       || member.status === 'comitee').sort((a, b) => a.id - b.id)
     return (
       <div className="members-container" data-testid="members-container">
-        <MembersHeader />
+        <HeaderBanner
+          title={this.headerTitle}
+          mainText={this.headerMainText}
+          subText={this.headerSubText}
+          bgColorScheme={{ primary: '#005E69E6', secondary: '#141213E6' }}
+          iconColorScheme={{ primary: '#00FFFA', secondary: '#C43F65' }}
+        />
         <MembersGrid active_members={active} inactive_members={inactive} />
         <MembersJoinUs />
         <Footer />
