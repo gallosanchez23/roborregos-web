@@ -1,11 +1,10 @@
-.projects-header {
+  .main-container {
     height: 100%;
     position: relative;
-    background: linear-gradient( 45deg, rgba(20, 18, 19, 0.9) 10%, rgba(0, 25, 105, 0.9) 100%), url(../../../images/github_pattern.svg) top left/auto repeat fixed;
     color: rgba(255, 255, 255, 0.8);
   }
   
-  .projects-header .main-text-projects {
+  .main-container .main-text {
     color: rgba(255, 255, 255, 0.9);
     font-size: 3vh;
     text-transform: none;
@@ -19,7 +18,7 @@
     text-transform: none;
   }
   
-  .projects-header .projects-header-footer {
+  .main-container .footer {
     font-size: 2.5vh;
     text-transform: none;
     display: flex;
@@ -34,17 +33,17 @@
     margin-right:auto;
   }
   
-  .projects-header .projects-header-footer p {
+  .main-container .footer p {
     margin: 0;
   }
   
-  .projects-header .projects-header-footer .icon-btn {
+  .main-container .footer .icon-btn {
     cursor: pointer;
     color: rgb(0, 225, 250);
     font-size: 30px;
   }
   
-  .projects-header .projects-header-footer .icon-btn:hover {
+  .main-container .footer .icon-btn:hover {
     color: rgb(40, 112, 206);
   }
   

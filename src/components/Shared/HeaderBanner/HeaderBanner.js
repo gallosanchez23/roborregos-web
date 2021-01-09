@@ -1,16 +1,41 @@
 // @flow
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import backgroundImage from '../../../images/github_pattern.svg'
 import './HeaderBanner.css'
+
+type ColorScheme = {
+    primary: string,
+    secondary: string
+};
 
 type Props = {
     title: string,
     mainText: Array<string>,
-    subText: Array<string>
+    subText: Array<string>,
+    bgColorScheme: ColorScheme,
+    iconColorScheme: ColorScheme
 };
 
-function HeaderBanner({ title, mainText, subText }: Props) {
+function HeaderBanner({
+  title, mainText, subText, bgColorScheme, iconColorScheme,
+}: Props) {
+  const [iconColor, setIconColor] = useState(iconColorScheme.primary)
+
+  const styles = {
+    mainContainer: {
+      background: `linear-gradient( 45deg, ${bgColorScheme.secondary} 10%, ${bgColorScheme.primary} 100%), url(${backgroundImage}) top left/auto repeat fixed`,
+    },
+    iconBtn: {
+      cursor: 'pointer',
+      fontSize: '30px',
+    },
+    iconBtnColor: {
+      color: iconColor,
+    },
+  }
+
   /**
   Function to scroll down the window view towards th end of the component.
   */
@@ -30,25 +55,27 @@ function HeaderBanner({ title, mainText, subText }: Props) {
   ))
 
   return (
-    <div className="projects-header">
+    <div className="main-container" style={styles.mainContainer}>
       <div className="container-legend">
         <h2 className="title-text-banner">
           {title}
         </h2>
-        <div className="main-text-projects">
+        <div className="main-text">
           <p>
             { parseText(mainText) }
           </p>
         </div>
       </div>
-      <div className="projects-header-footer">
+      <div className="footer">
         <p>
           { parseText(subText) }
         </p>
         <FontAwesomeIcon
           onClick={scrollToInfo}
+          onMouseEnter={() => setIconColor(iconColorScheme.secondary)}
+          onMouseLeave={() => setIconColor(iconColorScheme.primary)}
           icon={faAngleDown}
-          className="icon-btn"
+          style={{ ...styles.iconBtn, ...styles.iconBtnColor }}
         />
       </div>
     </div>
