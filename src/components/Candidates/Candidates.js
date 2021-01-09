@@ -19,7 +19,6 @@ class Candidates extends Component {
 
     return (
       <div className="candidates-container">
-        {/* <CandidatesHeader /> */}
         <HeaderBanner
           title={this.headerTitle}
           mainText={this.headerMainText}
