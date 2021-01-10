@@ -3,7 +3,6 @@ import React from 'react'
 import { configure, mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import ProjectsComponent from './Projects'
-import ProjectsHeader from './ProjectsHeader/ProjectsHeader'
 import ProjectsContent from './ProjectsContent/ProjectsContent'
 import Footer from '../Footer/Footer'
 import { LARGE_WIDTH, SMALL_WIDTH } from '../../constants'
@@ -67,7 +66,6 @@ beforeEach(() => {
 
 it('<Projects> render main components correctly', () => {
   expect(wrapper.find(ProjectsComponent).length).toBe(1)
-  expect(wrapper.find(ProjectsHeader).length).toBe(1)
   expect(wrapper.find(ProjectsContent).length).toBe(1)
   expect(wrapper.find(Footer).length).toBe(1)
 })
