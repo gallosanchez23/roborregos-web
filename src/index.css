@@ -29,12 +29,3 @@ code {
 .app-container {
   height: 100%;
 }
-
-.container-legend {
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  right: 15%;
-  transform: translate(0%, -50%);
-  font-size: 5vw;
-}
