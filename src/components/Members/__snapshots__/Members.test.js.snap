@@ -6,32 +6,36 @@ exports[`Matches snapshot 1`] = `
   data-testid="members-container"
 >
   <div
-    className="members-header"
-    data-testid="members-header"
+    className="main-container"
+    style={
+      Object {
+        "background": "linear-gradient( 45deg, #141213E6 10%, #005E69E6 100%), url(github_pattern.svg) top left/auto repeat fixed",
+      }
+    }
   >
     <div
       className="container-legend"
     >
       <h2
         className="title-text-banner"
-        data-testid="members-header-title"
       >
         Members
       </h2>
       <div
-        className="main-text-members"
-        data-testid="members-header-text"
+        className="main-text"
       >
         <p>
           RoBorrego’s community is made by students with different skills in robotics, logistics and networking, all joined with a passion for exploring new technologies and sharing their knowledge with everybody.
+          <br />
         </p>
       </div>
     </div>
     <div
-      className="members-header-footer"
+      className="footer"
     >
       <p>
         Scroll down and meet the us!
+        <br />
       </p>
       <svg
         aria-hidden="true"
@@ -40,8 +44,14 @@ exports[`Matches snapshot 1`] = `
         data-prefix="fas"
         focusable="false"
         onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
         role="img"
-        style={Object {}}
+        style={
+          Object {
+            "color": "#00FFFA",
+          }
+        }
         viewBox="0 0 320 512"
         xmlns="http://www.w3.org/2000/svg"
       >

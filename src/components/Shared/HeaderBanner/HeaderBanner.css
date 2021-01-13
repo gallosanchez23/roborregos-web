@@ -11,6 +11,15 @@
     padding-top: 2%;
     padding-bottom: 0%;
   }
+
+  .main-container .container-legend {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    right: 15%;
+    transform: translate(0%, -50%);
+    font-size: 5vw;
+  }
   
   .title-text-banner {
     color: rgba(255, 255, 255, 0.9);
@@ -39,11 +48,6 @@
   
   .main-container .footer .icon-btn {
     cursor: pointer;
-    color: rgb(0, 225, 250);
     font-size: 30px;
-  }
-  
-  .main-container .footer .icon-btn:hover {
-    color: rgb(40, 112, 206);
   }
   

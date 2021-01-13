@@ -27,10 +27,6 @@ function HeaderBanner({
     mainContainer: {
       background: `linear-gradient( 45deg, ${bgColorScheme.secondary} 10%, ${bgColorScheme.primary} 100%), url(${backgroundImage}) top left/auto repeat fixed`,
     },
-    iconBtn: {
-      cursor: 'pointer',
-      fontSize: '30px',
-    },
     iconBtnColor: {
       color: iconColor,
     },
@@ -71,11 +67,12 @@ function HeaderBanner({
           { parseText(subText) }
         </p>
         <FontAwesomeIcon
+          className="icon-btn"
           onClick={scrollToInfo}
           onMouseEnter={() => setIconColor(iconColorScheme.secondary)}
           onMouseLeave={() => setIconColor(iconColorScheme.primary)}
           icon={faAngleDown}
-          style={{ ...styles.iconBtn, ...styles.iconBtnColor }}
+          style={styles.iconBtnColor}
         />
       </div>
     </div>
