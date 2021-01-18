@@ -2,7 +2,7 @@
 
 exports[`<Projects> matches snapshot with: Large width: ProjectsLargeView.test.js.snap 1`] = `
 "<div className=\\"projects-container\\">
-  <ProjectsHeader />
+  <HeaderBanner title=\\"Projects\\" mainText={{...}} subText={{...}} bgColorScheme={{...}} iconColorScheme={{...}} />
   <ProjectsContent main_projects={{...}} carousels={{...}} other_projects={{...}} />
   <Footer />
 </div>"
@@ -10,7 +10,7 @@ exports[`<Projects> matches snapshot with: Large width: ProjectsLargeView.test.j
 
 exports[`<Projects> matches snapshot with: Small width: ProjectsSmallView.test.js.snap 1`] = `
 "<div className=\\"projects-container\\">
-  <ProjectsHeader />
+  <HeaderBanner title=\\"Projects\\" mainText={{...}} subText={{...}} bgColorScheme={{...}} iconColorScheme={{...}} />
   <ProjectsContent main_projects={{...}} carousels={{...}} other_projects={{...}} />
   <Footer />
 </div>"

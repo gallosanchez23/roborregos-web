@@ -41,17 +41,6 @@ You can consult the application on production at [roborregos.com](https://roborr
 
 - **Production** - [roborregos.com](https://roborregos.com)
 
-### Management tools
-
-You should ask for access to these tools if you don't have it already:
-
-- [Github repo](https://github.com/gallosanchez23/roborregos-web)
-- [Heroku](https://www.heroku.com/)
-- [InVision](https://claragutierrez948964.invisionapp.com/prototype/RoBorregos-Web-ck7wek80a00nuq301lmd3k920?v=LLi6aocBvdMc49RvTuq1sg%3D%3D&linkshare=urlcopied)
-- [Google Drive](https://drive.google.com/drive/folders/1dZeA8SSFkDSlj61sY3vJiCqCYluquqlw?usp=sharing)
-
-## Development
-
 ### VSCode setup
 
 For the development of the project the following tools will be used:
@@ -91,13 +80,13 @@ Once you have installed the required third-party software, you can follow this s
    SSH:
 
    ```bash
-   $ git clone git@github.com:gallosanchez23/roborregos-web.git
+   $ git clone git@github.com:RoBorregos/roborregos-web.git
    ```
 
    or HTTPS:
 
    ```bash
-   $ git clone https://github.com/gallosanchez23/roborregos-web.git
+   $ git clone https://github.com/RoBorregos/roborregos-web.git
    ```
 
 2. You will need to create the node_modules directory needed to run react apps.
@@ -197,40 +186,3 @@ $ plis stop frontend-web
 ```bash
 $ docker-compose stop frontend-web
 ```
-
-### Check your code
-
-Before uploading any code to the repository, be sure to run the following checks:
-
-1. **Pass the eslint checker.** This is done automatically if you've installed the vscode extension. However, to do a manual check, simply run:
-
-```bash
-$ yarn eslint src
-```
-
-2. **Pass the flow checker.** This could be done automatically if you've installed the vscode extension. However, it is good to do a manual check. For that, first check that your files have the following comment on the first line:
-
-```
-// @flow
-```
-
-This comment tells flow to check the file. Finally simply run:
-
-```bash
-$ yarn flow check src
-```
-
-Or insted of `src`, you can select the specific file. I.e. `src/App.js`
-
-Alternatively, one can also run the `eslint-check` and `flow-check` scripts.
-
-
-3. **Pass the tests** This could be the most important step of all, because it ensures that nothing has been broken with your changes. To perform the check, run:
-
-```bash
-$ yarn test
-```
-
-Also, please remember to add the appropriate tests whenever you add a new functionality.
-
-**_NOTE: If you strongly disagree with one of the errors, please talk to the PM [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) about it, and this could become a rule exception_**

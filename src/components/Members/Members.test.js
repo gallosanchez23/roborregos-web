@@ -66,7 +66,6 @@ it('Member´s components render correctly', () => {
   })
   expect(getByTestId(container, 'members-container')).not.toEqual(null)
   expect(getByTestId(container, 'members-join-us')).not.toEqual(null)
-  expect(getByTestId(container, 'members-header')).not.toEqual(null)
   expect(getByTestId(container, 'members-grid-container')).not.toEqual(null)
 })
 
