@@ -35,6 +35,7 @@ You can consult the application on production at [roborregos.com](https://roborr
 | Osvaldo Alvarez Valdez  | [jorgeosvaldoav@gmail.com](mailto:jorgeosvaldoav@gmail.com)         | [@Osvaldoav](https://github.com/Osvaldoav)                   | Developer |
 | José Francisco Pacheco Quintana  | [pacocheco7@gmail.com](mailto:pacocheco7@gmail.com)         | [@JFPach98](https://github.com/JFPach98)                   | Developer |
 | Ana Lucía Garza         | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com)     | [@AnaGarza](https://github.com/AnaGarza)                     | Designer  |
+| Mauricio Juárez Ibáñez  | [mji2000.741@gmail.com](mailto:mji2000.741@gmail.com)               | [@zJuarez](https://github.com/zJuarez)                       | Developer |
 
 ### Environment URLs
 
