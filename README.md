@@ -37,6 +37,7 @@ You can consult the application on production at [roborregos.com](https://roborr
 | Ana Lucía Garza         | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com)     | [@AnaGarza](https://github.com/AnaGarza)                     | Designer  |
 | Mauricio Juárez Ibáñez  | [mji2000.741@gmail.com](mailto:mji2000.741@gmail.com)               | [@zJuarez](https://github.com/zJuarez)                       | Developer |
 | Gabriela Jazmín Álvarez Espinoza | [gabrielaj.alvarez@outlook.com](mailto:gabrielaj.alvarez@outlook.com)               | [@gabyjazzmin](https://github.com/gabyjazzmin)                       | Developer |
+| Jamir Leal Cota  | [jamirleal200@gmail.com](mailto:jamirleal200@gmail.com)               | [@JamirLeal](https://github.com/JamirLeal)                       | Developer |
 
 ### Environment URLs
 
