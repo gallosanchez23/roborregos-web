@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, Label, Input,Row, Modal, ModalHeader, ModalBody, Button } from 'reactstrap';
+import { sendJoinEmail } from 'scripts/apiScripts'
 import './FormsModal.css';
-import emailjs from 'emailjs-com';
-
-const ServiceId = 'juarezid_1234_4321_01';
-const TemplateId = 'template_6owvhzc';
-const UserId = 'user_exlhFGfiCpajm8iHQostc';
 
 class FormsModal extends Component {
   constructor(props) {
@@ -29,9 +25,13 @@ class FormsModal extends Component {
     event.preventDefault();
     this.props.toggle();
     const mailParams = this.createMail();
-    emailjs.send(ServiceId, TemplateId, mailParams, UserId)
+    sendJoinEmail(mailParams)
     .then((result) => {
-        alert(result.text + " \n Thanks for your interest! \nCheck your Tec email \n");
+      if(result.status === 200){
+        alert("Thanks for your interest! \nCheck your Tec email \n");
+      }else{
+        throw new Error("Email-Server Error, Retry Later")
+      }
     }, (error) => {
         alert("Something went wrong! \n" + error.text);
     });  
