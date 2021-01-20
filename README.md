@@ -94,7 +94,13 @@ Once you have installed the required third-party software, you can follow this s
    $ yarn install
    ```
 
-3. Create the Docker image.
+3. You will need to create .env file. And fill its variables.
+
+	```bash
+	$ cp .sample-env .env
+	```
+   
+4. Create the Docker image.
 
    `plis`:
 
