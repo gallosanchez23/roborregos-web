@@ -15,6 +15,11 @@
       "name": "Oneila",
       "img_path": "oneila.png",
       "link": "http://www.oneila.mx"
+    },
+    {
+      "name": "ATB",
+      "img_path": "ATB.png",
+      "link": "https://www.linkedin.com/in/aurotb/"
     }
   ],
   "packages": [
