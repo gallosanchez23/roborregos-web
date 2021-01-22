@@ -38,6 +38,8 @@ You can consult the application on production at [roborregos.com](https://roborr
 | Mauricio Juárez Ibáñez  | [mji2000.741@gmail.com](mailto:mji2000.741@gmail.com)               | [@zJuarez](https://github.com/zJuarez)                       | Developer |
 | Gabriela Jazmín Álvarez Espinoza | [gabrielaj.alvarez@outlook.com](mailto:gabrielaj.alvarez@outlook.com)               | [@gabyjazzmin](https://github.com/gabyjazzmin)                       | Developer |
 | Jamir Leal Cota  | [jamirleal200@gmail.com](mailto:jamirleal200@gmail.com)               | [@JamirLeal](https://github.com/JamirLeal)                       | Developer |
+| Aldo Jesus Samaniego Silva  | [aldojesussam0@gmail.com](mailto:aldojesussam0@gmail.com)               | [@AldoSamaniego](https://github.com/AldoSamaniego)                       | Developer |
+
 
 ### Environment URLs
 
