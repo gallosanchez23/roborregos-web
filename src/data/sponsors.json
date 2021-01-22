@@ -15,11 +15,6 @@
       "name": "Oneila",
       "img_path": "oneila.png",
       "link": "http://www.oneila.mx"
-    },
-    {
-      "name": "Teknik",
-      "img_path": "teknik.png",
-      "link": "https://teknik.mx/"
     }
   ],
   "packages": [
