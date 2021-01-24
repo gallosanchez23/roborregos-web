@@ -70,12 +70,16 @@ Once you have installed the required third-party software, you can follow this s
    $ git clone https://github.com/RoBorregos/roborregos-web.git
    ```
 
-2. You will need to create the __node_modules__ directory needed to run react apps.
+2. Create the __node_modules__ directory needed to run react apps.
 
    ```bash
    $ npm install
    ```
+3. Create .env file and fill its variables.
 
+	```bash
+	$ cp .sample-env .env
+	```
 
 ### Running project
 
