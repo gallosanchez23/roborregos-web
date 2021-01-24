@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import logo from '../../images/white_logo.png'
+import sponsor_logo from '../../images/sponsors/steren.png'
 import './NavBar.css'
 
 type RouteType = {
@@ -120,10 +121,28 @@ class NavBar extends Component<Props, State> {
                 <div className="navbar-btn-legend">
                   { route.legend }
                 </div>
+                <div className="test">
+
+                </div>
               </Nav.Link>
             ))}
 
           </Nav>
+        <Nav id="navbar-legend-div">
+          <div>
+            <p id="navbar-legend">
+              Powered by
+            </p>
+          </div>
+        </Nav>
+        <Navbar.Brand>
+          <img
+            id="navbar-sponsor-logo"
+            src={sponsor_logo}
+            className="d-inline-block align-top"
+            alt="logo"
+          />
+        </Navbar.Brand>
         </Navbar.Collapse>
       </Navbar>
     )
