@@ -56,8 +56,6 @@ Before setting up the project, you should have installed the following developme
 
 Once you have installed the required third-party software, you can follow this steps:
 
-**_NOTE: You may need sudo privileges to run some of these commands._**
-
 1. Clone the project repository on your local machine.
 
    SSH:
@@ -72,7 +70,7 @@ Once you have installed the required third-party software, you can follow this s
    $ git clone https://github.com/RoBorregos/roborregos-web.git
    ```
 
-2. You will need to create the node_modules directory needed to run react apps.
+2. You will need to create the __node_modules__ directory needed to run react apps.
 
    ```bash
    $ npm install
