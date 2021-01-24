@@ -13,22 +13,31 @@ class CandidatesOpenPostions extends Component {
     this.state = {
       isModalOpen: false,
       selectedPosition: '',
+      trySubmit : false
     }
 
     this.openModal = this.openModal.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   openModal(pos) {
     this.setState({
       selectedPosition: pos,
       isModalOpen: !this.state.isModalOpen,
+      trySubmit : false
     });
   }
 
   toggleModal() {
     this.setState({
       isModalOpen: !this.state.isModalOpen,
+    });
+  }
+
+  onSubmit() {
+    this.setState({
+      trySubmit : true
     });
   }
 
@@ -40,7 +49,7 @@ class CandidatesOpenPostions extends Component {
             {this.positions.map(position => (<OpenPositionCard position={position} onClick={this.openModal} />))}
           </Row>
         </Col>
-        <FormsModal selectedPosition={this.state.selectedPosition} isOpen={this.state.isModalOpen} toggle={this.toggleModal} />
+        <FormsModal onSubmit = {this.onSubmit} selectedPosition={this.state.selectedPosition} isOpen={this.state.isModalOpen} toggle={this.toggleModal} trySubmit = {this.state.trySubmit}/>
       </Row>
     );
   }

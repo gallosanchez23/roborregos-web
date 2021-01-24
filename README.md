@@ -30,11 +30,17 @@ You can consult the application on production at [roborregos.com](https://roborr
 
 | Name                    | Email                                                               | Github                                                       | Role      |
 | ----------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------ | --------- |
-| Aurora Tijerina Berzosa | [auro.tj@gmail.com](mailto:auro.tj@gmail.com)                       | [@aurotb](https://github.com/aurotb)                         | Developer |
-| Ricardo Chapa Romero    | [ricardochaparomero@gmail.com](mailto:ricardochaparomero@gmail.com) | [@RicardoChapaRomero](https://github.com/RicardoChapaRomero) | PM        |
+| Aurora Tijerina Berzosa | [auro.tj@gmail.com](mailto:auro.tj@gmail.com)                       | [@AuroTB](https://github.com/aurotb)                         | PM |
 | José Alfonso Cisneros   | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com)         | [@Josecisneros001](https://github.com/Josecisneros001)       | Developer |
-| Omar Ulises Montiel     | [omarume@gmail.com](mailto:omarume@gmail.com)                       | [@OUMontiel](https://github.com/OUMontiel)                   | Developer |
+| Osvaldo Alvarez Valdez  | [jorgeosvaldoav@gmail.com](mailto:jorgeosvaldoav@gmail.com)         | [@Osvaldoav](https://github.com/Osvaldoav)                   | Developer |
+| José Francisco Pacheco Quintana  | [pacocheco7@gmail.com](mailto:pacocheco7@gmail.com)         | [@JFPach98](https://github.com/JFPach98)                   | Developer |
 | Ana Lucía Garza         | [analuciagarzamtz@gmail.com](mailto:analuciagarzamtz@gmail.com)     | [@AnaGarza](https://github.com/AnaGarza)                     | Designer  |
+| Mauricio Juárez Ibáñez  | [mji2000.741@gmail.com](mailto:mji2000.741@gmail.com)               | [@zJuarez](https://github.com/zJuarez)                       | Developer |
+| Gabriela Jazmín Álvarez Espinoza | [gabrielaj.alvarez@outlook.com](mailto:gabrielaj.alvarez@outlook.com)               | [@gabyjazzmin](https://github.com/gabyjazzmin)                       | Developer |
+| Jamir Leal Cota  | [jamirleal200@gmail.com](mailto:jamirleal200@gmail.com)               | [@JamirLeal](https://github.com/JamirLeal)                       | Developer |
+| Aldo Jesus Samaniego Silva  | [aldojesussam0@gmail.com](mailto:aldojesussam0@gmail.com)               | [@AldoSamaniego](https://github.com/AldoSamaniego)                       | Developer |
+| Héctor Rubén Cortés Hernández | [hector.ruben.cortes.hernandezj@gmail.com](mailto:hector.ruben.cortes.hernandez@gmail.com)                       | [@HectorRuben](https://github.com/HectorRuben)                         | Designer |
+
 
 ### Environment URLs
 

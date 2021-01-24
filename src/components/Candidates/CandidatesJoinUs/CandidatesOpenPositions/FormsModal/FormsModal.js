@@ -9,6 +9,8 @@ class FormsModal extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createMail = this.createMail.bind(this);
+    this.getError = this.getError.bind(this);
+
   }
 
   createMail(){
@@ -23,18 +25,29 @@ class FormsModal extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.toggle();
-    const mailParams = this.createMail();
-    sendJoinEmail(mailParams)
-    .then((result) => {
-      if(result.status === 200){
-        alert("Thanks for your interest! \nCheck your Tec email \n");
-      }else{
-        throw new Error("Email-Server Error, Retry Later")
-      }
-    }, (error) => {
-        alert("Something went wrong! \n" + error.text);
-    });  
+    this.props.onSubmit();
+    if(this.name.value && this.career.value && this.semester.value && this.matricualtionNumber.value && this.comments.value){
+      this.props.toggle();
+      const mailParams = this.createMail();
+      sendJoinEmail(mailParams).then((result) => {
+        if(result.status === 200){
+          alert("Thanks for your interest! \nCheck your Tec email \n");
+        }else{
+          throw new Error("Email-Server Error, Retry Later")
+        }
+      }, (error) => {
+          alert("Something went wrong! \n" + error.text);
+      });  
+    }
+  }
+
+  getError(){
+    if(this.props.trySubmit && this.name && this.career && this.semester && this.matricualtionNumber && this.comments && (!this.name.value || !this.career.value || !this.semester.value || !this.matricualtionNumber.value || !this.comments.value)){
+        return    <Row className="mt-4 mb-1 justify-content-center">
+        <p className="text-danger"> Please fill out the entire forms</p>
+      </Row>
+    }
+    return null;
   }
 
   render() {
@@ -85,6 +98,7 @@ class FormsModal extends Component {
                 </Input>
               </FormGroup>
               </Row>
+              <this.getError></this.getError>
               <Row className="mt-4 mb-1 justify-content-center">
                 <Button className="mr-4 col-3 join" type="submit" value="submit">Join!</Button>
               </Row>
