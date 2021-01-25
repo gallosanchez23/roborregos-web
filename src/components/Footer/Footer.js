@@ -1,187 +1,135 @@
-import React, { Component } from 'react'
-import { Row, Col, Container } from 'react-bootstrap'
-import IconButton from '@material-ui/core/IconButton'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import InstagramIcon from '@material-ui/icons/Instagram'
+import React, { useState, useEffect } from 'react'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess'
-import logo from '../../images/white_logo.png'
-import smallLogo from '../../images/small_logo.png'
-import { MEDIUM_WIDTH, MOBILE_WIDTH } from '../../constants'
+import FacebookIcon from '@material-ui/icons/Facebook'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import IconButton from '@material-ui/core/IconButton'
+import InstagramIcon from '@material-ui/icons/Instagram'
+import { Row, Col } from 'react-bootstrap'
+import logo from '../../images/small_logo.png'
+import { MEDIUM_WIDTH } from '../../constants'
 import './Footer.css'
 
-function sitemapLink(link, legend, big) {
-  if (big) {
-    return (
-      <span>
-        <a href={link} className="sitemap-link">
-          { legend }
-        </a>
-        <br />
-      </span>
-    )
-  }
-  return (
-    <a href={link} className="sitemap-link">
-      { legend }
-    </a>
-  )
+const sitemaps = [
+  {
+    link: '/',
+    text: 'Home',
+  },
+  {
+    link: '/about',
+    text: 'About',
+  },
+  {
+    link: '/members',
+    text: 'Members',
+  },
+  {
+    link: '/contact',
+    text: 'Contact',
+  },
+  {
+    link: '/candidates',
+    text: 'Candidates',
+  },
+  {
+    link: '/projects',
+    text: 'Projects',
+  },
+]
+
+const socialMediaIcons = {
+  instagram: {
+    link: 'https://www.instagram.com/roborregos/',
+    icon: InstagramIcon,
+  },
+  facebook: {
+    link: 'https://www.facebook.com/RoBorregos/',
+    icon: FacebookIcon,
+  },
+  github: {
+    link: 'https://github.com/RoBorregos/',
+    icon: GitHubIcon,
+  },
 }
 
-function sitemapIconButton(link, icon) {
-  return (
-    <a
-      href={link}
-      className="icon-link"
-    >
-      { icon }
-    </a>
-  )
-}
-
-class Footer extends Component {
-  constructor(props) {
-    super(props)
-
-    this.setSizeAtributes = this.setSizeAtributes.bind(this)
-    this.largeView = this.largeView.bind(this)
-    this.smallView = this.smallView.bind(this)
-    this.goUp = this.goUp.bind(this)
-
-    this.members = props.members
-
-    this.state = {
-      icon_size: (window.innerWidth >= MOBILE_WIDTH) ? 40 : 35,
-      view_size_large: (window.innerWidth > MEDIUM_WIDTH),
+const SocialMediaIcons = () => (
+  <div className="row-socialMedia">
+    {
+       Object.values(socialMediaIcons).map((site) => (
+         <a href={site.link} className="icon-link">
+           <site.icon style={{ fontSize: 40 }} />
+         </a>
+       ))
     }
-  }
+  </div>
+)
 
-  componentDidMount() {
-    window.addEventListener('resize', this.setSizeAtributes)
-  }
-
-  goUp() {
-    window.scrollTo(0, 0)
-  }
-
-  setSizeAtributes() {
-    this.setState({
-      icon_size: (window.innerWidth >= MOBILE_WIDTH) ? 40 : 35,
-      view_size_large: (window.innerWidth > MEDIUM_WIDTH),
-    })
-  }
-
-  largeView() {
-    return (
-      <div className="footer-container">
-        <Row className="footer-row">
-          <Col lg="4" className="col-logo">
-            <img src={logo} className="footer-logo" alt="logo" />
-          </Col>
-          <Col lg="4" className="sitemap-container">
-            <div className="sitemap-link">
-              { sitemapLink('/', 'Home', true) }
-            </div>
-            <div className="sitemap-link">
-              { sitemapLink('/about', 'About', true) }
-            </div>
-            <div className="sitemap-link">
-              { sitemapLink('/members', 'Members', true) }
-            </div>
-            <div className="sitemap-link">
-              { sitemapLink('/contact', 'Contact', true) }
-            </div>
-            <div className="sitemap-link">
-              { sitemapLink('/candidates', 'Candidates', true) }
-            </div>
-            <div className="sitemap-link">
-              { sitemapLink('/projects', 'Projects', true) }
-            </div>
-          </Col>
-          <Col lg="4">
-            <Row>
-              <div className="goback-button">
-                <IconButton
-                  component="a"
-                  onClick={this.goUp}
-                  color="inherit"
-                  className="sitemap-link"
-                >
-                  <ExpandLessIcon />
-                  <div className="goback-text">
-                    Back to top
-                  </div>
-                </IconButton>
-              </div>
-            </Row>
-            <Row>
-              <div className="row-socialMedia">
-                { sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
-                { sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
-                { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 5 }} />) }
-                <div className="mark-text">
-                  @2020 RoBorregos
-                </div>
-              </div>
-            </Row>
-          </Col>
-        </Row>
+const GoBackButton = () => (
+  <div className="goback-button">
+    <IconButton
+      component="a"
+      onClick={() => window.scrollTo(0, 0)}
+      color="inherit"
+      className="sitemap-link"
+      style={{ padding: 0 }}
+    >
+      <ExpandLessIcon />
+      <div className="goback-text">
+        Back to top
       </div>
-    )
-  }
+    </IconButton>
+  </div>
+)
 
-  smallView() {
-    return (
-      <Container fluid className="footer-container">
-        <Row noGutters className="footer-row">
-          <Col xs={8} className="col-logo">
-            <img src={smallLogo} className="footer-logo" alt="logo" />
-          </Col>
-          <Col xs={4}>
-            <Row noGutters className="goback-container">
-              <div className="goback-button">
-                <IconButton
-                  component="a"
-                  onClick={this.goUp}
-                  color="inherit"
-                  className="sitemap-link"
-                >
-                  <ExpandLessIcon />
-                  <div className="goback-text">
-                    Back to top
-                  </div>
-                </IconButton>
-              </div>
-            </Row>
-            <Row noGutters className="sitemap-container">
-              <div>
-                { sitemapLink('/', 'Home', false) }
-                { sitemapLink('/about', 'About', false) }
-                { sitemapLink('/members', 'Members', false) }
-                { sitemapLink('/contact', 'Contact', false) }
-                { sitemapLink('/candidates', 'Candidates', false) }
-                { sitemapLink('/projects', 'Projects', false) }
-              </div>
-            </Row>
-            <Row>
-              <div className="mark-text">
-                @2020 RoBorregos
-              </div>
-            </Row>
-            <Row className="row-socialMedia">
-              { sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
-              { sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
-              { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 2, paddingBottom: '0.5vh' }} />) }
-            </Row>
-          </Col>
-        </Row>
-      </Container>
-    )
-  }
+const MarkText = () => (
+  <div className="mark-text">
+    @2020 RoBorregos
+  </div>
+)
 
-  render() {
-    return (this.state.view_size_large) ? this.largeView() : this.smallView()
-  }
+const Footer = () => {
+  const [isViewLarge, setIsViewLarge] = useState(window.innerWidth > MEDIUM_WIDTH)
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setIsViewLarge(window.innerWidth > MEDIUM_WIDTH)
+    })
+  }, [])
+
+  const renderSitemaps = () => sitemaps.map((sitemap) => (
+    <a href={sitemap.link} className="sitemap-link">
+      { sitemap.text }
+    </a>
+  ))
+
+  return (
+    <Row className="footer-row">
+      <Col lg={4} xs={8} className="col-logo">
+        <img src={logo} className="footer-logo" alt="logo" />
+      </Col>
+      {isViewLarge ? (
+        <>
+          <Col lg={4} className="sitemap-container">
+            {renderSitemaps()}
+          </Col>
+          <Col lg={4} className="left-panel">
+            <GoBackButton />
+            <div>
+              <SocialMediaIcons />
+              <MarkText />
+            </div>
+          </Col>
+        </>
+      ) : (
+        <Col xs={4} className="left-panel">
+          <GoBackButton />
+          <div className="sitemap-container">
+            {renderSitemaps()}
+          </div>
+          <MarkText />
+          <SocialMediaIcons />
+        </Col>
+      )}
+    </Row>
+  )
 }
 
 export default Footer
