@@ -5,8 +5,8 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import IconButton from '@material-ui/core/IconButton'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import { Row, Col } from 'react-bootstrap'
-import logo from '../../images/small_logo.png'
 import { MEDIUM_WIDTH } from '../../constants'
+import logo from '../../images/small_logo.png'
 import './Footer.css'
 
 const sitemaps = [
@@ -36,30 +36,28 @@ const sitemaps = [
   },
 ]
 
-const socialMediaIcons = {
-  instagram: {
+const socialMediaIcons = [
+  {
     link: 'https://www.instagram.com/roborregos/',
     icon: InstagramIcon,
   },
-  facebook: {
+  {
     link: 'https://www.facebook.com/RoBorregos/',
     icon: FacebookIcon,
   },
-  github: {
+  {
     link: 'https://github.com/RoBorregos/',
     icon: GitHubIcon,
   },
-}
+]
 
 const SocialMediaIcons = () => (
   <div className="row-socialMedia">
-    {
-       Object.values(socialMediaIcons).map((site) => (
-         <a href={site.link} className="icon-link">
-           <site.icon style={{ fontSize: 40 }} />
-         </a>
-       ))
-    }
+    { socialMediaIcons.map((site) => (
+      <a className="icon-link" href={site.link} target="_blank" rel="noreferrer">
+        <site.icon style={{ fontSize: 40 }} />
+      </a>
+    ))}
   </div>
 )
 
