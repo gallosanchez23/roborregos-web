@@ -2,12 +2,10 @@
 import React from 'react'
 import competitionsData from '../../data/competitions.json'
 import sponsorsData from '../../data/sponsors.json'
-import Footer from '../Footer/Footer'
 import ContactSponsorUs from './ContactSponsorUs/ContactSponsorUs'
 import ContactDonations from './ContactDonations/ContactDonations'
 import ContactCompetitions from './ContactCompetitions/ContactCompetitions'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
-import './Contact.css'
 
 const Contact = () => {
   const headerTitle = 'Contact'
@@ -17,7 +15,7 @@ const Contact = () => {
   document.title = 'RoBorregos | Contact'
 
   return (
-    <div className="contact-container">
+    <>
       <HeaderBanner
         title={headerTitle}
         mainText={headerMainText}
@@ -28,8 +26,7 @@ const Contact = () => {
       <ContactSponsorUs url_contact={sponsorsData.url_contact} packages={sponsorsData.packages} />
       <ContactDonations />
       <ContactCompetitions competitions={competitionsData.competitions} />
-      <Footer />
-    </div>
+    </>
   )
 }
 

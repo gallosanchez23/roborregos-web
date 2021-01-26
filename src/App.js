@@ -13,6 +13,7 @@ import routesData from './data/routes.json'
 import membersData from './data/members.json'
 import Projects from './components/Projects/Projects'
 import projectsData from './data/projects.json'
+import Footer from './components/Footer/Footer'
 
 type Props = {};
 
@@ -49,6 +50,8 @@ class App extends Component<Props> {
             path="/projects"
             component={() => <Projects projectsData={projectsData} />}
           />
+
+          <Footer />
         </div>
       </Router>
     )
