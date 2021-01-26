@@ -49,7 +49,7 @@ class Members extends Component <Props> {
 
   /**
  * Renders Responsive view of Member's body page.
- * @return {renderized_component} Heder, grid, join us section and footer.
+ * @return {renderized_component} Heder, grid and join us section.
  */
   render() {
     document.title = 'RoBorregos | Members'
