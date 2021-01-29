@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import positionsData from '../../data/positions.json'
-import Footer from '../Footer/Footer'
 import CandidatesCarousel from './CandidatesCarousel/CandidatesCarousel'
 import CandidatesInfo from './CandidatesInfo/CandidatesInfo'
 import CandidatesJoinUs from './CandidatesJoinUs/CandidatesJoinUs'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
-import './Candidates.css'
 
 class Candidates extends Component {
   headerTitle = 'Candidates'
@@ -18,7 +16,7 @@ class Candidates extends Component {
     document.title = 'RoBorregos | Candidates'
 
     return (
-      <div className="candidates-container">
+      <>
         <HeaderBanner
           title={this.headerTitle}
           mainText={this.headerMainText}
@@ -29,8 +27,7 @@ class Candidates extends Component {
         <CandidatesCarousel />
         <CandidatesInfo />
         <CandidatesJoinUs positionsData={positionsData} />
-        <Footer />
-      </div>
+      </>
     )
   }
 }
