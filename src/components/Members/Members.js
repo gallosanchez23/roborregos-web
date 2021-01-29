@@ -57,7 +57,6 @@ class Members extends Component <Props> {
     const active = this.members.filter((member) => member.status === 'active'
       || member.status === 'comitee').sort((a, b) => a.id - b.id)
     return (
-      // Warning: data-testid="members-container" prop was removed, add it if needed
       <>
         <HeaderBanner
           title={this.headerTitle}
