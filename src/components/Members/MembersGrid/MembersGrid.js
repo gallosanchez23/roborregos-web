@@ -318,7 +318,7 @@ class MembersGrid extends Component<Props, State> {
               navButtonsAlwaysVisible
               autoPlay={false}
               timeout={200}
-              fullHeightHover
+              fullHeightHover={false}
               indicators={false}
               onChange={(next) => {
                 this.changeMemberUIArrows(next)
