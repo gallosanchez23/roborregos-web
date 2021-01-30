@@ -25,7 +25,7 @@ function HeaderBanner({
 
   const styles = {
     mainContainer: {
-      background: `linear-gradient( 45deg, ${bgColorScheme.secondary} 10%, ${bgColorScheme.primary} 100%), url(${backgroundImage}) top left/auto repeat fixed`,
+      background: `linear-gradient( 45deg, ${bgColorScheme.secondary} 30%, ${bgColorScheme.primary} 100%), url(${backgroundImage}) top left/auto repeat fixed`,
     },
     iconBtnColor: {
       color: iconColor,
