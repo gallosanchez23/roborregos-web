@@ -122,14 +122,8 @@ class NavBar extends Component<Props, State> {
                 <div className="navbar-btn-legend">
                   { route.legend }
                 </div>
-                <div className="test">
-
-                </div>
               </Nav.Link>
             ))}
-            <div id="test">
-
-            </div>
             <Navbar.Brand id="navbar-legend-div">
               <div>
                 <p id="navbar-legend">
@@ -141,9 +135,9 @@ class NavBar extends Component<Props, State> {
                   />
                   Powered by
                 </p>
-                
+
               </div>
-              
+
             </Navbar.Brand>
 
           </Nav>
@@ -158,9 +152,9 @@ class NavBar extends Component<Props, State> {
                 alt="logo"
               />
               Powered by
-            </p>    
+            </p>
           </div>
-              
+
         </Navbar.Brand>
       </Navbar>
     )
