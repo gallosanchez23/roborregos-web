@@ -2,32 +2,32 @@
   "competitions": [
     {
       "name": "Home",
-      "img": "competitions/home.jpeg",
+      "img": "projects/home.jpg",
       "url": "https://athome.robocup.org/"
     },
     {
       "name": "Maze",
-      "img": "competitions/maze.png",
+      "img": "projects/maze.jpg",
       "url": "https://junior.robocup.org/rcj-rescue-maze/"
     },
     {
       "name": "Soccer Light",
-      "img": "competitions/soccer_light.png",
+      "img": "projects/soccer_light.jpg",
       "url": "https://junior.robocup.org/rcj-soccer-lightweight/"
     },
     {
       "name": "Soccer Open",
-      "img": "competitions/soccer_open.png",
+      "img": "projects/soccer_open.jpg",
       "url": "https://junior.robocup.org/rcj-soccer-open/"
     },
     {
       "name": "LARC Open",
-      "img": "competitions/larc.png",
+      "img": "projects/larc_open.jpg",
       "url": "https://www.femexrobotica.org/tmr2020/larc-open-challenge/"
     },
     {
       "name": "VSSS",
-      "img": "competitions/vsss.jpg",
+      "img": "projects/vsss.jpg",
       "url": "https://www.femexrobotica.org/tmr2020/en/larc-very-small-size-soccer/"
     }
   ]

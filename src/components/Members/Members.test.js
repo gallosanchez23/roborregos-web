@@ -64,7 +64,6 @@ it('Member´s components render correctly', () => {
   act(() => {
     render(<Members membersData={membersData} />, container)
   })
-  expect(getByTestId(container, 'members-container')).not.toEqual(null)
   expect(getByTestId(container, 'members-join-us')).not.toEqual(null)
   expect(getByTestId(container, 'members-grid-container')).not.toEqual(null)
 })
