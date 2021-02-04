@@ -65,33 +65,25 @@
 }
 
 #app-navbar #navbar-sponsor-logo {
-  max-width: 100px;
+  max-width: 110px;
   float: right;
-  margin-top: -5%;
+  margin-top: -6.5%;
+  padding-left: 4px;
 }
 
 #app-navbar #navbar-legend-div {
-  display: none;
-}
-
-#app-navbar #navbar-legend-div1 {
   color: #888B8D;
   height: 48px;
   vertical-align: middle;
   display: inline-block;
-  position: absolute;
-  right: 2px;
+  font-size: 19px;
+  padding-top: 8px;
 }
 
-@media all and (max-width: 991px){
-  #app-navbar #navbar-legend-div1{
-    display: none; 
-  }
+@media all and (min-width: 992px){
 
   #app-navbar #navbar-legend-div {
-    color: #888B8D;
-    height: 48px;
-    vertical-align: middle;
-    display: inline-block;
+    position: absolute;
+    right: 2px;
   }
 }

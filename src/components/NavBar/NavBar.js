@@ -135,27 +135,10 @@ class NavBar extends Component<Props, State> {
                   />
                   Powered by
                 </p>
-
               </div>
-
             </Navbar.Brand>
-
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Brand id="navbar-legend-div1">
-          <div>
-            <p id="navbar-legend">
-              <img
-                id="navbar-sponsor-logo"
-                src={sponsor_logo}
-                className="d-inline-block align-top"
-                alt="logo"
-              />
-              Powered by
-            </p>
-          </div>
-
-        </Navbar.Brand>
       </Navbar>
     )
   }
