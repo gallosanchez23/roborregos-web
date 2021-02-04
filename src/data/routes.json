@@ -11,14 +11,9 @@
       "component": "About"
     },
     {
-      "path": "/members",
-      "legend": "Members",
-      "component": "Members"
-    },
-    {
-      "path": "/contact",
-      "legend": "Contact",
-      "component": "Contact"
+      "path": "/projects",
+      "legend": "Projects",
+      "component": "Projects"
     },
     {
       "path": "/candidates",
@@ -26,9 +21,9 @@
       "component": "Candidates"
     },
     {
-      "path": "/projects",
-      "legend": "Projects",
-      "component": "Projects"
+      "path": "/contact",
+      "legend": "Contact",
+      "component": "Contact"
     }
   ]
 }
