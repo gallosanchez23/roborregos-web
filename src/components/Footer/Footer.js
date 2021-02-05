@@ -5,6 +5,9 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import YouTubeIcon from '@material-ui/icons/YouTube'
+import { LinkedIn } from '@material-ui/icons'
 import logo from '../../images/white_logo.png'
 import smallLogo from '../../images/small_logo.png'
 import { MEDIUM_WIDTH, MOBILE_WIDTH } from '../../constants'
@@ -119,6 +122,8 @@ class Footer extends Component {
                 { sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
                 { sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
                 { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 5 }} />) }
+                { sitemapIconButton('https://www.youtube.com/channel/UCeSvAh96bXA3CcRGc4u7_oA', <YouTubeIcon style={{ fontSize: this.state.icon_size }} />) }
+                { sitemapIconButton('https://www.linkedin.com/company/roborregos?originalSubdomain=mx', <LinkedInIcon style={{ fontSize: this.state.icon_size }} />) }
                 <div className="mark-text">
                   @2020 RoBorregos
                 </div>
@@ -172,6 +177,8 @@ class Footer extends Component {
               { sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
               { sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
               { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 2, paddingBottom: '0.5vh' }} />) }
+              { sitemapIconButton('https://www.youtube.com/channel/UCeSvAh96bXA3CcRGc4u7_oA', <YouTubeIcon style={{ fontSize: this.state.icon_size }} />) }
+              { sitemapIconButton('https://www.linkedin.com/company/roborregos?originalSubdomain=mx', <LinkedInIcon style={{ fontSize: this.state.icon_size }} />) }
             </Row>
           </Col>
         </Row>
