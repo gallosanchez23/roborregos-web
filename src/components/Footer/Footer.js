@@ -81,7 +81,7 @@ class Footer extends Component {
           <Col lg="4" className="col-logo">
             <img src={logo} className="footer-logo" alt="logo" />
           </Col>
-          <Col lg="4" className="sitemap-container">
+          <Col lg="5" className="sitemap-container">
             <div className="sitemap-link">
               { sitemapLink('/', 'Home', true) }
             </div>
@@ -101,8 +101,8 @@ class Footer extends Component {
               { sitemapLink('/projects', 'Projects', true) }
             </div>
           </Col>
-          <Col lg="4">
-            <Row>
+          <Col lg="3">
+            <Row style={{ justifyContent: 'flex-end' }}>
               <div className="goback-button">
                 <IconButton
                   component="a"
@@ -124,9 +124,12 @@ class Footer extends Component {
                 { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 5 }} />) }
                 { sitemapIconButton('https://www.youtube.com/channel/UCeSvAh96bXA3CcRGc4u7_oA', <YouTubeIcon style={{ fontSize: this.state.icon_size }} />) }
                 { sitemapIconButton('https://www.linkedin.com/company/roborregos?originalSubdomain=mx', <LinkedInIcon style={{ fontSize: this.state.icon_size }} />) }
-                <div className="mark-text">
-                  @2020 RoBorregos
-                </div>
+
+              </div>
+            </Row>
+            <Row>
+              <div className="mark-text">
+                @2020 RoBorregos
               </div>
             </Row>
           </Col>
