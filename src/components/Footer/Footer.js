@@ -102,7 +102,7 @@ class Footer extends Component {
             </div>
           </Col>
           <Col lg="3">
-            <Row style={{ justifyContent: 'flex-end' }}>
+            <Row className="go-back-row">
               <div className="goback-button">
                 <IconButton
                   component="a"
@@ -124,7 +124,6 @@ class Footer extends Component {
                 { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 5 }} />) }
                 { sitemapIconButton('https://www.youtube.com/channel/UCeSvAh96bXA3CcRGc4u7_oA', <YouTubeIcon style={{ fontSize: this.state.icon_size }} />) }
                 { sitemapIconButton('https://www.linkedin.com/company/roborregos?originalSubdomain=mx', <LinkedInIcon style={{ fontSize: this.state.icon_size }} />) }
-
               </div>
             </Row>
             <Row>
@@ -142,10 +141,10 @@ class Footer extends Component {
     return (
       <Container fluid className="footer-container">
         <Row noGutters className="footer-row">
-          <Col xs={8} className="col-logo">
+          <Col xs={6} className="col-logo">
             <img src={smallLogo} className="footer-logo" alt="logo" />
           </Col>
-          <Col xs={4}>
+          <Col xs={6}>
             <Row noGutters className="goback-container">
               <div className="goback-button">
                 <IconButton
