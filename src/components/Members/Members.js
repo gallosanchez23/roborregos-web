@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 import MembersGrid from './MembersGrid/MembersGrid'
 import MembersJoinUs from './MembersJoinUs/MembersJoinUs'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
-import Footer from '../Footer/Footer'
-import './Members.css'
 
 type Member = {
   id: number,
@@ -51,7 +49,7 @@ class Members extends Component <Props> {
 
   /**
  * Renders Responsive view of Member's body page.
- * @return {renderized_component} Heder, grid, join us section and footer.
+ * @return {renderized_component} Heder, grid and join us section.
  */
   render() {
     document.title = 'RoBorregos | Members'
@@ -59,7 +57,7 @@ class Members extends Component <Props> {
     const active = this.members.filter((member) => member.status === 'active'
       || member.status === 'comitee').sort((a, b) => a.id - b.id)
     return (
-      <div className="members-container" data-testid="members-container">
+      <>
         <HeaderBanner
           title={this.headerTitle}
           mainText={this.headerMainText}
@@ -69,8 +67,7 @@ class Members extends Component <Props> {
         />
         <MembersGrid active_members={active} inactive_members={inactive} />
         <MembersJoinUs />
-        <Footer />
-      </div>
+      </>
     )
   }
 }

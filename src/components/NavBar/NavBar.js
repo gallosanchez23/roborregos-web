@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import logo from '../../images/white_logo.png'
+import sponsor_logo from '../../images/sponsors/steren2.png'
 import './NavBar.css'
 
 type RouteType = {
@@ -104,6 +105,7 @@ class NavBar extends Component<Props, State> {
           test-id="navbar-toggle-button"
         />
         <Navbar.Collapse id="basic-navbar-nav" test-id="basic-navbar-collapse">
+
           <Nav id="navbar-container" className="mr-auto">
 
             {routes.map((route: RouteType, index: number) => (
@@ -122,7 +124,19 @@ class NavBar extends Component<Props, State> {
                 </div>
               </Nav.Link>
             ))}
-
+            <Navbar.Brand id="navbar-legend-div">
+              <div>
+                <p id="navbar-legend">
+                  <img
+                    id="navbar-sponsor-logo"
+                    src={sponsor_logo}
+                    className="d-inline-block align-top"
+                    alt="logo"
+                  />
+                  Powered by
+                </p>
+              </div>
+            </Navbar.Brand>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

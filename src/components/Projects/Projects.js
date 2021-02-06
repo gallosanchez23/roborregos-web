@@ -1,9 +1,7 @@
 // @flow
 import React, { Component } from 'react'
-import './Projects.css'
 import ProjectsContent from './ProjectsContent/ProjectsContent'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
-import Footer from '../Footer/Footer'
 
 type Project = {
   title: string,
@@ -57,7 +55,7 @@ export class Projects extends Component <Props> {
       const { other, carrousel, main } = this.projects
       document.title = 'RoBorregos | Projects'
       return (
-        <div className="projects-container">
+        <>
           <HeaderBanner
             title={this.headerTitle}
             mainText={this.headerMainText}
@@ -66,8 +64,7 @@ export class Projects extends Component <Props> {
             iconColorScheme={{ primary: '#00FFFA', secondary: '#2870CE' }}
           />
           <ProjectsContent main_projects={main} carousels={carrousel} other_projects={other} />
-          <Footer />
-        </div>
+        </>
       )
     }
 }
