@@ -111,7 +111,7 @@ const Footer = () => {
 
   return (
     <Row className="footer-row">
-      <Col lg={4} xs={8} className="col-logo">
+      <Col lg={4} xs={6} className="col-logo">
         <img src={logo} className="footer-logo" alt="logo" />
       </Col>
       {isViewLarge ? (
@@ -132,7 +132,7 @@ const Footer = () => {
           </Col>
         </>
       ) : (
-        <Col xs={4} className="left-panel">
+        <Col lg={4} xs={6} className="left-panel">
           <GoBackButton />
           <div className="sitemap-container">
             {renderSitemaps()}
