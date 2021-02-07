@@ -37,7 +37,7 @@ class NavBar extends Component<Props, State> {
   }
 
   /*
-    TODO: Handle Active Tabs on brand Click
+    TODO: Eliminate Active Tab
   handleActiveButton() {
     const activeTabs =
       document.getElementById('navbar-container').getElementsByClassName('active');
@@ -124,7 +124,7 @@ class NavBar extends Component<Props, State> {
                 </div>
               </Nav.Link>
             ))}
-            <Navbar.Brand id="navbar-legend-div">
+            <Navbar.Brand id="navbar-legend-div" onClick={() => { window.open('https://www.steren.com.mx/') }}>
               <div>
                 <p id="navbar-legend">
                   <img
