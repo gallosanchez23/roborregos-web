@@ -5,6 +5,8 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import IconButton from '@material-ui/core/IconButton'
 import InstagramIcon from '@material-ui/icons/Instagram'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import YouTubeIcon from '@material-ui/icons/YouTube'
 import { Row, Col } from 'react-bootstrap'
 import { MEDIUM_WIDTH } from '../../constants'
 import logo from '../../images/small_logo.png'
@@ -20,35 +22,43 @@ const sitemaps = [
     text: 'About',
   },
   {
-    link: '/members',
-    text: 'Members',
+    link: '/projects',
+    text: 'Projects',
   },
   {
-    link: '/contact',
-    text: 'Contact',
+    link: '/members',
+    text: 'Members',
   },
   {
     link: '/candidates',
     text: 'Candidates',
   },
   {
-    link: '/projects',
-    text: 'Projects',
+    link: '/contact',
+    text: 'Contact',
   },
 ]
 
 const socialMediaIcons = [
   {
-    link: 'https://www.instagram.com/roborregos/',
-    icon: InstagramIcon,
-  },
-  {
     link: 'https://www.facebook.com/RoBorregos/',
     icon: FacebookIcon,
   },
   {
+    link: 'https://www.instagram.com/roborregos/',
+    icon: InstagramIcon,
+  },
+  {
+    link: 'https://www.youtube.com/channel/UCeSvAh96bXA3CcRGc4u7_oA',
+    icon: YouTubeIcon,
+  },
+  {
     link: 'https://github.com/RoBorregos/',
     icon: GitHubIcon,
+  },
+  {
+    link: 'https://mx.linkedin.com/company/roborregos',
+    icon: LinkedInIcon,
   },
 ]
 
@@ -81,7 +91,7 @@ const GoBackButton = () => (
 
 const MarkText = () => (
   <div className="mark-text">
-    @2020 RoBorregos
+    @2021 RoBorregos
   </div>
 )
 
@@ -101,24 +111,28 @@ const Footer = () => {
 
   return (
     <Row className="footer-row">
-      <Col lg={4} xs={8} className="col-logo">
+      <Col lg={4} xs={6} className="col-logo">
         <img src={logo} className="footer-logo" alt="logo" />
       </Col>
       {isViewLarge ? (
         <>
-          <Col lg={4} className="sitemap-container">
+          <Col lg={5} className="sitemap-container">
             {renderSitemaps()}
           </Col>
-          <Col lg={4} className="left-panel">
+          <Col lg={3} className="left-panel">
             <GoBackButton />
             <div>
-              <SocialMediaIcons />
-              <MarkText />
+              <Row>
+                <SocialMediaIcons />
+              </Row>
+              <Row style={{ justifyContent: 'flex-end' }}>
+                <MarkText />
+              </Row>
             </div>
           </Col>
         </>
       ) : (
-        <Col xs={4} className="left-panel">
+        <Col lg={4} xs={6} className="left-panel">
           <GoBackButton />
           <div className="sitemap-container">
             {renderSitemaps()}
