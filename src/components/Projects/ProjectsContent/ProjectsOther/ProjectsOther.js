@@ -73,7 +73,7 @@ class ProjectsOther extends Component<Props, State> {
     try {
       /* eslint-disable import/no-dynamic-require */
       /* eslint-disable global-require */
-      return require(`images/projects/${imgPath}`)
+      return require(`../../../../images/projects/${imgPath}`)
     } catch (err) {
       return imgPath
     }

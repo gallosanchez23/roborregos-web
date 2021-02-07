@@ -175,7 +175,7 @@ const checkImageProperties = (element: HTMLElement, index: number) => {
   if (element != null) {
     expect(element.children).toHaveLength(2)
     expect(element.children[0].getAttribute('src')).toEqual(
-      'placeholder-rectangle.png',
+      events[index].img_path,
     )
     expect(element.children[1].children).toHaveLength(1)
     expect(element.children[1].children[0].textContent).toEqual(

@@ -108,7 +108,7 @@ Array [
               <img
                 alt="First"
                 className="member-image"
-                src="placeholder-rectangle.png"
+                src="1.jpg"
               />
               <div
                 className="member-image-content"
