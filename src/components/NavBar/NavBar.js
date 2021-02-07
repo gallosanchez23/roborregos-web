@@ -79,7 +79,7 @@ class NavBar extends Component<Props, State> {
       <Navbar
         collapseOnSelect
         expand="lg"
-        bg="dark"
+        style={{ backgroundColor: '#191e23' }}
         variant="dark"
         fixed="top"
         id="app-navbar"

@@ -41,7 +41,7 @@
 #app-navbar .navbar-nav .navbar-btn {
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 13px;
+  padding-bottom: 5px;
 }
 
 #app-navbar .navbar-nav .navbar-btn.active {
@@ -56,6 +56,11 @@
 
 #app-navbar .navbar-nav .navbar-btn.active .navbar-btn-legend {
   color: rgb(0, 225, 250);
+}
+
+#app-navbar .navbar-nav .navbar-btn-legend {
+  color: white;
+  padding-bottom: 0;
 }
 
 #app-navbar #navbar-sponsor-logo {
