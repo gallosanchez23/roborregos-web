@@ -1,6 +1,7 @@
 #app-navbar {
   height: 48px;
   padding: 0 1px 0 0;
+  width: 100%;
 }
 
 #app-navbar .navbar-brand {
@@ -9,8 +10,8 @@
 }
 
 #app-navbar #navbar-logo {
-  width: 35px;
-  height: 35px;
+  max-width: 35px;
+  max-height: 35px;
 }
 
 #app-navbar #responsive-navbar {
@@ -40,18 +41,12 @@
 #app-navbar .navbar-nav .navbar-btn {
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 13px;
+  padding-bottom: 5px;
 }
 
 #app-navbar .navbar-nav .navbar-btn.active {
   color: rgb(0, 225, 250);
   border-bottom: 2px solid;
-}
-
-#app-navbar .navbar-nav .navbar-btn-legend {
-  transition: 0.2s;
-  transform: translateY(4px);
-  color: rgba(255, 255, 255, 0.8);
 }
 
 #app-navbar .navbar-nav .navbar-btn:hover .navbar-btn-legend {
@@ -61,4 +56,37 @@
 
 #app-navbar .navbar-nav .navbar-btn.active .navbar-btn-legend {
   color: rgb(0, 225, 250);
+}
+
+#app-navbar .navbar-nav .navbar-btn-legend {
+  color: white;
+  padding-bottom: 0;
+}
+
+#app-navbar #navbar-sponsor-logo {
+  max-width: 110px;
+  float: right;
+  margin-top: -6.5%;
+  padding-left: 4px;
+}
+
+#app-navbar #navbar-legend-div {
+  color: #888B8D;
+  height: 48px;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 19px;
+  padding-top: 8px;
+}
+
+#app-navbar #navbar-legend-div:hover {
+  cursor: pointer;
+}
+
+@media all and (min-width: 992px){
+
+  #app-navbar #navbar-legend-div {
+    position: absolute;
+    right: 2px;
+  }
 }

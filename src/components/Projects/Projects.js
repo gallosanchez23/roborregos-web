@@ -1,9 +1,7 @@
 // @flow
 import React, { Component } from 'react'
-import './Projects.css'
-import ProjectsHeader from './ProjectsHeader/ProjectsHeader'
 import ProjectsContent from './ProjectsContent/ProjectsContent'
-import Footer from '../Footer/Footer'
+import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 
 type Project = {
   title: string,
@@ -34,6 +32,12 @@ type Props = {
 export class Projects extends Component <Props> {
     projects: ProjectsData;
 
+    headerTitle = 'Projects'
+
+    headerMainText = ['Every year we challenge ourselves to keep learning and improving.', "See what we've been up to!"]
+
+    headerSubText = ['Learn more']
+
     /**
    * Class constructor
    * @param {list} props: List of projects data by type.
@@ -51,11 +55,16 @@ export class Projects extends Component <Props> {
       const { other, carrousel, main } = this.projects
       document.title = 'RoBorregos | Projects'
       return (
-        <div className="projects-container">
-          <ProjectsHeader />
+        <>
+          <HeaderBanner
+            title={this.headerTitle}
+            mainText={this.headerMainText}
+            subText={this.headerSubText}
+            bgColorScheme={{ primary: '#001969E6', secondary: '#141213E6' }}
+            iconColorScheme={{ primary: '#00FFFA', secondary: '#2870CE' }}
+          />
           <ProjectsContent main_projects={main} carousels={carrousel} other_projects={other} />
-          <Footer />
-        </div>
+        </>
       )
     }
 }
