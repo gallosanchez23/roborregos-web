@@ -18,7 +18,7 @@ class ContactCompetitions extends Component<Props> {
   tryRequire = (img_path: string) => {
     try {
       // $FlowFixMe
-      return require(`images/${img_path}`) // eslint-disable-line import/no-dynamic-require, global-require
+      return require(`../../../images/${img_path}`) // eslint-disable-line import/no-dynamic-require, global-require
     } catch (err) {
       return placeholder
     }

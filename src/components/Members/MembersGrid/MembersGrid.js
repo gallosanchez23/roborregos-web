@@ -124,7 +124,7 @@ class MembersGrid extends Component<Props, State> {
   */
   tryRequire = (imgPath: string) => {
     try {
-      return require(`images/members/${imgPath}`)
+      return require(`../../../images/members/${imgPath}`)
     } catch (err) {
       return placeholder
     }
