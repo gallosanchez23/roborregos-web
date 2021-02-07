@@ -22,39 +22,39 @@ const sitemaps = [
     text: 'About',
   },
   {
-    link: '/members',
-    text: 'Members',
+    link: '/projects',
+    text: 'Projects',
   },
   {
-    link: '/contact',
-    text: 'Contact',
+    link: '/members',
+    text: 'Members',
   },
   {
     link: '/candidates',
     text: 'Candidates',
   },
   {
-    link: '/projects',
-    text: 'Projects',
+    link: '/contact',
+    text: 'Contact',
   },
 ]
 
 const socialMediaIcons = [
   {
-    link: 'https://www.instagram.com/roborregos/',
-    icon: InstagramIcon,
-  },
-  {
     link: 'https://www.facebook.com/RoBorregos/',
     icon: FacebookIcon,
   },
   {
-    link: 'https://github.com/RoBorregos/',
-    icon: GitHubIcon,
+    link: 'https://www.instagram.com/roborregos/',
+    icon: InstagramIcon,
   },
   {
     link: 'https://www.youtube.com/channel/UCeSvAh96bXA3CcRGc4u7_oA',
     icon: YouTubeIcon,
+  },
+  {
+    link: 'https://github.com/RoBorregos/',
+    icon: GitHubIcon,
   },
   {
     link: 'https://mx.linkedin.com/company/roborregos',
