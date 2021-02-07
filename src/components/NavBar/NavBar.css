@@ -49,12 +49,6 @@
   border-bottom: 2px solid;
 }
 
-#app-navbar .navbar-nav .navbar-btn-legegnd {
-  transition: 0.2s;
-  transform: translateY(4px);
-  color: rgba(255, 255, 255, 0.8);
-}
-
 #app-navbar .navbar-nav .navbar-btn:hover .navbar-btn-legend {
   transform: translateY(1px);
   color: rgb(0, 225, 250);
@@ -78,6 +72,10 @@
   display: inline-block;
   font-size: 19px;
   padding-top: 8px;
+}
+
+#app-navbar #navbar-legend-div:hover {
+  cursor: pointer;
 }
 
 @media all and (min-width: 992px){

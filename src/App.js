@@ -39,6 +39,8 @@ class App extends Component<Props> {
 
           <Route path="/projects" component={() => <Projects projectsData={projectsData} />} />
 
+          <Route path="/members" component={() => <Members membersData={membersData} />} />
+
           <Route path="/candidates" component={() => <Candidates />} />
 
           <Route path="/contact" component={() => <Contact />} />
