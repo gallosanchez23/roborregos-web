@@ -19,7 +19,7 @@ exports[`Matches snapshot large view: MemberModalLargeView 1`] = `
           <img
             alt="First Member1"
             className="modal-member-image"
-            src="placeholder-rectangle.png"
+            src="1.jpg"
           />
         </div>
       </div>
@@ -265,7 +265,7 @@ exports[`Matches snapshot small view: MemberModalSmallView 1`] = `
           <img
             alt="First Member1"
             className="modal-member-image"
-            src="placeholder-rectangle.png"
+            src="1.jpg"
           />
         </div>
       </div>
