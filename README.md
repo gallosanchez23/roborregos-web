@@ -1,4 +1,4 @@
-<img src="public/images/black_icon.ico" width="80" ><img> 
+<img src="roborregos_git_logo.png" width="80" ><img> 
 
 # RoBorregos Web                 
 
