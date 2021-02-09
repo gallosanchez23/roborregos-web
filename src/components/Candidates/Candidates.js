@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react'
 import positionsData from '../../data/positions.json'
 import CandidatesCarousel from './CandidatesCarousel/CandidatesCarousel'
