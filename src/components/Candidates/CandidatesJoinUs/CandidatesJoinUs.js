@@ -21,11 +21,11 @@ type Props = {
 };
 
 class CandidatesJoinUs extends Component<Props> {
+  positionsData: PositionsData;
+
   constructor(props: Props) {
     super(props)
-
     this.positionsData = props.positionsData
-    this.joinUsCallback = this.joinUsCallback.bind(this)
   }
 
   joinUsCallback() {

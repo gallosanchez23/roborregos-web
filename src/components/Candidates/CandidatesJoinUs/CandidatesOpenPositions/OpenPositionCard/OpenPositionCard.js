@@ -11,14 +11,17 @@ type Position = {
   id: string,
   title: string,
   shortDescription: string
+  // longDescription: string
 };
 
 type Props = {
   position: Position,
-  onClick: void
+  onClick: (position: Position) => void
 };
 
 class OpenPositionCard extends Component<Props> {
+  position: Position;
+
   constructor(props: Props) {
     super(props)
     this.position = props.position
@@ -30,7 +33,7 @@ class OpenPositionCard extends Component<Props> {
     onClick(pos)
   }
 
-  tryRequire = (id) => {
+  tryRequire = (id: string) => {
     switch (parseInt(id, 10)) {
       case 1:
         return faCode
@@ -59,14 +62,14 @@ class OpenPositionCard extends Component<Props> {
                 </div>
               </div>
             </Col>
-            <Col className="candidates-card-column-text-container-overlay" xs="9" sm="9" md="9" lg="9" xl="9">
+            {/* <Col className="candidates-card-column-text-container-overlay" xs="9" sm="9" md="9" lg="9" xl="9">
               <Card.Title className="candidates-card-title">
                 {this.position.title}
               </Card.Title>
               <Card.Text className="candidates-card-text">
                 {this.position.longDescription}
               </Card.Text>
-            </Col>
+            </Col> */}
             <Col className="candidates-card-column-text-container-overlay-original" xs="9" sm="9" md="9" lg="9" xl="9">
               <Card.Title className="candidates-card-title">
                 {this.position.title}

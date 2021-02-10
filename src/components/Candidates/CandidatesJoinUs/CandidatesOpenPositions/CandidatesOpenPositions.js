@@ -9,6 +9,7 @@ type Position = {
   id: string,
   title: string,
   shortDescription: string
+  // longDescription: string
 };
 
 type PositionsData = {
@@ -17,11 +18,23 @@ type PositionsData = {
   url_form: string
 };
 
+// type SelectedPosition = {
+//   title: string
+// };
+
 type Props = {
   positionsData: PositionsData
 };
 
-class CandidatesOpenPostions extends Component<Props> {
+type State = {
+  isModalOpen: boolean,
+  selectedPosition: Position,
+  trySubmit: boolean
+};
+
+class CandidatesOpenPostions extends Component<Props, State> {
+  positions: Array<Position>;
+
   constructor(props: Props) {
     super(props)
 
@@ -29,7 +42,7 @@ class CandidatesOpenPostions extends Component<Props> {
 
     this.state = {
       isModalOpen: false,
-      selectedPosition: '',
+      selectedPosition: this.positions[0],
       trySubmit: false,
     }
 
@@ -38,20 +51,20 @@ class CandidatesOpenPostions extends Component<Props> {
     this.onSubmit = this.onSubmit.bind(this)
   }
 
-  onSubmit() {
+  onSubmit = () => {
     this.setState({
       trySubmit: true,
     })
   }
 
-  toggleModal() {
+  toggleModal = () => {
     const { isModalOpen } = this.state
     this.setState({
       isModalOpen: !isModalOpen,
     })
   }
 
-  openModal(pos: string) {
+  openModal = (pos: Position) => {
     const { isModalOpen } = this.state
     this.setState({
       selectedPosition: pos,
@@ -67,15 +80,15 @@ class CandidatesOpenPostions extends Component<Props> {
         <Col xs="10" sm="10" md="10" lg="10" xl="10">
           <Row>
             {this.positions.map((position) => (
-              <OpenPositionCard position={position} onClick={this.openModal} />
+              <OpenPositionCard position={position} onClick={((pos: Position) => this.openModal(pos))} />
             ))}
           </Row>
         </Col>
         <FormsModal
-          onSubmit={this.onSubmit}
+          onSubmit={() => this.onSubmit()}
           selectedPosition={selectedPosition}
           isOpen={isModalOpen}
-          toggle={this.toggleModal}
+          toggle={() => this.toggleModal()}
           trySubmit={trySubmit}
         />
       </Row>

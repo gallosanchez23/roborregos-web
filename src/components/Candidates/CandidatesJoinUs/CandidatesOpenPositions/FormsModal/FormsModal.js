@@ -13,11 +13,21 @@ type SelectedPosition = {
 type Props = {
   selectedPosition: SelectedPosition,
   isOpen: boolean,
-  toggle: void,
-  onSubmit: void
+  toggle: () => void,
+  onSubmit: () => void
 };
 
 class FormsModal extends Component<Props> {
+  name: HTMLInputElement;
+
+  career: HTMLInputElement;
+
+  semester: HTMLInputElement;
+
+  matricualtionNumber: HTMLInputElement;
+
+  comments: HTMLInputElement;
+
   constructor(props: Props) {
     super(props)
 
@@ -26,7 +36,7 @@ class FormsModal extends Component<Props> {
     this.getError = this.getError.bind(this)
   }
 
-  handleSubmit(event: SyntheticEvent) {
+  handleSubmit = (event: SyntheticEvent<HTMLButtonElement>) => {
     event.preventDefault()
     const { onSubmit, toggle } = this.props
     onSubmit()
@@ -48,7 +58,7 @@ class FormsModal extends Component<Props> {
     }
   }
 
-  getError() {
+  getError = () => {
     const trySubmit = this.props
     if (trySubmit && this.name && this.career && this.semester
       && this.matricualtionNumber && this.comments
@@ -63,7 +73,7 @@ class FormsModal extends Component<Props> {
     return null
   }
 
-  createMail() {
+  createMail = () => {
     const emailBody = `Hola soy ${this.name.value}
       estudiante de ${this.career.value} de ${this.semester.value} semestre. \n
       ${this.comments.value}`
@@ -146,7 +156,10 @@ class FormsModal extends Component<Props> {
                 />
               </FormGroup>
             </Row>
-            <this.getError />
+            <>
+              {this.getError()}
+              {' '}
+            </>
             <Row className="mt-4 mb-1 justify-content-center">
               <Button className="mr-4 col-3 join" type="submit" value="submit">Join!</Button>
             </Row>
