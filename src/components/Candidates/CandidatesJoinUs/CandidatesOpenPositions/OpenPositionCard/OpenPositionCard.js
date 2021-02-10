@@ -11,7 +11,6 @@ type Position = {
   id: string,
   title: string,
   shortDescription: string
-  // longDescription: string
 };
 
 type Props = {
@@ -62,14 +61,6 @@ class OpenPositionCard extends Component<Props> {
                 </div>
               </div>
             </Col>
-            {/* <Col className="candidates-card-column-text-container-overlay" xs="9" sm="9" md="9" lg="9" xl="9">
-              <Card.Title className="candidates-card-title">
-                {this.position.title}
-              </Card.Title>
-              <Card.Text className="candidates-card-text">
-                {this.position.longDescription}
-              </Card.Text>
-            </Col> */}
             <Col className="candidates-card-column-text-container-overlay-original" xs="9" sm="9" md="9" lg="9" xl="9">
               <Card.Title className="candidates-card-title">
                 {this.position.title}

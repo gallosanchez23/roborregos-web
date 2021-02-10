@@ -9,7 +9,6 @@ type Position = {
   id: string,
   title: string,
   shortDescription: string
-  // longDescription: string
 };
 
 type PositionsData = {
@@ -17,10 +16,6 @@ type PositionsData = {
   url_facebook: string,
   url_form: string
 };
-
-// type SelectedPosition = {
-//   title: string
-// };
 
 type Props = {
   positionsData: PositionsData
@@ -80,7 +75,10 @@ class CandidatesOpenPostions extends Component<Props, State> {
         <Col xs="10" sm="10" md="10" lg="10" xl="10">
           <Row>
             {this.positions.map((position) => (
-              <OpenPositionCard position={position} onClick={((pos: Position) => this.openModal(pos))} />
+              <OpenPositionCard
+                position={position}
+                onClick={((pos: Position) => this.openModal(pos))}
+              />
             ))}
           </Row>
         </Col>
