@@ -4,7 +4,7 @@ import HomeHeader from './HomeHeader/HomeHeader'
 import HomeInformation from './HomeInformation/HomeInformation'
 import HomeMiniInformation from './HomeMiniInformation/HomeMiniInformation'
 import HomeSponsors from './HomeSponsors/HomeSponsors'
-
+import HomeMisionVision from './HomeMisionVision/HomeMisionVision'
 import sponsorsData from '../../data/sponsors.json'
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <HomeHeader />
       <HomeMiniInformation />
-      <HomeInformation />
+      <HomeMisionVision />
       <HomeSponsors sponsors={sponsorsData.sponsors} />
     </>
   )
