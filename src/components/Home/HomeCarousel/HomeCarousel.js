@@ -36,10 +36,11 @@ class HomeCarousel extends Component  {
 
     return (
       <Carousel
-      interval={2000}
-      animation="fade"
+      interval={4000}
+      animation="slide"
       autoPlay={true}
-      
+      className="home-carousel"
+      indicators={false}
       >
           {
             images.map((img, index) => (
