@@ -27,27 +27,24 @@ class HomeCarousel extends Component  {
    * @return {renderized_component} Home Carrousel only images
    */
   render() {
-        const images = [
-              '20190307_200108',
-              '20190323_140105',
-              '20190402_200108',
-              'IMG-20190702-WA0000',
-              'IMG-20191125-WA0028',
-              'IMG-20200515-WA0006'
-        ];
+        const images = [];
+        const imagesNumber = 14;
+
+        for(let i = 1; i<=imagesNumber; i++){
+          images.push(i.toString())
+        }
 
     return (
       <Carousel
-      className="home-carousel"
-      interval={3000}
+      interval={2000}
       animation="fade"
       autoPlay={true}
-      navButtonsAlwaysVisible
+      
       >
           {
             images.map((img, index) => (
-                  <div className="card-image-container col-md-8 offset-md-2"> 
-                        <img className="card-image" src={this.tryRequire(`${img}.jpg`)} alt={index} />
+                  <div className="card-image-container "> 
+                        <img  src={this.tryRequire(`${img}.jpg`)} alt={index} />
                   </div>
             ))
           }

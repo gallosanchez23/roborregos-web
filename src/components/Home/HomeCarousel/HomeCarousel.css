@@ -1,17 +1,14 @@
-.home-carousel {
-      position: relative;
-      height: 100%;
-      background-color: #191E23;
-}
-
 .card-image-container{
-      position: absolute;
-      top: 10%;
-      height: 80%;
-      background-color: #191E23;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:85vh;
 }
 
-.card-image{
-      display: block;
+.card-image-container > img{
+      max-height: 85vh;
+      overflow: hidden;
       margin:auto;
 }
