@@ -61,20 +61,35 @@
 .text-mision, .text-vision{
       padding: 10%;
       position:absolute;
-      font-size: 1.25rem;  
+      font-size: 1.25rem; 
+      height: auto; 
 }
 
- .text-vision{                
-      bottom:0;                          
-      left:0;
+.text-vision{                
       text-align: right;
+}
+
+@media (min-width: 577px) {
+      .text-vision{                
+            bottom:0;                          
+            left:0;
+            text-align: right;
+      }
 }
 
 @media (max-width: 576px) {
 
+      .mision-overlay, .vision-overlay{
+            display: flex;
+            align-items: center;
+      }
+
       .home-mision, .home-vision{
             height: 50%;
             width: 100%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
       }
       
       .home-mision {
@@ -83,20 +98,16 @@
       }
       
       .home-vision{
-            left: 0;
             top: 50%;
             -webkit-clip-path: none;
             clip-path: none; 
       }
       
       .text-mision, .text-vision{
-            font-size: 1rem;  
+            font-size: 1.05rem;
+            padding: 0% 8% 0% 8%;
       }
       
-      .text-vision{                
-            top:0;                          
-            left:0;
-      }
       .mision-overlay:hover,.vision-overlay:hover  {
             opacity: 1;
       }
