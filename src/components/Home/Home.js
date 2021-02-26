@@ -1,7 +1,6 @@
 // @flow
 import React from 'react'
 import HomeHeader from './HomeHeader/HomeHeader'
-import HomeInformation from './HomeInformation/HomeInformation'
 import HomeMiniInformation from './HomeMiniInformation/HomeMiniInformation'
 import HomeSponsors from './HomeSponsors/HomeSponsors'
 import HomeMisionVision from './HomeMisionVision/HomeMisionVision'
