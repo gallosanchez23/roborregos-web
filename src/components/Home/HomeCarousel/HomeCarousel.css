@@ -2,17 +2,17 @@
       background-color:  rgb(10, 15, 20);
 }
 .card-image-container{
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height:95vh;
+      width: 100vw;
+
+      height:94vh;
+      min-height: 50vh;
+      max-height: 94vh;
+
       background-color: transparent;
+      display: flex;
+      align-items: center;
 }
 
 .card-image-container > img{
-      max-height: 95vh;
-      overflow: hidden;
-      margin:auto;
+      width:100vw;
 }
