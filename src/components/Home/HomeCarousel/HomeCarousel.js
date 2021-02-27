@@ -32,8 +32,7 @@ const HomeCarousel = () => {
       interval={4000}
       animation="slide"
       autoPlay
-      className="home-carousel"
-      indicators={false}
+      indicators
     >
       {
             images.map((img, index) => (
