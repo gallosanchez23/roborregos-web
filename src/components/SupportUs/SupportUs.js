@@ -1,19 +1,21 @@
 // @flow
-import React from 'react'
+import React, { useState } from 'react'
 import competitionsData from '../../data/competitions.json'
 import sponsorsData from '../../data/sponsors.json'
 import ContactSponsorUs from './ContactSponsorUs/ContactSponsorUs'
-import ContactDonations from './ContactDonations/ContactDonations'
-import ContactCompetitions from './ContactCompetitions/ContactCompetitions'
+import SupportUsCompetitions from './SupportUsCompetitions/SupportUsCompetitions'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 import SupportUsTypes from './SupportUsTypes/SupportUsTypes'
+import './SupportUs.css'
 
 const Contact = () => {
-  const headerTitle = 'Contact'
-  const headerMainText = ['Would you like to support RoBorregos? Join our sponsors team!']
+  const headerTitle = 'Support us'
+  const headerMainText = ['Would you like to support RoBorregos? Let’s collaborate!']
   const headerSubText = ['Learn More']
 
-  document.title = 'RoBorregos | Contact'
+  document.title = 'RoBorregos | Support us'
+
+  const [language, setLanguage] = useState(1)
 
   return (
     <>
@@ -24,10 +26,10 @@ const Contact = () => {
         bgColorScheme={{ primary: '#6A2C94E6', secondary: '#141213E6' }}
         iconColorScheme={{ primary: '#6A2C94', secondary: '#2870CE' }}
       />
-      <SupportUsTypes />
-      <ContactSponsorUs url_contact={sponsorsData.url_contact} packages={sponsorsData.packages} />
-      <ContactDonations />
-      <ContactCompetitions competitions={competitionsData.competitions} />
+      <div className="button-sticky-language" onClick={() => setLanguage(!language ? 1 : 0)}>ES/EN</div>
+      <SupportUsTypes language={language} />
+      <ContactSponsorUs packages={sponsorsData.packages} language={language} />
+      <SupportUsCompetitions competitions={competitionsData.competitions} />
     </>
   )
 }

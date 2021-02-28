@@ -4,7 +4,7 @@ import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import competitionsData from '../../../data/competitions.json'
 
-import ContactCompetitions from './ContactCompetitions'
+import ContactCompetitions from './SupportUsCompetitions'
 
 type CompetitionType = {
   name: string,

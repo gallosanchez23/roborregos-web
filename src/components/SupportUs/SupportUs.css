@@ -1,0 +1,13 @@
+.button-sticky-language {
+    position: fixed;
+    bottom: 6vh;
+    right: 3vw;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    z-index:1000;
+}
+
+.button-sticky-language:hover {
+    cursor: pointer;
+}

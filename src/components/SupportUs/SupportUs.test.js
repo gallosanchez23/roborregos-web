@@ -3,7 +3,7 @@ import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 
-import Contact from './Contact'
+import SupportUs from './SupportUs'
 
 let container = null
 beforeEach(() => {
@@ -29,7 +29,7 @@ afterEach(() => {
 
 it('<Contact> Renders correctly with Title Name', () => {
   act(() => {
-    render(<Contact />, container)
+    render(<SupportUs />, container)
   })
   expect(document.title).toBe('RoBorregos | Contact')
 })

@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import placeholder from '../../../images/placeholder-rectangle.png'
-import './ContactCompetitions.css'
+import './SupportUsCompetitions.css'
 
 type CompetitionType = {
   name: string,

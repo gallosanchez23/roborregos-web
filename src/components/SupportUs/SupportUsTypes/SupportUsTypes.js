@@ -4,11 +4,15 @@ import './SupportUsTypes.css'
 import { Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-import donate from '../../../images/SupportUs/donate.PNG'
-import sponsorship from '../../../images/SupportUs/sponsorship.PNG'
-import gifts from '../../../images/SupportUs/gifts.PNG'
+import donate from '../../../images/supportUs/donate.PNG'
+import sponsorship from '../../../images/supportUs/sponsorship.PNG'
+import gifts from '../../../images/supportUs/gifts.PNG'
 
-function SupportUsTypes() {
+type Props = {
+  language: number
+};
+
+function SupportUsTypes({ language }: Props) {
   const supportUsTypes = [
     {
       title: ['Donación', 'Donate'],
@@ -26,8 +30,8 @@ function SupportUsTypes() {
     },
     {
       title: ['Regalos', 'Gifts'],
-      description: ['Desde boletos de avión hasta materiales mecánicos, software y componentes electrónicos, estos bienes y servicios son vitales para que podamos desarrollar nuevas tecnologías.',
-        'From airline tickets to mechanical materials, software, and electronic components, these goods and services are vital for developing new technologies.'],
+      description: ['Desde boletos de avión hasta materiales mecánicos y software, estos bienes y servicios son vitales para que podamos desarrollar nuevas tecnologías.',
+        'From airline tickets to mechanical materials and software, these goods and services are vital for developing new technologies.'],
       img: gifts,
       color: '#FF914D',
     },
@@ -53,11 +57,11 @@ function SupportUsTypes() {
                           <img src={support_type.img} alt="not found" className="supportUs-image" />
                         </Row>
                         <Row style={{ color: support_type.color }} className="supportUs-title">
-                          {support_type.title[0]}
+                          {support_type.title[language]}
                         </Row>
                       </Col>
                       <Col lg={12} xs={6} className="supportUs-description">
-                        {support_type.description[0]}
+                        {support_type.description[language]}
                       </Col>
                     </Row>
                   </Col>

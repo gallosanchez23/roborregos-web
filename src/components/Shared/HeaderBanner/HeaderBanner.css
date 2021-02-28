@@ -2,6 +2,7 @@
     height: 100%;
     position: relative;
     color: rgba(255, 255, 255, 0.8);
+    z-index:1001;
   }
   
   .main-container .main-text {
