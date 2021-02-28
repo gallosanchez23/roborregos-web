@@ -5,9 +5,17 @@
     color: white;
     font-weight: bold;
     font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline:none;
     z-index:1000;
 }
 
 .button-sticky-language:hover {
     cursor: pointer;
+}
+
+.button-sticky-language:focus {
+    border: none;
+    outline:none;
 }

@@ -26,7 +26,13 @@ const Contact = () => {
         bgColorScheme={{ primary: '#6A2C94E6', secondary: '#141213E6' }}
         iconColorScheme={{ primary: '#6A2C94', secondary: '#2870CE' }}
       />
-      <div className="button-sticky-language" onClick={() => setLanguage(!language ? 1 : 0)}>ES/EN</div>
+      <button
+        type="button"
+        onClick={() => setLanguage(!language ? 1 : 0)}
+        className="button-sticky-language"
+      >
+        ES/EN
+      </button>
       <SupportUsTypes language={language} />
       <ContactSponsorUs packages={sponsorsData.packages} language={language} />
       <SupportUsCompetitions competitions={competitionsData.competitions} />
