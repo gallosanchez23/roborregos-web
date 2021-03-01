@@ -26,7 +26,6 @@
 }
 
 .see-packages-button {
-    cursor: pointer;
     font-size: 2.5vh;
     color: #FFDE59;
     position: absolute;
@@ -36,6 +35,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    width: fit-content;
 }
 
 .supportUs-description {
@@ -48,7 +48,7 @@
     .supportUs-types {
         margin: 0;
         position: absolute;
-        top: 50%;
+        top: 45%;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }

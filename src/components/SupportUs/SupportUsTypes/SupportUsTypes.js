@@ -76,7 +76,9 @@ function SupportUsTypes({ language }: Props) {
         <FontAwesomeIcon
           onClick={scrollToInfo}
           icon={faAngleDown}
-          style={{ color: '#FFDE59', fontSize: '30px', padding: 0 }}
+          style={{
+            color: '#FFDE59', fontSize: '30px', padding: 0, cursor: 'pointer',
+          }}
         />
       </div>
     </div>

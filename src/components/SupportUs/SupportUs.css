@@ -3,7 +3,6 @@
     bottom: 6vh;
     right: 3vw;
     color: white;
-    font-weight: bold;
     font-size: 20px;
     background-color: transparent;
     border: none;
@@ -13,6 +12,7 @@
 
 .button-sticky-language:hover {
     cursor: pointer;
+    font-weight: bold;
 }
 
 .button-sticky-language:focus {
