@@ -48,7 +48,7 @@ function SupportUsTypes({ language }: Props) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const onScroll = (e) => {
+    const onScroll = () => {
       setVisible(window.innerHeight / 2 < window.scrollY)
     }
     window.addEventListener('scroll', onScroll)
@@ -57,7 +57,7 @@ function SupportUsTypes({ language }: Props) {
 
   return (
     <div className="supportUs-container">
-      {(visible) ? (
+      {(visible || window.innerWidth < 992) ? (
         <>
           <Row className="supportUs-types">
             {

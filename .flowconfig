@@ -3,6 +3,7 @@
 [untyped]
 # Flow will not run in the imported libraries.
 .*/node_modules/*
+.PNG
 
 [include]
 
