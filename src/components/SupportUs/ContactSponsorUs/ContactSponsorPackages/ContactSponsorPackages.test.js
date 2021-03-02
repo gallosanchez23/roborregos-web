@@ -1,21 +1,10 @@
-// @flow
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 
 import ContactSponsorPackages from './ContactSponsorPackages'
 
-type BenefitsType = {
-  es: string,
-  en: string
-};
-
-type PackageType = {
-  name: string,
-  benefits: Array<BenefitsType>
-};
-
-const packages_text: string = `
+const packages_text = `
 {
   "packages" : [
     {
@@ -60,12 +49,12 @@ const packages_text: string = `
   ]
 }`
 
-const languages: Array<string> = ['en', 'es']
+const languages = ['en', 'es']
 
 const { packages } = JSON.parse(packages_text)
 
-const checkPackagesRendering = (language: string) => {
-  packages.forEach((current_package: PackageType, index: number) => {
+const checkPackagesRendering = (language) => {
+  packages.forEach((current_package, index) => {
     const rendered_package = document.querySelector(`[test-id="${index}"]`)
     if (rendered_package != null) {
       expect(rendered_package.children).toHaveLength(1)
@@ -75,7 +64,7 @@ const checkPackagesRendering = (language: string) => {
       const package_containers = rendered_package.children[0].children[0].children
 
       expect(package_containers[0].textContent).toBe(current_package.name)
-      current_package.benefits.forEach((current_benefit: BenefitsType, benefit_index: number) => {
+      current_package.benefits.forEach((current_benefit, benefit_index) => {
         const rendered_benefit = package_containers[2 + benefit_index]
         expect(rendered_benefit.children).toHaveLength(2)
         expect(rendered_benefit.children[1].textContent).toBe(language === 'en' ? current_benefit.en : current_benefit.es)

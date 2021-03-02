@@ -1,4 +1,3 @@
-// @flow
 import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
@@ -6,28 +5,21 @@ import { fireEvent } from '@testing-library/react'
 
 import ContactSponsorUs from './ContactSponsorUs'
 
-type State = {
-  language: string,
-  translate_label: string,
-  sponsor_button_label: string,
-  title: Array<string>
-};
-
-const english_state: State = {
+const english_state = {
   language: 'en',
   translate_label: 'Traducir a español',
   sponsor_button_label: 'Sponsor us!',
   title: ['Would you like to support RoBorregos?', 'Join our sponsors team!'],
 }
 
-const spanish_state: State = {
+const spanish_state = {
   language: 'es',
   translate_label: 'Translate to english',
   sponsor_button_label: '¡Patrocinanos!',
   title: ['¿Te gustaría apoyar a RoBorregos?', '¡Sé uno de nuestros patrocinadores!'],
 }
 
-const packages_text: string = `
+const packages_text = `
 {
   "packages" : [
     {
@@ -76,7 +68,7 @@ const { packages } = JSON.parse(packages_text)
 const url_contact = 'www.google.com'
 let wrapper
 
-const checkState = (language: string) => {
+const checkState = (language) => {
   expect(wrapper.state.language).toEqual(language === 'es' ? spanish_state.language : english_state.language)
   expect(wrapper.state.translate_label).toEqual(language === 'es' ? spanish_state.translate_label : english_state.translate_label)
   expect(wrapper.state.sponsor_button_label).toEqual(language === 'es' ? spanish_state.sponsor_button_label : english_state.sponsor_button_label)
