@@ -5,9 +5,9 @@ import { Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import Fade from '@material-ui/core/Fade'
-import donate from '../../../images/supportUs/donate.PNG'
-import sponsorship from '../../../images/supportUs/sponsorship.PNG'
-import gifts from '../../../images/supportUs/gifts.PNG'
+import donate from '../../../images/supportUs/donate.jpg'
+import sponsorship from '../../../images/supportUs/sponsorship.jpg'
+import gifts from '../../../images/supportUs/gifts.jpg'
 
 type Props = {
   language: number
