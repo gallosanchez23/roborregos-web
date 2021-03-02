@@ -17,10 +17,11 @@ function SupportUsTypes({ language }: Props) {
   const supportUsTypes = [
     {
       title: ['Donación', 'Donate'],
-      description: ['¡Dando un monto anónimamente puedes proporcionarnos los recursos para desarrollar tecnología e ir a competir!',
-        'By donating anonymously you can provide us with the necessary resources to develop technology and compete!'],
+      description: ['¡Dando un monto anónimamente puedes proporcionarnos los recursos para desarrollar tecnología e ir a competir! Da click aquí!',
+        'By donating anonymously you can provide us with the necessary resources to develop technology and compete! Click here!'],
       img: donate,
       color: '#CB6CE6',
+      link: 'https://catalogodeservicios.itesm.mx/',
     },
     {
       title: ['Patrocinio', 'Sponsorship'],
@@ -28,6 +29,7 @@ function SupportUsTypes({ language }: Props) {
         'Help us develop robots and compete by collaborating with us, showing your company name on our shirts!'],
       img: sponsorship,
       color: '#FFDE59',
+      link: '',
     },
     {
       title: ['Regalos', 'Gifts'],
@@ -35,13 +37,14 @@ function SupportUsTypes({ language }: Props) {
         'From airline tickets to mechanical materials and software, these goods and services are vital for developing new technologies.'],
       img: gifts,
       color: '#FF914D',
+      link: '',
     },
   ]
 
   /**
-  Function to scroll down the window view towards the end of the component.
+  Function to scroll down the window view towards the sponsor packages.
   */
-  const scrollToInfo = () => {
+  const scrollToPackages = () => {
     window.scrollBy(0, window.innerHeight * 2 - (85 * 1) - window.scrollY)
   }
 
@@ -63,7 +66,13 @@ function SupportUsTypes({ language }: Props) {
             {
           supportUsTypes.map((support_type, index) => (
             <Fade in {...{ timeout: 1500 }}>
-              <Col lg={4} xs={12} className="type-container">
+              <Col
+                lg={4}
+                xs={12}
+                className="type-container"
+                // TODO: make gifts link to new ContactUs form
+                onClick={() => ((!index) ? window.open(support_type.link) : scrollToPackages())}
+              >
                 <Row>
                   <Col lg={{ span: 12, order: 'first' }} xs={{ order: index % 2, span: 6 }}>
                     <Row>
@@ -88,7 +97,7 @@ function SupportUsTypes({ language }: Props) {
                 See packages
               </p>
               <FontAwesomeIcon
-                onClick={scrollToInfo}
+                onClick={scrollToPackages}
                 icon={faAngleDown}
                 className="see-packages-icon"
               />

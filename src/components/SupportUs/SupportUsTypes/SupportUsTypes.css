@@ -5,12 +5,15 @@
     padding-bottom: 4vh;
     height: 100%;
     position: relative;
-    /* width: 100vw; */
 }
 
 .type-container {
     padding-top: 7vh;
     padding-bottom: 3vh;
+}
+
+.type-container:hover {
+    cursor: pointer;
 }
 
 .supportUs-title {
