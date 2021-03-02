@@ -24,7 +24,7 @@ const Contact = () => {
         mainText={headerMainText}
         subText={headerSubText}
         bgColorScheme={{ primary: '#6A2C94E6', secondary: '#141213E6' }}
-        iconColorScheme={{ primary: '#6A2C94', secondary: '#2870CE' }}
+        iconColorScheme={{ primary: '#6A2C94', secondary: '#CB6CE6' }}
       />
       <button
         type="button"

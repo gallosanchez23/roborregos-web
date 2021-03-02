@@ -38,6 +38,17 @@
     width: fit-content;
 }
 
+.see-packages-icon {
+    color: '#FFDE59';
+    font-size: 180%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.see-packages-icon:hover {
+    color: #FF7F11;
+}
+
 .supportUs-description {
     font-size: 2.5vh;
     padding-left: 4vw;
