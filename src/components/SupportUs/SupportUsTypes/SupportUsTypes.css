@@ -10,6 +10,8 @@
 .type-container {
     padding-top: 7vh;
     padding-bottom: 3vh;
+    padding-right: 5vw;
+    padding-left: 5vw;
 }
 
 .type-container:hover {
@@ -24,6 +26,7 @@
 
 .supportUs-image {
     width: 60%;
+    max-width: 35vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -73,6 +76,8 @@
     .supportUs-container {
         position: static;
         height: fit-content;
+        padding-right: 8vw;
+        padding-left: 2vw;
     }
 
     .see-packages-button {
@@ -91,6 +96,6 @@
     }
 
     .supportUs-title {
-        font-size: 8vw;
+        font-size: 6vw;
     }
 }
