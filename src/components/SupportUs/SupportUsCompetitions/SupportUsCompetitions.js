@@ -11,8 +11,11 @@ type CompetitionType = {
 };
 
 type Props = {
-  competitions: Array<CompetitionType>
+  competitions: Array<CompetitionType>,
+  language: number
 };
+
+const description = ['Todo el apoyo va para el desarrollo de los siguientes proyectos:', 'Our sponsors team is part of our development in the following projects:']
 
 class ContactCompetitions extends Component<Props> {
   tryRequire = (img_path: string) => {
@@ -25,13 +28,13 @@ class ContactCompetitions extends Component<Props> {
   }
 
   render() {
-    const { competitions } = this.props
+    const { competitions, language } = this.props
 
     return (
       <Row className="contact-competitions-container">
         <Col xs="10">
           <Row className="contact-competitions-title">
-            Our sponsors team is part of our development in the following competitions:
+            {description[language]}
           </Row>
           <Row>
             { competitions.map((competition: CompetitionType, id: number) => (
