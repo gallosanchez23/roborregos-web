@@ -42,8 +42,10 @@ const ContactSponsorPackages = (props: Props) => {
               test-id={id}
             >
               <Card
-                className="packages-card"
+                className="packages-card"  
               >
+                
+                
                 <Card.Body>
                   <h4>
                     { pkg.name }
