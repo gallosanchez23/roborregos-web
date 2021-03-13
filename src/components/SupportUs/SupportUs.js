@@ -9,9 +9,9 @@ import SupportUsTypes from './SupportUsTypes/SupportUsTypes'
 import './SupportUs.css'
 
 const Contact = () => {
-  const headerTitle = 'Support us'
-  const headerMainText = ['Would you like to support RoBorregos? Let’s collaborate!']
-  const headerSubText = ['Learn More']
+  const headerTitle = ['Apóyanos', 'Support us']
+  const headerMainText = [['Te gustaría apoyarnos? Colabora con nosotros!'], ['Would you like to support RoBorregos? Let’s collaborate!']]
+  const headerSubText = [['Ver más'], ['Learn More']]
 
   document.title = 'RoBorregos | Support us'
 
@@ -20,9 +20,9 @@ const Contact = () => {
   return (
     <>
       <HeaderBanner
-        title={headerTitle}
-        mainText={headerMainText}
-        subText={headerSubText}
+        title={headerTitle[language]}
+        mainText={headerMainText[language]}
+        subText={headerSubText[language]}
         bgColorScheme={{ primary: '#6A2C94E6', secondary: '#141213E6' }}
         iconColorScheme={{ primary: '#6A2C94', secondary: '#CB6CE6' }}
       />
@@ -35,7 +35,7 @@ const Contact = () => {
       </button>
       <SupportUsTypes language={language} />
       <ContactSponsorUs packages={sponsorsData.packages} language={language} />
-      <SupportUsCompetitions competitions={competitionsData.competitions} />
+      <SupportUsCompetitions competitions={competitionsData.competitions} language={language} />
     </>
   )
 }

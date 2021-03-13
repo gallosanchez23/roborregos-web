@@ -70,7 +70,7 @@ function SupportUsTypes({ language }: Props) {
                 lg={4}
                 xs={12}
                 className="type-container"
-                // TODO: make gifts link to new ContactUs form
+                // TODO: make "gifts" link to new ContactUs form
                 onClick={() => ((!index) ? window.open(support_type.link) : scrollToPackages())}
               >
                 <Row>
