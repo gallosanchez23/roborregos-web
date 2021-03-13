@@ -5,10 +5,6 @@
   border: none;
   padding-bottom: 40px;
   background-repeat: no-repeat;
-  background-image:   linear-gradient(to right, #CB6CE6 100%, #CB6CE6 100%),
-                      linear-gradient(to bottom, #CB6CE6 100%, #CB6CE6 100%),
-                      linear-gradient(to bottom, #CB6CE6 100%, #CB6CE6 100%),
-                      linear-gradient(to right, #CB6CE6 100%, #CB6CE6 100%);
   background-size:    100% 3px,
                       3px 100%,
                       100% 3px,
