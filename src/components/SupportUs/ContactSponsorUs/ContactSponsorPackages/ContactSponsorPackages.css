@@ -21,14 +21,6 @@
   animation-play-state: initial;
 }
 
-.Background-card{
-  height: 100%;
-  background-color: #13191E;
-  border-radius: 6px;
-  border: 5px #13191E;
-  padding-bottom: 40px;
-}
-
 @keyframes bg {
   0% {
       background-size:    0 3px,
@@ -70,10 +62,10 @@
                           3px 0;
   } */
   1% {
-    background-size:    100% 3px,
-                        3px 100%,
-                        100% 3px,
-                        3px 100%;
+    background-size:    95% 3px,
+                        3px 95%,
+                        95% 3px,
+                        3px 95%;
   }
   50% {
       background-size:    100% 3px,
