@@ -69,7 +69,7 @@ function HeaderBanner({
             { parseText(mainText) }
           </p>
         </div>
-        { additionalButton !== null ? (
+        { additionalButton && additionalButton !== null ? (
           <button
             onClick={additionalButton.onClick}
             type="button"
