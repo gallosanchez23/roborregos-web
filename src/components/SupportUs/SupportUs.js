@@ -25,6 +25,15 @@ const Contact = () => {
         subText={headerSubText[language]}
         bgColorScheme={{ primary: '#6A2C94E6', secondary: '#141213E6' }}
         iconColorScheme={{ primary: '#6A2C94', secondary: '#CB6CE6' }}
+        additionalButton={{
+          text: 'Contact Us!',
+          bgColor: '#000000',
+          borderColor: '#CB6CE6',
+          onClick() {
+            // TODO chang thise to new contact us section
+            window.scrollBy(0, window.innerHeight - 48 - window.scrollY)
+          },
+        }}
       />
       <button
         type="button"
