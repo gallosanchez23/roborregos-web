@@ -23,11 +23,11 @@ type Props = {
     subText: Array<string>,
     bgColorScheme: ColorScheme,
     iconColorScheme: ColorScheme,
-    additionalButton: ?AdditionalButton
+    additionalButton?: ?AdditionalButton
 };
 
 function HeaderBanner({
-  title, mainText, subText, bgColorScheme, iconColorScheme, additionalButton = null,
+  title, mainText, subText, bgColorScheme, iconColorScheme, additionalButton,
 }: Props) {
   const [iconColor, setIconColor] = useState(iconColorScheme.primary)
 
@@ -100,6 +100,10 @@ function HeaderBanner({
       </div>
     </div>
   )
+}
+
+HeaderBanner.defaultProps = {
+  additionalButton: null,
 }
 
 export default HeaderBanner
