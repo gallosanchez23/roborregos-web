@@ -3,7 +3,7 @@ import React from 'react'
 import positionsData from '../../data/positions.json'
 import CandidatesCarousel from './CandidatesCarousel/CandidatesCarousel'
 import CandidatesInfo from './CandidatesInfo/CandidatesInfo'
-import Roles from './CandidatesJoinUs/Roles'
+import Roles from './Roles/Roles'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 
 function Candidates() {
