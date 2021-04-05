@@ -60,6 +60,11 @@ button:focus {
   max-height: 250px;
 }
 
+.candidates-succeed-sm-height {
+  height: 200px;
+  max-height: 200px;
+}
+
 .candidates-succeed-long-height {
   height: 550px;
   max-height: 550px;
@@ -86,4 +91,21 @@ button:focus {
   top: 47%;
   font-weight: bold;
   font-size: 4rem;
+}
+
+@media (max-width: 592px) {
+  .Carousel-text-titles {
+    top: 48.5%;
+    font-size: 3rem;
+  }
+
+  .candidates-succeed-sm-height {
+    height: 150px;
+    max-height: 150px;
+  }
+
+  .candidates-learn-height {
+    height: 308px;
+    max-height: 308px;
+  }
 }

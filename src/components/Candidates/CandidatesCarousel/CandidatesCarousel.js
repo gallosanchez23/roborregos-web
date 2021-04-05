@@ -3,6 +3,7 @@ import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
+import { XSMALL_WIDTH } from '../../../constants'
 import CarouselLearn1 from '../../../images/candidates/carousel_learn/learn1.jpg'
 import CarouselLearn2 from '../../../images/candidates/carousel_learn/learn2.jpg'
 import CarouselLearn3 from '../../../images/candidates/carousel_learn/learn3.jpg'
@@ -61,8 +62,8 @@ const gridSlidesFullView = [
           alt="first"
         />
       </Grid>
-      <Grid item xs={6} container spacing={1}>
-        <Grid item xs={12}>
+      <Grid item xs={6}>
+        <Grid item xs={12} style={{ marginBottom: '8px' }}>
           <img
             className="candidates-header-img candidates-learn-height"
             src={CarouselHack2}
@@ -114,6 +115,98 @@ const gridSlidesFullView = [
   </div>,
 ]
 
+const gridSlidesSmallView = [
+  <div>
+    <h1 className="Carousel-text-titles"> Learn </h1>
+    <Grid className="grid-background" container spacing={2}>
+      <Grid item xs={12}>
+        <img
+          className="candidates-header-img candidates-learn-height"
+          src={CarouselLearn2}
+          alt="second"
+        />
+      </Grid>
+      <Grid xs={12} container spacing={1}>
+        <Grid item xs={12}>
+          <img
+            className="candidates-header-img candidates-succeed-sm-height"
+            src={CarouselLearn3}
+            alt="third"
+          />
+        </Grid>
+        <Grid item xs={12} style={{ paddingBottom: '8px' }}>
+          <img
+            className="candidates-header-img candidates-succeed-sm-height"
+            src={CarouselLearn4}
+            alt="fourth"
+          />
+        </Grid>
+      </Grid>
+    </Grid>
+  </div>,
+  <div>
+    <h1 className="Carousel-text-titles"> Hack </h1>
+    <Grid className="grid-background" container spacing={1}>
+      <Grid item xs={12} container>
+        <Grid item xs={6} style={{ paddingRight: '8px' }}>
+          <img
+            className="candidates-header-img candidates-learn-height"
+            src={CarouselHack2}
+            alt="first"
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <img
+            className="candidates-header-img candidates-learn-height"
+            src={CarouselHack3}
+            alt="second"
+          />
+        </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <img
+          className="candidates-header-img candidates-learn-height"
+          src={CarouselHack1}
+          alt="third"
+        />
+      </Grid>
+    </Grid>
+  </div>,
+  <div>
+    <h1 className="Carousel-text-titles"> Succeed </h1>
+    <Grid className="grid-background" container spacing={1}>
+      <Grid item xs={12}>
+        <img
+          className="candidates-header-img candidates-succeed-sm-height"
+          src={CarouselSucceed2}
+          alt="first"
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <img
+          className="candidates-header-img candidates-succeed-sm-height"
+          src={CarouselSucceed3}
+          alt="first"
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <img
+          className="candidates-header-img candidates-succeed-sm-height"
+          src={CarouselSucceed4}
+          alt="second"
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <img
+          className="candidates-header-img candidates-succeed-sm-height"
+          src={CarouselSucceed1}
+          alt="third"
+        />
+      </Grid>
+    </Grid>
+  </div>,
+]
+
 const useStyles = makeStyles((theme) => ({
   customHoverFocus: {
     '&:hover, .Carousel-button-8, .Carousel-buttonVisible-10': { backgroundColor: 'black', opacity: '1 !important' },
@@ -123,15 +216,36 @@ const useStyles = makeStyles((theme) => ({
 function CandidatesCarousel() {
   const classes = useStyles()
 
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      })
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  })
+
   return (
     <Carousel
       navButtonsAlwaysVisible
-      autoPlay
+      autoPlay={false}
       navButtonsProps={{
         className: classes.customHoverFocus,
       }}
     >
-      { gridSlidesFullView.map((element) => element) }
+      { (dimensions.width <= XSMALL_WIDTH
+        ? gridSlidesSmallView.map((element) => element)
+        : gridSlidesFullView.map((element) => element)) }
     </Carousel>
   )
 }
