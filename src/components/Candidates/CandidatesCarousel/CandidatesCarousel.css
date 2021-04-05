@@ -1,8 +1,12 @@
+button:focus {
+  outline: none;
+}
+
 .button-custom {
-  background-color: 'transparent' !important;
-  opacity: '1' !important;
-  color: 'white' !important;
-  font-size: '6rem' !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  color: white !important;
+  font-size: 6rem !important;
 }
 
 .Carousel-indicators-3 {
