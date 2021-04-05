@@ -37,9 +37,7 @@ class Roles extends Component<Props> {
       <div className="candidates-join-us">
         <Row>
           <Col className="candidates-join-us-title-container">
-            <h1>
-              Roles
-            </h1>
+            <p> Roles </p>
           </Col>
         </Row>
         <CandidatesOpenPositions positionsData={this.positionsData} />
