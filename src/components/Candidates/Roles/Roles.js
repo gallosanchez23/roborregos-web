@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import CandidatesOpenPositions from './CandidatesOpenPositions/CandidatesOpenPositions'
-import './CandidatesJoinUs.css'
+import './Roles.css'
 
 type Position = {
   id: string,
@@ -20,7 +20,7 @@ type Props = {
   positionsData: PositionsData
 };
 
-class CandidatesJoinUs extends Component<Props> {
+class Roles extends Component<Props> {
   positionsData: PositionsData;
 
   constructor(props: Props) {
@@ -37,9 +37,9 @@ class CandidatesJoinUs extends Component<Props> {
       <div className="candidates-join-us">
         <Row>
           <Col className="candidates-join-us-title-container">
-            <h2>
-              Get to know our main positions!
-            </h2>
+            <h1>
+              Roles
+            </h1>
           </Col>
         </Row>
         <CandidatesOpenPositions positionsData={this.positionsData} />
@@ -48,4 +48,4 @@ class CandidatesJoinUs extends Component<Props> {
   }
 }
 
-export default CandidatesJoinUs
+export default Roles

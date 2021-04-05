@@ -72,10 +72,11 @@ class CandidatesOpenPostions extends Component<Props, State> {
     const { isModalOpen, trySubmit, selectedPosition } = this.state
     return (
       <Row className="justify-content-center mt-4">
-        <Col xs="10" sm="10" md="10" lg="10" xl="10">
-          <Row>
+        <Col xs="12" sm="12" md="12" lg="12" xl="12">
+          <Row className="positions-card-container">
             {this.positions.map((position) => (
               <OpenPositionCard
+                className="position-card"
                 position={position}
                 onClick={((pos: Position) => this.openModal(pos))}
               />

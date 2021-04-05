@@ -1,22 +1,32 @@
 // @flow
 import React, { Component } from 'react'
-import { Row, Col, Card } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Card } from 'react-bootstrap'
 import {
   faCode, faMicrochip, faCog, faBullhorn,
 } from '@fortawesome/free-solid-svg-icons'
+import placeholder from '../../../../../images/placeholder-rectangle.png'
 import './OpenPositionCard.css'
 
 type Position = {
   id: string,
   title: string,
-  shortDescription: string
+  shortDescription: string,
+  path: string
 };
 
 type Props = {
   position: Position,
   onClick: (position: Position) => void
 };
+
+const tryRequireImg = (img_path: string) => {
+  try {
+    // $FlowFixMe
+    return require(`../../../../../images/candidates/roles/${img_path}`) // eslint-disable-line import/no-dynamic-require, global-require
+  } catch (err) {
+    return placeholder
+  }
+}
 
 class OpenPositionCard extends Component<Props> {
   position: Position;
@@ -52,25 +62,21 @@ class OpenPositionCard extends Component<Props> {
         key={this.position.id}
         onClick={this.clicked}
       >
-        <Card.Body>
-          <Row>
-            <Col xs="3" sm="3" md="3" lg="3" xl="3" className="candidates-card-column-image-container">
-              <div className="circle">
-                <div className="icon-container">
-                  <FontAwesomeIcon icon={this.tryRequire(this.position.id)} size="2x" />
-                </div>
-              </div>
-            </Col>
-            <Col className="candidates-card-column-text-container-overlay-original" xs="9" sm="9" md="9" lg="9" xl="9">
-              <Card.Title className="candidates-card-title">
-                {this.position.title}
-              </Card.Title>
-              <Card.Text className="candidates-card-text">
-                {this.position.shortDescription}
-              </Card.Text>
-            </Col>
-          </Row>
-        </Card.Body>
+        <Card.Img
+          src={tryRequireImg(this.position.path)}
+          alt="Card image"
+          className="candidates-card-img"
+        />
+        <Card.ImgOverlay className="card-info-body">
+          <Card.Body className="candidates-card-text">
+            <Card.Title className="candidates-card-title">
+              {this.position.title}
+            </Card.Title>
+            <Card.Text className="candidates-card-text">
+              {this.position.shortDescription}
+            </Card.Text>
+          </Card.Body>
+        </Card.ImgOverlay>
       </Card>
     )
   }

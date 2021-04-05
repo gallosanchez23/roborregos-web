@@ -3,7 +3,7 @@ import React from 'react'
 import positionsData from '../../data/positions.json'
 import CandidatesCarousel from './CandidatesCarousel/CandidatesCarousel'
 import CandidatesInfo from './CandidatesInfo/CandidatesInfo'
-import CandidatesJoinUs from './CandidatesJoinUs/CandidatesJoinUs'
+import Roles from './CandidatesJoinUs/Roles'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 
 function Candidates() {
@@ -22,7 +22,7 @@ function Candidates() {
       />
       <CandidatesCarousel />
       <CandidatesInfo />
-      <CandidatesJoinUs positionsData={positionsData} />
+      <Roles positionsData={positionsData} />
     </>
   )
 }
