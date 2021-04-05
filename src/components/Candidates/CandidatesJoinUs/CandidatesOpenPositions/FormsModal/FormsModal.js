@@ -61,11 +61,11 @@ class FormsModal extends Component<Props> {
           // eslint-disable-next-line no-alert
           alert('Thanks for your interest! \nCheck your Tec email \n')
         } else {
-          throw new Error('Email-Server Error, Retry Later')
+          alert(`Something went wrong! \nEmail-Server Error, Retry Later`)
         }
       }, (error) => {
         // eslint-disable-next-line no-alert
-        alert(`Something went wrong! \n${error.text}`)
+        alert(`Something went wrong! \n${error.message}`)
       }).finally(() => {
         this.setState({
           isLoading: false,

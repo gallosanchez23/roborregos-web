@@ -42,7 +42,7 @@
   function getContent($filename, $params){
     $content = http_build_query($params, '', '&');
     $header = array(
-      "Content-Type: application/x-www-form-urlencoded",
+      "Content-Type: application/x-www-form-urlencoded; charset=utf-8",
       "Content-Length: ".strlen($content)
     );
     $options = array( 
@@ -59,6 +59,7 @@
 
   function sendEmail($to, $subject, $content){
     $mail = new PHPMailer();
+    $mail->CharSet = "UTF-8";
     $mail->IsSMTP();
     $mail->SMTPDebug = 0;
     $mail->SMTPAuth = true;
