@@ -7,7 +7,8 @@ import './Roles.css'
 type Position = {
   id: string,
   title: string,
-  shortDescription: string
+  shortDescription: string,
+  path: string
 };
 
 type PositionsData = {
