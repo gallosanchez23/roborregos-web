@@ -2,7 +2,9 @@
 import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import Grid from '@material-ui/core/Grid'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, withStyles } from '@material-ui/core/styles'
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore'
+import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import { XSMALL_WIDTH } from '../../../constants'
 import CarouselLearn1 from '../../../images/candidates/carousel_learn/learn1.jpg'
 import CarouselLearn2 from '../../../images/candidates/carousel_learn/learn2.jpg'
@@ -207,11 +209,27 @@ const gridSlidesSmallView = [
   </div>,
 ]
 
-const useStyles = makeStyles((theme) => ({
-  customHoverFocus: {
-    '&:hover, .Carousel-button-8, .Carousel-buttonVisible-10': { backgroundColor: 'black', opacity: '1 !important' },
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: 'transparent !important',
   },
-}))
+})
+
+const CustomNextIcon = withStyles({
+  root: {
+    fontSize: '6rem !important',
+    opacity: '1 !important',
+    color: 'white !important',
+  },
+})(NavigateNextIcon)
+
+const CustomPrevIcon = withStyles({
+  root: {
+    fontSize: '6rem !important',
+    opacity: '1 !important',
+    color: 'white !important',
+  },
+})(NavigateBeforeIcon)
 
 function CandidatesCarousel() {
   const classes = useStyles()
@@ -238,10 +256,32 @@ function CandidatesCarousel() {
   return (
     <Carousel
       navButtonsAlwaysVisible
-      autoPlay={false}
-      navButtonsProps={{
-        className: classes.customHoverFocus,
+      autoPlay
+      navButtonsProps={{ className: classes.root }}
+      indicatorIconButtonProps={{
+        style: {
+          height: '1.25rem',
+          width: '1.25rem',
+          padding: '10px',
+          border: '2px solid #312e2d',
+          color: 'transparent',
+          margin: '0 6px',
+        },
       }}
+      activeIndicatorIconButtonProps={{
+        style: {
+          backgroundColor: '#312e2d',
+        },
+      }}
+      indicatorContainerProps={{
+        style: {
+          paddingBottom: '15px',
+          marginTop: '-80px',
+        },
+
+      }}
+      NextIcon={<CustomNextIcon />}
+      PrevIcon={<CustomPrevIcon />}
     >
       { (dimensions.width <= XSMALL_WIDTH
         ? gridSlidesSmallView.map((element) => element)

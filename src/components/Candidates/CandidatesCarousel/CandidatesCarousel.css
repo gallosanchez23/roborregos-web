@@ -2,40 +2,6 @@ button:focus {
   outline: none;
 }
 
-.button-custom {
-  background-color: transparent !important;
-  opacity: 1 !important;
-  color: white !important;
-  font-size: 6rem !important;
-}
-
-.Carousel-indicators-3 {
-  margin-top: -80px !important;
-}
-
-.Carousel-indicator-4 circle {
-  color: transparent !important;
-  stroke: #312e2d;
-  stroke-width: 1px;
-}
-
-.Carousel-active-5 circle {
-  color: #312e2d !important;
-}
-
-.Carousel-button-8 {
-  background-color: transparent !important;
-}
-
-.Carousel-button-8:hover {
-   opacity: 1 !important;
-   background-color: transparent;
-}
-
-.Carousel-buttonVisible-10 {
-  opacity: 1 !important;
-}
-
 .candidates-header-img-container {
   position: absolute;
   width: 100%;
@@ -74,21 +40,12 @@ button:focus {
   background-color: #000;
 }
 
-.Carousel-buttonWrapper-6 .MuiSvgIcon-root {
-  font-size: 5rem !important;
-}
-
-.Carousel-indicators-3 .MuiSvgIcon-root {
-  font-size: 2.5rem !important;
-  padding-bottom: 10px;
-}
-
 .Carousel-text-titles {
   position: absolute;
   width: 100%;
   text-align: center;
   color: white;
-  top: 47%;
+  top: 49%;
   font-weight: bold;
   font-size: 4rem;
 }
