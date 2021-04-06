@@ -5,3 +5,13 @@
 .positions-card-container {
     justify-content: center;
 }
+
+@media(max-width: 592px) {
+    .candidates-open-positions-card {
+        margin-left: 15px;
+        margin-right: 15px;
+        height: 300px;
+        max-height: 300px;
+        max-width: 330px;
+    }
+}
