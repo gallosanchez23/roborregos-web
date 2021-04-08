@@ -21,7 +21,7 @@ import CarouselSucceed4 from '../../../images/candidates/carousel_succeed/succee
 import './CandidatesCarousel.css'
 
 const gridSlidesFullView = [
-  <div>
+  <div className="candidates-carousel-slide">
     <h1 className="Carousel-text-titles"> Learn </h1>
     <Grid className="grid-background" container spacing={1}>
       <Grid item xs={4}>
@@ -54,7 +54,7 @@ const gridSlidesFullView = [
       </Grid>
     </Grid>
   </div>,
-  <div>
+  <div className="candidates-carousel-slide">
     <h1 className="Carousel-text-titles"> Hack </h1>
     <Grid className="grid-background" container spacing={1}>
       <Grid item xs={6}>
@@ -82,7 +82,7 @@ const gridSlidesFullView = [
       </Grid>
     </Grid>
   </div>,
-  <div>
+  <div className="candidates-carousel-slide">
     <h1 className="Carousel-text-titles"> Succeed </h1>
     <Grid className="grid-background" container spacing={1}>
       <Grid item xs={8}>
@@ -118,7 +118,7 @@ const gridSlidesFullView = [
 ]
 
 const gridSlidesSmallView = [
-  <div>
+  <div className="candidates-carousel-slide">
     <h1 className="Carousel-text-titles"> Learn </h1>
     <Grid className="grid-background" container spacing={2}>
       <Grid item xs={12}>
@@ -146,7 +146,7 @@ const gridSlidesSmallView = [
       </Grid>
     </Grid>
   </div>,
-  <div>
+  <div className="candidates-carousel-slide">
     <h1 className="Carousel-text-titles"> Hack </h1>
     <Grid className="grid-background" container spacing={1}>
       <Grid item xs={12} container>
@@ -174,7 +174,7 @@ const gridSlidesSmallView = [
       </Grid>
     </Grid>
   </div>,
-  <div>
+  <div className="candidates-carousel-slide">
     <h1 className="Carousel-text-titles"> Succeed </h1>
     <Grid className="grid-background" container spacing={1}>
       <Grid item xs={12}>
@@ -255,8 +255,9 @@ function CandidatesCarousel() {
 
   return (
     <Carousel
+      className="candidates-carousel"
       navButtonsAlwaysVisible
-      autoPlay
+      autoPlay={false}
       navButtonsProps={{ className: classes.root }}
       indicatorIconButtonProps={{
         style: {
