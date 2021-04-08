@@ -2,7 +2,6 @@
 import React from 'react'
 import positionsData from '../../data/positions.json'
 import CandidatesCarousel from './CandidatesCarousel/CandidatesCarousel'
-import CandidatesInfo from './CandidatesInfo/CandidatesInfo'
 import Roles from './Roles/Roles'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 
@@ -21,7 +20,6 @@ function Candidates() {
         iconColorScheme={{ primary: '#E84B77', secondary: '#CC2759' }}
       />
       <CandidatesCarousel />
-      <CandidatesInfo />
       <Roles positionsData={positionsData} />
     </>
   )

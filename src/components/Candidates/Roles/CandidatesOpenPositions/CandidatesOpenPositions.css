@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-@media(max-width: 592px) {
+@media(max-width: 992px) {
     .candidates-open-positions-card {
         margin-left: 15px;
         margin-right: 15px;

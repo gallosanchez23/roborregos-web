@@ -7,7 +7,6 @@
   border: none;
   max-height: 280px;
   max-width: 450px;
-  padding: 3px 3px;
   margin: 0 35px 25px 35px;
   width: 47%;
   -webkit-transition: all .3s ease-in, all .3s ease-out;
@@ -123,7 +122,7 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-@media (max-width: 592px) {
+@media (max-width: 749px) {
   .candidates-card-title {
     font-size: xx-large;
     text-align: left;
