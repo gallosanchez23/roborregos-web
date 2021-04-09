@@ -1,0 +1,138 @@
+.members-values {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgb(20, 18, 19);
+  text-align: center;
+}
+
+.members-values-title {
+  position: relative;
+  padding: 4% 0 2%;
+}
+
+.members-values-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.members-values-card {
+  flex: 1;
+  padding: 20px 5.5vw 20px 5.5vw;
+  height: 75vh;
+  position: relative;
+}
+
+.members-values-card-overlay {
+  opacity: 100%;
+  background: linear-gradient(-45deg, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.members-values-card-title {
+  min-height: 100px;
+  font-size: 42px;
+  z-index: 3;
+}
+
+.members-values-card-text {
+  text-align: start;
+  font-size: 22px;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  z-index: 3;
+}
+
+.members-values-card:hover > .members-values-card-text {
+  opacity: 100%;
+  transition: opacity 0.5s ease-in;
+}
+
+.members-values-card:hover > .members-values-card-overlay {
+  opacity: 0%;
+  transition: opacity 0.3s ease-out;
+}
+
+.members-values-card:nth-child(1) {
+  background-image: url('../../../images/members/values/1.jpg');
+}
+
+.members-values-card:nth-child(2) {
+  background-image: url('../../../images/members/values/2.jpg');
+}
+
+.members-values-card:nth-child(3) {
+  background-image: url('../../../images/members/values/3.jpg');
+}
+
+@media (max-width: 1300px) {
+  .members-values-card-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .members-values-card-title {
+    min-height: 9vw;
+    font-size: 32px;
+  }
+
+  .members-values-card-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .members-values-card-title {
+    min-height: 10vw;
+    font-size: 3.4vw;
+  }
+
+  .members-values-card-text {
+    font-size: 2.2vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .members-values-container {
+    flex-direction: column;
+  }
+
+  .members-values-card {
+    min-height: 150px;
+    padding: 20px 30px 20px 30px;
+  }
+
+  .members-values-card:nth-child(odd) {
+    text-align: start;
+  }
+
+  .members-values-card:nth-child(even) {
+    text-align: end;
+    display: flex;
+    flex-direction: inherit;
+    align-items: flex-end;
+  }
+
+  .members-values-card-title {
+    font-size: 32px;
+  }
+
+  .members-values-card-text {
+    text-align: inherit;
+    word-wrap: break-word;
+    max-width: 250px;
+    font-size: 16px;
+    margin: 0;
+    opacity: 100%;
+  }
+
+  .members-values-card-overlay {
+    display: none;
+  }
+}

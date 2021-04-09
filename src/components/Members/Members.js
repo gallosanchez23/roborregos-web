@@ -2,6 +2,7 @@ import React from 'react'
 import MembersGrid from './MembersGrid/MembersGrid'
 import MembersJoinUs from './MembersJoinUs/MembersJoinUs'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
+import MembersValues from './MembersValues/MembersValues'
 
 function Members() {
   const headerTitle = 'Members'
@@ -17,6 +18,7 @@ function Members() {
         bgColorScheme={{ primary: '#005E69E6', secondary: '#141213E6' }}
         iconColorScheme={{ primary: '#00FFFA', secondary: '#C43F65' }}
       />
+      <MembersValues />
       <MembersGrid />
       <MembersJoinUs />
     </>
