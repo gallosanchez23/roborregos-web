@@ -11,6 +11,28 @@
   padding: 1.5px;
 }
 
+.members-grid-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 10% 20px 10%;
+  background: #545454;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  font-size: clamp(20px, 2.5vw ,24px);
+  color: #aaa;
+}
+
+.members-grid-search-bar-input {
+  flex-grow: 1;
+  background: inherit;
+  border: none;
+  padding: 0 10px 0 10px;
+  outline: none;
+  color: #eee;
+  text-overflow: ellipsis;
+}
+
 .grid-title {
   position: relative;
   padding: 4% 0 2%;

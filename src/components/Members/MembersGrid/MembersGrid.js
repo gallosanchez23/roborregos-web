@@ -8,7 +8,7 @@ import GridListTile from '@material-ui/core/GridListTile'
 import { Modal } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faCog, faCode, faBullhorn, faMicrochip, faRocket,
+  faCog, faCode, faBullhorn, faMicrochip, faRocket, faSearch,
 } from '@fortawesome/free-solid-svg-icons'
 import membersData from '../../../data/members.json'
 import placeholder from '../../../images/placeholder-rectangle.png'
@@ -61,6 +61,21 @@ function MembersGrid() {
   const [memberIndex, _setMemberIndex] = useState(0)
   const [active, setActive] = useState(true)
   const [gridCols, setGridCols] = useState(numberOfGridCols())
+  const [searchBarText, setSearchBarText] = useState('')
+  const [filteredMembers, setFilteredMembers] = useState([])
+
+  useEffect(() => {
+    const keywords = searchBarText.toLowerCase().split(' ')
+    setFilteredMembers(membersData.members.filter((member) => {
+      let valid = true
+      keywords.forEach((keyword) => {
+        valid = valid && (member.name.toLowerCase().includes(keyword)
+        || member.lastname.toLowerCase().includes(keyword)
+        || member.role.toLowerCase().includes(keyword))
+      })
+      return valid
+    }))
+  }, [searchBarText])
 
   const memberIndexRef = useRef(memberIndex)
 
@@ -155,6 +170,7 @@ function MembersGrid() {
                   <FontAwesomeIcon
                     icon={memberIcon(member.role)}
                     size="1x"
+                    color="#ccc"
                   />
                 </div>
               </div>
@@ -165,18 +181,34 @@ function MembersGrid() {
     </div>
   )
 
-  const memberList = active ? activeMembers : inactiveMembers
+  const memberList = (() => {
+    if (searchBarText !== '') {
+      return filteredMembers
+    }
+    return active ? activeMembers : inactiveMembers
+  })()
+
   return (
     <div className="members-grid-container" data-testid="members-grid-container">
-      { renderGridList(activeMembers, '') }
-      { renderGridList(inactiveMembers, 'RoBorregos Legacy') }
+      <div className="members-grid-search-bar">
+        <FontAwesomeIcon icon={faSearch} size="1x" />
+        <input
+          type="text"
+          className="members-grid-search-bar-input"
+          placeholder='Try  "mechanic",  "software",  "Aurora"'
+          onChange={(e) => setSearchBarText(e.target.value)}
+          value={searchBarText}
+        />
+      </div>
+      { searchBarText === '' ? (
+        [renderGridList(activeMembers, ''), renderGridList(inactiveMembers, 'RoBorregos Legacy')]
+      ) : renderGridList(filteredMembers, '')}
       <Modal
         className="modal-container"
         data-testid="modal-container"
         show={showModal}
         dialogAs={() => (
           <Carousel
-            className={`member-carrousel-${String(active)}`}
             navButtonsAlwaysVisible
             autoPlay={false}
             timeout={200}
