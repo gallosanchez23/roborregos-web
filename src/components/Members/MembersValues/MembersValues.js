@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { MOBILE_WIDTH } from '../../../constants'
+import { SMALL_WIDTH } from '../../../constants'
 import './MembersValues.css'
 
 function MembersValues() {
-  const [isViewSmall, setIsViewSmall] = useState(window.innerWidth <= MOBILE_WIDTH)
+  const [isViewSmall, setIsViewSmall] = useState(window.innerWidth <= SMALL_WIDTH)
   useEffect(() => {
     window.addEventListener('resize', () => {
-      setIsViewSmall(window.innerWidth <= MOBILE_WIDTH)
+      setIsViewSmall(window.innerWidth <= SMALL_WIDTH)
     })
   }, [])
 

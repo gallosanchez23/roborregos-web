@@ -35,13 +35,13 @@
 
 .members-values-card-title {
   min-height: 100px;
-  font-size: 42px;
+  font-size: clamp(32px, 4vw, 42px);
   z-index: 3;
 }
 
 .members-values-card-text {
   text-align: start;
-  font-size: 22px;
+  font-size: clamp(17px, 1.6vw, 22px);
   margin-top: 20px;
   opacity: 0;
   transition: opacity 0.6s ease-out;
@@ -70,37 +70,19 @@
   background-image: url('../../../images/members/values/3.jpg');
 }
 
-@media (max-width: 1300px) {
-  .members-values-card-text {
-    font-size: 18px;
-  }
-}
-
 @media (max-width: 992px) {
   .members-values-card-title {
     min-height: 9vw;
-    font-size: 32px;
-  }
-
-  .members-values-card-text {
-    font-size: 17px;
   }
 }
 
 @media (max-width: 768px) {
-  .members-values-card-title {
-    min-height: 10vw;
-    font-size: 3.4vw;
-  }
-
-  .members-values-card-text {
-    font-size: 2.2vw;
-  }
-}
-
-@media (max-width: 414px) {
   .members-values-container {
     flex-direction: column;
+  }
+
+  .members-values-card-title {
+    min-height: 40px;
   }
 
   .members-values-card {
@@ -119,15 +101,10 @@
     align-items: flex-end;
   }
 
-  .members-values-card-title {
-    font-size: 32px;
-  }
-
   .members-values-card-text {
     text-align: inherit;
     word-wrap: break-word;
     max-width: 250px;
-    font-size: 16px;
     margin: 0;
     opacity: 100%;
   }
