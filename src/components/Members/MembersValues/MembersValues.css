@@ -19,6 +19,7 @@
   padding: 20px 5.5vw 20px 5.5vw;
   height: 75vh;
   position: relative;
+  background-position: 0% 30%;
 }
 
 .members-values-card-overlay {
@@ -41,7 +42,7 @@
 
 .members-values-card-text {
   text-align: start;
-  font-size: clamp(17px, 1.6vw, 22px);
+  font-size: clamp(18px, 1.8vw, 22px);
   margin-top: 20px;
   opacity: 0;
   transition: opacity 0.6s ease-out;
@@ -74,6 +75,10 @@
   .members-values-card-title {
     min-height: 9vw;
   }
+
+  .members-values-card-text {
+    font-size: clamp(17px, 2vw, 18px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -88,6 +93,7 @@
   .members-values-card {
     min-height: 150px;
     padding: 20px 30px 20px 30px;
+    background-position: 0% 45%;
   }
 
   .members-values-card:nth-child(odd) {
