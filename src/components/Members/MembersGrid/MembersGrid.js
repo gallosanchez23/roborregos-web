@@ -10,7 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCog, faCode, faBullhorn, faMicrochip, faRocket, faSearch,
 } from '@fortawesome/free-solid-svg-icons'
-import { TrendingUpRounded } from '@material-ui/icons'
 import membersData from '../../../data/members.json'
 import placeholder from '../../../images/placeholder-rectangle.png'
 import { LARGE_WIDTH, MEDIUM_WIDTH, MOBILE_WIDTH } from '../../../constants'
@@ -120,6 +119,13 @@ function MembersGrid() {
     _setMemberIndex(index)
   }
 
+  const memberList = (() => {
+    if (searchBarText !== '') {
+      return filteredMembers
+    }
+    return active ? activeMembers : inactiveMembers
+  })()
+
   useEffect(() => {
     const updateGridCols = () => {
       setGridCols(numberOfGridCols())
@@ -131,14 +137,12 @@ function MembersGrid() {
       }
       if (event.keyCode === 37) {
         if (memberIndexRef.current === 0) {
-          const listLenght = active ? activeMembers.length : inactiveMembers.length
-          setMemberIndex(listLenght - 1)
+          setMemberIndex(memberList.length - 1)
         } else {
           setMemberIndex(memberIndexRef.current - 1)
         }
       } else if (event.keyCode === 39) {
-        const listLenght = active ? activeMembers.length : inactiveMembers.length
-        setMemberIndex((memberIndexRef.current + 1) % listLenght)
+        setMemberIndex((memberIndexRef.current + 1) % memberList.length)
       }
     }
 
@@ -149,7 +153,7 @@ function MembersGrid() {
       window.removeEventListener('resize', updateGridCols)
       document.removeEventListener('keydown', keyListener)
     }
-  }, [])
+  }, [memberList])
 
   const memberIcon = (role: string) => {
     if (role === 'Software Development') {
@@ -217,13 +221,6 @@ function MembersGrid() {
     </div>
   )
 
-  const memberList = (() => {
-    if (searchBarText !== '') {
-      return filteredMembers
-    }
-    return active ? activeMembers : inactiveMembers
-  })()
-
   return (
     <div className="members-grid-container" data-testid="members-grid-container">
       <div className="members-grid-search-bar">
@@ -259,6 +256,7 @@ function MembersGrid() {
                 <MemberModal
                   member={member}
                   onHide={() => setShowModal(false)}
+                  key={member.id}
                 />
               ))
             }
