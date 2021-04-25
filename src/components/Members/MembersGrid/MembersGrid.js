@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCog, faCode, faBullhorn, faMicrochip, faRocket, faSearch,
 } from '@fortawesome/free-solid-svg-icons'
+import { TrendingUpRounded } from '@material-ui/icons'
 import membersData from '../../../data/members.json'
 import placeholder from '../../../images/placeholder-rectangle.png'
 import { LARGE_WIDTH, MEDIUM_WIDTH, MOBILE_WIDTH } from '../../../constants'
@@ -64,16 +65,51 @@ function MembersGrid() {
   const [searchBarText, setSearchBarText] = useState('')
   const [filteredMembers, setFilteredMembers] = useState([])
 
+  const extendKeywordSearch = (keywords: [string], index: number, field: string) => {
+    let i = index
+    if (i + 1 < keywords.length) {
+      let j = i + 1
+      let substr = `${keywords[i]} ${keywords[j]}`
+      while (j < keywords.length && field.toLowerCase().startsWith(substr)) {
+        substr += ` ${keywords[j]}`
+        j++
+      }
+      i = j - 1
+    }
+    return i
+  }
+
   useEffect(() => {
     const keywords = searchBarText.toLowerCase().split(' ')
     setFilteredMembers(membersData.members.filter((member) => {
-      let valid = true
-      keywords.forEach((keyword) => {
-        valid = valid && (member.name.toLowerCase().includes(keyword)
-        || member.lastname.toLowerCase().includes(keyword)
-        || member.role.toLowerCase().includes(keyword))
-      })
-      return valid
+      let name = true; let lastname = true; let role = true
+      for (let i = 0; i < keywords.length; i++) {
+        if (name && member.name.toLowerCase().startsWith(keywords[i])) {
+          i = extendKeywordSearch(keywords, i, member.name)
+          name = false
+        } else if (lastname && member.lastname.toLowerCase().startsWith(keywords[i])) {
+          i = extendKeywordSearch(keywords, i, member.lastname)
+          lastname = false
+        } else if (role && member.role.toLowerCase().startsWith(keywords[i])) {
+          i = extendKeywordSearch(keywords, i, member.role)
+          role = false
+        } else {
+          const tags = member.tags.toLowerCase().split(', ')
+          let matchTag = false
+          let k = i
+          for (let j = 0; j < tags.length; j++) {
+            if (tags[j].startsWith(keywords[i])) {
+              k = Math.max(extendKeywordSearch(keywords, i, tags[j]), k)
+              matchTag = true
+            }
+          }
+          i = k
+          if (!matchTag) {
+            return false
+          }
+        }
+      }
+      return true
     }))
   }, [searchBarText])
 
