@@ -1,8 +1,7 @@
 // @flow
 import React, { useState } from 'react'
 import competitionsData from '../../data/competitions.json'
-import sponsorsData from '../../data/sponsors.json'
-import ContactSponsorUs from './ContactSponsorUs/ContactSponsorUs'
+import SponsorPackages from './SponsorPackages/SponsorPackages'
 import SupportUsCompetitions from './SupportUsCompetitions/SupportUsCompetitions'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 import SupportUsTypes from './SupportUsTypes/SupportUsTypes'
@@ -12,6 +11,7 @@ const Contact = () => {
   const headerTitle = ['Apóyanos', 'Support us']
   const headerMainText = [['Te gustaría apoyarnos? Colabora con nosotros!'], ['Would you like to support RoBorregos? Let’s collaborate!']]
   const headerSubText = [['Ver más'], ['Learn More']]
+  const buttonText = ['Contáctanos', 'Contact Us!']
 
   document.title = 'RoBorregos | Support us'
 
@@ -26,7 +26,7 @@ const Contact = () => {
         bgColorScheme={{ primary: '#6A2C94E6', secondary: '#141213E6' }}
         iconColorScheme={{ primary: '#6A2C94', secondary: '#CB6CE6' }}
         additionalButton={{
-          text: 'Contact Us!',
+          text: buttonText[language],
           bgColor: '#000000',
           borderColor: '#CB6CE6',
           onClick() {
@@ -43,7 +43,7 @@ const Contact = () => {
         ES/EN
       </button>
       <SupportUsTypes language={language} />
-      <ContactSponsorUs packages={sponsorsData.packages} language={language} />
+      <SponsorPackages language={language ? 'en' : 'es'} />
       <SupportUsCompetitions competitions={competitionsData.competitions} language={language} />
     </>
   )
