@@ -159,13 +159,12 @@ hr {
 }
 
 .go-send-email-button {
-  padding: 0;
+  padding-bottom: 5vh;
 }
 
 .go-send-email-icon {
   font-size: 5vh;
   color: #CB6CE6;
-  padding: 0;
 }
 
 .go-send-email-icon:hover {

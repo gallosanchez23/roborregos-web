@@ -41,6 +41,8 @@ function SupportUsTypes({ language }: Props) {
     },
   ]
 
+  const button_description = ['Ver paquetes', 'See packages']
+
   /**
   Function to scroll down the window view towards the sponsor packages.
   */
@@ -94,7 +96,7 @@ function SupportUsTypes({ language }: Props) {
           <Fade in {...{ timeout: 1500 }}>
             <div className="see-packages-button">
               <p>
-                See packages
+                {button_description[language]}
               </p>
               <FontAwesomeIcon
                 onClick={scrollToPackages}

@@ -26,8 +26,8 @@ const email_button = { es: 'Envíanos un email!', en: 'Send us an email!' }
 
 const SponsorPackages = (props: Props) => {
   const { language } = props
-  const scrollToPackages = () => {
-    window.scrollBy(0, window.innerHeight * 2 - (85 * 1) - window.scrollY)
+  const scrollToMailForm = () => {
+    document.getElementById('send-email').scrollIntoView({ block: 'end' })
   }
   return (
     <div className="contact-sponsor-us">
@@ -79,7 +79,7 @@ const SponsorPackages = (props: Props) => {
           {email_button[language]}
           <br />
           <FontAwesomeIcon
-            onClick={scrollToPackages}
+            onClick={scrollToMailForm}
             icon={faAngleDown}
             className="go-send-email-icon"
           />

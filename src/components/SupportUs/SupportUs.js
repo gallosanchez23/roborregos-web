@@ -5,6 +5,7 @@ import SponsorPackages from './SponsorPackages/SponsorPackages'
 import SupportUsCompetitions from './SupportUsCompetitions/SupportUsCompetitions'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 import SupportUsTypes from './SupportUsTypes/SupportUsTypes'
+import SendEmail from './SendEmail/SendEmail'
 import './SupportUs.css'
 
 const Contact = () => {
@@ -31,7 +32,7 @@ const Contact = () => {
           borderColor: '#CB6CE6',
           onClick() {
             // TODO chang thise to new contact us section
-            window.scrollBy(0, window.innerHeight - 48 - window.scrollY)
+            document.getElementById('send-email').scrollIntoView({ block: 'end' })
           },
         }}
       />
@@ -44,6 +45,7 @@ const Contact = () => {
       </button>
       <SupportUsTypes language={language} />
       <SponsorPackages language={language ? 'en' : 'es'} />
+      <SendEmail language={language} />
       <SupportUsCompetitions competitions={competitionsData.competitions} language={language} />
     </>
   )
