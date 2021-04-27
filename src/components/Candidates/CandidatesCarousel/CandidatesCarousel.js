@@ -231,7 +231,23 @@ const CustomPrevIcon = withStyles({
   },
 })(NavigateBeforeIcon)
 
-function CandidatesCarousel() {
+const CustomNextIconSM = withStyles({
+  root: {
+    fontSize: '4rem !important',
+    opacity: '1 !important',
+    color: 'white !important',
+  },
+})(NavigateNextIcon)
+
+const CustomPrevIconSM = withStyles({
+  root: {
+    fontSize: '4rem !important',
+    opacity: '1 !important',
+    color: 'white !important',
+  },
+})(NavigateBeforeIcon)
+
+const CandidatesCarousel = () => {
   const classes = useStyles()
 
   const [dimensions, setDimensions] = React.useState({
@@ -279,10 +295,11 @@ function CandidatesCarousel() {
           paddingBottom: '15px',
           marginTop: '-80px',
         },
-
       }}
-      NextIcon={<CustomNextIcon />}
-      PrevIcon={<CustomPrevIcon />}
+      NextIcon={(dimensions.width <= XSMALL_WIDTH
+        ? <CustomNextIconSM /> : <CustomNextIcon />)}
+      PrevIcon={(dimensions.width <= XSMALL_WIDTH
+        ? <CustomPrevIconSM /> : <CustomPrevIcon />)}
     >
       { (dimensions.width <= XSMALL_WIDTH
         ? gridSlidesSmallView.map((element) => element)
