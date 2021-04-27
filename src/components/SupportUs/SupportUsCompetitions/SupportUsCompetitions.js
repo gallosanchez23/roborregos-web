@@ -3,6 +3,7 @@ import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import placeholder from '../../../images/placeholder-rectangle.png'
 import './SupportUsCompetitions.css'
+import competitionsData from '../../../data/competitions.json'
 
 type CompetitionType = {
   name: string,
@@ -11,7 +12,6 @@ type CompetitionType = {
 };
 
 type Props = {
-  competitions: Array<CompetitionType>,
   language: number
 };
 
@@ -26,7 +26,9 @@ const tryRequire = (img_path: string) => {
 
 const description = ['Todo el apoyo va para el desarrollo de los siguientes proyectos:', 'Our sponsors team is part of our development in the following projects:']
 
-function ContactCompetitions({ competitions, language }: Props) {
+const { competitions } = competitionsData
+
+function ContactCompetitions({ language }: Props) {
   return (
     <Row className="contact-competitions-container">
       <Col xs="10">

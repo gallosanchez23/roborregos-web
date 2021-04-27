@@ -5,6 +5,7 @@ import './SendEmail.css'
 import {
   makeStyles,
   withStyles,
+  createStyles,
 } from '@material-ui/core/styles'
 import FormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
@@ -15,14 +16,13 @@ import AccountCircle from '@material-ui/icons/AccountCircle'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import TextField from '@material-ui/core/TextField'
 import Checkbox from '@material-ui/core/Checkbox'
-import teal from '@material-ui/core/colors/purple'
 import sendJoinEmail from '../../../scripts/apiScripts'
 
 type Props = {
   language: number
 };
 
-const useStyles = makeStyles((theme) => ({
+const styles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
@@ -30,44 +30,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const styles = {
-  'input-label': {
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    width: '100%',
-    color: 'red',
-  },
-
-  input: {
-    '&::placeholder': {
-      textOverflow: 'ellipsis !important',
-      color: 'blue',
-    },
-  },
-}
-
 const FormTextField = withStyles({
   root: {
-    color: 'blue',
-    borderColor: '#6A2C94',
     backgroundColor: 'white',
-    'input-label': {
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      width: '100%',
-      color: 'red',
+    '& input:valid:focus + fieldset': {
+      borderColor: '#6A2C94',
     },
-    '&::placeholder': {
-      textOverflow: 'ellipsis !important',
-      color: 'blue',
+    '& .MuiTextField-root': {
+      borderColor: '#6A2C94',
     },
-    input: {
-      '&::placeholder': {
-        textOverflow: 'ellipsis !important',
-        color: 'blue',
-      },
+    '& .MuiInputLabel-root': {
+      color: '#6A2C94',
     },
     '& .MuiOutlinedInput-root': {
       height: '9vh',
@@ -77,44 +50,21 @@ const FormTextField = withStyles({
       '&:hover fieldset': {
         borderColor: '#6A2C94',
       },
-      '&:focused fieldset': {
-        borderColor: '#6A2C94',
-      },
-      '&::placeholder': {
-        textOverflow: 'ellipsis !important',
-        color: 'blue',
-      },
-      input: {
-        '&::placeholder': {
-          textOverflow: 'ellipsis !important',
-          color: 'blue',
-        },
-      },
     },
   },
 })(TextField)
 
 const MultipleLineFormTextField = withStyles({
   root: {
-    color: 'blue',
-    borderColor: '#6A2C94',
     backgroundColor: 'white',
-    'input-label': {
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      width: '100%',
-      color: 'red',
+    '& input:valid:focus + fieldset': {
+      borderColor: '#6A2C94',
     },
-    '&::placeholder': {
-      textOverflow: 'ellipsis !important',
-      color: 'blue',
+    '& .MuiTextField-root': {
+      borderColor: '#6A2C94',
     },
-    input: {
-      '&::placeholder': {
-        textOverflow: 'ellipsis !important',
-        color: 'blue',
-      },
+    '&:valid:focus + fieldset': {
+      borderColor: '#6A2C94',
     },
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
@@ -122,19 +72,6 @@ const MultipleLineFormTextField = withStyles({
       },
       '&:hover fieldset': {
         borderColor: '#6A2C94',
-      },
-      '&:focused fieldset': {
-        borderColor: '#6A2C94',
-      },
-      '&::placeholder': {
-        textOverflow: 'ellipsis !important',
-        color: 'blue',
-      },
-      input: {
-        '&::placeholder': {
-          textOverflow: 'ellipsis !important',
-          color: 'blue',
-        },
       },
     },
   },
@@ -148,6 +85,12 @@ const SendCopyCheckbox = withStyles({
   },
   checked: {},
 })((props) => <Checkbox color="default" {...props} />)
+
+const inputStyle = {
+  fontFamily: 'Open Sans',
+  fontSize: '18.9px',
+  color: 'red',
+}
 
 function SendEmail({ language }: Props) {
   const title_send_email = ['Con tu ayuda podemos llegar más lejos.', 'With your help we can achieve more.']
@@ -170,10 +113,6 @@ function SendEmail({ language }: Props) {
   const [message, setMessage] = useState('')
   const [sendCopy, setCopy] = useState(false)
 
-  const handleSubmit = () => {
-    alert('Submitting message!')
-  }
-
   const handleChangeName = (event) => {
     setName(event.target.value)
   }
@@ -194,6 +133,43 @@ function SendEmail({ language }: Props) {
     setCopy(event.target.checked)
   }
 
+  const createMail = () => {
+    const emailBody = `Name: ${name}\n
+      Phone number: ${phone}\n
+      Email: ${email}\n
+      ${message}\n
+      Send copy: ${sendCopy}`
+    return ({
+      message: emailBody,
+      from_name: name,
+      reply_to: email,
+      sendCopy,
+    })
+  }
+
+  const handleSubmit = (event: SyntheticEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+    if (name !== '' && email !== '' && phone !== '' && message !== '') {
+      const mailParams = createMail()
+      sendJoinEmail(mailParams).then((result) => {
+        if (result.status === 200) {
+          // eslint-disable-next-line no-alert
+          alert('Thanks for your interest! \nCheck your Tec email \n')
+          // TODO: delete values of formulary
+        } else {
+          throw new Error('Email-Server Error, Retry Later')
+        }
+      }, (error) => {
+        // eslint-disable-next-line no-alert
+        alert(`Something went wrong! \n${error.text}`)
+      })
+      alert(mailParams.message)
+    } else {
+      alert('Please fill all areas of the formulary.')
+      // TODO: put error in formulary
+    }
+  }
+
   return (
     <Row id="send-email">
       <Col xs="12" md="6" className="send-email-phrase">
@@ -203,26 +179,20 @@ function SendEmail({ language }: Props) {
       </Col>
       <Col xs="12" md="6" className="send-email-form">
         <div className="form-container">
-          {/* <form className={classes.root} noValidate autoComplete="off" onSubmit={() => handleSubmit()} /> */}
           <Row className="send-email-title">
             {forms[0][language]}
           </Row>
           <Row className="form-input-container">
             <FormTextField
-              id="outlined-helperText"
-              // label={forms[1][language]}
               variant="outlined"
-              placeholder={forms[1][language]}
+              label={forms[1][language]}
               onChange={handleChangeName}
               fullWidth
-              InputProps={{ classes: { input: classes.input } }}
             />
           </Row>
           <Row className="form-input-container">
             <FormTextField
-              id="outlined-helperText"
-              // label="Email"
-              placeholder="Email"
+              label="Email"
               variant="outlined"
               onChange={handleChangeEmail}
               fullWidth
@@ -230,17 +200,15 @@ function SendEmail({ language }: Props) {
           </Row>
           <Row className="form-input-container">
             <FormTextField
-              id="outlined-helperText"
-              // label={forms[3][language]}
-              placeholder={forms[3][language]}
+              label={forms[3][language]}
               variant="outlined"
               onChange={handleChangePhone}
               fullWidth
+              className="SelectOptionsDropDown"
             />
           </Row>
           <Row>
             <MultipleLineFormTextField
-              id="outlined-multiline-static"
               multiline
               rows={4}
               variant="outlined"
@@ -258,7 +226,14 @@ function SendEmail({ language }: Props) {
             </div>
           </Row>
           <Row className="mt-4 mb-1 justify-content-center">
-            <Button className="mr-4 col-3 join form-button-submit" type="submit" value="submit">{forms[6][language]}</Button>
+            <Button
+              className="mr-4 col-3 join form-button-submit"
+              type="submit"
+              value="submit"
+              onClick={handleSubmit}
+            >
+              {forms[6][language]}
+            </Button>
           </Row>
         </div>
       </Col>

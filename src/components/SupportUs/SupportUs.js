@@ -1,6 +1,5 @@
 // @flow
 import React, { useState } from 'react'
-import competitionsData from '../../data/competitions.json'
 import SponsorPackages from './SponsorPackages/SponsorPackages'
 import SupportUsCompetitions from './SupportUsCompetitions/SupportUsCompetitions'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
@@ -46,7 +45,7 @@ const Contact = () => {
       <SupportUsTypes language={language} />
       <SponsorPackages language={language ? 'en' : 'es'} />
       <SendEmail language={language} />
-      <SupportUsCompetitions competitions={competitionsData.competitions} language={language} />
+      <SupportUsCompetitions language={language} />
     </>
   )
 }
