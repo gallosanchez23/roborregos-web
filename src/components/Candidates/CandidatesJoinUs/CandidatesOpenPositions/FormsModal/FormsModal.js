@@ -23,7 +23,7 @@ type State = {
 };
 
 class FormsModal extends Component<Props> {
-  recaptchaRef = React.createRef();
+  recaptchaRef: React.RefObject<HTMLElement> = React.createRef();
 
   name: HTMLInputElement;
 
@@ -61,6 +61,7 @@ class FormsModal extends Component<Props> {
           // eslint-disable-next-line no-alert
           alert('Thanks for your interest! \nCheck your Tec email \n')
         } else {
+          // eslint-disable-next-line no-alert
           alert(`Something went wrong! \nEmail-Server Error, Retry Later`)
         }
       }, (error) => {
@@ -82,6 +83,7 @@ class FormsModal extends Component<Props> {
   handleReCaptcha = (event: SyntheticEvent<HTMLButtonElement>) => {
     event.preventDefault()
     const recaptchaRef = this.recaptchaRef.current;
+    recaptchaRef.reset();
     recaptchaRef.execute();
   }
 
@@ -128,7 +130,7 @@ class FormsModal extends Component<Props> {
             { greeting }
           </ModalHeader>
           <ModalBody>
-            <Form onSubmit={this.handleReCaptcha} className={this.state.isLoading ? 'formLoading' : ''}>
+            <Form className={this.state.isLoading ? 'formLoading' : ''}>
               <Row>
                 <FormGroup className="col-md-6">
                   <Label>Name</Label>
@@ -195,7 +197,7 @@ class FormsModal extends Component<Props> {
                 {' '}
               </>
               <Row className="mt-4 mb-1 justify-content-center">
-                <Button className="mr-4 col-3 join" type="submit" value="submit" disabled={this.state.isLoading}>Join!</Button>
+                <Button className="mr-4 col-3 join" type="button" onClick={this.handleReCaptcha} disabled={this.state.isLoading}>Join!</Button>
               </Row>
             </Form>
             <div className={`loadingSymbol ${this.state.isLoading ? '' : 'd-none'}`}>
