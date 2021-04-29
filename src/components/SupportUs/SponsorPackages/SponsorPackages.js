@@ -19,7 +19,7 @@ type PackageType = {
 };
 
 type Props = {
-  language: number
+  language: string
 };
 
 const email_button = { es: 'Envíanos un email!', en: 'Send us an email!' }
@@ -27,7 +27,10 @@ const email_button = { es: 'Envíanos un email!', en: 'Send us an email!' }
 const SponsorPackages = (props: Props) => {
   const { language } = props
   const scrollToMailForm = () => {
-    document.getElementById('send-email').scrollIntoView({ block: 'end' })
+    const forms = document.getElementById('send-email')
+    if (forms !== null) {
+      forms.scrollIntoView({ block: 'end' })
+    }
   }
   return (
     <div className="contact-sponsor-us">
@@ -37,7 +40,6 @@ const SponsorPackages = (props: Props) => {
             xs="10"
             md="6"
             lg="3"
-                // className="mt-4"
             className="package-column"
             key={id}
             test-id={id}

@@ -30,8 +30,10 @@ const Contact = () => {
           bgColor: '#000000',
           borderColor: '#CB6CE6',
           onClick() {
-            // TODO chang thise to new contact us section
-            document.getElementById('send-email').scrollIntoView({ block: 'end' })
+            const forms = document.getElementById('send-email')
+            if (forms !== null) {
+              forms.scrollIntoView({ block: 'end' })
+            }
           },
         }}
       />

@@ -129,8 +129,7 @@ function SendEmail({ language }: Props) {
     const emailBody = `Name: ${name}\n
       Phone number: ${phone}\n
       Email: ${email}\n
-      ${message}\n
-      Send copy: ${sendCopy}`
+      ${message}`
     return ({
       message: emailBody,
       from_name: name,
