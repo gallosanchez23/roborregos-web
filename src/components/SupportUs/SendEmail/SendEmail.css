@@ -1,6 +1,6 @@
 .send-email-form {
       background-color: #D9D9D9;
-      padding: 10vh 10vw 5vh 5vw;
+      padding: 7vh 10vw 5vh 5vw;
       height: 95vh;
 }
 
@@ -25,11 +25,6 @@
 .send-email-title {
       font-size: 3vh;
       padding-bottom: 2vh;
-}
-
-.form-input-container {
-      padding-bottom: 2vh;
-      width: 100%;
 }
 
 .form-button-submit {

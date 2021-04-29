@@ -1,38 +1,17 @@
 // @flow
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Row, Col, Button } from 'reactstrap'
 import './SendEmail.css'
-import {
-  makeStyles,
-  withStyles,
-  createStyles,
-} from '@material-ui/core/styles'
-import FormControl from '@material-ui/core/FormControl'
-import FormHelperText from '@material-ui/core/FormHelperText'
-import Input from '@material-ui/core/Input'
-import InputLabel from '@material-ui/core/InputLabel'
-import OutlinedInput from '@material-ui/core/OutlinedInput'
-import AccountCircle from '@material-ui/icons/AccountCircle'
-import InputAdornment from '@material-ui/core/InputAdornment'
+import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Checkbox from '@material-ui/core/Checkbox'
-import sendJoinEmail from '../../../scripts/apiScripts'
 
 type Props = {
   language: number
 };
 
-const styles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-  },
-}))
-
 const FormTextField = withStyles({
   root: {
-    backgroundColor: 'white',
     '& input:valid:focus + fieldset': {
       borderColor: '#6A2C94',
     },
@@ -43,6 +22,7 @@ const FormTextField = withStyles({
       color: '#6A2C94',
     },
     '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
       height: '9vh',
       '& fieldset': {
         borderColor: '#6A2C94',
@@ -56,7 +36,6 @@ const FormTextField = withStyles({
 
 const MultipleLineFormTextField = withStyles({
   root: {
-    backgroundColor: 'white',
     '& input:valid:focus + fieldset': {
       borderColor: '#6A2C94',
     },
@@ -67,6 +46,7 @@ const MultipleLineFormTextField = withStyles({
       borderColor: '#6A2C94',
     },
     '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
       '& fieldset': {
         borderColor: '#6A2C94',
       },
@@ -84,13 +64,7 @@ const SendCopyCheckbox = withStyles({
     },
   },
   checked: {},
-})((props) => <Checkbox color="default" {...props} />)
-
-const inputStyle = {
-  fontFamily: 'Open Sans',
-  fontSize: '18.9px',
-  color: 'red',
-}
+})(Checkbox)
 
 function SendEmail({ language }: Props) {
   const title_send_email = ['Con tu ayuda podemos llegar más lejos.', 'With your help we can achieve more.']
@@ -105,28 +79,46 @@ function SendEmail({ language }: Props) {
     ['Enviar', 'Send'],
   ]
 
-  const classes = styles
+  const helperText = ['Favor de llenar este campo', 'Please fill this textfield']
+  const paddingError = ['0vh', '3.3vh']
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
   const [sendCopy, setCopy] = useState(false)
+  const [error, setError] = useState([false, false, false, false])
 
   const handleChangeName = (event) => {
     setName(event.target.value)
+    if (event.target.value !== '') {
+      error[0] = false
+      setError(error)
+    }
   }
 
   const handleChangeEmail = (event) => {
     setEmail(event.target.value)
+    if (event.target.value !== '') {
+      error[1] = false
+      setError(error)
+    }
   }
 
   const handleChangePhone = (event) => {
     setPhone(event.target.value)
+    if (event.target.value !== '') {
+      error[2] = false
+      setError(error)
+    }
   }
 
   const handleChangeMessage = (event) => {
     setMessage(event.target.value)
+    if (event.target.value !== '') {
+      error[3] = false
+      setError(error)
+    }
   }
 
   const handleChangeCheckBox = (event) => {
@@ -143,7 +135,7 @@ function SendEmail({ language }: Props) {
       message: emailBody,
       from_name: name,
       reply_to: email,
-      sendCopy,
+      send_copy: sendCopy,
     })
   }
 
@@ -151,22 +143,21 @@ function SendEmail({ language }: Props) {
     event.preventDefault()
     if (name !== '' && email !== '' && phone !== '' && message !== '') {
       const mailParams = createMail()
-      sendJoinEmail(mailParams).then((result) => {
-        if (result.status === 200) {
-          // eslint-disable-next-line no-alert
-          alert('Thanks for your interest! \nCheck your Tec email \n')
-          // TODO: delete values of formulary
-        } else {
-          throw new Error('Email-Server Error, Retry Later')
-        }
-      }, (error) => {
-        // eslint-disable-next-line no-alert
-        alert(`Something went wrong! \n${error.text}`)
-      })
-      alert(mailParams.message)
+      // TODO: Send email
+      // eslint-disable-next-line no-alert
+      alert(`Thanks for your interest! \nCheck your Tec email \n${mailParams.message}`)
+      setName('')
+      setEmail('')
+      setPhone('')
+      setMessage('')
+      setCopy(false)
     } else {
-      alert('Please fill all areas of the formulary.')
-      // TODO: put error in formulary
+      const errors = [false, false, false]
+      if (name === '') { errors[0] = true }
+      if (email === '') { errors[1] = true }
+      if (phone === '') { errors[2] = true }
+      if (message === '') { errors[3] = true }
+      setError(errors)
     }
   }
 
@@ -182,32 +173,41 @@ function SendEmail({ language }: Props) {
           <Row className="send-email-title">
             {forms[0][language]}
           </Row>
-          <Row className="form-input-container">
+          <Row style={{ paddingBottom: error[0] ? paddingError[0] : paddingError[1] }}>
             <FormTextField
               variant="outlined"
               label={forms[1][language]}
               onChange={handleChangeName}
               fullWidth
+              value={name}
+              error={error[0]}
+              helperText={error[0] ? helperText[language] : ''}
             />
           </Row>
-          <Row className="form-input-container">
+          <Row style={{ paddingBottom: error[1] ? paddingError[0] : paddingError[1] }}>
             <FormTextField
               label="Email"
               variant="outlined"
               onChange={handleChangeEmail}
               fullWidth
+              value={email}
+              error={error[1]}
+              helperText={error[1] ? helperText[language] : ''}
             />
           </Row>
-          <Row className="form-input-container">
+          <Row style={{ paddingBottom: error[2] ? paddingError[0] : paddingError[1] }}>
             <FormTextField
               label={forms[3][language]}
               variant="outlined"
               onChange={handleChangePhone}
               fullWidth
               className="SelectOptionsDropDown"
+              value={phone}
+              error={error[2]}
+              helperText={error[2] ? helperText[language] : ''}
             />
           </Row>
-          <Row>
+          <Row style={{ paddingBottom: error[3] ? paddingError[0] : paddingError[1] }}>
             <MultipleLineFormTextField
               multiline
               rows={4}
@@ -215,11 +215,15 @@ function SendEmail({ language }: Props) {
               placeholder={forms[4][language]}
               onChange={handleChangeMessage}
               fullWidth
+              value={message}
+              error={error[3]}
+              helperText={error[3] ? helperText[language] : ''}
             />
           </Row>
           <Row>
             <SendCopyCheckbox
               onChange={handleChangeCheckBox}
+              checked={sendCopy}
             />
             <div className="checkbox-description">
               {forms[5][language]}
