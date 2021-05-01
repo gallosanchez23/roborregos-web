@@ -8,7 +8,7 @@
 }
 
 .type-container {
-    padding-top: 7vh;
+    padding-top: 3vh;
     padding-bottom: 3vh;
     padding-right: 5vw;
     padding-left: 5vw;
@@ -73,6 +73,10 @@
 }
 
 @media (max-width: 991px) {
+    .type-container {
+        height: 30vh;
+    }
+
     .supportUs-container {
         position: static;
         height: fit-content;
@@ -85,14 +89,15 @@
     }
 
     .supportUs-description {
-        font-size: 4vw;
+        font-size: 2vh;
         padding-left: 2vw;
         padding-right: 2vw;
         margin: auto;
     }
 
     .supportUs-image {
-        width: 100%;
+        height: 17vh;
+        width: 17vh;
     }
 
     .supportUs-title {

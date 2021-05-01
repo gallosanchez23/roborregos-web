@@ -33,8 +33,8 @@ function SupportUsTypes({ language }: Props) {
     },
     {
       title: ['Regalos', 'Gifts'],
-      description: ['Desde boletos de avión hasta materiales mecánicos y software, estos bienes y servicios son vitales para que podamos desarrollar nuevas tecnologías.',
-        'From airline tickets to mechanical materials and software, these goods and services are vital for developing new technologies.'],
+      description: ['Desde boletos de avión hasta materiales mecánicos, estos bienes y servicios son vitales para desarrollar nuevas tecnologías.',
+        'From airline tickets to mechanical materials, these goods and services are vital for developing new technologies.'],
       img: gifts,
       color: '#FF914D',
       link: '',
