@@ -1,13 +1,13 @@
 .contact-sponsor-us {
   background: url(../../../images/github_pattern.svg) top left/auto repeat fixed #1C2329;
   color: white;
-  padding-top: 3vh;
+  padding-top: 5vh;
   text-align: center;
-  min-height: 100%;
+  min-height: 95vh;
 }
 
 .package-column {
-  padding: 0 3vw 3vh 2vw;
+  padding: 0 3vw 3vh 0;
   min-height: 100%;
 }
 
@@ -152,12 +152,6 @@ hr {
   padding: 10px;
 }
 
-@media (min-width: 1500px) {
-  .package-card-footer img {
-    width: 70%
-  }
-}
-
 .go-send-email-button {
   padding-bottom: 5vh;
 }
@@ -170,4 +164,21 @@ hr {
 .go-send-email-icon:hover {
   color: #FFDE59;
   cursor: pointer;
+}
+
+@media (min-width: 1500px) {
+  .package-card-footer img {
+    width: 70%
+  }
+}
+
+@media (min-width: 992px) {
+  .benefit-container {
+    margin-bottom: 0;
+  }
+
+  .package-column {
+    padding-bottom: 0;
+    height: 70vh;
+  }
 }
