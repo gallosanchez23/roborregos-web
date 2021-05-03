@@ -48,7 +48,7 @@ const SponsorPackages = (props: Props) => {
               className="packages-card"
             >
               <Card.Body>
-                <h4>
+                <h4 className="package-title">
                   { pkg.name }
                 </h4>
                 <hr />
@@ -66,7 +66,7 @@ const SponsorPackages = (props: Props) => {
                 </Row>
                 <Row className="justify-content-center mt-4 package-card-footer">
                   <Col xs="4" className="no-padding"><hr /></Col>
-                  <Col xs="3" className="no-padding">
+                  <Col xs="4" className="no-padding">
                     <img src={logo} alt="Logo" />
                   </Col>
                   <Col xs="4" className="no-padding"><hr /></Col>

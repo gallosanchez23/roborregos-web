@@ -8,15 +8,15 @@
 
 .package-column {
   padding: 0 3vw 3vh 0;
-  min-height: 100%;
+  height: fit-content;
 }
 
 .packages-card {
   height: 100%;
   background-color: #13191E;
   border-radius: 6px;
+  padding: 0 0.7vw;
   border: none;
-  padding-bottom: 40px;
   background-repeat: no-repeat;
   background-image:   linear-gradient(to right, #CB6CE6 100%, #CB6CE6 100%),
                       linear-gradient(to bottom, #CB6CE6 100%, #CB6CE6 100%),
@@ -34,11 +34,9 @@
 }
 
 .Background-card{
-  height: 100%;
   background-color: #13191E;
   border-radius: 6px;
   border: 5px #13191E;
-  padding-bottom: 40px;
 }
 
 @keyframes bg {
@@ -117,43 +115,44 @@ hr {
   border-color: white !important;
 }
 
-.sponsor-package-content-container {
-  padding-bottom: 10%;
+.package-title {
+  font-size: 2vw;
 }
 
 .benefit-container {
   display: flex;
   flex-direction: row;
   text-align: left;
-  margin-bottom: 10px;
+  padding-bottom: 1vh;
+  width: 100%;
 }
 
 .benefit-icon {
   color: #CB6CE6;
-  font-size: 100%;
+  font-size: 1.5vw;
+  padding-right: 1vw;
 }
 
 .benefit-text {
-  font-size: 90%;
+  font-size: 1vw;
 }
 
 .package-card-footer {
   display: flex;
   position: absolute;
-  bottom: 7px;
-  left: 0px;
-}
-
-.package-card-footer img {
+  bottom: 1px;
+  left: 0%;
+  padding: 0 1vw 2vh 1vw;
   width: 100%;
 }
 
-.package-card-footer .no-padding {
-  padding: 10px;
+.package-card-footer img {
+  height: 6vh;
 }
 
 .go-send-email-button {
-  padding-bottom: 5vh;
+  padding: 0 3vw 5vh 0;
+  font-size: 3vh;
 }
 
 .go-send-email-icon {
@@ -166,12 +165,6 @@ hr {
   cursor: pointer;
 }
 
-@media (min-width: 1500px) {
-  .package-card-footer img {
-    width: 70%
-  }
-}
-
 @media (min-width: 992px) {
   .benefit-container {
     margin-bottom: 0;
@@ -180,5 +173,20 @@ hr {
   .package-column {
     padding-bottom: 0;
     height: 70vh;
+  }
+}
+
+@media (max-width: 991px) {
+  .package-card-footer {
+    position: relative;
+  }
+
+  .package-title {
+    font-size: 3vh;
+  }
+
+  .package-card-footer img {
+    width: 10vw;
+    height: auto;
   }
 }
