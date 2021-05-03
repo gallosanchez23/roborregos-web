@@ -152,7 +152,7 @@ hr {
 
 .go-send-email-button {
   padding: 0 3vw 5vh 0;
-  font-size: 3vh;
+  font-size: 2.3vh;
 }
 
 .go-send-email-icon {
@@ -172,7 +172,7 @@ hr {
 
   .package-column {
     padding-bottom: 0;
-    height: 70vh;
+    height: 72vh;
   }
 }
 
