@@ -1,6 +1,4 @@
-/* eslint-disable radix */
 /* eslint-disable no-unused-expressions */
-/* eslint-disable react/no-this-in-sfc */
 /* eslint-disable react/jsx-props-no-spreading */
 // @flow
 import React from 'react'
@@ -75,20 +73,28 @@ function HorizontalTimeline(props: Props) {
     const selectedIndexFromYear = events.findIndex(
       (roborregosEvent) => roborregosEvent.year === year,
     )
-    mySlider.slickGoTo(selectedIndexFromYear)
+    mySlider?.slickGoTo(selectedIndexFromYear)
   }
 
   const SamplePrevArrow = () => (
     <div
+      role="button"
+      tabIndex={0}
+      key={0}
       className="slick-prev"
       onMouseDown={mySlider?.slickPrev}
+      aria-label="Previous"
     />
   )
 
   const SampleNextArrow = () => (
     <div
+      role="button"
+      tabIndex={0}
+      key={0}
       className="slick-next"
       onMouseDown={mySlider?.slickNext}
+      aria-label="Next"
     />
   )
 
