@@ -1,23 +1,45 @@
 // @flow
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
 import { VerticalTimeline } from 'react-vertical-timeline-component'
-import AboutSingleTimelineEvent from './AboutSingleTimelineEvent/AboutSingleTimelineEvent'
+import { Container, Row } from 'react-bootstrap'
+import HorizontalTimeline from './HorizontalTimeline/HorizontalTimeline'
 import './AboutTimeline.css'
+import { SMALL_WIDTH } from '../../../constants'
+import AboutSingleTimelineEvent from './AboutSingleTimelineEvent/AboutSingleTimelineEvent'
+import useWindowSize from '../../../hooks/useWindowSize'
 
 type Event = {
     date: string,
     img_path: string,
     title: string,
-    description: string
+    description: string,
+    year: number,
+    month: number
 };
 
 type Props = {
-  events: Array<Event>
+  events: Array<Event>,
+  years: Array<number>
  };
 
-const AboutTimeline = (props: Props) => {
-  const { events } = props
+function AboutTimeline(props: Props) {
+  const { events, years } = props
+  const { width } = useWindowSize()
+
+  if (width > SMALL_WIDTH) {
+    return (
+      <div className="about-timeline-container" test-id="1">
+        <Container fluid>
+          <Row className="justify-content-md-center" id="timeline-title">
+            <h1>
+              Our Story
+            </h1>
+          </Row>
+          <HorizontalTimeline events={events} years={years} />
+        </Container>
+      </div>
+    )
+  }
   return (
     <div className="about-timeline-container" test-id="1">
       <Container fluid>
@@ -34,9 +56,10 @@ const AboutTimeline = (props: Props) => {
             />
           )) }
         </VerticalTimeline>
+        {' '}
+
       </Container>
     </div>
   )
 }
-
 export default AboutTimeline
