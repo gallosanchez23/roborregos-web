@@ -31,7 +31,11 @@
   transition: 0.3s;
 }
 
-@media (max-width: 610px) {
+@media (max-width: 750px) {
+  .candidates-join-us {
+    height: min-content;
+  }
+
   .candidates-join-us-btn {
     width: 40%;
     font-size: 25px;
@@ -43,3 +47,4 @@
   border: 1px solid #13191E;
   background-color: #4F72B8;
 }
+
