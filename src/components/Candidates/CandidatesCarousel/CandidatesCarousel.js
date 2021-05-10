@@ -170,7 +170,7 @@ const gridSlidesSmallView = [
       <Grid item xs={12}>
         <img
           className="candidates-header-img candidates-hack-sm"
-          style={{ height: '65.29vh' }}
+          style={{ height: '60.2vh' }}
           src={CarouselHack1}
           alt="third"
         />
@@ -296,7 +296,7 @@ const CandidatesCarousel = () => {
       indicatorContainerProps={{
         style: {
           paddingBottom: '15px',
-          marginTop: '-80px',
+          marginTop: dimensions.width <= XSMALL_WIDTH ? '-50px' : '-80px',
         },
       }}
       NextIcon={(dimensions.width <= XSMALL_WIDTH

@@ -65,14 +65,11 @@ button:focus {
 @media (max-width: 592px) {
   .candidates-carousel {
     min-height: 100%;
+    height: 100%;
   }
 
-  .carousel-item {
-    min-height: 100%;
-  }
-
-  .candidates-carousel-slide {
-    min-height: 100%;
+  .candidates-carousel-slide {
+    height: 100%;
   }
 
   .Carousel-text-titles {
@@ -81,11 +78,11 @@ button:focus {
   }
 
   .candidates-succeed-sm-height {
-    height: 24vh;
+    height: 22.8vh;
   }
 
   .candidates-learn-height {
-    height: 49.2vh;
+    height: 46.6vh;
   }
 
   .candidates-hack-sm {
