@@ -45,10 +45,10 @@
 [dir="rtl"] .slick-next:before { content: "‹"; }
 
 .timeline {
-margin: 20px 0 60px 0;
-height: 1px;
-background-color: white;
-width: 80%;
+      margin: auto;
+      height: 1px;
+      background-color: white;
+      width: 80%;
 }
 
 .timeline-progress {

@@ -148,7 +148,7 @@ function HorizontalTimeline(props: Props) {
     <Row className="justify-content-center">
       <Col id="horizontal-timeline" xs={11}>
         <Slider ref={setSlider} {...settings}>
-          { events.map((e) => singleItem(e, height * 0.5)) }
+          { events.map((e) => singleItem(e, height * 0.6)) }
         </Slider>
       </Col>
       <Timeline />
