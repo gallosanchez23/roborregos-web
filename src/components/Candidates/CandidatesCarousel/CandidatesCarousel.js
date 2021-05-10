@@ -120,7 +120,7 @@ const gridSlidesFullView = [
 const gridSlidesSmallView = [
   <div className="candidates-carousel-slide">
     <h1 className="Carousel-text-titles"> Learn </h1>
-    <Grid className="grid-background" container spacing={2}>
+    <Grid className="grid-background" container spacing={2} dispay="inline-flex">
       <Grid item xs={12}>
         <img
           className="candidates-header-img candidates-learn-height"
@@ -152,14 +152,16 @@ const gridSlidesSmallView = [
       <Grid item xs={12} container>
         <Grid item xs={6} style={{ paddingRight: '8px' }}>
           <img
-            className="candidates-header-img candidates-learn-height"
+            className="candidates-header-img candidates-hack-xs"
+            style={{ height: '33vh' }}
             src={CarouselHack2}
             alt="first"
           />
         </Grid>
         <Grid item xs={6}>
           <img
-            className="candidates-header-img candidates-learn-height"
+            className="candidates-header-img candidates-hack-xs"
+            style={{ height: '33vh' }}
             src={CarouselHack3}
             alt="second"
           />
@@ -167,7 +169,8 @@ const gridSlidesSmallView = [
       </Grid>
       <Grid item xs={12}>
         <img
-          className="candidates-header-img candidates-learn-height"
+          className="candidates-header-img candidates-hack-sm"
+          style={{ height: '65.29vh' }}
           src={CarouselHack1}
           alt="third"
         />
