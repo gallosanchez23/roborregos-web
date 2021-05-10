@@ -7,23 +7,10 @@ import './AboutTimeline.css'
 import { SMALL_WIDTH } from '../../../constants'
 import AboutSingleTimelineEvent from './AboutSingleTimelineEvent/AboutSingleTimelineEvent'
 import useWindowSize from '../../../hooks/useWindowSize'
+import timelineData from '../../../data/timeline.json'
 
-type Event = {
-    date: string,
-    img_path: string,
-    title: string,
-    description: string,
-    year: number,
-    month: number
-};
-
-type Props = {
-  events: Array<Event>,
-  years: Array<number>
- };
-
-function AboutTimeline(props: Props) {
-  const { events, years } = props
+function AboutTimeline() {
+  const { events, years } = timelineData
   const { width } = useWindowSize()
 
   if (width > SMALL_WIDTH) {
