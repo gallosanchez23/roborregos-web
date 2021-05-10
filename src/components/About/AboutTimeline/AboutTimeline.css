@@ -6,7 +6,12 @@
 #timeline-title {
   padding: 2vh 0 0 0;
 }
-
+#timeline-title > h1{
+  font-size: 5vh;
+}
+.timeline-content{
+  font-size: 2vh;
+}
 .timeline-element-img {
   width: 100%;
   border-radius: 3px;
@@ -16,7 +21,7 @@
   padding: 2vh;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .about-timeline-container {
     height: 95vh;
   }
