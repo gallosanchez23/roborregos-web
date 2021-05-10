@@ -143,7 +143,6 @@ function HorizontalTimeline(props: Props) {
       },
     ],
   }
-
   return (
     <Row className="justify-content-center">
       <Col id="horizontal-timeline" xs={11}>
