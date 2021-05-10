@@ -9,6 +9,15 @@ import AboutSingleTimelineEvent from './AboutSingleTimelineEvent/AboutSingleTime
 import useWindowSize from '../../../hooks/useWindowSize'
 import timelineData from '../../../data/timeline.json'
 
+type Event = {
+    date: string,
+    img_path: string,
+    title: string,
+    description: string,
+    year: number,
+    month: number
+};
+
 function AboutTimeline() {
   const { events, years } = timelineData
   const { width } = useWindowSize()
