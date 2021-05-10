@@ -18,12 +18,17 @@ type Props = {
   onSubmit: () => void
 };
 
+// eslint-disable-next-line flowtype/type-id-match
+type HTMLInputElement = {
+  value: string
+};
+
 const FormsModal = (props: Props) => {
-  let name = React.useRef<HTMLInputElement>(null)
-  let career = React.useRef<HTMLInputElement>(null)
-  let semester = React.useRef<HTMLInputElement>(null)
-  let matricualtionNumber = React.useRef<HTMLInputElement>(null)
-  let comments = React.useRef<HTMLInputElement>(null)
+  let name: HTMLInputElement
+  let career: HTMLInputElement
+  let semester: HTMLInputElement
+  let matricualtionNumber: HTMLInputElement
+  let comments: HTMLInputElement
 
   const createMail = () => {
     const emailBody = `Hola soy ${name.value}
