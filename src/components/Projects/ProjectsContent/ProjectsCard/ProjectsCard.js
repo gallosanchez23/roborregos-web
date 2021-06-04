@@ -130,11 +130,11 @@ class ProjectsCard extends Component<Props, State> {
   getScrollers = () => {
     if (this.show_scrollers) {
       return (
-        <div className="icon-container">
+        <div className="scroll-next">
           <FontAwesomeIcon
             onClick={() => this.scrollToInfo()}
             icon={faAngleDown}
-            className="icon-btn"
+            className="scroll-next-icon"
           />
         </div>
       )
