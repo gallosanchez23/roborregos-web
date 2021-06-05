@@ -143,8 +143,8 @@ class ProjectsCard extends Component<Props, State> {
   }
 
   scrollToInfo = () => {
-    window.scrollBy(0, window.innerHeight * (this.index + 2) - (85 * (this.index + 1))
-     - window.scrollY + 35 * (this.index))
+    window.scrollBy(0, window.innerHeight * (1 - 0.05)
+    - (window.scrollY - (this.index + 1) * window.innerHeight * (1 - 0.05)))
   }
 
   smallView = () => (
@@ -187,7 +187,7 @@ class ProjectsCard extends Component<Props, State> {
     const { large_view } = this.state
     if (large_view) {
       return (
-        <div>
+        <div id={`card-${this.index}`}>
           <Fade in {...{ timeout: 2000 }}>
             {this.largeView()}
           </Fade>
