@@ -197,9 +197,9 @@ class ProjectsOther extends Component<Props, State> {
           </p>
         </div>
       </div>
-      <div>
+      <>
         {this.projects.map((project, index) => this.generateSmallCard(project, index))}
-      </div>
+      </>
     </div>
   )
 
