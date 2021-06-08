@@ -25,7 +25,7 @@ function SupportUsTypes({ language }: Props) {
     },
     {
       title: ['Patrocinio', 'Sponsorship'],
-      description: ['¡Ayúdanos a desarrollar robots y llegar a las competencias, mostrando el nombre de tu empresa en nuestras camisas!',
+      description: ['¡Ayúdanos a desarrollar robots y competir, mostrando el nombre de tu empresa en nuestras camisas!',
         'Help us develop robots and compete by collaborating with us, showing your company name on our shirts!'],
       img: sponsorship,
       color: '#FFDE59',

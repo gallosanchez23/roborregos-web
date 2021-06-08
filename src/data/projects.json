@@ -15,20 +15,14 @@
             },
             {
                 "title": "Smart Factory",
-                "description": "Development of an automated robotic warehouse system that retrieves, classifies and stores materials and products. Some tech areas involved include safety, object and person recognition, object manipulation, robot-robot communication/coordination and robot-human interaction/cooperation.",
-                "wiki": "https://www.youtube.com/watch?v=2Jw5t-hbkAU",
+                "description": " Development of an Adaptive Automated Storage and Recovery System (ASARS) for the management of factory tasks, coordinating the flows of operations and materials in a space used by collaborative robots, intelligent warehouses, and humans.",
+                "wiki": "https://youtu.be/QAbEatsBOGE",
                 "image": "cobot"
-            },
-            {
-                "title": "Advanced Autonomous Drones",
-                "description": "This competition consists of several challenges where an autonomous drone has to use computer vision and control systems to take decisions of action.",
-                "wiki": "",
-                "image": "drones"
             },
             {
                 "title": "SEMS: Social and Environmental Monitoring System",
                 "description": "The SEMS project aims to generate hard data on relevant factors that impact the health of the Tec community through a monitoring system, capable of returning metrics related to environmental contamination and people's behavior for their biosecurity in post-pandemic scenarios.",
-                "wiki": "",
+                "wiki": "https://youtu.be/uwu-1NQMb_Q",
                 "image": "contador_personas"
             }
         ],
@@ -58,6 +52,12 @@
                 "description": "Futbol soccer competition where two robots must coordinate in order to put the ball in their opponents goal. The ball is detected using IR and the robot is limited to 1.1 kg of weight.",
                 "wiki": "https://github.com/RoBorregos/RoboCup_SoccerLight_2020/wiki",
                 "image": "soccer_light"
+            },
+            {
+                "title": "Advanced Autonomous Drones",
+                "description": "This competition consists of several challenges where an autonomous drone has to use computer vision and control systems to take decisions of action.",
+                "wiki": "",
+                "image": "drones"
             }
         ],
         [
