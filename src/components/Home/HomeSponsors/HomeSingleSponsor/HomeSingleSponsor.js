@@ -10,8 +10,7 @@ type SponsorType = {
 };
 
 type Props = {
-  sponsor: SponsorType,
-  sponsor1: SponsorType
+  sponsor: SponsorType
 };
 
 const HomeSingleSponsor = (props: Props) => {
