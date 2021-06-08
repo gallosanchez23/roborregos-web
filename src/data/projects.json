@@ -14,7 +14,7 @@
                 "image": "vsss"
             },
             {
-                "title": "EAIBot B1 Smart Factory",
+                "title": "Smart Factory",
                 "description": "Development of an automated robotic warehouse system that retrieves, classifies and stores materials and products. Some tech areas involved include safety, object and person recognition, object manipulation, robot-robot communication/coordination and robot-human interaction/cooperation.",
                 "wiki": "https://www.youtube.com/watch?v=2Jw5t-hbkAU",
                 "image": "cobot"
@@ -24,6 +24,12 @@
                 "description": "This competition consists of several challenges where an autonomous drone has to use computer vision and control systems to take decisions of action.",
                 "wiki": "",
                 "image": "drones"
+            },
+            {
+                "title": "SEMS: Social and Environmental Monitoring System",
+                "description": "The SEMS project aims to generate hard data on relevant factors that impact the health of the Tec community through a monitoring system, capable of returning metrics related to environmental contamination and people's behavior for their biosecurity in post-pandemic scenarios.",
+                "wiki": "",
+                "image": "contador_personas"
             }
         ],
     "carrousel":
@@ -55,12 +61,6 @@
             }
         ],
         [
-            {
-                "title": "Covid-19 Person Counter",
-                "description": "This project consists of creating a monitoring system of spaces which collects ambient data and human behavior/characteristics for decision-making in relation to the pandemic’s safety protocols.",
-                "wiki": "",
-                "image": "contador_personas"
-            },
             {
                 "title": "RoBorregos’ Warehouse",
                 "description": "Internal project consisting of the development of a secure warehouse system for all electrical and mechanical components used in our laboratory at our university Tec, Campus Monterrey.",

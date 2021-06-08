@@ -9,7 +9,7 @@ import './SupportUs.css'
 
 const Contact = () => {
   const headerTitle = ['Apóyanos', 'Support us']
-  const headerMainText = [['Te gustaría apoyarnos? Colabora con nosotros!'], ['Would you like to support RoBorregos? Let’s collaborate!']]
+  const headerMainText = [['¿Te gustaría apoyarnos? ¡Colabora con nosotros!'], ['Would you like to support RoBorregos? Let’s collaborate!']]
   const headerSubText = [['Ver más'], ['Learn More']]
   const buttonText = ['Contáctanos', 'Contact Us!']
 
