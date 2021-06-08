@@ -22,3 +22,17 @@
 .single-sponsor:hover .img-filter {
   opacity: 0.7;
 }
+
+@media (max-width: 1024px){
+
+  .single-sponsor .sponsor-image {
+    max-height: 8vh;
+  }
+}
+
+@media (max-width: 768px){
+
+  .single-sponsor .sponsor-image {
+    max-height: 15vh;
+  }
+}

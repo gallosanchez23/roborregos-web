@@ -22,7 +22,7 @@ const HomeSponsors = (props: Props) => {
         <Col sm="10">
           <Row className="justify-content-sm-center">
             { sponsors.map((sponsor: SponsorType, index: number) => (
-              <Col xs="12" sm="6" md="3" key={index} test-id={index} className="sponsor-col">
+              <Col sm="12" md="6" lg="3" key={index} test-id={index} className="sponsor-col">
                 <HomeSingleSponsor
                   sponsor={sponsor}
                 />
