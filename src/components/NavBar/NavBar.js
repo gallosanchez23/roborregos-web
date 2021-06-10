@@ -125,7 +125,6 @@ class NavBar extends Component<Props, State> {
               </Nav.Link>
             ))}
             <Navbar.Brand id="navbar-legend-div" onClick={() => { window.open('https://www.steren.com.mx/') }}>
-              {/* <div> */}
               <p id="navbar-legend">
                 Powered by
                 <img
@@ -135,7 +134,6 @@ class NavBar extends Component<Props, State> {
                   alt="logo"
                 />
               </p>
-              {/* </div> */}
             </Navbar.Brand>
           </Nav>
         </Navbar.Collapse>
