@@ -17,7 +17,7 @@ function SupportUsTypes({ language }: Props) {
   const supportUsTypes = [
     {
       title: ['Donación', 'Donate'],
-      description: ['¡Dando un monto anónimamente puedes proporcionarnos los recursos para desarrollar tecnología e ir a competir! Da click aquí!',
+      description: ['¡Dando un monto anónimamente puedes proporcionarnos los recursos para desarrollar tecnología e ir a competir! ¡Da click aquí!',
         'By donating anonymously you can provide us with the necessary resources to develop technology and compete! Click here!'],
       img: donate,
       color: '#CB6CE6',
@@ -25,14 +25,14 @@ function SupportUsTypes({ language }: Props) {
     },
     {
       title: ['Patrocinio', 'Sponsorship'],
-      description: ['¡Ayúdanos a desarrollar robots y llegar a las competencias, mostrando el nombre de tu empresa en nuestras camisas!',
+      description: ['¡Ayúdanos a desarrollar robots y competir, mostrando el nombre de tu empresa en nuestras camisas!',
         'Help us develop robots and compete by collaborating with us, showing your company name on our shirts!'],
       img: sponsorship,
       color: '#FFDE59',
       link: '',
     },
     {
-      title: ['Regalos', 'Gifts'],
+      title: ['Especie', 'In-Kind'],
       description: ['Desde boletos de avión hasta materiales mecánicos, estos bienes y servicios son vitales para desarrollar nuevas tecnologías.',
         'From airline tickets to mechanical materials, these goods and services are vital for developing new technologies.'],
       img: gifts,

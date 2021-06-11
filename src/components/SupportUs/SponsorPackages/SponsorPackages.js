@@ -22,7 +22,7 @@ type Props = {
   language: string
 };
 
-const email_button = { es: 'Envíanos un email!', en: 'Send us an email!' }
+const email_button = { es: '¡Envíanos un email!', en: 'Send us an email!' }
 
 const SponsorPackages = (props: Props) => {
   const { language } = props
