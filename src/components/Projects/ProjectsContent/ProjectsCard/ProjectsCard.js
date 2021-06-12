@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { SMALL_WIDTH } from '../../../../constants'
 
+const WINDOW_VIEW_PERCENTAGE = 0.95
+
 type Project = {
   title: string,
   description: string,
@@ -143,8 +145,8 @@ class ProjectsCard extends Component<Props, State> {
   }
 
   scrollToInfo = () => {
-    window.scrollBy(0, window.innerHeight * (1 - 0.05)
-    - (window.scrollY - (this.index + 1) * window.innerHeight * (1 - 0.05)))
+    window.scrollBy(0, window.innerHeight * (WINDOW_VIEW_PERCENTAGE)
+    - (window.scrollY - (this.index + 1) * window.innerHeight * (WINDOW_VIEW_PERCENTAGE)))
   }
 
   smallView = () => (
