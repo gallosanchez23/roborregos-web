@@ -121,3 +121,9 @@
     font-size: 3vh;
   }
 }
+
+@media (max-width: 280px) {
+  .members-grid-search-bar-input {
+    padding: 0;
+  }
+}
