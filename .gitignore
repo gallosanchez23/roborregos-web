@@ -26,3 +26,6 @@ yarn-error.log*
 
 .bash_history
 /docker-compose.override.yml
+
+# Other Files
+package-lock.json
