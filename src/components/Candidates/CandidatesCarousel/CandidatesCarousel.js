@@ -131,14 +131,14 @@ const gridSlidesSmallView = [
       <Grid xs={12} container spacing={1}>
         <Grid item xs={12}>
           <img
-            className="candidates-header-img candidates-succeed-sm-height"
+            className="candidates-header-img candidates-learn-sm-height"
             src={CarouselLearn3}
             alt="third"
           />
         </Grid>
         <Grid item xs={12} style={{ paddingBottom: '8px' }}>
           <img
-            className="candidates-header-img candidates-succeed-sm-height"
+            className="candidates-header-img candidates-learn-sm-height"
             src={CarouselLearn4}
             alt="fourth"
           />
@@ -153,7 +153,7 @@ const gridSlidesSmallView = [
         <Grid item xs={6} style={{ paddingRight: '8px' }}>
           <img
             className="candidates-header-img candidates-hack-xs"
-            style={{ height: '33vh' }}
+            style={{ height: 'calc(35vh - 28px)' }}
             src={CarouselHack2}
             alt="first"
           />
@@ -161,7 +161,7 @@ const gridSlidesSmallView = [
         <Grid item xs={6}>
           <img
             className="candidates-header-img candidates-hack-xs"
-            style={{ height: '33vh' }}
+            style={{ height: 'calc(35vh - 28px)' }}
             src={CarouselHack3}
             alt="second"
           />
@@ -170,7 +170,7 @@ const gridSlidesSmallView = [
       <Grid item xs={12}>
         <img
           className="candidates-header-img candidates-hack-sm"
-          style={{ height: '60.2vh' }}
+          style={{ height: 'calc(65vh - 28px)' }}
           src={CarouselHack1}
           alt="third"
         />
@@ -236,7 +236,7 @@ const CustomPrevIcon = withStyles({
 
 const CustomNextIconSM = withStyles({
   root: {
-    fontSize: '4vw !important',
+    fontSize: '16vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -244,7 +244,7 @@ const CustomNextIconSM = withStyles({
 
 const CustomPrevIconSM = withStyles({
   root: {
-    fontSize: '4vw !important',
+    fontSize: '16vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
