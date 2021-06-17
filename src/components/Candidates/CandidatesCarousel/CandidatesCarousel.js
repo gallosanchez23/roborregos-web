@@ -131,14 +131,14 @@ const gridSlidesSmallView = [
       <Grid xs={12} container spacing={1}>
         <Grid item xs={12}>
           <img
-            className="candidates-header-img candidates-succeed-sm-height"
+            className="candidates-header-img candidates-learn-sm-height"
             src={CarouselLearn3}
             alt="third"
           />
         </Grid>
         <Grid item xs={12} style={{ paddingBottom: '8px' }}>
           <img
-            className="candidates-header-img candidates-succeed-sm-height"
+            className="candidates-header-img candidates-learn-sm-height"
             src={CarouselLearn4}
             alt="fourth"
           />
@@ -153,7 +153,7 @@ const gridSlidesSmallView = [
         <Grid item xs={6} style={{ paddingRight: '8px' }}>
           <img
             className="candidates-header-img candidates-hack-xs"
-            style={{ height: '33vh' }}
+            style={{ height: 'calc(35vh - 28px)' }}
             src={CarouselHack2}
             alt="first"
           />
@@ -161,7 +161,7 @@ const gridSlidesSmallView = [
         <Grid item xs={6}>
           <img
             className="candidates-header-img candidates-hack-xs"
-            style={{ height: '33vh' }}
+            style={{ height: 'calc(35vh - 28px)' }}
             src={CarouselHack3}
             alt="second"
           />
@@ -170,7 +170,7 @@ const gridSlidesSmallView = [
       <Grid item xs={12}>
         <img
           className="candidates-header-img candidates-hack-sm"
-          style={{ height: '60.2vh' }}
+          style={{ height: 'calc(65vh - 28px)' }}
           src={CarouselHack1}
           alt="third"
         />
@@ -220,7 +220,7 @@ const useStyles = makeStyles({
 
 const CustomNextIcon = withStyles({
   root: {
-    fontSize: '6rem !important',
+    fontSize: '6vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -228,7 +228,7 @@ const CustomNextIcon = withStyles({
 
 const CustomPrevIcon = withStyles({
   root: {
-    fontSize: '6rem !important',
+    fontSize: '6vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -236,7 +236,7 @@ const CustomPrevIcon = withStyles({
 
 const CustomNextIconSM = withStyles({
   root: {
-    fontSize: '4rem !important',
+    fontSize: '16vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -244,7 +244,7 @@ const CustomNextIconSM = withStyles({
 
 const CustomPrevIconSM = withStyles({
   root: {
-    fontSize: '4rem !important',
+    fontSize: '16vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -280,10 +280,10 @@ const CandidatesCarousel = () => {
       navButtonsProps={{ className: classes.root }}
       indicatorIconButtonProps={{
         style: {
-          height: '1.25rem',
-          width: '1.25rem',
+          height: '1.5vw',
+          width: '1.5vw',
           padding: '10px',
-          border: '2px solid #312e2d',
+          border: '3px solid #312e2d',
           color: 'transparent',
           margin: '0 6px',
         },
@@ -295,8 +295,9 @@ const CandidatesCarousel = () => {
       }}
       indicatorContainerProps={{
         style: {
-          paddingBottom: '15px',
-          marginTop: dimensions.width <= XSMALL_WIDTH ? '-50px' : '-80px',
+          marginTop: '0',
+          position: 'relative',
+          top: 'min(-35px, -4vh)',
         },
       }}
       NextIcon={(dimensions.width <= XSMALL_WIDTH

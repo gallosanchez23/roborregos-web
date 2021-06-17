@@ -5,11 +5,9 @@
   background-color: #13191E;
   border-radius: 20px;
   border: none;
-  max-height: 30vh;
-  max-width: 450px;
-  margin: 0 35px 25px 35px;
-  width: 40%;
-  -webkit-transition: all .3s ease-in, all .3s ease-out;
+  margin: 0 3vw 2vw 3vw;
+  width: 35vw;
+  height: 35vh;
   transition: all .3s ease-in, all .3s ease-out;
 }
 
@@ -124,15 +122,15 @@
 
 @media (max-width: 749px) {
   .candidates-card-title {
-    font-size: xx-large;
+    font-size: min(35px, 9vw);
     text-align: left;
-    padding-left: 5px;
+    padding: 0;
   }
 
   .candidates-card-text {
-    font-size: large;
+    font-size: min(24px, 6vw);
     text-align: left;
-    padding-left: 5px;
+    padding: 0;
   }
 
   .card-info-body {

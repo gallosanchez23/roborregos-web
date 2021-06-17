@@ -4,10 +4,11 @@ button:focus {
 
 .candidates-carousel {
   background: black !important;
+  height: calc(100vh - 48px);
 }
 
 .candidates-carousel-slide {
-  height: 100%;
+  height: 100vh;
 }
 
 .candidates-header-img-container {
@@ -26,13 +27,13 @@ button:focus {
 }
 
 .candidates-learn-height {
-  height: 400px;
-  max-height: 400px;
+  height: calc(50vh - 28px);
+  max-height: calc(50vh - 28px);
 }
 
 .candidates-succeed-height {
-  height: 250px;
-  max-height: 250px;
+  height: calc(31vh - 28px);
+  max-height: calc(31vh - 28px);
 }
 
 .candidates-succeed-sm-height {
@@ -41,8 +42,8 @@ button:focus {
 }
 
 .candidates-succeed-long-height {
-  height: 550px;
-  max-height: 550px;
+  height: calc(69vh - 28px);
+  max-height: calc(69vh - 28px);
 }
 
 .grid-background {
@@ -55,11 +56,13 @@ button:focus {
   width: 100%;
   text-align: center;
   color: white;
-  top: 49%;
+  top: calc((100% - 48px)/2 - 20px + 24px + 2vw);
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3vw;
+  line-height: 4vw;
   z-index: 1;
   pointer-events: none;
+  margin-bottom: 0;
 }
 
 @media (max-width: 592px) {
@@ -73,23 +76,20 @@ button:focus {
   }
 
   .Carousel-text-titles {
-    top: 48.5%;
-    font-size: 3rem;
+    top: calc((100% - 48px)/2 - 20px + 24px + 5vw);
+    font-size: 10vw;
+    margin-bottom: 0;
+  }
+
+  .candidates-learn-sm-height {
+    height: calc(25vh - 16px);
   }
 
   .candidates-succeed-sm-height {
-    height: 22.8vh;
+    height: calc(25vh - 18px);
   }
 
   .candidates-learn-height {
-    height: 46.6vh;
-  }
-
-  .candidates-hack-sm {
-    height: 65vh;
-  }
-
-  .candidates-hack-xs {
-    height: 32vh;
+    height: calc(50vh - 16px);
   }
 }

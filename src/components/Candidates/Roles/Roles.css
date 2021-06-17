@@ -1,14 +1,18 @@
 .candidates-join-us {
   background: url(../../../images/github_pattern.svg) top left/auto repeat fixed, #1C2329;
   text-align: center;
-  padding-top: 8vh;
+  padding-top: 4vh;
   padding-bottom: 4vh;
-  height: 100%;
+  height: calc(100vh - 48px);
 }
 
 .candidates-join-us-title-container {
   color: #fff;
-  font-size: 3rem !important;
+  font-size: max(3rem, 5vh) !important;
+}
+
+.candidates-join-us-title-container > p {
+  margin-bottom: -0.5rem;
 }
 
 .candidates-join-us-btn-container {
