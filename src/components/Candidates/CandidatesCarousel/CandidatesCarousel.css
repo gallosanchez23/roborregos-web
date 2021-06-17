@@ -4,10 +4,11 @@ button:focus {
 
 .candidates-carousel {
   background: black !important;
+  height: calc(100vh - 48px);
 }
 
 .candidates-carousel-slide {
-  height: 100%;
+  height: 100vh;
 }
 
 .candidates-header-img-container {
@@ -26,13 +27,13 @@ button:focus {
 }
 
 .candidates-learn-height {
-  height: 400px;
-  max-height: 400px;
+  height: calc(50vh - 28px);
+  max-height: calc(50vh - 28px);
 }
 
 .candidates-succeed-height {
-  height: 250px;
-  max-height: 250px;
+  height: calc(31vh - 28px);
+  max-height: calc(31vh - 28px);
 }
 
 .candidates-succeed-sm-height {
@@ -41,8 +42,8 @@ button:focus {
 }
 
 .candidates-succeed-long-height {
-  height: 550px;
-  max-height: 550px;
+  height: calc(69vh - 28px);
+  max-height: calc(69vh - 28px);
 }
 
 .grid-background {
@@ -55,9 +56,9 @@ button:focus {
   width: 100%;
   text-align: center;
   color: white;
-  top: 49%;
+  top: 51.5%;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3vw;
   z-index: 1;
   pointer-events: none;
 }

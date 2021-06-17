@@ -220,7 +220,7 @@ const useStyles = makeStyles({
 
 const CustomNextIcon = withStyles({
   root: {
-    fontSize: '6rem !important',
+    fontSize: '6vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -228,7 +228,7 @@ const CustomNextIcon = withStyles({
 
 const CustomPrevIcon = withStyles({
   root: {
-    fontSize: '6rem !important',
+    fontSize: '6vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -236,7 +236,7 @@ const CustomPrevIcon = withStyles({
 
 const CustomNextIconSM = withStyles({
   root: {
-    fontSize: '4rem !important',
+    fontSize: '4vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -244,7 +244,7 @@ const CustomNextIconSM = withStyles({
 
 const CustomPrevIconSM = withStyles({
   root: {
-    fontSize: '4rem !important',
+    fontSize: '4vw !important',
     opacity: '1 !important',
     color: 'white !important',
   },
@@ -280,10 +280,10 @@ const CandidatesCarousel = () => {
       navButtonsProps={{ className: classes.root }}
       indicatorIconButtonProps={{
         style: {
-          height: '1.25rem',
-          width: '1.25rem',
+          height: '1.5vw',
+          width: '1.5vw',
           padding: '10px',
-          border: '2px solid #312e2d',
+          border: '3px solid #312e2d',
           color: 'transparent',
           margin: '0 6px',
         },
@@ -295,8 +295,9 @@ const CandidatesCarousel = () => {
       }}
       indicatorContainerProps={{
         style: {
-          paddingBottom: '15px',
-          marginTop: dimensions.width <= XSMALL_WIDTH ? '-50px' : '-80px',
+          marginTop: '0',
+          position: 'relative',
+          top: 'min(-35px, -4vh)',
         },
       }}
       NextIcon={(dimensions.width <= XSMALL_WIDTH
