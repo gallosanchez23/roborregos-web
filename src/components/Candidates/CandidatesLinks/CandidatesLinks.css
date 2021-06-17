@@ -1,0 +1,55 @@
+.images {
+    height: 95vh;
+    width: 100%;
+    background-color: rgb(25, 30, 35);
+    padding: 5vh 5vw;
+    color: white;
+}
+
+.classes-main-row {
+    height: 100%;
+}
+
+.classes-section-alignment {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.title-links {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.message-us {
+    font-size: 3vw;
+}
+
+.roborregos-logo {
+    width: 60%;
+    padding: 2.5vh 0;
+}
+
+.center-logo{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook-logo {
+    width: 40%;
+}
+
+.instagram-logo {
+    width: 40%;
+}
+
+.caption{
+    font-size: 2vw;
+}

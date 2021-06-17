@@ -6,6 +6,7 @@ import Roles from './Roles/Roles'
 import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
 import CandidatesVideo from './CandidatesVideo/CandidatesVideo'
 import CandidatesClasses from './CandidatesClasses/CandidatesClasses'
+import CandidatesLinks from './CandidatesLinks/CandidatesLinks'
 
 function Candidates() {
   document.title = 'RoBorregos | Candidates'
@@ -25,6 +26,7 @@ function Candidates() {
       <CandidatesCarousel />
       <Roles positionsData={positionsData} />
       <CandidatesClasses />
+      <CandidatesLinks />
     </>
   )
 }
