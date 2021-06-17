@@ -4,7 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha"
 import {
   Form, FormGroup, Label, Input, Row, Modal, ModalHeader, ModalBody, Button,
 } from 'reactstrap'
-import sendJoinEmail from '../../../../../scripts/apiScripts'
+import { sendJoinUsEmail } from '../../../../../scripts/apiScripts'
 import './FormsModal.css'
 
 type SelectedPosition = {
@@ -56,7 +56,7 @@ class FormsModal extends Component<Props> {
       this.setState({
         isLoading: true,
       })
-      sendJoinEmail(mailParams).then((result) => {
+      sendJoinUsEmail(mailParams).then((result) => {
         if (result.status === 1) {
           // eslint-disable-next-line no-alert
           alert('Thanks for your interest! \nCheck your Tec email \n')

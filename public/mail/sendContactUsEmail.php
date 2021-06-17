@@ -11,7 +11,7 @@
   use PHPMailer\PHPMailer\SMTP;
   use PHPMailer\PHPMailer\Exception;
   
-  $CONFIG = include './config.php'
+  $CONFIG = include './config.php';
   $_ENV["HTTP_ROBORREGOS_EMAIL_DOMAIN"] = $CONFIG['ROBORREGOS_EMAIL_DOMAIN'];
   $_ENV["HTTP_ROBORREGOS_EMAIL_USERNAME"] = $CONFIG['ROBORREGOS_EMAIL_USERNAME'];
   $_ENV["HTTP_ROBORREGOS_EMAIL_PASSWORD"] = $CONFIG['ROBORREGOS_EMAIL_PASSWORD'];
@@ -33,9 +33,10 @@
   
   $params = json_decode(file_get_contents('php://input'), true);
   
-  $inputParams = ['from_name', 'message', 'reply_to', 'position', 'recaptchaKey'];
-  foreach ($inputParams as $inputParam) {
-    if( !$params[$inputParam]) {
+  $inputParams = ['from_name', 'message', 'reply_to', 'send_copy', 'recaptchaKey'];
+  $required = [true, true, true, false, true];
+  foreach ($inputParams as $inputKey => $inputParam) {
+    if(!$params[$inputParam] and $required[$inputKey]) {
       failResponse('Missing Parameters.', false);
     }
   }
@@ -102,13 +103,13 @@
   try {
     verifyCaptcha($params['recaptchaKey']);
 
-    $join_request_params = array('message' => $params['message']);
-    $join_request_content = getContent('join_request.php', $join_request_params);
-    $join_request_response_params = array('from_name' => $params['from_name'], 'position' => $params['position']);
-    $join_request_response_content = getContent('join_request_response.php', $join_request_response_params);
+    $contact_email_params = array('message' => $params['message']);
+    $contact_email_content = getContent('contact_email.php', $contact_email_params);
 
-    sendEmail('roborregosteam@gmail.com', $params['from_name'] . ' wants to join!', $join_request_content);
-    sendEmail($params['reply_to'], 'Thanks for Applying ' . $params['from_name'], $join_request_response_content);
+    sendEmail('roborregosteam@gmail.com', $params['from_name'] . ' wants to Contact Us!', $contact_email_content);
+    if($params['send_copy']){
+      sendEmail($params['reply_to'], $params['from_name'] . ' wants to Contact Us!'.' [COPY]', $contact_email_content);
+    }
     successReponse('Mails Sent', false);
   } catch (Exception $e) {
     failResponse('Email-Server Error, Retry Later.', false);

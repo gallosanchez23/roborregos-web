@@ -26,11 +26,17 @@ const doFetch = async (queryString, methodValue, params) => {
   })
 }
 
-/* Mails */
-const sendJoinEmail = async (mailParams) => {
-  const queryString = 'mail/sendMail.php'
+/* Emails */
+export const sendJoinUsEmail = async (mailParams) => {
+  const queryString = 'mail/sendJoinUsEmail.php'
   const methodValue = 'POST'
   const params = mailParams
   return doFetch(queryString, methodValue, params)
 }
-export { sendJoinEmail as default }
+
+export const sendContactUsEmail = async (mailParams) => {
+  const queryString = 'mail/sendContactUsEmail.php'
+  const methodValue = 'POST'
+  const params = mailParams
+  return doFetch(queryString, methodValue, params)
+}
