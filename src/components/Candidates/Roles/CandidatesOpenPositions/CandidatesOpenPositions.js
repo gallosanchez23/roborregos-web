@@ -43,7 +43,7 @@ const CandidatesOpenPostions = (props: Props) => {
   }
 
   return (
-    <Row className="justify-content-center mt-4">
+    <Row className="justify-content-center mt-4 roles">
       <Col xs="12">
         <Row className="positions-card-container">
           {positions.map((position) => (

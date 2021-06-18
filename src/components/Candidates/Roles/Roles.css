@@ -3,7 +3,7 @@
   text-align: center;
   padding-top: 4vh;
   padding-bottom: 4vh;
-  height: calc(100vh - 48px);
+  height: 95vh
 }
 
 .candidates-join-us-title-container {
@@ -35,9 +35,9 @@
   transition: 0.3s;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .candidates-join-us {
-    height: min-content;
+    height: fit-content;
   }
 
   .candidates-join-us-btn {
