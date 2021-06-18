@@ -6,7 +6,7 @@ import './SendEmail.css'
 import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Checkbox from '@material-ui/core/Checkbox'
-import Snackbar from '../../Shared/SnackBar/FormsSnackbar'
+import FormsSnackBar from '../../Shared/FormsSnackBar/FormsSnackbar'
 import { sendContactUsEmail } from '../../../scripts/apiScripts'
 
 type Props = {
@@ -84,7 +84,9 @@ function SendEmail({ language }: Props) {
     ['Enviar', 'Send'],
   ]
 
-  const submitMessages = ['¡Gracias por contactarnos!', "Thanks for reaching out! We'll be in contact soon."]
+  const submitMessages = [['¡Gracias por contactarnos! Responderemos lo más pronto posible.', "Thanks for reaching out! We'll be in contact soon."],
+    ['Hubo un error al enviar, intente más tarde.', 'Something went wrong! Please try later.'],
+  ]
 
   const helperText = ['Favor de llenar este campo', 'Please fill this textfield']
   const paddingError = ['0vh', '3.3vh']
@@ -98,6 +100,7 @@ function SendEmail({ language }: Props) {
   const [formError, setError] = useState([false, false, false, false])
   const [open, setOpen] = useState(false)
   const [severity, setSeverity] = useState('success')
+  const [messageSnackbar, setMessageSnackbar] = useState(0)
 
   const handleChangeName = (event) => {
     setName(event.target.value)
@@ -135,6 +138,13 @@ function SendEmail({ language }: Props) {
     setCopy(event.target.checked)
   }
 
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return
+    }
+    setOpen(false)
+  }
+
   const createMail = (recaptchaKey: string) => {
     const emailBody = `Name: ${name}\n
       Phone number: ${phone}\n
@@ -150,16 +160,6 @@ function SendEmail({ language }: Props) {
   }
 
   const handleSubmit = (recaptchaKey: string) => {
-    setName('')
-    setEmail('')
-    setPhone('')
-    setMessage('')
-    setCopy(false)
-    setError([false, false, false, false])
-    setSeverity('success')
-    setOpen(true)
-    return
-
     if (name !== '' && email !== '' && phone !== '' && message !== '') {
       const mailParams = createMail(recaptchaKey)
       setIsLoading(true)
@@ -173,10 +173,17 @@ function SendEmail({ language }: Props) {
           setError([false, false, false, false])
           setOpen(true)
           setSeverity('success')
+          setMessageSnackbar(0)
         } else {
+          setOpen(true)
+          setSeverity('error')
+          setMessageSnackbar(1)
           throw new Error('Something went wrong! \nEmail-Server Error, Retry Later')
         }
       }, (error) => {
+        setOpen(true)
+        setSeverity('error')
+        setMessageSnackbar(1)
         throw new Error(`Something went wrong! \n${error.message}`)
       }).finally(() => {
         setIsLoading(false)
@@ -299,7 +306,12 @@ function SendEmail({ language }: Props) {
         className="d-none"
         onChange={handleSubmit}
       />
-      <Snackbar message={submitMessages[language]} open={open} severity={severity} />
+      <FormsSnackBar
+        message={submitMessages[messageSnackbar][language]}
+        open_snackbar={open}
+        severity={severity}
+        handleClose={handleClose}
+      />
     </>
   )
 }

@@ -6,6 +6,7 @@ import {
 } from 'reactstrap'
 import { sendJoinUsEmail } from '../../../../../scripts/apiScripts'
 import './FormsModal.css'
+import FormsSnackBar from '../../../../Shared/FormsSnackBar/FormsSnackbar'
 
 type SelectedPosition = {
   title: string
@@ -16,10 +17,6 @@ type Props = {
   isOpen: boolean,
   toggle: () => void,
   onSubmit: () => void
-};
-
-type State = {
-  isLoading: boolean
 };
 
 class FormsModal extends Component<Props> {
@@ -39,12 +36,25 @@ class FormsModal extends Component<Props> {
     super(props)
 
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleClose = this.handleClose.bind(this)
     this.createMail = this.createMail.bind(this)
     this.getError = this.getError.bind(this)
 
     this.state = {
       isLoading: false,
+      open: false,
+      message: 'Thanks for your interest! Check your Tec email.',
+      severity: 'success',
     }
+  }
+
+  handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return
+    }
+    this.setState({
+      open: false,
+    })
   }
 
   handleSubmit = (recaptchaKey: string) => {
@@ -58,15 +68,25 @@ class FormsModal extends Component<Props> {
       })
       sendJoinUsEmail(mailParams).then((result) => {
         if (result.status === 1) {
-          // eslint-disable-next-line no-alert
-          alert('Thanks for your interest! \nCheck your Tec email \n')
+          this.setState({
+            open: true,
+            message: 'Thanks for your interest! Check your Tec email.',
+            severity: 'success',
+          })
         } else {
-          // eslint-disable-next-line no-alert
-          alert('Something went wrong! \nEmail-Server Error, Retry Later')
+          this.setState({
+            open: true,
+            message: 'Something went wrong! Please retry later',
+            severity: 'error',
+          })
         }
       }, (error) => {
-        // eslint-disable-next-line no-alert
-        alert(`Something went wrong! \n${error.message}`)
+        this.setState({
+          open: true,
+          message: 'Something went wrong! Please retry later',
+          severity: 'error',
+        })
+        throw new Error(`Something went wrong! \n${error.message}`)
       }).finally(() => {
         this.setState({
           isLoading: false,
@@ -74,10 +94,6 @@ class FormsModal extends Component<Props> {
         toggle()
       })
     }
-  }
-
-  startLoading() {
-
   }
 
   handleReCaptcha = (event: SyntheticEvent<HTMLButtonElement>) => {
@@ -121,7 +137,9 @@ class FormsModal extends Component<Props> {
       selectedPosition, isOpen, toggle,
     } = this.props
     const greeting = `Join us as ${selectedPosition.title}!`
-
+    const {
+      isLoading, message, open, severity,
+    } = this.state
     return (
       <>
         <Modal id="candidates-join-modal" isOpen={isOpen} toggle={toggle} className="position-relative">
@@ -130,7 +148,7 @@ class FormsModal extends Component<Props> {
             { greeting }
           </ModalHeader>
           <ModalBody>
-            <Form className={this.state.isLoading ? 'formLoading' : ''}>
+            <Form className={isLoading ? 'formLoading' : ''}>
               <Row>
                 <FormGroup className="col-md-6">
                   <Label>Name</Label>
@@ -138,7 +156,7 @@ class FormsModal extends Component<Props> {
                     type="text"
                     id="name"
                     placeholder="Juanito"
-                    disabled={this.state.isLoading}
+                    disabled={isLoading}
                     innerRef={(input) => { this.name = input }}
                   />
                 </FormGroup>
@@ -148,7 +166,7 @@ class FormsModal extends Component<Props> {
                     type="text"
                     id="matricualtionNumber"
                     placeholder="A01283070"
-                    disabled={this.state.isLoading}
+                    disabled={isLoading}
                     innerRef={(input) => { this.matricualtionNumber = input }}
                   />
                 </FormGroup>
@@ -158,7 +176,7 @@ class FormsModal extends Component<Props> {
                     type="text"
                     id="career"
                     placeholder="IMT"
-                    disabled={this.state.isLoading}
+                    disabled={isLoading}
                     innerRef={(input) => { this.career = input }}
                   />
                 </FormGroup>
@@ -167,7 +185,7 @@ class FormsModal extends Component<Props> {
                   <Input
                     type="select"
                     id="semester"
-                    disabled={this.state.isLoading}
+                    disabled={isLoading}
                     innerRef={(input) => { this.semester = input }}
                   >
                     <option value="1">1</option>
@@ -186,7 +204,7 @@ class FormsModal extends Component<Props> {
                   <Input
                     type="textarea"
                     id="comments"
-                    disabled={this.state.isLoading}
+                    disabled={isLoading}
                     placeholder="Why you want to join the team?"
                     innerRef={(input) => { this.comments = input }}
                   />
@@ -197,10 +215,10 @@ class FormsModal extends Component<Props> {
                 {' '}
               </>
               <Row className="mt-4 mb-1 justify-content-center">
-                <Button className="mr-4 col-3 join" type="button" onClick={this.handleReCaptcha} disabled={this.state.isLoading}>Join!</Button>
+                <Button className="mr-4 col-3 join" type="button" onClick={this.handleReCaptcha} disabled={isLoading}>Join!</Button>
               </Row>
             </Form>
-            <div className={`loadingSymbol ${this.state.isLoading ? '' : 'd-none'}`}>
+            <div className={`loadingSymbol ${isLoading ? '' : 'd-none'}`}>
               <svg className="spinSymbol" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
@@ -215,7 +233,12 @@ class FormsModal extends Component<Props> {
           className={isOpen ? '' : 'd-none'}
           onChange={this.handleSubmit}
         />
-        ,
+        <FormsSnackBar
+          message={message}
+          open_snackbar={open}
+          severity={severity}
+          handleClose={this.handleClose}
+        />
       </>
     )
   }
