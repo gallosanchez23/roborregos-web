@@ -70,7 +70,7 @@ const SendCopyCheckbox = withStyles({
 })(Checkbox)
 
 function SendEmail({ language }: Props) {
-  const recaptchaRef: React.RefObject<HTMLElement> = React.createRef()
+  const recaptchaRef = React.createRef()
 
   const title_send_email = ['Con tu ayuda podemos llegar más lejos.', 'With your help we can achieve more.']
 
@@ -139,10 +139,9 @@ function SendEmail({ language }: Props) {
   }
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return
+    if (reason !== 'clickaway') {
+      setOpen(false)
     }
-    setOpen(false)
   }
 
   const createMail = (recaptchaKey: string) => {
@@ -201,7 +200,9 @@ function SendEmail({ language }: Props) {
   const handleReCaptcha = (event: SyntheticEvent<HTMLButtonElement>) => {
     event.preventDefault()
     const recaptcha_ref = recaptchaRef.current
+    // $FlowFixMe[incompatible-use]
     recaptcha_ref.reset()
+    // $FlowFixMe[incompatible-use]
     recaptcha_ref.execute()
   }
 

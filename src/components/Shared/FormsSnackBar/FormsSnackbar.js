@@ -7,7 +7,7 @@ type Props = {
     message: string,
     severity: string,
     open_snackbar: boolean,
-    handleClose: () => void
+    handleClose: (MouseEvent, string) => void
 };
 
 function FormsSnackbar(props: Props) {

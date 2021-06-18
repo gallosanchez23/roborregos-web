@@ -24,34 +24,33 @@ function FormsModal(props: Props) {
   const {
     selectedPosition, isOpen, toggle, onSubmit, trySubmit,
   } = props
-  const recaptchaRef: React.RefObject<HTMLElement> = React.createRef()
+  const recaptchaRef = React.createRef()
   const greeting = `Join us as ${selectedPosition.title}!`
 
-  const [name, setName] = useState(null)
-  const [career, setCareer] = useState(null)
-  const [semester, setSemester] = useState(null)
-  const [matricualtionNumber, setMatricualtionNumber] = useState(null)
-  const [comments, setComments] = useState(null)
-  const [isLoading, setIsLoading] = useState(false)
+  const [name, setName] = useState('')
+  const [career, setCareer] = useState('')
+  const [semester, setSemester] = useState('')
+  const [matricualtionNumber, setMatricualtionNumber] = useState('')
+  const [comments, setComments] = useState('')
+  const [isLoading, setIsLoading] = useState('')
   const [open, setOpen] = useState(false)
   const [message, setMessage] = useState('Thanks for your interest! Check your Tec email.')
   const [severity, setSeverity] = useState('success')
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return
+    if (reason !== 'clickaway') {
+      setOpen(false)
     }
-    setOpen(false)
   }
 
   const createMail = (recaptchaKey: string) => {
-    const emailBody = `Hola soy ${name.value}
-      estudiante de ${career.value} de ${semester.value} semestre. \n
-      ${comments.value}`
+    const emailBody = `Hola soy ${name}
+      estudiante de ${career} de ${semester} semestre. \n
+      ${comments}`
     return ({
       message: emailBody,
-      from_name: name.value,
-      reply_to: `${matricualtionNumber.value}@itesm.mx`,
+      from_name: name,
+      reply_to: `${matricualtionNumber}@itesm.mx`,
       position: selectedPosition.title,
       recaptchaKey,
     })
@@ -59,8 +58,8 @@ function FormsModal(props: Props) {
 
   const handleSubmit = (recaptchaKey: string) => {
     onSubmit()
-    if (name.value && career.value && semester.value
-      && matricualtionNumber.value && comments.value) {
+    if (name && career && semester
+      && matricualtionNumber && comments) {
       const mailParams = createMail(recaptchaKey)
       setIsLoading(true)
       sendJoinUsEmail(mailParams).then((result) => {
@@ -87,16 +86,18 @@ function FormsModal(props: Props) {
 
   const handleReCaptcha = (event: SyntheticEvent<HTMLButtonElement>) => {
     event.preventDefault()
-    const recaptcharef = recaptchaRef.current
-    recaptcharef.reset()
-    recaptcharef.execute()
+    const recaptcha_ref = recaptchaRef.current
+    // $FlowFixMe[incompatible-use]
+    recaptcha_ref.reset()
+    // $FlowFixMe[incompatible-use]
+    recaptcha_ref.execute()
   }
 
   const getError = () => {
     if (trySubmit && name && career && semester
       && matricualtionNumber && comments
-        && (!name.value || !career.value || !semester.value
-        || !matricualtionNumber.value || !comments.value)) {
+        && (!name || !career || !semester
+        || !matricualtionNumber || !comments)) {
       return (
         <Row className="mt-4 mb-1 justify-content-center">
           <p className="text-danger"> Please fill out the entire forms</p>
@@ -123,7 +124,7 @@ function FormsModal(props: Props) {
                   id="name"
                   placeholder="Juanito"
                   disabled={isLoading}
-                  innerRef={(input) => { setName(input) }}
+                  innerRef={(input) => { setName(input.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -133,7 +134,7 @@ function FormsModal(props: Props) {
                   id="matricualtionNumber"
                   placeholder="A01283070"
                   disabled={isLoading}
-                  innerRef={(input) => { setMatricualtionNumber(input) }}
+                  innerRef={(input) => { setMatricualtionNumber(input.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -143,7 +144,7 @@ function FormsModal(props: Props) {
                   id="career"
                   placeholder="IMT"
                   disabled={isLoading}
-                  innerRef={(input) => { setCareer(input) }}
+                  innerRef={(input) => { setCareer(input.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -152,7 +153,7 @@ function FormsModal(props: Props) {
                   type="select"
                   id="semester"
                   disabled={isLoading}
-                  innerRef={(input) => { setSemester(input) }}
+                  innerRef={(input) => { setSemester(input.value) }}
                 >
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -172,7 +173,7 @@ function FormsModal(props: Props) {
                   id="comments"
                   disabled={isLoading}
                   placeholder="Why you want to join the team?"
-                  innerRef={(input) => { setComments(input) }}
+                  innerRef={(input) => { setComments(input.value) }}
                 />
               </FormGroup>
             </Row>
