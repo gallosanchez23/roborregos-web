@@ -5,7 +5,6 @@ import {
   Form, FormGroup, Label, Input, Row, Modal, ModalHeader, ModalBody, Button,
 } from 'reactstrap'
 import { sendJoinUsEmail } from '../../../../../scripts/apiScripts'
-import './FormsModal.css'
 import FormsSnackBar from '../../../../Shared/FormsSnackBar/FormsSnackbar'
 
 type SelectedPosition = {
