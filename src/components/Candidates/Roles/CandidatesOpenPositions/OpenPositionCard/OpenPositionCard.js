@@ -45,13 +45,16 @@ const OpenPositionCard = (props: Props) => {
         className="candidates-card-img"
       />
       <Card.ImgOverlay className="card-info-body">
-        <Card.Body className="candidates-card-text">
-          <Card.Title className="candidates-card-title">
-            {position.title}
-          </Card.Title>
-          <Card.Text className="candidates-card-text">
-            {position.shortDescription}
-          </Card.Text>
+        <Card.Body className="candidates-card-container">
+          <div className="candidate-card-content">
+            <Card.Title className="candidates-card-title">
+              {position.title}
+            </Card.Title>
+            <Card.Text className="candidates-card-text">
+              {position.shortDescription}
+            </Card.Text>
+          </div>
+
         </Card.Body>
       </Card.ImgOverlay>
     </Card>
