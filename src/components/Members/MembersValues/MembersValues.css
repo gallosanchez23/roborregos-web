@@ -2,27 +2,26 @@
   color: rgba(255, 255, 255, 0.8);
   background: rgb(20, 18, 19);
   text-align: center;
+  height: 95vh;
 }
 
-.members-values-title {
-  position: relative;
-  padding: 2% 0 2%;
-}
-
-.members-values-title h1 {
+/* .members-values-title h1 {
   margin: 0;
   font-size: clamp(32px, 5vh, 4vw);
-}
+} */
 
 .members-values-container {
   display: flex;
   flex-direction: row;
+  /* height: 100%; */
+  background: cyan;
+  height: 100%;
 }
 
 .members-values-card {
   flex: 1;
   padding: 20px 5.5vw 20px 5.5vw;
-  height: 75vh;
+  /* height: 100%; */
   position: relative;
   background-position: 0% 30%;
 }
@@ -40,15 +39,22 @@
 }
 
 .members-values-card-title {
-  min-height: 100px;
-  font-size: clamp(32px, 5.5vh, 4vw);
+  font-size: 3vw;
   z-index: 3;
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  padding: 5vh 0;
+  /* background: darkcyan; */
+}
+
+.members-values-card:hover > .members-values-card-title {
+  opacity: 100%;
+  transition: opacity 0.5s ease-in;
 }
 
 .members-values-card-text {
   text-align: start;
-  font-size: clamp(20px, 2.5vh, 52px);
-  margin-top: 6vh;
+  font-size: 1.3vw;
   opacity: 0;
   transition: opacity 0.6s ease-out;
   z-index: 3;
@@ -82,13 +88,13 @@
   background-size: cover;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .members-values-card-text {
     font-size: clamp(17px, 2.3vh, 28px);
   }
-}
+} */
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .members-values-card-title {
     min-height: 9vw;
   }
@@ -96,7 +102,7 @@
   .members-values-card-text {
     font-size: clamp(17px, 2vw, 18px);
   }
-}
+} */
 
 @media (max-width: 768px) {
   .members-values-container {
@@ -104,13 +110,15 @@
   }
 
   .members-values-card-title {
-    min-height: 40px;
+    font-size: 6vw;
+    opacity: 100%;
+    padding-bottom: 0;
   }
 
   .members-values-card {
-    min-height: 150px;
-    padding: 20px 30px 20px 30px;
-    background-position: 0% 45%;
+    /* min-height: 150px; */
+    padding: 3vh 10vw;
+    /* background-position: 0% 45%; */
   }
 
   .members-values-card:nth-child(odd) {
@@ -127,9 +135,10 @@
   .members-values-card-text {
     text-align: inherit;
     word-wrap: break-word;
-    max-width: 250px;
+    /* max-width: 250px; */
     margin: 0;
     opacity: 100%;
+    font-size: 4vw;
   }
 
   .members-values-card-overlay {

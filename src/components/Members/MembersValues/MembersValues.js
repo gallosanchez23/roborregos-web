@@ -12,9 +12,9 @@ function MembersValues() {
 
   return (
     <div className="members-values">
-      <div className="members-values-title">
+      {/* <div className="members-values-title">
         <h1> Our Values </h1>
-      </div>
+      </div> */}
       <div className="members-values-container">
         <div className="members-values-card">
           <div className="members-values-card-overlay" />
@@ -32,9 +32,8 @@ function MembersValues() {
               : (
                 <p className="members-values-card-text">
                   Everything we accomplish is thanks to the trust we put in each other and the
-                  passion we share for robotics and technology; this is why we respect everyone’s
-                  efforts and work. We feel proud to have valuable members with different talents
-                  and perspectives that contribute to reaching our goals.
+                  passion we share for robotics and technology; we feel proud to have valuable
+                  members with different talents and perspectives that contribute to reaching our goals.
                 </p>
               )
           }
