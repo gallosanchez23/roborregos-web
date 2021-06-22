@@ -1,3 +1,4 @@
+// @flow
 import React, { useState, useEffect } from 'react'
 import { SMALL_WIDTH } from '../../../constants'
 import './MembersValues.css'
@@ -19,7 +20,7 @@ function MembersValues() {
         <div className="members-values-card">
           <div className="members-values-card-overlay" />
           <h1 className="members-values-card-title">
-            It's all about people
+            It&apos;s all about people
           </h1>
           {
             isViewSmall
@@ -33,7 +34,8 @@ function MembersValues() {
                 <p className="members-values-card-text">
                   Everything we accomplish is thanks to the trust we put in each other and the
                   passion we share for robotics and technology; we feel proud to have valuable
-                  members with different talents and perspectives that contribute to reaching our goals.
+                  members with different talents and perspectives that contribute to reaching
+                  our goals.
                 </p>
               )
           }

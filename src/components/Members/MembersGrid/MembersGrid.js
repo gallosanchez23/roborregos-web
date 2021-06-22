@@ -64,14 +64,14 @@ function MembersGrid() {
   const [searchBarText, setSearchBarText] = useState('')
   const [filteredMembers, setFilteredMembers] = useState([])
 
-  const extendKeywordSearch = (keywords: [string], index: number, field: string) => {
+  const extendKeywordSearch = (keywords: Array<string>, index: number, field: string) => {
     let i = index
     if (i + 1 < keywords.length) {
       let j = i + 1
       let substr = `${keywords[i]} ${keywords[j]}`
       while (j < keywords.length && field.toLowerCase().startsWith(substr)) {
         substr += ` ${keywords[j]}`
-        j++
+        j += 1
       }
       i = j - 1
     }
@@ -82,7 +82,7 @@ function MembersGrid() {
     const keywords = searchBarText.toLowerCase().split(' ')
     setFilteredMembers(membersData.members.filter((member) => {
       let name = true; let lastname = true; let role = true
-      for (let i = 0; i < keywords.length; i++) {
+      for (let i = 0; i < keywords.length; i += 1) {
         if (name && member.name.toLowerCase().startsWith(keywords[i])) {
           i = extendKeywordSearch(keywords, i, member.name)
           name = false
@@ -96,7 +96,7 @@ function MembersGrid() {
           const tags = member.tags.toLowerCase().split(', ')
           let matchTag = false
           let k = i
-          for (let j = 0; j < tags.length; j++) {
+          for (let j = 0; j < tags.length; j += 1) {
             if (tags[j].startsWith(keywords[i])) {
               k = Math.max(extendKeywordSearch(keywords, i, tags[j]), k)
               matchTag = true
