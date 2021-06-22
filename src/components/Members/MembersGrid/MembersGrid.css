@@ -15,11 +15,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 10% 20px 10%;
+  margin: 5vh 5vw 3vh 5vw;
   background: #545454;
-  border-radius: 10px;
-  padding: 5px 10px 5px 10px;
-  font-size: clamp(20px, 2.5vw ,24px);
+  border-radius: 20px;
+  padding: 1vh 2vw;
   color: #aaa;
 }
 
@@ -27,10 +26,16 @@
   flex-grow: 1;
   background: inherit;
   border: none;
-  padding: 0 10px 0 10px;
+  padding-left: 1vw;
   outline: none;
   color: #eee;
   text-overflow: ellipsis;
+  font-size: 3vh;
+  width: 100%;
+}
+
+.members-search-bar-icon {
+  font-size: 3vh;
 }
 
 .grid-title {
@@ -120,10 +125,12 @@
   .grid-title-text {
     font-size: 3vh;
   }
-}
 
-@media (max-width: 280px) {
   .members-grid-search-bar-input {
-    padding: 0;
+    padding-left: 3vw;
+  }
+
+  .members-grid-search-bar {
+    padding-left: 4vw;
   }
 }

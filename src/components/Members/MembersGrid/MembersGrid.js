@@ -224,7 +224,7 @@ function MembersGrid() {
   return (
     <div className="members-grid-container" data-testid="members-grid-container">
       <div className="members-grid-search-bar">
-        <FontAwesomeIcon icon={faSearch} size="1x" />
+        <FontAwesomeIcon icon={faSearch} className="members-search-bar-icon" />
         <input
           type="text"
           className="members-grid-search-bar-input"
