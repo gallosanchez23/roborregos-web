@@ -5,10 +5,12 @@
   </head>
   <body>
     <p>
+      Hello <?= $_POST["from_name"] ?> !
+      </br>
       Recibimos tu aplicación a <?= $_POST["position"] ?>
     </p>
     <p>
-      Evaluaremos tu solicitud de inmediato y te contactaremos en caso de requerir más información sobre ti <?= $_POST["from_name"] ?>.
+      Evaluaremos tu solicitud de inmediato y te contactaremos en caso de requerir más información sobre ti.
     </p>
     <p>
       Suerte!

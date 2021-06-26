@@ -134,7 +134,6 @@ function FormsModal(props: Props) {
                   placeholder="Juanito"
                   disabled={isLoading}
                   onChange={(input) => { setName(input.target.value) }}
-                  // innerRef={(input) => { setName(input.target.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -145,7 +144,6 @@ function FormsModal(props: Props) {
                   placeholder="A01283070"
                   disabled={isLoading}
                   onChange={(input) => { setMatricualtionNumber(input.target.value) }}
-                  // innerRef={(input) => { setMatricualtionNumber(input.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -156,7 +154,6 @@ function FormsModal(props: Props) {
                   placeholder="IMT"
                   disabled={isLoading}
                   onChange={(input) => { setCareer(input.target.value) }}
-                  // innerRef={(input) => { setCareer(input.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -166,7 +163,6 @@ function FormsModal(props: Props) {
                   id="semester"
                   disabled={isLoading}
                   onChange={(input) => { setSemester(input.target.value) }}
-                  // innerRef={(input) => { setSemester(input.value) }}
                 >
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -187,7 +183,6 @@ function FormsModal(props: Props) {
                   disabled={isLoading}
                   placeholder="Why you want to join the team?"
                   onChange={(input) => { setComments(input.target.value) }}
-                  // innerRef={(input) => { setComments(input.value) }}
                 />
               </FormGroup>
             </Row>
