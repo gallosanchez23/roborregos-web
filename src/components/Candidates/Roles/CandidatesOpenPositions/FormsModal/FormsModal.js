@@ -29,7 +29,7 @@ function FormsModal(props: Props) {
 
   const [name, setName] = useState('')
   const [career, setCareer] = useState('')
-  const [semester, setSemester] = useState('')
+  const [semester, setSemester] = useState('1')
   const [matricualtionNumber, setMatricualtionNumber] = useState('')
   const [comments, setComments] = useState('')
   const [isLoading, setIsLoading] = useState('')
@@ -57,7 +57,6 @@ function FormsModal(props: Props) {
   }
 
   const handleSubmit = (recaptchaKey: string) => {
-    alert('submit')
     onSubmit()
     if (name && career && semester
       && matricualtionNumber && comments) {
@@ -65,7 +64,6 @@ function FormsModal(props: Props) {
       setIsLoading(true)
       sendJoinUsEmail(mailParams).then((result) => {
         if (result.status === 1) {
-          alert('success')
           setOpen(true)
           setMessage('Thanks for your interest! Check your Tec email.')
           setSeverity('success')
@@ -74,6 +72,11 @@ function FormsModal(props: Props) {
           setMessage('Something went wrong! Please retry later')
           setSeverity('error')
         }
+        setName('')
+        setCareer('')
+        setSemester('')
+        setMatricualtionNumber('')
+        setComments('')
       }, (error) => {
         setOpen(true)
         setMessage('Something went wrong! Please retry later')
@@ -83,6 +86,10 @@ function FormsModal(props: Props) {
         setIsLoading(false)
         toggle()
       })
+    } else {
+      setOpen(true)
+      setMessage('Please complete all fields')
+      setSeverity('error')
     }
   }
 
@@ -127,6 +134,7 @@ function FormsModal(props: Props) {
                   placeholder="Juanito"
                   disabled={isLoading}
                   onChange={(input) => { setName(input.target.value) }}
+                  // innerRef={(input) => { setName(input.target.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -137,6 +145,7 @@ function FormsModal(props: Props) {
                   placeholder="A01283070"
                   disabled={isLoading}
                   onChange={(input) => { setMatricualtionNumber(input.target.value) }}
+                  // innerRef={(input) => { setMatricualtionNumber(input.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -147,6 +156,7 @@ function FormsModal(props: Props) {
                   placeholder="IMT"
                   disabled={isLoading}
                   onChange={(input) => { setCareer(input.target.value) }}
+                  // innerRef={(input) => { setCareer(input.value) }}
                 />
               </FormGroup>
               <FormGroup className="col-md-6">
@@ -156,6 +166,7 @@ function FormsModal(props: Props) {
                   id="semester"
                   disabled={isLoading}
                   onChange={(input) => { setSemester(input.target.value) }}
+                  // innerRef={(input) => { setSemester(input.value) }}
                 >
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -176,6 +187,7 @@ function FormsModal(props: Props) {
                   disabled={isLoading}
                   placeholder="Why you want to join the team?"
                   onChange={(input) => { setComments(input.target.value) }}
+                  // innerRef={(input) => { setComments(input.value) }}
                 />
               </FormGroup>
             </Row>
