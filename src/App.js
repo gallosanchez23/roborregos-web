@@ -10,7 +10,6 @@ import Candidates from './components/Candidates/Candidates'
 import NavBar from './components/NavBar/NavBar'
 import About from './components/About/About'
 import routesData from './data/routes.json'
-import membersData from './data/members.json'
 import Project from './components/Projects/Projects'
 import projectsData from './data/projects.json'
 import Footer from './components/Footer/Footer'
@@ -39,7 +38,7 @@ class App extends Component<Props> {
 
           <Route path="/projects" component={() => <Project projectsData={projectsData} />} />
 
-          <Route path="/members" component={() => <Members membersData={membersData} />} />
+          <Route path="/members" component={() => <Members />} />
 
           <Route path="/candidates" component={() => <Candidates />} />
 
