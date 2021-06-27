@@ -24,7 +24,7 @@ function FormsModal(props: Props) {
   const {
     selectedPosition, isOpen, toggle, onSubmit, trySubmit,
   } = props
-  const recaptchaRef = React.createRef()
+  const recaptchaRef = React.useRef()
   const greeting = `Join us as ${selectedPosition.title}!`
 
   const [name, setName] = useState('')
@@ -34,7 +34,7 @@ function FormsModal(props: Props) {
   const [comments, setComments] = useState('')
   const [isLoading, setIsLoading] = useState('')
   const [open, setOpen] = useState(false)
-  const [message, setMessage] = useState('Thanks for your interest! Check your Tec email.')
+  const [message, setMessage] = useState('')
   const [severity, setSeverity] = useState('success')
 
   const handleClose = (event, reason) => {
