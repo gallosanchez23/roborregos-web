@@ -24,11 +24,11 @@
   }
 
   function failResponse($msg, $data) {
-    die(json_encode(array("status"=>0,"msg"=>$msg,"data"=>$data)));
+    die(json_encode(array("status"=>400,"msg"=>$msg,"data"=>$data)));
   }
   
   function successReponse($msg, $data) {
-    die(json_encode(array("status"=>1,"msg"=>$msg,"data"=>$data)));
+    die(json_encode(array("status"=>200,"msg"=>$msg,"data"=>$data)));
   }
   
   $params = json_decode(file_get_contents('php://input'), true);

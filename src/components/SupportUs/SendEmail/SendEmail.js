@@ -150,7 +150,7 @@ function SendEmail({ language }: Props) {
       setIsLoading(true);
       
       sendContactUsEmail(mailParams).then((result) => {
-        if (result.status === 1) {
+        if (result.status === 200) {
           // eslint-disable-next-line no-alert
           alert('Thanks for your interest! \nEmail Sent. \n')
           setName('')

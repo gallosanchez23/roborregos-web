@@ -57,7 +57,7 @@ class FormsModal extends Component<Props> {
         isLoading: true,
       })
       sendJoinUsEmail(mailParams).then((result) => {
-        if (result.status === 1) {
+        if (result.status === 200) {
           // eslint-disable-next-line no-alert
           alert('Thanks for your interest! \nCheck your Tec email \n')
         } else {
