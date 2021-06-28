@@ -24,7 +24,7 @@ function FormsModal(props: Props) {
   const {
     selectedPosition, isOpen, toggle, onSubmit, trySubmit,
   } = props
-  const recaptchaRef = React.useRef()
+  const recaptchaRef = React.createRef()
   const greeting = `Join us as ${selectedPosition.title}!`
 
   const [name, setName] = useState('')
