@@ -20,3 +20,37 @@ input::placeholder, #comments::placeholder{
       color: #cfc4c3 !important; 
       font-size: 0.96em;     
 }
+.grecaptcha-badge{
+      z-index: 2000;
+}
+.formLoading{
+      opacity: 0.25;
+}
+.loadingSymbol{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+}
+.spinSymbol {
+      animation: spin 1s linear infinite;
+      margin-left: 0.25rem;
+      margin-right: 0.75rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      color: #4F72B8;
+}
+@keyframes spin {
+      from {
+            transform: rotate(0deg);
+      }
+      to {
+            transform: rotate(360deg);
+      }
+}
+.opacity-25{
+      opacity: 0.25;
+}
+.opacity-75{
+      opacity: 0.75;
+}
