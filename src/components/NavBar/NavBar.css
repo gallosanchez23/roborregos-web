@@ -62,17 +62,6 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width : 991px) {
-  #app-navbar .navbar-nav {
-    align-items: center;
-    background-color: rgb(25, 30, 35);
-  }
-
-  #app-navbar #navbar-logo {
-    height: 4vh;
-  }
-}
-
 @media (max-width : 1024px) {
   #app-navbar {
     font-size: 1.5vh;
@@ -93,7 +82,44 @@
   }
 }
 
-@media all and (min-width: 992px){
+@media (max-width : 991px) {
+  #app-navbar .navbar-nav {
+    font-size: 3vh;
+    align-items: center;
+    background-color: rgb(25, 30, 35);
+    width: 100vw;
+  }
+
+  #app-navbar #navbar-logo {
+    height: 4vh;
+  }
+
+  #app-navbar .navbar-nav .navbar-btn-legend {
+    padding: 0 5vw;
+    margin-top: 1vh;
+  }
+
+  #app-navbar #navbar-legend-div {
+    padding-top: 4vh;
+    width: 60vw;
+  }
+
+  #navbar-legend {
+    font-size: 3vh;
+  }
+
+  #navbar-sponsor-logo {
+    display: block;
+    padding-top: 1vh;
+    margin-left: 1vw;
+    margin-top: 0vh;
+    height: 55%;
+    width: 55%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 992px){
   #app-navbar #navbar-legend-div {
     position: absolute;
     right: 2px;
