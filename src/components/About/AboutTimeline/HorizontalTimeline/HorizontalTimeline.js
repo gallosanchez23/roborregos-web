@@ -33,7 +33,7 @@ const tryRequire = (imgPath: string) => {
   try {
     /* eslint-disable import/no-dynamic-require */
     /* eslint-disable global-require */
-    return require(`../../../../images/about/timeline/${imgPath}`)
+    return require(`../../../../images/about/timeline/${imgPath}.jpg`)
   } catch (err) {
     return imgPath
   }
