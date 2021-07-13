@@ -14,9 +14,7 @@ with open(input_path, encoding="utf8") as cvsFile:
   for row in csvReader:
     print("--------")
     priority = int(row["priority"])
-    if priority == 0:
-      data["main"].append(row)
-    elif priority == 1000:
+    if priority == 1000:
       data["other"].append(row)
     else:
       while len(data["carrousel"])-1 < priority:
@@ -24,7 +22,7 @@ with open(input_path, encoding="utf8") as cvsFile:
       data["carrousel"][priority].append(row)
     print(row)
 
-data["carrousel"].pop(0)
+data["main"] = data["carrousel"].pop(0)
 
 with open(output_path, 'w') as jsonFile:
   jsonFile.write(json.dumps(data, indent=4))
