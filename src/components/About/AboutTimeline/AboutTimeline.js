@@ -36,7 +36,7 @@ function AboutTimeline() {
       </div>
     )
   }
-  const inverted_events = events.reverse()
+  const reversed_events = [...events].reverse()
   return (
     <div className="about-timeline-container" test-id="1">
       <Container fluid>
@@ -46,7 +46,7 @@ function AboutTimeline() {
           </h1>
         </Row>
         <VerticalTimeline>
-          { inverted_events.map((event: Event, index: number) => (
+          { reversed_events.map((event: Event, index: number) => (
             <AboutSingleTimelineEvent
               key={index}
               event={event}
