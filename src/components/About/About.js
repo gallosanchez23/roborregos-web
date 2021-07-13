@@ -8,7 +8,7 @@ import RoborregosVideo from './VideoPlayer/Responsive-Video-Player'
 
 const About = () => {
   const headerTitle = 'About us'
-  const headerMainText = ['In 2015, four students organized themselves to compete in the Mexican National Robotics Tournament, reaching a pass to the international. There, they met people from other countries and noticed the potential that Mexico could have.', 'Motivated, they started RoBorregos, with the intention of sharing knowledge and experiences through generations.']
+  const headerMainText = ['In 2015, four students competed in the TMR, reaching a pass to the international; There, they met people from other countries and noticed the potential that Mexico could have.', 'Motivated, they started RoBorregos, intending to share knowledge and experiences through generations.']
   const headerSubText = ['Our journey']
   document.title = 'RoBorregos | About'
   return (
