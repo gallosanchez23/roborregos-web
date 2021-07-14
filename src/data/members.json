@@ -121,6 +121,21 @@
             "tags": ""
         },
         {
+            "id": "12",
+            "name": "Nestor",
+            "lastname": "Maldonado P\u00e1manes",
+            "status": "inactive",
+            "role": "Software Development",
+            "subtitle": "Alumni",
+            "class": "2015",
+            "semesters": "9",
+            "description": "Former team member, now working as a software engineer at Google thanks to it. Here we built a community that uses technology and competitions to obtain knowledge and abilities to help us growth individually and as a group and each one of us is an example of what teamwork can get.",
+            "github": "https://github.com/nessmp",
+            "github_user": "nessmp",
+            "linkedin": "https://www.linkedin.com/in/nestor-maldonado-p%C3%A1manes-906925148/",
+            "tags": "Programming, Electrical, Mechanics, Algorithms, Computer vision, Control systems, Navigation, Frontend, Backend, Networks and communication, Social media, Sponsorships, Finances, Project Management, Executive comitee"
+        },
+        {
             "id": "13",
             "name": "Tom\u00e1s",
             "lastname": "Lugo",
@@ -184,7 +199,7 @@
             "id": "17",
             "name": "Aurora",
             "lastname": "Tijerina",
-            "status": "comitee",
+            "status": "active",
             "role": "Software Development & Leadership",
             "subtitle": "",
             "class": "2016",
@@ -201,9 +216,9 @@
             "lastname": "Cervantes",
             "status": "active",
             "role": "Control Systems",
-            "subtitle": "",
+            "subtitle": "Alumni",
             "class": "2016",
-            "semesters": "7",
+            "semesters": "9",
             "description": "Hey there! My name is Ernesto and I am a junior student in robotics engineering. I have had the honor to work as a control systems programmer in a robot capable of going through an unknown maze, competition better know as Rescue Maze. I've done two summer internships at Microsoft and since January I started a research program at Harvard University. I am also the CEO of ONEILA.",
             "github": "https://github.com/netocervantes98",
             "github_user": "netocervantes98",
@@ -216,9 +231,9 @@
             "lastname": "Mendoza",
             "status": "active",
             "role": "Mechanical Design",
-            "subtitle": "",
+            "subtitle": "Alumni",
             "class": "2016",
-            "semesters": "7",
+            "semesters": "9",
             "description": "Hi! I'm Gaby, a Mechatronics engineer currently studying a Master\u2019s in Manufacturing Systems. Working with RoBorregos was a big part of my university life (I was mainly involved in mechanical design). I also had some experience with programming, in small competitions (I love Hackathons!) and internships. I\u2019m interested in projects that involve technological development, efficiency and support sustainable energy solutions. My past experiences have led me to work in both independent and team projects, and I believe group projects are an excellent way to share advice and support each other. In my free time I like to read, ice skate, watch series/movies, play basketball, and learn ASL/LSM.",
             "github": "",
             "github_user": "",
@@ -289,7 +304,7 @@
             "id": "26",
             "name": "Alberto",
             "lastname": "Jahuey",
-            "status": "active",
+            "status": "inactive",
             "role": "Software Development",
             "subtitle": "",
             "class": "2017",
@@ -349,16 +364,16 @@
             "id": "35",
             "name": "Ricardo",
             "lastname": "Osorio",
-            "status": "comitee",
-            "role": "Mechanical Design",
+            "status": "active",
+            "role": "Mechanical Design, Logistics & Sponsorship and Industrial Enginner",
             "subtitle": "",
             "class": "2017",
             "semesters": "7",
-            "description": "Hello everyone, I\u00b4m Ricardo, i\u00b4m currently studying mechatronics major, I\u00b4ve been working in Roborregos as robots mechanic for two years, i\u00b4m currently working in the development of a drone capable of produce energy. I love to design and create mechanical solutions that implies not only mechanisms, but also consider electronic components and circuitry. I am a great fan of F1 and my dream is to work with race cars, I also like ride my MTB bike and play my harp.",
-            "github": "",
-            "github_user": "",
+            "description": "Hello everyone, I\u00b4m Ricardo, i\u00b4m currently studying mechatronics major, I\u00b4ve been working in Roborregos as robots mechanic for three years. I love to design and create mechanical solutions that implies not only mechanisms, but also consider electronic components and circuitry. I am a great fan of F1 and my dream is to work with race cars, I also like ride my MTB bike and play my harp.",
+            "github": "https://github.com/RicardoOsorioOliveros",
+            "github_user": "RicardoOsorioOliveros",
             "linkedin": "https://www.linkedin.com/in/ricardo-osorio-oliveros-95a2561a5/",
-            "tags": ""
+            "tags": "Mechanics, Structural mechanics, Mechanisms, Industrial design, Power electronics, Networks and communication, Graphic design, Sponsorships, Finances, Project Management, Executive comitee"
         },
         {
             "id": "36",
@@ -425,15 +440,15 @@
             "name": "Jamir",
             "lastname": "Leal",
             "status": "active",
-            "role": "Electronics",
+            "role": "Software Development",
             "subtitle": "",
             "class": "2018",
             "semesters": "5",
-            "description": "Hi, I'm Jamir, a student of 4th semester of the ITI degree. I started at RoBorregos in 2018 looking for new skills to learn, oriented into robotics. Currently, I am a communication programmer and electronics developer at LARC VSSS. I am interested in computer vision, web development and machine learning. I enjoy to do sports and learn new things.",
+            "description": "Hi, I am Jamir, currently studying Information Technologies. I participated in RoboCup at Junior Rescue Maze category developing electronic design and the computer vision algorithm. I am currently working in LARC VSSS at the integration area. I also have worked as web developer in some projects. In my free time I like to practice Triathlon and listen music.",
             "github": "https://github.com/JamirLeal",
             "github_user": "JamirLeal",
-            "linkedin": "https://linkedin.com/in/jamir-leal-cota-9988b6174",
-            "tags": ""
+            "linkedin": "https://www.linkedin.com/in/jamir-leal-cota-9988b6174/",
+            "tags": "Programming, Algorithms, Computer vision, Frontend, Logic electronics"
         },
         {
             "id": "43",
@@ -447,8 +462,8 @@
             "description": "Hello, I'm Jose, a student of a bachelor degree with a major in Computer Engineering and a minor in Digital Systems and Robotics. I am involved in the team as a programmer and electronic, both areas interest me a lot and I like to learn about them.  Currently, I am a Software Developer in Robocup @Home, it is an interesting project with a lot of opportunity areas, thats why i am passionate about it. I love spending time playing basketball, listening music and hanging out with friends.",
             "github": "https://github.com/Josecisneros001",
             "github_user": "Josecisneros001",
-            "linkedin": "",
-            "tags": ""
+            "linkedin": "https://www.linkedin.com/in/joseacisnerosm",
+            "tags": "Programming, Electrical, Algorithms, Computer vision, Control systems, Frontend, Backend, Human-robot interaction, Speech recognition, Sensorial systems, Deep Learning"
         },
         {
             "id": "45",
@@ -520,7 +535,7 @@
             "class": "2018",
             "semesters": "5",
             "description": "Hi, I'm Ricardo, a student of 4th of the ISDr degree. Currently, I'm a programmer on the Navigation area in RoboCup's @Home. I'm also working on the development of this webpage! I'm always looking to work on any scalable project that can have social impact. I'm interested in web development and robotics. I really like to see soccer games and play video games in my free time.",
-            "github": "",
+            "github": "https://github.com/RicardoChapaRomero",
             "github_user": "RicardoChapaRomero",
             "linkedin": "https://www.linkedin.com/in/ricardo-chapa-romero-a4b277133/",
             "tags": ""
@@ -594,11 +609,11 @@
             "subtitle": "",
             "class": "2019",
             "semesters": "3",
-            "description": "Hi, my name is Emerico. I am a fourth semester student of Digital Systems and Robotics Engineering and a member of the RoBorregos team. Last semester I developed the main algorithm for the robot that competed in the RoboCup Federation tournament in the Rescue Maze cathegory. I love this team because it has contributed to my personal growth and my ability to work in groups. My favorite areas are programming and digital systems. I like classical music and I belive that team work makes great things possible. ",
+            "description": "Hi, my name is Emerico. I am a Digital Systems and Robotics Engineering student and a member of the RoBorregos team. I am a programmer who has developed logic algorithms for positioning and movement in the Rescue Maze cathegory and computer vision development for the Very Small Size Soccer competition. I love this team because it has contributed to my personal growth and my ability to work in groups. My favorite areas are programming and digital systems. I like classical music and I belive that team work makes great things possible!",
             "github": "https://github.com/Eme112",
             "github_user": "Eme112",
             "linkedin": "https://www.linkedin.com/in/em%C3%A9rico-pedraza-195599133/",
-            "tags": ""
+            "tags": "Programming, Algorithms, Computer vision, Executive comitee"
         },
         {
             "id": "55",
@@ -669,11 +684,11 @@
             "subtitle": "",
             "class": "2019",
             "semesters": "3",
-            "description": "Hi my name is Marlon Romo I am currently studying my 2nd semester of Robotics and Digital Systems Engineering. I am a member of the International Robotics Representative Team of Tecnologico de Monterrey. Along with my team we created a fully autonomous robot capable of searching through a maze for victims as part of the RoboCup @Rescue Maze competition. My role as a Control System programmer was to ensure the precise movement and correct performance of the sensors behind the robot. This competition help me acquired several skills among them learning about PID algorithms and their applications. I am passionate about learning new technologies and solving problems. I am interested in gaining professional experience and one of my hobbies is playing baseball.",
+            "description": "Hi my name is Marlon Romo I am currently studying Computer Science. I am a member of the International Robotics Representative Team of Tecnologico de Monterrey. One of my achievements with my team was created a fully autonomous robot capable of searching through a maze for victims as part of the RoboCup @Rescue Maze competition. I am currently developing webapps on Google Cloud Shell and I am very passionate about Baseball.",
             "github": "https://github.com/MarlonB500",
             "github_user": "MarlonB500",
             "linkedin": "https://www.linkedin.com/in/marlonromo",
-            "tags": ""
+            "tags": "Programming, Control systems"
         },
         {
             "id": "60",
@@ -684,11 +699,11 @@
             "subtitle": "",
             "class": "2020",
             "semesters": "3",
-            "description": "Hi, I'm Karla, I'm currently studying the second semester of Digital Business Transformation. I am in Roborregos as a proud member of the Coordination of Logistics and Sponsorships, I believe in this organization because of its potencial as a major change agent and I am delighted of having the opportunity to work with such a diverse team that is an inspiration to me, to the community and to the upcoming generations of tech loving disruptors. I am interested in working in Project Management, Data Science and Business Intelligence. I am passionate about learning new things and in my free time I am a hyperactive reader, attempt of blogger and fitness fanatic. ",
+            "description": "Hi! I am Karla Olvera, currently a member of the Logistics and Sponsorships Committee, I love learning new things, being curious and creative. I am interested in technology, Data science, UX/UI, change management and team collaboration. ",
             "github": "https://github.com/karlysov",
             "github_user": "karlysov",
             "linkedin": "https://www.linkedin.com/in/karla-susana-olvera-vazquez-765764198/",
-            "tags": ""
+            "tags": "Sponsorships, Finances, Project Management"
         },
         {
             "id": "61",
@@ -736,6 +751,51 @@
             "tags": "Programming, Frontend, Backend"
         },
         {
+            "id": "64",
+            "name": "H\u00e9ctor",
+            "lastname": "Cort\u00e9s Hern\u00e1ndez",
+            "status": "active",
+            "role": "Mechanical Design",
+            "subtitle": "",
+            "class": "2020",
+            "semesters": "1",
+            "description": "My name is Hector! Student of digital systems and robotics. Im a mechanic designer but im currently learning how to improve my skills in programming. I love being part of this group that has gave me a lot of experience.",
+            "github": "https://github.com/HectorRuben",
+            "github_user": "HectorRuben",
+            "linkedin": "https://www.linkedin.com/in/hector-cort%C3%A9s-hern%C3%A1ndez-706602216/",
+            "tags": "Mechanics, Graphic design"
+        },
+        {
+            "id": "65",
+            "name": "Alonso",
+            "lastname": "Ruiz",
+            "status": "active",
+            "role": "Mechanical Design",
+            "subtitle": "",
+            "class": "2020",
+            "semesters": "1",
+            "description": "Hi, my name is Alonso. I\u2019m currently studying mechatronics engineering and work as a mechanical designer for the team in RoboCup @Home. Mechanical design, 3D modeling, and prototyping are things that I am very passionate about. I love how a simple mechanical concept or idea that started in your mind can be simulated using a CAD software and, through engineering and technology, be brought to life into a real physical object that performs a function within the robot.",
+            "github": "https://github.com/AlonRuiz",
+            "github_user": "AlonRuiz",
+            "linkedin": "https://www.linkedin.com/in/alonso-ruiz/",
+            "tags": "Mechanics, Structural mechanics, Mechanisms, Industrial design"
+        },
+        {
+            "id": "67",
+            "name": "Ignacio",
+            "lastname": "Maldonado S\u00e1nchez ",
+            "status": "active",
+            "role": "Mechanical Design",
+            "subtitle": "",
+            "class": "2020",
+            "semesters": "1",
+            "description": "Hi I\u2019m Ignacio, student of Mechatronic engineering, by now I\u2019m working as member of the RoBorregos team in the mechanical and CAD simulation area, my passion is to design innovative, functional and modern products or services that can make life easier and happier for all of us. I love archery, gaming and Hi-Res audio.",
+            "github": "https://github.com/IGNA-TENKOV",
+            "github_user": "IGNA-TENKOV",
+            "linkedin": "https://www.linkedin.com/in/ignacio-maldonado-67b86b1a8/",
+            "tags": "Programming, Electrical, Mechanics, Human-robot interaction, Sensorial systems, Structural mechanics, Mechanisms, Industrial design, Logic electronics, Power electronics, Graphic design, Process design, Process optimization, Marketing"
+        },
+        {
             "id": "68",
             "name": "Andrea",
             "lastname": "Salcedo",
@@ -766,6 +826,21 @@
             "tags": "Electrical, Sensorial systems, Logic electronics, Power electronics, Networks and communication"
         },
         {
+            "id": "70",
+            "name": "Evelyn",
+            "lastname": "Ulloa",
+            "status": "active",
+            "role": "Electronics",
+            "subtitle": "",
+            "class": "2020",
+            "semesters": "1",
+            "description": "Hi, I'm Eve! I am currently pursuing a Bachelor of Science degree in Mechatronics Engineering. My interests are physics, IoT and embedded systems. In my free time, I like reading, drawing, and playing piano. At the moment, I develop in the electronics field in project SEMS, which is a social and environmental monitoring system for keeping track of the region's surroundings due to coronavirus pandemic. I am looking to get a better understanding of the world, and I think the best way to accomplish it is through engineering and science.",
+            "github": "https://github.com/eeveulloa",
+            "github_user": "eeveulloa",
+            "linkedin": "https://www.linkedin.com/in/eeveulloa/",
+            "tags": "Electrical, Sensorial systems, Power electronics"
+        },
+        {
             "id": "71",
             "name": "Daniel",
             "lastname": "Loredo",
@@ -779,6 +854,21 @@
             "github_user": "DanielLoredo",
             "linkedin": "www.linkedin.com/in/danielloredom",
             "tags": "Programming, Frontend, Backend, Project Management"
+        },
+        {
+            "id": "73",
+            "name": "Brenda",
+            "lastname": "Mart\u00ednez",
+            "status": "active",
+            "role": "Software Development",
+            "subtitle": "",
+            "class": "2020",
+            "semesters": "1",
+            "description": "Hello, I'm Brenda, student of Data Science and Mathematics. I'm working as a programmer in Roborregos. I'm interesed in Data Science (obviously), Expert Systems and, recently I've taking interest in Cybersecurity. I enjoy spending time with my friends and family and learning new things.",
+            "github": "https://github.com/bmaor2001",
+            "github_user": "bmaor2001",
+            "linkedin": "https://www.linkedin.com/in/brenda-mart\u00ednez-orta-75188918a",
+            "tags": "Programming, Algorithms, Backend, Sponsorships"
         },
         {
             "id": "75",
@@ -809,6 +899,21 @@
             "github_user": "sofiaalexa05",
             "linkedin": "https://www.linkedin.com/in/sof\u00edamart\u00ednezdelao",
             "tags": "Human-robot interaction, Industrial design, Project Management, Process optimization"
+        },
+        {
+            "id": "78",
+            "name": "Lorena",
+            "lastname": "Mart\u00ednez",
+            "status": "active",
+            "role": "Social Media",
+            "subtitle": "",
+            "class": "2021",
+            "semesters": "0",
+            "description": "Hi, I\u2019m Lore, student of Mechatronics Engineer. Currently, I am working on the design and management of the team\u2019s social accounts. ",
+            "github": "",
+            "github_user": "",
+            "linkedin": "https://www.linkedin.com/in/lorena-mart%C3%ADnez-garc%C3%ADa-pe%C3%B1a-b01242217/",
+            "tags": "Social media, Graphic design, Marketing"
         }
     ]
 }
