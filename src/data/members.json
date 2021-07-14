@@ -886,6 +886,21 @@
             "tags": "Programming, Algorithms, Computer vision, Frontend"
         },
         {
+            "id": "76",
+            "name": "Sebasti\u00e1n",
+            "lastname": "Rodr\u00edguez",
+            "status": "active",
+            "role": "Mechanical Design",
+            "subtitle": "",
+            "class": "2020",
+            "semesters": "1",
+            "description": "Hi, I'm Sebasti\u00e1n, student of Mechatronics Engineering. Currently, I'm working on designing an Automated Storage & Retrieval System (AS/RS) for the EAIBot B1 Smart Factory. This is a very challenging but enriching project that introduces us to what most factories will look like in the future. I've always been fascinated with the immense power and the cutting-edge technology of space rockets. I'd also like to learn how to fly!",
+            "github": "https://github.com/RgzSebas",
+            "github_user": "RgzSebas",
+            "linkedin": "https://mx.linkedin.com/in/srcsrc",
+            "tags": "Mechanics, Structural mechanics, Mechanisms"
+        },
+        {
             "id": "77",
             "name": "Sof\u00eda Alexa",
             "lastname": "Mart\u00ednez de la O",
