@@ -33,7 +33,7 @@ const tryRequire = (imgPath: string) => {
   try {
     /* eslint-disable import/no-dynamic-require */
     /* eslint-disable global-require */
-    return require(`../../../../images/about/timeline/${imgPath}`)
+    return require(`../../../../images/about/timeline/${imgPath}.jpg`)
   } catch (err) {
     return imgPath
   }
@@ -64,7 +64,7 @@ const singleItem = (event: Event, height: number) => (
 function HorizontalTimeline(props: Props) {
   const { events, years } = props
   events.sort((a, b) => new Date(a.year, a.month, 1) - new Date(b.year, b.month, 1))
-  const [selectedYear, setSelectedYear] = React.useState(years[0])
+  const [selectedYear, setSelectedYear] = React.useState(years[years.length - 1])
   const [mySlider, setSlider] = React.useState(null)
   const { height } = useWindowSize()
 
@@ -125,7 +125,7 @@ function HorizontalTimeline(props: Props) {
     speed: 1300,
     slidesToShow: eventsPerView,
     slidesToScroll: eventsPerScroll,
-    initialSlide: 0,
+    initialSlide: events.length - 3,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     afterChange: (current) => {
