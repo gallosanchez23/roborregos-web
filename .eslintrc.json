@@ -23,6 +23,10 @@
     "camelcase": "off",
     "linebreak-style": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-no-bind": [{
+      "allowArrowFunctions": "off",
+      "allowFunctions": "off"
+    }],
     "react/no-array-index-key": "off",
     "semi": ["error", "never"],
     "flowtype/boolean-style": [2, "boolean"],
