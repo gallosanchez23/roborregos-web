@@ -24,8 +24,8 @@
     "linebreak-style": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-no-bind": [2, {
-      "allowArrowFunctions": false,
-      "allowFunctions": false
+      "allowArrowFunctions": true,
+      "allowFunctions": true
     }],
     "react/no-array-index-key": "off",
     "semi": ["error", "never"],
