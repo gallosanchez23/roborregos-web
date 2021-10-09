@@ -34,6 +34,7 @@ For more information about project management and standards you can check our [w
 | ----------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------ | --------- |
 | Jamir Leal Cota | [jamirleal200@gmail.com](mailto:jamirleal200@gmail.com)                       | [@JamirLeal](https://github.com/JamirLeal)                       | PM |
 | José Alfonso Cisneros   | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com)         | [@Josecisneros001](https://github.com/Josecisneros001)       | Developer |
+| Keven Arroyo   | [dake.3601@gmail.com](mailto:dake.3601@gmail.com)         | [@dake3601](https://github.com/dake3601)       | Developer |
 
 ### Environment URLs
 
