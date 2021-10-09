@@ -23,7 +23,7 @@
     "camelcase": "off",
     "linebreak-style": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/jsx-no-bind": [{
+    "react/jsx-no-bind": [2, {
       "allowArrowFunctions": "off",
       "allowFunctions": "off"
     }],
