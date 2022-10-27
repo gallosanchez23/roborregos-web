@@ -14,7 +14,7 @@ You can consult the application on production at [roborregos.com](https://roborr
 
 - [RoBorregos Web](#roborregos-web)
   - [Table of contents](#table-of-contents)
-  - [Project details](#project-details)
+  - [Project Details](#project-details)
     - [Development team](#development-team)
     - [Environment URLs](#environment-urls)
   - [Project setup](#project-setup)
@@ -32,9 +32,13 @@ For more information about project management and standards you can check our [w
 
 | Name                    | Email                                                               | Github                                                       | Role      |
 | ----------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------ | --------- |
-| Jamir Leal Cota | [jamirleal200@gmail.com](mailto:jamirleal200@gmail.com)                       | [@JamirLeal](https://github.com/JamirLeal)                       | PM |
-| José Alfonso Cisneros   | [joseacisnerosm@gmail.com](mailto:joseacisnerosm@gmail.com)         | [@Josecisneros001](https://github.com/Josecisneros001)       | Developer |
-| Keven Arroyo   | [dake.3601@gmail.com](mailto:dake.3601@gmail.com)         | [@dake3601](https://github.com/dake3601)       | Developer |
+| Ivan Alberto Romero Wells | [i.wells.ar@gmail.com](mailto:i.wells.ar@gmail.com)                       | [@IvanRomero03](https://github.com/IvanRomero03)                         | PM |
+| Lorena Martinez   | [@gmail.com](mailto:@gmail.com)         | [@](https://github.com/)       | Developer |
+| Yair Reyes  | [@gmail.com](mailto:@gmail.com)         | [@](https://github.com/)                   | Developer |
+| Héctor Rubén  | [@gmail.com](mailto:@gmail.com)         | [@](https://github.com/)                   | Developer |
+| Sebastián Segovia  | [@gmail.com](mailto:@gmail.com)     | [@](https://github.com/AnaGarza)                     | Developer  |
+| Emérico Pedraza  | [@gmail.com](mailto:@gmail.com)               | [@](https://github.com/)                       | Developer |
+| Alexis Chapa | [@gmail.com](mailto:@gmail.com)               | [@](https://github.com/)                       | Developer |
 
 ### Environment URLs
 
