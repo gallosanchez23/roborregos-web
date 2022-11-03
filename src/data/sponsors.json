@@ -7,19 +7,19 @@
       "link": "https://tec.mx/es"
     },
     {
-      "name": "Steren",
-      "img_path": "steren.png",
-      "link": "https://www.steren.com.mx"
+      "name": "Amazon Web Services",
+      "img_path": "aws-logo.png",
+      "link": "https://aws.amazon.com/"
     },
     {
-      "name": "Oneila",
-      "img_path": "oneila.png",
-      "link": "https://www.facebook.com/ONEILA.MX/"
+      "name": "Mitutoyo",
+      "img_path": "mitutoyo.png",
+      "link": "https://www.mitutoyo.com.mx/"
     },
     {
-      "name": "ATB",
-      "img_path": "ATB.png",
-      "link": "https://www.linkedin.com/in/ivanromero.w/"
+      "name": "Pedraza",
+      "img_path": "pedraza.png",
+      "link": "http://pedraza.biz/"
     }
   ],
   "packages": [
