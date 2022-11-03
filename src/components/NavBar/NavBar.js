@@ -1,39 +1,43 @@
 // @flow
-import React, { Component } from 'react'
-import { Navbar, Nav } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import logo from '../../images/white_logo.png'
-import sponsor_logo from '../../images/sponsors/steren2.png'
-import './NavBar.css'
+import React, { Component } from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import logo from "../../images/white_logo.png";
+import sponsor_logo from "../../images/sponsors/Mitutoyo2.png";
+import "./NavBar.css";
 
 type RouteType = {
   path: string,
   legend: string,
-  component: string
+  component: string,
 };
 
 type Props = {
-  routes: Array<RouteType>
+  routes: Array<RouteType>,
 };
 
 type State = {
-  active_button: string
+  active_button: string,
 };
 
 class NavBar extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
+    super(props);
     // this.handleActiveButton = this.handleActiveButton.bind(this);
 
-    const complete_path = window.location.pathname
-    const first_slash_index = complete_path.indexOf('/')
-    const second_slash_index = complete_path.indexOf('/', first_slash_index + 1)
-    const current_path = second_slash_index === -1
-      ? complete_path.substring(0, complete_path.length)
-      : complete_path.substring(0, second_slash_index)
+    const complete_path = window.location.pathname;
+    const first_slash_index = complete_path.indexOf("/");
+    const second_slash_index = complete_path.indexOf(
+      "/",
+      first_slash_index + 1
+    );
+    const current_path =
+      second_slash_index === -1
+        ? complete_path.substring(0, complete_path.length)
+        : complete_path.substring(0, second_slash_index);
     this.state = {
       active_button: current_path,
-    }
+    };
   }
 
   /*
@@ -47,39 +51,39 @@ class NavBar extends Component<Props, State> {
   } */
 
   getClassName(path: string) {
-    const { active_button } = this.state
-    return `navbar-btn${(path === active_button) ? ' active' : ''}`
+    const { active_button } = this.state;
+    return `navbar-btn${path === active_button ? " active" : ""}`;
   }
 
   closeNavbar = () => {
-    const navbarCollapseDiv = document.getElementById('basic-navbar-nav')
+    const navbarCollapseDiv = document.getElementById("basic-navbar-nav");
     if (navbarCollapseDiv != null) {
-      const navbarIsNotCollapsed = navbarCollapseDiv.classList.contains('show')
+      const navbarIsNotCollapsed = navbarCollapseDiv.classList.contains("show");
 
       if (navbarIsNotCollapsed) {
-        navbarCollapseDiv.classList.remove('show')
+        navbarCollapseDiv.classList.remove("show");
       }
     }
-  }
+  };
 
   handleBrandClick = () => {
     // Collapsing the Navbar on small view
-    this.closeNavbar()
-  }
+    this.closeNavbar();
+  };
 
   handleNavbarClick = (index: string) => {
-    this.setState({ active_button: index })
-    window.scrollTo(0, 0)
-  }
+    this.setState({ active_button: index });
+    window.scrollTo(0, 0);
+  };
 
   render() {
-    const { routes } = this.props
+    const { routes } = this.props;
 
     return (
       <Navbar
         collapseOnSelect
         expand="lg"
-        style={{ backgroundColor: '#191e23' }}
+        style={{ backgroundColor: "#191e23" }}
         variant="dark"
         fixed="top"
         id="app-navbar"
@@ -88,8 +92,8 @@ class NavBar extends Component<Props, State> {
           as={Link}
           to="/"
           onClick={() => {
-            this.handleBrandClick()
-            this.handleNavbarClick('/')
+            this.handleBrandClick();
+            this.handleNavbarClick("/");
           }}
         >
           <img
@@ -105,9 +109,7 @@ class NavBar extends Component<Props, State> {
           test-id="navbar-toggle-button"
         />
         <Navbar.Collapse id="basic-navbar-nav" test-id="basic-navbar-collapse">
-
           <Nav id="navbar-container" className="mr-auto">
-
             {routes.map((route: RouteType, index: number) => (
               <Nav.Link
                 eventKey={index}
@@ -116,15 +118,18 @@ class NavBar extends Component<Props, State> {
                 as={Link}
                 to={route.path}
                 onClick={() => {
-                  this.handleNavbarClick(route.path)
+                  this.handleNavbarClick(route.path);
                 }}
               >
-                <div className="navbar-btn-legend">
-                  { route.legend }
-                </div>
+                <div className="navbar-btn-legend">{route.legend}</div>
               </Nav.Link>
             ))}
-            <Navbar.Brand id="navbar-legend-div" onClick={() => { window.open('https://www.steren.com.mx/') }}>
+            <Navbar.Brand
+              id="navbar-legend-div"
+              onClick={() => {
+                window.open("https://www.mitutoyo.com.mx/");
+              }}
+            >
               <p id="navbar-legend">
                 Powered by
                 <img
@@ -138,8 +143,8 @@ class NavBar extends Component<Props, State> {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    )
+    );
   }
 }
 
-export default NavBar
+export default NavBar;
