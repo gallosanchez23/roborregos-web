@@ -25,6 +25,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
-    - run: yarn flow
+    # - run: yarn flow
     # - run: yarn eslint-check
     # - run: yarn test
