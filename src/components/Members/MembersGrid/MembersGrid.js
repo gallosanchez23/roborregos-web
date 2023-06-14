@@ -1,6 +1,3 @@
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
-// @flow
 import React, { useEffect, useState, useRef } from 'react'
 import Carousel from 'react-material-ui-carousel'
 import GridList from '@material-ui/core/GridList'

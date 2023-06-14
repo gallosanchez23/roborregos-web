@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react'
 import './ProjectsOther.css'
 import GridList from '@material-ui/core/GridList'
@@ -71,8 +70,6 @@ class ProjectsOther extends Component<Props, State> {
   */
   tryRequire = (imgPath: string) => {
     try {
-      /* eslint-disable import/no-dynamic-require */
-      /* eslint-disable global-require */
       return require(`../../../../images/projects/${imgPath}`)
     } catch (err) {
       return imgPath

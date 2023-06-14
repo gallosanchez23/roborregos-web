@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable react/jsx-props-no-spreading */
-// @flow
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Slider from 'react-slick'
@@ -31,8 +28,6 @@ type Props = {
 
 const tryRequire = (imgPath: string) => {
   try {
-    /* eslint-disable import/no-dynamic-require */
-    /* eslint-disable global-require */
     return require(`../../../../images/about/timeline/${imgPath}.jpg`)
   } catch (err) {
     return imgPath

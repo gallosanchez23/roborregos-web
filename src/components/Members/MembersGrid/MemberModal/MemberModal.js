@@ -1,7 +1,3 @@
-/* eslint-disable flowtype/no-weak-types */
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
-// @flow
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import Button from '@material-ui/core/Button'

@@ -1,4 +1,3 @@
-// @flow
 import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import './HomeCarousel.css'
@@ -11,8 +10,6 @@ const HomeCarousel = () => {
   */
   function tryRequire(imgPath: string) {
     try {
-      /* eslint-disable import/no-dynamic-require */
-      /* eslint-disable global-require */
       return require(`../../../images/home/carousel/${imgPath}`)
     } catch (err) {
       return imgPath

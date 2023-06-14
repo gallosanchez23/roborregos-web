@@ -1,4 +1,3 @@
-// @flow
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import placeholder from '../../../../../images/placeholder-rectangle.png'
@@ -18,8 +17,7 @@ type Props = {
 
 const tryRequireImg = (img_path: string) => {
   try {
-    // $FlowFixMe
-    return require(`../../../../../images/candidates/roles/${img_path}`) // eslint-disable-line import/no-dynamic-require, global-require
+    return require(`../../../../../images/candidates/roles/${img_path}`) 
   } catch (err) {
     return placeholder
   }

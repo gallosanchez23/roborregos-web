@@ -1,4 +1,3 @@
-// @flow
 import React from "react";
 import placeholder from "../../../../images/placeholder-rectangle.png";
 import "./HomeSingleSponsor.css";
@@ -16,8 +15,7 @@ type Props = {
 const HomeSingleSponsor = (props: Props) => {
   const tryRequire = (img_path: string) => {
     try {
-      // $FlowFixMe
-      return require(`../../../../images/sponsors/${img_path}`); // eslint-disable-line import/no-dynamic-require, global-require
+      return require(`../../../../images/sponsors/${img_path}`); 
     } catch (err) {
       return placeholder;
     }

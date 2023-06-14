@@ -1,4 +1,3 @@
-// @flow
 import React from 'react'
 import { VerticalTimelineElement } from 'react-vertical-timeline-component'
 import placeholder from '../../../../images/placeholder-rectangle.png'
@@ -60,8 +59,7 @@ class AboutSingleTimelineEvent extends React.Component<Props, *> {
 
   tryRequire = (img_path: string) => {
     try {
-      // $FlowFixMe
-      return require(`../../../../images/about/timeline/${img_path}.jpg`) // eslint-disable-line import/no-dynamic-require, global-require
+      return require(`../../../../images/about/timeline/${img_path}.jpg`) 
     } catch (err) {
       return placeholder
     }
