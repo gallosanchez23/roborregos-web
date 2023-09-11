@@ -17,7 +17,7 @@ const HomeMiniInformation = () => (
               </div>
             </div>
             <h5 className="icon-legend">
-              46 members
+              52 members
             </h5>
           </Col>
           <Col className="col-icon" xs={{ span: 3, offset: 1 }}>
