@@ -127,7 +127,7 @@ class NavBar extends Component<Props, State> {
             <Navbar.Brand
               id="navbar-legend-div"
               onClick={() => {
-                window.open("https://www.mitutoyo.com.mx/");
+                window.open("http://www.noahsuzhou.com/");
               }}
             >
               <p id="navbar-legend">
