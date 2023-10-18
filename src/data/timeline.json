@@ -162,17 +162,25 @@
         },
         {
             "date": "March 2019",
-            "month": "4",
+            "month": "3",
             "year": "2019",
             "img_path": "21",
             "title": "TMR 2019",
             "description": "Arath, Aldo, Jamir, and Juan Carlos won 1st place in Rescue Maze Category."
         },
         {
+            "date": "April 2019",
+            "month": "4",
+            "year": "2019",
+            "img_path": "22",
+            "title": "ICPC 2019",
+            "description": "Cisneros, Juárez and Mike participated in the regional tournament of the International Collegiate Programming Contest (ICPC)."
+        },
+        {
             "date": "July 2019",
             "month": "7",
             "year": "2019",
-            "img_path": "22",
+            "img_path": "23",
             "title": "Australia, Rescue Maze",
             "description": "Arath, Aldo, Jamir and Mauricio obtained the \u201cBest Hardware Solution\u201d award on the RoboCup Jr. Rescue Maze in Sydney Australia."
         },
@@ -180,7 +188,7 @@
             "date": "August - November 2019",
             "month": "8",
             "year": "2019",
-            "img_path": "23",
+            "img_path": "24",
             "title": "Candidates 2019",
             "description": "The Candidates 2019 program was made, where 12 students joined the team."
         },
@@ -188,7 +196,7 @@
             "date": "October 2019",
             "month": "10",
             "year": "2019",
-            "img_path": "24",
+            "img_path": "25",
             "title": "LARC OPEN 2019",
             "description": "During the semester, a robot was developed for the LARC IEEE competition, Open category. The robot consisted of an autonomous car with a mechanism to grab metal blocks by means of electromagnets, along with a navigation and vision system to be able to leave the blocks in their corresponding places. In the end, we could not attend due to economic issues."
         },
@@ -196,17 +204,9 @@
             "date": "December 2019",
             "month": "12",
             "year": "2019",
-            "img_path": "25",
+            "img_path": "26",
             "title": "1st Gen Grad",
             "description": "Founders Diego, Emilio, Gerardo and Sebastian graduated."
-        },
-        {
-            "date": "December 2019",
-            "month": "12",
-            "year": "2019",
-            "img_path": "26",
-            "title": "First committee of Sponsorships and Networking",
-            "description": "A new position in the team opened for students to collaborate in the logistics of sponsorships and networking, as well as social media and image. The opportunity opened for any student of Tec de Monterrey, giving us better integration with other multidisciplinary areas of the team outside engineering."
         },
         {
             "date": "February 2020",
@@ -303,7 +303,72 @@
             "img_path": "38",
             "title": "Grads June 2021",
             "description": "Aurora, Osvaldo, Alexis, Pacheco, Anita, Mariano and Paul graduated."
+        },
+        {
+            "date": "April 2022",
+            "month": "4",
+            "year": "2022",
+            "img_path": "39",
+            "title": "ICPC 2022",
+            "description": "Cisneros, Juárez and Mike's second participation in the regional tournament of the International Collegiate Programming Contest (ICPC)."
+        },
+        {
+            "date": "October 2022",
+            "month": "10",
+            "year": "2022",
+            "img_path": "40",
+            "title": "@HOME simulation - IROS Japan",
+            "description": "Aldo, Cisneros, Kevin, Bryan and Edison won 3rd place in Handyman challenge and 5th place overall."
+        },
+        {
+            "date": "November 2022",
+            "month": "11",
+            "year": "2022",
+            "img_path": "41",
+            "title": "Gala FETEC",
+            "description": "RoBorregos won the award for greatest student impact at the FETEC Gala, an award given to groups that stand out for having an integral performance, establishing a solid team with excellent execution of events."
+        },
+        {
+            "date": "November 2022",
+            "month": "11",
+            "year": "2022",
+            "img_path": "42",
+            "title": "Ana Avatar Xprize",
+            "description": "Kevin and Cisneros under the direction of Professor Muñoz participated in the Ana Avatar Xprize, which consists of creating a robotic avatar system that can transport human presence to a remote location in real time."
+        },
+        {
+            "date": "March 2023",
+            "month": "3",
+            "year": "2023",
+            "img_path": "43",
+            "title": "Tec Science Summit",
+            "description": "Iván and Cisneros participated in the Tec Science Summit 2023 presenting the @Home project."
+        },
+        {
+            "date": "March 2023",
+            "month": "3",
+            "year": "2023",
+            "img_path": "44",
+            "title": "Regional 2023",
+            "description": "Ale, Paco and Ángel won 2nd place in Soccer Lightweight. Yair, Jordan, Diego and Oscar won 3rd place in Rescue Maze."
+        },
+        {
+            "date": "April 2023",
+            "month": "4",
+            "year": "2023",
+            "img_path": "45",
+            "title": "TMR 2023",
+            "description": "1st place in LARC Open, 3rd place and winner of the technical challenge in Soccer Lightweight, best mechanics in Rescue Maze and first time participating in Home Major"
+        },
+        {
+            "date": "June 2023",
+            "month": "6",
+            "year": "2023",
+            "img_path": "46",
+            "title": "Grads June 2023",
+            "description": "Lore, Cisneros, Aldo, Mike, Jamir, Chapa, Emérico, Rosalba, Anel, Bryan, Kevin, Ruiz, Mau, Keven and Gaby graduated."
         }
+        
     ],
     "years": [
         "2015",
@@ -312,6 +377,8 @@
         "2018",
         "2019",
         "2020",
-        "2021"
+        "2021",
+        "2022",
+        "2023"
     ]
 }

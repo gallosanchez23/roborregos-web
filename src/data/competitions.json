@@ -6,11 +6,6 @@
       "url": "https://athome.robocup.org/"
     },
     {
-      "name": "VSSS",
-      "img": "projects/vsss.jpg",
-      "url": "https://www.femexrobotica.org/tmr2020/en/larc-very-small-size-soccer/"
-    },
-    {
       "name": "Smart Factory",
       "img": "projects/cobot.jpg",
       "url": "https://www.youtube.com/watch?v=2Jw5t-hbkAU"
@@ -21,14 +16,19 @@
       "url": "https://covid19.roborregos.com/"
     },
     {
+      "name": "LARC",
+      "img": "projects/larc_open.jpg",
+      "url": "https://femexrobotica.org/tmr2023/en/larc-open-challenge-2/"
+    },
+    {
       "name": "Maze",
-      "img": "projects/maze.jpg",
+      "img": "projects/mazemod.jpg",
       "url": "https://junior.robocup.org/rcj-rescue-maze/"
     },
     {
-      "name": "Soccer Open",
-      "img": "projects/soccer_open.jpg",
-      "url": "https://junior.robocup.org/rcj-soccer-open/"
+      "name": "Soccer Lightweight",
+      "img": "projects/soccer_light.jpg",
+      "url": "https://junior.robocup.org/rcj-soccer-lightweight/"
     }
   ]
 }

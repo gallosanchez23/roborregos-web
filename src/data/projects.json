@@ -11,10 +11,10 @@
         },
         {
             "priority": "0",
-            "title": "LARC VSSS",
-            "description": "The LARC IEEE VSSS project consists of the development of a computer vision and communication system which controls a group of autonomous robots, coordinating their movements according to a collaborative soccer strategy.",
-            "wiki": "https://github.com/RoBorregos/VSSS_2019-Legacy/wiki",
-            "image": "vsss",
+            "title": "TAM",
+            "description": "Project in partnership with Mega Alimentos for the development of technological mechanisms to move products within the plant without the need for human assistance, making use of robotic models that condition the existing equipment (electric stacker) to move all types of products from one point to another within the plant.",
+            "wiki": "",
+            "image": "tam",
             "background": "",
             "color": ""
         },
@@ -72,15 +72,6 @@
                 "description": "Futbol soccer competition where two robots must coordinate in order to put the ball in their opponents goal. The ball is detected using IR and the robot is limited to 1.1 kg of weight.",
                 "wiki": "https://github.com/RoBorregos/RoboCup_SoccerLight_2020/wiki",
                 "image": "soccer_light",
-                "background": "",
-                "color": ""
-            },
-            {
-                "priority": "1",
-                "title": "Advanced Autonomous Drones",
-                "description": "This competition consists of several challenges where an autonomous drone has to use computer vision and control systems to take decisions of action.",
-                "wiki": "",
-                "image": "drones",
                 "background": "",
                 "color": ""
             }
