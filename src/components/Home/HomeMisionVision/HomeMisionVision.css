@@ -24,7 +24,7 @@
 .home-vision{
       right: 0;
       top: 0;
-      background-image: url(../../../images/home/mision-vision/vision.jpg);
+      background-image: url(../../../images/home/mision-vision/vision.jpeg);
       -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
       clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%); 
 }
