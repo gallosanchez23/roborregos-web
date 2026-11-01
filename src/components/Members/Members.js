@@ -1,31 +1,26 @@
-import React, { Component } from 'react';
-import MembersGrid from './MembersGrid/MembersGrid.js';
-import MembersHeader from './MembersHeader/MembersHeader.js';
-import MembersJoinUs from './MembersJoinUs/MembersJoinUs.js';
-import Footer from 'components/Footer/Footer.js';
-import './Members.css';
+import React from 'react'
+import MembersGrid from './MembersGrid/MembersGrid'
+import MembersJoinUs from './MembersJoinUs/MembersJoinUs'
+import HeaderBanner from '../Shared/HeaderBanner/HeaderBanner'
+import MembersValues from './MembersValues/MembersValues'
 
-class Members extends Component {
-  constructor(props) {
-    super(props);
+function Members() {
+  const headerTitle = 'Members'
+  const headerMainText = ['RoBorrego’s community is made by students with different skills in robotics, logistics and networking, all joined with a passion for exploring new technologies and sharing their knowledge with everybody.']
+  const headerSubText = ['Scroll down and meet us!']
 
-    this.members = props.membersData.members;
-  }
-
-  render() {
-    document.title = 'RoBorregos | Members';
-    const inactive = this.members.filter(member => member.status === 'inactive').sort((a, b) => b.id - a.id);
-    const active = this.members.filter(member => member.status === 'active' || member.status === 'comitee').sort((a, b) => a.id - b.id);
-
-    return (
-      <div className='members-container'>
-        <MembersHeader />
-        <MembersGrid active_members={ active } inactive_members={ inactive } />
-        <MembersJoinUs />
-        <Footer />
-      </div>
-    );
-  }
+  return (
+    <>
+      <HeaderBanner
+        title={headerTitle}
+        mainText={headerMainText}
+        subText={headerSubText}
+      />
+      <MembersValues />
+      <MembersGrid />
+      <MembersJoinUs />
+    </>
+  )
 }
 
-export default Members;
+export default Members

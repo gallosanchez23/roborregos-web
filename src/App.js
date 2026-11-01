@@ -1,62 +1,81 @@
-import React, { Component } from 'react';
-import Home from 'components/Home/Home.js';
-import Members from 'components/Members/Members.js';
-import Contact from 'components/Contact/Contact.js';
-import Candidates from 'components/Candidates/Candidates.js';
-import NavBar from 'components/NavBar/NavBar.js';
-import About from 'components/About/About.js';
-import { loadCSS } from 'fg-loadcss/src/loadCSS';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import routesData from 'data/routes.json';
-import membersData from 'data/members.json';
+// @flow
+import React, { useEffect, useState } from 'react'
+import { loadCSS } from 'fg-loadcss/src/loadCSS'
+import {
+  BrowserRouter as Router, Route, Switch, useLocation,
+} from 'react-router-dom'
+import Home from './components/Home/Home'
+import SupportUs from './components/SupportUs/SupportUs'
+import Candidates from './components/Candidates/Candidates'
+import NavBar from './components/NavBar/NavBar'
+import About from './components/About/About'
+import routesData from './data/routes.json'
+import Project from './components/Projects/Projects'
+import projectsData from './data/projects.json'
+import Footer from './components/Footer/Footer'
+import LanguageToggle from './components/Shared/LanguageToggle/LanguageToggle'
 
-class App extends Component {
-  componentDidMount() {
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
+const RevealOnScroll = () => {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) return undefined
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { threshold: 0, rootMargin: '0px 0px -8% 0px' })
+    const targets = document.querySelectorAll('main section, footer')
+    targets.forEach((el) => {
+      el.classList.add('reveal')
+      observer.observe(el)
+    })
+    return () => observer.disconnect()
+  }, [pathname])
+  return null
+}
+
+const App = () => {
+  const [language, setLanguage] = useState(1)
+
+  useEffect(() => {
     loadCSS(
       'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
       document.querySelector('#insertion-point-jss'),
-    );
-  }
+    )
+  }, [])
 
-
-  render() {
-    document.title = 'RoBorregos'
-
-    return (
-      <Router>
-        <div className='app-container'>
-
-
-          <NavBar routes={ routesData.routes } />
-
-          <Route
-            exact path='/'
-            component={ () => <Home /> }
-          />
-
-          <Route
-            path='/about'
-            component={ () => <About /> }
-          />
-
-          <Route
-            path='/members'
-            component={ () => <Members membersData={ membersData } /> }
-          />
-
-          <Route
-            path='/contact'
-            component={ () => <Contact /> }
-          />
-
-          <Route
-            path='/candidates'
-            component={ () => <Candidates /> }
-          />
-        </div>
-      </Router>
-    );
-  }
+  return (
+    <Router>
+      <ScrollToTop />
+      <RevealOnScroll />
+      <div className="flex min-h-[calc(100vh-4rem)] flex-col">
+        <NavBar routes={routesData.routes} language={language} />
+        <LanguageToggle onToggle={() => setLanguage(!language ? 1 : 0)} />
+        <main className="flex-1">
+          <Switch>
+            <Route exact path="/" component={() => <Home language={language} />} />
+            <Route path="/about" component={() => <About language={language} />} />
+            <Route path="/projects" component={() => <Project projectsData={projectsData} language={language} />} />
+            <Route path="/candidates" component={() => <Candidates language={language} />} />
+            <Route path="/support-us" component={() => <SupportUs language={language} />} />
+            <Route component={Home} />
+          </Switch>
+        </main>
+        <Footer language={language} />
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App

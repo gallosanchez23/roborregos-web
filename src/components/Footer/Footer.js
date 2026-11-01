@@ -1,178 +1,74 @@
-import React, { Component } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
-import IconButton from '@material-ui/core/IconButton';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import logo from 'images/white_logo.png';
-import smallLogo from 'images/small_logo.png'
-import { MEDIUM_WIDTH, MOBILE_WIDTH } from 'constants.js';
-import './Footer.css';
+// @flow
+import React from 'react'
+import { Link } from 'react-router-dom'
+import logo from '../../images/white_logo.png'
+import routesData from '../../data/routes.json'
 
-function sitemapLink(link, legend, big) {
-  if(big){
-    return (
-      <span>
-        <a href={ link } className='sitemap-link'>
-          { legend }
-        </a>
-        <br />
-      </span>
-    );
-  } else {
-    return (
-      <a href={ link } className='sitemap-link'>
-        { legend }
-      </a>
-    );
-  }
-}
+const socials = [
+  { name: 'Facebook', link: 'https://www.facebook.com/RoBorregos/', icon: 'fab fa-facebook' },
+  { name: 'Instagram', link: 'https://www.instagram.com/roborregos/', icon: 'fab fa-instagram' },
+  { name: 'YouTube', link: 'https://www.youtube.com/channel/UCeSvAh96bXA3CcRGc4u7_oA', icon: 'fab fa-youtube' },
+  { name: 'GitHub', link: 'https://github.com/RoBorregos/', icon: 'fab fa-github' },
+  { name: 'LinkedIn', link: 'https://mx.linkedin.com/company/roborregos', icon: 'fab fa-linkedin' },
+]
 
-function sitemapIconButton(link, icon) {
+const Footer = ({ language }: { language: number }) => {
+  const spanish = language === 0
   return (
-    <a
-      href={ link }
-      className='icon-link'
-    >
-      { icon }
-    </a>
-  );
-}
-
-class Footer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.setSizeAtributes = this.setSizeAtributes.bind(this);
-    this.largeView        = this.largeView.bind(this);
-    this.smallView        = this.smallView.bind(this);
-    this.goUp             = this.goUp.bind(this);
-
-    this.members = props.members;
-
-    this.state = {
-      icon_size: (window.innerWidth >= MOBILE_WIDTH) ? 40 : 35,
-      view_size_large: (window.innerWidth > MEDIUM_WIDTH) ? true : false,
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.setSizeAtributes);
-  }
-
-  goUp() {
-    window.scrollTo(0, 0);
-  }
-
-  setSizeAtributes(){
-    this.setState({
-      icon_size : (window.innerWidth >= MOBILE_WIDTH) ? 40 : 35,
-      view_size_large: (window.innerWidth > MEDIUM_WIDTH) ? true : false,
-    });
-  }
-
-  largeView() {
-    return(
-      <div className='footer-container'>
-        <Row className='footer-row'>
-          <Col lg='4' className='col-logo'>
-            <img src={ logo } className='footer-logo' alt='logo' />
-          </Col>
-          <Col lg='4' className='sitemap-container'>
-            <div className='sitemap-link'>
-              { sitemapLink('/', 'Home', true) }
-            </div>
-            <div className='sitemap-link'>
-              { sitemapLink('/about', 'About', true) }
-            </div>
-            <div className='sitemap-link'>
-              { sitemapLink('/members', 'Members', true) }
-            </div>
-            <div className='sitemap-link'>
-              { sitemapLink('/contact', 'Contact', true) }
-            </div>
-          </Col>
-          <Col lg='4'>
-            <Row>
-              <div className='goback-button'>
-                <IconButton
-                  component='a'
-                  onClick={ this.goUp }
-                  color='inherit'
-                  className='sitemap-link'
-                >
-                  <ExpandLessIcon />
-                  <div className='goback-text'>
-                    Back to top
-                  </div>
-                </IconButton>
-              </div>
-            </Row>
-            <Row>
-              <div className='row-socialMedia'>
-                { sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
-                { sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
-                { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 5 }} />) }
-                <div className='mark-text'>
-                  @2020 RoBorregos
-                </div>
-              </div>
-            </Row>
-          </Col>
-        </Row>
+  <>
+  <section className="bg-gradient-to-r from-navy via-roboblue/70 to-navy px-6 py-14 text-center">
+    <h2 className="font-jersey text-4xl text-white md:text-6xl">{spanish ? 'Construye el próximo robot con nosotros' : 'Build the next robot with us'}</h2>
+    <p className="mx-auto mt-3 max-w-xl text-gray-200">{spanish ? 'Candidates abre cada año para estudiantes de cualquier carrera y semestre.' : 'Candidates opens every year to students from any major and semester.'}</p>
+    <Link to="/candidates" className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-lg font-semibold text-black transition duration-300 hover:scale-105">{spanish ? 'Únete al equipo' : 'Join the Team'}</Link>
+  </section>
+  <footer className="bg-gradient-to-tr from-neutral-950 to-neutral-800 px-6 py-12 font-archivo text-white lg:px-12">
+    <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
+      <div className="flex flex-col items-start gap-4">
+        <img src={logo} alt="RoBorregos" className="h-24 w-auto" />
+        <p className="text-sm text-gray-400">Tecnológico de Monterrey, Campus Monterrey</p>
       </div>
-    );
-  }
 
-  smallView() {
-    return(
-      <Container fluid className='footer-container'>
-        <Row noGutters className='footer-row'>
-          <Col xs={ 8 } className='col-logo'>
-            <img src={ smallLogo } className='footer-logo' alt='logo' />
-          </Col>
-          <Col xs={ 4 }>
-            <Row noGutters className='goback-container'>
-              <div className='goback-button'>
-                <IconButton
-                  component='a'
-                  onClick={ this.goUp }
-                  color='inherit'
-                  className='sitemap-link'
-                >
-                  <ExpandLessIcon />
-                  <div className='goback-text'>
-                    Back to top
-                  </div>
-                </IconButton>
-              </div>
-            </Row>
-            <Row noGutters className='sitemap-container'>
-              <div>
-                { sitemapLink('/', 'Home', false) }
-                { sitemapLink('/about', 'About', false) }
-                { sitemapLink('/members', 'Members', false) }
-                { sitemapLink('/contact', 'Contact', false) }
-                <div className='mark-text'>
-                  @2020 RoBorregos
-                </div>
-              </div>
-            </Row>
-            <Row className='row-socialMedia'>
-              { sitemapIconButton('https://www.instagram.com/roborregos/', <InstagramIcon style={{ fontSize: this.state.icon_size }} />) }
-              { sitemapIconButton('https://www.facebook.com/RoBorregos/', <FacebookIcon style={{ fontSize: this.state.icon_size }} />) }
-              { sitemapIconButton('https://github.com/RoBorregos/', <GitHubIcon style={{ fontSize: this.state.icon_size - 2, paddingBottom: '0.5vh' }} />) }
-            </Row>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
+      <div>
+        <h3 className="mb-4 font-anton text-2xl uppercase tracking-wide">{spanish ? 'Mapa del sitio' : 'Sitemap'}</h3>
+        <ul className="grid grid-cols-2 gap-2">
+          {routesData.routes.map((route) => (
+            <li key={route.path}>
+              <Link to={route.path} className="text-gray-300 transition duration-300 hover:text-bright">
+                {route.legend}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-  render() {
-    return (this.state.view_size_large) ? this.largeView() : this.smallView();
-  }
+      <div className="flex flex-col gap-4 md:items-end">
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="rb-btn-outline text-sm"
+        >
+          {spanish ? 'Volver arriba ↑' : 'Back to top ↑'}
+        </button>
+        <div className="flex gap-5 text-3xl">
+          {socials.map((s) => (
+            <a
+              key={s.name}
+              href={s.link}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={s.name}
+              className="text-gray-300 transition duration-300 hover:text-rbrgs"
+            >
+              <i className={s.icon} />
+            </a>
+          ))}
+        </div>
+        <span className="text-sm text-gray-500">©2026 RoBorregos</span>
+      </div>
+    </div>
+  </footer>
+  </>
+  )
 }
 
-export default Footer;
+export default Footer

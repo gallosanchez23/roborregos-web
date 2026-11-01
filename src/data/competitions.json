@@ -2,27 +2,43 @@
   "competitions": [
     {
       "name": "Home",
-      "img": "competitions/home.jpeg"
+      "img": "projects/home.jpg",
+      "url": "https://athome.robocup.org/"
+    },
+    {
+      "name": "AURA",
+      "img": "projects/cobot.jpg",
+      "url": "/projects"
+    },
+    {
+      "name": "LARC",
+      "img": "projects/larc_open.jpg",
+      "url": "https://femexrobotica.org/tmr2023/en/larc-open-challenge-2/"
     },
     {
       "name": "Maze",
-      "img": "competitions/maze.png"
+      "img": "projects/mazemod.jpg",
+      "url": "https://junior.robocup.org/rcj-rescue-maze/"
     },
     {
-      "name": "Soccer Light",
-      "img": "competitions/soccer_light.png"
+      "name": "Soccer Lightweight",
+      "img": "projects/soccer_light.jpg",
+      "url": "https://junior.robocup.org/rcj-soccer-lightweight/"
     },
     {
-      "name": "Soccer Open",
-      "img": "competitions/soccer_open.png"
+      "name": "Soccer Vision",
+      "img": "projects/soccer_open.jpg",
+      "url": "/projects"
     },
     {
-      "name": "LARC Open",
-      "img": "competitions/larc.png"
+      "name": "VSS",
+      "img": "projects/vsss.jpg",
+      "url": "/projects"
     },
     {
-      "name": "VSSS",
-      "img": "competitions/vsss.jpg"
+      "name": "Industrial",
+      "img": "projects/cobot.jpg",
+      "url": "/projects"
     }
   ]
 }

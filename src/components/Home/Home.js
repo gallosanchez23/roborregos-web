@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
-import HomeHeader from './HomeHeader/HomeHeader.js';
-import HomeMiniInformation from './HomeMiniInformation/HomeMiniInformation.js'
-import HomeInformation from './HomeInformation/HomeInformation.js';
-import HomeSponsors from './HomeSponsors/HomeSponsors.js';
-import Footer from 'components/Footer/Footer.js';
-import sponsorsData from 'data/sponsors.json';
-import './Home.css';
+// @flow
+import React from 'react'
+import HomeHeader from './HomeHeader/HomeHeader'
+import HomeMiniInformation from './HomeMiniInformation/HomeMiniInformation'
+import HomeSponsors from './HomeSponsors/HomeSponsors'
+import HomeMisionVision from './HomeMisionVision/HomeMisionVision'
+import sponsorsData from '../../data/sponsors.json'
+import HomeCarousel from './HomeCarousel/HomeCarousel'
 
-class Home extends Component {
-  render() {
-    document.title = 'RoBorregos';
+const Home = ({ language }: { language: number }) => {
+  document.title = 'RoBorregos | Home'
 
-    return (
-      <div className='home-container'>
-        <HomeHeader />
-        <HomeMiniInformation />
-        <HomeInformation />
-        <HomeSponsors sponsors={ sponsorsData.sponsors } />
-        <Footer />
-      </div>
-    );
-  }
+  return (
+    <>
+      <HomeHeader language={language} />
+      <HomeMiniInformation />
+      <HomeMisionVision />
+      <HomeCarousel />
+      <HomeSponsors sponsors={sponsorsData.sponsors} />
+    </>
+  )
 }
 
-export default Home;
+export default Home
