@@ -1,67 +1,150 @@
 {
-  "url_contact":"mailto:teamroborregos@gmail.com",
+  "url_contact": "mailto:teamroborregos@gmail.com",
   "sponsors": [
     {
+      "name": ".mx",
+      "img_path": "Logo mx - Copy-1.svg",
+      "link": "https://www.dominios.mx/",
+      "size": "L",
+      "invert": true
+    },
+    {
       "name": "Tecnológico de Monterrey",
-      "img_path": "itesm.png",
-      "link": "https://tec.mx/es"
+      "img_path": "logoTec (2).svg",
+      "link": "https://tec.mx/es",
+      "size": "L"
     },
     {
-      "name": "Steren",
-      "img_path": "steren.png",
-      "link": "https://www.steren.com.mx"
+      "name": "Acuity Brands",
+      "img_path": "Acuity Brands Blanco.svg",
+      "link": "https://www.acuitybrands.com/",
+      "size": "L"
     },
     {
-      "name": "Oneila",
-      "img_path": "oneila.png",
-      "link": "http://www.oneila.mx"
+      "name": "GitHub",
+      "img_path": "github.png",
+      "link": "https://github.com",
+      "size": "L",
+      "invert": true
+    },
+    {
+      "name": "Enerman",
+      "img_path": "Enerman.svg",
+      "link": "",
+      "size": "L"
+    },
+    {
+      "name": "DigiKey",
+      "img_path": "DigiKey.svg",
+      "link": "https://www.digikey.com.mx/",
+      "size": "L"
+    },
+    {
+      "name": "3D Factory",
+      "img_path": "3d-factory.avif",
+      "link": "https://3dfactory.mx/",
+      "size": "L",
+      "invert": true
     }
   ],
   "packages": [
     {
-      "name" : "Jumper",
-      "benefits" : [
-        "6 menciones genéricas en redes sociales (u/c bimestre)",
-        "Invitación a eventos y newsletters",
-        "Logo en nuestras playeras (espalda chico)",
-        "Logo en nuestra página oficial (chico)",
-        "Logo en lona del equipo (chico)"
+      "name": "Package 1",
+      "benefits": [
+        {
+          "es": "6 menciones en redes sociales (una cada dos meses)",
+          "en": "6 mentions on social media (every two months)"
+        },
+        {
+          "es": "2 publicaciones personalizadas en Facebook (una cada semestre)",
+          "en": "2 personalized posts on Facebook (one per semester)"
+        },
+        {
+          "es": "Logo en nuestra página oficial",
+          "en": "Logo on our official page"
+        },
+        {
+          "es": "Logo en lona del equipo (chico)",
+          "en": "Team banner logo (small)"
+        },
+        {
+          "es": "Logo en nuestros robots (chico)",
+          "en": "Logo on our robots (small)"
+        },
+        {
+          "es": "Logo en nuestras playeras (posterior chico)",
+          "en": "Logo on our shirts (small on the back of the shirt)"
+        }
       ]
     },
     {
-      "name" : "Led",
-      "benefits" : [
-        "12 menciones genéricas en redes sociales (u/c mes)",
-        "2 publicaciones personalizadas en Facebook (u/c semestre)",
-        "Invitación a eventos y newsletters",
-        "Logo en nuestras playeras (espalda mediano)",
-        "Logo en nuestra página oficial (mediano)",
-        "Logo en lona del equipo (mediano)",
-        "Logo en nuestros robots (chico)"
+      "name": "Package 2",
+      "benefits": [
+        {
+          "es": "12 menciones en redes sociales (una por mes)",
+          "en": "12 mentions on social media (one per month)"
+        },
+        {
+          "es": "4 publicaciones personalizadas en Facebook (dos cada semestre)",
+          "en": "4 personalized posts on Facebook (two per semester)"
+        },
+        {
+          "es": "Logo en nuestra página oficial",
+          "en": "Logo on our official page"
+        },
+        {
+          "es": "Logo en lona del equipo (mediano)",
+          "en": "Team banner logo (medium)"
+        },
+        {
+          "es": "Logo en nuestros robots (mediano)",
+          "en": "Logo on our robots (medium)"
+        },
+        {
+          "es": "Logo en nuestras playeras (delantero mediano)",
+          "en": "Logo on our shirts (medium on the front of the shirt)"
+        },
+        {
+          "es": "Invitación a eventos y newsletter",
+          "en": "Invitation to events and newsletter"
+        }
       ]
     },
     {
-      "name" : "Motor",
-      "benefits" : [
-        "24 menciones genéricas en redes sociales (2 c/mes)",
-        "4 publicaciones personalizadas en Facebook (2 c/semestre)",
-        "Invitación a eventos y newsletters",
-        "Logo en nuestras playeras (frente mediano)",
-        "Logo en nuestra página oficial (mediano)",
-        "Logo en lona del equipo (mediano)",
-        "Logo en nuestros robots (mediano)"
-      ]
-    },
-    {
-      "name" : "Robot",
-      "benefits" : [
-        "24 menciones genéricas en redes sociales (2 c/mes)",
-        "6 publicaciones personalizadas en Facebook (3 c/semestre)",
-        "Invitación a eventos y newsletters",
-        "Logo en nuestras playeras (frente grande)",
-        "Logo en nuestra página oficial (grande)",
-        "Logo en lona del equipo (grande)",
-        "Logo en nuestros robots (grande)"
+      "name": "Package 3",
+      "benefits": [
+        {
+          "es": "24 menciones genéricas en redes sociales (dos cada mes)",
+          "en": "24 generic mentions in social networks (two each month)"
+        },
+        {
+          "es": "6 publicaciones personalizadas en Facebook (tres cada semestre)",
+          "en": "6 personalized posts on Facebook (three each semester)"
+        },
+        {
+          "es": "Logo en nuestra página oficial",
+          "en": "Logo on our official page"
+        },
+        {
+          "es": "Logo en lona del equipo (grande)",
+          "en": "Team banner logo (large)"
+        },
+        {
+          "es": "Logo en nuestros robots (grande)",
+          "en": "Logo on our robots (large)"
+        },
+        {
+          "es": "Logo en nuestras playeras (delantero grande)",
+          "en": "Logo on our shirts (large on the front of the shirt)"
+        },
+        {
+          "es": "Invitación a eventos y newsletter",
+          "en": "Invitation to events and newsletter"
+        },
+        {
+          "es": "Exclusividad de marca",
+          "en": "Brand exclusivity"
+        }
       ]
     }
   ]

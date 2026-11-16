@@ -1,85 +1,99 @@
-import React, { Component } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import logo from 'images/white_logo.png';
-import './NavBar.css';
+// @flow
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import logo from '../../images/white_logo.png'
+import sponsorLogo from '../../images/sponsors/LogoTec.png'
 
-class NavBar extends Component {
-  constructor(props) {
-    super(props);
+type RouteType = {
+  path: string,
+  legend: string,
+  component: string,
+};
 
-    this.handleNavbarClick = this.handleNavbarClick.bind(this);
+type Props = {
+  routes: Array<RouteType>,
+  language: number,
+};
 
-    this.routes = props.routes;
-
-    const complete_path = window.location.pathname;
-    const first_slash_index = complete_path.indexOf('/');
-    const second_slash_index = complete_path.indexOf('/', first_slash_index + 1);
-    const current_path = second_slash_index === -1
-      ? complete_path.substring(0, complete_path.length)
-      : complete_path.substring(0, second_slash_index);
-    this.state = {
-      active_button: current_path
-    };
-  }
-
-  handleNavbarClick(index) {
-    this.setState(state => ({
-      active_button: index
-    }));
-    window.scrollTo(0,0);
-  }
-
-  getClassName(path) {
-    return 'navbar-btn' + ((path === this.state.active_button) ? ' active' : '');
-  }
-
-  render() {
-    return (
-      <Navbar
-        collapseOnSelect
-        expand='lg'
-        bg='dark'
-        variant='dark'
-        fixed='top'
-        id='app-navbar'
-      >
-        <Navbar.Brand
-          as={ Link }
-          to='/'
-          onClick={ this.handleNavbarClick.bind(this, '/') }
-        >
-          <img
-            id='navbar-logo'
-            src={ logo }
-            className='d-inline-block align-top'
-            alt='logo'
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' expanded ='false'/>
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='mr-auto'>
-
-            {this.routes.map((route, index) =>
-              <Nav.Link
-                key={ index }
-                className={ this.getClassName(route.path) }
-                as={ Link }
-                to={ route.path }
-                onClick={ this.handleNavbarClick.bind(this, route.path) }
-              >
-                <div className='navbar-btn-legend'>
-                  { route.legend }
-                </div>
-              </Nav.Link>
-            )}
-
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    );
-  }
-
+const translations = {
+  Home: ['Inicio', 'Home'],
+  About: ['Nosotros', 'About'],
+  Projects: ['Proyectos', 'Projects'],
+  Candidates: ['Candidatos', 'Candidates'],
+  'Support Us': ['Apóyanos', 'Support Us'],
 }
 
-export default NavBar;
+const NavBar = ({ routes, language }: Props) => {
+  const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
+  const isActive = (path: string) => (path === '/' ? pathname === '/' : pathname.startsWith(path))
+
+  return (
+    <nav className="fixed top-0 z-50 w-screen bg-black/95 font-archivo backdrop-blur">
+      <div className="flex h-16 items-center justify-between px-6 lg:px-12">
+        <Link to="/" onClick={() => setOpen(false)}>
+          <img src={logo} alt="RoBorregos" className="h-9" />
+        </Link>
+
+        <ul className="hidden items-center gap-x-10 lg:flex">
+          {routes.map((route) => (
+            <li key={route.path}>
+              <Link
+                to={route.path}
+                className={`border-b-2 pb-1 font-anton text-base uppercase tracking-wider transition duration-300 ${
+                  isActive(route.path)
+                    ? 'border-roboblue text-white'
+                    : 'border-transparent text-gray-300 hover:text-white'
+                }`}
+              >
+                {translations[route.legend][language]}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="http://www.noahsuzhou.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="hidden items-center gap-2 text-xs text-gray-400 lg:flex"
+        >
+          Powered by
+          <img src={sponsorLogo} alt="Tec de Monterrey" className="h-6" />
+        </a>
+
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+        >
+          <span className={`h-0.5 w-6 bg-white transition ${open ? 'translate-y-2 rotate-45' : ''}`} />
+          <span className={`h-0.5 w-6 bg-white transition ${open ? 'opacity-0' : ''}`} />
+          <span className={`h-0.5 w-6 bg-white transition ${open ? '-translate-y-2 -rotate-45' : ''}`} />
+        </button>
+      </div>
+
+      {open && (
+        <ul className="flex flex-col border-t border-gray-800 bg-black px-6 pb-4 lg:hidden">
+          {routes.map((route) => (
+            <li key={route.path}>
+              <Link
+                to={route.path}
+                onClick={() => setOpen(false)}
+                className={`block py-3 font-anton text-lg uppercase tracking-wider ${
+                  isActive(route.path) ? 'text-bright' : 'text-gray-300'
+                }`}
+              >
+                {translations[route.legend][language]}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  )
+}
+
+export default NavBar

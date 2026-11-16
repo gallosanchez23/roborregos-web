@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import './MembersJoinUs.css';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-class MembersJoinUs extends Component {
-  render() {
-    return (
-      <div className='members-join-us'>
+const MembersJoinUs = () => (
+  <section className="relative overflow-hidden bg-gradient-to-r from-navy to-black px-6 py-20 text-center" data-testid="members-join-us">
+    <h2 className="section-title mb-8">Want to be part of the team?</h2>
+    <Link to="/candidates" data-testid="members-join-us-button" className="rb-btn text-lg">
+      Join the Team
+    </Link>
+  </section>
+)
 
-      </div>
-    );
-  }
-}
-
-export default MembersJoinUs;
+export default MembersJoinUs

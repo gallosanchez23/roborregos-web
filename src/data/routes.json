@@ -11,19 +11,19 @@
       "component": "About"
     },
     {
-      "path": "/members",
-      "legend": "Members",
-      "component": "Members"
-    },
-    {
-      "path": "/contact",
-      "legend": "Contact",
-      "component": "Contact"
+      "path": "/projects",
+      "legend": "Projects",
+      "component": "Projects"
     },
     {
       "path": "/candidates",
       "legend": "Candidates",
       "component": "Candidates"
+    },
+    {
+      "path": "/support-us",
+      "legend": "Support Us",
+      "component": "SupportUs"
     }
   ]
 }
